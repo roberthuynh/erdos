@@ -1,6 +1,6 @@
 # Reproducing f(1) to f(10)
 
-Python 3.10 or later, standard library only. Run from the repository root. The programs write their
+Python 3.11 or later (matching the repository checks; the computations themselves need only 3.10), standard library only. Run from the repository root. The programs write their
 reports to files that git ignores (`*.out.md`, `585-verify.md`, `585-n9.md`, `*state*.json`);
 `585-small-n.md` is the committed result.
 

@@ -1,8 +1,34 @@
-# Erdős Problem 585: kernel-checked finite results, three pair-free 5-regular graphs, and a reduction at degree six
+# Erdős Problem 585: degree-capped regular subgraphs, finite results and computations
 
-Robert Huynh · October 6, 2026
+Robert Huynh · original findings October 6, 2026; v0.4 additions described below
 
 ## Summary
+
+**Leading v0.4 theorem.** Let q ≥ 2^18 = 262144 be an integer. Every finite simple bipartite graph G on n ≥ 2q vertices, with maximum degree at most 2q − 2 and
+
+$$
+e(G)\ge(q-1)n-q^{3/2}/128,
+$$
+
+contains a nonempty q-regular subgraph using original vertices and edges. The power is interpreted over the reals; the equivalent integer allowance is floor(q^(3/2)/128).
+
+**Parameterized theorem.** For integers h ≥ 6 and q ≥ 4096(h + 1)², the same conclusion holds with the same order and degree-cap assumptions when
+
+$$
+D=(q-1)n-e(G)\le hq-16h^2.
+$$
+
+The deficit D is signed integer subtraction in the parameterized statement and signed real subtraction in the fractional-power statement. The degree cap makes it nonnegative. The total vertex-degree shortfall from 2q − 2 is 2D, not D. Neither theorem asks the caller for minimum degree, balanced shores, a critical core or successful cuts. Neither promises spanning, induced or connected support, or transfers the earlier 4q − 6 support guarantee.
+
+Formal endpoints: `R898/Main.lean:Erdos585.R898.superlinear_forcing` and `R898/Main.lean:Erdos585.R898.every_h_forcing`.
+
+At q = 2^18, the real allowance is 4q; the parameterized statement with h = 7 allows 7q − 784. The real formula is implied by the parameterized theorem at every q ≥ 2^18 (take h = floor(√q/64) − 1, so the allowance is about q^(3/2)/64 for large q); for 2^18 ≤ q ≤ 409576 it is also weaker than the retained D ≤ 5q − 58 theorem.
+
+The retained smaller-cutoff results, for the same bipartite hosts with n ≥ 2q and maximum degree at most 2q − 2, allow D ≤ 3q − 32 for q ≥ 16384, D ≤ 4q − 44 for q ≥ 25600, and D ≤ 5q − 58 for q ≥ 36864. The q ≥ 5 theorem with D ≤ 2q − 5 retains its separate support guarantee. The even-degree, quartic and avoiding-family results also remain included.
+
+The [mathematical note](V0.4.md) states the full parameter table, construction gap and source declarations. The [proof companion](V0.4-PROOF.md) separates classical factor feasibility from the quantitative support-selection argument. It contains a detailed partial reconstruction, not a complete standalone proof of all endpoints.
+
+The [literature comparison](../literature/README.md) records named eligible public sources and checking limits. No direct implication of the full endpoint was found in those checked statements. This does not establish worldwide novelty, a broadly new method or a separate new application. Classical flow, minimal failing cuts and submodularity are prior mathematics; the unresolved comparison is the complete critical-support and quantitative selection mechanism.
 
 **The problem.** What is the maximum number f(n) of edges of a graph on n vertices with no two
 edge-disjoint cycles on the same vertex set? ([erdosproblems.com/585](https://www.erdosproblems.com/585);
@@ -16,13 +42,13 @@ section 7 names the models; not yet checked by a mathematician, making each one 
 
 1. **4-regular subgraphs at maximum degree six** (**Lean-proved**): every bipartite graph with
    maximum degree at most 6, n ≥ 3 vertices and at least 3n − 5 edges has a nonempty 4-regular
-   subgraph (QB(5)); QB(4), the same with n ≥ 2 vertices and at least 3n − 4 edges, came first and has
+   subgraph (QB(5)). In v0.4, QB(6) improves this to 3n − 6 for n ≥ 4; see [the new note](V0.4.md). QB(4), the same with n ≥ 2 vertices and at least 3n − 4 edges, came first and has
    a shorter proof. So for every bipartite 6-regular graph B and every vertex o, B − o has one. QB(4),
    with Tutte's f-factor theorem, gives 3n − 2 edges for all simple graphs with maximum degree at most
    6 (P_2; **written proof**, three reviews). For bipartite graphs with maximum degree at most 6 and
    4 ≤ n ≤ 19, an edge census by two methods finds that 3n − 7 edges already suffice, and graphs with
-   3n − 8 edges and no nonempty 4-regular subgraph exist for 11 ≤ n ≤ 20 (**computed**, unreviewed;
-   section 5, question 4). The nearest published bound the literature search found is 3n − 2 edges for
+   3n − 8 edges and no nonempty 4-regular subgraph exist for every n ≥ 11 (**Lean**, `Erdos585.QBSharpnessFamily.all_orders`;
+   earlier computed for 11 ≤ n ≤ 20, section 5, question 4). The nearest published bound the literature search found is 3n − 2 edges for
    bipartite graphs, where [AFK84, Remark 3.6] gives a nonempty 4-divisible subgraph, 4-regular when
    the maximum degree is at most 7. "QB(4)" and "QB(5)" are this project's labels, not names from the
    literature.
@@ -54,7 +80,9 @@ section 7 names the models; not yet checked by a mathematician, making each one 
 **How it was made.** AI systems (OpenAI: GPT-6 Astra, reasoning effort extra high and max; Anthropic:
 Claude Fable 5.1 and Claude Opus 5.5) produced the proofs, programs and reviews under my direction.
 Section 7 outlines what we did.
-Every Lean-proved item passed a fresh check on the Lean files of `v0.3` on October 6, 2026, and `leanchecker` replayed every compiled module through the kernel. Nothing here is claimed as new until an expert has compared it with the
+The retained baseline Lean results passed checks on the files of `v0.3` on October 6, 2026,
+and `leanchecker` replayed its compiled modules through the kernel. That historical check does
+not cover the later additions; [V0.4.md](V0.4.md) gives their declarations and reproduction commands. Nothing here is claimed as new until an expert has compared it with the
 literature.
 
 **Help needed.**
@@ -70,9 +98,10 @@ literature.
 ## 1. Claims and evidence
 
 Paths starting with `supplement/` are in the supplement, the folder beside this document; all other
-paths are in the public repository at tag `v0.3`. A name in parentheses after a path is relative to that
-path. Appendix A gives every Lean statement with its file and line. Here n is the number of
-vertices, e the number of edges and Δ the maximum degree.
+paths are in the public repository at tag `v0.4`; files that predate this update are as at tag `v0.3.1` unless this update changed them. A name in parentheses after a path is relative to that
+path. Appendix A gives every v0.3 Lean statement with its file and line; the v0.4 statements are in V0.4.md and `scripts/headline-theorems.json`. Here n is the number of
+vertices, e the number of edges and Δ the maximum degree. This is the retained baseline table;
+the v0.4 statement and construction tables are in [V0.4.md](V0.4.md).
 
 | | Claim | Evidence | Section; files |
 |---|---|---|---|
@@ -135,7 +164,7 @@ noncomputable def maxEdges (n : ℕ) : ℕ :=
 
 The Lean results build with Lean `v4.33.1`, Mathlib `0df444a360eaa60ab8c11dca51a86af692955474` and
 formal_conjectures `137aec5c7abd3aa61f7a73138a97279acfc79e93`. From the root of the public repository
-[roberthuynh/erdos-585](https://github.com/roberthuynh/erdos-585) at tag `v0.3`:
+[roberthuynh/erdos-585](https://github.com/roberthuynh/erdos-585) using the pinned dependencies (the earlier verification was at tag `v0.3`):
 
 ```bash
 lake exe cache get && lake build
@@ -143,20 +172,26 @@ lake exe cache get && lake build
 ```
 
 `check.sh` builds the file, counts `sorry` (comments ignored) and prints the axioms; a pass ends with
-`RESULT: PASS build=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]`. No Lean
-file uses `native_decide`, and `lake env leanchecker <module>`, which replays a compiled module's
-declarations through the kernel, passes on every module (transcripts in `supplement/checks/`).
+`RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]`. No Lean
+file uses `native_decide`, and a kernel replay of each compiled module (v0.3: `lake env leanchecker <module>`, transcripts in
+`supplement/checks/`; v0.4: `replayFromImports` per module as in the README, transcripts in `supplement/checks/v0.4/`) passes on every configured custom module.
 Transcripts of runs that rebuild `Target.lean` also show its four "declaration uses `sorry`"
 warnings: it states the open problem with `sorry`, the formal-conjectures convention, and the axiom
-check shows that no result depends on it. `python3 scripts/check_axioms.py` checks the axioms and statements of all 25 headline
-results at once. Lean files outside the repository's Lean build are in
+check shows that no registered result depends on it. `python3 scripts/check_axioms.py` checks
+the axioms and recorded statements of the selected registry. **Formal verification.** The README's "Formal verification" paragraph records the October 11, 2026 checks (76 registered declarations, 75 `./check.sh` passes, every configured custom module kernel-replayed, rerun the same day from a separate checkout); the transcript of that final run is in `supplement/checks/v0.4/`, and the earlier run's receipts are private. One registered declaration in `Openmath/Target.lean` has type/axiom and kernel evidence but no whole-file oracle call because that file also contains unproved conjectures. The conjectures remain unproved, and no registered proved result depends on `sorryAx`. Dependency caches were reused; this was not a from-empty Mathlib rebuild. These checks establish neither novelty, complete prose exposition nor human mathematical review.
+Registrations are not a count of independent mathematical contributions. Lean files outside the repository's Lean build are in
 `supplement/lean/Openmath/Proofs/`: copy them into the repository's `Openmath/Proofs/` and run the same
 command. `supplement/MANIFEST.md` gives each supplement file's SHA-256, and appendix A has every
-statement verbatim.
+v0.3 statement verbatim; the printed types of all 76 registered declarations are in `scripts/headline-theorems.json`.
 
 ## 4. Results
 
 ### 4.1 4-regular subgraphs at maximum degree six (Lean-proved; written proof, reviewed)
+
+**v0.4 update (Lean only; no written proof of QB(6) is included).** QB(6) gives a nonempty 4-regular subgraph for every finite simple bipartite
+graph with n ≥ 4, maximum degree at most six and at least 3n − 6 edges. There are Lean-checked
+avoiding examples at 3n − 8 edges for every n ≥ 11. The discussion below records the earlier
+QB(4)/QB(5) arguments; [V0.4.md](V0.4.md) gives the current endpoint and sources.
 
 **QB(5)** (`Erdos585.qb5`). Every finite simple bipartite graph with maximum degree at most 6, n ≥ 3
 vertices and at least 3n − 5 edges has a nonempty 4-regular subgraph. Its proof builds on QB(4)'s; see
@@ -278,7 +313,8 @@ no failure), and one subcase is checked by hand only; the Lean proof checks ever
 lists name and each referee's code are in `supplement/papers/qb5/` (the referees' data are not);
 section 0 of `PAPER4.md` states the result, and section 5 of `REVIEW4.md` sets out the chain.
 
-Whether 3n − 6 edges, or even 3n − 7, suffice for every n is open. An edge census shows that 3n − 7
+QB(6) now establishes that 3n − 6 edges suffice for every n ≥ 4. Whether 3n − 7 edges
+suffice for every n ≥ 4 remains open in this work. An edge census shows that 3n − 7
 suffice for 4 ≤ n ≤ 19 (section 5, question 4), and the census of 4-cores points the same way, with
 the caveat of section 4.4: no bipartite
 graph with Δ ≤ 6, e ≥ 3n − 6 and no nonempty 4-regular subgraph has a nonempty 4-core of at most 18 vertices
@@ -600,8 +636,8 @@ not Lean-proved). It rules out one proof method, not the existence of pair-free 
      the 3 graphs that are not E10, the conclusion fails in 22 of their 198 tests, at the edges of their
      small cuts. Row 17 does not use S6, and none of this says anything about larger graphs.
 4. **The constants.** QB(4) is not best possible for n ≥ 3: QB(5), Lean-proved (section
-   4.1), lowers the threshold to 3n − 5. Do 3n − 6 edges suffice, as the census suggests, or 3n − 7?
-   (3n − 8 do not; section 4.1.) For small n an edge census answers both. On 17, 18 and 19 vertices
+   4.1), lowers the threshold to 3n − 5, and v0.4 establishes 3n − 6 for n ≥ 4. Do 3n − 7
+   edges suffice for every n ≥ 4? (3n − 8 do not, for every n ≥ 11; [V0.4.md](V0.4.md).) For small n an edge census answers both. On 17, 18 and 19 vertices
    the largest bipartite graphs with Δ ≤ 6 and no nonempty 4-regular subgraph have 43, 46 and 49
    edges, that is 3n − 8, by two methods each (row 4). Both methods also cover the smaller orders, so
    3n − 7 edges suffice for 4 ≤ n ≤ 19, and 3n − 6 edges for 4 ≤ n ≤ 20 (n = 20 by one method). Graphs
@@ -619,6 +655,11 @@ not Lean-proved). It rules out one proof method, not the existence of pair-free 
 
 ## 6. Audit requests, in detail
 
+For the v0.4 results, start with [V0.4.md](V0.4.md) and its [proof guide](V0.4-PROOF.md):
+check the critical cut argument, the existential support bounds, the even-degree transfer,
+and the precise classical factor comparison. Novelty has not been established. The requests
+below concern the earlier material and remain relevant.
+
 The [literature comparisons](../literature/README.md) record prior methods, exact source locations
 and access limits.
 
@@ -631,8 +672,9 @@ and access limits.
 3. **The three graphs.** From the edge lists alone, confirm that all three are 5-regular and pair-free
    and that the largest is bipartite. Read and Wilson already record generic five-regular graphs
    without a quartic (section 4.2). The comparisons needed here concern exact orders, the bipartite
-   restriction and the minimum-order census. (A connected 4-regular graph without a Hamilton
-   decomposition is pair-free.)
+   restriction and the minimum-order census. (A connected 4-regular graph without a Hamilton decomposition is pair-free: a pair
+   uses all four incident edges at each of its support vertices, so connectedness forces
+   that support to be the whole graph.)
 4. **The census.** Replicate the single-program claims (n = 14, and bipartite graphs through 18).
    Check that `pairc.c` is complete and sound: the runs saved no witnesses, so re-run a sample with
    `./pairc w` and check the printed pairs independently.
@@ -690,6 +732,14 @@ mathematics yet, although I am looking for help: if you find an error or know of
 willing to help, please open an issue in the public repository and I'd love to get in contact with
 you.
 
+The v0.4 preparation also used OpenAI GPT-6.1 Sol agents in fresh contexts for selected
+mathematical, literature and technical reviews, with GPT-6 Astra directing the preparation.
+These were AI reviews with recorded checking limits. They do not imply human mathematical
+review or an independent discovery of the methods. The original proof-author records are
+retained with the sources; this paragraph does not reassign authorship of those proofs.
+
+The v0.4 Lean proofs, written proofs and constructions (R898 and the other modules added in v0.4) were produced by OpenAI GPT-6.1 Sol and GPT-6 Astra agents in OpenAI's Codex from October 7 to 11, 2026, and reviewed in fresh contexts by GPT-6.1 Sol agents and by Claude Fable 5.1 and Claude Opus 5.5 agents. Those reviews read the R898 endpoint sources and their immediate dependencies, and checked the source bindings of the registered declarations and the presentation; no human compared any v0.4 Lean statement with the prose. Other Claude Fable 5.1 and Claude Opus 5.5 agents ran parallel research tracks whose reports are private. The v0.4 documents were drafted by GPT-6.1 Sol agents under GPT-6 Astra direction. Before release, Claude Fable 5.1 and Claude Opus 5.5 agents independently rebuilt the tree, reran every check and read the public files without access to the private record; the corrections from that pass are in this release, and the transcript of its final rerun is in `supplement/checks/v0.4/`. Rows 14 to 16 of the table below record this work; the section 8 cost table ends at October 6 and does not cost the v0.4 proofs.
+
 The AI systems and their roles, from the project's logs:
 
 | | Period (2026) | Model | Role | Main outputs here |
@@ -707,6 +757,9 @@ The AI systems and their roles, from the project's logs:
 | 11 | Oct 5 to 6 | Claude Opus 5.5 | revising this document | the v0.3 release files, the new sections, re-runs of every Lean check on the `v0.3` files |
 | 12 | Oct 6 | Claude Opus 5.5 | the Lean proof of QB(5), by a planning subagent and five build subagents of the third track's lead agent | `Openmath/Proofs/QB5/` (17 modules) |
 | 13 | Oct 6 | Claude Fable 5.1 | a separate reading of the Lean statement of QB(5) against the papers | the verdict that `Erdos585.qb5` states the papers' QB(5) |
+| 14 | Oct 7 to 11 | OpenAI GPT-6.1 Sol, OpenAI GPT-6 Astra | in OpenAI's Codex: Sol and Astra agents wrote the v0.4 Lean proofs, written proofs and constructions; Sol agents reviewed them in fresh contexts and drafted the v0.4 documents under Astra direction | R898 and the other modules added in v0.4; `V0.4.md`, `V0.4-PROOF.md` and `literature/README.md`; the reviews themselves are not in this repository |
+| 15 | Oct 7 to 11 | Claude Fable 5.1, Claude Opus 5.5 | reviews in fresh contexts of the v0.4 proofs (the R898 endpoint sources, their immediate dependencies, the source bindings of the registered declarations and the presentation), and parallel research tracks whose reports are private | none in this repository; no human compared any v0.4 Lean statement with the prose |
+| 16 | Oct 11 | Claude Fable 5.1, Claude Opus 5.5 | the pre-release verification pass: rebuilt the tree, reran every check and read the public files without access to the private record | the corrections in this release; the rerun transcript in `supplement/checks/v0.4/` |
 
 The supplement's working documents are verbatim
 apart from local paths, link targets, one marked correction, Lean copyright lines, marked omissions, the
@@ -724,6 +777,8 @@ The scale of each pass, from the project's private cost ledger, with costs at AP
 | 1 | Sep 29 to Oct 1 | about 8 hours with the lead agent active, over a span of 63 hours | 25 | at least 1,226 | $267.87 | the statement; f(n) for n ≤ 5 in Lean; f(1) to f(8) by two programs |
 | 2 | Oct 1 to 4 | 58.4 hours with at least one Codex task running | 240 | 18,844 | $5,671.60 | f(6) and f(7) in Lean, f(11) and f(12), and the lower bounds; the 32- and 104-vertex graphs; twin-core forcing; Theorem R1; the census through 14 vertices; the conditional route and the barrier |
 | 3 | Oct 4 to 6 | about 37 hours | 91 | at least 7,483 | $1,415.34, plus at least $536.66 for the sessions that supported it | QB(4), QB(5) in Lean and P_2; the 18-vertex graph and the least order 18; B6 through 24 vertices; S6 at 22 vertices; the edge census |
+
+Attempt 4 (October 7 to 11, 2026), which produced the v0.4 additions, is not in this table.
 
 The OPDP atlas [OPDP] (record 2194, the same from v1.2 to v1.8) rates Erdős 585 T2 Research Sprint and AI-favored
 (AI difficulty 1.8, confidence C1). The record is itself flagged for curation (`malformed_import_fragment`,

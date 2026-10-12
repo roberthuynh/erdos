@@ -1,0 +1,2689 @@
+{
+ "date": "2026-10-11",
+ "what": "Independent rerun of every repository check on the final v0.4 source tree, from a separate checkout with the custom-module build cache removed. Mathlib was taken from the pinned cache, not rebuilt. check.sh was run twice per declaration: the repository copy and a byte-identical copy at the checkout root.",
+ "toolchain": "leanprover/lean4:v4.33.1",
+ "machine": "18-core Apple silicon, LEAN_NUM_THREADS 6 for the build and 2 for every check; 3 oracle workers and 4 replay workers in parallel, so per-item wall times are inflated",
+ "build": {
+  "status": "PASS",
+  "chunks": [
+   {
+    "rc": 0,
+    "wall_s": 210.6,
+    "oleans_after": 437
+   }
+  ],
+  "oleans_final": 437
+ },
+ "check_axioms": [
+  [
+   "AXIOMS: PASS (76 proved declarations)",
+   "STATEMENTS: PASS (76 recorded types)"
+  ]
+ ],
+ "guards": [
+  {
+   "name": "guard-test_release_checks",
+   "rc": 0
+  },
+  {
+   "name": "guard-test_check_sh",
+   "rc": 0
+  },
+  {
+   "name": "guard-test_export_manifest",
+   "rc": 0
+  },
+  {
+   "name": "export-manifest",
+   "rc": 0
+  }
+ ],
+ "oracles": {
+  "total": 75,
+  "pass_repository_check_sh": 75,
+  "pass_root_copy": 75,
+  "rows": [
+   {
+    "declaration": "Erdos585.maxEdges_eq_choose_two_of_le_four",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 35.1
+   },
+   {
+    "declaration": "Erdos585.maxEdges_five",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 35.1
+   },
+   {
+    "declaration": "Erdos585.maxEdges_six",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 35.1
+   },
+   {
+    "declaration": "Erdos585.maxEdges_seven",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 19.5
+   },
+   {
+    "declaration": "Erdos585.three_mul_sub_six_le_maxEdges",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 19.5
+   },
+   {
+    "declaration": "Erdos585.three_mul_sub_five_le_maxEdges",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 19.5
+   },
+   {
+    "declaration": "Erdos585.three_mul_sub_four_le_maxEdges",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 13.8
+   },
+   {
+    "declaration": "Erdos585.maxEdges_succ_ge",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 13.8
+   },
+   {
+    "declaration": "Erdos585.four_mul_sub_thirteen_le_maxEdges",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 13.8
+   },
+   {
+    "declaration": "Erdos585.thirty_one_le_maxEdges_eleven",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 18.6
+   },
+   {
+    "declaration": "Erdos585.thirty_six_le_maxEdges_twelve",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 18.6
+   },
+   {
+    "declaration": "Erdos585.complete_matching_subdivision_lower_bound",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 18.6
+   },
+   {
+    "declaration": "Erdos585.latin_incidence_lower_bound",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 13.6
+   },
+   {
+    "declaration": "Erdos585.five_mul_sub_sqrt_le_maxEdges",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 13.6
+   },
+   {
+    "declaration": "Erdos585.doubleWheel_not_hasTwoEdgeDisjointCyclesSameVertexSet",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 13.6
+   },
+   {
+    "declaration": "Erdos585.thetaWheel_not_hasTwoEdgeDisjointCyclesSameVertexSet",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 13.5
+   },
+   {
+    "declaration": "Erdos585.matchingSubdivision_not_hasTwoEdgeDisjointCyclesSameVertexSet",
+    "file": "Openmath/Proofs/Final.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 13.5
+   },
+   {
+    "declaration": "Erdos585.RegularFive.exists_five_regular_pairfree",
+    "file": "Openmath/Proofs/RegularFive.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 13.5
+   },
+   {
+    "declaration": "Erdos585.BipartiteFive.exists_bipartite_five_regular_pairfree",
+    "file": "Openmath/Proofs/BipartiteFive.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 13.6
+   },
+   {
+    "declaration": "Erdos585.RegularFive18.exists_five_regular_pairfree",
+    "file": "Openmath/Proofs/RegularFive18.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 13.6
+   },
+   {
+    "declaration": "Erdos585.qb5",
+    "file": "Openmath/Proofs/QB5/Statement.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.9
+   },
+   {
+    "declaration": "Erdos585.qb4",
+    "file": "Openmath/Proofs/QB4/Statement.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.7
+   },
+   {
+    "declaration": "Erdos585.exists_four_regular_avoiding_of_bipartite_six_regular",
+    "file": "Openmath/Proofs/QB4/Statement.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.1
+   },
+   {
+    "declaration": "Erdos585.hasPair_top_five",
+    "file": "Openmath/Proofs/TopFive.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 12.5
+   },
+   {
+    "declaration": "Erdos585.QBSharpnessFamily.all_orders",
+    "file": "Openmath/Proofs/PaperSupport/QBSharpnessFamily.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.2
+   },
+   {
+    "declaration": "Erdos585.QB6Unconditional.qb6",
+    "file": "Openmath/Proofs/PaperSupport/QB6Unconditional.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.9
+   },
+   {
+    "declaration": "Erdos585.L17HCq.l17_all_orders",
+    "file": "Openmath/Proofs/PaperSupport/BqL17HCqLowerFamily.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.3
+   },
+   {
+    "declaration": "Erdos585.L17HCq.l17_natural_all_orders",
+    "file": "Openmath/Proofs/PaperSupport/BqL17HCqLowerFamily.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.1
+   },
+   {
+    "declaration": "Erdos585.Cascade29.cascade29_all_orders",
+    "file": "Openmath/Proofs/PaperSupport/Cascade29/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.2
+   },
+   {
+    "declaration": "Erdos585.Cascade29.cascade29_endpoint",
+    "file": "Openmath/Proofs/PaperSupport/Cascade29/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.1
+   },
+   {
+    "declaration": "Erdos585.GeneralStar.general_star_endpoint",
+    "file": "GeneralStar/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.4
+   },
+   {
+    "declaration": "Erdos585.GeneralStar.general_star_optimized",
+    "file": "GeneralStar/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.4
+   },
+   {
+    "declaration": "Erdos585.GeneralStar.U24",
+    "file": "GeneralStar/UniformSeed.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.6
+   },
+   {
+    "declaration": "Erdos585.GeneralStar.T24_order",
+    "file": "GeneralStar/Transfer.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.7
+   },
+   {
+    "declaration": "Erdos585.Counter90.counter90_properties",
+    "file": "Openmath/Proofs/PaperSupport/Counter90/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.0
+   },
+   {
+    "declaration": "Erdos585.Counter90.seed_no_regular_subgraph",
+    "file": "Openmath/Proofs/PaperSupport/Counter90/Original.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.0
+   },
+   {
+    "declaration": "Erdos585.Q6D20R31.all_orders",
+    "file": "Q6D20/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.8
+   },
+   {
+    "declaration": "Erdos585.Q6D20R31.lowerEndpoint",
+    "file": "Q6D20/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.7
+   },
+   {
+    "declaration": "Erdos585.L34.l34",
+    "file": "L34/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.8
+   },
+   {
+    "declaration": "Erdos585.L34MinimumSupport.l34_minimum_support",
+    "file": "L34MinimumSupport/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.8
+   },
+   {
+    "declaration": "Erdos585.L34EvenTransfer.l34_even",
+    "file": "L34EvenTransfer/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.0
+   },
+   {
+    "declaration": "Erdos585.EvenFactorLargeSupport.even_factor_large_support",
+    "file": "EvenFactorLargeSupport/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.8
+   },
+   {
+    "declaration": "Erdos585.AFKBoundary.q5_afk_boundary_counterexamples",
+    "file": "AFKBoundary/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.9
+   },
+   {
+    "declaration": "Erdos585.AFKBoundary.q7_afk_boundary_counterexamples",
+    "file": "AFKBoundary/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.7
+   },
+   {
+    "declaration": "Erdos585.H49BalancedR715.bare_h49",
+    "file": "R715/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.9
+   },
+   {
+    "declaration": "Erdos585.H4BareR788.bare_h4_original_caller",
+    "file": "R788/Endpoint.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.9
+   },
+   {
+    "declaration": "Erdos585.AllHBalancedSelectorR801.original_host_caller",
+    "file": "R801/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.7
+   },
+   {
+    "declaration": "Erdos585.QB7ReverseExtensionR805.original_reverse_extension_target",
+    "file": "R805.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.7
+   },
+   {
+    "declaration": "Erdos585.QB7Selector0011R799.original_selector0011_target",
+    "file": "R799.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.6
+   },
+   {
+    "declaration": "Erdos585.QB7ThreePortR806.original_selector_three_port_target",
+    "file": "R806.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.2
+   },
+   {
+    "declaration": "Erdos585.AllHBalancedSelectorR801.balanced_core_factor",
+    "file": "R801/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.0
+   },
+   {
+    "declaration": "Erdos585.R804.third_surplus_original",
+    "file": "R804/Caller.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.9
+   },
+   {
+    "declaration": "Erdos585.R804.fourth_surplus_original",
+    "file": "R804/Caller.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.3
+   },
+   {
+    "declaration": "Erdos585.R816.construct_three_offset_core",
+    "file": "R816/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.3
+   },
+   {
+    "declaration": "Erdos585.QB7ResidualThreePortR827.original_selector_residual_three_port_target",
+    "file": "R827.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.6
+   },
+   {
+    "declaration": "Erdos585.H5BareR831.bare_h5_original_caller",
+    "file": "R831/Endpoint.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.1
+   },
+   {
+    "declaration": "Erdos585.R837.exists_threshold_reduction",
+    "file": "R837/Budget.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.1
+   },
+   {
+    "declaration": "Erdos585.RobustBalancedSelectorR838.original_host_caller",
+    "file": "R838/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.7
+   },
+   {
+    "declaration": "Erdos585.QB7ProfileFreeR854.original_profile_free_target",
+    "file": "R854/ProfileFree.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.3
+   },
+   {
+    "declaration": "Erdos585.QB7ProfileFreeR854.original_profile_free_raw",
+    "file": "R854/ProfileFree.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.3
+   },
+   {
+    "declaration": "Erdos585.QB7ProfileFreeR854.original_profile_free_exists",
+    "file": "R854/ProfileFree.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.9
+   },
+   {
+    "declaration": "Erdos585.R856.original_graph_normalization",
+    "file": "R856/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.3
+   },
+   {
+    "declaration": "Erdos585.R863.error_floor_positive_selector",
+    "file": "R863/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.3
+   },
+   {
+    "declaration": "Erdos585.R866.every_h_forcing",
+    "file": "R866/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.2
+   },
+   {
+    "declaration": "Erdos585.R866.every_multiplier_forcing",
+    "file": "R866/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.4
+   },
+   {
+    "declaration": "Erdos585.R874.superlinear_forcing",
+    "file": "R874/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 6.4
+   },
+   {
+    "declaration": "Erdos585.QB7S0002R869.original_s0002_raw",
+    "file": "R869/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 5.9
+   },
+   {
+    "declaration": "Erdos585.R882.cubic_forcing",
+    "file": "R882/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 4.5
+   },
+   {
+    "declaration": "Erdos585.R882.superlinear_forcing",
+    "file": "R882/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 4.5
+   },
+   {
+    "declaration": "Erdos585.QB7S0001R883.original_s0001_raw",
+    "file": "R883/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 3.7
+   },
+   {
+    "declaration": "Erdos585.QB7S0012R894.original_s0012_target",
+    "file": "R894/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 4.3
+   },
+   {
+    "declaration": "Erdos585.QB7S0000R895.original_s0000_raw",
+    "file": "R895/Extreme.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 4.3
+   },
+   {
+    "declaration": "Erdos585.R898.every_h_forcing",
+    "file": "R898/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 3.8
+   },
+   {
+    "declaration": "Erdos585.R898.superlinear_forcing",
+    "file": "R898/Main.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 4.1
+   },
+   {
+    "declaration": "BqCircularLowerFamily.all_orders",
+    "file": "Openmath/Proofs/PaperSupport/BqCircularLowerDirect.lean",
+    "result": "RESULT: PASS build=ok axiom_query=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[]",
+    "wall_s": 4.1
+   }
+  ]
+ },
+ "kernel_replay": {
+  "modules": 437,
+  "pass": 437,
+  "rows": [
+   {
+    "module": "AFKBoundary.Main",
+    "status": "PASS",
+    "wall_s": 12.8
+   },
+   {
+    "module": "AllHFourthExistence.Bridge",
+    "status": "PASS",
+    "wall_s": 12.9
+   },
+   {
+    "module": "AllHFourthExistence.Main",
+    "status": "PASS",
+    "wall_s": 12.8
+   },
+   {
+    "module": "AllHFourthQuotaFailure.Basics",
+    "status": "PASS",
+    "wall_s": 12.8
+   },
+   {
+    "module": "AllHFourthQuotaFailure.Dense",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "AllHFourthQuotaFailure.Interface",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "AllHFourthQuotaFailure.Main",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "AllHFourthQuotaFailure.Quota",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "AllHFourthQuotaFailure.Trim",
+    "status": "PASS",
+    "wall_s": 2.9
+   },
+   {
+    "module": "AllHLargestNonstrict.Geometry",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "AllHLargestNonstrict.Interface",
+    "status": "PASS",
+    "wall_s": 2.9
+   },
+   {
+    "module": "AllHLargestNonstrict.Intersections",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "AllHLargestNonstrict.Main",
+    "status": "PASS",
+    "wall_s": 2.9
+   },
+   {
+    "module": "AllHLargestNonstrict.Numeric",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "AllHLargestNonstrict.Original",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "AllHLargestNonstrict.PetalEscape",
+    "status": "PASS",
+    "wall_s": 2.9
+   },
+   {
+    "module": "AllHLargestNonstrict.Selection",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "AllHLargestNonstrict.Tiny",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "AllHNextNonstrict.Geometry",
+    "status": "PASS",
+    "wall_s": 2.9
+   },
+   {
+    "module": "AllHNextNonstrict.Interface",
+    "status": "PASS",
+    "wall_s": 2.5
+   },
+   {
+    "module": "AllHNextNonstrict.Intersections",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "AllHNextNonstrict.Main",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "AllHNextNonstrict.Numeric",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "AllHNextNonstrict.Original",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "AllHNextNonstrict.PetalEscape",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "AllHNextNonstrict.Selection",
+    "status": "PASS",
+    "wall_s": 2.9
+   },
+   {
+    "module": "AllHNextNonstrict.Tiny",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "AllHNextNonstrict.TopEscape",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "AllHQuotaNonstrict.ActualSelection",
+    "status": "PASS",
+    "wall_s": 2.9
+   },
+   {
+    "module": "AllHQuotaNonstrict.Caller",
+    "status": "PASS",
+    "wall_s": 2.7
+   },
+   {
+    "module": "AllHQuotaNonstrict.Containment",
+    "status": "PASS",
+    "wall_s": 2.9
+   },
+   {
+    "module": "AllHQuotaNonstrict.Geometry",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "AllHQuotaNonstrict.Interface",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "AllHQuotaNonstrict.Intersections",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "AllHQuotaNonstrict.Local",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "AllHQuotaNonstrict.Main",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "AllHQuotaNonstrict.Numeric",
+    "status": "PASS",
+    "wall_s": 4.0
+   },
+   {
+    "module": "AllHQuotaNonstrict.Original",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "AllHQuotaNonstrict.Owners",
+    "status": "PASS",
+    "wall_s": 4.1
+   },
+   {
+    "module": "AllHQuotaNonstrict.PetalEscape",
+    "status": "PASS",
+    "wall_s": 4.2
+   },
+   {
+    "module": "AllHQuotaNonstrict.Protection",
+    "status": "PASS",
+    "wall_s": 4.4
+   },
+   {
+    "module": "AllHQuotaNonstrict.Rank",
+    "status": "PASS",
+    "wall_s": 4.1
+   },
+   {
+    "module": "AllHQuotaNonstrict.Resources",
+    "status": "PASS",
+    "wall_s": 4.4
+   },
+   {
+    "module": "AllHQuotaNonstrict.Selection",
+    "status": "PASS",
+    "wall_s": 4.0
+   },
+   {
+    "module": "AllHQuotaNonstrict.Tiny",
+    "status": "PASS",
+    "wall_s": 4.3
+   },
+   {
+    "module": "AllHQuotaNonstrict.UniformEscape",
+    "status": "PASS",
+    "wall_s": 4.4
+   },
+   {
+    "module": "AllHQuotaSurplus.ActualSelection",
+    "status": "PASS",
+    "wall_s": 4.2
+   },
+   {
+    "module": "AllHQuotaSurplus.Containment",
+    "status": "PASS",
+    "wall_s": 4.1
+   },
+   {
+    "module": "AllHQuotaSurplus.Geometry",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "AllHQuotaSurplus.Interface",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "AllHQuotaSurplus.Intersections",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "AllHQuotaSurplus.Local",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "AllHQuotaSurplus.Main",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "AllHQuotaSurplus.Numeric",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "AllHQuotaSurplus.Original",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "AllHQuotaSurplus.Owners",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "AllHQuotaSurplus.PetalEscape",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "AllHQuotaSurplus.Protection",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "AllHQuotaSurplus.Rank",
+    "status": "PASS",
+    "wall_s": 2.6
+   },
+   {
+    "module": "AllHQuotaSurplus.Resources",
+    "status": "PASS",
+    "wall_s": 2.7
+   },
+   {
+    "module": "AllHQuotaSurplus.Selection",
+    "status": "PASS",
+    "wall_s": 2.6
+   },
+   {
+    "module": "AllHQuotaSurplus.Tiny",
+    "status": "PASS",
+    "wall_s": 2.7
+   },
+   {
+    "module": "AllHQuotaSurplus.UniformEscape",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "AllHThirdExistence.Caller",
+    "status": "PASS",
+    "wall_s": 2.6
+   },
+   {
+    "module": "AllHThirdExistence.Main",
+    "status": "PASS",
+    "wall_s": 2.7
+   },
+   {
+    "module": "AllHThirdFragileFree.Interface",
+    "status": "PASS",
+    "wall_s": 2.6
+   },
+   {
+    "module": "AllHThirdFragileFree.Numeric",
+    "status": "PASS",
+    "wall_s": 2.7
+   },
+   {
+    "module": "AllHThirdQuotaFailure.Basics",
+    "status": "PASS",
+    "wall_s": 2.7
+   },
+   {
+    "module": "AllHThirdQuotaFailure.Dense",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "AllHThirdQuotaFailure.Interface",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "AllHThirdQuotaFailure.Main",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "AllHThirdQuotaFailure.Trim",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "AllHThirdTwoQuota.Geometry",
+    "status": "PASS",
+    "wall_s": 4.9
+   },
+   {
+    "module": "AllHThirdTwoQuota.Interface",
+    "status": "PASS",
+    "wall_s": 4.5
+   },
+   {
+    "module": "AllHThirdTwoQuota.Intersections",
+    "status": "PASS",
+    "wall_s": 4.6
+   },
+   {
+    "module": "AllHThirdTwoQuota.Main",
+    "status": "PASS",
+    "wall_s": 4.4
+   },
+   {
+    "module": "AllHThirdTwoQuota.Original",
+    "status": "PASS",
+    "wall_s": 4.7
+   },
+   {
+    "module": "AllHThirdTwoQuota.PetalEscape",
+    "status": "PASS",
+    "wall_s": 4.9
+   },
+   {
+    "module": "AllHThirdTwoQuota.Protection",
+    "status": "PASS",
+    "wall_s": 4.7
+   },
+   {
+    "module": "AllHThirdTwoQuota.Quota",
+    "status": "PASS",
+    "wall_s": 4.8
+   },
+   {
+    "module": "AllHThirdTwoQuota.Selection",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "AllHThirdTwoQuota.Tiny",
+    "status": "PASS",
+    "wall_s": 4.2
+   },
+   {
+    "module": "AllHThirdTwoQuota.TopEscape",
+    "status": "PASS",
+    "wall_s": 4.6
+   },
+   {
+    "module": "AllHTopTwo.Geometry",
+    "status": "PASS",
+    "wall_s": 4.2
+   },
+   {
+    "module": "AllHTopTwo.Interface",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "AllHTopTwo.Intersections",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "AllHTopTwo.Numeric",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "AllHTopTwo.PetalEscape",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "AllHTopTwo.Selection",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "AllHTopTwo.Tiny",
+    "status": "PASS",
+    "wall_s": 4.6
+   },
+   {
+    "module": "BqLowerFamilyDirect",
+    "status": "PASS",
+    "wall_s": 4.7
+   },
+   {
+    "module": "EvenFactor.Canonical",
+    "status": "PASS",
+    "wall_s": 4.2
+   },
+   {
+    "module": "EvenFactor.ComponentGeometry",
+    "status": "PASS",
+    "wall_s": 4.5
+   },
+   {
+    "module": "EvenFactor.ComponentParity",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "EvenFactor.Defs",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "EvenFactor.DegreeCount",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "EvenFactor.DeleteIso",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "EvenFactor.Extremal",
+    "status": "PASS",
+    "wall_s": 4.0
+   },
+   {
+    "module": "EvenFactor.Labels",
+    "status": "PASS",
+    "wall_s": 4.0
+   },
+   {
+    "module": "EvenFactor.LiftedCard",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "EvenFactor.LiftedGeometry",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "EvenFactor.Main",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "EvenFactor.OddCharge",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "EvenFactor.RootWalk",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "EvenFactor.StubPair",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "EvenFactor.TutteBridge",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "EvenFactorLargeSupport.Critical",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "EvenFactorLargeSupport.Main",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "EvenFactorLargeSupport.Support",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "FactorMatching.Base",
+    "status": "PASS",
+    "wall_s": 2.2
+   },
+   {
+    "module": "FactorMatching.Extract",
+    "status": "PASS",
+    "wall_s": 2.2
+   },
+   {
+    "module": "FactorMatching.Lift",
+    "status": "PASS",
+    "wall_s": 2.1
+   },
+   {
+    "module": "FactorMatching.Main",
+    "status": "PASS",
+    "wall_s": 2.0
+   },
+   {
+    "module": "GadgetNormalization.Local",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "GadgetNormalization.Main",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "GadgetNormalization.Point",
+    "status": "PASS",
+    "wall_s": 2.2
+   },
+   {
+    "module": "GadgetNormalization.Restoration",
+    "status": "PASS",
+    "wall_s": 2.3
+   },
+   {
+    "module": "GeneralStar.Boundary",
+    "status": "PASS",
+    "wall_s": 2.4
+   },
+   {
+    "module": "GeneralStar.Closed",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "GeneralStar.Degree",
+    "status": "PASS",
+    "wall_s": 2.7
+   },
+   {
+    "module": "GeneralStar.HCqSeed",
+    "status": "PASS",
+    "wall_s": 2.4
+   },
+   {
+    "module": "GeneralStar.Incidence",
+    "status": "PASS",
+    "wall_s": 2.5
+   },
+   {
+    "module": "GeneralStar.Main",
+    "status": "PASS",
+    "wall_s": 2.5
+   },
+   {
+    "module": "GeneralStar.Optimizer",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "GeneralStar.Parameters",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "GeneralStar.Shores",
+    "status": "PASS",
+    "wall_s": 2.5
+   },
+   {
+    "module": "GeneralStar.Transfer",
+    "status": "PASS",
+    "wall_s": 2.5
+   },
+   {
+    "module": "GeneralStar.Types",
+    "status": "PASS",
+    "wall_s": 2.7
+   },
+   {
+    "module": "GeneralStar.Uniform",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "GeneralStar.UniformSeed",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "GeneralStar.Word",
+    "status": "PASS",
+    "wall_s": 2.9
+   },
+   {
+    "module": "H3Unequal.Main",
+    "status": "PASS",
+    "wall_s": 5.4
+   },
+   {
+    "module": "L17HCq.Birth",
+    "status": "PASS",
+    "wall_s": 4.5
+   },
+   {
+    "module": "L17HCq.Core",
+    "status": "PASS",
+    "wall_s": 4.6
+   },
+   {
+    "module": "L17HCq.Counts",
+    "status": "PASS",
+    "wall_s": 4.6
+   },
+   {
+    "module": "L17HCq.Cross",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "L17HCq.Family",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "L17HCq.Original",
+    "status": "PASS",
+    "wall_s": 11.4
+   },
+   {
+    "module": "L17HCq.Seed",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "L34.Core",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "L34.Critical",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "L34.Main",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "L34.Selector",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "L34EvenTransfer.Barrier",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "L34EvenTransfer.Main",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "L34EvenTransfer.Minimal",
+    "status": "PASS",
+    "wall_s": 12.0
+   },
+   {
+    "module": "L34MinimumSupport.Main",
+    "status": "PASS",
+    "wall_s": 12.0
+   },
+   {
+    "module": "L34MinimumSupport.Quotas",
+    "status": "PASS",
+    "wall_s": 10.8
+   },
+   {
+    "module": "L34MinimumSupport.Scalar",
+    "status": "PASS",
+    "wall_s": 10.1
+   },
+   {
+    "module": "L34MinimumSupport.Source",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "NEQAssembly.Budget",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "NEQAssembly.Components",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "NEQAssembly.Counts",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "NEQAssembly.CriterionAdapter",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "NEQAssembly.Critical",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "NEQAssembly.Minimal",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "NEQAssembly.Partial",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "NEQAssembly.Transport",
+    "status": "PASS",
+    "wall_s": 2.9
+   },
+   {
+    "module": "NEQPort.EmptyBarrier",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "NEQPort.Numeric",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "NEQPort.Reduction",
+    "status": "PASS",
+    "wall_s": 2.9
+   },
+   {
+    "module": "Openmath",
+    "status": "PASS",
+    "wall_s": 7.6
+   },
+   {
+    "module": "Openmath.AllHTopCritical.Interface",
+    "status": "PASS",
+    "wall_s": 2.5
+   },
+   {
+    "module": "Openmath.AllHTopCritical.LowRoots",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "Openmath.AllHTopCritical.Numeric",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "Openmath.AllHTopCritical.Original",
+    "status": "PASS",
+    "wall_s": 2.4
+   },
+   {
+    "module": "Openmath.AllHTopCritical.Rigidity",
+    "status": "PASS",
+    "wall_s": 2.7
+   },
+   {
+    "module": "Openmath.AllHTopCritical.Selectors",
+    "status": "PASS",
+    "wall_s": 2.7
+   },
+   {
+    "module": "Openmath.AllHTopCritical.SmallFloors",
+    "status": "PASS",
+    "wall_s": 4.2
+   },
+   {
+    "module": "Openmath.Proofs.AdjacentHubs",
+    "status": "PASS",
+    "wall_s": 24.5
+   },
+   {
+    "module": "Openmath.Proofs.BipartiteBalance",
+    "status": "PASS",
+    "wall_s": 7.4
+   },
+   {
+    "module": "Openmath.Proofs.BipartiteFive",
+    "status": "PASS",
+    "wall_s": 57.0
+   },
+   {
+    "module": "Openmath.Proofs.Compat",
+    "status": "PASS",
+    "wall_s": 6.2
+   },
+   {
+    "module": "Openmath.Proofs.Counting",
+    "status": "PASS",
+    "wall_s": 7.6
+   },
+   {
+    "module": "Openmath.Proofs.CutGluing",
+    "status": "PASS",
+    "wall_s": 7.6
+   },
+   {
+    "module": "Openmath.Proofs.DensityCore",
+    "status": "PASS",
+    "wall_s": 6.6
+   },
+   {
+    "module": "Openmath.Proofs.DoubleWheel",
+    "status": "PASS",
+    "wall_s": 5.6
+   },
+   {
+    "module": "Openmath.Proofs.Extension",
+    "status": "PASS",
+    "wall_s": 5.2
+   },
+   {
+    "module": "Openmath.Proofs.Final",
+    "status": "PASS",
+    "wall_s": 6.4
+   },
+   {
+    "module": "Openmath.Proofs.Five",
+    "status": "PASS",
+    "wall_s": 6.9
+   },
+   {
+    "module": "Openmath.Proofs.IncidenceHubs",
+    "status": "PASS",
+    "wall_s": 7.0
+   },
+   {
+    "module": "Openmath.Proofs.LatinIncidence",
+    "status": "PASS",
+    "wall_s": 6.5
+   },
+   {
+    "module": "Openmath.Proofs.MatchingSubdivision",
+    "status": "PASS",
+    "wall_s": 6.5
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.B5Defs",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.B5Factor",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.B5MainDefs",
+    "status": "PASS",
+    "wall_s": 2.7
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.B5PairTools",
+    "status": "PASS",
+    "wall_s": 2.7
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.B5Resource",
+    "status": "PASS",
+    "wall_s": 2.9
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.B5Selector",
+    "status": "PASS",
+    "wall_s": 4.1
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.B5SelectorCore",
+    "status": "PASS",
+    "wall_s": 4.5
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.BqCircularLowerDirect",
+    "status": "PASS",
+    "wall_s": 5.6
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.BqL17HCqLowerFamily",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.BqMain",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.BqMinSizeBridge",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.BqMinSizeMain",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.BqMinSizeQuotas",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.BqMinSizeScalar",
+    "status": "PASS",
+    "wall_s": 2.7
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.BqMinSizeSource",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.BqMinSizeTypes",
+    "status": "PASS",
+    "wall_s": 2.7
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.BqOrderFeasible",
+    "status": "PASS",
+    "wall_s": 4.3
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Cascade29.Capacity",
+    "status": "PASS",
+    "wall_s": 4.3
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Cascade29.DataExtend",
+    "status": "PASS",
+    "wall_s": 4.4
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Cascade29.FirstStep",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Cascade29.Invariants",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Cascade29.Main",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Cascade29.NormalStep",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Cascade29.Schedule",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Cascade29.Seed",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Cascade29.SeedCascade",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Cascade29.SeedMatrixBase",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Cascade29.SeedSubgraph",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Cascade29.Types",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Counter90.Main",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Counter90.Matrix",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Counter90.Original",
+    "status": "PASS",
+    "wall_s": 4.5
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Counter90.SupportExclusion",
+    "status": "PASS",
+    "wall_s": 4.5
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Counter90.SupportFacts",
+    "status": "PASS",
+    "wall_s": 8.8
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Counter90.Types",
+    "status": "PASS",
+    "wall_s": 4.6
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.H3RangeR400",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6Assembly",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6C02Five4",
+    "status": "PASS",
+    "wall_s": 4.0
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6C02LinearCover",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6C02MinFive",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6C02MinFiveCore",
+    "status": "PASS",
+    "wall_s": 5.1
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6C02MinFiveResidual",
+    "status": "PASS",
+    "wall_s": 7.1
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6C02NoTheta3",
+    "status": "PASS",
+    "wall_s": 4.1
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6C02NonlinearCore",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6C02One4",
+    "status": "PASS",
+    "wall_s": 5.0
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6C02OrdinaryFive",
+    "status": "PASS",
+    "wall_s": 5.6
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6C02PartialFactorLean",
+    "status": "PASS",
+    "wall_s": 4.7
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6C02PointIncidence",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6C02SixNeighbor",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6C02TwoScarResource",
+    "status": "PASS",
+    "wall_s": 4.1
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6C3S",
+    "status": "PASS",
+    "wall_s": 4.8
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6CoveredFive",
+    "status": "PASS",
+    "wall_s": 4.2
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6E6Lean",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6E6Result",
+    "status": "PASS",
+    "wall_s": 2.8
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6FinalAssemblyPrep",
+    "status": "PASS",
+    "wall_s": 2.9
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6FiveSelection",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB6Unconditional",
+    "status": "PASS",
+    "wall_s": 4.1
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB7Conditional",
+    "status": "PASS",
+    "wall_s": 4.5
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB7Reduction",
+    "status": "PASS",
+    "wall_s": 4.7
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QB7TwoReverseV2",
+    "status": "PASS",
+    "wall_s": 6.2
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QBSharpness",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.QBSharpnessFamily",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Largest.Geometry",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Largest.Interface",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Largest.Intersections",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Largest.Main",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Largest.Numeric",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Largest.Original",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Largest.PetalEscape",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Largest.Selection",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Largest.Tiny",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Next.Geometry",
+    "status": "PASS",
+    "wall_s": 4.8
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Next.Interface",
+    "status": "PASS",
+    "wall_s": 4.5
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Next.Intersections",
+    "status": "PASS",
+    "wall_s": 4.5
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Next.Main",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Next.Numeric",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Next.Original",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Next.PetalEscape",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Next.Selection",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Next.Tiny",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.R400Next.TopEscape",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.ReservationInterfaceR348",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Star21.SeedMatrix",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Star21.SeedSupport",
+    "status": "PASS",
+    "wall_s": 4.2
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.Star21.Types",
+    "status": "PASS",
+    "wall_s": 4.2
+   },
+   {
+    "module": "Openmath.Proofs.PaperSupport.UnitBMatchingR352Modules",
+    "status": "PASS",
+    "wall_s": 4.2
+   },
+   {
+    "module": "Openmath.Proofs.QB4.Core",
+    "status": "PASS",
+    "wall_s": 4.4
+   },
+   {
+    "module": "Openmath.Proofs.QB4.Defs",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "Openmath.Proofs.QB4.FourFactor",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "Openmath.Proofs.QB4.Main",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "Openmath.Proofs.QB4.Reductions",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "Openmath.Proofs.QB4.Statement",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "Openmath.Proofs.QB5.Block",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "Openmath.Proofs.QB5.C2Hub",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "Openmath.Proofs.QB5.C2Petals",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "Openmath.Proofs.QB5.C2TwoBlock",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "Openmath.Proofs.QB5.CaseB",
+    "status": "PASS",
+    "wall_s": 4.0
+   },
+   {
+    "module": "Openmath.Proofs.QB5.Cover",
+    "status": "PASS",
+    "wall_s": 4.1
+   },
+   {
+    "module": "Openmath.Proofs.QB5.CoverCheck",
+    "status": "PASS",
+    "wall_s": 2.5
+   },
+   {
+    "module": "Openmath.Proofs.QB5.CoverCheck1",
+    "status": "PASS",
+    "wall_s": 24.5
+   },
+   {
+    "module": "Openmath.Proofs.QB5.CoverCheck2",
+    "status": "PASS",
+    "wall_s": 18.7
+   },
+   {
+    "module": "Openmath.Proofs.QB5.CoverCheck3",
+    "status": "PASS",
+    "wall_s": 21.9
+   },
+   {
+    "module": "Openmath.Proofs.QB5.Defs",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "Openmath.Proofs.QB5.E5",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "Openmath.Proofs.QB5.KL1",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "Openmath.Proofs.QB5.KL1Merge",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "Openmath.Proofs.QB5.Main",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "Openmath.Proofs.QB5.PairCriterion",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "Openmath.Proofs.QB5.Statement",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "Openmath.Proofs.RegularFive",
+    "status": "PASS",
+    "wall_s": 8.4
+   },
+   {
+    "module": "Openmath.Proofs.RegularFive18",
+    "status": "PASS",
+    "wall_s": 7.6
+   },
+   {
+    "module": "Openmath.Proofs.RimDensity",
+    "status": "PASS",
+    "wall_s": 11.3
+   },
+   {
+    "module": "Openmath.Proofs.RimStrip",
+    "status": "PASS",
+    "wall_s": 7.6
+   },
+   {
+    "module": "Openmath.Proofs.SmallExact",
+    "status": "PASS",
+    "wall_s": 6.9
+   },
+   {
+    "module": "Openmath.Proofs.TopFive",
+    "status": "PASS",
+    "wall_s": 6.9
+   },
+   {
+    "module": "Openmath.Proofs.TwoHub",
+    "status": "PASS",
+    "wall_s": 12.3
+   },
+   {
+    "module": "Openmath.Proofs.TwoHubFamily",
+    "status": "PASS",
+    "wall_s": 6.1
+   },
+   {
+    "module": "Openmath.Target",
+    "status": "PASS",
+    "wall_s": 6.0
+   },
+   {
+    "module": "Q6D20.Base",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "Q6D20.Choice",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "Q6D20.Family",
+    "status": "PASS",
+    "wall_s": 4.9
+   },
+   {
+    "module": "Q6D20.Main",
+    "status": "PASS",
+    "wall_s": 4.6
+   },
+   {
+    "module": "R643",
+    "status": "PASS",
+    "wall_s": 4.3
+   },
+   {
+    "module": "R643Bridge",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "R653.Main",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "R668",
+    "status": "PASS",
+    "wall_s": 4.3
+   },
+   {
+    "module": "R676",
+    "status": "PASS",
+    "wall_s": 4.9
+   },
+   {
+    "module": "R691.Main",
+    "status": "PASS",
+    "wall_s": 4.0
+   },
+   {
+    "module": "R699.Main",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "R700",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "R701.Main",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "R703.Main",
+    "status": "PASS",
+    "wall_s": 4.2
+   },
+   {
+    "module": "R704.Base",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "R704.Main",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "R704.Selection",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "R704.Tiny",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "R706.Main",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R707.Main",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R715.Main",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R716.Main",
+    "status": "PASS",
+    "wall_s": 4.1
+   },
+   {
+    "module": "R721",
+    "status": "PASS",
+    "wall_s": 4.1
+   },
+   {
+    "module": "R744.Main",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "R751",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "R753.Main",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "R763",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "R773.Main",
+    "status": "PASS",
+    "wall_s": 4.3
+   },
+   {
+    "module": "R782",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R783.Coverage",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R783.Hazard",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R783.Main",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "R788.Assembly",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "R788.Endpoint",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R788.Main",
+    "status": "PASS",
+    "wall_s": 4.2
+   },
+   {
+    "module": "R792",
+    "status": "PASS",
+    "wall_s": 4.1
+   },
+   {
+    "module": "R799",
+    "status": "PASS",
+    "wall_s": 5.1
+   },
+   {
+    "module": "R801.Coverage",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "R801.Main",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "R804.Basics",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "R804.Bridge",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "R804.Caller",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "R804.Dense",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "R804.Failure",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "R804.Interface",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "R804.Main",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "R804.Quota",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "R804.Trim",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R805",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "R806",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "R816.Main",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "R827",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "R831.Assembly",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "R831.Endpoint",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "R831.Main",
+    "status": "PASS",
+    "wall_s": 4.0
+   },
+   {
+    "module": "R837.Budget",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "R838.CommonPins",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "R838.Coverage",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "R838.Hazard",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R838.Main",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "R854.ProfileFree",
+    "status": "PASS",
+    "wall_s": 4.7
+   },
+   {
+    "module": "R856.Main",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "R863.ActualSelection",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R863.Containment",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "R863.Geometry",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "R863.Interface",
+    "status": "PASS",
+    "wall_s": 3.2
+   },
+   {
+    "module": "R863.Intersections",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "R863.Main",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "R863.Numeric",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "R863.Original",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "R863.Owners",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "R863.PetalEscape",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "R863.Rank",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "R863.Resources",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "R863.Selection",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "R863.Tiny",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "R863.UniformEscape",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "R866.Carrier",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "R866.Main",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "R866.Numeric",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "R866.Terminal",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "R869.Assembly",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "R869.ChargeSum",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R869.Global",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R869.LocalB",
+    "status": "PASS",
+    "wall_s": 4.2
+   },
+   {
+    "module": "R869.Main",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R869.Tails",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "R874.Main",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "R874.Numeric",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R882.Balanced.CommonPins",
+    "status": "PASS",
+    "wall_s": 4.1
+   },
+   {
+    "module": "R882.Balanced.Coverage",
+    "status": "PASS",
+    "wall_s": 4.2
+   },
+   {
+    "module": "R882.Balanced.Hazard",
+    "status": "PASS",
+    "wall_s": 4.2
+   },
+   {
+    "module": "R882.Balanced.Main",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "R882.Main",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "R882.Normalization",
+    "status": "PASS",
+    "wall_s": 4.0
+   },
+   {
+    "module": "R882.Numeric",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "R882.Positive.ActualSelection",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "R882.Positive.Containment",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R882.Positive.Geometry",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R882.Positive.Interface",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "R882.Positive.Intersections",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "R882.Positive.Main",
+    "status": "PASS",
+    "wall_s": 2.9
+   },
+   {
+    "module": "R882.Positive.Numeric",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "R882.Positive.Original",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "R882.Positive.Owners",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "R882.Positive.PetalEscape",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "R882.Positive.Rank",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "R882.Positive.Resources",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "R882.Positive.Selection",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "R882.Positive.Tiny",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "R882.Positive.UniformEscape",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "R882.Quantitative",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R882.Terminal",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "R883.Global",
+    "status": "PASS",
+    "wall_s": 5.3
+   },
+   {
+    "module": "R883.LocalB",
+    "status": "PASS",
+    "wall_s": 3.7
+   },
+   {
+    "module": "R883.Main",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "R883.Tails",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "R894.Assembly",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R894.Basics",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "R894.Main",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R895.Extreme",
+    "status": "PASS",
+    "wall_s": 2.9
+   },
+   {
+    "module": "R895.Global",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "R895.Joint",
+    "status": "PASS",
+    "wall_s": 4.0
+   },
+   {
+    "module": "R895.LocalB",
+    "status": "PASS",
+    "wall_s": 4.4
+   },
+   {
+    "module": "R895.Main",
+    "status": "PASS",
+    "wall_s": 3.8
+   },
+   {
+    "module": "R895.Tails",
+    "status": "PASS",
+    "wall_s": 3.5
+   },
+   {
+    "module": "R898.Balanced.CommonPins",
+    "status": "PASS",
+    "wall_s": 4.0
+   },
+   {
+    "module": "R898.Balanced.Coverage",
+    "status": "PASS",
+    "wall_s": 3.3
+   },
+   {
+    "module": "R898.Balanced.Hazard",
+    "status": "PASS",
+    "wall_s": 3.1
+   },
+   {
+    "module": "R898.Balanced.LowSlack",
+    "status": "PASS",
+    "wall_s": 3.0
+   },
+   {
+    "module": "R898.Balanced.Main",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "R898.Balanced.MinimalUnion",
+    "status": "PASS",
+    "wall_s": 3.9
+   },
+   {
+    "module": "R898.Main",
+    "status": "PASS",
+    "wall_s": 3.6
+   },
+   {
+    "module": "R898.Numeric",
+    "status": "PASS",
+    "wall_s": 3.4
+   },
+   {
+    "module": "R898.Quantitative",
+    "status": "PASS",
+    "wall_s": 2.6
+   },
+   {
+    "module": "R898.Terminal",
+    "status": "PASS",
+    "wall_s": 2.6
+   }
+  ]
+ }
+}
