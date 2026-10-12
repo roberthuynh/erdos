@@ -17,3 +17,291 @@ rev = "137aec5c7abd3aa61f7a73138a97279acfc79e93"
 
 [[lean_lib]]
 name = "Openmath"
+
+[[lean_lib]]
+name = "AFKBoundary"
+globs = ["AFKBoundary.+"]
+
+[[lean_lib]]
+name = "BqLowerFamilyDirect"
+globs = ["BqLowerFamilyDirect"]
+
+[[lean_lib]]
+name = "EvenFactor"
+globs = ["EvenFactor.+"]
+
+[[lean_lib]]
+name = "EvenFactorLargeSupport"
+globs = ["EvenFactorLargeSupport.+"]
+
+[[lean_lib]]
+name = "FactorMatching"
+globs = ["FactorMatching.+"]
+
+[[lean_lib]]
+name = "GadgetNormalization"
+globs = ["GadgetNormalization.+"]
+
+[[lean_lib]]
+name = "GeneralStar"
+globs = ["GeneralStar.+"]
+
+[[lean_lib]]
+name = "L17HCq"
+globs = ["L17HCq.+"]
+
+[[lean_lib]]
+name = "L34"
+globs = ["L34.+"]
+
+[[lean_lib]]
+name = "L34EvenTransfer"
+globs = ["L34EvenTransfer.+"]
+
+[[lean_lib]]
+name = "L34MinimumSupport"
+globs = ["L34MinimumSupport.+"]
+
+[[lean_lib]]
+name = "NEQAssembly"
+globs = ["NEQAssembly.+"]
+
+[[lean_lib]]
+name = "NEQPort"
+globs = ["NEQPort.+"]
+
+[[lean_lib]]
+name = "Q6D20"
+globs = ["Q6D20.+"]
+
+[[lean_lib]]
+name = "AllHLargestNonstrict"
+globs = ["AllHLargestNonstrict.+"]
+
+[[lean_lib]]
+name = "AllHNextNonstrict"
+globs = ["AllHNextNonstrict.+"]
+
+[[lean_lib]]
+name = "AllHTopTwo"
+globs = ["AllHTopTwo.+"]
+
+[[lean_lib]]
+name = "H3Unequal"
+globs = ["H3Unequal.+"]
+
+[[lean_lib]]
+name = "R653"
+globs = ["R653.+"]
+
+[[lean_lib]]
+name = "R691"
+globs = ["R691.+"]
+
+[[lean_lib]]
+name = "R699"
+globs = ["R699.+"]
+
+[[lean_lib]]
+name = "R701"
+globs = ["R701.+"]
+
+[[lean_lib]]
+name = "R703"
+globs = ["R703.+"]
+
+[[lean_lib]]
+name = "R704"
+globs = ["R704.+"]
+
+[[lean_lib]]
+name = "R706"
+globs = ["R706.+"]
+
+[[lean_lib]]
+name = "R707"
+globs = ["R707.+"]
+
+[[lean_lib]]
+name = "R715"
+globs = ["R715.+"]
+
+[[lean_lib]]
+name = "R716"
+globs = ["R716.+"]
+
+[[lean_lib]]
+name = "AllHQuotaNonstrict"
+globs = ["AllHQuotaNonstrict.+"]
+
+[[lean_lib]]
+name = "AllHThirdExistence"
+globs = ["AllHThirdExistence.+"]
+
+[[lean_lib]]
+name = "AllHThirdFragileFree"
+globs = ["AllHThirdFragileFree.+"]
+
+[[lean_lib]]
+name = "AllHThirdQuotaFailure"
+globs = ["AllHThirdQuotaFailure.+"]
+
+[[lean_lib]]
+name = "AllHThirdTwoQuota"
+globs = ["AllHThirdTwoQuota.+"]
+
+[[lean_lib]]
+name = "R744"
+globs = ["R744.+"]
+
+[[lean_lib]]
+name = "R753"
+globs = ["R753.+"]
+
+[[lean_lib]]
+name = "R773"
+globs = ["R773.+"]
+
+[[lean_lib]]
+name = "R783"
+globs = ["R783.+"]
+
+[[lean_lib]]
+name = "R788"
+globs = ["R788.+"]
+
+[[lean_lib]]
+name = "AllHFourthExistence"
+globs = ["AllHFourthExistence.+"]
+
+[[lean_lib]]
+name = "AllHFourthQuotaFailure"
+globs = ["AllHFourthQuotaFailure.+"]
+
+[[lean_lib]]
+name = "AllHQuotaSurplus"
+globs = ["AllHQuotaSurplus.+"]
+
+[[lean_lib]]
+name = "R643"
+globs = ["R643"]
+
+[[lean_lib]]
+name = "R643Bridge"
+globs = ["R643Bridge"]
+
+[[lean_lib]]
+name = "R668"
+globs = ["R668"]
+
+[[lean_lib]]
+name = "R676"
+globs = ["R676"]
+
+[[lean_lib]]
+name = "R700"
+globs = ["R700"]
+
+[[lean_lib]]
+name = "R721"
+globs = ["R721"]
+
+[[lean_lib]]
+name = "R751"
+globs = ["R751"]
+
+[[lean_lib]]
+name = "R763"
+globs = ["R763"]
+
+[[lean_lib]]
+name = "R782"
+globs = ["R782"]
+
+[[lean_lib]]
+name = "R792"
+globs = ["R792"]
+
+[[lean_lib]]
+name = "R799"
+globs = ["R799"]
+
+[[lean_lib]]
+name = "R801"
+globs = ["R801.+"]
+
+[[lean_lib]]
+name = "R804"
+globs = ["R804.+"]
+
+[[lean_lib]]
+name = "R805"
+globs = ["R805"]
+
+[[lean_lib]]
+name = "R806"
+globs = ["R806"]
+
+[[lean_lib]]
+name = "R816"
+globs = ["R816.+"]
+
+[[lean_lib]]
+name = "R827"
+globs = ["R827"]
+
+[[lean_lib]]
+name = "R831"
+globs = ["R831.+"]
+
+[[lean_lib]]
+name = "R837"
+globs = ["R837.+"]
+
+[[lean_lib]]
+name = "R838"
+globs = ["R838.+"]
+
+[[lean_lib]]
+name = "R854"
+globs = ["R854.+"]
+
+[[lean_lib]]
+name = "R856"
+globs = ["R856.+"]
+
+[[lean_lib]]
+name = "R863"
+globs = ["R863.+"]
+
+[[lean_lib]]
+name = "R866"
+globs = ["R866.+"]
+
+[[lean_lib]]
+name = "R869"
+globs = ["R869.+"]
+
+[[lean_lib]]
+name = "R874"
+globs = ["R874.+"]
+
+[[lean_lib]]
+name = "R882"
+globs = ["R882.+"]
+
+[[lean_lib]]
+name = "R883"
+globs = ["R883.+"]
+
+[[lean_lib]]
+name = "R894"
+globs = ["R894.+"]
+
+[[lean_lib]]
+name = "R895"
+globs = ["R895.+"]
+
+[[lean_lib]]
+name = "R898"
+globs = ["R898.+"]
