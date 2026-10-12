@@ -65,27 +65,42 @@ def parse_checks(output, names):
     for line in output.splitlines():
         head = next((n for n in names if line.startswith(f"@{n} :") or line.startswith(f"{n} :")), None)
         if head is not None:
+            if head in types:
+                raise ValueError(f"Duplicate #check output for {head}")
             current = head
             types[current] = line.split(" :", 1)[1]
         elif current is not None:
             types[current] += " " + line
+        elif line.strip():
+            raise ValueError(f"Unexpected text before #check output: {line}")
     missing = [n for n in names if n not in types]
     if missing:
         raise ValueError(f"No #check output for {missing}")
     return {n: " ".join(t.split()) for n, t in types.items()}
 
 
-def main():
-    if hashlib.sha256((ROOT / "Openmath/Target.lean").read_bytes()).hexdigest() != STATEMENT_SHA256:
+def check_sources(root=ROOT):
+    if hashlib.sha256((root / "Openmath/Target.lean").read_bytes()).hexdigest() != STATEMENT_SHA256:
         raise ValueError("Statement differs from the frozen submitted file")
-    sources = sorted((ROOT / "Openmath/Proofs").rglob("*.lean")) + [ROOT / "Openmath.lean", ROOT / "Axioms.lean"]
+    from source_modules import check_coverage
+    sources = list(check_coverage(root).values()) + [root / "Axioms.lean"]
     for path in sources:
+        if path == root / "Openmath/Target.lean":
+            continue  # Exact frozen statement hash above is the sole source exception.
         if re.search(DISALLOWED, lean_code(path.read_text())):
-            raise ValueError(f"Disallowed proof token in {path.relative_to(ROOT)}")
+            raise ValueError(f"Disallowed proof token in {path.relative_to(root)}")
+    return len(sources)
+
+
+def main():
+    check_sources()
     entries = json.loads((ROOT / "scripts/headline-theorems.json").read_text())
     expected = {entry["declaration"] for entry in entries}
     if len(expected) != len(entries) or not expected:
         raise ValueError("Empty or duplicate theorem list")
+    pending = [entry["declaration"] for entry in entries if not entry.get("type")]
+    if pending:
+        raise ValueError(f"Exact printed type registration pending: {pending}")
     printed = re.findall(r"^#print axioms (\S+)$", (ROOT / "Axioms.lean").read_text(), re.M)
     if len(printed) != len(expected) or set(printed) != expected:
         raise ValueError("Axiom driver does not match the theorem list")

@@ -4,16 +4,21 @@
     "authors": "Noga Alon, Shmuel Friedland, Gil Kalai",
     "title": "Regular subgraphs of almost regular graphs",
     "publication": "JCTB 37 (1984), 79–91",
-    "location": "Theorem 2.1 (Olson); Corollary 2.2; Theorem 3.1; Remark 3.6",
-    "url": "https://web.math.princeton.edu/~nalon/PDFS/Publications/Regular%20subgraphs%20of%20almost%20regular%20graphs.pdf"
+    "location": "Theorem 2.1 (Olson); Corollary 2.2; Theorem 3.1; Remark 3.6; Theorem 4.3; Remark 4.8, printed pp.85–87",
+    "url": "https://web.math.princeton.edu/~nalon/PDFS/Publications/Regular%20subgraphs%20of%20almost%20regular%20graphs.pdf",
+    "comparison_limit": "Remark 4.8(b) applicability remains ambiguous; no unrestricted literal comparison is asserted. Remark 4.8(a) numerical refinement unresolved."
   },
   {
     "id": "C02",
     "authors": "Debsoumya Chakraborti, Oliver Janzer, Abhishek Methuku, Richard Montgomery",
     "title": "Edge-disjoint cycles with the same vertex set",
     "publication": "Advances in Mathematics 469 (2025), 110228",
-    "location": "Theorems 1 and 2",
-    "url": "https://arxiv.org/abs/2404.07190"
+    "location": "Inspected arXiv:2404.07190v1: Problem 1; Theorem 2",
+    "url": "https://arxiv.org/abs/2404.07190",
+    "preprint_url": "https://arxiv.org/abs/2404.07190v1",
+    "edition_note": "Published front matter and Theorem 1.2 inspected October 11; pinned v1 labels remain separate.",
+    "published_location": "Theorem 1.2, printed p.3",
+    "published_source_url": "https://infoscience.epfl.ch/server/api/core/bitstreams/c50802dc-ab11-4995-aa14-bc1f434d267d/content"
   },
   {
     "id": "C04",
@@ -88,7 +93,8 @@
     "publication": "Transactions of the AMS 379 (2026), 8069–8090; DOI 10.1090/tran/9694",
     "location": "Preprint v2 Theorems 1.4, 1.5 and 1.13",
     "url": "https://doi.org/10.1090/tran/9694",
-    "edition_note": "The listed theorem numbers refer to preprint v2; published numbering has not been independently compared."
+    "edition_note": "The listed theorem numbers refer to preprint v2; published numbering has not been independently compared.",
+    "preprint_url": "https://arxiv.org/abs/2411.11785v2"
   },
   {
     "id": "CILL11",
@@ -107,5 +113,87 @@
     "url": "https://erdosproblemaday.com/report/585",
     "read_date": "2026-10-08",
     "source_type": "Working report; not a Lean proof or independent human review."
+  },
+  {
+    "id": "BAH22",
+    "authors": "Amin Bahmanian",
+    "title": "On Factors with Prescribed Degrees in Bipartite Graphs",
+    "publication": "Public preprint; arXiv:2203.12470v1 (March 23, 2022)",
+    "location": "Introduction; Theorem 1.3; Remark 1.5",
+    "url": "https://arxiv.org/abs/2203.12470v1",
+    "access_note": "Selected statements and attributions checked October 10, 2026. Journal status not established. HTML internal date differs; citation pinned to version identifier."
+  },
+  {
+    "id": "BLV1984",
+    "authors": "Jean-Claude Bermond; Michel Las Vergnas",
+    "title": "Regular factors in nearly regular graphs",
+    "publication": "Discrete Mathematics 50 (1984), 9–13; DOI 10.1016/0012-365X(84)90030-X",
+    "location": "Theorem 1, p.10; Theorem 2, p.12",
+    "url": "https://doi.org/10.1016/0012-365X(84)90030-X",
+    "access_note": "Original Theorems 1 and 2, printed pp.10 and 12, visually checked October 11, 2026. No full independent proof validation."
+  },
+  {
+    "id": "PRS1995",
+    "authors": "László Pyber, Vojtěch Rödl, Endre Szemerédi",
+    "title": "Dense Graphs without 3-Regular Subgraphs",
+    "publication": "Journal of Combinatorial Theory, Series B 63 (1995), 41–54",
+    "location": "Lemma 2.1, printed p.46",
+    "url": "https://doi.org/10.1006/jctb.1995.1004",
+    "access_note": "Original printed statement visually checked October 11, 2026. It uses a strict average-degree inequality; the maximum-degree guard is at least 2Q−1."
+  },
+  {
+    "id": "FL2022",
+    "authors": "Dandan Fan, Huiqiu Lin",
+    "title": "Spectral conditions for k-extendability and k-factors of bipartite graphs",
+    "publication": "Inspected public preprint arXiv:2211.09304v1, November 17, 2022",
+    "location": "Theorem 1.3; Lemma 3.1",
+    "url": "https://arxiv.org/abs/2211.09304v1",
+    "access_note": "Selected statements read October 11, 2026. No line-by-line published-version comparison. Distinct from Hao–Li–Yu (2025)."
+  },
+  {
+    "id": "HLY2025",
+    "authors": "Yifang Hao, Shuchao Li, Yuantian Yu",
+    "title": "Bipartite binding number, k-factor and spectral radius of bipartite graphs",
+    "publication": "Discrete Mathematics 348(8) (August 2025), 114511",
+    "location": "Theorem 1.6, cases (i)–(iii), and Theorem 1.7 in public introduction",
+    "url": "https://doi.org/10.1016/j.disc.2025.114511",
+    "public_preview_url": "https://www.sciencedirect.com/science/article/abs/pii/S0012365X25001190",
+    "access_note": "Publisher public introduction directly read October 11, 2026, including Theorem 1.6 exceptions. Complete proof not read in this final comparison."
+  },
+  {
+    "id": "EOK1988",
+    "authors": "Hikoe Enomoto, Katsuhiro Ota, Mikio Kano",
+    "title": "A sufficient condition for a bipartite graph to have a k-factor",
+    "publication": "Journal of Graph Theory 12 (1988), 141–151",
+    "location": "Theorems 1, 3 and 5; Lemmas C and 4; printed pp.143 and 147",
+    "url": "https://doi.org/10.1002/jgt.3190120115",
+    "access_note": "Original statements and Lemma 4 inspected October 11, including a visual check of printed p.143. No full independent proof validation claimed."
+  },
+  {
+    "id": "BERTHE2025",
+    "authors": "Gaétan Berthe, Marthe Bonamy, Fábio Botler, Gaia Carenini, Lucas Colucci, Arthur Dumas, Fatemeh Ghasemi, Pedro Mariano Viana Neto",
+    "title": "On Modular Edge Colourings of Graphs",
+    "publication": "Inspected public preprint arXiv:2507.04254v2, December 5, 2025; arXiv record reports accepted for publication in SIAM Journal on Discrete Mathematics",
+    "location": "Lemma 5 and its proof",
+    "url": "https://arxiv.org/abs/2507.04254v2",
+    "access_note": "Version and status record checked October 11, 2026. Paper writes q(x) for the least prime at least x; page comparison renames this p(x) to avoid conflict with target degree q. No final journal-version comparison."
+  },
+  {
+    "id": "JL2025",
+    "authors": "Tao Jiang, Sean Longbrake",
+    "title": "Regularization and asymmetric extremal numbers of subdivisions",
+    "publication": "Inspected public preprint arXiv:2507.03261v2, July 16, 2025",
+    "location": "Theorems 1.3 and 1.5; definitions of almost-regularity and almost-biregularity",
+    "url": "https://arxiv.org/abs/2507.03261v2",
+    "access_note": "Selected statements directly read October 11, 2026. Publication status not asserted."
+  },
+  {
+    "id": "BKV2006",
+    "authors": "Béla Bollobás, Jeong Han Kim, Jacques Verstraëte",
+    "title": "Regular Subgraphs of Random Graphs",
+    "publication": "Inspected public author manuscript dated February 21, 2003; published Random Structures & Algorithms 29 (2006), 1–13",
+    "location": "Proof of Theorem 2.2, printed pp.3–4",
+    "url": "https://mathweb.ucsd.edu/~jverstra/regular.pdf",
+    "access_note": "Author manuscript front matter and capacity-network passage rechecked October 11, 2026. An AI source review inspected additional introductory statements; no full proof audit or line-by-line journal-version comparison. Citation concerns the classical capacity network, not a direct implication of the universal project endpoint."
   }
 ]

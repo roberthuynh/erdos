@@ -1,10 +1,10 @@
 {
-  "candidate": "v0.3.1",
+  "candidate": "v0.4",
   "released": true,
   "public_commit": null,
-  "public_tag": "v0.3.1",
-  "date_released": "2026-10-08",
-  "previous_tag": "v0.3",
-  "previous_commit": "1efc324e155ef0b6a7081c5f695c6c825e7debef",
-  "citation_status": "CITATION.cff records version 0.3.1 and its release date; public_tag identifies the immutable release commit."
+  "public_tag": "v0.4",
+  "date_released": "2026-10-11",
+  "previous_tag": "v0.3.1",
+  "previous_commit": "157e267eb9e722156d9c122d0dc8d13863cf937e",
+  "citation_status": "CITATION.cff records version 0.4 and its release date; public_tag identifies the immutable release commit."
 }

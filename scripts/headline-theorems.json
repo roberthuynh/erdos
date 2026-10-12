@@ -3,150 +3,887 @@
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.maxEdges_eq_choose_two_of_le_four",
     "oracle": true,
-    "type": "∀ n ≤ 4, Erdos585.maxEdges n = n.choose 2"
+    "type": "∀ n ≤ 4, Erdos585.maxEdges n = n.choose 2",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.maxEdges_five",
     "oracle": true,
-    "type": "Erdos585.maxEdges 5 = 9"
+    "type": "Erdos585.maxEdges 5 = 9",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.maxEdges_six",
     "oracle": true,
-    "type": "Erdos585.maxEdges 6 = 12"
+    "type": "Erdos585.maxEdges 6 = 12",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.maxEdges_seven",
     "oracle": true,
-    "type": "Erdos585.maxEdges 7 = 16"
+    "type": "Erdos585.maxEdges 7 = 16",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.three_mul_sub_six_le_maxEdges",
     "oracle": true,
-    "type": "∀ (n : ℕ), 5 ≤ n → 3 * n - 6 ≤ Erdos585.maxEdges n"
+    "type": "∀ (n : ℕ), 5 ≤ n → 3 * n - 6 ≤ Erdos585.maxEdges n",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.three_mul_sub_five_le_maxEdges",
     "oracle": true,
-    "type": "∀ (n : ℕ), 7 ≤ n → 3 * n - 5 ≤ Erdos585.maxEdges n"
+    "type": "∀ (n : ℕ), 7 ≤ n → 3 * n - 5 ≤ Erdos585.maxEdges n",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.three_mul_sub_four_le_maxEdges",
     "oracle": true,
-    "type": "∀ (n : ℕ), 9 ≤ n → 3 * n - 4 ≤ Erdos585.maxEdges n"
+    "type": "∀ (n : ℕ), 9 ≤ n → 3 * n - 4 ≤ Erdos585.maxEdges n",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.maxEdges_succ_ge",
     "oracle": true,
-    "type": "∀ (n : ℕ), 3 ≤ n → Erdos585.maxEdges n + 3 ≤ Erdos585.maxEdges (n + 1)"
+    "type": "∀ (n : ℕ), 3 ≤ n → Erdos585.maxEdges n + 3 ≤ Erdos585.maxEdges (n + 1)",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.four_mul_sub_thirteen_le_maxEdges",
     "oracle": true,
-    "type": "∀ (n : ℕ), 10 ≤ n → 4 * n - 13 ≤ Erdos585.maxEdges n"
+    "type": "∀ (n : ℕ), 10 ≤ n → 4 * n - 13 ≤ Erdos585.maxEdges n",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.thirty_one_le_maxEdges_eleven",
     "oracle": true,
-    "type": "31 ≤ Erdos585.maxEdges 11"
+    "type": "31 ≤ Erdos585.maxEdges 11",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.thirty_six_le_maxEdges_twelve",
     "oracle": true,
-    "type": "36 ≤ Erdos585.maxEdges 12"
+    "type": "36 ≤ Erdos585.maxEdges 12",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.complete_matching_subdivision_lower_bound",
     "oracle": true,
-    "type": "∀ (k : ℕ), 8 * k ^ 2 - 3 * k + 1 ≤ Erdos585.maxEdges (2 * k ^ 2 + 2)"
+    "type": "∀ (k : ℕ), 8 * k ^ 2 - 3 * k + 1 ≤ Erdos585.maxEdges (2 * k ^ 2 + 2)",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.latin_incidence_lower_bound",
     "oracle": true,
-    "type": "∀ (m : ℕ), 5 * m ^ 2 ≤ Erdos585.maxEdges (m ^ 2 + 3 * m + 2)"
+    "type": "∀ (m : ℕ), 5 * m ^ 2 ≤ Erdos585.maxEdges (m ^ 2 + 3 * m + 2)",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.five_mul_sub_sqrt_le_maxEdges",
     "oracle": true,
-    "type": "∀ (n : ℕ), 16 ≤ n → 5 * n - 15 * n.sqrt - 10 ≤ Erdos585.maxEdges n"
+    "type": "∀ (n : ℕ), 16 ≤ n → 5 * n - 15 * n.sqrt - 10 ≤ Erdos585.maxEdges n",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.doubleWheel_not_hasTwoEdgeDisjointCyclesSameVertexSet",
     "oracle": true,
-    "type": "∀ (k : ℕ), 2 ≤ k → ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.doubleWheel (k + 3))"
+    "type": "∀ (k : ℕ), 2 ≤ k → ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.doubleWheel (k + 3))",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.thetaWheel_not_hasTwoEdgeDisjointCyclesSameVertexSet",
     "oracle": true,
-    "type": "¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet Erdos585.thetaWheel"
+    "type": "¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet Erdos585.thetaWheel",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.Final",
     "declaration": "Erdos585.matchingSubdivision_not_hasTwoEdgeDisjointCyclesSameVertexSet",
     "oracle": true,
-    "type": "∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (H M : SimpleGraph V) [inst_2 : DecidableRel H.Adj] [inst_3 : DecidableRel M.Adj], (∀ (v : V), M.degree v ≤ 1) → ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.MatchingSubdivision.ofBase H M)"
+    "type": "∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (H M : SimpleGraph V) [inst_2 : DecidableRel H.Adj] [inst_3 : DecidableRel M.Adj], (∀ (v : V), M.degree v ≤ 1) → ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.MatchingSubdivision.ofBase H M)",
+    "source_sha256": "3a5e49fca6516aa19d4a7fc500f670efdceffef777917054d0f90fb110a6d303"
   },
   {
     "module": "Openmath.Proofs.RegularFive",
     "declaration": "Erdos585.RegularFive.exists_five_regular_pairfree",
     "oracle": true,
-    "type": "∃ G, (∀ (v : Fin 32), (G.neighborSet v).ncard = 5) ∧ ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet G"
+    "type": "∃ G, (∀ (v : Fin 32), (G.neighborSet v).ncard = 5) ∧ ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet G",
+    "source_sha256": "8e61f240f08e4d1da70d032f6263d0ba7f17d1fdc736b4e6e6410ba0f3525ac5"
   },
   {
     "module": "Openmath.Proofs.BipartiteFive",
     "declaration": "Erdos585.BipartiteFive.exists_bipartite_five_regular_pairfree",
     "oracle": true,
-    "type": "∃ G, (∀ (v : Fin 104), (G.neighborSet v).ncard = 5) ∧ G.Colorable 2 ∧ ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet G"
+    "type": "∃ G, (∀ (v : Fin 104), (G.neighborSet v).ncard = 5) ∧ G.Colorable 2 ∧ ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet G",
+    "source_sha256": "cd01530c3688283ff8326285a725a05ccf891c5d6edac8f059abe510fb452161"
   },
   {
     "module": "Openmath.Proofs.RegularFive18",
     "declaration": "Erdos585.RegularFive18.exists_five_regular_pairfree",
     "oracle": true,
-    "type": "∃ G, (∀ (v : Fin 18), (G.neighborSet v).ncard = 5) ∧ ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet G"
+    "type": "∃ G, (∀ (v : Fin 18), (G.neighborSet v).ncard = 5) ∧ ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet G",
+    "source_sha256": "57ec9239d4127b34cd6c99d2db5ff65d82c9e6503bd102fe10cfe8530cef1d43"
   },
   {
     "module": "Openmath.Proofs.QB5.Statement",
     "declaration": "Erdos585.qb5",
     "oracle": true,
-    "type": "∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) [inst_1 : DecidableRel G.Adj], G.IsBipartite → G.maxDegree ≤ 6 → 3 ≤ Fintype.card V → 3 * Fintype.card V ≤ G.edgeSet.ncard + 5 → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree 4"
+    "type": "∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) [inst_1 : DecidableRel G.Adj], G.IsBipartite → G.maxDegree ≤ 6 → 3 ≤ Fintype.card V → 3 * Fintype.card V ≤ G.edgeSet.ncard + 5 → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree 4",
+    "source_sha256": "42ea1eac5618cfff2db5eb919e9907a65327a37309a1332a399995f372f87298"
   },
   {
     "module": "Openmath.Proofs.QB4.Statement",
     "declaration": "Erdos585.qb4",
     "oracle": true,
-    "type": "∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) [inst_1 : DecidableRel G.Adj], G.IsBipartite → G.maxDegree ≤ 6 → 2 ≤ Fintype.card V → 3 * Fintype.card V ≤ G.edgeSet.ncard + 4 → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree 4"
+    "type": "∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) [inst_1 : DecidableRel G.Adj], G.IsBipartite → G.maxDegree ≤ 6 → 2 ≤ Fintype.card V → 3 * Fintype.card V ≤ G.edgeSet.ncard + 4 → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree 4",
+    "source_sha256": "34e8cf4cab0b0147665fe30d7849dacb92478270f3202f16b35237c4cad14ef7"
   },
   {
     "module": "Openmath.Proofs.QB4.Statement",
     "declaration": "Erdos585.exists_four_regular_avoiding_of_bipartite_six_regular",
     "oracle": true,
-    "type": "∀ {V : Type u_1} [inst : Fintype V] (B : SimpleGraph V) [inst_1 : DecidableRel B.Adj], B.IsBipartite → B.IsRegularOfDegree 6 → ∀ (o : V), ∃ H, H.verts.Nonempty ∧ o ∉ H.verts ∧ H.coe.IsRegularOfDegree 4"
+    "type": "∀ {V : Type u_1} [inst : Fintype V] (B : SimpleGraph V) [inst_1 : DecidableRel B.Adj], B.IsBipartite → B.IsRegularOfDegree 6 → ∀ (o : V), ∃ H, H.verts.Nonempty ∧ o ∉ H.verts ∧ H.coe.IsRegularOfDegree 4",
+    "source_sha256": "34e8cf4cab0b0147665fe30d7849dacb92478270f3202f16b35237c4cad14ef7"
   },
   {
     "module": "Openmath.Proofs.TopFive",
     "declaration": "Erdos585.hasPair_top_five",
     "oracle": true,
-    "type": "Erdos585.HasPairF Erdos585.K5"
+    "type": "Erdos585.HasPairF Erdos585.K5",
+    "source_sha256": "52a935d0e441049903dcedc1e5ba2c2bd09a584fd48ce337be39eda771702cc1"
   },
   {
     "module": "Openmath.Target",
     "declaration": "Erdos585.hasTwoEdgeDisjointCyclesSameVertexSet_top_five",
     "oracle": false,
-    "type": "Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet ⊤"
+    "type": "Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet ⊤",
+    "source_sha256": "a3db41edba984fc3ab9bce5eda89e1856ea91b2190d01264d61f8fb2a9566603"
+  },
+  {
+    "module": "Openmath.Proofs.PaperSupport.QBSharpnessFamily",
+    "declaration": "Erdos585.QBSharpnessFamily.all_orders",
+    "oracle": true,
+    "type": "∀ (n : ℕ), 11 ≤ n → ∃ W wf wd K kd, Fintype.card W = n ∧ K.IsBipartite ∧ K.edgeFinset.card + 8 = 3 * n ∧ K.maxDegree ≤ 6 ∧ Erdos585.QBSharpnessFamily.NoQuartic K",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "4f236b16a4d2e0060ecff523a90b1939fbe171b0e129f2c88a0d7b961ca01206",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "Openmath.Proofs.PaperSupport.QB6Unconditional",
+    "declaration": "Erdos585.QB6Unconditional.qb6",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), G.IsBipartite → G.maxDegree ≤ 6 → 4 ≤ Fintype.card V → 3 * Fintype.card V ≤ G.edgeSet.ncard + 6 → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree 4",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "f2fbba672389540843acc78720fad697364dc6e3b9dbd99e2a528ab6b628c3ce",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "Openmath.Proofs.PaperSupport.BqL17HCqLowerFamily",
+    "declaration": "Erdos585.L17HCq.l17_all_orders",
+    "oracle": true,
+    "type": "∀ (n : ℕ), 17 ≤ n → ∃ V vf vd G gd, Fintype.card V = n ∧ G.IsBipartite ∧ (∀ (v : V), 4 ≤ G.degree v) ∧ G.maxDegree ≤ 8 ∧ G.edgeFinset.card + 13 = 4 * n ∧ ¬∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree 5",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "e045949d7826ee2efa5a8aa43eaa2b3897b768a8aa0e56e4fb43075451450801",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "Openmath.Proofs.PaperSupport.BqL17HCqLowerFamily",
+    "declaration": "Erdos585.L17HCq.l17_natural_all_orders",
+    "oracle": true,
+    "type": "∀ (n : ℕ), 17 ≤ n → ∃ V vf vd G gd, Fintype.card V = n ∧ G.IsBipartite ∧ (∀ (v : V), 4 ≤ G.degree v) ∧ G.maxDegree ≤ 8 ∧ G.edgeFinset.card = 4 * n - 13 ∧ ¬∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree 5",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "e045949d7826ee2efa5a8aa43eaa2b3897b768a8aa0e56e4fb43075451450801",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "Openmath.Proofs.PaperSupport.Cascade29.Main",
+    "declaration": "Erdos585.Cascade29.cascade29_all_orders",
+    "oracle": true,
+    "type": "∀ (n : ℕ), 25 ≤ n → ∃ V vf vd G gd, Fintype.card V = n ∧ G.IsBipartite ∧ (∀ (v : V), 6 ≤ G.degree v) ∧ G.maxDegree ≤ 12 ∧ G.edgeFinset.card = 6 * n - 29 ∧ ¬∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree 7",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "dd69a596d302bec64190c5c335c79cc15e79903adc4427724007b394072be361",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "Openmath.Proofs.PaperSupport.Cascade29.Main",
+    "declaration": "Erdos585.Cascade29.cascade29_endpoint",
+    "oracle": true,
+    "type": "Erdos585.Cascade29.Cascade29Endpoint",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "dd69a596d302bec64190c5c335c79cc15e79903adc4427724007b394072be361",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "GeneralStar.Main",
+    "declaration": "Erdos585.GeneralStar.general_star_endpoint",
+    "oracle": true,
+    "type": "Erdos585.GeneralStar.C24Endpoint",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "41848a093d2060cffb938e3c2c256097506b040cdf0b5cb83a01a92af17b8092",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "GeneralStar.Main",
+    "declaration": "Erdos585.GeneralStar.general_star_optimized",
+    "oracle": true,
+    "type": "∀ (q n : ℕ), 7 ≤ q → Erdos585.GeneralStar.optimumStart q ≤ n → Erdos585.GeneralStar.FamilyConclusion q n (Erdos585.GeneralStar.optimumDeficit q) (Erdos585.GeneralStar.optimumFamily q n)",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "41848a093d2060cffb938e3c2c256097506b040cdf0b5cb83a01a92af17b8092",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "GeneralStar.UniformSeed",
+    "declaration": "Erdos585.GeneralStar.U24",
+    "oracle": true,
+    "type": "∀ (q s p h b n : ℕ), 5 ≤ q → Erdos585.GeneralStar.UParams q s p h b → Erdos585.GeneralStar.uniformStart q s b ≤ n → Erdos585.GeneralStar.FamilyConclusion q n (Erdos585.GeneralStar.uniformDeficit q s p h b) (Erdos585.GeneralStar.uniformFamily q s p h b n)",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "7d098b8d0ab89db69afdc227534179d33357214de27470db80d58dbdaaec9706",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "GeneralStar.Transfer",
+    "declaration": "Erdos585.GeneralStar.T24_order",
+    "oracle": true,
+    "type": "∀ (q : ℕ) (D : Erdos585.GeneralStar.GraphData), 5 ≤ q → Erdos585.GeneralStar.SeedHyp q D → ∀ (n : ℕ), D.order ≤ n → Erdos585.GeneralStar.FamilyConclusion q n ((q - 1) * D.order - D.graph.edgeFinset.card) (Erdos585.GeneralStar.transferState q D (n - D.order))",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "07a3b5a2327f9289f87b275150bdb543a27ce0358fb26aafd3d455bf068dc5c6",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "Openmath.Proofs.PaperSupport.Counter90.Main",
+    "declaration": "Erdos585.Counter90.counter90_properties",
+    "oracle": true,
+    "type": "Fintype.card (Fin 22) = 22 ∧ Erdos585.Counter90.graph.IsBipartite ∧ (∀ (v : Fin 22), 6 ≤ Erdos585.Counter90.graph.degree v) ∧ Erdos585.Counter90.graph.maxDegree ≤ 10 ∧ Erdos585.Counter90.graph.edgeFinset.card = 90 ∧ ¬∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree 6",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "867d86d35ac3d811ee0199cd90d1edaa10dd758ee3f86b078087351029defe4b",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "Openmath.Proofs.PaperSupport.Counter90.Original",
+    "declaration": "Erdos585.Counter90.seed_no_regular_subgraph",
+    "oracle": true,
+    "type": "¬∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree 6",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "0d3624a73d52a2ed46f35bbdf65cb7fcc80ca784648605d9c90b7f363f672f91",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "Q6D20.Main",
+    "declaration": "Erdos585.Q6D20R31.all_orders",
+    "oracle": true,
+    "type": "∀ (n : ℕ), 22 ≤ n → (Erdos585.Q6D20R31.familyGraph n).IsBipartite ∧ (∀ (v : Fin n), 5 ≤ (Erdos585.Q6D20R31.familyGraph n).degree v ∧ (Erdos585.Q6D20R31.familyGraph n).degree v ≤ 10) ∧ (Erdos585.Q6D20R31.familyGraph n).maxDegree ≤ 10 ∧ (Erdos585.Q6D20R31.familyGraph n).edgeFinset.card = 5 * n - 20 ∧ ¬∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree 6",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "fd163fb339e86a1823b59fba411af02a091db4fe9f7e4521ddb2301d6d9ba312",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "Q6D20.Main",
+    "declaration": "Erdos585.Q6D20R31.lowerEndpoint",
+    "oracle": true,
+    "type": "Erdos585.Q6D20R31.LowerEndpoint",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "fd163fb339e86a1823b59fba411af02a091db4fe9f7e4521ddb2301d6d9ba312",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "L34.Main",
+    "declaration": "Erdos585.L34.l34",
+    "oracle": true,
+    "type": "∀ (q : ℕ), 5 ≤ q → ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), G.IsBipartite → G.maxDegree ≤ 2 * q - 2 → 2 * q ≤ Fintype.card V → (q - 1) * Fintype.card V - (2 * q - 5) ≤ G.edgeSet.ncard → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "bf797a8322d7cc3aed5687fbcff2a7cbab8e8acba6743d92bc8b761f04696613",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "L34MinimumSupport.Main",
+    "declaration": "Erdos585.L34MinimumSupport.l34_minimum_support",
+    "oracle": true,
+    "type": "∀ (q : ℕ), 5 ≤ q → ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), G.IsBipartite → G.maxDegree ≤ 2 * q - 2 → 2 * q ≤ Fintype.card V → (q - 1) * Fintype.card V - (2 * q - 5) ≤ G.edgeSet.ncard → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q ∧ 4 * q - 6 ≤ H.verts.ncard",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "6f25d4ae38514d375603ef819a765b7b936258ca32e372003c5def3ab965cbb7",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "L34EvenTransfer.Main",
+    "declaration": "Erdos585.L34EvenTransfer.l34_even",
+    "oracle": true,
+    "type": "∀ (q : ℕ), 6 ≤ q → Even q → ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), 2 ≤ Fintype.card V → G.maxDegree ≤ 2 * q - 2 → (q - 1) * Fintype.card V ≤ G.edgeSet.ncard + (q - 2) → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "3bf607ae3c407a79b16ba1081a92fef9637991405cecfb0fa2a04c6b8077a205",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "EvenFactorLargeSupport.Main",
+    "declaration": "Erdos585.EvenFactorLargeSupport.even_factor_large_support",
+    "oracle": true,
+    "type": "∀ (q : ℕ), 6 ≤ q → Even q → ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), 2 ≤ Fintype.card V → G.maxDegree ≤ 2 * q - 2 → (q - 1) * Fintype.card V ≤ G.edgeSet.ncard + (q - 2) → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q ∧ 2 * q - 1 ≤ H.verts.ncard",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "a86d7b89e4d521728a72a320e92c94bc077baa8e0a36695c3cd9947c5b5f3240",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "AFKBoundary.Main",
+    "declaration": "Erdos585.AFKBoundary.q5_afk_boundary_counterexamples",
+    "oracle": true,
+    "type": "∀ (n : ℕ), 30 ≤ n → ∃ V vf vd G gd, Fintype.card V = n ∧ G.IsBipartite ∧ G.maxDegree = 8 ∧ 64 * n ≤ 18 * G.edgeFinset.card ∧ ¬∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree 5",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "cd0bf13faaf5b9feda9892613e131c1b1342b15af95459e294921919cc9f7c10",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "AFKBoundary.Main",
+    "declaration": "Erdos585.AFKBoundary.q7_afk_boundary_counterexamples",
+    "oracle": true,
+    "type": "∀ (n : ℕ), 63 ≤ n → ∃ V vf vd G gd, Fintype.card V = n ∧ G.IsBipartite ∧ G.maxDegree = 12 ∧ 144 * n ≤ 26 * G.edgeFinset.card ∧ ¬∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree 7",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "cd0bf13faaf5b9feda9892613e131c1b1342b15af95459e294921919cc9f7c10",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "b10b627778b57b018fc350cb975357b8e1771518eb290a7a6700bab5c968dbc5",
+      "output_sha256": "42c681672eefb7ca0adb214d42b2405f2fdad82483856f796d6f5deb0e8b4cab",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R715.Main",
+    "declaration": "Erdos585.H49BalancedR715.bare_h49",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : Fintype V] (q : ℕ), 16384 ≤ q → ∀ (G : SimpleGraph V), G.IsBipartite → G.maxDegree ≤ 2 * q - 2 → 2 * q ≤ Fintype.card V → (q - 1) * Fintype.card V - (3 * q - 32) ≤ G.edgeSet.ncard → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "registration_status": "exact_printed_type",
+    "source_sha256": "ba6540c8f8160898455784b5281aa447f05979100414eb78c54b6c4d4a4caa7f",
+    "type_evidence": {
+      "query_sha256": "0cde38af8355aa717578378d0bdb33dddeabac936d32f92e12401936f516a152",
+      "output_sha256": "dbd346adb2c523fb68d8323db17090a8a1a122c2957311c2b481d114888d9236",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R788.Endpoint",
+    "declaration": "Erdos585.H4BareR788.bare_h4_original_caller",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : Fintype V] (q n : ℕ), 25600 ≤ q → ∀ (G : SimpleGraph V), Fintype.card V = n → G.IsBipartite → (∀ (v : V), G.degree v ≤ 2 * q - 2) → 2 * q ≤ n → (q - 1) * n - (4 * q - 44) ≤ G.edgeSet.ncard → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "source_sha256": "d51e69bb0b060eac0dc2a7c2a63ac42e935ee7ef7d24ffc3321efa28dee220e8",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "188547a0699a2428f46eb0df7373f90dea1e67702cd25c8fc7e0b03d4dd15aa9",
+      "output_sha256": "cacbbe030ccc3317c0e8255f290fbb5f20ae7188a33b521f4ffd7a4dc95a4c7f",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R801.Main",
+    "declaration": "Erdos585.AllHBalancedSelectorR801.original_host_caller",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : Fintype V] {G : SimpleGraph V} {h q : ℕ} {F : ℤ} {A B : Finset V}, 3 ≤ h → 1024 * (h + 1) ^ 2 ≤ q → Disjoint A B → A ∪ B = Finset.univ → A.card = B.card → G.IsBipartiteWith ↑A ↑B → 2 * q ≤ Fintype.card V → (∀ (v : V), q ≤ G.degree v) → (∀ (v : V), G.degree v ≤ 2 * q - 2) → (↑q - 1) * ↑(Fintype.card V) - ↑G.edgeSet.ncard = F → ↑h * ↑q - (↑h ^ 2 + 5 * ↑h + 8) + 1 ≤ F ∧ F ≤ ↑h * ↑q - (↑h ^ 2 + 5 * ↑h + 8) + ↑h - 2 → (∀ (D : Finset V), h ≤ D.card → D.card < Fintype.card V → F + 1 ≤ (↑q - 1) * ↑D.card - ↑(SimpleGraph.induce (↑D) G).edgeSet.ncard) → (∃ M, ↑(Erdos585.QB4.ec G (A ∩ M) (B \\ M)) < ↑q * (↑(A ∩ M).card - ↑(B ∩ M).card)) → ∃ a ∈ A, ∃ b ∈ B, (∀ (W : Finset V), ↑q * ((if b ∈ W then 1 else 0) - if a ∈ W then 1 else 0) ≤ ↑(Erdos585.QB4.ec G (A ∩ W) (B \\ W)) - ↑q * (↑(A ∩ W).card - ↑(B ∩ W).card)) ∧ Erdos585.B5.FactorOn q G (A \\ {a}) (B \\ {b}) ∧ ∃ H, H.verts = ↑(Finset.univ \\ {a, b}) ∧ H.verts.Nonempty ∧ H.verts ≠ Set.univ ∧ H.coe.IsRegularOfDegree q",
+    "scope_label": "supporting_result",
+    "source_sha256": "db49c00f5c1e83386cb549f19b6e462cd5d1acf5d3e9b245b5995b5dd743d86e",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R805",
+    "declaration": "Erdos585.QB7ReverseExtensionR805.original_reverse_extension_target",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : DecidableEq V] {G : SimpleGraph V} [inst_1 : DecidableRel G.Adj] {U W S U₁ U₂ W₁ W₂ : Finset V} {u0 z₁ : V}, Erdos585.QB7Conditional.U2Input G U W → Erdos585.QB7SmallLobeR643.Split G U W S U₁ U₂ W₁ W₂ → 6 ≤ U₁.card → 6 ≤ U₂.card → u0 ∈ U₁ → Erdos585.QB4.dg G W u0 = 5 → (∀ s ∈ S, Erdos585.QB4.dg G U s = 4 ∨ Erdos585.QB4.dg G U s = 5 ∨ Erdos585.QB4.dg G U s = 6) → {s ∈ S | Erdos585.QB4.dg G U s = 4}.card = 1 → {s ∈ S | Erdos585.QB4.dg G U s = 5}.card = 1 → {s ∈ S | Erdos585.QB4.dg G U s = 6}.card = 2 → (∀ y ∈ W₂, Erdos585.QB4.dg G U y = 5 ∨ Erdos585.QB4.dg G U y = 6) → {y ∈ W₂ | Erdos585.QB4.dg G U y = 5}.card = 5 → (∀ y ∈ W₁, Erdos585.QB4.dg G U y = 4 ∨ Erdos585.QB4.dg G U y = 5 ∨ Erdos585.QB4.dg G U y = 6) → {y ∈ W₁ | Erdos585.QB4.dg G U y = 4}.card = 2 → {y ∈ W₁ | Erdos585.QB4.dg G U y = 5}.card = 1 → z₁ ∈ W₁ → Erdos585.QB4.dg G U z₁ = 4 → {z ∈ W₂ | Erdos585.QB4.dg G U z = 5 ∧ ¬Erdos585.QB7SmallLobeR643.FixedOmissionFactor G U W z₁ z}.card ≤ 2 ∧ 3 ≤ {z ∈ W₂ | Erdos585.QB4.dg G U z = 5 ∧ Erdos585.QB7SmallLobeR643.FixedOmissionFactor G U W z₁ z}.card",
+    "scope_label": "supporting_result",
+    "source_sha256": "6cdcd80fb1a0cccbecf3e3f2e5a24be2d100c10bab68ff496cbd6981d3895d67",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R799",
+    "declaration": "Erdos585.QB7Selector0011R799.original_selector0011_target",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : DecidableEq V] {G : SimpleGraph V} [inst_1 : DecidableRel G.Adj] {U W S U₁ U₂ W₁ W₂ : Finset V} {u0 : V}, Erdos585.QB7Conditional.U2Input G U W → Erdos585.QB7SmallLobeR643.Split G U W S U₁ U₂ W₁ W₂ → u0 ∈ U₁ → Erdos585.QB4.dg G W u0 = 5 → (∀ s ∈ S, Erdos585.QB4.dg G U s = 5 ∨ Erdos585.QB4.dg G U s = 6) → {s ∈ S | Erdos585.QB4.dg G U s = 5}.card = 2 → {s ∈ S | Erdos585.QB4.dg G U s = 6}.card = 2 → (∀ y ∈ W₁, Erdos585.QB4.dg G U y = 5 ∨ Erdos585.QB4.dg G U y = 6) → {y ∈ W₁ | Erdos585.QB4.dg G U y = 5}.card = 5 → (∀ y ∈ W₂, Erdos585.QB4.dg G U y = 5 ∨ Erdos585.QB4.dg G U y = 6) → {y ∈ W₂ | Erdos585.QB4.dg G U y = 5}.card = 6 → have Q := {s ∈ S | Erdos585.QB4.dg G U s = 6}; have A₁ := Erdos585.QB7Selector0011R799.physicalA₁ G U U₁ W₁ Q u0; have A₂ := Erdos585.QB7Selector0011R799.physicalA₂ G U U₂ W₂ Q; A₁.card ≤ 2 ∧ A₂.card ≤ 2 ∧ (∀ z₁ ∈ Erdos585.QB7Selector0011R799.markers G U W₁, ∀ z₂ ∈ Erdos585.QB7Selector0011R799.markers G U W₂, ¬Erdos585.QB7SmallLobeR643.FixedOmissionFactor G U W z₁ z₂ ↔ z₁ ∈ A₁ ∧ z₂ ∈ A₂) ∧ {p ∈ Erdos585.QB7Selector0011R799.markers G U W₁ ×ˢ Erdos585.QB7Selector0011R799.markers G U W₂ | ¬Erdos585.QB7SmallLobeR643.FixedOmissionFactor G U W p.1 p.2}.card ≤ 4 ∧ 26 ≤ {p ∈ Erdos585.QB7Selector0011R799.markers G U W₁ ×ˢ Erdos585.QB7Selector0011R799.markers G U W₂ | Erdos585.QB7SmallLobeR643.FixedOmissionFactor G U W p.1 p.2}.card",
+    "scope_label": "supporting_result",
+    "source_sha256": "091a60af734d16389397f09f8fb18c93e4c81eb06ad2330446a03a310344177c",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R806",
+    "declaration": "Erdos585.QB7ThreePortR806.original_selector_three_port_target",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : DecidableEq V] {G : SimpleGraph V} [inst_1 : DecidableRel G.Adj] {U W S U₁ U₂ W₁ W₂ : Finset V} {u0 z₂ : V}, Erdos585.QB7Conditional.U2Input G U W → Erdos585.QB7SmallLobeR643.Split G U W S U₁ U₂ W₁ W₂ → 6 ≤ U₁.card → 6 ≤ U₂.card → u0 ∈ U₁ → Erdos585.QB4.dg G W u0 = 5 → (∀ s ∈ S, Erdos585.QB4.dg G U s = 4 ∨ Erdos585.QB4.dg G U s = 6) → {s ∈ S | Erdos585.QB4.dg G U s = 4}.card = 1 → {s ∈ S | Erdos585.QB4.dg G U s = 6}.card = 3 → (∀ s ∈ S, Erdos585.QB4.dg G U₁ s = if Erdos585.QB4.dg G U s = 6 then 3 else 1) → (∀ s ∈ S, Erdos585.QB4.dg G U₂ s = 3) → (∀ y ∈ W₁, Erdos585.QB4.dg G U y = 5 ∨ Erdos585.QB4.dg G U y = 6) → {y ∈ W₁ | Erdos585.QB4.dg G U y = 5}.card = 5 → (∀ y ∈ W₂, Erdos585.QB4.dg G U y = 4 ∨ Erdos585.QB4.dg G U y = 5 ∨ Erdos585.QB4.dg G U y = 6) → {y ∈ W₂ | Erdos585.QB4.dg G U y = 4}.card = 1 → {y ∈ W₂ | Erdos585.QB4.dg G U y = 5}.card = 4 → z₂ ∈ W₂ → Erdos585.QB4.dg G U z₂ = 4 → {z ∈ W₁ | Erdos585.QB4.dg G U z = 5 ∧ ¬Erdos585.QB7SmallLobeR643.FixedOmissionFactor G U W z z₂}.card ≤ 2 ∧ 3 ≤ {z ∈ W₁ | Erdos585.QB4.dg G U z = 5 ∧ Erdos585.QB7SmallLobeR643.FixedOmissionFactor G U W z z₂}.card",
+    "scope_label": "supporting_result",
+    "source_sha256": "ee7a9638fdbb5dfe360fe0191c8d064936f1950993238eee485dfbf9f4410f1f",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R801.Main",
+    "declaration": "Erdos585.AllHBalancedSelectorR801.balanced_core_factor",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : Fintype V] {G : SimpleGraph V} {h q : ℕ} {F : ℤ} {A B : Finset V}, Erdos585.GeneralSelectorR783.OriginalHost h q F G A B → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "scope_label": "supporting_result",
+    "source_sha256": "db49c00f5c1e83386cb549f19b6e462cd5d1acf5d3e9b245b5995b5dd743d86e",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R804.Caller",
+    "declaration": "Erdos585.R804.third_surplus_original",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : Fintype V] (h q j ξ : ℕ) (G : SimpleGraph V) (A B : Finset V), 4 ≤ h → 1024 * (h + 1) ^ 2 ≤ q → j = h - 3 → h ^ 2 + 5 * h + 8 - h + 2 ≤ ξ → ξ ≤ h ^ 2 + 5 * h + 8 - 1 → Disjoint A B → A ∪ B = Finset.univ → G.IsBipartiteWith ↑A ↑B → B.card = A.card + j → 2 * q ≤ Fintype.card V → (∀ (v : V), q ≤ G.degree v) → (∀ (v : V), G.degree v ≤ 2 * q - 2) → G.edgeSet.ncard + (h * q - ξ) = (q - 1) * Fintype.card V → (∀ (X : Finset V), h ≤ X.card → X.card < Fintype.card V → ↑(h * q - ξ) + 1 ≤ (↑q - 1) * ↑X.card - ↑(SimpleGraph.induce (↑X) G).edgeSet.ncard) → ∃ S O, S ⊆ A ∧ O ⊆ B ∧ S.card ≤ 8 * h - 1 ∧ O.card = j + S.card ∧ O.card ≤ 8 * h + j - 1 ∧ O.card < 9 * h ∧ q ≤ (A \\ S).card ∧ (A \\ S).card = (B \\ O).card ∧ (S = ∅ ∧ O.card = j ∨ 1 ≤ S.card ∧ (A \\ S).card < A.card ∧ (B \\ O).card < B.card) ∧ ∃ H, H.verts = ↑(A \\ S ∪ B \\ O) ∧ H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q ∧ H.verts ⊂ Set.univ",
+    "scope_label": "supporting_result",
+    "source_sha256": "57132818226253c0db379e552064a2533455aa2b69ac34f462dccb8ae230e02c",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R804.Caller",
+    "declaration": "Erdos585.R804.fourth_surplus_original",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : Fintype V] (h q j ξ : ℕ) (G : SimpleGraph V) (A B : Finset V), 5 ≤ h → 1024 * (h + 1) ^ 2 ≤ q → j = h - 4 → h ^ 2 + 5 * h + 8 - h + 2 ≤ ξ → ξ ≤ h ^ 2 + 5 * h + 8 - 1 → Disjoint A B → A ∪ B = Finset.univ → G.IsBipartiteWith ↑A ↑B → B.card = A.card + j → 2 * q ≤ Fintype.card V → (∀ (v : V), q ≤ G.degree v) → (∀ (v : V), G.degree v ≤ 2 * q - 2) → G.edgeSet.ncard + (h * q - ξ) = (q - 1) * Fintype.card V → (∀ (X : Finset V), h ≤ X.card → X.card < Fintype.card V → ↑(h * q - ξ) + 1 ≤ (↑q - 1) * ↑X.card - ↑(SimpleGraph.induce (↑X) G).edgeSet.ncard) → ∃ S O, S ⊆ A ∧ O ⊆ B ∧ S.card ≤ 8 * h - 1 ∧ O.card = j + S.card ∧ O.card ≤ 8 * h + j - 1 ∧ O.card < 9 * h ∧ q ≤ (A \\ S).card ∧ (A \\ S).card = (B \\ O).card ∧ (S = ∅ ∧ O.card = j ∨ 1 ≤ S.card ∧ (A \\ S).card < A.card ∧ (B \\ O).card < B.card) ∧ ∃ H, H.verts = ↑(A \\ S ∪ B \\ O) ∧ H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q ∧ H.verts ⊂ Set.univ",
+    "scope_label": "supporting_result",
+    "source_sha256": "57132818226253c0db379e552064a2533455aa2b69ac34f462dccb8ae230e02c",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R816.Main",
+    "declaration": "Erdos585.R816.construct_three_offset_core",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : Fintype V] {G : SimpleGraph V} {q : ℕ} {A B : Finset V}, Erdos585.AllHTopCritical.Host 5 q G A B → ∃ P Q, Erdos585.R816.ThreeOffsetCore q G A B P Q",
+    "scope_label": "supporting_result",
+    "source_sha256": "a410c4f608f6c9067f569a6f9ca6a7429bfdcf216338ba23a600e2e8795209d0",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R827",
+    "declaration": "Erdos585.QB7ResidualThreePortR827.original_selector_residual_three_port_target",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : DecidableEq V] {G : SimpleGraph V} [inst_1 : DecidableRel G.Adj] {U W S U₁ U₂ W₁ W₂ : Finset V} {u0 z₂ a b c t : V}, Erdos585.QB7Conditional.U2Input G U W → Erdos585.QB7SmallLobeR643.Split G U W S U₁ U₂ W₁ W₂ → 6 ≤ U₁.card → 6 ≤ U₂.card → u0 ∈ U₁ → Erdos585.QB4.dg G W u0 = 5 → S = {a, b, c, t} → Erdos585.QB4.dg G U a = 6 ∧ Erdos585.QB4.dg G U b = 6 ∧ Erdos585.QB4.dg G U c = 6 ∧ Erdos585.QB4.dg G U t = 4 → Erdos585.QB4.dg G U₁ a = 2 ∧ Erdos585.QB4.dg G U₁ b = 3 ∧ Erdos585.QB4.dg G U₁ c = 3 ∧ Erdos585.QB4.dg G U₁ t = 2 → Erdos585.QB4.dg G U₂ a = 4 ∧ Erdos585.QB4.dg G U₂ b = 3 ∧ Erdos585.QB4.dg G U₂ c = 3 ∧ Erdos585.QB4.dg G U₂ t = 2 → (∀ y ∈ W₁, Erdos585.QB4.dg G U y = 5 ∨ Erdos585.QB4.dg G U y = 6) → {y ∈ W₁ | Erdos585.QB4.dg G U y = 5}.card = 5 → (∀ y ∈ W₂, Erdos585.QB4.dg G U y = 4 ∨ Erdos585.QB4.dg G U y = 5 ∨ Erdos585.QB4.dg G U y = 6) → {y ∈ W₂ | Erdos585.QB4.dg G U y = 4}.card = 1 → {y ∈ W₂ | Erdos585.QB4.dg G U y = 5}.card = 4 → z₂ ∈ W₂ → Erdos585.QB4.dg G U z₂ = 4 → {z ∈ W₁ | Erdos585.QB4.dg G U z = 5 ∧ ¬Erdos585.QB7SmallLobeR643.FixedOmissionFactor G U W z z₂}.card ≤ 2 ∧ 3 ≤ {z ∈ W₁ | Erdos585.QB4.dg G U z = 5 ∧ Erdos585.QB7SmallLobeR643.FixedOmissionFactor G U W z z₂}.card",
+    "scope_label": "supporting_result",
+    "source_sha256": "d17bf0e07cff20e60dd25acdf450aa929e12cd58583afe5d17993c8c417fadcc",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R831.Endpoint",
+    "declaration": "Erdos585.H5BareR831.bare_h5_original_caller",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : Fintype V] (q n : ℕ), 36864 ≤ q → ∀ (G : SimpleGraph V), Fintype.card V = n → G.IsBipartite → (∀ (v : V), G.degree v ≤ 2 * q - 2) → 2 * q ≤ n → (q - 1) * n - (5 * q - 58) ≤ G.edgeSet.ncard → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "scope_label": "primary_endpoint",
+    "source_sha256": "64510599aba750e857274775e166f9941dd732423bacab16172338ec88832ce4",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R837.Budget",
+    "declaration": "Erdos585.R837.exists_threshold_reduction",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : DecidableEq V] {G : SimpleGraph V} [inst_1 : DecidableRel G.Adj] {h q : ℕ} {H : Erdos585.R837.Support V}, Erdos585.R837.Host h q G H → ∃ K, Erdos585.R837.Reduction h q G H K",
+    "scope_label": "supporting_result",
+    "source_sha256": "08186f6112c4256de91e7c7a371fbb71c78ac01f78022a6e99b0b9e40d6ce9c2",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R838.Main",
+    "declaration": "Erdos585.RobustBalancedSelectorR838.original_host_caller",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : Fintype V] {G : SimpleGraph V} {h epsilon q : ℕ} {F : ℤ} {A B : Finset V}, 3 ≤ h → 1048576 * (h + epsilon + 1) ^ 2 ≤ q → Disjoint A B → A ∪ B = Finset.univ → A.card = B.card → G.IsBipartiteWith ↑A ↑B → 2 * q ≤ Fintype.card V → (∀ (v : V), q ≤ G.degree v) → (∀ (v : V), G.degree v ≤ 2 * q - 2) → (↑q - 1) * ↑(Fintype.card V) - ↑G.edgeSet.ncard = F → 2 * ↑q ≤ F ∧ F ≤ ↑h * ↑q - 12 * ↑h ^ 2 → (∀ (D : Finset V), h ≤ D.card → D.card < Fintype.card V → F + 1 - ↑epsilon ≤ (↑q - 1) * ↑D.card - ↑(SimpleGraph.induce (↑D) G).edgeSet.ncard) → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "scope_label": "supporting_result",
+    "source_sha256": "9642be6307d5099a4cbfe10b381c604060944112b4a0028496951be31a0d21b5",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R854.ProfileFree",
+    "declaration": "Erdos585.QB7ProfileFreeR854.original_profile_free_target",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : DecidableEq V] {G : SimpleGraph V} [inst_1 : DecidableRel G.Adj] {U W S U₁ U₂ W₁ W₂ : Finset V} {u0 : V}, Erdos585.QB7Conditional.U2Input G U W → Erdos585.QB7SmallLobeR643.Split G U W S U₁ U₂ W₁ W₂ → u0 ∈ U₁ → Erdos585.QB4.dg G W u0 = 5 → (∀ s ∈ S, Erdos585.QB4.dg G U s = 5 ∨ Erdos585.QB4.dg G U s = 6) → {s ∈ S | Erdos585.QB4.dg G U s = 5}.card = 2 → {s ∈ S | Erdos585.QB4.dg G U s = 6}.card = 2 → have Q := {s ∈ S | Erdos585.QB4.dg G U s = 6}; have A₁ := Erdos585.QB7ProfileFreeR854.physicalA G U U₁ W₁ Q {u0}; have A₂ := Erdos585.QB7ProfileFreeR854.physicalA G U U₂ W₂ Q ∅; have M₁ := Erdos585.QB7ProfileFreeR854.deficientMarkers G U W₁; have M₂ := Erdos585.QB7ProfileFreeR854.deficientMarkers G U W₂; A₁ ⊆ M₁ ∧ A₂ ⊆ M₂ ∧ Erdos585.QB4.df G U A₁ ≤ 2 ∧ Erdos585.QB4.df G U A₂ ≤ 2 ∧ (∀ z₁ ∈ M₁, ∀ z₂ ∈ M₂, ¬Erdos585.QB7SmallLobeR643.FixedOmissionFactor G U W z₁ z₂ ↔ z₁ ∈ A₁ ∧ z₂ ∈ A₂) ∧ ∑ p ∈ M₁ ×ˢ M₂ with ¬Erdos585.QB7SmallLobeR643.FixedOmissionFactor G U W p.1 p.2, Erdos585.QB7ProfileFreeR854.pairWeight G U p = Erdos585.QB4.df G U A₁ * Erdos585.QB4.df G U A₂ ∧ ∑ p ∈ M₁ ×ˢ M₂ with ¬Erdos585.QB7SmallLobeR643.FixedOmissionFactor G U W p.1 p.2, Erdos585.QB7ProfileFreeR854.pairWeight G U p ≤ 4 ∧ 26 ≤ ∑ p ∈ M₁ ×ˢ M₂ with Erdos585.QB7SmallLobeR643.FixedOmissionFactor G U W p.1 p.2, Erdos585.QB7ProfileFreeR854.pairWeight G U p",
+    "scope_label": "supporting_result",
+    "source_sha256": "0b130fe0154e9a7781e658605fd528a613e390d74f01c580a9799e5666513e63",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R854.ProfileFree",
+    "declaration": "Erdos585.QB7ProfileFreeR854.original_profile_free_raw",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : DecidableEq V] {G : SimpleGraph V} [inst_1 : DecidableRel G.Adj] {U W S U₁ U₂ W₁ W₂ : Finset V} {u0 : V}, Erdos585.QB7Conditional.U2Input G U W → Erdos585.QB7SmallLobeR643.Split G U W S U₁ U₂ W₁ W₂ → u0 ∈ U₁ → Erdos585.QB4.dg G W u0 = 5 → (∀ s ∈ S, Erdos585.QB4.dg G U s = 5 ∨ Erdos585.QB4.dg G U s = 6) → {s ∈ S | Erdos585.QB4.dg G U s = 5}.card = 2 → {s ∈ S | Erdos585.QB4.dg G U s = 6}.card = 2 → ∃ P, 26 ≤ ∑ p ∈ P, Erdos585.QB7ProfileFreeR854.pairWeight G U p ∧ P ⊆ Erdos585.QB7ProfileFreeR854.deficientMarkers G U W₁ ×ˢ Erdos585.QB7ProfileFreeR854.deficientMarkers G U W₂ ∧ ∀ p ∈ P, ∃ F ⊆ U ×ˢ (W.erase p.1).erase p.2, (∀ e ∈ F, G.Adj e.1 e.2) ∧ (∀ x ∈ U, {e ∈ F | e.1 = x}.card = 4) ∧ ∀ y ∈ (W.erase p.1).erase p.2, {e ∈ F | e.2 = y}.card = 4",
+    "scope_label": "supporting_result",
+    "source_sha256": "0b130fe0154e9a7781e658605fd528a613e390d74f01c580a9799e5666513e63",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R854.ProfileFree",
+    "declaration": "Erdos585.QB7ProfileFreeR854.original_profile_free_exists",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : DecidableEq V] {G : SimpleGraph V} [inst_1 : DecidableRel G.Adj] {U W S U₁ U₂ W₁ W₂ : Finset V} {u0 : V}, Erdos585.QB7Conditional.U2Input G U W → Erdos585.QB7SmallLobeR643.Split G U W S U₁ U₂ W₁ W₂ → u0 ∈ U₁ → Erdos585.QB4.dg G W u0 = 5 → (∀ s ∈ S, Erdos585.QB4.dg G U s = 5 ∨ Erdos585.QB4.dg G U s = 6) → {s ∈ S | Erdos585.QB4.dg G U s = 5}.card = 2 → {s ∈ S | Erdos585.QB4.dg G U s = 6}.card = 2 → ∃ z₁ ∈ W₁, ∃ z₂ ∈ W₂, Erdos585.QB4.dg G U z₁ < 6 ∧ Erdos585.QB4.dg G U z₂ < 6 ∧ Erdos585.QB7SmallLobeR643.FixedOmissionFactor G U W z₁ z₂",
+    "scope_label": "supporting_result",
+    "source_sha256": "0b130fe0154e9a7781e658605fd528a613e390d74f01c580a9799e5666513e63",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R856.Main",
+    "declaration": "Erdos585.R856.original_graph_normalization",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (h q : ℕ), 6 ≤ h → 2 ^ 24 * (h + 1) ^ 4 ≤ q → ∀ (G : SimpleGraph V), G.IsBipartite → 2 * q ≤ Fintype.card V → G.maxDegree ≤ 2 * q - 2 → (↑q - 1) * ↑(Fintype.card V) - ↑G.edgeSet.ncard ≤ ↑h * ↑q - 16 * ↑h ^ 2 → (¬∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q) → ∃ A B S K, Disjoint A B ∧ A ∪ B = Finset.univ ∧ Erdos585.R837.Included S (A, B) ∧ K ≤ G ∧ Erdos585.R837.InducedBipartite K S ∧ 2 * q ≤ Erdos585.R837.order S ∧ Erdos585.R837.Capped K (2 * q - 2) S ∧ Erdos585.R837.MinCore K q S ∧ Erdos585.R837.deficit K (q - 1) S = ↑(Erdos585.R856.F h q) ∧ Erdos585.R837.Noq K q S ∧ ∀ (T : Erdos585.R837.Support V), Erdos585.R837.Included T S → h ≤ Erdos585.R837.order T → Erdos585.R837.order T < Erdos585.R837.order S → ↑(Erdos585.R856.F h q) + 1 ≤ Erdos585.R837.deficit K (q - 1) T",
+    "scope_label": "supporting_result",
+    "source_sha256": "ba298212a53cf3b24cba224108be4ab6415a96d0a5a9b28518d7334d6fbc001f",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R863.Main",
+    "declaration": "Erdos585.R863.error_floor_positive_selector",
+    "oracle": true,
+    "type": "∀ (h q j e : ℕ) {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) (A B : Finset V), 6 ≤ h → e ≤ 4 * h ^ 2 - 10 * h + 4 → 2 ^ 20 * (h + e + 1) ^ 2 ≤ q → 1 ≤ j → j ≤ h - 1 → Disjoint A B → A ∪ B = Finset.univ → G.IsBipartiteWith ↑A ↑B → B.card = A.card + j → 2 * q ≤ Fintype.card V → (∀ (v : V), q ≤ G.degree v) → (∀ (v : V), G.degree v ≤ 2 * q - 2) → (∀ v ∈ A, q + 2 * h - 4 ≤ G.degree v) → (↑q - 1) * ↑(Fintype.card V) - ↑G.edgeSet.ncard = ↑h * ↑q - 16 * ↑h ^ 2 + ↑e → (∀ (U : Finset V), h ≤ U.card → U.card < Fintype.card V → ↑h * ↑q - 16 * ↑h ^ 2 + 1 ≤ (↑q - 1) * ↑U.card - ↑(SimpleGraph.induce (↑U) G).edgeSet.ncard) → ∃ O ⊆ B, O.card = j ∧ (∀ T ⊆ B, O ⊆ T → Erdos585.L34.thetaJ q j G A B T ≤ 0) ∧ ∃ H, H.verts = ↑(A ∪ B \\ O) ∧ H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "scope_label": "supporting_result",
+    "source_sha256": "5a35b667366734f4f854c098f8d1b5297c192140a291796425dfbba7c14a2d59",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R866.Main",
+    "declaration": "Erdos585.R866.every_h_forcing",
+    "oracle": true,
+    "type": "∀ (h q : ℕ), 6 ≤ h → 2 ^ 24 * (h + 1) ^ 4 ≤ q → ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), G.IsBipartite → 2 * q ≤ Fintype.card V → G.maxDegree ≤ 2 * q - 2 → (↑q - 1) * ↑(Fintype.card V) - ↑G.edgeSet.ncard ≤ ↑h * ↑q - 16 * ↑h ^ 2 → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "scope_label": "superseded_endpoint",
+    "source_sha256": "3855c7a450d9a43ea86557c5cf4b9476fe2516bcacb221f1c8d9601e7ed0efb7",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R866.Main",
+    "declaration": "Erdos585.R866.every_multiplier_forcing",
+    "oracle": true,
+    "type": "∀ (m q : ℕ), 1 ≤ m → 2 ^ 24 * (m + 7) ^ 4 ≤ q → ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), G.IsBipartite → 2 * q ≤ Fintype.card V → G.maxDegree ≤ 2 * q - 2 → (↑q - 1) * ↑(Fintype.card V) - ↑G.edgeSet.ncard ≤ ↑m * ↑q → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "scope_label": "superseded_endpoint",
+    "source_sha256": "3855c7a450d9a43ea86557c5cf4b9476fe2516bcacb221f1c8d9601e7ed0efb7",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R874.Main",
+    "declaration": "Erdos585.R874.superlinear_forcing",
+    "oracle": true,
+    "type": "∀ (q : ℕ), 2 ^ 40 ≤ q → ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), G.IsBipartite → 2 * q ≤ Fintype.card V → G.maxDegree ≤ 2 * q - 2 → (↑q - 1) * ↑(Fintype.card V) - ↑G.edgeSet.ncard ≤ (↑q).rpow (5 / 4) / 512 → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "scope_label": "superseded_endpoint",
+    "source_sha256": "ef30986d3428c482e296c0eb711a73dd70c419fee1b463a5fe900d0827f1aba2",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R869.Main",
+    "declaration": "Erdos585.QB7S0002R869.original_s0002_raw",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : DecidableEq V] {G : SimpleGraph V} [inst_1 : DecidableRel G.Adj] {U W S U₁ U₂ W₁ W₂ : Finset V}, Erdos585.QB7Conditional.U2Input G U W → Erdos585.QB7SmallLobeR643.Split G U W S U₁ U₂ W₁ W₂ → (∀ s ∈ S, Erdos585.QB4.dg G U s = 4 ∨ Erdos585.QB4.dg G U s = 6) → {s ∈ S | Erdos585.QB4.dg G U s = 4}.card = 1 → ∃ z₁ ∈ W₁, ∃ z₂ ∈ W₂, Erdos585.QB4.dg G U z₁ < 6 ∧ Erdos585.QB4.dg G U z₂ < 6 ∧ ∃ F ⊆ U ×ˢ (W.erase z₁).erase z₂, (∀ e ∈ F, G.Adj e.1 e.2) ∧ (∀ x ∈ U, {e ∈ F | e.1 = x}.card = 4) ∧ ∀ y ∈ (W.erase z₁).erase z₂, {e ∈ F | e.2 = y}.card = 4",
+    "scope_label": "supporting_result",
+    "source_sha256": "c2ca5b13b18de0042f00758fc99e3d7777b93da2621d5607c4b64a5d74ad3235",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R882.Main",
+    "declaration": "Erdos585.R882.cubic_forcing",
+    "oracle": true,
+    "type": "∀ (h q : ℕ), 6 ≤ h → Erdos585.R882.cubic_cutoff h ≤ ↑q → ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), G.IsBipartite → 2 * q ≤ Fintype.card V → G.maxDegree ≤ 2 * q - 2 → (↑q - 1) * ↑(Fintype.card V) - ↑G.edgeSet.ncard ≤ ↑h * ↑q - 16 * ↑h ^ 2 → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "scope_label": "superseded_endpoint",
+    "source_sha256": "925a720636c971a82264c0e288bec9682f2ff4a91322fe634c501f80f78241f5",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R882.Main",
+    "declaration": "Erdos585.R882.superlinear_forcing",
+    "oracle": true,
+    "type": "∀ (q : ℕ), 2 ^ 30 ≤ q → ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), G.IsBipartite → 2 * q ≤ Fintype.card V → G.maxDegree ≤ 2 * q - 2 → (↑q - 1) * ↑(Fintype.card V) - ↑G.edgeSet.ncard ≤ (↑q).rpow (4 / 3) / 8 → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "scope_label": "superseded_endpoint",
+    "source_sha256": "925a720636c971a82264c0e288bec9682f2ff4a91322fe634c501f80f78241f5",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R883.Main",
+    "declaration": "Erdos585.QB7S0001R883.original_s0001_raw",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : DecidableEq V] {G : SimpleGraph V} [inst_1 : DecidableRel G.Adj] {U W S U₁ U₂ W₁ W₂ : Finset V}, Erdos585.QB7Conditional.U2Input G U W → Erdos585.QB7SmallLobeR643.Split G U W S U₁ U₂ W₁ W₂ → (∀ s ∈ S, Erdos585.QB4.dg G U s = 5 ∨ Erdos585.QB4.dg G U s = 6) → {s ∈ S | Erdos585.QB4.dg G U s = 5}.card = 1 → ∃ z₁ ∈ W₁, ∃ z₂ ∈ W₂, Erdos585.QB4.dg G U z₁ < 6 ∧ Erdos585.QB4.dg G U z₂ < 6 ∧ ∃ F ⊆ U ×ˢ (W.erase z₁).erase z₂, (∀ e ∈ F, G.Adj e.1 e.2) ∧ (∀ x ∈ U, {e ∈ F | e.1 = x}.card = 4) ∧ ∀ y ∈ (W.erase z₁).erase z₂, {e ∈ F | e.2 = y}.card = 4",
+    "scope_label": "supporting_result",
+    "source_sha256": "d39b6302c21574e2c4672083434e33a8b2050af925d5fd76969fde8d6d205423",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R894.Main",
+    "declaration": "Erdos585.QB7S0012R894.original_s0012_target",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : DecidableEq V] {G : SimpleGraph V} [inst_1 : DecidableRel G.Adj] {U W S U₁ U₂ W₁ W₂ : Finset V}, Erdos585.QB7Conditional.U2Input G U W → Erdos585.QB7SmallLobeR643.Split G U W S U₁ U₂ W₁ W₂ → (∀ s ∈ S, Erdos585.QB4.dg G U s = 4 ∨ Erdos585.QB4.dg G U s = 5 ∨ Erdos585.QB4.dg G U s = 6) → {s ∈ S | Erdos585.QB4.dg G U s = 4}.card = 1 → {s ∈ S | Erdos585.QB4.dg G U s = 5}.card = 1 → ∃ z₁ ∈ W₁, ∃ z₂ ∈ W₂, Erdos585.QB4.dg G U z₁ < 6 ∧ Erdos585.QB4.dg G U z₂ < 6 ∧ Erdos585.QB7SmallLobeR643.FixedOmissionFactor G U W z₁ z₂ ∧ Erdos585.QB4.Quartic G U W",
+    "scope_label": "supporting_result",
+    "source_sha256": "352e061d377065ff66c3d828f7bfb0e8261f9c1c9c2ffb6f03cc2ce19f6cbef7",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R895.Extreme",
+    "declaration": "Erdos585.QB7S0000R895.original_s0000_raw",
+    "oracle": true,
+    "type": "∀ {V : Type u_1} [inst : DecidableEq V] {G : SimpleGraph V} [inst_1 : DecidableRel G.Adj] {U W S P P' L L' : Finset V}, Erdos585.QB7Conditional.U2Input G U W → Erdos585.QB7SmallLobeR643.Split G U W S P P' L L' → (∀ s ∈ S, Erdos585.QB4.dg G U s = 6) → ∃ z₁ ∈ L, ∃ z₂ ∈ L', Erdos585.QB4.dg G U z₁ < 6 ∧ Erdos585.QB4.dg G U z₂ < 6 ∧ ∃ F ⊆ U ×ˢ (W.erase z₁).erase z₂, (∀ e ∈ F, G.Adj e.1 e.2) ∧ (∀ x ∈ U, {e ∈ F | e.1 = x}.card = 4) ∧ ∀ y ∈ (W.erase z₁).erase z₂, {e ∈ F | e.2 = y}.card = 4",
+    "scope_label": "supporting_result",
+    "source_sha256": "c699df55450e3c4b8e50742acdf09f44866462cb829c5f57cdf6f27bf94349e3",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R898.Main",
+    "declaration": "Erdos585.R898.every_h_forcing",
+    "oracle": true,
+    "type": "∀ (h q : ℕ), 6 ≤ h → 4096 * (h + 1) ^ 2 ≤ q → ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), G.IsBipartite → 2 * q ≤ Fintype.card V → G.maxDegree ≤ 2 * q - 2 → (↑q - 1) * ↑(Fintype.card V) - ↑G.edgeSet.ncard ≤ ↑h * ↑q - 16 * ↑h ^ 2 → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "scope_label": "primary_endpoint",
+    "source_sha256": "902eff7fa58919cc79c13670c9867398d2f65b70c981d13a4baa645cca286d8f",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R898.Main",
+    "declaration": "Erdos585.R898.superlinear_forcing",
+    "oracle": true,
+    "type": "∀ (q : ℕ), 2 ^ 18 ≤ q → ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), G.IsBipartite → 2 * q ≤ Fintype.card V → G.maxDegree ≤ 2 * q - 2 → (↑q - 1) * ↑(Fintype.card V) - ↑G.edgeSet.ncard ≤ (↑q).rpow (3 / 2) / 128 → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "scope_label": "primary_endpoint",
+    "source_sha256": "902eff7fa58919cc79c13670c9867398d2f65b70c981d13a4baa645cca286d8f",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "94a03d1735e1ade8e3bddb8ab9b254b8d02b6bdf59f4ea44bd4db7ffc3c241a7",
+      "output_sha256": "657b7a76e7082bc648d7b9e8b03a0fb4781770d0c50f583e33b2236d6c822e4e",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "Openmath.Proofs.PaperSupport.BqCircularLowerDirect",
+    "declaration": "BqCircularLowerFamily.all_orders",
+    "oracle": true,
+    "type": "∀ (q : ℕ), 5 ≤ q → ∀ (n : ℕ), 4 * q - 5 ≤ n → ∃ V vf vd G gd, Fintype.card V = n ∧ G.IsBipartite ∧ (∀ (v : V), q - 1 ≤ G.degree v) ∧ G.maxDegree ≤ 2 * q - 2 ∧ G.edgeFinset.card = (q - 1) * n - (q ^ 2 - 3 * q + 4) ∧ ¬∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "scope_label": "supporting_result",
+    "source_sha256": "fbff1d22df48ab9cb47f73379c64220ab2b90e347bf90872ba7af6a048e5d83d",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "query_sha256": "d726d3e2d105255718bbd98828722af786be0cbc42275ae988b0f7de29ec7096",
+      "output_sha256": "00ed211274b16634a69cc575f7366dd367fafa7342e3f6316e442a0cd409c475",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
   }
 ]

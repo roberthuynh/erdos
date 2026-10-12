@@ -3,7 +3,7 @@
 > What is the maximum number of edges that a graph on n vertices can have if it does not contain
 > two edge-disjoint cycles with the same vertex set?
 >
-> [erdosproblems.com/585](https://www.erdosproblems.com/585) (Erdős 1976)
+> [erdosproblems.com/585](https://www.erdosproblems.com/585) (Erdős problem; historical references are recorded on the linked problem page)
 
 Hi, I'm Robert Huynh, currently a second-year MBA student at Harvard Business School. While
 absolutely not a mathematician, I'm a founder and always excited to tackle new problems like this,
@@ -22,9 +22,35 @@ pair. Nothing in this repository changes either of those bounds.
 This repo has 3 kinds of results: (1) results verified in Lean, (2) computer searches you can rerun,
 and (3) written proofs that AI agents wrote and reviewed but no human has checked yet.
 
+## Added in v0.4
+
+The main additions concern q-regular subgraphs of finite simple bipartite graphs with maximum degree at most 2q − 2. Write D = (q − 1)n − e for the edge deficit, where n counts vertices and e counts unordered edges. A q-regular subgraph has degree q at each of its own vertices and can use only part of the original vertex set.
+
+For every bipartite row below, q is an integer, n ≥ 2q and the maximum degree is at most 2q − 2. Each deficit condition guarantees a nonempty q-regular subgraph using original vertices and edges.
+
+| Parameters | Sufficient deficit bound |
+|---|---|
+| Integer h ≥ 6, q ≥ 4096(h + 1)² | D ≤ hq − 16h² |
+| q ≥ 2^18 = 262144 | D ≤ q^(3/2)/128 |
+| q ≥ 36864 | D ≤ 5q − 58 |
+| q ≥ 25600 | D ≤ 4q − 44 |
+| q ≥ 16384 | D ≤ 3q − 32 |
+| q ≥ 5 | D ≤ 2q − 5; this earlier theorem also gives some support of size at least 4q − 6 |
+
+The fractional-power expression is real; since D is integral, its bound is equivalent to D ≤ floor(q^(3/2)/128). The v0.4 endpoints do not inherit the last row's larger-support guarantee. They assert neither a spanning nor an induced nor a connected subgraph. The endpoint declarations are `Erdos585.R898.every_h_forcing` and `Erdos585.R898.superlinear_forcing` in `R898/Main.lean`.
+
+For every q ≥ 2^18, the parameterized theorem with h = floor(√q/64) − 1 permits a larger deficit than the real corollary, and for large q its allowance is about q^(3/2)/64. At q = 2^18 it permits h = 7 and deficit 7q − 784, while the real corollary states deficit 4q. The three earlier large-degree rows retain smaller cutoffs and remain useful.
+
+The even-degree theorem for general finite simple graphs remains included: for even q ≥ 6, n ≥ 2, maximum degree at most 2q − 2 and D ≤ q − 2, some q-regular subgraph has at least 2q − 1 vertices. The quartic result gives a nonempty 4-regular subgraph in every bipartite graph with n ≥ 4, maximum degree at most six and e ≥ 3n − 6. Explicit examples at 3n − 8 exist for every n ≥ 11; whether 3n − 7 suffices in general remains open in this work.
+
+An explicit family of avoiders shows that no allowance above q² − 3q + 3 can work, so for q ≥ 2^18 the best allowance lies between about q^(3/2)/64 and q² − 3q + 3; the open question is the exponent. For comparison, elementary bipartite completion and perfect-matching decomposition give a spanning q-factor at D ≤ q − 2. The leading allowance q^(3/2)/128 has a different growth rate, but concerns an extremely near-regular host class and permits selected support. The [literature comparison](literature/README.md) identifies precisely checked public statements; no direct derivation of the full endpoint was found in that bounded comparison. A worldwide novelty claim, a broadly new method and a separate new application have not been established.
+
+The [mathematical note](findings/V0.4.md) gives exact hypotheses, source declarations and construction gaps. The [proof companion](findings/V0.4-PROOF.md) proves the classical factor step and one conditional union estimate, sketches the critical-support reduction, and gives a roadmap for the selection argument; normalization, peeling, the unequal-shore selector, common pins, hazard coverage and both cut-payment calculations are not proved in prose. It contains no written proof of the 5q − 58 theorem, QB(6) or the avoiding families; their evidence is the Lean sources and the checks. These are regular-subgraph bounds and formalizations related to Erdős 585. They do not give its required cycle pair or improve the known asymptotic bounds for f(n).
+
 ## Verified in Lean
 
-Each result below compiles with no `sorry` and uses only the standard axioms (`propext`,
+The existing results below remain included. The additional v0.4 declarations are mapped in
+[the mathematical note](findings/V0.4.md). Each result below compiles with no `sorry` and uses only the standard axioms (`propext`,
 `Classical.choice`, `Quot.sound`). Reproduce one with `./check.sh <file> <declaration>`.
 
 | Result | Lean declaration |
@@ -47,21 +73,25 @@ All are in `Openmath/Proofs/Final.lean` except the three graphs
 `graphs/verify_graphs.py`) and the three 4-regular subgraph results
 (`Openmath/Proofs/QB4/Statement.lean`, `Openmath/Proofs/QB5/Statement.lean`).
 `python3 scripts/check_axioms.py` checks the axioms and the recorded statement of every one at once,
-along with eight supporting declarations: 25 in all, listed in `scripts/headline-theorems.json`.
+together with the selected v0.4 additions listed in `scripts/headline-theorems.json`.
+The expanded registry contains 76 declarations with checked printed types and permitted axioms: 25 carried
+over from v0.3.1 and 51 added in v0.4, including 5 superseded, weaker versions of the two R898 endpoints (R866,
+R874 and R882) retained for the record. Registrations include supporting statements and corollaries; they are
+not a count of independent discoveries.
 
 The 4-regular subgraph results are about 4-regular subgraphs, not pairs. Every pair is a 4-regular
 subgraph (the union of its two cycles), but a 4-regular subgraph need not contain a pair, so these
 results do not settle whether 6-regular graphs have a pair. For comparison, Remark 3.6 of Alon,
 Friedland and Kalai (J. Combin. Theory Ser. B 37, 1984) gives a nonempty 4-regular subgraph in every
-bipartite graph with maximum degree at most 7 and at least 3n − 2 edges. The agents did not find the
-3n − 4 or 3n − 5 bounds in the literature they searched (October 2026). I do not claim they are new:
-nothing here is claimed as new until an expert has compared it with the literature. For small
-bipartite graphs with maximum degree at most 6 the truth is lower still: an unreviewed computer
-search by two programs finds that 3n − 7 edges are enough for 4 ≤ n ≤ 19, and
-`findings/supplement/census/edge/` has examples with 3n − 8 edges and no 4-regular subgraph.
+bipartite graph with maximum degree at most 7 and at least 3n − 2 edges. This is a comparison with one named published result, not a complete novelty assessment.
+The [literature page](literature/README.md) records the scope and remaining source gaps. The
+v0.4 quartic theorem reaches 3n − 6 edges for n ≥ 4. A computer search by two programs finds
+that 3n − 7 edges are enough for 4 ≤ n ≤ 19; that finite computation does not settle the
+remaining general threshold. The all-orders construction added in v0.4 supplies examples at 3n − 8
+edges for every n ≥ 11.
 
-QB(4) and QB(5) are this project's labels (the 4 and 5 are the slack in 3n − 4 and 3n − 5, not a
-degree), and in the files under `QB4/` and `QB5/` a "pair" means a pair of vertex sets, not a pair
+QB(4), QB(5) and QB(6) are this project's labels (the number is the slack in 3n minus that
+number, not a degree), and in the files under `QB4/` and `QB5/` a "pair" means a pair of vertex sets, not a pair
 of cycles.
 
 The linear lower bounds come from explicit constructions. For large n they are far below the known
@@ -130,7 +160,7 @@ How they were reviewed: each written proof was reviewed by at least one separate
 context, and the reviewer reran any computation with its own code. The reviewer was often the same
 model as the author, so some proofs got a second or third reviewer, including one on a different
 Claude model (Fable 5.1 reviewing work by Opus 5.5). Section 7 of the findings lists the models
-behind each part of the work, including the reviews. AI review is a filter, and AI reviewers can
+behind each part of the work through v0.4, including the reviews. AI review is a filter, and AI reviewers can
 miss errors, so none of this is verified yet. That's why I'm seeking help. The supplement
 (`findings/supplement/`) keeps the proofs and reviews as they were written, with every later edit
 recorded.
@@ -144,7 +174,7 @@ it is merged, this repository will import the upstream statement instead.
 
 ## How this was made
 
-I pointed AI agents (OpenAI's GPT-6 Astra and Anthropic's Claude Fable 5.1 and Claude Opus 5.5) at
+I pointed AI agents (OpenAI's GPT-6 Astra and GPT-6.1 Sol, and Anthropic's Claude Fable 5.1 and Claude Opus 5.5) at
 the recent literature to find techniques that might apply to Erdős 585. The agents proposed ideas,
 wrote proofs and search programs, and reviewed each other's work. The Lean results were also checked
 by the Lean kernel, and the exact values were cross-checked by separately written programs. Between
@@ -162,7 +192,8 @@ and results for fixed sizes were recorded as fixed-size results, never as the ge
 key computer searches I asked for a second, separately written program, and the findings say which
 searches have one. In the last pass, long computations ran as a small pilot first, with a budget cap
 and a stop command. I tracked what each pass cost (section 8 of the findings has the figures),
-parked directions that were not paying off, and had the agents keep a dated log of my decisions.
+parked directions that were not paying off, and had the agents keep a private, dated log of my decisions. A digest of those decisions is in
+[findings/DECISIONS.md](findings/DECISIONS.md).
 
 Second, I kept pushing the agents to look at the math literature and at other AI-assisted math
 research for related results and methods they could apply here, instead of starting from scratch.
@@ -185,15 +216,27 @@ the existing results and credit Alejandro Zarzuelo Urdiales's dated public liter
 
 ## Build
 
-Needs elan (Lean's installer), Python 3.10 or later for the checks and the computations, and a C
-compiler with nauty 2.9.3 only for the census. After the Mathlib cache download, the build takes a
-few minutes.
+Needs elan (Lean's installer), Python 3.11 or later for the checks and the computations, GNU `timeout`
+(coreutils) for the commands as written, and a C compiler with nauty 2.9.3 only for the census. Build time varies by machine and cache state.
+Downloading the pinned Mathlib cache avoids rebuilding Mathlib from source. Run these commands
+from the repository root:
+
+**Formal verification.** On October 11, 2026 the 437 configured custom modules (of the tree's 496 Lean files; the others are Axioms.lean, which check_axioms.py runs, and 58 supplement files under findings/supplement/lean/, which this run did not build) were rebuilt from an empty custom-module cache; `scripts/check_axioms.py` matched the printed types of the 76 registered declarations against the recorded ones (a string match on printed types, which pins the declaration names but not the bodies of the project definitions that some types mention) and confirmed that only the three standard axioms are used; the 75 `./check.sh` calls for the registered proved declarations returned `RESULT: PASS`; and LeanChecker, the kernel replay tool shipped with the Lean v4.33.1 toolchain, replayed every configured custom module. An earlier run the same day, on the tree before the comment-only header corrections and before the circular family was registered, gave the same results for its 75 declarations (its receipts are private). The transcript of the final run is in `findings/supplement/checks/v0.4/`. The commands below reproduce each kind of step; the loop under "Check theorem results" in .github/workflows/ci.yml runs all 75 ./check.sh calls. Each `./check.sh` call ends with a line beginning `RESULT: PASS`, and `check_axioms.py` ends with `AXIOMS: PASS (76 proved declarations)` and `STATEMENTS: PASS (76 recorded types)`. One registered declaration in `Openmath/Target.lean` has type/axiom and kernel evidence but no whole-file oracle call because that file also contains unproved conjectures. The conjectures remain unproved, and no registered proved result depends on `sorryAx`. Dependency caches were reused; this was not a from-empty Mathlib rebuild. These checks establish neither novelty, complete prose exposition nor human mathematical review.
 
 ```bash
-lake exe cache get
-lake build
-./check.sh Openmath/Proofs/Final.lean Erdos585.maxEdges_seven
-python3 scripts/check_axioms.py
+timeout 900 lake exe cache get
+timeout 1800 lake build
+timeout 240 ./check.sh R898/Main.lean Erdos585.R898.superlinear_forcing
+timeout 240 ./check.sh R898/Main.lean Erdos585.R898.every_h_forcing
+timeout 240 ./check.sh R831/Endpoint.lean Erdos585.H5BareR831.bare_h5_original_caller
+timeout 240 ./check.sh Openmath/Proofs/Final.lean Erdos585.maxEdges_seven
+timeout 240 python3 scripts/check_axioms.py
+# kernel replay of every configured custom module, one module per call (about an hour at 2 threads)
+python3 -B scripts/source_modules.py --list | while IFS= read -r m; do
+  printf 'import LeanChecker\n#eval replayFromImports "%s".toName\n' "$m" | timeout 240 lake env lean --stdin
+done
+# optional: rebuild every custom module from scratch, then rerun the checks above
+rm -rf .lake/build && timeout 1800 lake build
 ```
 
 ## License and citation

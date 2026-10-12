@@ -1,0 +1,97 @@
+'Erdos585.maxEdges_eq_choose_two_of_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.maxEdges_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.maxEdges_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.maxEdges_seven' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.three_mul_sub_six_le_maxEdges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.three_mul_sub_five_le_maxEdges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.three_mul_sub_four_le_maxEdges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.maxEdges_succ_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.four_mul_sub_thirteen_le_maxEdges' depends on axioms: [propext, Classical.choice, Quot.sound]
+Axioms.lean:54:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+'Erdos585.thirty_one_le_maxEdges_eleven' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.thirty_six_le_maxEdges_twelve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.complete_matching_subdivision_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.latin_incidence_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.five_mul_sub_sqrt_le_maxEdges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.doubleWheel_not_hasTwoEdgeDisjointCyclesSameVertexSet' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos585.thetaWheel_not_hasTwoEdgeDisjointCyclesSameVertexSet' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos585.matchingSubdivision_not_hasTwoEdgeDisjointCyclesSameVertexSet' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos585.RegularFive.exists_five_regular_pairfree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.BipartiteFive.exists_bipartite_five_regular_pairfree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos585.RegularFive18.exists_five_regular_pairfree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.qb5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.qb4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.exists_four_regular_avoiding_of_bipartite_six_regular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos585.hasPair_top_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.hasTwoEdgeDisjointCyclesSameVertexSet_top_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.QBSharpnessFamily.all_orders' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.QB6Unconditional.qb6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.L17HCq.l17_all_orders' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.L17HCq.l17_natural_all_orders' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.Cascade29.cascade29_all_orders' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.Cascade29.cascade29_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.GeneralStar.general_star_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.GeneralStar.general_star_optimized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.GeneralStar.U24' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.GeneralStar.T24_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.Counter90.counter90_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.Counter90.seed_no_regular_subgraph' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.Q6D20R31.all_orders' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.Q6D20R31.lowerEndpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.L34.l34' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.L34MinimumSupport.l34_minimum_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.L34EvenTransfer.l34_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.EvenFactorLargeSupport.even_factor_large_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.AFKBoundary.q5_afk_boundary_counterexamples' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.AFKBoundary.q7_afk_boundary_counterexamples' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.H49BalancedR715.bare_h49' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.H4BareR788.bare_h4_original_caller' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.AllHBalancedSelectorR801.original_host_caller' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.QB7ReverseExtensionR805.original_reverse_extension_target' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos585.QB7Selector0011R799.original_selector0011_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.QB7ThreePortR806.original_selector_three_port_target' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos585.AllHBalancedSelectorR801.balanced_core_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.R804.third_surplus_original' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.R804.fourth_surplus_original' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.R816.construct_three_offset_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.QB7ResidualThreePortR827.original_selector_residual_three_port_target' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos585.H5BareR831.bare_h5_original_caller' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.R837.exists_threshold_reduction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.RobustBalancedSelectorR838.original_host_caller' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.QB7ProfileFreeR854.original_profile_free_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.QB7ProfileFreeR854.original_profile_free_raw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.QB7ProfileFreeR854.original_profile_free_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.R856.original_graph_normalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.R863.error_floor_positive_selector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.R866.every_h_forcing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.R866.every_multiplier_forcing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.R874.superlinear_forcing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.QB7S0002R869.original_s0002_raw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.R882.cubic_forcing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.R882.superlinear_forcing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.QB7S0001R883.original_s0001_raw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.QB7S0012R894.original_s0012_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.QB7S0000R895.original_s0000_raw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.R898.every_h_forcing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos585.R898.superlinear_forcing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BqCircularLowerFamily.all_orders' depends on axioms: [propext, Classical.choice, Quot.sound]
+AXIOMS: PASS (76 proved declarations)
+STATEMENTS: PASS (76 recorded types)
