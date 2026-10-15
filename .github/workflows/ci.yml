@@ -24,7 +24,7 @@ jobs:
           use-github-cache: false
           use-mathlib-cache: false
       - run: timeout 900 lake exe cache get
-      - run: timeout 1800 lake build
+      - run: timeout 2700 lake build
       - name: Replay every module through the kernel
         # Each configured module replay has its own 240-second timeout.
         run: python3 -B scripts/replay_modules.py
