@@ -166,7 +166,7 @@ noncomputable def maxEdges (n : ℕ) : ℕ :=
 
 The Lean results build with Lean `v4.33.1`, Mathlib `0df444a360eaa60ab8c11dca51a86af692955474` and
 formal_conjectures `137aec5c7abd3aa61f7a73138a97279acfc79e93`. From the root of the public repository
-[roberthuynh/erdos-585](https://github.com/roberthuynh/erdos-585) using the pinned dependencies (the earlier verification was at tag `v0.3`):
+[roberthuynh/erdos](https://github.com/roberthuynh/erdos) using the pinned dependencies (the earlier verification was at tag `v0.3`):
 
 ```bash
 lake exe cache get && lake build
