@@ -6,6 +6,8 @@ upper exclusions requires all positive rejections to be sound. Negative answers
 may conservatively retain extra graphs and do not create an upper-bound gap.
 """
 import datetime,hashlib,json,pathlib,time
+if not __debug__:
+    raise SystemExit('Certificate validation requires Python optimization to be disabled')
 from verify_certificates import edges,degrees,cycle_vertices
 HERE=pathlib.Path(__file__).resolve().parent
 DATA=HERE/'data';LOG=HERE/'receipts'

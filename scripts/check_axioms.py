@@ -17,7 +17,7 @@ DISALLOWED = (r"\b(?:sorry|admit|native_decide|ofReduceBool|ofReduceNat|implemen
 
 
 def lean_code(text):
-    """Remove nested comments and string literals before inspecting source tokens."""
+    """Remove comments/plain strings; reject unaudited executable interpolation."""
     result = []
     i = depth = 0
     string = False
@@ -49,6 +49,9 @@ def lean_code(text):
             end = text.find("\n", i)
             i = len(text) if end < 0 else end
         elif text[i] == '"':
+            previous = next((c for c in reversed(result) if not c.isspace()), '')
+            if previous == '!':
+                raise ValueError('Interpolated strings cannot be audited by the source scanner')
             string = True
             i += 1
         else:

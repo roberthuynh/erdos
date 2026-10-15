@@ -93,8 +93,11 @@
     "publication": "Transactions of the AMS 379 (2026), 8069–8090; DOI 10.1090/tran/9694",
     "location": "Preprint v2 Theorems 1.4, 1.5 and 1.13",
     "url": "https://doi.org/10.1090/tran/9694",
-    "edition_note": "The listed theorem numbers refer to preprint v2; published numbering has not been independently compared.",
-    "preprint_url": "https://arxiv.org/abs/2411.11785v2"
+    "edition_note": "The listed preprint theorem numbers refer to v2. Theorem 1.13 and its displayed proof were also checked in the author-hosted manuscript. No line-by-line comparison with the final journal edition is claimed.",
+    "preprint_url": "https://arxiv.org/abs/2411.11785v2",
+    "comparison_source_url": "https://rhmontgomery.warwick.ac.uk/papers/37regularsubgraphs.pdf",
+    "comparison_location": "Author-hosted manuscript, Theorem 1.13, printed p.3; displayed proof on printed p.9",
+    "comparison_checked_date": "2026-10-14"
   },
   {
     "id": "CILL11",

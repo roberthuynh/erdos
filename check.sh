@@ -13,7 +13,7 @@ ALLOW='^(propext|Classical\.choice|Quot\.sound)$'
 
 MODNAME="${FILE%.lean}"; MODNAME="${MODNAME//\//.}"
 echo "== lake build $MODNAME ($(cat lean-toolchain))"
-if lake build "$MODNAME" 2>&1 | grep -v -E '^(✔|⚠) \[' | tail -n 25; then BUILD=ok; else BUILD=fail; fi
+if lake build "$MODNAME" 2>&1 | tail -n 25; then BUILD=ok; else BUILD=fail; fi
 
 SORRIES=missing
 if [ -f "$FILE" ]; then

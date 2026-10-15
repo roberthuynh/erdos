@@ -13,9 +13,12 @@ CASES = [
     ("no axioms", "none", False, True),
     ("query fails after printing allowed axioms", "query_failure", False, False),
     ("build fails", "build_failure", False, False),
+    ("silent successful build", "silent_build", False, True),
+    ("only status lines in successful build", "filtered_build", False, True),
     ("disallowed axiom", "disallowed", False, False),
     ("missing axiom record", "no_record", False, False),
     ("actual sorry token", "allowed", True, False),
+    ("executable string interpolation", "allowed", "interpolation", False),
     ("nested comments and string literal", "allowed", "comments", True),
     ("source file missing", "allowed", "missing", False),
 ]
@@ -23,7 +26,10 @@ MOCK = '''#!/usr/bin/env python3
 import os, sys
 mode = os.environ["ORACLE_TEST_MODE"]
 if sys.argv[1] == "build":
-    print("mock build output")
+    if mode == "filtered_build":
+        print("✔ [1/1] Built Fixture")
+    elif mode != "silent_build":
+        print("mock build output")
     sys.exit(1 if mode == "build_failure" else 0)
 if mode == "query_failure":
     print("error: simulated axiom-query failure")
@@ -56,6 +62,9 @@ def main():
             elif source_kind == "comments":
                 fixture.write_text('/- outer /- sorry -/ still a comment -/\n'
                                    'def message := "sorry"\n'
+                                   'theorem sample : True := by trivial\n')
+            elif source_kind == "interpolation":
+                fixture.write_text('def hidden := s!"{(by sorry : Nat)}"\n'
                                    'theorem sample : True := by trivial\n')
             else:
                 fixture.write_text("theorem sample : True := by " +
