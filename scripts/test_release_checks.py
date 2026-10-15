@@ -7,7 +7,7 @@ import shutil
 import tempfile
 import unittest
 
-from check_axioms import ROOT, STATEMENT_SHA256, check_sources
+from check_axioms import ROOT, STATEMENT_SHA256, check_sources, lean_code
 from export_manifest import export_files
 from register_headlines import query, register
 from source_modules import check_coverage
@@ -42,6 +42,21 @@ class ReleaseChecks(unittest.TestCase):
         (self.root / 'Extra/Support.lean').write_text('theorem support : True := by native_decide\n')
         with self.assertRaisesRegex(ValueError, 'Extra/Support.lean'):
             check_sources(self.root)
+
+    def test_executable_interpolations_rejected(self):
+        for prefix in ['s!', 'm!', 'f!', 'custom!', 's! /- comment -/ ']:
+            for token in ['sorry', 'admit', 'native_decide']:
+                with self.subTest(prefix=prefix, token=token):
+                    (self.root / 'Extra/Support.lean').write_text(
+                        'def hidden := ' + prefix + '"{(by ' + token + ' : Nat)}"\n')
+                    with self.assertRaisesRegex(ValueError, 'Interpolated strings'):
+                        check_sources(self.root)
+
+    def test_plain_strings_and_interpolation_inside_comments_allowed(self):
+        self.assertEqual(lean_code('def message := "s! sorry \\\"admit\\\""'), 'def message :=  ')
+        self.assertEqual(' '.join(lean_code(
+            '/- s!"{sorry}" /- nested -/ -/ theorem ok : True := by trivial').split()),
+            'theorem ok : True := by trivial')
 
     def test_frozen_target_remains_only_source_exception(self):
         self.assertEqual(hashlib.sha256((self.root / 'Openmath/Target.lean').read_bytes()).hexdigest(), STATEMENT_SHA256)

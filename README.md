@@ -46,7 +46,7 @@ The even-degree theorem for general finite simple graphs remains included: for e
 
 An explicit family of avoiders shows that no allowance above q² − 3q + 3 can work, so for q ≥ 2^18 the best allowance lies between about q^(3/2)/64 and q² − 3q + 3; the open question is the exponent. For comparison, elementary bipartite completion and perfect-matching decomposition give a spanning q-factor at D ≤ q − 2. The leading allowance q^(3/2)/128 has a different growth rate, but concerns an extremely near-regular host class and permits selected support. The [literature comparison](literature/README.md) identifies precisely checked public statements; no direct derivation of the full endpoint was found in that bounded comparison. A worldwide novelty claim, a broadly new method and a separate new application have not been established.
 
-The [mathematical note](findings/V0.4.md) gives exact hypotheses, source declarations and construction gaps. The [proof companion](findings/V0.4-PROOF.md) proves the classical factor step and one conditional union estimate, sketches the critical-support reduction, and gives a roadmap for the selection argument; normalization, peeling, the unequal-shore selector, common pins, hazard coverage and both cut-payment calculations are not proved in prose. It contains no written proof of the 5q − 58 theorem, QB(6) or the avoiding families; their evidence is the Lean sources and the checks. These are regular-subgraph bounds and formalizations related to Erdős 585. They do not give its required cycle pair or improve the known asymptotic bounds for f(n).
+The [mathematical note](findings/V0.4.md) gives exact hypotheses, source declarations and construction gaps. The [proof companion](findings/V0.4-PROOF.md) proves the classical factor step, critical-support normalization, controlled peeling and one conditional union estimate, and gives a roadmap for the selection argument; the unequal-shore selector, common pins, hazard coverage and both cut-payment calculations remain unexpanded. It contains no written proof of the 5q − 58 theorem, QB(6) or the avoiding families; their evidence is the Lean sources and the checks. These are regular-subgraph bounds and formalizations related to Erdős 585. They do not give its required cycle pair or improve the known asymptotic bounds for f(n).
 
 ## Verified in Lean
 
@@ -75,9 +75,9 @@ All are in `Openmath/Proofs/Final.lean` except the three graphs
 (`Openmath/Proofs/QB4/Statement.lean`, `Openmath/Proofs/QB5/Statement.lean`).
 `python3 scripts/check_axioms.py` checks the axioms and the recorded statement of every one at once,
 together with the selected v0.4 additions listed in `scripts/headline-theorems.json`.
-The expanded registry contains 76 declarations with checked printed types and permitted axioms: 25 carried
-over from v0.3.1 and 51 added in v0.4, including 5 superseded, weaker versions of the two R898 endpoints (R866,
-R874 and R882) retained for the record. Registrations include supporting statements and corollaries; they are
+The current registry contains 78 declarations with recorded printed types and permitted axioms: 25 carried
+over from v0.3.1, 51 added in v0.4 and two added in v0.4.1. Five superseded, weaker versions of the two R898 endpoints (R866,
+R874 and R882) are retained for the record. Registrations include supporting statements and corollaries; they are
 not a count of independent discoveries.
 
 The 4-regular subgraph results are about 4-regular subgraphs, not pairs. Every pair is a 4-regular
@@ -222,20 +222,23 @@ Needs elan (Lean's installer), Python 3.11 or later for the checks and the compu
 Downloading the pinned Mathlib cache avoids rebuilding Mathlib from source. Run these commands
 from the repository root:
 
-**Formal verification.** On October 11, 2026 the 437 configured custom modules (of the tree's 496 Lean files; the others are Axioms.lean, which check_axioms.py runs, and 58 supplement files under findings/supplement/lean/, which this run did not build) were rebuilt from an empty custom-module cache; `scripts/check_axioms.py` matched the printed types of the 76 registered declarations against the recorded ones (a string match on printed types, which pins the declaration names but not the bodies of the project definitions that some types mention) and confirmed that only the three standard axioms are used; the 75 `./check.sh` calls for the registered proved declarations returned `RESULT: PASS`; and LeanChecker, the kernel replay tool shipped with the Lean v4.33.1 toolchain, replayed every configured custom module. An earlier run the same day, on the tree before the comment-only header corrections and before the circular family was registered, gave the same results for its 75 declarations (its receipts are private). The transcript of the final run is in `findings/supplement/checks/v0.4/`. The commands below reproduce each kind of step; the loop under "Check theorem results" in .github/workflows/ci.yml runs all 75 ./check.sh calls. Each `./check.sh` call ends with a line beginning `RESULT: PASS`, and `check_axioms.py` ends with `AXIOMS: PASS (76 proved declarations)` and `STATEMENTS: PASS (76 recorded types)`. One registered declaration in `Openmath/Target.lean` has type/axiom and kernel evidence but no whole-file oracle call because that file also contains unproved conjectures. The conjectures remain unproved, and no registered proved result depends on `sorryAx`. Dependency caches were reused; this was not a from-empty Mathlib rebuild. These checks establish neither novelty, complete prose exposition nor human mathematical review.
+**Formal verification.** On October 11, 2026 the 437 configured custom modules (of the tree's 496 Lean files; the others are Axioms.lean, which check_axioms.py runs, and 58 supplement files under findings/supplement/lean/, which this run did not build) were rebuilt from an empty custom-module cache; `scripts/check_axioms.py` matched the printed types of the 76 registered declarations against the recorded ones (a string match on printed types, which pins the declaration names but not the bodies of the project definitions that some types mention) and confirmed that only the three standard axioms are used; the 75 `./check.sh` calls for the registered proved declarations returned `RESULT: PASS`; and LeanChecker, the kernel replay tool shipped with the Lean v4.33.1 toolchain, replayed every configured custom module. An earlier run the same day, on the tree before the comment-only header corrections and before the circular family was registered, gave the same results for its 75 declarations (its receipts are private). The transcript of the final run is in `findings/supplement/checks/v0.4/`. These are the historical v0.4 counts. The commands below reproduce each kind of step on the current tree; CI derives its oracle calls from the current registry. Successful `check.sh` calls end with `RESULT: PASS`, and the type/axiom checker reports its actual declaration counts. One registered declaration in `Openmath/Target.lean` has type/axiom and kernel evidence but no whole-file oracle call because that file also contains unproved conjectures. The conjectures remain unproved, and no registered proved result depends on `sorryAx`. Dependency caches were reused; this was not a from-empty Mathlib rebuild. These checks establish neither novelty, complete prose exposition nor human mathematical review.
+
+Current verification inventory: 78 registered declarations, 77 whole-file oracle checks, 438 configured custom modules.
+
+The [v0.4.1 record](findings/V0.4.1.md) lists the corrections, separate smaller-cutoff corollary and current verification evidence. A quick package-free witness check is `python3 -B graphs/verify_graphs.py`.
 
 ```bash
 timeout 900 lake exe cache get
 timeout 1800 lake build
+timeout 240 ./check.sh R898/Corollary041.lean Erdos585.R898.superlinear_forcing_200704
 timeout 240 ./check.sh R898/Main.lean Erdos585.R898.superlinear_forcing
 timeout 240 ./check.sh R898/Main.lean Erdos585.R898.every_h_forcing
 timeout 240 ./check.sh R831/Endpoint.lean Erdos585.H5BareR831.bare_h5_original_caller
 timeout 240 ./check.sh Openmath/Proofs/Final.lean Erdos585.maxEdges_seven
 timeout 240 python3 scripts/check_axioms.py
 # kernel replay of every configured custom module, one module per call (about an hour at 2 threads)
-python3 -B scripts/source_modules.py --list | while IFS= read -r m; do
-  printf 'import LeanChecker\n#eval replayFromImports "%s".toName\n' "$m" | timeout 240 lake env lean --stdin
-done
+python3 -B scripts/replay_modules.py
 # optional: rebuild every custom module from scratch, then rerun the checks above
 rm -rf .lake/build && timeout 1800 lake build
 ```

@@ -14,6 +14,9 @@ Usage, from this folder: python3 verify_graphs.py
 import itertools
 import os
 
+if not __debug__:
+    raise SystemExit('Graph validation requires Python optimization to be disabled')
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
