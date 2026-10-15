@@ -24,26 +24,24 @@ jobs:
           use-github-cache: false
           use-mathlib-cache: false
       - run: timeout 900 lake exe cache get
-      - run: timeout 1800 lake build
+      - run: timeout 2700 lake build
       - name: Replay every module through the kernel
-        # LeanChecker ships with the Lean toolchain pinned in lean-toolchain (v4.33.1); it is not a Lake dependency.
-        run: |
-          python3 -B scripts/source_modules.py --list > /tmp/custom-lean-modules.txt
-          n=0
-          while IFS= read -r m; do
-            echo "kernel replay $m"
-            # The CLI treats a module as a prefix. Call its installed replay
-            # function on this exact module to avoid replaying descendants twice.
-            printf 'import LeanChecker\n#eval replayFromImports "%s".toName\n' "$m" |
-              timeout 240 lake env lean --stdin
-            n=$((n + 1))
-          done < /tmp/custom-lean-modules.txt
-          test "$n" -gt 0
+        # Each configured module replay has its own 240-second timeout.
+        run: python3 -B scripts/replay_modules.py
       - run: timeout 240 python3 -B scripts/check_axioms.py
       - name: Check source coverage and headline registration safeguards
         run: timeout 240 python3 -B scripts/test_release_checks.py
       - name: Check oracle failure paths
         run: timeout 240 python3 -B scripts/test_check_sh.py
+      - name: Check replay and validation failure controls
+        run: |
+          timeout 240 python3 -B scripts/test_replay_modules.py
+          timeout 240 python3 -B scripts/test_validation_modes.py
+          timeout 240 python3 -B scripts/test_check_docs.py
+      - name: Check graph witnesses and release documentation
+        run: |
+          timeout 240 python3 -B graphs/verify_graphs.py
+          timeout 240 python3 -B scripts/check_docs.py
       - name: Check theorem results
         run: |
           python3 - <<'PY'

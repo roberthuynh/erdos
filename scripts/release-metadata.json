@@ -1,0 +1,10 @@
+{
+  "version": "0.4.1",
+  "date": "2026-10-15",
+  "repository": "https://github.com/roberthuynh/erdos",
+  "verification_inventory": {
+    "declarations": 78,
+    "oracles": 77,
+    "modules": 438
+  }
+}

@@ -6,6 +6,8 @@ checks extension completeness by every 10-bit mask, whereas the producer uses
 itertools combinations. It never asks whether a graph has a pair.
 """
 import collections,datetime,hashlib,json,pathlib
+if not __debug__:
+    raise SystemExit('Certificate validation requires Python optimization to be disabled')
 HERE=pathlib.Path(__file__).resolve().parent
 DATA=HERE/'data';LOG=HERE/'receipts'
 def sha(p):return hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()

@@ -2249,8 +2249,8 @@ This is the current historical-tree supplement file list and byte-hash inventory
 | `small-values/certificates/vendor/COPYRIGHT` | 2,234 | `e7e1cb03b4962e46e38084f24ef134dd7582a7f9e19e9cd81145ed6c71bea51c` |
 | `small-values/certificates/vendor/README` | 3,288 | `d8eb75b6a661c1fc2b5eb8797fce173b92a9c9bdd76051b155ab4d0b8c19e2aa` |
 | `small-values/certificates/vendor/geng.c` | 85,828 | `12bba376483782ae40b132e0b66f42cbbbf3acb6c2468f8c0e33ccdd505fc2d0` |
-| `small-values/certificates/verify_certificates.py` | 3,577 | `815d2d3038bd91dcc7e4c54e2f7173274787761fec50a63239a29ef14c4a922e` |
-| `small-values/certificates/verify_full_streams.py` | 3,130 | `813542f15e54bd7900e02da018b0bec5acf0a0d3ef3579638bba5c3e8675921d` |
+| `small-values/certificates/verify_certificates.py` | 3,686 | `144ee0d3bd9346fbcce67ae93d24b93617e083c80c19298cf8d04b08921af27c` |
+| `small-values/certificates/verify_full_streams.py` | 3,239 | `26b49b53beb7937aad0f0766a386378a830233e302ecfb67645d7410d24992f7` |
 | `small-values/logs/585-n10.log` | 3,558 | `4a22b112ba2523a7415b039e6387e4e412040bc32760d4f80f3043ec63b520a5` |
 | `small-values/logs/deletion-exhaustive-result.json` | 1,698 | `6d7869f8e2b4149150700f4b63114ce9bab8b28a04677e0296de9c7caef57ae5` |
 | `small-values/logs/deletion-exhaustive-state.json` | 131,797 | `81371a3a9ea968cd0c8f7d04e142219846f665208454ee56f070e9de4d50abba` |

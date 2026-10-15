@@ -53,6 +53,8 @@ of constant does not certify the near-half-degree target here; this does not exc
 constants or reductions. Jiang–Longbrake's arXiv:2507.03261v2 Theorems 1.3 and 1.5 give
 almost-regular and almost-biregular outputs. Neither observation is a method-novelty proof.
 
+For the prescribed-degree comparison, Theorem 1.13 of [arXiv:2411.11785v2](https://arxiv.org/html/2411.11785v2#S1.Thm13) guarantees every integer target degree r ≤ c(λ)d under Δ ≤ λd. The same statement appears as Theorem 1.13 in the [author-hosted manuscript](https://rhmontgomery.warwick.ac.uk/papers/37regularsubgraphs.pdf), printed p.3. For the v0.4 host, d = 2q − 2 − 2D/n. Its headline assumptions imply 2q − 2 − √q/128 ≤ d ≤ 2q − 2. At q = 262144 this gives d ≥ 524282 and q/d ≤ 131072/262141. Applying that source directly to target degree q requires q ≤ c(λ)d. The displayed proof gives a conservative admissible constant, not an upper bound on every possible constant; it does not settle whether an optimized or specialized argument implies this case. No novelty conclusion follows.
+
 The CJMM publication venues and years were checked against
 [Richard Montgomery's author bibliography](https://rhmontgomery.warwick.ac.uk/papers.html).
 The preprint theorem numbers in the comparisons refer to the stated arXiv versions. For

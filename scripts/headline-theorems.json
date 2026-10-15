@@ -885,5 +885,33 @@
       "output_sha256": "00ed211274b16634a69cc575f7366dd367fafa7342e3f6316e442a0cd409c475",
       "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
     }
+  },
+  {
+    "module": "R898.Corollary041",
+    "declaration": "Erdos585.R898.quantitative_numeric_200704",
+    "oracle": true,
+    "type": "∀ (q : ℕ), 200704 ≤ q → 6 ≤ Erdos585.R898.height q ∧ 4096 * (Erdos585.R898.height q + 1) ^ 2 ≤ q ∧ (↑q).rpow (3 / 2) / 128 ≤ ↑(Erdos585.R898.height q) * ↑q - 16 * ↑(Erdos585.R898.height q) ^ 2",
+    "source_sha256": "f587fe29e272d77f754fbbe98be29a97559b8a61478be70c068a898b71299a25",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "c056ad592e0bcf524d7fac65eeb13bcd03f450d869af760455140642c7d38fb1",
+      "output_sha256": "852f1d8606b02dd38c8da847f5a7da3d8ac0879638d35b1441618debc71bd3db",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  {
+    "module": "R898.Corollary041",
+    "declaration": "Erdos585.R898.superlinear_forcing_200704",
+    "oracle": true,
+    "type": "∀ (q : ℕ), 200704 ≤ q → ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), G.IsBipartite → 2 * q ≤ Fintype.card V → G.maxDegree ≤ 2 * q - 2 → (↑q - 1) * ↑(Fintype.card V) - ↑G.edgeSet.ncard ≤ (↑q).rpow (3 / 2) / 128 → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
+    "source_sha256": "f587fe29e272d77f754fbbe98be29a97559b8a61478be70c068a898b71299a25",
+    "registration_status": "exact_printed_type",
+    "type_evidence": {
+      "method": "successful lake env lean --stdin; #check @declaration",
+      "query_sha256": "c056ad592e0bcf524d7fac65eeb13bcd03f450d869af760455140642c7d38fb1",
+      "output_sha256": "852f1d8606b02dd38c8da847f5a7da3d8ac0879638d35b1441618debc71bd3db",
+      "toolchain_sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
   }
 ]

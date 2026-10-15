@@ -54,7 +54,7 @@ section 7 names the models; not yet checked by a mathematician, making each one 
    literature.
 2. **Three pair-free 5-regular graphs** (**Lean-proved**): on 18 vertices, on 32 vertices, and a
    bipartite one on 104 vertices. No 5-regular graph on at most 16 vertices is pair-free
-   (**computed**), so the 18-vertex one is the smallest. Degree 5 does not force a pair, even in
+   (**computed**, subject to the reported census coverage). Least order 18 therefore depends on that census, whose complete 16-vertex exclusion has not been independently replicated in full. Degree 5 does not force a pair, even in
    bipartite graphs, and degree 6 is the first open case as far as I know.
 3. **Exact values, bounds and a census**: the values through n = 10 reproduce the
    [Erdős Problem a Day report](https://erdosproblemaday.com/report/585)
@@ -95,6 +95,8 @@ literature.
   with appendix B (the graphs), then section 4.6 with appendix D (Theorem R1). Section 6 lists specific
   checks.
 
+The [v0.4.1 correction record](V0.4.1.md) gives the current compact evidence map, smaller-cutoff corollary and verification changes. The dated baseline sections below retain their historical scope.
+
 ## 1. Claims and evidence
 
 Paths starting with `supplement/` are in the supplement, the folder beside this document; all other
@@ -112,7 +114,7 @@ the v0.4 statement and construction tables are in [V0.4.md](V0.4.md).
 | 5 | A pair-free 5-regular graph on 18 vertices | Lean-proved | §4.2; `Openmath/Proofs/RegularFive18.lean`, `graphs/regular-five-18.edges` |
 | 6 | A pair-free 5-regular graph on 32 vertices | Lean-proved | §4.2; `Openmath/Proofs/RegularFive.lean`, `graphs/regular-five-32.edges` |
 | 7 | A pair-free bipartite 5-regular graph on 104 vertices | Lean-proved | §4.2; `Openmath/Proofs/BipartiteFive.lean`, `graphs/bipartite-five-104.edges` |
-| 8 | No pair-free 5-regular graph on at most 16 vertices, so the smallest has 18 | computed; through 14 vertices by two methods; at 16 by one complete census (unreviewed), with a second method on its triangle-free and bipartite graphs and on a 0.14% sample | §4.4; `supplement/census/calibration/logs/` (`driver_reg5_n14.log`; the second method: last line of `driver_xc_reg5_n14.log`), `supplement/census/calibration/n16/REG5N16.md`, `supplement/census/calibration/n16-second-method/REG5N16-B.md` |
+| 8 | Reported exclusion through 16 vertices; least order 18 is conditional on census coverage | computed; through 14 vertices by two methods; at 16 by one complete census (unreviewed), with a second method on its triangle-free and bipartite graphs and on a 0.14% sample | §4.4; `supplement/census/calibration/logs/` (`driver_reg5_n14.log`; the second method: last line of `driver_xc_reg5_n14.log`), `supplement/census/calibration/n16/REG5N16.md`, `supplement/census/calibration/n16-second-method/REG5N16-B.md` |
 | 9 | f(n) = n(n−1)/2 for n ≤ 4; f(5) = 9, f(6) = 12, f(7) = 16 | Lean-proved | §4.3; `Openmath/Proofs/Final.lean` |
 | 10 | f(8) = 19, f(9) = 23, f(10) = 27 | computed, two to four separately written methods each | §4.4; `computations/COMMANDS.md`, `supplement/small-values/` |
 | 11 | f(11) = 31, f(12) = 36 | computed, two methods each; the lower bounds Lean-proved | §4.4; `supplement/small-values/logs/`; the lower bounds in `Openmath/Proofs/Final.lean` |
@@ -347,7 +349,7 @@ copy, which has none. The Lean proof follows this route, with the cut lemma of `
 graph does have 4-regular subgraphs, for example one with 34 edges on every vertex except 16, using
 the cut edges 7–17 and 8–17: delete vertex 16 and the matching 0–1, 2–5, 3–7, 4–6, 9–10, 11–14. None lies inside a copy, so each crosses the
 cut in exactly two edges, which a pair cannot do. No 5-regular graph on at most 16 vertices is
-pair-free (section 4.4), so 18 is the smallest order of a pair-free 5-regular graph.
+pair-free (section 4.4). Subject to that reported census coverage, the least order is 18; the complete 16-vertex exclusion has not been independently replicated in full.
 
 **A 5-regular graph on 32 vertices** (`Erdos585.RegularFive.exists_five_regular_pairfree`). The
 8-vertex block is the double wheel on C5 without its hub edge (15 edges) plus a vertex 0 of degree 3.

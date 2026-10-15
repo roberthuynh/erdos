@@ -1,3 +1,4 @@
+import R898.Corollary041
 import AFKBoundary.Main
 import EvenFactorLargeSupport.Main
 import GeneralStar.Main
@@ -119,3 +120,6 @@ import R898.Main
 #print axioms Erdos585.R898.every_h_forcing
 #print axioms Erdos585.R898.superlinear_forcing
 #print axioms BqCircularLowerFamily.all_orders
+
+#print axioms Erdos585.R898.quantitative_numeric_200704
+#print axioms Erdos585.R898.superlinear_forcing_200704
