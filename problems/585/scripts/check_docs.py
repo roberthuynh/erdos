@@ -31,6 +31,7 @@ def check_docs(root=ROOT, documents=DOCUMENTS):
     readme = (root / 'README.md').read_text()
     if readme.count(expected) != 1 or readme.count('Current verification inventory:') != 1:
         raise ValueError('README current verification inventory is missing or stale')
+    collection = root.parent.parent if root.parent.name == 'problems' and (root.parent.parent / 'problems.json').is_file() else root
     checked = 0
     for document in documents:
         path = root / document
@@ -40,7 +41,7 @@ def check_docs(root=ROOT, documents=DOCUMENTS):
             if parsed.scheme or parsed.netloc or not parsed.path:
                 continue
             dest = (path.parent / unquote(parsed.path)).resolve()
-            if not dest.is_relative_to(root.resolve()) or not dest.is_file():
+            if not dest.is_relative_to(collection.resolve()) or not dest.is_file():
                 raise ValueError(f'Invalid local link in {document}: {target}')
             checked += 1
     return counts, checked

@@ -4,10 +4,20 @@ import subprocess
 import unittest
 from unittest.mock import Mock, patch
 
-from replay_modules import replay
+from replay_modules import replay, main
 
 
 class ReplayChecks(unittest.TestCase):
+    @patch('sys.argv', ['replay_modules.py'])
+    @patch('replay_modules.replay', side_effect=subprocess.CalledProcessError(124, 'timeout'))
+    def test_timeout_remains_unknown_at_entrypoint(self, replay_mock):
+        self.assertEqual(main(), 124)
+
+    @patch('sys.argv', ['replay_modules.py'])
+    @patch('replay_modules.replay', side_effect=subprocess.CalledProcessError(1, 'lean'))
+    def test_failure_remains_failure_at_entrypoint(self, replay_mock):
+        self.assertEqual(main(), 1)
+
     @patch('replay_modules.check_coverage', return_value={'First': None, 'Second': None})
     def test_replays_every_configured_module(self, coverage):
         run = Mock()

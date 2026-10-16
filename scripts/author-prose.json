@@ -1,0 +1,42 @@
+{
+  "files": [
+    {
+      "path": "problems/585/findings/FINDINGS.md",
+      "sha256": "70d751324b8d2f54742fc8faa68576d78c449a26204aad826676cf5fc96870eb"
+    },
+    {
+      "path": "problems/585/findings/DECISIONS.md",
+      "sha256": "2259fd1c7b0901e6f5b3720a5f5c38ce51aa3ad032a0e823b98aa3f2150fec88"
+    }
+  ],
+  "blocks": [
+    {
+      "label": "intro",
+      "path": "README.md",
+      "start": "Hi, I'm Robert Huynh",
+      "end": "\n## How this was made",
+      "sha256": "8e6e23547355cefce474409d42be3e5f0c4994f174902c8c2755623a0baccc14"
+    },
+    {
+      "label": "methods",
+      "path": "README.md",
+      "start": "## How this was made\n",
+      "end": "\n## AI use",
+      "sha256": "678c0f87b2f93c0ddddb8ec5b0e053b4c5d550cf7928a90ee82bbdca88b63d84"
+    },
+    {
+      "label": "AI use",
+      "path": "README.md",
+      "start": "## AI use\n",
+      "end": "\n## Help needed",
+      "sha256": "9c358bbe03cf28a157469cf9d1e5a764ec8733f32a80c53e7f4006cf5f74341d"
+    },
+    {
+      "label": "written-proof review request",
+      "path": "README.md",
+      "start": "## Help needed\n",
+      "end": "\n## Collection",
+      "sha256": "21ceafa1f0718d5cb281dee1c34f461d7c75001c3d41fdc2451e2dc2c4e98d60"
+    }
+  ]
+}
