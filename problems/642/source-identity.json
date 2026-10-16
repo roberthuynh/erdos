@@ -1,0 +1,576 @@
+{
+  "problem": "642",
+  "declaration": "Erdos642.CampaignFe72210bContinuation3.OriginalBound.original_log_five_rich_cycle",
+  "root_module": "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.OriginalBound",
+  "project_sources": {
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.OriginalBound": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/OriginalBound.lean",
+      "sha256": "dcf4482ace7fcc34f4114f29b0cd3d87da5eea7c9c0fce64c2a2526f5afeff40"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.InitialDensity": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/InitialDensity.lean",
+      "sha256": "864b42471db4096441d6a303c33178f904fb865b8a3234f51db1767937499cf5"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.SpectralExtraction": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/SpectralExtraction.lean",
+      "sha256": "a717379573ccc7de2bf5132311dd78a83af10dd4f3c84064cb94cae2b88b5fc2"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.ExtractParameters": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/ExtractParameters.lean",
+      "sha256": "272666f25d632b2801c8162f5981e8cd900215631716b3029774947d34859968"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.CutExtractSubtype": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/CutExtractSubtype.lean",
+      "sha256": "dbfcd737714f14651e458237cb8dfae978d7bb28835f3d1e0044c49ebbdada65"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.CutRetention": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/CutRetention.lean",
+      "sha256": "1ada4edfad258fd09962e1da84821a24ca6cfbd6a9c1dc81dbaa379ca63bbd87"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.CutTrace": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/CutTrace.lean",
+      "sha256": "1d47f05130802e413c207fc5258a11b4496ed8279f7ed3cc9741ba073ea2fd11"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.CutOperations": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/CutOperations.lean",
+      "sha256": "e0b5cfd42dec6a54fecf2de3f5bc0e90bc3ab96b046dee5587b5a2c925cc9e37"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.FinitePruning": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/FinitePruning.lean",
+      "sha256": "a9e1ee7613bc8d0c55373a750eef2e97b539728bab5fdc5a8affb370346aa674"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.IncidenceCounts": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/IncidenceCounts.lean",
+      "sha256": "5d45369bc7b8c5d2043d81a82d4a693cfa6422d66b4f7860b2e8125e69e41de7"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.GraphExpansionGap": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/GraphExpansionGap.lean",
+      "sha256": "0a99b9fa49c73f7b8b95385121e91943ea672bb2de5ba464d84b7b8c73c03847"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.GraphExpansionConductance": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/GraphExpansionConductance.lean",
+      "sha256": "04a2298b9b4a251580a6fbc7dac01343943865a4f43966ebf928e5a479100975"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.GraphCheegerRayleigh": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/GraphCheegerRayleigh.lean",
+      "sha256": "1f1ba9c7ca6a61b34554ee198d021ef85dc20c5c190597c72c06ae6015302c08"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.GraphDirichlet": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/GraphDirichlet.lean",
+      "sha256": "6abe0bfd31c6efeb408fb3718c3e160c329786c4b34a12546d6098b1e3aff450"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.FiniteCoarea": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/FiniteCoarea.lean",
+      "sha256": "f19a3879e754c9354e118a548c607ebae50d1408ebd1c330d115c6835de7e22c"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.GraphEigenvectors": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/GraphEigenvectors.lean",
+      "sha256": "222d4e8f558188364f7951e45a29afb7a8d3a3eede1977dc4efef30c08df1d43"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.GraphNormalization": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/GraphNormalization.lean",
+      "sha256": "e32a74f1cdbec3ac516bf56a7442b2b764eccfbd8ac07bfd242f0a1a787bd624"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.GraphMarkov": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/GraphMarkov.lean",
+      "sha256": "1ee1d246d72130a7d4aa196e48ffa6d513f9f0bc49a3112cdb72b290815274f7"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.SpectralHost": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/SpectralHost.lean",
+      "sha256": "6544574bc17781bcc42a34793023ccec2b5ee5dd4d39b022de707a6d1aced372"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.CycleSupport": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/CycleSupport.lean",
+      "sha256": "96bb0a704d21d7bc8c4cbc12f343ced7ed4c7613cb3c1293280480d0d76b2b54"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.FiniteMarkov": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/FiniteMarkov.lean",
+      "sha256": "470b79c41e27544d59ae8144c7bf2f5323a9b4d1768cee302e67dd0ad3084d93"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.WeightedMedian": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/WeightedMedian.lean",
+      "sha256": "5d76140504b2c355726a1801c115fb54502ba733f83f55a4ffb844dc7dab2c0c"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.GraphCheegerGap": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/GraphCheegerGap.lean",
+      "sha256": "10534d12d99018f013f7e609a327a55f54fe7da7fda228b879d1d91100f0d5b8"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.GraphExtremalEigenspaces": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/GraphExtremalEigenspaces.lean",
+      "sha256": "09546eb7b57f23cf63123d0063ffdb82700962cef4f2d0d4bd69f09693734587"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.BipartiteSigns": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/BipartiteSigns.lean",
+      "sha256": "2c39f097b2e47c8bad66e9039e3af73b2cf3c1333874b840e8d24f97fd685493"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.RegularizationParameters": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/RegularizationParameters.lean",
+      "sha256": "c5c038c81385a8f14dd4b9de7931aea54e3bf343d6b9b373092e59a3ca3d1638"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.IntegrationParameters": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/IntegrationParameters.lean",
+      "sha256": "8cb8ef321482fc270935780427b3e6887e8460714979a7f76d6f492d4cea8867"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.SpectralParameters": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/SpectralParameters.lean",
+      "sha256": "6884a33928505c2b998faafd06846cbc3e8f0059fa638e8ec6e0e70364d19030"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.RegularizationAssembly": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/RegularizationAssembly.lean",
+      "sha256": "673c38e23242b608319d4d5878c49ed992f95cc165d2b5e1b4a15f047f85f4b4"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.ActualMaxCut": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/ActualMaxCut.lean",
+      "sha256": "53e2c89aebba3e9da3e81cfe6cef35c224c74ab8cf9275366982b974460bb21d"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.RegularizationPruning": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/RegularizationPruning.lean",
+      "sha256": "dabec7bda5d66416725c9164b6ca76a5769ff07160eaed9dfec2aa246ec0bc66"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.NestedMatchingLayers": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/NestedMatchingLayers.lean",
+      "sha256": "c91a44c5ad19a5036daa5f7ba4783bd83bd6ed65b6c5bf0488b890886dfdbb7d"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MinimalNeighborhoodHall": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MinimalNeighborhoodHall.lean",
+      "sha256": "271b97e2ce6c1981e17f19f0c9aa61dd1cf103d215bad39d9beaadacc8c3ab18"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MatchingLayerPigeonhole": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MatchingLayerPigeonhole.lean",
+      "sha256": "fea5f971899247b073459dec87722cbb55252c8317321a8d3986bcd551766bf6"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MatchingUnion": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MatchingUnion.lean",
+      "sha256": "a328b815e17223c6c9e5bc520778cfe1c524e8876a5f95d9c7e3087978ba2c14"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.OldGlobalApplicability": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/OldGlobalApplicability.lean",
+      "sha256": "6e231712d4aa924cd163d4b27c6b62c4c7778cf1cf0c0ec206601cda740bfef0"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.AllOrdersDensity": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/AllOrdersDensity.lean",
+      "sha256": "186bd6981fe98688c3cee56b365e751715f38f857f92ea874d870e0222ccdd35"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.AvoidanceHeredity": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/AvoidanceHeredity.lean",
+      "sha256": "b7830f0abdeae84e7bf19d083e047e5e35db0d1cd52c51ac031934fdc7aea56b"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.LocalAvoidanceMoment": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/LocalAvoidanceMoment.lean",
+      "sha256": "58696881998cdab526de41c7fad35e08134ce80ebeed815d1b30ea2c3f1401bc"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.LocalCodegreeSubgraph": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/LocalCodegreeSubgraph.lean",
+      "sha256": "c643368630ab2ac32ca420b03006918d0ad90a3678eb0d83e4d1501d9e755c0a"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.LocalCodegreeIncidence": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/LocalCodegreeIncidence.lean",
+      "sha256": "e002d2177de5052ffdb52634f62ebfbe40f166d8ca798d7bc7653f3e3dd6f3f8"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.FourthReturnExpansion": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/FourthReturnExpansion.lean",
+      "sha256": "5d51d4309b0be7c19bd75aa6ac205cc5ad0b38eaecb52859db0b86c09e78e5cb"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.GraphEnergy": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/GraphEnergy.lean",
+      "sha256": "88ef8176021400e50d312e7d2c12d5416509623bcad5905dfb448b54a8c516f2"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.CodegreeLayerCake": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/CodegreeLayerCake.lean",
+      "sha256": "09b8266b64b263b0a787918123f0ab5585fcce69e23c562e981b0a604d24b063"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.SpectralCycleProof": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/SpectralCycleProof.lean",
+      "sha256": "0c900ad4079ccd93ad15982c4e55c0bc8e841f731f051a5b0ad301776e134f7f"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.OffsetEdgeGeometry": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/OffsetEdgeGeometry.lean",
+      "sha256": "4cdf2c1f2960cd2e06964e9f2dbb4febdebbfb85c500117b216deeff8b3ce20c"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.PairEdgeGeometry": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/PairEdgeGeometry.lean",
+      "sha256": "7bb0f58f26e09aea89ea6f463ccfdfa0c42ae0c7ff894b2b9ac7cd6fa58f4d67"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.SelfAvoidingEdges": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/SelfAvoidingEdges.lean",
+      "sha256": "222d2383ad8bd78d4c5c5cec307de9403bad2621a4949e26939757507b2d1e25"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.ForestEdges": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/ForestEdges.lean",
+      "sha256": "b8bc289122f9393c641ccdd0adf82ce4b0a2080f3f432e9183157e0d303dc189"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.ForestBundle": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/ForestBundle.lean",
+      "sha256": "3d7e88e7fc57efdb33986d313b5c3c0ac28953de3e03f0a1a67a8319b8c7eab9"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.ForestOccupationAlgebra": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/ForestOccupationAlgebra.lean",
+      "sha256": "3c22e6cf1b1854f52ee27b1ba8e03be9b6ec158fdf68cb1e035949f3354341c5"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.OccupationAlgebra": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/OccupationAlgebra.lean",
+      "sha256": "2455e0800276d3f3e736d55f0ed0a81ebab1662ef022c102516432d5857f75a9"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.OccupationTail": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/OccupationTail.lean",
+      "sha256": "0a2587a519892c50d96b953af3d9854cf08f02d214d6c51a58ea48267a027081"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.PathMoment": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/PathMoment.lean",
+      "sha256": "0300cdcdd1b2fc30f1ee283f02de881794ed40822ebcbf5397b42186b05e5bde"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.PathAvoidance": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/PathAvoidance.lean",
+      "sha256": "6ed06b47cf150d45fc46c025cd290eebf32feb3eca30a9ff29f825ac5e9fa3f4"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.PathCoordinates": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/PathCoordinates.lean",
+      "sha256": "1fbb82e46de2944181baa4fbe6c242dcffab01a53ad0ce0580385afcdb9f51d9"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.PathSplit": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/PathSplit.lean",
+      "sha256": "6c3935d284184e8ebdbc7c1ff52cee7cd366d0ff1505907ebf496271a76a5bf6"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.PathEvents": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/PathEvents.lean",
+      "sha256": "8f277189bb220f0f9bf08294b3f34c581c89fc05bfe7c48686973966a819bb7c"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.GraphPath": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/GraphPath.lean",
+      "sha256": "c6855e52d0bc4433be1f097a55c2f93aed96573d42eb5069889c86ddbf297e4d"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.PathWindowGeometry": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/PathWindowGeometry.lean",
+      "sha256": "922ce35fb81f0eb7b44fdb7cd7b7ba94621f41591ea8b61d914661f9ba8fe676"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.ForestSecondStage": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/ForestSecondStage.lean",
+      "sha256": "77ad836c233feb63398ddf5d5929948abfedac71cde6e197dfbfe2da4492c804"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.PathIntervals": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/PathIntervals.lean",
+      "sha256": "7c6e355b5df13adbad0b2899426a39ac1f935e4b928a4a10953f80befae5458b"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.TwoWindowTransfer": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/TwoWindowTransfer.lean",
+      "sha256": "3c25d77bba4b270aad9b6cfef6d3bba06c2bed2c3ba9c91052a22d34cec53b61"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.RoundedForestOccupation": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/RoundedForestOccupation.lean",
+      "sha256": "ae48b739cc418fde0153f0e02ba76366f4699bbf7b35d2090fced4454560e219"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.GraphForestOccupation": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/GraphForestOccupation.lean",
+      "sha256": "795e19edd5c6f462f2b09b8b6f3905c145f0c74d28d5a24742ef73bf4ca97647"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.GraphForestFirstStage": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/GraphForestFirstStage.lean",
+      "sha256": "5593781dc6148347623e7d558dfa1fafca8b7d5f02c19291a53e3329530703be"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.ForestFirstStage": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/ForestFirstStage.lean",
+      "sha256": "e1f08daac50f8002a4bb35945dd155244a7ddf8a926d62b5aa37619f07f9ead3"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.GraphOccupation": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/GraphOccupation.lean",
+      "sha256": "b549f3392e5a3b4245076115aa3e2c5b5dd003875aa2fdd92c5dd454ebb2be04"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.GraphParityOccupation": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/GraphParityOccupation.lean",
+      "sha256": "9caf33c5a27de2dcc4b086deb6a7a1687c659b19825d0a619ed563ff5572aa50"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.ShoreOccupation": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/ShoreOccupation.lean",
+      "sha256": "8c45513a9edbfff43dec55c3454ab6228c64d807b0f11bf5108b2aedcc13f05d"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.ShoreGap": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/ShoreGap.lean",
+      "sha256": "37bbc29e2bc0f99ccbeb6aff99ffe739ececac1207df4bcc68fb4d879baeccaf"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.ShoreNormalization": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/ShoreNormalization.lean",
+      "sha256": "b691bb167cfc341ff6d45ef4ea773600ca45c002931be58c2d7da9ad901cb09f"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.ShoreChain": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/ShoreChain.lean",
+      "sha256": "17a895a68ccad435baa52e4b1a79dcf22f30446df9ded9046b33ab63e5d73eb0"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.ReversibleMoment": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/ReversibleMoment.lean",
+      "sha256": "f1118561b1f1dee5b3b959135bdf5bff9d9948dd9135502feee35cc557452d5c"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.SquaredSpectralGap": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/SquaredSpectralGap.lean",
+      "sha256": "c13a4eae86aa8e6006e66153ecd2709d533998e5f7a4f4793fb05f2fc5d2684d"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.SimpleEigenprojector": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/SimpleEigenprojector.lean",
+      "sha256": "0b8175fa071be360ab04eca0394cdb66f6ce17386aac7fad82009e510bd46022"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.QuadraticPower": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/QuadraticPower.lean",
+      "sha256": "aa9f56669990ae377201cf41765f8dab494d04a523d771b5db8b2a5e62bf0ef9"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.TiltedOperator": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/TiltedOperator.lean",
+      "sha256": "83d84c0e5a6ffe3c3eafb538df3ba227aceb8dfdf747f4d2ec6ab62dc977473f"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.SpectralOccupation": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/SpectralOccupation.lean",
+      "sha256": "ca4c79d846731577b18b193a75d4c1bb05f7d761a6d0474ed3a10ab01bf54c08"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.SpectralMoment": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/SpectralMoment.lean",
+      "sha256": "fbd580f95a0eb3699cdcfa11cd0f0ae166db813fcf6b80e74f8f67801600238c"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.TwoStepPaths": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/TwoStepPaths.lean",
+      "sha256": "644a576f46f33de76c78c7a315fe04fee4b879d51db277a4f87ac27995a304df"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.RestrictedPaths": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/RestrictedPaths.lean",
+      "sha256": "d66c863d47cf2f3d94a3cc897a3db3db126ffc5bf2bb65fb0188ab16544c5450"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.ShoreDensity": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/ShoreDensity.lean",
+      "sha256": "557da0f19e1966b5169bd4d9f96e6fe27a00a915a4255cff0b2c1b44510bea0e"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.ForestOccupationParameters": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/ForestOccupationParameters.lean",
+      "sha256": "e2e44f9e5e9aaf316ac63cf6e0c344355e026ebe363180ff58589bb51fa8ae57"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.ForestParameters": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/ForestParameters.lean",
+      "sha256": "33256112c898bcc08ad84d16e7533523b50801aaa4ef821e6f2fcebe73c56707"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.FourIntervalCycle": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/FourIntervalCycle.lean",
+      "sha256": "b166b7c4c4091355f5656832c420e35195275f0217925ad622a13f376da0e8a1"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.RichWalkCycle": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/RichWalkCycle.lean",
+      "sha256": "5f53a8375b51319982315b4714f5334f129e851e2d6bf7476bc27ef16080a413"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.IntervalCycle": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/IntervalCycle.lean",
+      "sha256": "52bbadfb47c049ce26573e40a74878f3ca36d7f39511ef936fddcb6abc771f71"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.SpectralRichPath": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/SpectralRichPath.lean",
+      "sha256": "b9818037192b7e5c553a34cbc5dafb40580281df09ed09f948b6c4946872ec00"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.SpectralHostSelfAvoidance": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/SpectralHostSelfAvoidance.lean",
+      "sha256": "c6c9feb27dbb3438e573e9826fb0d75b1c270d0b315bb2a356f038d371628d01"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.GraphSelfAvoidance": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/GraphSelfAvoidance.lean",
+      "sha256": "50cb6429941b47b78610d8724c7c875f7ccc88b270dbdc8f525db7f1bda4e42a"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.GraphBlockMixing": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/GraphBlockMixing.lean",
+      "sha256": "7e942a03f189439ed9e5577b95052620c7491d324de726251609efa5a34466cb"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.HeatKernel": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/HeatKernel.lean",
+      "sha256": "00f98a640abcf95d3836387f17d536d7246301c8c5262b7ed592255049898d4b"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.DegreeRatios": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/DegreeRatios.lean",
+      "sha256": "092c13a4a0e55a1d82b85ee1bbb3edd6f6f61a40e53cefc90954bcfe4605b801"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.SpectralEntries": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/SpectralEntries.lean",
+      "sha256": "9aa0842f59d237e54edff6bdf1af45a216a418b1da8ce0dbb4d0b35080df4c0a"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.SpectralSum": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/SpectralSum.lean",
+      "sha256": "0e09f7d1f3948f22b82f1c6f7dba21435139545ab074a0aaba504abb191ca899"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.ShortBlockCollisions": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/ShortBlockCollisions.lean",
+      "sha256": "08b04f5a0f6fdac19fb52b95d5c17f3ad37bc442cd9fb6edeac8bf7165d46b06"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.PathCollisions": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/PathCollisions.lean",
+      "sha256": "4775eda1075fd5382dda72c596d879cee23d7734f47378929b4d9db8db7f8923"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.ShortBlockHitting": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/ShortBlockHitting.lean",
+      "sha256": "d4c960531fe0bddc5753fe97ca206800b6ff3fbc18c42d792ea95565479eca9b"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.SelfAvoidanceExponential": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/SelfAvoidanceExponential.lean",
+      "sha256": "ed0199bbebf1e58fc4231163c5ce15a8178608416a6f7fe28b08a85176ef3117"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.BlockSelfAvoidance": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/BlockSelfAvoidance.lean",
+      "sha256": "1be492cf5f865c5de89857c474afc9c519298624f61c926ddc8fb73e40311189"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.GoodBlockExtension": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/GoodBlockExtension.lean",
+      "sha256": "cee60720d01cee075ba5ab846ebdfb2c00c2a7bba98b61eaca9ecd4a08d80a2b"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.GoodStartMixing": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/GoodStartMixing.lean",
+      "sha256": "27758fcd5aa309d91cb6904243311ad15bd48128b3d54fb6fccbcb234acb56f7"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.GoodStarts": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/GoodStarts.lean",
+      "sha256": "d29dd80f29e5eaa460d41cd458e8e4be7438fed19edb793dcd18a73ade616cf4"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.RoundedForestExtraction": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/RoundedForestExtraction.lean",
+      "sha256": "899803db4735552a750292a00d48cdafe3abd4642df60620b92a54dae2dc81dd"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.QuantitativePruning": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/QuantitativePruning.lean",
+      "sha256": "38e1b9c5af0517b03e9030a20d06c71fe23b3cfad1b2ca0ca34496d64a879c0b"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.LargeStarForest": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/LargeStarForest.lean",
+      "sha256": "7521b866b4490b0f30aaa5218a535550731cb5f084bd85a36eb311228dc20105"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.MaximalStarForest": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/MaximalStarForest.lean",
+      "sha256": "d0bb8881920e41e832ff404ea793e03bda725868f654dd9c65256e49b5d9f87f"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.ForestBundleInduction": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/ForestBundleInduction.lean",
+      "sha256": "7ff9bbe6dcb277b4ef27067403ac381ea0f52662f983f887c75f6236d5b4ed6d"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210b.EventWitness": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/EventWitness.lean",
+      "sha256": "c4a50a1c7d01861a691c782255c01045a1cc8bdd70d7db5b985a0ba447afd7e7"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.LocalAvoidanceMomentNormalized": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/LocalAvoidanceMomentNormalized.lean",
+      "sha256": "1a450e8825a2cbf5506d8e4dd13822f553ba5f87ed7b1ed24ce92d7f01dd564f"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.StrongGlobalApplicability": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/StrongGlobalApplicability.lean",
+      "sha256": "961397ea056f084f20457b231def12c36140aa524c3a3909f952978ca064cd28"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MomentCycleProof": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MomentCycleProof.lean",
+      "sha256": "122c9ae2df89351530851897634fc38a877fbde909d2fa3a6b5c0a569820cd3a"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MomentRichPath": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MomentRichPath.lean",
+      "sha256": "7130ed004ddddc8badbddd2967939b43c1bc7236d8a37ee1a7be968d4a28f4c8"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MomentTwoWindow": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MomentTwoWindow.lean",
+      "sha256": "ff460ad29903ce7ccf7cbd63cdad14f06d6b1e1a914710b9c09b4f5b7711b832"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MomentForestAbsorbed": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MomentForestAbsorbed.lean",
+      "sha256": "bba3fb0c2ad16922616b6c029bf68717b20b5187b7f3c8dbf20863c278f4df1c"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MomentForestOccupation": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MomentForestOccupation.lean",
+      "sha256": "226768ccf1f42ebb61d6e08a755a48bd01aee127fec2d3c8ac253b645ea6688c"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.GraphSmoothingOccupation": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/GraphSmoothingOccupation.lean",
+      "sha256": "8a3de6154469657fcb07d1e53efb8339fabfbe6288d723e40aaf740fb0fc0089"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.UniformSmoothingOccupation": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/UniformSmoothingOccupation.lean",
+      "sha256": "174b96db62c3d74868e276734c53914de9e4cab2d15afa4cdd6b925d77dd2325"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.PoissonTilt": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/PoissonTilt.lean",
+      "sha256": "7c005fe9b186d2d58698e3cebfbcaa2e8c5ff6d396ebde3c7d6b568c891878e9"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.CoordinateGrid": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/CoordinateGrid.lean",
+      "sha256": "d9cdc7628d5045e91db07d22cb989ad0b7f34a5160a115e7b47c7ede3fdb2342"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.LevelSetOccupation": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/LevelSetOccupation.lean",
+      "sha256": "de88f776edd2c6554c9b3d9c15c8631ce77578737a4c6f3b867264872751b63c"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MomentSmoothingMean": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MomentSmoothingMean.lean",
+      "sha256": "04a25c6339fe347aa5c894ef186b4626ee85a8220492489dbe03e18674cc0382"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MomentSmoothing": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MomentSmoothing.lean",
+      "sha256": "099f97210ee3786dcb96d5bfb5b84cb63dfb4f42e07d9c7b2a543857df7d27cb"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MomentHostParameters": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MomentHostParameters.lean",
+      "sha256": "29eb78818c4c29e649fa34fd270fb55775348379540ae123f2244db778a94adc"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MomentSmoothingParameters": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MomentSmoothingParameters.lean",
+      "sha256": "0cc7ee576db7c03494a0c6dbf6bd8b664e8ec88e325bc51963a94713ff92aaa9"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MomentSelfAvoidance": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MomentSelfAvoidance.lean",
+      "sha256": "8f7015352aef1644c43d75a2c3f12ef6618998985e23a5ad0b6461b92a911321"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.FourthBlock": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/FourthBlock.lean",
+      "sha256": "e4a123fabf1f1a2a17cf4958b47111dbeb017c0381bd8234dc72bb8b67409786"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.FourthDiagonal": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/FourthDiagonal.lean",
+      "sha256": "200f319c23f53220b71ea379490d0011391e9fafcee987f00fe9ccc09f972b5c"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.FourthHeatKernel": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/FourthHeatKernel.lean",
+      "sha256": "8e592baea9b45165cd0c7c2b038240c31ae1412cf5cfc9f24011d1631d57bd26"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.FourthSpectralSum": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/FourthSpectralSum.lean",
+      "sha256": "d55711cefeda226c37248a24b03787f714e7d4b0d12ac7e636580c0f6334ce29"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MomentOccupationAbsorption": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MomentOccupationAbsorption.lean",
+      "sha256": "65b6d96038e856a09ed1475db5984381ee59bc896c3898b170fbf9b9bdde58a1"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MomentPairParameters": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MomentPairParameters.lean",
+      "sha256": "c8ef75e9987797b77ca42c55c4889ee6e92575c8e0d3c46ef482a459cf7d9ac9"
+    },
+    "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MomentRarityParameters": {
+      "path": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MomentRarityParameters.lean",
+      "sha256": "9154f0f124741d41a9f35c8fbe9e80482daefdb82f08e29b14e6cf0ee7390ae2"
+    }
+  },
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "formal_conjectures_rev": "137aec5c7abd3aa61f7a73138a97279acfc79e93",
+  "artifact_hashes": {
+    ".gitignore": "d876fbb1ce560a96eb9807a39f91a9349f0b22ed73af7b80c5ebcef09f2e6849",
+    "CITATION.cff": "ec0693686970c25542f384524f3cabf5e0f856a0e4ac57703927dcf8859e145b",
+    "FINDINGS.md": "69c6598125d108d4c00ea6c4c910cf9835eac3f03506adc858ce476cb934ddd6",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "87a75cac089f610ca012a73a574224307f8f9f8a6b145c4ea36b0d9ac44c6e72",
+    "Openmath.lean": "6ce494a5ae2232062f522ba2b95519d8785b884680ca9e905bbbb4248472ab40",
+    "PROOF-MAP.md": "731cb97b1e973168a989b25f83998f4a71d905e78e5de8848029740429e1998f",
+    "PROOF.md": "e29f470f60dc252a31b1d6fbf6e29465a00e7d6ceadfea77fca3712f9a429fe1",
+    "README.md": "fa2d7596503c3c6341be69d496a058d970b49cee67f2490ea8725087a14bff2e",
+    "RESULTS.md": "30e00b9a8ccade3f56e4134b8a2c430d6072b588ff20e921d19d560ae5e29713",
+    "SOURCES.md": "1151dd51ecb2358bd7513a43883543519034f072ca8366906fbac927758dd10d",
+    "VERIFICATION.md": "73b5cddd1b53452da7ec3117ddaaabd669519b3fbf7f9e53ffaf015417f75546",
+    "check.sh": "6888ceba18510679ec37421e411ba350406cdd2a61c49a03837770c32da7f7f6",
+    "lake-manifest.json": "84f1e2a54574bd9e19d817640db956fe28f832d5b2e0c18e5625c69e9f2b5ed1",
+    "lakefile.toml": "4704229faa8823fec1f8d24eac5aaf3d97f1ab38dd6c59bdf19472955717e7ef",
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+    "scripts/check_axioms.py": "62bcb4e8fe9e1e43f6c3f7fe3708d5b5524a34381754c303c7b98db09b894376",
+    "scripts/check_docs.py": "49d5acda1aca98ecc668e1ea4c06ad905992bce74210828b41181e4999341e1e",
+    "scripts/check_full.py": "d1d4ac8e19c0ac979fab1a6b9d674cd596aee07f2d1c7a528b8526595406191c",
+    "scripts/headline-theorems.json": "a0e7ee163532beeae83eb88260cdb76247e380e6234ad3f8c4ea6d0e9815e4f9",
+    "scripts/oracle.py": "f4b8e66113ece665b05806620f62dbcb5da17867f0880cef199d2ee7eea8c7ea",
+    "scripts/proof-modules.json": "881aed458350decd39c8834827c27aa110a2d01e9aeb31d7845e7806e57aa8b5",
+    "scripts/replay_modules.py": "61aad8635df6caf253c6c1a061c41e1f68f77e9a5886bafa57129ef9e0f90a57",
+    "scripts/source_modules.py": "64de21d21833aaccb431edca950a9abd11ab7c8bab8bafdaa2b989bf3eaaa213",
+    "scripts/source_scan.py": "c33fb70e3dd25f748973fa4f59d927e9afb5ed89766672368185be6fa0f4c21e",
+    "scripts/test_check_docs.py": "9dcec23af330fd3a67fc96547f92e952a3badbb43d3c0aadf5d98e2684a91051",
+    "scripts/test_oracle.py": "49a364fee3e9920c7ed0245d02e80f77b1a6a8dc3b3b1b0635f5a1b4b6536124",
+    "verification-summary.json": "1cc4171af0c3eb14b99a2d626a938e4c166eca5c7fd5c82d141a4715c49b2eac"
+  }
+}
