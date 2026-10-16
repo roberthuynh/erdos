@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "problems": [
+    {
+      "id": "60",
+      "title": "C4 supersaturation at projective-plane orders",
+      "topics": [
+        "graph theory",
+        "extremal combinatorics",
+        "incidence geometry"
+      ],
+      "path": "problems/60",
+      "checks": {
+        "docs": [
+          [
+            "python3",
+            "-B",
+            "scripts/check_docs.py"
+          ]
+        ],
+        "full": [
+          [
+            "python3",
+            "-B",
+            "scripts/check_docs.py"
+          ],
+          [
+            "python3",
+            "-B",
+            "scripts/test_check_docs.py"
+          ]
+        ]
+      },
+      "lean": {
+        "registry": "scripts/headline-theorems.json",
+        "coverage": "scripts/source_modules.py",
+        "axioms": "scripts/check_axioms.py",
+        "replay": "scripts/replay_modules.py",
+        "oracle": "check.sh",
+        "target": "Erdos60"
+      }
+    },
+    {
+      "id": "585",
+      "title": "Cycles on the same vertex set and regular subgraphs",
+      "topics": [
+        "graph theory",
+        "extremal combinatorics"
+      ],
+      "path": "problems/585",
+      "checks": {
+        "docs": [
+          [
+            "python3",
+            "-B",
+            "scripts/check_docs.py"
+          ]
+        ],
+        "full": [
+          [
+            "python3",
+            "-B",
+            "scripts/check_docs.py"
+          ],
+          [
+            "python3",
+            "-B",
+            "scripts/test_release_checks.py"
+          ],
+          [
+            "python3",
+            "-B",
+            "scripts/test_check_sh.py"
+          ],
+          [
+            "python3",
+            "-B",
+            "scripts/test_replay_modules.py"
+          ],
+          [
+            "python3",
+            "-B",
+            "scripts/test_validation_modes.py"
+          ],
+          [
+            "python3",
+            "-B",
+            "scripts/test_check_docs.py"
+          ],
+          [
+            "python3",
+            "-B",
+            "graphs/verify_graphs.py"
+          ]
+        ]
+      },
+      "lean": {
+        "registry": "scripts/headline-theorems.json",
+        "coverage": "scripts/source_modules.py",
+        "axioms": "scripts/check_axioms.py",
+        "replay": "scripts/replay_modules.py",
+        "oracle": "check.sh",
+        "target": "Openmath"
+      }
+    }
+  ]
+}

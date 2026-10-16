@@ -1,4 +1,4 @@
-name: Lean checks
+name: Collection checks
 on:
   push:
   pull_request:
@@ -6,7 +6,53 @@ on:
 permissions:
   contents: read
 jobs:
-  check:
+  collection:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    outputs:
+      matrix: ${{ steps.scope.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Check catalogue, author prose and export boundary
+        run: |
+          timeout 240 python3 -B scripts/check_collection.py
+          timeout 240 python3 -B scripts/test_collection.py
+          timeout 240 python3 -B scripts/test_export_manifest.py
+          timeout 240 python3 -B scripts/export_manifest.py --output /tmp/public-export-manifest.json
+      - name: Check every package's documentation
+        run: |
+          python3 -B - <<'PY'
+          import json, os, subprocess
+          for problem in json.load(open('problems.json'))['problems']:
+              subprocess.run(['python3', '-B', 'scripts/check.py', '--problem', problem['id'], '--mode', 'docs', '--output', os.path.join(os.environ['RUNNER_TEMP'], 'erdos-docs', problem['id'])], check=True)
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: collection-evidence
+          path: |
+            /tmp/public-export-manifest.json
+            ${{ runner.temp }}/erdos-docs/
+          if-no-files-found: warn
+      - name: Select affected packages
+        id: scope
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          MATRIX=$(timeout 240 python3 -B scripts/select_problems.py --base "$BASE")
+          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+      - name: Check tracked files unchanged
+        if: always()
+        run: git diff --exit-code HEAD -- .
+  problem:
+    needs: collection
+    if: ${{ needs.collection.outputs.matrix != '{"include":[]}' }}
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.collection.outputs.matrix) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 150
     env:
@@ -16,47 +62,29 @@ jobs:
         with:
           persist-credentials: false
       - uses: leanprover/lean-action@f061402b660e0c34644504b324e830f2991d4865 # v1.6.1
+        if: matrix.lean
         with:
+          lake-package-directory: problems/${{ matrix.id }}
           auto-config: false
           build: false
           test: false
           lint: false
           use-github-cache: false
           use-mathlib-cache: false
-      - run: timeout 900 lake exe cache get
-      - run: timeout 2700 lake build
-      - name: Replay every module through the kernel
-        # Each configured module replay has its own 240-second timeout.
-        run: python3 -B scripts/replay_modules.py
-      - run: timeout 240 python3 -B scripts/check_axioms.py
-      - name: Check source coverage and headline registration safeguards
-        run: timeout 240 python3 -B scripts/test_release_checks.py
-      - name: Check oracle failure paths
-        run: timeout 240 python3 -B scripts/test_check_sh.py
-      - name: Check replay and validation failure controls
-        run: |
-          timeout 240 python3 -B scripts/test_replay_modules.py
-          timeout 240 python3 -B scripts/test_validation_modes.py
-          timeout 240 python3 -B scripts/test_check_docs.py
-      - name: Check graph witnesses and release documentation
-        run: |
-          timeout 240 python3 -B graphs/verify_graphs.py
-          timeout 240 python3 -B scripts/check_docs.py
-      - name: Check theorem results
-        run: |
-          python3 - <<'PY'
-          import json, subprocess
-          from pathlib import Path
-          for item in json.loads(Path('scripts/headline-theorems.json').read_text()):
-              if item['oracle']:
-                  subprocess.run(['timeout', '240', 'bash', 'check.sh',
-                                  item['module'].replace('.', '/') + '.lean',
-                                  item['declaration']], check=True)
-          PY
-      - name: Check public export boundary
-        run: |
-          timeout 240 python3 -B scripts/test_export_manifest.py
-          timeout 240 python3 -B scripts/export_manifest.py --output /tmp/public-export-manifest.json
+      - name: Fetch pinned Mathlib cache
+        if: matrix.lean
+        working-directory: problems/${{ matrix.id }}
+        run: timeout 240 lake exe cache get
+      - name: Run required package checks
+        env:
+          PROBLEM: ${{ matrix.id }}
+        run: python3 -B scripts/check.py --problem "$PROBLEM" --mode full --output "$RUNNER_TEMP/erdos-evidence"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: problem-${{ matrix.id }}-evidence
+          path: ${{ runner.temp }}/erdos-evidence/
+          if-no-files-found: warn
       - name: Check tracked files unchanged
         if: always()
         run: git diff --exit-code HEAD -- .

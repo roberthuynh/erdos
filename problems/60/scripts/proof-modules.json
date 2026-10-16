@@ -1,0 +1,1088 @@
+[
+  {
+    "module": "ActualSupport",
+    "source": "ActualSupport.lean",
+    "sha256": "2763566cc5cec60a1020c91924851f90234fc742a3fb95061e6014cc69d14728",
+    "declarations": [
+      "Erdos60.Localization.cycle_has_support_edge",
+      "Erdos60.Localization.deleteSupportEdges_no_four_cycle"
+    ]
+  },
+  {
+    "module": "C4Counting",
+    "source": "C4Counting.lean",
+    "sha256": "a4370b8fa364870852d285900d573d46a41b69c4f34a614ff2a4313e9ba6974a",
+    "declarations": [
+      "Erdos60.Counting.fourEdges_rotate",
+      "Erdos60.Counting.fourEdges_reverse",
+      "Erdos60.Counting.fourEdges_card",
+      "Erdos60.Counting.IsFourCycle.card",
+      "Erdos60.Counting.mem_cycles",
+      "Erdos60.Counting.cycles_mono",
+      "Erdos60.Counting.cycleCount_mono",
+      "Erdos60.Counting.destroyed_le_missing",
+      "Erdos60.Counting.retained_ge_sub_missing",
+      "Erdos60.Counting.threePath_closes",
+      "Erdos60.Counting.close_injective",
+      "Erdos60.Counting.retained_path_count"
+    ]
+  },
+  {
+    "module": "Parameters",
+    "source": "Parameters.lean",
+    "sha256": "2f0158132d79703acc46b7ca4c7fd8ef5284027f810444b6245e9dc12c520d80",
+    "declarations": [
+      "Erdos60.Parameters.basic",
+      "Erdos60.Parameters.degree_left",
+      "Erdos60.Parameters.degree_right",
+      "Erdos60.Parameters.degree_interval",
+      "Erdos60.Parameters.high_pair",
+      "Erdos60.Parameters.high_pair_interval",
+      "Erdos60.Parameters.simultaneous_core",
+      "Erdos60.Parameters.sqrt_parameter",
+      "Erdos60.Parameters.high_count_parameter",
+      "Erdos60.Parameters.retained_denominator",
+      "Erdos60.Parameters.high_sum_bound",
+      "Erdos60.Parameters.neighborhood_parameters",
+      "Erdos60.Parameters.transport_parameter",
+      "Erdos60.Parameters.aggregate_parameter"
+    ]
+  },
+  {
+    "module": "PartialSymmetry",
+    "source": "PartialSymmetry.lean",
+    "sha256": "fe21af17dda24de59443b98476167391d2859f804bd1c381d8be5e51bafb0bcf",
+    "declarations": [
+      "Erdos60.PartialSymmetry.transport_pair",
+      "Erdos60.PartialSymmetry.determine_point",
+      "Erdos60.PartialSymmetry.indistinguishable_lines_have_at_most_one_good_point",
+      "Erdos60.PartialSymmetry.Equiv.fixed_at_exception"
+    ]
+  },
+  {
+    "module": "Polarity",
+    "source": "Polarity.lean",
+    "sha256": "09fd880e4313599829af154d5a62fe4473c6b9da96baa9f858fe1ab5dc7f54a5",
+    "declarations": [
+      "Erdos60.Geometry.Polarity.adj_iff",
+      "Erdos60.Geometry.Polarity.common_neighbor_unique",
+      "Erdos60.Geometry.Polarity.no_four_cycle",
+      "Erdos60.Geometry.Polarity.card_vertices"
+    ]
+  },
+  {
+    "module": "Transfer",
+    "source": "Transfer.lean",
+    "sha256": "34e086acfdf9671757bdd631dcbe6c81152a8c4a8ed7c00423cb36f412dfa4df",
+    "declarations": [
+      "Erdos60.Transfer.surplus_identity",
+      "Erdos60.Transfer.lower_bound",
+      "Erdos60.Transfer.equality_counts",
+      "Erdos60.Transfer.linear_range_slack",
+      "Erdos60.Transfer.first_excess_edits",
+      "Erdos60.Transfer.edge_balance",
+      "Erdos60.Transfer.finite_edge_transfer",
+      "Erdos60.Transfer.natural_transfer"
+    ]
+  },
+  {
+    "module": "CycleIncidence",
+    "source": "CycleIncidence.lean",
+    "sha256": "e5080d92cf0e210d52e54e36fbf464934c4d40ee4c2346c4ec53df771b5da18e",
+    "declarations": [
+      "Erdos60.Counting.fourEdges_vertices",
+      "Erdos60.Counting.fourEdges_vertices_card",
+      "Erdos60.Counting.IsFourCycle.vertices_card",
+      "Erdos60.Counting.mem_vertexPairs",
+      "Erdos60.Counting.fourEdges_oppositePairs",
+      "Erdos60.Counting.IsFourCycle.oppositePairs_card"
+    ]
+  },
+  {
+    "module": "FiniteFieldPolarity",
+    "source": "FiniteFieldPolarity.lean",
+    "sha256": "4619c0b79e62696be4e0a3d89a85904110f1c4e56805629c80f47c6be222e034",
+    "declarations": [
+      "Erdos60.Construction.absolute_iff_on_line",
+      "Erdos60.Construction.plane_order",
+      "Erdos60.Construction.absolute_count",
+      "Erdos60.Construction.power_two_construction"
+    ]
+  },
+  {
+    "module": "GraphTransfer",
+    "source": "GraphTransfer.lean",
+    "sha256": "2d3c86c5159713e224a866b14fc3715b7a7b317f93b4e1b218e62e45b31a7799",
+    "declarations": [
+      "Erdos60.Transfer.graph_edge_balance",
+      "Erdos60.Transfer.graph_transfer",
+      "Erdos60.Transfer.graph_transfer_equality"
+    ]
+  },
+  {
+    "module": "MatchingEquality",
+    "source": "MatchingEquality.lean",
+    "sha256": "ba503660be296299eb3280b52829536f602ec57ebb49b8ad3516a6fd991bb211",
+    "declarations": [
+      "Erdos60.Counting.no_adjacent_matching_added",
+      "Erdos60.Counting.no_opposite_matching_added",
+      "Erdos60.Counting.nucleus_extra_cycle",
+      "Erdos60.Counting.extra_cycle_strict_count",
+      "Erdos60.Counting.shared_added_edges_strict_count"
+    ]
+  },
+  {
+    "module": "PolarityDegree",
+    "source": "PolarityDegree.lean",
+    "sha256": "2a66aa365d4050d2c42814142acac8ba20fc01f29fb962ff413aa9b35d2eb253",
+    "declarations": [
+      "Erdos60.Geometry.Polarity.degree_add_diagonal",
+      "Erdos60.Geometry.Polarity.degree_eq_order_or_succ",
+      "Erdos60.Geometry.Polarity.degree_eq_order_iff_absolute",
+      "Erdos60.Geometry.Polarity.degree_of_not_absolute",
+      "Erdos60.Geometry.Polarity.absolute_not_adjacent",
+      "Erdos60.Geometry.Polarity.three_path_right_unique",
+      "Erdos60.Geometry.Polarity.three_path_left_unique",
+      "Erdos60.Geometry.Polarity.three_path_no_reversed_middle"
+    ]
+  },
+  {
+    "module": "GraphStatistics",
+    "source": "GraphStatistics.lean",
+    "sha256": "1e80a3848f8f69c50ca6904da74e9930e89dce8b350cc4bb419fec3e864b3253",
+    "declarations": [
+      "Erdos60.Statistics.codegree_symm",
+      "Erdos60.Statistics.codegree_eq_sum",
+      "Erdos60.Statistics.twoPath_count",
+      "Erdos60.Statistics.choose_two_lower",
+      "Erdos60.Statistics.vertexCycleStatistic_lower",
+      "Erdos60.Statistics.commonNeighbors_cycle",
+      "Erdos60.Statistics.recover_commonNeighborPair",
+      "Erdos60.Statistics.commonNeighborPair_injective",
+      "Erdos60.Statistics.pairEdges_pair",
+      "Erdos60.Statistics.pairEdges_mem_cycles",
+      "Erdos60.Statistics.pairEdges_injOn",
+      "Erdos60.Statistics.fixedOppositePair_count",
+      "Erdos60.Statistics.fourEdges_vertices",
+      "Erdos60.Statistics.opposite_unique",
+      "Erdos60.Statistics.mem_pairCycleFamily",
+      "Erdos60.Statistics.pairCycleFamily_disjoint",
+      "Erdos60.Statistics.cycle_at_vertex",
+      "Erdos60.Statistics.vertexCycles_eq_biUnion",
+      "Erdos60.Statistics.vertexCycleStatistic_eq_card",
+      "Erdos60.Statistics.vertexCycleStatistic_sum",
+      "Erdos60.Statistics.actual_vertexCycle_lower",
+      "Erdos60.Statistics.vertexCycleStatistic_sum_eq_four",
+      "Erdos60.Statistics.pairWeight_mk",
+      "Erdos60.Statistics.two_mul_unorderedPair_sum",
+      "Erdos60.Statistics.unorderedPair_sum_eq_twice"
+    ]
+  },
+  {
+    "module": "MatchingConverse",
+    "source": "MatchingConverse.lean",
+    "sha256": "5b292bbfe0f81cf4fa24e15e7a2d43259f31b5ab930b3589e8de46884b0cebd3",
+    "declarations": [
+      "Erdos60.Counting.matching_cycle_at_most_one",
+      "Erdos60.Counting.matching_cycle_exactly_one",
+      "Erdos60.Counting.matching_cycle_partition_count"
+    ]
+  },
+  {
+    "module": "PolarityAbsoluteBound",
+    "source": "PolarityAbsoluteBound.lean",
+    "sha256": "dd5acd21f574df5ceea06251b1015add814f21f7ced80a23f83ae67222a226de",
+    "declarations": [
+      "Erdos60.Geometry.involution_fixedpoint_of_odd",
+      "Erdos60.Geometry.Polarity.absolute_meets_polar_line",
+      "Erdos60.Geometry.Polarity.absolute_meets_line",
+      "Erdos60.Geometry.Polarity.absolute_count_lower",
+      "Erdos60.Geometry.Polarity.twice_edges_add_absolute",
+      "Erdos60.Geometry.Polarity.edge_count_upper",
+      "Erdos60.Geometry.Polarity.edge_count_eq_iff_absolute_count"
+    ]
+  },
+  {
+    "module": "PolarityPaths",
+    "source": "PolarityPaths.lean",
+    "sha256": "83dad45a43a526af69a444a2f60388fdc54320c0406fc644d424ab00f5f4a423",
+    "declarations": [
+      "Erdos60.Geometry.Polarity.ThreePath.edge_disjoint"
+    ]
+  },
+  {
+    "module": "MarkedPathBijection",
+    "source": "MarkedPathBijection.lean",
+    "sha256": "ee236f1ec751b94b448620877290d331c5cf6737ed35aa5d226a1f7ad5f37058",
+    "declarations": [
+      "Erdos60.Counting.cycle_erase_threePath",
+      "Erdos60.Counting.marked_card_eq_paths",
+      "Erdos60.Counting.matching_marked_erase_subset",
+      "Erdos60.Counting.matching_exact_cycle_count",
+      "Erdos60.Counting.mem_baseThreePaths",
+      "Erdos60.Counting.matching_exact_cycle_count_canonical"
+    ]
+  },
+  {
+    "module": "PolarityPathCount",
+    "source": "PolarityPathCount.lean",
+    "sha256": "2c6499b66dd73588152552f108a4f39d10781d366912a092848f15cb6ff806f4",
+    "declarations": [
+      "Erdos60.Geometry.Polarity.exists_three_path_of_neighbor",
+      "Erdos60.Geometry.Polarity.three_path_count_lower",
+      "Erdos60.Geometry.Polarity.ThreePath.vertices_distinct",
+      "Erdos60.Geometry.Polarity.exists_disjoint_three_paths"
+    ]
+  },
+  {
+    "module": "OneAddedCycles",
+    "source": "OneAddedCycles.lean",
+    "sha256": "af01821d2557f3c3e0b76db9f480bc52132039dc75c03bd6019b86c54e620075",
+    "declarations": [
+      "Erdos60.Counting.one_added_cycle_family"
+    ]
+  },
+  {
+    "module": "PolarityExactCount",
+    "source": "PolarityExactCount.lean",
+    "sha256": "13c4d3d541d5b2f20fc8588973bf0ae183a06dabf713f96f42b4e920881f12e2",
+    "declarations": [
+      "Erdos60.Geometry.Polarity.three_path_count_le_degree",
+      "Erdos60.Geometry.Polarity.three_path_count_range",
+      "Erdos60.Geometry.Polarity.degree_sub_one_le_three_path_count",
+      "Erdos60.Geometry.Polarity.three_path_count_reverse",
+      "Erdos60.Geometry.Polarity.absolute_of_three_path_count_min",
+      "Erdos60.Geometry.Polarity.three_path_count_le_degree_sub_one_of_absolute",
+      "Erdos60.Geometry.Polarity.three_path_count_min_iff_absolute"
+    ]
+  },
+  {
+    "module": "PolarityNucleus",
+    "source": "PolarityNucleus.lean",
+    "sha256": "d0eb9546b198122fdb3c65853aa3f5d504ca451fa75b8050d11617c0447cba94",
+    "declarations": [
+      "Erdos60.Geometry.blocking_unique_on_line",
+      "Erdos60.Geometry.blocking_set_eq_line",
+      "Erdos60.Geometry.Polarity.nucleus_of_absolute_blocking",
+      "Erdos60.Geometry.Polarity.nucleus_of_even_absolute_card"
+    ]
+  },
+  {
+    "module": "PolarityTransfer",
+    "source": "PolarityTransfer.lean",
+    "sha256": "dac130e8d7a8ccc3b4870a63e3b6cb9124741881c74f929f5921371395371b2a",
+    "declarations": [
+      "Erdos60.Geometry.Polarity.ThreePath.counting_shape",
+      "Erdos60.Geometry.Polarity.ThreePath.edges_subset",
+      "Erdos60.Geometry.Polarity.counting_path_family",
+      "Erdos60.Geometry.Polarity.counting_family_for_added_edge",
+      "Erdos60.Geometry.Polarity.graph_transfer"
+    ]
+  },
+  {
+    "module": "PolarityMatchingCount",
+    "source": "PolarityMatchingCount.lean",
+    "sha256": "0a8012bf1978163569018f0295e183bcb99cc363436005ecf97b94ef311192df",
+    "declarations": [
+      "Erdos60.Geometry.Polarity.base_path_edges_surjective",
+      "Erdos60.Geometry.Polarity.baseThreePaths_card",
+      "Erdos60.Geometry.Polarity.matching_absolute_cycle_count"
+    ]
+  },
+  {
+    "module": "MatchingConstruction",
+    "source": "MatchingConstruction.lean",
+    "sha256": "29f04e956fcd50881d5e9859e818761e40d53988b3e4f068d23db3f67fb48def",
+    "declarations": [
+      "Erdos60.Construction.pairedGraph_matching",
+      "Erdos60.Construction.pairedGraph_edge_card",
+      "Erdos60.Construction.exists_matching_on",
+      "Erdos60.Construction.power_two_sharpness"
+    ]
+  },
+  {
+    "module": "NearEquality",
+    "source": "NearEquality.lean",
+    "sha256": "8d0531d05720de56d0077ed70e9cc07d22c8df74aa15d27b012e27c471a0f88d",
+    "declarations": [
+      "Erdos60.Geometry.Polarity.graph_transfer_equality",
+      "Erdos60.Geometry.Polarity.near_equality_edits",
+      "Erdos60.Geometry.Polarity.base_path_count_min_of_equality",
+      "Erdos60.Geometry.Polarity.added_endpoints_absolute_of_equality",
+      "Erdos60.Geometry.Polarity.added_matching_of_equality",
+      "Erdos60.Geometry.Polarity.near_equality_necessity"
+    ]
+  },
+  {
+    "module": "FirstExcessSelection",
+    "source": "FirstExcessSelection.lean",
+    "sha256": "6283bcf6eb140e8f4792d22bece1653348d53c73c1015ff2abe4fff4566574b0",
+    "declarations": [
+      "Erdos60.Transfer.exists_spanning_edge_count",
+      "Erdos60.Transfer.first_excess_subgraph",
+      "Erdos60.Transfer.lift_added_edge_count"
+    ]
+  },
+  {
+    "module": "SubsetPathCount",
+    "source": "SubsetPathCount.lean",
+    "sha256": "30e7d2db7d2f351b2b86638ddee8a25dfe5e53993f6fbf5145569fabe2b1f62a",
+    "declarations": [
+      "Erdos60.Statistics.two_mul_choose_two",
+      "Erdos60.Statistics.codegree_eq_full_sum",
+      "Erdos60.Statistics.subset_ordered_twoPath_count",
+      "Erdos60.Statistics.subset_path_bound"
+    ]
+  },
+  {
+    "module": "DegreeBounds",
+    "source": "DegreeBounds.lean",
+    "sha256": "cc71027f01290cc442f36fdaec7efa67eb7530d474120b35329ff68e69b622a8",
+    "declarations": [
+      "Erdos60.DegreeBounds.vertex_count_le_total",
+      "Erdos60.DegreeBounds.codegree_row_bound",
+      "Erdos60.DegreeBounds.choose_tangent",
+      "Erdos60.DegreeBounds.exterior_add_codegree",
+      "Erdos60.DegreeBounds.exterior_self",
+      "Erdos60.DegreeBounds.exterior_sum",
+      "Erdos60.DegreeBounds.sum_choose_tangent",
+      "Erdos60.DegreeBounds.exterior_tangent",
+      "Erdos60.DegreeBounds.exterior_budget",
+      "Erdos60.DegreeBounds.degree_polynomial_lower",
+      "Erdos60.DegreeBounds.maximum_degree"
+    ]
+  },
+  {
+    "module": "CompletionBasic",
+    "source": "CompletionBasic.lean",
+    "sha256": "0ae4f8f515c49b64bd88fa928cc099584ce945879abd892daae8e567548559b1",
+    "declarations": [
+      "Erdos60.Completion.common_neighbor_unique",
+      "Erdos60.Completion.neighborhood_neighbor_unique",
+      "Erdos60.Completion.cells_disjoint",
+      "Erdos60.Completion.bundles_disjoint",
+      "Erdos60.Completion.full_vertex_has_deficient_neighbor"
+    ]
+  },
+  {
+    "module": "DegreeCapCore",
+    "source": "DegreeCapCore.lean",
+    "sha256": "276e7baaf6f986de9ba2229774b3199d4d9665f85263ec5be06e7742c05c8045",
+    "declarations": [
+      "Erdos60.Core.exists_degree_cap_edges",
+      "Erdos60.Core.endpoints_card",
+      "Erdos60.Core.exists_capped_core",
+      "Erdos60.Core.outsideGraph_no_four_cycle",
+      "Erdos60.Core.degree_loss_le_core",
+      "Erdos60.Core.degree_outside_core",
+      "Erdos60.Core.exists_simultaneous_core",
+      "Erdos60.Core.exists_core_292",
+      "Erdos60.Core.deficient_count_le",
+      "Erdos60.Core.deep_vertices_subset_core",
+      "Erdos60.Core.exists_core_292_with_deficiency"
+    ]
+  },
+  {
+    "module": "LocalizedPaths",
+    "source": "LocalizedPaths.lean",
+    "sha256": "822dd30ce32cf6d8edbf0939287ef2660863228cbfbc0b818c9456881798912f",
+    "declarations": [
+      "Erdos60.Geometry.Polarity.internal_core_path_count",
+      "Erdos60.Geometry.Polarity.ThreePath.no_core_edge",
+      "Erdos60.Geometry.Polarity.localized_counting_path_family",
+      "Erdos60.Geometry.Polarity.localized_family_for_added_edge",
+      "Erdos60.Geometry.Polarity.localized_cycle_lower"
+    ]
+  },
+  {
+    "module": "PartialSymmetryCompletion",
+    "source": "PartialSymmetryCompletion.lean",
+    "sha256": "86ce4ce2d2d18b9cef75265e8e29f96615984ada2ed2cd8ac487f1606a40f55d",
+    "declarations": [
+      "Erdos60.PartialSymmetryCompletion.degree_sum_numeric",
+      "Erdos60.PartialSymmetryCompletion.outside_secant_degree",
+      "Erdos60.PartialSymmetryCompletion.inside_secant_degree",
+      "Erdos60.PartialSymmetryCompletion.two_point_sections_degree",
+      "Erdos60.PartialSymmetryCompletion.secant_degree_sum",
+      "Erdos60.PartialSymmetryCompletion.secant_degree_sum_of_not_collinear"
+    ]
+  },
+  {
+    "module": "SymmetryIncidenceCount",
+    "source": "SymmetryIncidenceCount.lean",
+    "sha256": "854f4caa05f9c06884c00a7e36f3d82acb455764f99e2c1b57f8451b8f38e0bc",
+    "declarations": [
+      "Erdos60.PartialSymmetryCompletion.section_incidence_sum",
+      "Erdos60.PartialSymmetryCompletion.secant_incidence_sum",
+      "Erdos60.PartialSymmetryCompletion.secants_add_tangents",
+      "Erdos60.PartialSymmetryCompletion.bad_lines_add_order_eq_secant_sum",
+      "Erdos60.PartialSymmetryCompletion.bad_lines_lower_of_not_collinear"
+    ]
+  },
+  {
+    "module": "RegularVertex",
+    "source": "RegularVertex.lean",
+    "sha256": "2d74086a7a030eeed1a26b92e0d2aae04e26f1b791299af00797f20d1e0c19d0",
+    "declarations": [
+      "Erdos60.Completion.exists_isolated_neighbor",
+      "Erdos60.Completion.regular_vertex_structure"
+    ]
+  },
+  {
+    "module": "HighPair",
+    "source": "HighPair.lean",
+    "sha256": "2222b216f90200531f9b9d18a7b9104307230e2d612273d94435fdf035c089c6",
+    "declarations": [
+      "Erdos60.HighPair.row_on_other",
+      "Erdos60.HighPair.union_add_intersection",
+      "Erdos60.HighPair.outside_add_union",
+      "Erdos60.HighPair.sum_other_add",
+      "Erdos60.HighPair.other_card",
+      "Erdos60.HighPair.union_row_bound",
+      "Erdos60.HighPair.outside_sum_balance",
+      "Erdos60.HighPair.outside_subset_budget",
+      "Erdos60.HighPair.complement_card",
+      "Erdos60.HighPair.disjoint_polynomial_lower",
+      "Erdos60.HighPair.high_pair_not_disjoint",
+      "Erdos60.HighPair.unique_union_row_bound",
+      "Erdos60.HighPair.unique_polynomial_lower",
+      "Erdos60.HighPair.high_pair_opposite"
+    ]
+  },
+  {
+    "module": "OutsideMissing",
+    "source": "OutsideMissing.lean",
+    "sha256": "934929680b61a0035236c72a924fc369281457710054008097109459852693c9",
+    "declarations": [
+      "Erdos60.Geometry.Polarity.outside_missing_neighbor_control",
+      "Erdos60.Geometry.Polarity.outside_missing_le_outside_low_nonabsolute",
+      "Erdos60.Geometry.Polarity.outside_missing_add_order_le_deficient_add_core",
+      "Erdos60.Geometry.Polarity.outside_missing_count_bound",
+      "Erdos60.Geometry.Polarity.outside_missing_real_bound",
+      "Erdos60.Geometry.Polarity.first_excess_edit_bound"
+    ]
+  },
+  {
+    "module": "PartialSymmetryFinal",
+    "source": "PartialSymmetryFinal.lean",
+    "sha256": "7093d6eb1ce7ecf1a20fc50369b579aeb4099d10024567441dc36b73cb9debb8",
+    "declarations": [
+      "Erdos60.PartialSymmetryFinal.mem_transposeRow",
+      "Erdos60.PartialSymmetryFinal.transposeRow_card",
+      "Erdos60.PartialSymmetryFinal.good_tangent",
+      "Erdos60.PartialSymmetryFinal.transposeRow_is_line",
+      "Erdos60.PartialSymmetryFinal.poor_lines_unique",
+      "Erdos60.PartialSymmetryFinal.rich_row_symmetric",
+      "Erdos60.PartialSymmetryFinal.partial_symmetry_complement",
+      "Erdos60.PartialSymmetryFinal.partial_symmetry"
+    ]
+  },
+  {
+    "module": "RegularLowIsolation",
+    "source": "RegularLowIsolation.lean",
+    "sha256": "c1a6fed301b22b115b4fb08a158ec7986fef000579f6d4e14635efed457263f9",
+    "declarations": [
+      "Erdos60.Completion.paired_cells_no_edges",
+      "Erdos60.Completion.cross_cell_neighbor_unique",
+      "Erdos60.Completion.within_cell_neighbor_unique",
+      "Erdos60.Completion.cell_center_neighbor_iff",
+      "Erdos60.Completion.two_low_of_degree_sum",
+      "Erdos60.Completion.odd_neighbor_set_internal_bound"
+    ]
+  },
+  {
+    "module": "DegreeDeficiency",
+    "source": "DegreeDeficiency.lean",
+    "sha256": "6ab5fe9dc156ea484c70f353579b5c8cf1b7b5855b18d444e490c0d0aa677a51",
+    "declarations": [
+      "Erdos60.Statistics.degree_add_deficiency",
+      "Erdos60.Statistics.total_degree_balance",
+      "Erdos60.Statistics.totalDeficiency_eq",
+      "Erdos60.Statistics.edge_count_real_of_even",
+      "Erdos60.Statistics.totalDeficiency_eq_of_even",
+      "Erdos60.Statistics.neighbor_degree_deficiency_lower",
+      "Erdos60.Statistics.vertex_cycle_deficiency_lower"
+    ]
+  },
+  {
+    "module": "HighSurplus",
+    "source": "HighSurplus.lean",
+    "sha256": "b615d3b083a11352532ff2f499c1a742afef523106604c8c9d40c77ec0ee33e1",
+    "declarations": [
+      "Erdos60.HighSurplus.restricted_cycle_sum",
+      "Erdos60.HighSurplus.heavyHigh_bound",
+      "Erdos60.HighSurplus.opposite_set_quadratic",
+      "Erdos60.HighSurplus.lightHigh_bound",
+      "Erdos60.HighSurplus.high_partition",
+      "Erdos60.HighSurplus.high_count_bound",
+      "Erdos60.HighSurplus.high_count_small"
+    ]
+  },
+  {
+    "module": "DeficientNeighborParity",
+    "source": "DeficientNeighborParity.lean",
+    "sha256": "9a98398a4998f800f53a7da7923a37d6860998495987dadbf5c1a202aa34f952",
+    "declarations": [
+      "Erdos60.Statistics.common_neighbor_unique_of_cycle_statistic_zero",
+      "Erdos60.Statistics.cycle_statistic_pos_of_no_deficient_neighbor"
+    ]
+  },
+  {
+    "module": "OverlapBound",
+    "source": "OverlapBound.lean",
+    "sha256": "a5268d68dfcd387aabb99b4d39c0b77ff21c1b971f22a0f7faf9e1df007b6be9",
+    "declarations": [
+      "Erdos60.Statistics.pairCodegree_mk",
+      "Erdos60.Statistics.two_mul_subsetPairs_sum",
+      "Erdos60.Statistics.subsetPairs_card",
+      "Erdos60.Statistics.subsetPairs_subset_unorderedPairs",
+      "Erdos60.Statistics.cast_sq_eq_cast_add_two_choose",
+      "Erdos60.Statistics.codegree_cauchy",
+      "Erdos60.Statistics.subset_codegree_overlap"
+    ]
+  },
+  {
+    "module": "NeighborhoodUnion",
+    "source": "NeighborhoodUnion.lean",
+    "sha256": "3fff26429cb8c6fd3ce62a9db42741d5cc45465def0f81d0cccf45bfe953f8bc",
+    "declarations": [
+      "Erdos60.Statistics.unionMultiplicity_sum",
+      "Erdos60.Statistics.unionMultiplicity_le_codegree",
+      "Erdos60.Statistics.punctured_union_overlap_bound",
+      "Erdos60.Statistics.nondeficient_neighbor_union"
+    ]
+  },
+  {
+    "module": "DisjointCellBudget",
+    "source": "DisjointCellBudget.lean",
+    "sha256": "a839129774644e91047edd57ae4369c58f4c1d2eec3834fde11bfcd7cfc6a762",
+    "declarations": [
+      "Erdos60.Completion.disjoint_cell_budget"
+    ]
+  },
+  {
+    "module": "SurplusRows",
+    "source": "SurplusRows.lean",
+    "sha256": "4dd87136d36dcd25e1240aa510e584a4ccbbcdadf570e2bb62ee7fc78ded1188",
+    "declarations": [
+      "Erdos60.SurplusRows.surplus_eq_high_sum",
+      "Erdos60.SurplusRows.high_card_le_surplus",
+      "Erdos60.SurplusRows.deficiency_eq_deficient_sum",
+      "Erdos60.SurplusRows.deficient_card_le_total",
+      "Erdos60.SurplusRows.all_high_rows",
+      "Erdos60.SurplusRows.neighbor_inter_card",
+      "Erdos60.SurplusRows.neighbor_incidence_symm",
+      "Erdos60.SurplusRows.deficient_degree_bound",
+      "Erdos60.SurplusRows.deficient_neighbor_sum",
+      "Erdos60.SurplusRows.vertex_classification_budget",
+      "Erdos60.SurplusRows.deficient_count_lower",
+      "Erdos60.SurplusRows.deficiency_decompose",
+      "Erdos60.SurplusRows.deficiencyOn_decompose",
+      "Erdos60.SurplusRows.excessDeficiency_eq_sum",
+      "Erdos60.SurplusRows.deficiencyOn_le_support_add_excess",
+      "Erdos60.SurplusRows.excessDeficiency_bound",
+      "Erdos60.SurplusRows.subset_pair_codegree_grouping",
+      "Erdos60.SurplusRows.neighbor_union_bound",
+      "Erdos60.SurplusRows.all_high_rows_with_overlaps",
+      "Erdos60.SurplusRows.choose_overlap_sqrt_bound",
+      "Erdos60.SurplusRows.all_high_scalar_bound",
+      "Erdos60.SurplusRows.totalSurplus_bound",
+      "Erdos60.SurplusRows.deficiency_le_excess_add_one",
+      "Erdos60.SurplusRows.deepDeficient_card_le_excess",
+      "Erdos60.SurplusRows.localized_deficit_bounds"
+    ]
+  },
+  {
+    "module": "NeighborhoodLines",
+    "source": "NeighborhoodLines.lean",
+    "sha256": "8fa998c2bc1de9dc8c464b30bff664b3d23fb86ef4e3a1591c747ed94c6651db",
+    "declarations": [
+      "Erdos60.Completion.cross_pairs_le_missing",
+      "Erdos60.Completion.off_line_join_family",
+      "Erdos60.Completion.large_pencils_same_center",
+      "Erdos60.Completion.three_pencil_dominant",
+      "Erdos60.Completion.common_exception_point"
+    ]
+  },
+  {
+    "module": "RegularCellDeficit",
+    "source": "RegularCellDeficit.lean",
+    "sha256": "510e8b7730c46fd7f078d1eac57b5a4d0a19ec67b796fccb0c50b57932dde15f",
+    "declarations": [
+      "Erdos60.Completion.mem_cellFinset",
+      "Erdos60.Completion.cell_neighbor_decomposition",
+      "Erdos60.Completion.cell_degree_decomposition",
+      "Erdos60.Completion.neighbor_inter_card",
+      "Erdos60.Completion.cross_sum_symm",
+      "Erdos60.Completion.cell_cross_degree_le_one",
+      "Erdos60.Completion.cell_cross_sum_le_left",
+      "Erdos60.Completion.cell_cross_sum_le_right",
+      "Erdos60.Completion.induced_degree_eq_cross",
+      "Erdos60.Completion.actual_cell_degree_sum_deficit_two",
+      "Erdos60.Completion.matched_cell_card",
+      "Erdos60.Completion.isolated_cell_card",
+      "Erdos60.Completion.regular_low_isolated"
+    ]
+  },
+  {
+    "module": "HighIncidenceNeighbor",
+    "source": "HighIncidenceNeighbor.lean",
+    "sha256": "58d8eab003a865201951a0e9ce5e196d44328c97317fcc059f14a9539045fea8",
+    "declarations": [
+      "Erdos60.Completion.mem_bundleFinset",
+      "Erdos60.Completion.exists_clean_sparse_bundle",
+      "Erdos60.Completion.cell_card_add_two_ge_degree",
+      "Erdos60.Completion.high_incidence_neighbor"
+    ]
+  },
+  {
+    "module": "RegularTransport",
+    "source": "RegularTransport.lean",
+    "sha256": "523bd93f6510cafb78373464a817ce91c29a8b6a1c8b253d5eef1333ef8e0fb0",
+    "declarations": [
+      "Erdos60.Completion.regular_transport"
+    ]
+  },
+  {
+    "module": "RegularPopulation",
+    "source": "RegularPopulation.lean",
+    "sha256": "f3841b8f2cd091ad4f715cf6168bedc2bdfed6a46c8a10008accda541cb47a54",
+    "declarations": [
+      "Erdos60.Completion.local_neighbor_card_le_one",
+      "Erdos60.Completion.many_regular_neighbors"
+    ]
+  },
+  {
+    "module": "FullRowIntersection",
+    "source": "FullRowIntersection.lean",
+    "sha256": "51d2fbc94157deb7a2baeb8429f38f18906fc101670f4e4ea31983acd40ad1c8",
+    "declarations": [
+      "Erdos60.Completion.disjoint_rows_regular_neighbor_low",
+      "Erdos60.Completion.full_rows_intersect_of_regular_count",
+      "Erdos60.Completion.full_rows_intersect",
+      "Erdos60.Completion.full_rows_intersection_card",
+      "Erdos60.Completion.full_rows_distinct"
+    ]
+  },
+  {
+    "module": "ExceptionalSet",
+    "source": "ExceptionalSet.lean",
+    "sha256": "ef4e4c76b3902bfb1ad7947e25adc47f37f87f083045f9468574d0ffceabb9b6",
+    "declarations": [
+      "Erdos60.Completion.mem_goodFullVertices",
+      "Erdos60.Completion.cycles_empty_of_noFourCycle",
+      "Erdos60.Completion.large_section_choose_lower",
+      "Erdos60.Completion.exceptionalVertices_card",
+      "Erdos60.Completion.goodFullVertices_neighbor_budget",
+      "Erdos60.Completion.goodFullVertices_card_lower"
+    ]
+  },
+  {
+    "module": "DeficientNeighborhood",
+    "source": "DeficientNeighborhood.lean",
+    "sha256": "0d269cced31ea5639c567320509cb695c00f157ccd08b2ed25a759503fd6f6c0",
+    "declarations": [
+      "Erdos60.Statistics.zero_cycle_has_deficient_neighbor",
+      "Erdos60.Statistics.clean_punctured_neighbors_bound",
+      "Erdos60.Statistics.positiveCycleVertices_card",
+      "Erdos60.Statistics.clean_neighbor_union_budget",
+      "Erdos60.Statistics.local_cycle_le_total",
+      "Erdos60.Statistics.deficient_neighbor_product_bound",
+      "Erdos60.Statistics.deficient_neighbor_dichotomy",
+      "Erdos60.Statistics.large_deficient_neighbor_unique"
+    ]
+  },
+  {
+    "module": "OppositeTransport",
+    "source": "OppositeTransport.lean",
+    "sha256": "add1ca34c5fe86624308f86a5cab9bc14d2c419a98667979289ee4ce0c9f17e3",
+    "declarations": [
+      "Erdos60.Transport.clean_codegree_le_one",
+      "Erdos60.Transport.clean_neighbor_avoids_origin",
+      "Erdos60.Transport.neighbor_codegree_exchange",
+      "Erdos60.Transport.clean_neighbor_zeroCommon_lower",
+      "Erdos60.Transport.clean_zeroCommon_disjoint",
+      "Erdos60.Transport.cleanNondef_transport_count",
+      "Erdos60.Transport.clean_neighbors_decompose",
+      "Erdos60.Transport.transport_count",
+      "Erdos60.Transport.zeroCommon_card",
+      "Erdos60.Transport.opposite_transport_density"
+    ]
+  },
+  {
+    "module": "ResidualSelection",
+    "source": "ResidualSelection.lean",
+    "sha256": "f1136dc8ebb2f7f6283294ac7645a8e0bfcdfe5399080e369cda225645cb3ba2",
+    "declarations": [
+      "Erdos60.Localization.mem_residualFinset",
+      "Erdos60.Localization.selection_error",
+      "Erdos60.Localization.residual_card_lt_ceil",
+      "Erdos60.Localization.residual_support_card",
+      "Erdos60.Localization.opposite_symm",
+      "Erdos60.Localization.residual_support_of_opposite_transport",
+      "Erdos60.Localization.quantitative_cycle_support"
+    ]
+  },
+  {
+    "module": "ActualLocalization",
+    "source": "ActualLocalization.lean",
+    "sha256": "96ce53bf94bef33e906fdb36ee95536b184cb3abb2f3a60c7b4c82b5cee5f362",
+    "declarations": [
+      "Erdos60.Localization.deficientVertices_iff",
+      "Erdos60.Localization.highCycleVertices_bound",
+      "Erdos60.Localization.deficient_support_size_min",
+      "Erdos60.Localization.giantDeficientVertices_card",
+      "Erdos60.Localization.exceptionalVertices_bound",
+      "Erdos60.Localization.outside_exceptional_properties",
+      "Erdos60.Localization.opposite_codegree",
+      "Erdos60.Localization.outside_opposite_transport",
+      "Erdos60.Localization.actual_linear_cycle_support"
+    ]
+  },
+  {
+    "module": "NeighborhoodAssignment",
+    "source": "NeighborhoodAssignment.lean",
+    "sha256": "05bc726b5368112b957730172970a7fd25e4501c4682c5493573249bbf4a09c9",
+    "declarations": [
+      "Erdos60.Completion.nonfeasible_pair_lines_missing",
+      "Erdos60.Completion.small_pencil_dominant",
+      "Erdos60.Completion.actual_full_rows_injOn",
+      "Erdos60.Completion.high_incidence_small_missing_pencil",
+      "Erdos60.Completion.neighborhood_dominant_lines",
+      "Erdos60.Completion.dominant_section_large",
+      "Erdos60.Completion.dominant_lines_common_exception",
+      "Erdos60.Completion.neighborhood_line_assignment_injective",
+      "Erdos60.Completion.assigned_full_row_eq",
+      "Erdos60.Completion.assigned_full_rows_symmetric",
+      "Erdos60.Completion.embedded_rows_produce_polarity"
+    ]
+  },
+  {
+    "module": "EmbeddedCoreCompletion",
+    "source": "EmbeddedCoreCompletion.lean",
+    "sha256": "47780e75fe89215beae174b60de8dd9ea062406fb2f90ab3a038b21f60fe75e9",
+    "declarations": [
+      "Erdos60.Completion.embedded_good_rows_complete_graph"
+    ]
+  },
+  {
+    "module": "ActualCore",
+    "source": "ActualCore.lean",
+    "sha256": "24092bbd4bdc43ac6f2988054ff073f0b0ccfb6404897b8bd278bb5095cbc89d",
+    "declarations": [
+      "Erdos60.Localization.actual_support_with_outside_degrees",
+      "Erdos60.Localization.actual_completion_core"
+    ]
+  },
+  {
+    "module": "IndexedDesign",
+    "source": "IndexedDesign.lean",
+    "sha256": "70929f42b0ba6a1a0287d7183c74167c928ab25169d28ad688cf0c279f35e3e0",
+    "declarations": [
+      "Erdos60.Embedding.IndexedDesign.mem_pointLines",
+      "Erdos60.Embedding.IndexedDesign.mem_linePoints",
+      "Erdos60.Embedding.IndexedDesign.card_pointLines",
+      "Erdos60.Embedding.IndexedDesign.join_unique",
+      "Erdos60.Embedding.IndexedDesign.intersection_unique",
+      "Erdos60.Embedding.IndexedDesign.parallel_symm"
+    ]
+  },
+  {
+    "module": "BasicCounts",
+    "source": "BasicCounts.lean",
+    "sha256": "a14bd79b6b14778fdea444b7d41f185785200f508a7f8d76f0317f906e104f29",
+    "declarations": [
+      "Erdos60.Embedding.IndexedDesign.mem_parallelLines",
+      "Erdos60.Embedding.IndexedDesign.mem_meetingLines",
+      "Erdos60.Embedding.IndexedDesign.lineDegree_eq_sum",
+      "Erdos60.Embedding.IndexedDesign.pointDegree_eq_sum",
+      "Erdos60.Embedding.IndexedDesign.sum_lineDegrees",
+      "Erdos60.Embedding.IndexedDesign.card_other_pointLines",
+      "Erdos60.Embedding.IndexedDesign.card_meetingLines",
+      "Erdos60.Embedding.IndexedDesign.parallel_card_identity",
+      "Erdos60.Embedding.IndexedDesign.pointLines_inter_card",
+      "Erdos60.Embedding.IndexedDesign.sum_lineDegrees_sq",
+      "Erdos60.Embedding.IndexedDesign.sum_intDeficit",
+      "Erdos60.Embedding.IndexedDesign.sum_intDeficit_sq",
+      "Erdos60.Embedding.IndexedDesign.sum_intDeficit_mul_sub_two",
+      "Erdos60.Embedding.IndexedDesign.exists_point_off_line",
+      "Erdos60.Embedding.IndexedDesign.lineDegree_le_of_outside",
+      "Erdos60.Embedding.IndexedDesign.lineDegree_le",
+      "Erdos60.Embedding.IndexedDesign.intDeficit_eq_nat",
+      "Erdos60.Embedding.IndexedDesign.parallel_card_eq_q_mul_deficit"
+    ]
+  },
+  {
+    "module": "ParallelCounts",
+    "source": "ParallelCounts.lean",
+    "sha256": "329311e4b07e5abfb9b8f6076c1b730370b4fae5f2d887240cefefc46d1cd395",
+    "declarations": [
+      "Erdos60.Embedding.IndexedDesign.outside_meeting_count",
+      "Erdos60.Embedding.IndexedDesign.outside_parallel_count_add",
+      "Erdos60.Embedding.IndexedDesign.point_parallel_count",
+      "Erdos60.Embedding.IndexedDesign.sum_lineDegrees_subset",
+      "Erdos60.Embedding.IndexedDesign.sum_parallel_lineDegrees",
+      "Erdos60.Embedding.IndexedDesign.linePoints_inter_card",
+      "Erdos60.Embedding.IndexedDesign.subset_incidence_sum",
+      "Erdos60.Embedding.IndexedDesign.parallel_line_incidence",
+      "Erdos60.Embedding.IndexedDesign.intersection_degree_sum",
+      "Erdos60.Embedding.IndexedDesign.label_partition_card",
+      "Erdos60.Embedding.IndexedDesign.common_parallel_card_of_meet",
+      "Erdos60.Embedding.IndexedDesign.common_parallel_balance_of_parallel",
+      "Erdos60.Embedding.IndexedDesign.common_parallel_card_of_parallel_int",
+      "Erdos60.Embedding.IndexedDesign.common_parallel_card_deficit_two"
+    ]
+  },
+  {
+    "module": "EmbeddingParameters",
+    "source": "EmbeddingParameters.lean",
+    "sha256": "44087316b66911b75f6c11b70d9044240ce97219fb529f15b687c2ffcd87acea",
+    "declarations": [
+      "Erdos60.Embedding.Parameters.cutoff_bounds",
+      "Erdos60.Embedding.Parameters.allowance_bound",
+      "Erdos60.Embedding.Parameters.subtraction_bounds",
+      "Erdos60.Embedding.Parameters.short_moment_strict",
+      "Erdos60.Embedding.Parameters.strong_clique_union_strict",
+      "Erdos60.Embedding.Parameters.triple_clique_strict",
+      "Erdos60.Embedding.Parameters.all_deficits_induction_strict",
+      "Erdos60.Embedding.Parameters.allowance_spec",
+      "Erdos60.Embedding.Parameters.proposition_numeric",
+      "Erdos60.Embedding.Parameters.all_deficits_product_strict"
+    ]
+  },
+  {
+    "module": "ParallelTriangle",
+    "source": "ParallelTriangle.lean",
+    "sha256": "907a57bd452f9b0a98a7487f29e127dfdef137c67a25bec09158b5984ee21bfe",
+    "declarations": [
+      "Erdos60.Embedding.IndexedDesign.three_sets_card_le",
+      "Erdos60.Embedding.IndexedDesign.parallel_triangle_card_bound",
+      "Erdos60.Embedding.IndexedDesign.triangle_pair_inter_bound",
+      "Erdos60.Embedding.IndexedDesign.parallel_triangle_of_counts",
+      "Erdos60.Embedding.IndexedDesign.deficit_two_triangle_arithmetic",
+      "Erdos60.Embedding.IndexedDesign.parallel_triangle_obstruction",
+      "Erdos60.Embedding.IndexedDesign.parallel_triangle_deficit_two"
+    ]
+  },
+  {
+    "module": "CorePolarityTransfer",
+    "source": "CorePolarityTransfer.lean",
+    "sha256": "8f63bf43e0475071ab0c84ffae06deb1a1b47b90a5545ba44f23add7e13ae0db",
+    "declarations": [
+      "Erdos60.Localization.ActualCoreData.polarity_edit_bound",
+      "Erdos60.Localization.ActualCoreData.embedded_rows_give_nearby_polarity"
+    ]
+  },
+  {
+    "module": "CoreRowDesign",
+    "source": "CoreRowDesign.lean",
+    "sha256": "a52b3de8060640f877d1b14fc7b439a10263afda6307c7e8cab5f97736cd77fc",
+    "declarations": [
+      "Erdos60.Embedding.corePoint_dense",
+      "Erdos60.Embedding.coreRowDesign",
+      "Erdos60.Embedding.corePoint_missing_budget"
+    ]
+  },
+  {
+    "module": "ShortLineRestoration",
+    "source": "ShortLineRestoration.lean",
+    "sha256": "d0f5087a9590523b0515cbdcfa89c9fcc4736a606f1d5facf9de6e1dde5bf99e",
+    "declarations": [
+      "Erdos60.Embedding.ShortLineRestoration.uniquePoints_card",
+      "Erdos60.Embedding.ShortLineRestoration.exists_old_unique_missing",
+      "Erdos60.Embedding.ShortLineRestoration.omitted_incidence_card",
+      "Erdos60.Embedding.ShortLineRestoration.restore_at_old_point",
+      "Erdos60.Embedding.ShortLineRestoration.restore_last_label",
+      "Erdos60.Embedding.ShortLineRestoration.extend_assignment",
+      "Erdos60.Embedding.ShortLineRestoration.restore_short_lines",
+      "Erdos60.Embedding.ShortLineRestoration.restore_short_lines_equiv"
+    ]
+  },
+  {
+    "module": "GreedyExtension",
+    "source": "GreedyExtension.lean",
+    "sha256": "b6922ede8d0bc4ab3a41f2656e58b49d021957685027e6f216d12c572bd1141a",
+    "declarations": [
+      "Erdos60.Embedding.IndexedDesign.degree_q_parallel_class",
+      "Erdos60.Embedding.IndexedDesign.extendAtDegreeQ",
+      "Erdos60.Embedding.IndexedDesign.exists_degree_q_of_dense_incomplete",
+      "Erdos60.Embedding.IndexedDesign.complete_by_missing",
+      "Erdos60.Embedding.IndexedDesign.exists_full_extension",
+      "Erdos60.Embedding.IndexedDesign.full_count_plane",
+      "Erdos60.Embedding.IndexedDesign.plane_order_eq",
+      "Erdos60.Embedding.IndexedDesign.dense_plane_extension"
+    ]
+  },
+  {
+    "module": "DeficitTwoPartners",
+    "source": "DeficitTwoPartners.lean",
+    "sha256": "e4f823d8b22e0402a171f31f5ea53814c8ad8309d63add6dadad967612cd5612",
+    "declarations": [
+      "Erdos60.Embedding.IndexedDesign.deficit_two_short_parallel_le_allowance",
+      "Erdos60.Embedding.IndexedDesign.deficit_two_parallel_partner",
+      "Erdos60.Embedding.IndexedDesign.deficit_two_parallel_partner_large"
+    ]
+  },
+  {
+    "module": "GoodCliques",
+    "source": "GoodCliques.lean",
+    "sha256": "eda7fbb8c5dc59434aecf3f25fc1ceaec6a92c55ec0d4375f1b02d7832b992f5",
+    "declarations": [
+      "Erdos60.Embedding.IndexedDesign.mem_shortLines",
+      "Erdos60.Embedding.IndexedDesign.mem_longLines",
+      "Erdos60.Embedding.IndexedDesign.exists_maximal_parallel_extension",
+      "Erdos60.Embedding.IndexedDesign.short_moment_lower",
+      "Erdos60.Embedding.IndexedDesign.shortLines_card_le",
+      "Erdos60.Embedding.IndexedDesign.exists_clean_point_on_long",
+      "Erdos60.Embedding.IndexedDesign.exists_good_clique_extension",
+      "Erdos60.Embedding.IndexedDesign.clique_inter_subset_common_parallel",
+      "Erdos60.Embedding.IndexedDesign.clique_union_subset_common_parallel",
+      "Erdos60.Embedding.IndexedDesign.distinct_maximal_cliques_meeting_witness",
+      "Erdos60.Embedding.IndexedDesign.long_deficit_le",
+      "Erdos60.Embedding.IndexedDesign.clique_inter_card_le",
+      "Erdos60.Embedding.IndexedDesign.clique_union_card_le",
+      "Erdos60.Embedding.IndexedDesign.good_clique_intersection_le_one",
+      "Erdos60.Embedding.IndexedDesign.meetingParallelLong_clique",
+      "Erdos60.Embedding.IndexedDesign.meetingParallelLong_card_lower",
+      "Erdos60.Embedding.IndexedDesign.good_clique_for_meeting_parallel",
+      "Erdos60.Embedding.IndexedDesign.shortLines_cutoff_card_le",
+      "Erdos60.Embedding.IndexedDesign.good_clique_for_long_parallel"
+    ]
+  },
+  {
+    "module": "DeficitTwo",
+    "source": "DeficitTwo.lean",
+    "sha256": "573b2a732538a94ee19cc71057fc6afda324698a468bee2e91a3757a32a8dc8a",
+    "declarations": [
+      "Erdos60.Embedding.IndexedDesign.parallel_cliques_no_three",
+      "Erdos60.Embedding.IndexedDesign.clean_point_two_parallel",
+      "Erdos60.Embedding.IndexedDesign.deficit_two_good_cliques"
+    ]
+  },
+  {
+    "module": "CliqueCoverage",
+    "source": "CliqueCoverage.lean",
+    "sha256": "023344d124926d4ff407953723997a5c6ae55b0eba4a201511924b5a8dc3661f",
+    "declarations": [
+      "Erdos60.Embedding.IndexedDesign.clique_incidence_le_parallel_point",
+      "Erdos60.Embedding.IndexedDesign.clique_incidence_avoiding_le",
+      "Erdos60.Embedding.IndexedDesign.sum_clique_incidence_at_point",
+      "Erdos60.Embedding.IndexedDesign.sum_point_lineDeficits",
+      "Erdos60.Embedding.IndexedDesign.clique_total_le_missing_points",
+      "Erdos60.Embedding.IndexedDesign.covered_parallel_card_le",
+      "Erdos60.Embedding.IndexedDesign.clique_incidence_eq_of_many_covered",
+      "Erdos60.Embedding.IndexedDesign.unique_pair_clique_of_exact_incidence",
+      "Erdos60.Embedding.IndexedDesign.smallerParallel_many",
+      "Erdos60.Embedding.IndexedDesign.mem_goodCliques",
+      "Erdos60.Embedding.IndexedDesign.good_clique_meets_clean_point",
+      "Erdos60.Embedding.IndexedDesign.good_clique_exact_incidence",
+      "Erdos60.Embedding.IndexedDesign.good_clique_complete_coverage"
+    ]
+  },
+  {
+    "module": "PlaneRealization",
+    "source": "PlaneRealization.lean",
+    "sha256": "528b3419b32a0669d6bdbe0229e9295032c13254c0021ef0c8f9e3e9ad7f6daf",
+    "declarations": [
+      "Erdos60.Embedding.IndexedDesign.realizedDual",
+      "Erdos60.Embedding.PlaneRealization.no_degree_q_plane",
+      "Erdos60.Embedding.PlaneRealization.realized_completion_plane",
+      "Erdos60.Embedding.PlaneRealization.restore_and_transport",
+      "Erdos60.Embedding.PlaneRealization.restore_long_embedding",
+      "Erdos60.Embedding.PlaneRealization.transportedPlane",
+      "Erdos60.Embedding.PlaneRealization.transported_order"
+    ]
+  },
+  {
+    "module": "DenseEmbedding",
+    "source": "DenseEmbedding.lean",
+    "sha256": "de8c94fc074ac59316677a4fc87901055cb458a104f2eb55b6da1cbe7357d97e",
+    "declarations": [
+      "Erdos60.Embedding.IndexedDesign.dense_hasPlaneEmbedding",
+      "Erdos60.Embedding.IndexedDesign.pullback_planeEmbedding",
+      "Erdos60.Embedding.IndexedDesign.degree_q_extension_induction",
+      "Erdos60.Embedding.IndexedDesign.near_dense_hasPlaneEmbedding",
+      "Erdos60.Embedding.IndexedDesign.near_dense_plane"
+    ]
+  },
+  {
+    "module": "QuantitativeEdit",
+    "source": "QuantitativeEdit.lean",
+    "sha256": "c580abb91925e898927d93d97c84be1c60ac1c0df5275a3a63575f7f158a0741",
+    "declarations": [
+      "Erdos60.Geometry.Polarity.first_excess_quantitative_edit_bound",
+      "Erdos60.Localization.ActualCoreData.quantitative_polarity_edit_bound"
+    ]
+  },
+  {
+    "module": "SurplusPolarityTransfer",
+    "source": "SurplusPolarityTransfer.lean",
+    "sha256": "c858778d1bfae2c8f2cfe5e6d9baa8406ff4b77f079005aee88aa947a212c37a",
+    "declarations": [
+      "Erdos60.Geometry.Polarity.surplus_edit_radius",
+      "Erdos60.Geometry.Polarity.nearby_lower_bound"
+    ]
+  },
+  {
+    "module": "ActualCompletion",
+    "source": "ActualCompletion.lean",
+    "sha256": "0f6286b78d6bcf80bc63786f4be54d5156fbb3a42887f28421bde081311be21c",
+    "declarations": [
+      "Erdos60.Completion.actual_count_based_completion"
+    ]
+  },
+  {
+    "module": "ExtremalInterpretation",
+    "source": "ExtremalInterpretation.lean",
+    "sha256": "daea22fcd22c38341669ce7c5535b8e597620c3cc4166b25fe84532a5e7eefa8",
+    "declarations": [
+      "Erdos60.Construction.ExtremalInterpretation.cycleCount_le_of_embedding",
+      "Erdos60.Construction.ExtremalInterpretation.cycleCount_iso",
+      "Erdos60.Construction.ExtremalInterpretation.relabel_graph_to_fin",
+      "Erdos60.Construction.ExtremalInterpretation.power_two_sharpness_fin",
+      "Erdos60.Construction.ExtremalInterpretation.exists_subgraph_edge_card",
+      "Erdos60.Construction.ExtremalInterpretation.c4Extremal_eq_of_upper_attained",
+      "Erdos60.Construction.ExtremalInterpretation.minimumCycles_eq_of_lower_attained",
+      "Erdos60.Construction.ExtremalInterpretation.minimumCycles_spec",
+      "Erdos60.Construction.ExtremalInterpretation.power_two_interpretation_of_universal_lower"
+    ]
+  },
+  {
+    "module": "FirstExcessHeadline",
+    "source": "FirstExcessHeadline.lean",
+    "sha256": "15a95cd24f231bacd382fd400f58ed2cd12c0cd59ec5d530c31f99ffaaf446cd",
+    "declarations": [
+      "Erdos60.Headline.first_excess_edges_nat",
+      "Erdos60.Headline.first_excess_structural"
+    ]
+  },
+  {
+    "module": "LinearRangeHeadline",
+    "source": "LinearRangeHeadline.lean",
+    "sha256": "2a3cf3a67a39a3e784d1103fad4d73f00419701c9cc9f8e7abdd75c030e8d901",
+    "declarations": [
+      "Erdos60.Headline.nearby_polarity_of_few_cycles",
+      "Erdos60.Headline.linear_range_lower"
+    ]
+  },
+  {
+    "module": "EqualityHeadline",
+    "source": "EqualityHeadline.lean",
+    "sha256": "80223e730d71c0dc453ea29c03e602a895bd7dab2bc1f76e71623b700cce4ea6",
+    "declarations": [
+      "Erdos60.Headline.orthogonal_matching_extension_of_equality",
+      "Erdos60.Headline.equality_of_orthogonal_matching_extension",
+      "Erdos60.Headline.linear_range_equality_iff"
+    ]
+  },
+  {
+    "module": "ExtremalHeadline",
+    "source": "ExtremalHeadline.lean",
+    "sha256": "7f42b76bc3e8386b7a079770972a0596f02866dc41741ea84e609f9fa8aedc91",
+    "declarations": [
+      "Erdos60.Headline.power_two_extremal_and_supersaturation",
+      "Erdos60.Headline.power_two_c4Extremal",
+      "Erdos60.Headline.power_two_c4Supersaturation"
+    ]
+  }
+]
