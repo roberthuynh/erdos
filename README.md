@@ -68,8 +68,9 @@ I am looking for help reviewing the written proofs linked from the [problem page
 | [585](problems/585/README.md) | How many edges force two edge-disjoint cycles on the same vertex set? | **Conditions that force regular subgraphs**, with explicit examples that avoid them. Further results include exact small cases and graph constructions. [Results and hypotheses](problems/585/README.md#main-results). | **Lean:** 78 registered declarations checked. Computational results and AI-reviewed written arguments are labeled separately. |
 | [60](problems/60/README.md) | How many four-cycles must appear just above the extremal edge threshold? | **Exact count and equality classification** over a linear range of surplus edges at specified projective-plane orders. [Results and hypotheses](problems/60/README.md#main-results). | **Lean:** full stated result checked, including equality and the powers-of-two interpretation. 519 registered declarations audited. No human mathematical review. |
 | [643](problems/643/README.md) | How many triples force a generalized four-cycle? | **An all-order four-thirds bound** for families avoiding the original six-vertex configuration. [Results and hypotheses](problems/643/README.md#main-results). | **Lean:** full stated per-family inequality checked. Written extremal and forcing corollaries labeled separately. No human mathematical review. |
+| [642](problems/642/README.md) | How many edges force a cycle with at least as many chords as vertices? | **A fifth-power logarithmic edge threshold** for every finite simple graph. [Results and hypotheses](problems/642/README.md#main-results). | **Lean:** full stated all-graph result checked. Analytic supplier boundaries identified in the exposition. No human mathematical review. |
 
-The new package gives a partial result; it does not settle Erdős #643.
+Both new packages give partial results; neither settles its original conjecture.
 
 ## Documentation
 
