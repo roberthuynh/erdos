@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-10-16T12:30:05.174390+00:00",
+  "module_count": 12,
+  "proof_source_count": 11,
+  "declaration_count": 607,
+  "headline": "Erdos643.FinalBound.card_le_floor_four_thirds",
+  "per_command_limit_seconds": 240,
+  "execution": "Completed by bounded continuation; unchanged successful checks reused only with matching command, source/pin/checker dependencies and log hashes. Failed or timed-out commands never counted as PASS.",
+  "dependency_fetch": "Pinned dependency caches reused; not cold online install.",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "registry_sha256": "34dd43ace2130f11604702bf68382d2723763cc3b28a541a3c7d69917e3ac0a7",
+  "module_inventory_sha256": "f36f19d62e2bee1ac558e00e99ab460a100d1510c5000b637642ea3d8e928d11",
+  "gate_checks": 30,
+  "phase_logs": {
+    "build": [
+      {
+        "sha256": "588dcb4ce0d64f559bc5862aa93e7cdeb985ef39eb8d8376ab4c54ccaac19d8b",
+        "status": "PASS"
+      },
+      {
+        "sha256": "403d058983abb70426e7e90aab3173ecd0e21224015f0c3dd0dee6c6be7cce89",
+        "status": "PASS"
+      },
+      {
+        "sha256": "c63bde6723a03b725adb09db5fcfea98b5811e944c7ef23c401b44a51dad6463",
+        "status": "PASS"
+      },
+      {
+        "sha256": "34ca6e7e4b812e79c8eff9308da25477a27fa097895959fc525fbf10698173a2",
+        "status": "PASS"
+      },
+      {
+        "sha256": "83ab31be1ef50b1b52248ce1d8e765b274a518e4745399d3b4b0c9ae841b6d33",
+        "status": "PASS"
+      },
+      {
+        "sha256": "8b23b22d07746beb4f21c843a2feb72abae3c3b4c1181f17ad439eab0fac6358",
+        "status": "PASS"
+      },
+      {
+        "sha256": "9166ba7d844f75136a4921482216ae8988b9cf8dbffd7af3c5a3763ab71eff91",
+        "status": "PASS"
+      },
+      {
+        "sha256": "1d6ac7678f08aed0b4a35a0c58ed811a0d136c4f6fdb760116abe18619f5ae00",
+        "status": "PASS"
+      },
+      {
+        "sha256": "f5db099555b72727bc90550cc97fba34b9f84d39da5a08265e3edc2a4d308b80",
+        "status": "PASS"
+      },
+      {
+        "sha256": "a7f2ef8a3acc7d8fbfdb172567bb565c683e4560e8e2c4dc7c7754a3944043a4",
+        "status": "PASS"
+      },
+      {
+        "sha256": "c9fb7518669e8173d8b06a091a1901436c37c45022d04a6f89e152d56a286a7a",
+        "status": "PASS"
+      },
+      {
+        "sha256": "4b51b5f5d8762aa71cd8dd43acdcd00fb1183f980a9b696c12d3c80881050288",
+        "status": "PASS"
+      }
+    ],
+    "audit": [
+      {
+        "sha256": "58e847716b63bce8fd9fe635ffc779491ce0df89a0fa70da27a590b8ce023f60",
+        "status": "PASS"
+      }
+    ],
+    "oracle": [
+      {
+        "sha256": "706ea882e3a781d59d0eff3b66780bdf52b741d80c139e2fe0cc0d3ff66c897f",
+        "status": "PASS"
+      }
+    ],
+    "replay": [
+      {
+        "sha256": "f797ec9c1726eb7eb3d4f7d2b4c735e76bdecce72671fb8891258c97a28b4db8",
+        "status": "PASS"
+      },
+      {
+        "sha256": "f797ec9c1726eb7eb3d4f7d2b4c735e76bdecce72671fb8891258c97a28b4db8",
+        "status": "PASS"
+      },
+      {
+        "sha256": "f797ec9c1726eb7eb3d4f7d2b4c735e76bdecce72671fb8891258c97a28b4db8",
+        "status": "PASS"
+      },
+      {
+        "sha256": "f797ec9c1726eb7eb3d4f7d2b4c735e76bdecce72671fb8891258c97a28b4db8",
+        "status": "PASS"
+      },
+      {
+        "sha256": "f797ec9c1726eb7eb3d4f7d2b4c735e76bdecce72671fb8891258c97a28b4db8",
+        "status": "PASS"
+      },
+      {
+        "sha256": "f797ec9c1726eb7eb3d4f7d2b4c735e76bdecce72671fb8891258c97a28b4db8",
+        "status": "PASS"
+      },
+      {
+        "sha256": "f797ec9c1726eb7eb3d4f7d2b4c735e76bdecce72671fb8891258c97a28b4db8",
+        "status": "PASS"
+      },
+      {
+        "sha256": "f797ec9c1726eb7eb3d4f7d2b4c735e76bdecce72671fb8891258c97a28b4db8",
+        "status": "PASS"
+      },
+      {
+        "sha256": "f797ec9c1726eb7eb3d4f7d2b4c735e76bdecce72671fb8891258c97a28b4db8",
+        "status": "PASS"
+      },
+      {
+        "sha256": "f797ec9c1726eb7eb3d4f7d2b4c735e76bdecce72671fb8891258c97a28b4db8",
+        "status": "PASS"
+      },
+      {
+        "sha256": "f797ec9c1726eb7eb3d4f7d2b4c735e76bdecce72671fb8891258c97a28b4db8",
+        "status": "PASS"
+      },
+      {
+        "sha256": "f797ec9c1726eb7eb3d4f7d2b4c735e76bdecce72671fb8891258c97a28b4db8",
+        "status": "PASS"
+      }
+    ]
+  }
+}
