@@ -1,0 +1,84 @@
+{
+  "problem": "643",
+  "declaration": "Erdos643.FinalBound.card_le_floor_four_thirds",
+  "root_module": "Openmath.Erdos643.FinalBound",
+  "project_sources": {
+    "Openmath.Erdos643.FinalBound": {
+      "path": "Openmath/Erdos643/FinalBound.lean",
+      "sha256": "fd9b9d2952e2c767f6bcc5ccbec3e98c9db213b3525c83acf1afadaa9f7aea25"
+    },
+    "Openmath.Erdos643.AllStarDeletion": {
+      "path": "Openmath/Erdos643/AllStarDeletion.lean",
+      "sha256": "c8af9e74b4991813c536559e851e0ed43dbf5b0b7feef01cbdf3edb86c21df8b"
+    },
+    "Openmath.Erdos643.GraphDeletion": {
+      "path": "Openmath/Erdos643/GraphDeletion.lean",
+      "sha256": "716b3a7ca8a2c9c9694523a54b2797a1bfd383d5bb14d97076422723bc67d7e9"
+    },
+    "Openmath.Erdos643.TriangleCleanup": {
+      "path": "Openmath/Erdos643/TriangleCleanup.lean",
+      "sha256": "99024c89dab15b97f8586bba283b9014d83327ff6fc9dc049bddeb8841deb2a0"
+    },
+    "Openmath.Erdos643.PrivatePairs": {
+      "path": "Openmath/Erdos643/PrivatePairs.lean",
+      "sha256": "a0807124ef0f1a72b41cf7d6510648f3ca7842edf75e3171ac140478b93a3812"
+    },
+    "Openmath.Erdos643.HypergraphBasics": {
+      "path": "Openmath/Erdos643/HypergraphBasics.lean",
+      "sha256": "bb5c59fb53d56a61a18fe3b844631267495e11567d6e4096586161adc3f6f78b"
+    },
+    "Openmath.Erdos643.K5Cleaning": {
+      "path": "Openmath/Erdos643/K5Cleaning.lean",
+      "sha256": "8417d25049e092de133c3f99aa57cd7cd7c76efb9e27a68fce004ed2e85da75f"
+    },
+    "Openmath.Erdos643.K5Local": {
+      "path": "Openmath/Erdos643/K5Local.lean",
+      "sha256": "a2ff488fbcc39a87d15da9cffe5b9480ca4092ff620df9c717b1d9035ccb2c89"
+    },
+    "Openmath.Erdos643.DegreeCharge": {
+      "path": "Openmath/Erdos643/DegreeCharge.lean",
+      "sha256": "3488e953c64551ddefee44a900afdb347253270af4fbedf439699fa596185203"
+    },
+    "Openmath.Erdos643.ProjectionBridge": {
+      "path": "Openmath/Erdos643/ProjectionBridge.lean",
+      "sha256": "c72376a4b09d6f0bff91a673fc74dadb45e483e2111323705d87a8b54c9328d1"
+    },
+    "Openmath.Erdos643.Projection": {
+      "path": "Openmath/Erdos643/Projection.lean",
+      "sha256": "27c2e6936aa86bc9d649c33f1a41b92f5aef863575b62394e348f2de6e1234e8"
+    }
+  },
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "formal_conjectures_rev": "137aec5c7abd3aa61f7a73138a97279acfc79e93",
+  "artifact_hashes": {
+    ".gitignore": "d876fbb1ce560a96eb9807a39f91a9349f0b22ed73af7b80c5ebcef09f2e6849",
+    "CITATION.cff": "f39c385b1ebe689b1491b9efeb788c10ef50726f9791256ddfcfd44827ba378b",
+    "FINDINGS.md": "f5e4dd3447cacc92cb429f4bcb59c72345433c0def226144da30ff67a650bd16",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "0de3de463f02b1b10a2efab888fb374a52934734950903cb2aede3c224f418dc",
+    "Openmath.lean": "a42b48e18106cbc451ee7c73b5057ff55a1e740278f5024e313e393d1dae6d17",
+    "PROOF-MAP.md": "1612a63db9ed7682719093aa31cdb0842c7444bae37029674d5a192fb62e80ef",
+    "PROOF.md": "6ef668a40a6955a9c02a88d6da81394d5c8d22117f7d78b5bdf39856d4222d8e",
+    "README.md": "d47f328726f3f5893e94dbfaf17a0fae7e5a9be077a59120eebaa7f72f40816e",
+    "RESULTS.md": "cd451232f65dc94fae7d1b0a3bede34279b4e08f15b70f0880bed74a556e8895",
+    "SOURCES.md": "b1436f1f25e586d386294c84c268ffb2c93213fe232b46cbdf904d003b306cd5",
+    "VERIFICATION.md": "ee38c44053dc927305237355f9fb362695fcd86c7d4a57d8871afccc5d51fa7a",
+    "check.sh": "6888ceba18510679ec37421e411ba350406cdd2a61c49a03837770c32da7f7f6",
+    "lake-manifest.json": "84f1e2a54574bd9e19d817640db956fe28f832d5b2e0c18e5625c69e9f2b5ed1",
+    "lakefile.toml": "4704229faa8823fec1f8d24eac5aaf3d97f1ab38dd6c59bdf19472955717e7ef",
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+    "scripts/check_axioms.py": "62bcb4e8fe9e1e43f6c3f7fe3708d5b5524a34381754c303c7b98db09b894376",
+    "scripts/check_docs.py": "49d5acda1aca98ecc668e1ea4c06ad905992bce74210828b41181e4999341e1e",
+    "scripts/check_full.py": "d1d4ac8e19c0ac979fab1a6b9d674cd596aee07f2d1c7a528b8526595406191c",
+    "scripts/headline-theorems.json": "34dd43ace2130f11604702bf68382d2723763cc3b28a541a3c7d69917e3ac0a7",
+    "scripts/oracle.py": "f4b8e66113ece665b05806620f62dbcb5da17867f0880cef199d2ee7eea8c7ea",
+    "scripts/proof-modules.json": "f36f19d62e2bee1ac558e00e99ab460a100d1510c5000b637642ea3d8e928d11",
+    "scripts/replay_modules.py": "61aad8635df6caf253c6c1a061c41e1f68f77e9a5886bafa57129ef9e0f90a57",
+    "scripts/source_modules.py": "64de21d21833aaccb431edca950a9abd11ab7c8bab8bafdaa2b989bf3eaaa213",
+    "scripts/source_scan.py": "c33fb70e3dd25f748973fa4f59d927e9afb5ed89766672368185be6fa0f4c21e",
+    "scripts/test_check_docs.py": "9dcec23af330fd3a67fc96547f92e952a3badbb43d3c0aadf5d98e2684a91051",
+    "scripts/test_oracle.py": "49a364fee3e9920c7ed0245d02e80f77b1a6a8dc3b3b1b0635f5a1b4b6536124",
+    "verification-summary.json": "4955adcfe7e03d11dd05c514823e246b59f9457b4b44cdf9122499797198e16e"
+  }
+}

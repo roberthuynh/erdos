@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Unpublished AI-developed formal proof. Cite the exact source snapshot and retain the review and priority limits."
+title: "Erdős #643: Generalized four-cycles in 3-uniform hypergraphs"
+authors:
+  - family-names: Huynh
+    given-names: Robert
+repository-code: "https://github.com/roberthuynh/erdos"
+license: Apache-2.0
