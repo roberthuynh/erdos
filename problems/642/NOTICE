@@ -1,0 +1,9 @@
+Erdős 642 formal proof package
+Copyright 2026 Robert Huynh.
+Apache License, Version 2.0.
+
+Mathematical antecedents are attributed in SOURCES.md. No third-party paper
+PDF or extracted paper text is distributed in this package. The pinned
+mathlib and formal-conjectures dependencies retain their own licenses and
+notices when fetched; they are not vendored here. Existing source comments
+and declarations are preserved byte for byte.
