@@ -3,6 +3,7 @@
 import argparse
 import datetime
 import hashlib
+import heapq
 import json
 import os
 from pathlib import Path, PurePosixPath
@@ -72,6 +73,71 @@ def load_registry(root=ROOT):
     return result
 
 
+def lean_imports(text):
+    """Read import lines after masking nested comments and escaped strings."""
+    masked=[]; i=0; depth=0; string=False
+    while i < len(text):
+        pair=text[i:i+2]; char=text[i]
+        if depth:
+            if pair=='/-': depth+=1; masked.extend('  '); i+=2
+            elif pair=='-/': depth-=1; masked.extend('  '); i+=2
+            else: masked.append('\n' if char=='\n' else ' '); i+=1
+        elif string:
+            if char=='\\': masked.extend('  '); i+=2
+            elif char=='"': string=False; masked.append(' '); i+=1
+            else: masked.append('\n' if char=='\n' else ' '); i+=1
+        elif pair=='/-': depth=1; masked.extend('  '); i+=2
+        elif pair=='--':
+            end=text.find('\n',i)
+            if end<0: end=len(text)
+            masked.extend(' '*(end-i)); i=end
+        elif char=='"': string=True; masked.append(' '); i+=1
+        else: masked.append(char); i+=1
+    if depth or string: raise ValueError('Unterminated Lean comment or string')
+    imports=[]
+    for line in ''.join(masked).splitlines():
+        match=re.match(r'^\s*(?:(?:public|meta)\s+)*import\s+(.+?)\s*$',line)
+        if match:
+            names=match.group(1).split()
+            if any(not re.fullmatch(r'[A-Za-z_][A-Za-z_0-9.]*',name) for name in names):
+                raise ValueError('Unsupported Lean import syntax')
+            imports.extend(names)
+    return imports
+
+
+def build_order(package, modules, target):
+    """Order exactly the configured local DAG, with dependencies before importers."""
+    if not modules or len(modules)!=len(set(modules)):
+        raise ValueError('Empty or duplicate configured modules')
+    if any(not re.fullmatch(r'[A-Za-z_][A-Za-z_0-9.]*',m) for m in modules):
+        raise ValueError('Invalid module list')
+    configured=set(modules)
+    if target not in configured: raise ValueError('Build root is not configured')
+    dependencies={}
+    for module in sorted(configured):
+        source=inside(package,module.replace('.','/')+'.lean')
+        dependencies[module]=set()
+        for imported in lean_imports(source.read_text()):
+            if imported in configured: dependencies[module].add(imported)
+            elif (package/(imported.replace('.','/')+'.lean')).exists():
+                raise ValueError(f'Unconfigured local import: {imported}')
+    # Requiring every other module before the aggregate also detects a child
+    # importing the aggregate instead of silently breaking dependency order.
+    dependencies[target].update(configured-{target})
+    users={m:set() for m in configured}
+    for module,deps in dependencies.items():
+        for dependency in deps: users[dependency].add(module)
+    ready=[m for m,deps in dependencies.items() if not deps]; heapq.heapify(ready)
+    result=[]
+    while ready:
+        module=heapq.heappop(ready); result.append(module)
+        for user in sorted(users[module]):
+            dependencies[user].remove(module)
+            if not dependencies[user]: heapq.heappush(ready,user)
+    if len(result)!=len(configured): raise ValueError('Cycle in configured Lean imports')
+    return result
+
+
 def execute(cmd, cwd, log, run=subprocess.run):
     with log.open('w') as stream:
         try:
@@ -101,12 +167,8 @@ def run_problem(item, mode, output, root=ROOT, run=subprocess.run):
     if mode=='full' and 'lean' in item:
         cfg=item['lean']
         modules=invoke(['python3','-B',cfg['coverage'],'--list'],'modules').splitlines()
-        if not modules or any(not re.fullmatch(r'[A-Za-z_][A-Za-z_0-9.]*',m) for m in modules):
-            raise ValueError('Invalid module list')
-        if cfg['target'] not in modules: raise ValueError('Build root is not configured')
-        # Bound each build separately; the aggregate root is last.
-        # A cold rebuild of all 438 modules can exceed one command's bound.
-        for module in [m for m in modules if m != cfg['target']] + [cfg['target']]:
+        # Each bounded build now has its configured local dependencies built.
+        for module in build_order(package,modules,cfg['target']):
             invoke(['lake','build',module],'build-'+module)
         invoke(['python3','-B',cfg['axioms']],'axioms',require='STATEMENTS: PASS')
         entries=json.loads((package/cfg['registry']).read_text())

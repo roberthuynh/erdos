@@ -7,7 +7,7 @@ import subprocess
 import tempfile
 import unittest
 from unittest.mock import Mock
-from check import inside, load_registry, run_problem
+from check import inside, load_registry, run_problem, build_order, lean_imports
 from select_problems import select
 from check_collection import check_collection, prose
 import hashlib
@@ -71,6 +71,8 @@ class CollectionTests(unittest.TestCase):
         receipt=json.loads((self.root/'output/receipt.json').read_text());self.assertEqual(receipt['status'],'UNKNOWN')
     def lean_fixture(self, omit_oracle_marker=False):
         self.item['lean']={'registry':'headlines.json','coverage':'coverage.py','axioms':'axioms.py','replay':'replay.py','oracle':'check.sh','target':'Root'}
+        (self.package/'Root.lean').write_text('import Leaf\n')
+        (self.package/'Leaf.lean').write_text('import Mathlib\n')
         (self.package/'headlines.json').write_text(json.dumps([{'module':'Leaf','declaration':'result','oracle':True}]))
         def fake(argv, **kwargs):
             command=argv[2:]
@@ -96,6 +98,29 @@ class CollectionTests(unittest.TestCase):
     def test_timeout_exit_code_remains_unknown(self):
         run=Mock(return_value=subprocess.CompletedProcess([],124))
         with self.assertRaisesRegex(RuntimeError,'UNKNOWN'):run_problem(self.item,'docs',self.root/'output',self.root,run)
+    def test_build_order_dependencies_first_and_exact_set(self):
+        for name,text in {'Root':'import Parent', 'Parent':'import Child', 'Child':'import Mathlib', 'Other':''}.items():
+            (self.package/(name+'.lean')).write_text(text)
+        order=build_order(self.package,['Root','Parent','Other','Child'],'Root')
+        self.assertEqual(order,['Child','Other','Parent','Root'])
+        self.assertEqual(order,build_order(self.package,['Child','Other','Parent','Root'],'Root'))
+        self.assertEqual(set(order),{'Root','Parent','Other','Child'})
+    def test_import_parser_ignores_comments_and_strings(self):
+        text='import Child /- import Fake /- nested -/ -/\n-- import Hidden\ndef s := "escaped \\" text\nimport StringFake"\npublic import Mathlib\n'
+        self.assertEqual(lean_imports(text),['Child','Mathlib'])
+    def test_build_order_rejects_cycle_and_duplicates(self):
+        (self.package/'Root.lean').write_text('import Child')
+        (self.package/'Child.lean').write_text('import Root')
+        with self.assertRaisesRegex(ValueError,'Cycle'):build_order(self.package,['Child','Root'],'Root')
+        with self.assertRaisesRegex(ValueError,'duplicate'):build_order(self.package,['Root','Root'],'Root')
+    def test_build_order_rejects_missing_and_unconfigured_sources(self):
+        (self.package/'Root.lean').write_text('import Child')
+        with self.assertRaisesRegex(ValueError,'Missing'):build_order(self.package,['Root','Child'],'Root')
+        (self.package/'Child.lean').write_text('')
+        with self.assertRaisesRegex(ValueError,'Unconfigured'):build_order(self.package,['Root'],'Root')
+    def test_import_parser_rejects_unterminated_masks(self):
+        for text in ['/- unterminated','"unterminated']:
+            with self.assertRaisesRegex(ValueError,'Unterminated'):lean_imports(text)
     def test_navigation_and_prose_pass(self):self.assertEqual(check_collection(self.root),1)
     def test_author_words_cannot_silently_change(self):
         p=self.root/'README.md';p.write_text(p.read_text().replace('My own words.','Generated replacement.'))
