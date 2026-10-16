@@ -1,0 +1,59 @@
+{
+  "source_commit": "5118cce76dcedfbad6722a202ee0f1e282be4508",
+  "files": [
+    {
+      "path": "problems/585/findings/FINDINGS.md",
+      "sha256": "f3ebe3e95e3b1de9c9598d9f268a834c2bb79165c7012258e54efb61a50cfa4f",
+      "previous_sha256": "65c4139980c49c6c737d629278c600974b9322bb093f55edbf8fa46bd0375c65",
+      "revision": "2026-10-16 requested final wording review: restore balanced-deletion hypothesis and nonempty convention; clarify Lean acceptance, control timeout and shared-context rationale. Proof sources and recorded decisions unchanged.",
+      "previous_review_sha256": "f0b4ec9758ae7ff07898141cc4f47aa642d69a3e79fce4ecacc588d9724872eb"
+    },
+    {
+      "path": "problems/585/findings/DECISIONS.md",
+      "sha256": "2259fd1c7b0901e6f5b3720a5f5c38ce51aa3ad032a0e823b98aa3f2150fec88",
+      "previous_review_sha256": "2f8e70ebfd9dc2682cc04ab8dd547483e25f9dd0c8e568742a486cd2ea903d82",
+      "revision": "2026-10-16 requested final wording review: restore balanced-deletion hypothesis and nonempty convention; clarify Lean acceptance, control timeout and shared-context rationale. Proof sources and recorded decisions unchanged."
+    }
+  ],
+  "blocks": [
+    {
+      "label": "intro",
+      "path": "README.md",
+      "start": "Hi, I'm Robert Huynh",
+      "end": "\n## How this was made",
+      "sha256": "8e6e23547355cefce474409d42be3e5f0c4994f174902c8c2755623a0baccc14",
+      "previous_sha256": "41ac6a301c2334f827016dc24e479d98d0fb3afda99b8fa42a20c7f28ed2fed6",
+      "revision": "2026-10-16 Robert-requested punctuation and concrete tools, context/memory management, coordination and evaluation account; evidence checked against private implementation and public decisions.",
+      "previous_review_sha256": "1babf5de47ea842294c29b90d4644a0464905552dc463f2621aea5e200bbd54c"
+    },
+    {
+      "label": "methods",
+      "path": "README.md",
+      "start": "## How this was made\n",
+      "end": "\n## AI use",
+      "sha256": "678c0f87b2f93c0ddddb8ec5b0e053b4c5d550cf7928a90ee82bbdca88b63d84",
+      "previous_sha256": "3d8ec5faf0b03761514a730f7f588a5a0b752c2faaebeff180ac4b439300e4fc",
+      "revision": "2026-10-16 dictated section four: impact rubric, plain-language search explanation and personal observation about reduced intervention. No quantitative performance claim.",
+      "previous_review_sha256": "c131165b93a8525a27efa6aa090733ad81113cd84b68d2e0658f2b99830366fe"
+    },
+    {
+      "label": "AI use",
+      "path": "README.md",
+      "start": "## AI use\n",
+      "end": "\n## Help needed",
+      "sha256": "9c358bbe03cf28a157469cf9d1e5a764ec8733f32a80c53e7f4006cf5f74341d",
+      "previous_review_sha256": "ac753583dac949f0e9f53c37ca61e3808cd121b382b916e6ae7f01dbf237a0ef",
+      "revision": "2026-10-16 requested fresh-reader proofreading: concrete sourced decision, clear chronology, personal observation and one consolidated review invitation. Dictated introduction unchanged."
+    },
+    {
+      "label": "written-proof review request",
+      "path": "README.md",
+      "start": "## Help needed\n",
+      "end": "\n## Collection",
+      "sha256": "21ceafa1f0718d5cb281dee1c34f461d7c75001c3d41fdc2451e2dc2c4e98d60",
+      "previous_review_sha256": "7707825cc26de3098dbb5a655e75086c1829de0acdeaa58abe06c50d62da50d0",
+      "revision": "2026-10-16 requested fresh-reader proofreading: concrete sourced decision, clear chronology, personal observation and one consolidated review invitation. Dictated introduction unchanged."
+    }
+  ],
+  "editorial_revision": "Section four follows Robert’s latest dictation. Earlier final-review corrections remain; exact versions and changes retained in private preparation records."
+}

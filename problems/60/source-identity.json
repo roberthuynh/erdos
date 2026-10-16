@@ -1,0 +1,109 @@
+{
+  "scope": "Frozen written-document identities; formal source identities and theorem checks are separate",
+  "files": [
+    {
+      "file": "CORE-AND-RETAINED-PATHS.md",
+      "frozen_sha256": "db6800221130c5d14acde1f58cf54210d8864ac15547a8b1c40445443c03289d",
+      "export_sha256": "3241f1017e923563076527e3d8664af4f3694441d9c5be7aca957a14ee04c9c5",
+      "transformation": "2026-10-16 verification-status and source-attribution sync. Original source identity retained; written theorem hypotheses and proof steps unchanged. Exact edit inventory retained in release preparation.",
+      "previous_export_sha256": "5dd9d42290b21c4b0e23bf16a80476361dad391adfe152bf37a88514a6081f6b"
+    },
+    {
+      "file": "COUNT-BASED-COMPLETION.md",
+      "frozen_sha256": "8e1a5e19c4c8290902fb9ddca3504b775f20a3b87f7eccbb8b8225b1e161a14d",
+      "export_sha256": "8261a51377ee509cb1b7fe3ce299d180f3b07ab7c283cb2ea86db06c1eccc072",
+      "transformation": "2026-10-16 verification-status and source-attribution sync. Original source identity retained; written theorem hypotheses and proof steps unchanged. Exact edit inventory retained in release preparation.",
+      "previous_export_sha256": "90bd004eb989c61ca70f73a8431923d12b3393f93dc90e37cb2683327800f0d8",
+      "editorial_changes": [
+        {
+          "from": "## 8. Application to the frozen linear support construction",
+          "to": "## 8. Application to the linear support construction"
+        },
+        {
+          "from": "The conditional actual-path argument in the frozen completion-to-cover pass is now applicable:",
+          "to": "The [retained-path argument](CORE-AND-RETAINED-PATHS.md) is now applicable:"
+        },
+        {
+          "from": "This pays the previously missing completion supplier.",
+          "to": "This establishes the completion needed for the global cycle cover."
+        }
+      ]
+    },
+    {
+      "file": "LINEAR-RANGE-THEOREM.md",
+      "frozen_sha256": "4afa70303c75e4d77d502c8e0c80f530e7358d8c6e202f35cfbc5ed848816670",
+      "export_sha256": "410248457d6de88368e53bb9e1956bfd8a64ffcf41d495e05498745602c2a671",
+      "transformation": "2026-10-16 verification-status and source-attribution sync. Original source identity retained; written theorem hypotheses and proof steps unchanged. Exact edit inventory retained in release preparation.",
+      "previous_export_sha256": "768c4f4b819e4d6caa2fdd05c818d20b44d9e6010805afa6731747afe544c4bf"
+    },
+    {
+      "file": "LINEAR-SUPPORT-THEOREM.md",
+      "frozen_sha256": "7dfe4f0c376ec9ca974ab7f713e0fb2db1ccb3973b48a09d18f7085cc7c23b50",
+      "export_sha256": "21bd064a37e661aa49d5ea5349f403eb1d72f568d1d5cff52d39b7d3fd7618ac",
+      "transformation": "2026-10-16 verification-status and source-attribution sync. Original source identity retained; written theorem hypotheses and proof steps unchanged. Exact edit inventory retained in release preparation.",
+      "previous_export_sha256": "9e8c10316259b5baa9c640f81c0aee40f716e6c55a7dcdf8b66b2975fe7cd05d"
+    },
+    {
+      "file": "LITERATURE-COMPARISON.md",
+      "frozen_sha256": "bce145809e321fdb629e17820a2978bfe9bba8b8a05d316edff694e3483c1ed6",
+      "export_sha256": "606a7364e8f6362d2fd4b8f94e2ebe1ad78ab1b7c12146103a9055df002d79d2",
+      "transformation": "2026-10-16 verification-status and source-attribution sync. Original source identity retained; written theorem hypotheses and proof steps unchanged. Exact edit inventory retained in release preparation.",
+      "previous_export_sha256": "e2b2806645c6b5a1f016005494aa862966e6712336a1f500400eb2f2750aa387",
+      "editorial_changes": [
+        {
+          "from": "Theorem 9.1 gives its M-based even-order form.",
+          "to": "Theorem 9.1 gives its M-based even-order form. Theorem 1.6(B) already determines the asymptotic order of magnitude for every feasible positive surplus at these powers-of-two orders."
+        },
+        {
+          "from": "The candidate extends the exact interval to a uniform linear interval.",
+          "to": "The candidate extends the exact interval and equality classification to a uniform linear interval; it does not propose a new asymptotic order of magnitude."
+        }
+      ]
+    },
+    {
+      "file": "LOCALIZATION-ARGUMENT.md",
+      "frozen_sha256": "048b2f13b6dd3693d966398a6080f51f9db2ed946729d48c8a60417a0949d399",
+      "export_sha256": "7cecb864c078e6cc4d204e79a3b6a19b231d41693f1ecfa7b179ae8ecca91201",
+      "transformation": "2026-10-16 verification-status and source-attribution sync. Original source identity retained; written theorem hypotheses and proof steps unchanged. Exact edit inventory retained in release preparation.",
+      "previous_export_sha256": "541108733b318e85ae7c400d75b886b6e8d8b5867e99aa0a5d93a021c548ca31"
+    },
+    {
+      "file": "README.md",
+      "frozen_sha256": "435d74c26c6b6baf3c7ace11f22ad249842ceb807a03e65d9f1855c2f736123b",
+      "export_sha256": "3a658516fafe5813f052b2ee57793626319b1f0648d2b19d263c6963dd541412",
+      "transformation": "2026-10-16 verification-status and source-attribution sync. Original source identity retained; written theorem hypotheses and proof steps unchanged. Exact edit inventory retained in release preparation.",
+      "previous_export_sha256": "c7ef24dd7e8b787a7089f66eff0e28462026c7266b15e6f44a76b1be69bf84e0",
+      "editorial_changes": [
+        {
+          "from": "For a positive integer n and integer t≥1, let h(n,t)",
+          "to": "For integers n≥1 and 1≤t≤n(n−1)/2−ex(n,C4), let h(n,t)"
+        },
+        {
+          "from": "The first-excess values and matching constructions are already known.",
+          "to": "The first-excess values and matching constructions are already known.\n\nTheir [Theorem 1.6(B)](https://doi.org/10.4208/csiam-am.SO-2021-0006) also gives h(q²+q+1,t) ≥ (1/2+o(1))tq and h(q²+q+1,t) = Θ(tq+t⁴/q⁸), for feasible positive t as q tends to infinity through powers of two. The proposed extension concerns the exact minimum and equality cases, not a new asymptotic order of magnitude."
+        },
+        {
+          "from": "[parent theorem](LINEAR-RANGE-THEOREM.md)",
+          "to": "[candidate theorem and proof](LINEAR-RANGE-THEOREM.md)"
+        },
+        {
+          "from": "The proof/source documents preserve the mathematical wording; presentation edits and source hashes are recorded",
+          "to": "The proof arguments and hypotheses are retained; exposition, source-comparison updates and source hashes are recorded"
+        }
+      ]
+    },
+    {
+      "file": "SOURCES.md",
+      "frozen_sha256": "a492ec1fcc0d9b6d4af43346acbd0cb344a24519bcbc58ecb45e5906b5f75c5f",
+      "export_sha256": "835dfc722b653ff49e04b3d788c58e193b70aece12bd065fa40168a81bf728ba",
+      "transformation": "2026-10-16 verification-status and source-attribution sync. Original source identity retained; written theorem hypotheses and proof steps unchanged. Exact edit inventory retained in release preparation.",
+      "previous_export_sha256": "9fd94260207dc2dfb1c2b0bf5336fa7225c3258350c92e2a3b403f45627f3fac",
+      "editorial_changes": [
+        {
+          "from": "[public preprint, arXiv:1912.00986](https://arxiv.org/abs/1912.00986)",
+          "to": "[public preprint, arXiv:1912.00986v4, 28 January 2021](https://arxiv.org/abs/1912.00986v4)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,12 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite it."
-title: "Erdős Problem 585: Lean-checked results and computations"
+message: "To cite a specific result, use its problem-specific citation and exact source or declaration."
+title: "Erdős: AI-assisted research in combinatorics and graph theory"
 authors:
   - family-names: Huynh
     given-names: Robert
 type: software
-version: "0.4.1"
-date-released: "2026-10-15"
 repository-code: "https://github.com/roberthuynh/erdos"
 license: Apache-2.0
-abstract: "Lean-checked results, computations and a census on Erdős Problem 585 (graphs without two edge-disjoint cycles on the same vertex set), produced with AI agents to see how far AI-assisted research can go."
+abstract: "A collection of written mathematical arguments, reproducible computations and Lean formalizations, organized by problem with result-specific evidence and limitations."

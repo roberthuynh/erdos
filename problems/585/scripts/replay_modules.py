@@ -32,7 +32,13 @@ def main():
     args = parser.parse_args()
     try:
         replay(selected=args.module)
-    except (ValueError, OSError, subprocess.CalledProcessError) as error:
+    except subprocess.CalledProcessError as error:
+        if error.returncode == 124:
+            print(f'KERNEL REPLAY: UNKNOWN: {error}', file=sys.stderr)
+            return 124
+        print(f'KERNEL REPLAY: FAIL: {error}', file=sys.stderr)
+        return 1
+    except (ValueError, OSError) as error:
         print(f'KERNEL REPLAY: FAIL: {error}', file=sys.stderr)
         return 1
     return 0
