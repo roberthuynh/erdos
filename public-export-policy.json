@@ -3257,7 +3257,19 @@
     "scripts/export_manifest.py",
     "scripts/select_problems.py",
     "scripts/test_collection.py",
-    "scripts/test_export_manifest.py"
+    "scripts/test_export_manifest.py",
+    "problems/85/CITATION.cff",
+    "problems/85/DEPENDENCIES.md",
+    "problems/85/FINDINGS.md",
+    "problems/85/NOTICE",
+    "problems/85/PROOF.md",
+    "problems/85/README.md",
+    "problems/85/RESULTS.md",
+    "problems/85/SOURCES.md",
+    "problems/85/VERIFICATION.md",
+    "problems/85/document-hashes.json",
+    "problems/85/scripts/check_docs.py",
+    "problems/85/scripts/test_check_docs.py"
   ],
   "required_files": [
     ".github/workflows/ci.yml",

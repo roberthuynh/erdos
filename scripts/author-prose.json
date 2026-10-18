@@ -21,9 +21,9 @@
       "path": "README.md",
       "start": "Hi, I'm Robert Huynh",
       "end": "\n## How this was made",
-      "sha256": "8e6e23547355cefce474409d42be3e5f0c4994f174902c8c2755623a0baccc14",
-      "previous_sha256": "41ac6a301c2334f827016dc24e479d98d0fb3afda99b8fa42a20c7f28ed2fed6",
-      "revision": "2026-10-16 Robert-requested punctuation and concrete tools, context/memory management, coordination and evaluation account; evidence checked against private implementation and public decisions.",
+      "sha256": "9e45023c1abf9c9964c30d5bbb23325654768133dd47ea72de8d2830800c3725",
+      "previous_sha256": "8e6e23547355cefce474409d42be3e5f0c4994f174902c8c2755623a0baccc14",
+      "revision": "2026-10-17 Robert explicitly requested generalizing the unsolved-problem statement to the whole collection; collaboration sentence otherwise preserved.",
       "previous_review_sha256": "1babf5de47ea842294c29b90d4644a0464905552dc463f2621aea5e200bbd54c"
     },
     {
@@ -55,5 +55,5 @@
       "revision": "2026-10-16 requested fresh-reader proofreading: concrete sourced decision, clear chronology, personal observation and one consolidated review invitation. Dictated introduction unchanged."
     }
   ],
-  "editorial_revision": "Section four follows Robert’s latest dictation. Earlier final-review corrections remain; exact versions and changes retained in private preparation records."
+  "editorial_revision": "Section four follows Robert\u2019s latest dictation. Earlier final-review corrections remain; exact versions and changes retained in private preparation records."
 }
