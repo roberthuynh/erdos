@@ -188,6 +188,37 @@
         "oracle": "check.sh",
         "target": "Openmath"
       }
+    },
+    {
+      "id": "85",
+      "title": "Rank-controlled projective-incidence repair",
+      "topics": [
+        "incidence geometry",
+        "stability",
+        "graph theory"
+      ],
+      "path": "problems/85",
+      "checks": {
+        "docs": [
+          [
+            "python3",
+            "-B",
+            "scripts/check_docs.py"
+          ]
+        ],
+        "full": [
+          [
+            "python3",
+            "-B",
+            "scripts/check_docs.py"
+          ],
+          [
+            "python3",
+            "-B",
+            "scripts/test_check_docs.py"
+          ]
+        ]
+      }
     }
   ]
 }

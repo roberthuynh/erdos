@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Cite the exact public Git commit and proof section; this package is written mathematics with AI review."
+title: "Rank-controlled projective-incidence repair (Erdős 85 research)"
+authors:
+  - family-names: Huynh
+    given-names: Robert
+license: Apache-2.0
+repository-code: "https://github.com/roberthuynh/erdos"
+preferred-citation:
+  type: unpublished
+  title: "Rank-controlled projective-incidence repair"
+  authors:
+    - family-names: Huynh
+      given-names: Robert
+  year: "2026"
+  notes: "AI-reviewed written manuscript; cite the exact repository commit and proof section. No Lean verification or human mathematical review."

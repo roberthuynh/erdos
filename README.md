@@ -4,7 +4,7 @@ Hi, I'm Robert Huynh, currently a second-year MBA student at Harvard Business Sc
 
 I'm always curious to see how far I can push the limits of AI before I find failure (and trust me, I've found a lot of it)!
 
-We have not solved Erdős #585 or #60 - BUT I hope this work inspires more collaboration between mathematicians and people like me, who found their interest in math later in life and still want to contribute.
+We have not solved any of these Erdős problems, but I hope this work inspires more collaboration between mathematicians and people like me, who found their interest in math later in life and still want to contribute.
 
 ## How this was made
 
@@ -69,8 +69,9 @@ I am looking for help reviewing the written proofs linked from the [problem page
 | [60](problems/60/README.md) | How many four-cycles must appear just above the extremal edge threshold? | **Exact count and equality classification** over a linear range of surplus edges at specified projective-plane orders. [Results and hypotheses](problems/60/README.md#main-results). | **Lean:** full stated result checked, including equality and the powers-of-two interpretation. 519 registered declarations audited. No human mathematical review. |
 | [643](problems/643/README.md) | How many triples force a generalized four-cycle? | **An all-order four-thirds bound** for families avoiding the original six-vertex configuration. [Results and hypotheses](problems/643/README.md#main-results). | **Lean:** full stated per-family inequality checked. Written extremal and forcing corollaries labeled separately. No human mathematical review. |
 | [642](problems/642/README.md) | How many edges force a cycle with at least as many chords as vertices? | **A fifth-power logarithmic edge threshold** for every finite simple graph. [Results and hypotheses](problems/642/README.md#main-results). | **Lean:** full stated all-graph result checked. Analytic supplier boundaries identified in the exposition. No human mathematical review. |
+| [85](problems/85/README.md) | Is the four-cycle minimum-degree threshold eventually nondecreasing? | **Projective-incidence repair** for arbitrary point and hyperplane maps under an explicit frame-survival/error hypothesis. A separate direction; the original question remains open. [Results and hypotheses](problems/85/README.md#main-results). | **AI-reviewed written candidate.** No Lean verification or human mathematical review; public priority unresolved. |
 
-Both new packages give partial results; neither settles its original conjecture.
+None of the packages settles its original Erdős problem. The problem pages distinguish partial results from separate research directions and state their evidence and limitations.
 
 ## Documentation
 
