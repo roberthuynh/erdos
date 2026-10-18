@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Negative controls for the written-only document checker."""
+"""Negative controls for the package identity checker."""
 import contextlib
 import hashlib
 import io
@@ -16,7 +16,7 @@ class NegativeControls(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         collection = Path(self.tmp.name)/'collection'
         self.root = collection/'problems/85'
-        shutil.copytree(ROOT,self.root,ignore=shutil.ignore_patterns('__pycache__'))
+        shutil.copytree(ROOT,self.root,ignore=shutil.ignore_patterns('__pycache__', '.lake'))
         for name in ['README.md','CONTRIBUTING.md']:
             shutil.copyfile(ROOT.parents[1]/name,collection/name)
     def rehash(self, name):

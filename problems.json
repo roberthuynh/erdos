@@ -218,6 +218,14 @@
             "scripts/test_check_docs.py"
           ]
         ]
+      },
+      "lean": {
+        "registry": "scripts/headline-theorems.json",
+        "coverage": "scripts/source_modules.py",
+        "axioms": "scripts/check_axioms.py",
+        "replay": "scripts/replay_modules.py",
+        "oracle": "check.sh",
+        "target": "Openmath"
       }
     }
   ]

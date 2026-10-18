@@ -1,6 +1,6 @@
 # Rank-controlled projective-incidence rigidity by weighted chart transport
 
-Written proof dated 16 October 2026. AI-written and AI-reviewed; no Lean verification or human mathematical review. Public priority is unresolved. This exposition retains the frozen mathematical argument. “Author claim” identifies its written-proof status, not a formal certificate.
+Written proof dated 16 October 2026. AI-written and AI-reviewed. The full stated theorem and corollaries were subsequently verified in Lean; no human mathematical review. Public priority is unresolved. This exposition retains the frozen mathematical argument. “Author claim” identifies its written-proof status, not a formal certificate.
 
 ## 1. The candidate theorem
 

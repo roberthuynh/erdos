@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Cite the exact public Git commit and proof section; this package is written mathematics with AI review."
+message: "Cite the exact public Git commit and proof section; the full stated repair theorem and two corollaries are checked in Lean."
 title: "Rank-controlled projective-incidence repair (Erdős 85 research)"
 authors:
   - family-names: Huynh
@@ -13,4 +13,4 @@ preferred-citation:
     - family-names: Huynh
       given-names: Robert
   year: "2026"
-  notes: "AI-reviewed written manuscript; cite the exact repository commit and proof section. No Lean verification or human mathematical review."
+  notes: "Full stated repair theorem and two corollaries checked in Lean; no human mathematical review. AI-written proof and exposition; cite the exact repository commit and proof section."

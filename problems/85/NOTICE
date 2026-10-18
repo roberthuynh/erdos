@@ -5,4 +5,5 @@ Apache License, Version 2.0. See the collection LICENSE.
 
 AI-written proof and exposition; no AI co-author attribution.
 External mathematical sources are cited in SOURCES.md and are not redistributed.
-No claim of public priority, Lean verification or human mathematical review.
+No claim of public priority or human mathematical review.
+Lean verification scope is documented in VERIFICATION.md.

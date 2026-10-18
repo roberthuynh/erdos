@@ -1,6 +1,6 @@
 # Proof dependencies and provenance
 
-The complete proof is [PROOF.md](PROOF.md). There are no software or Lean dependencies for its mathematical assertion.
+The complete proof is [PROOF.md](PROOF.md). The Lean proof uses the pinned toolchain and dependency revisions in `lean-toolchain`, `lakefile.toml` and `lake-manifest.json`, including mathlib and formal-conjectures. The 64 proof files reproduce the exact accepted formalization, with an additional aggregate import module.
 
 ## Facts used
 

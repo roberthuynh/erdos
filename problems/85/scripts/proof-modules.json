@@ -1,0 +1,267 @@
+{
+  "Openmath.IncidenceRepair.AdditiveCorrection": {
+    "source": "Openmath/IncidenceRepair/AdditiveCorrection.lean",
+    "sha256": "f8b926e49d690f725e033b3512f9c051f800ed076e71df3f85a797d09102c8fa"
+  },
+  "Openmath.IncidenceRepair.AffineGeometry": {
+    "source": "Openmath/IncidenceRepair/AffineGeometry.lean",
+    "sha256": "a82dd63f82ded067d0d0c0be6e0ae7c3c2cdee9fbbb7ac70aaf8e3ed799f7cf2"
+  },
+  "Openmath.IncidenceRepair.AllSlopes": {
+    "source": "Openmath/IncidenceRepair/AllSlopes.lean",
+    "sha256": "b4677948973e1de3525db864304ef941dd86793c431b162d53672cfb24071151"
+  },
+  "Openmath.IncidenceRepair.CanonicalCharts": {
+    "source": "Openmath/IncidenceRepair/CanonicalCharts.lean",
+    "sha256": "4a265eb9cbe780d9082dfb4ed4cfb9ae07663a2960ea14aa040dbd9ee8c48b21"
+  },
+  "Openmath.IncidenceRepair.CertificateGeometry": {
+    "source": "Openmath/IncidenceRepair/CertificateGeometry.lean",
+    "sha256": "3cea5bdc19a9cd37662db7d52a38204106ce8c19e94a6d8e167e2b6373501450"
+  },
+  "Openmath.IncidenceRepair.ChartBaseFromInitial": {
+    "source": "Openmath/IncidenceRepair/ChartBaseFromInitial.lean",
+    "sha256": "bf41d9ea329d82ed3d48807d445a696830961dbea98bdcaf6af029adc9f72da1"
+  },
+  "Openmath.IncidenceRepair.ChartCoherence": {
+    "source": "Openmath/IncidenceRepair/ChartCoherence.lean",
+    "sha256": "e19c5b4cf49869533c0694d28e0a5321746bc200d8f136da5c6045637ad7d1fb"
+  },
+  "Openmath.IncidenceRepair.ChartCost": {
+    "source": "Openmath/IncidenceRepair/ChartCost.lean",
+    "sha256": "67b8e2dc12734f4dcf43d23cedc5cd4d94ed7d0c420cb2de52911d6a169fbdc3"
+  },
+  "Openmath.IncidenceRepair.ChartFlags": {
+    "source": "Openmath/IncidenceRepair/ChartFlags.lean",
+    "sha256": "464f5025ca37c1bc2974d37dcec40c6ca24455e3d0008f3aa1e6fd9e01730c07"
+  },
+  "Openmath.IncidenceRepair.ChartSlots": {
+    "source": "Openmath/IncidenceRepair/ChartSlots.lean",
+    "sha256": "c562c47a6db1352d01f7810502ac63e421e8e45c480807904d7d5d12fe9a677b"
+  },
+  "Openmath.IncidenceRepair.ChartTransport": {
+    "source": "Openmath/IncidenceRepair/ChartTransport.lean",
+    "sha256": "73db5764b19d8c66189a2b5bdca002f50fc2150400597bef7f8a9bd1575b55d2"
+  },
+  "Openmath.IncidenceRepair.CoarseCounting": {
+    "source": "Openmath/IncidenceRepair/CoarseCounting.lean",
+    "sha256": "8a5e0ab35c6a8f302b6a4cee809b726ff0fd1af69049a2a30274b0fffb0bbeb0"
+  },
+  "Openmath.IncidenceRepair.CoordinateReconstruction": {
+    "source": "Openmath/IncidenceRepair/CoordinateReconstruction.lean",
+    "sha256": "dcd6bfeb4e60bcf01eb5103a0f5a8effb0ef1fab1bc21a60336d9a737b82fe90"
+  },
+  "Openmath.IncidenceRepair.CoordinateTransport": {
+    "source": "Openmath/IncidenceRepair/CoordinateTransport.lean",
+    "sha256": "1aef83eddb0bb3452c20f952041dd9f61143f0a7435493da298dc8aca69b1a65"
+  },
+  "Openmath.IncidenceRepair.Corollaries": {
+    "source": "Openmath/IncidenceRepair/Corollaries.lean",
+    "sha256": "d3fe66dfc2cea355185b88afdf5b5c2e77b7056c32f4abce2afb7cce9398370f"
+  },
+  "Openmath.IncidenceRepair.DensityBounds": {
+    "source": "Openmath/IncidenceRepair/DensityBounds.lean",
+    "sha256": "a4ee1d76dd0b2ca10053d528b8797553d8e06885095750169a4e13bb63783ac4"
+  },
+  "Openmath.IncidenceRepair.DesignRepair": {
+    "source": "Openmath/IncidenceRepair/DesignRepair.lean",
+    "sha256": "ded4fa878feb960daf3d5a177bad3e02d4a76c316dc6c97d04329ad8e7411f2d"
+  },
+  "Openmath.IncidenceRepair.DesignVariance": {
+    "source": "Openmath/IncidenceRepair/DesignVariance.lean",
+    "sha256": "67b1440d3d05cd0c7fa7112d066ffccba1c85c4f34262abe2ce4b12de4c68310"
+  },
+  "Openmath.IncidenceRepair.EquivariantAverage": {
+    "source": "Openmath/IncidenceRepair/EquivariantAverage.lean",
+    "sha256": "aff0fe0ac634ba4fa5a91b060edc0e30672094b1b2099478e89e124d6a522476"
+  },
+  "Openmath.IncidenceRepair.ErrorCounting": {
+    "source": "Openmath/IncidenceRepair/ErrorCounting.lean",
+    "sha256": "79fcbcbe84d8e5c5a9487c533e474371047d2e0f81362a1b7a4151d9e5aa09a2"
+  },
+  "Openmath.IncidenceRepair.FieldCoherence": {
+    "source": "Openmath/IncidenceRepair/FieldCoherence.lean",
+    "sha256": "6c89dfd0110b5b8f09aa33bf038f4f3a7fd30b76d36529b9c2a9aed24db162c7"
+  },
+  "Openmath.IncidenceRepair.FlagAction": {
+    "source": "Openmath/IncidenceRepair/FlagAction.lean",
+    "sha256": "0eae4cfbdd16229b0fb7b79bc4df7aeb59790ba7df96a30384cb475002823cb9"
+  },
+  "Openmath.IncidenceRepair.FlagCounts": {
+    "source": "Openmath/IncidenceRepair/FlagCounts.lean",
+    "sha256": "1a81aa68d09ef3e29c4a17e15bd3fc8d189bea24e890dbe87d1ea109ef26eced"
+  },
+  "Openmath.IncidenceRepair.FrameAction": {
+    "source": "Openmath/IncidenceRepair/FrameAction.lean",
+    "sha256": "451d3193e83f87fda798c78b6dfba9faa5bce519f07bd471677e790daa847587"
+  },
+  "Openmath.IncidenceRepair.FrameEquivariance": {
+    "source": "Openmath/IncidenceRepair/FrameEquivariance.lean",
+    "sha256": "3277a646c3149457f1d9a987b810991d893fae2a1df353a8c7f02e16a920c62b"
+  },
+  "Openmath.IncidenceRepair.FrameGeometry": {
+    "source": "Openmath/IncidenceRepair/FrameGeometry.lean",
+    "sha256": "3ebccff296bfbf3012c0a2c7386680d1c93aa716a78b36683089eeb022277afd"
+  },
+  "Openmath.IncidenceRepair.FrameSelection": {
+    "source": "Openmath/IncidenceRepair/FrameSelection.lean",
+    "sha256": "8406f13d20983e5e20a57f1d99b71e93e629634e98540d6a311c70ce3de4057c"
+  },
+  "Openmath.IncidenceRepair.FrameTransport": {
+    "source": "Openmath/IncidenceRepair/FrameTransport.lean",
+    "sha256": "3306f1d95a78a971e46107d4c854e925f89e4664c2afd94aceb86140a1360cf2"
+  },
+  "Openmath.IncidenceRepair.Geometry": {
+    "source": "Openmath/IncidenceRepair/Geometry.lean",
+    "sha256": "882ec6e9e945dd0634e06ba3b0adcd6e9c441de4f6330f8912631d8470ea11b9"
+  },
+  "Openmath.IncidenceRepair.GeometryCounts": {
+    "source": "Openmath/IncidenceRepair/GeometryCounts.lean",
+    "sha256": "a41bfbeed55310d156516995ba1afbac22ae97e3582a9333aee04288316a3187"
+  },
+  "Openmath.IncidenceRepair.GeometryCoupling": {
+    "source": "Openmath/IncidenceRepair/GeometryCoupling.lean",
+    "sha256": "6cfbe5cd030d559dfeef44e159ecdc8736081af2db24bf0c34957cf01e5abe1f"
+  },
+  "Openmath.IncidenceRepair.GeometryDesign": {
+    "source": "Openmath/IncidenceRepair/GeometryDesign.lean",
+    "sha256": "98b2d88350d56a0fde8e5abd8e930956317cec86b42f001d9dd5e41983bb45e5"
+  },
+  "Openmath.IncidenceRepair.GeometryIntersection": {
+    "source": "Openmath/IncidenceRepair/GeometryIntersection.lean",
+    "sha256": "b01d96c85b9932090cb31d5791d7674df6b9f9d9008419f4c79e660a92f76309"
+  },
+  "Openmath.IncidenceRepair.GlobalFrameSelection": {
+    "source": "Openmath/IncidenceRepair/GlobalFrameSelection.lean",
+    "sha256": "57169767883d4363f661c184030b1d70f8cd28ba179188358c53f93c62f77a88"
+  },
+  "Openmath.IncidenceRepair.GlobalReconstruction": {
+    "source": "Openmath/IncidenceRepair/GlobalReconstruction.lean",
+    "sha256": "d6854247e690ce6dbf12c64df11a535dc0cd57a6730af5d14c9b640cdc953949"
+  },
+  "Openmath.IncidenceRepair.InitialCertificate": {
+    "source": "Openmath/IncidenceRepair/InitialCertificate.lean",
+    "sha256": "fac999fa6b38a6e8ded994e3359423ca2f8c10619e5c1b5e7b863ee2f957f9f7"
+  },
+  "Openmath.IncidenceRepair.Main": {
+    "source": "Openmath/IncidenceRepair/Main.lean",
+    "sha256": "c33c81de071bbde51f3951d7b5e7709b1260d7b75d2ac603c40858f33f899982"
+  },
+  "Openmath.IncidenceRepair.NormalizationUndo": {
+    "source": "Openmath/IncidenceRepair/NormalizationUndo.lean",
+    "sha256": "56d6e91acb4d2fcf7ed16a2758d4a2f1f3733d80c565e0996876fb24f363a0a8"
+  },
+  "Openmath.IncidenceRepair.NormalizedMaps": {
+    "source": "Openmath/IncidenceRepair/NormalizedMaps.lean",
+    "sha256": "51936c538b7f24eb781b59a4a5a907a7d79a38847a51a63a0ca63e694977f866"
+  },
+  "Openmath.IncidenceRepair.NormalizedRepair": {
+    "source": "Openmath/IncidenceRepair/NormalizedRepair.lean",
+    "sha256": "220f1407c8864ce7d277655a0232819781e05318bbb301a7c1cda390d9d8dec6"
+  },
+  "Openmath.IncidenceRepair.NumericBounds": {
+    "source": "Openmath/IncidenceRepair/NumericBounds.lean",
+    "sha256": "5eddf3527ce5755e18da6d649c69997f43aa5d340d9759fd57216fb7f5332c90"
+  },
+  "Openmath.IncidenceRepair.PairedGap": {
+    "source": "Openmath/IncidenceRepair/PairedGap.lean",
+    "sha256": "5fbb3c5c1cf2d04d5a2c63ae0599a5ca3d6175d33b06b5e3db0746a8e42936c9"
+  },
+  "Openmath.IncidenceRepair.Pexider": {
+    "source": "Openmath/IncidenceRepair/Pexider.lean",
+    "sha256": "38ed5a0d0d49853c93a430d87bb1ea519a3c921c94c4b1613db4a933d05838fd"
+  },
+  "Openmath.IncidenceRepair.PlaneCorrectionAssembly": {
+    "source": "Openmath/IncidenceRepair/PlaneCorrectionAssembly.lean",
+    "sha256": "e4ba17d560c0d4f779c7707c17a289235411849e9bcd617f358758786c6ecf1a"
+  },
+  "Openmath.IncidenceRepair.PlaneCost": {
+    "source": "Openmath/IncidenceRepair/PlaneCost.lean",
+    "sha256": "de37c8bd18363e45b932749ec9e357d150bce91ca984664fccfd25729675b705"
+  },
+  "Openmath.IncidenceRepair.PlaneCostCounting": {
+    "source": "Openmath/IncidenceRepair/PlaneCostCounting.lean",
+    "sha256": "1cde85b527735040d046c23430229d8e429c51b528419c49078aaf59fade7641"
+  },
+  "Openmath.IncidenceRepair.PlaneGeometry": {
+    "source": "Openmath/IncidenceRepair/PlaneGeometry.lean",
+    "sha256": "2722598e95729799a938567623a68b5cd8ab5af8c176a43e132097f045a153b5"
+  },
+  "Openmath.IncidenceRepair.PlanePexiderBudgets": {
+    "source": "Openmath/IncidenceRepair/PlanePexiderBudgets.lean",
+    "sha256": "d62d374ce55544c1af03a328e1b9129d8e233fa6d4798e9158e07a9fa1e39508"
+  },
+  "Openmath.IncidenceRepair.PlaneReciprocalBudget": {
+    "source": "Openmath/IncidenceRepair/PlaneReciprocalBudget.lean",
+    "sha256": "b0236615f5f660ef80ca49c97164f0105ef2c96e3ee1a67030fb1323ab845630"
+  },
+  "Openmath.IncidenceRepair.PlaneSupport": {
+    "source": "Openmath/IncidenceRepair/PlaneSupport.lean",
+    "sha256": "e1be7eddd92aeb7d7a688722a6c1f2e9dcdc15664da80c6d5a190b5cc11c2222"
+  },
+  "Openmath.IncidenceRepair.PlaneSupportBounds": {
+    "source": "Openmath/IncidenceRepair/PlaneSupportBounds.lean",
+    "sha256": "2fff8b5b7873d3c8acb12c1d9f739c9fbaccedbfcb2e8d4becac8ca4e4b99042"
+  },
+  "Openmath.IncidenceRepair.PlaneSupportGeometry": {
+    "source": "Openmath/IncidenceRepair/PlaneSupportGeometry.lean",
+    "sha256": "960793445fe91f7bceacb6641b710a82968c0444a8021f3c046190bc7700d308"
+  },
+  "Openmath.IncidenceRepair.ProjectiveCoarseRepair": {
+    "source": "Openmath/IncidenceRepair/ProjectiveCoarseRepair.lean",
+    "sha256": "a2b6929e3eca8195cd574abe7bbe2a3d372a9111611ed6b7d6b533af5238f5c9"
+  },
+  "Openmath.IncidenceRepair.ProjectiveLocalRepair": {
+    "source": "Openmath/IncidenceRepair/ProjectiveLocalRepair.lean",
+    "sha256": "740ed0ceb005d3a582460097275f2046c9a41f2df08033a50ecdaad8c0febd4e"
+  },
+  "Openmath.IncidenceRepair.ProtectedCertificate": {
+    "source": "Openmath/IncidenceRepair/ProtectedCertificate.lean",
+    "sha256": "d320d37653a4b1d5cddc60271967c4a018e1f48cc18cc5f993280f2e2a6efac5"
+  },
+  "Openmath.IncidenceRepair.RepairFromAffine": {
+    "source": "Openmath/IncidenceRepair/RepairFromAffine.lean",
+    "sha256": "b68d49d6857ca1905457cf8a7c889c7907f7d5a7926d364c41194f57060694cc"
+  },
+  "Openmath.IncidenceRepair.SelectedFrameCosts": {
+    "source": "Openmath/IncidenceRepair/SelectedFrameCosts.lean",
+    "sha256": "e09fb94620e69b1a387a8bf83b41e57d86ad21ae711a84bead88ef48cbcfff88"
+  },
+  "Openmath.IncidenceRepair.SemilinearTransport": {
+    "source": "Openmath/IncidenceRepair/SemilinearTransport.lean",
+    "sha256": "ba8b93165cf0c756e61a1fbff6ea4531cdae46c25681479604034ed8d641a0cd"
+  },
+  "Openmath.IncidenceRepair.SharedPencil": {
+    "source": "Openmath/IncidenceRepair/SharedPencil.lean",
+    "sha256": "c48889d49574f33839faf35f7cc9faca3f9109393a56292e79488fc310e6e343"
+  },
+  "Openmath.IncidenceRepair.SourceNumerics": {
+    "source": "Openmath/IncidenceRepair/SourceNumerics.lean",
+    "sha256": "2eaa3330fe98867ef81eab0a52af7060e6341451a659c92ed850a82800e9d4c0"
+  },
+  "Openmath.IncidenceRepair.Target": {
+    "source": "Openmath/IncidenceRepair/Target.lean",
+    "sha256": "6a5508e5ae33165ba17d65a8a5d7f349ce0d6d7de1ec5fa6c81d5bfd7bf3a8f4"
+  },
+  "Openmath.IncidenceRepair.TargetBounds": {
+    "source": "Openmath/IncidenceRepair/TargetBounds.lean",
+    "sha256": "28b21177d0e979426e65527f2cd216d49c58f1e5c1531cff97816c7fc0e553a3"
+  },
+  "Openmath.IncidenceRepair.WeightedPlane": {
+    "source": "Openmath/IncidenceRepair/WeightedPlane.lean",
+    "sha256": "a82dfba488be5426d6ab5cef0f462ddaba4ac3d9d671d6d2d5b207b504454de4"
+  },
+  "Openmath.IncidenceRepair.WeightedPlaneTheorem": {
+    "source": "Openmath/IncidenceRepair/WeightedPlaneTheorem.lean",
+    "sha256": "7ff7188554e6aa95b7e29c36ead6231ed1001abd7a866578ff6a6f8454ac114d"
+  },
+  "Openmath": {
+    "source": "Openmath.lean",
+    "sha256": "3ae8ff4a0d335d7f904f1a5e8064333a895b9933e80f480b2ab73fc119b79b07"
+  },
+  "$pins": {
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+    "lakefile.toml": "4704229faa8823fec1f8d24eac5aaf3d97f1ab38dd6c59bdf19472955717e7ef",
+    "lake-manifest.json": "84f1e2a54574bd9e19d817640db956fe28f832d5b2e0c18e5625c69e9f2b5ed1"
+  }
+}

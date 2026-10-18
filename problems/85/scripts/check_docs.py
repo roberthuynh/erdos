@@ -50,9 +50,9 @@ def check(root=ROOT):
         raise ValueError('Invalid document hash manifest')
     for name in expected:
         safe_manifest_file(root, name)
-    if any(path.is_symlink() for path in root.rglob('*')):
+    if any(path.is_symlink() for path in root.rglob('*') if '.lake' not in path.relative_to(root).parts):
         raise ValueError('Symlink in document package')
-    actual = {p.relative_to(root).as_posix() for p in root.rglob('*') if p.is_file() and '__pycache__' not in p.parts}
+    actual = {p.relative_to(root).as_posix() for p in root.rglob('*') if p.is_file() and '__pycache__' not in p.parts and '.lake' not in p.relative_to(root).parts}
     if actual != set(expected) | {'document-hashes.json'}:
         raise ValueError('Unlisted or missing package file')
     for name, digest in expected.items():
@@ -70,8 +70,6 @@ def check(root=ROOT):
             if parsed.fragment and dest.suffix == '.md':
                 if unquote(parsed.fragment) not in headings(dest.read_text()):
                     raise ValueError('Broken local fragment: '+target)
-    if list(root.rglob('*.lean')):
-        raise ValueError('Written-only package unexpectedly contains Lean source')
     print('DOCUMENTS: PASS (identity and links only; no mathematical verification)')
 
 if __name__ == '__main__':

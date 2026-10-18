@@ -1,0 +1,7 @@
+{
+  "declarations": [
+    "Erdos85.IncidenceRepair.projective_incidence_repair",
+    "Erdos85.IncidenceRepair.repair_dichotomy",
+    "Erdos85.IncidenceRepair.frameSurvival_bound_of_no_field_embedding"
+  ]
+}

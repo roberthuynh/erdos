@@ -1,13 +1,36 @@
-# Verification boundary
+# Verification
 
-This package is written mathematics. There is no Lean declaration or applicable theorem-oracle RESULT: PASS for its main theorem. Older Lean checks do not apply. No human mathematician has reviewed this theorem.
+The full stated repair theorem and its two corollaries have official Lean `RESULT: PASS`, zero holes and only `propext`, `Classical.choice`, and `Quot.sound`. No human mathematical review is claimed. The original Erdős #85 question remains open; verification does not establish novelty or priority.
 
-The frozen research proof received a separate AI adversarial audit on 16 October 2026. That audit reported no mandatory correction; its original SHA256 is `8ef8bb0af8a1d6c69cb77857864dffd97c16b8fd833cf07a9dbe52fccc655ed3`. A separate utility/source review assessed scope. Those records are historical AI evidence, not formal proof or human endorsement. Private release reviews record their own exact bytes and limits separately.
+## Exact declarations
 
-## Reproduce package checks
+| Declaration in `Erdos85.IncidenceRepair` | Source | Statement |
+|---|---|---|
+| `projective_incidence_repair` | `Openmath/IncidenceRepair/Main.lean` | `RepairClaim K L n`, full conditional repair |
+| `repair_dichotomy` | `Openmath/IncidenceRepair/Corollaries.lean` | Unconditional collapse/repair dichotomy |
+| `frameSurvival_bound_of_no_field_embedding` | `Openmath/IncidenceRepair/Corollaries.lean` | No-field-embedding survival bound |
 
-From the collection root, run the two commands in [README.md](README.md#verification). Both modes validate this package's frozen document hashes and local links. Full mode also runs negative controls for altered documents, broken or escaping links, unlisted files, symlinks and unsafe manifest paths in temporary copies. Fragment-only links, repeated headings and headings inside code fences have regression coverage. No mathematics is executed. Python 3.10 or later and its standard library suffice; no network access, solver, CAS or Lean environment is required.
+The near-one-survival estimate in RESULTS item 2 is a written union-bound consequence of R1, not a separately checked Lean declaration. The numerical characteristic/divisibility criterion in item 3 is the classical interpretation of the formal no-field-embedding hypothesis.
 
-`DOCUMENTS: PASS` means those checks passed. It does not mean the theorem is proved by a machine. The checker validates document identities against `document-hashes.json`; a changed document requires deliberate review and a new hash manifest. The collection's metadata, protected prose and explicit export allowlist are checked separately by its existing tools.
+The theorem permits arbitrary finite fields, arbitrary point and hyperplane maps and n≥2. Under positive ordered-frame survival ρ and δ≤ρ/(10^9 n²), one field embedding and one coupled linear action repair both maps with D≤5T/q^(n−1)≤10T/d. T counts original broken flags. No geometric supplier assumptions remain.
 
-Written correctness, statement fidelity, formal verification, priority and human mathematical review remain distinct judgments. Any timeout is UNKNOWN. Record the exact commands, output and Git commit when reproducing the document checks.
+## Reproduce
+
+Install the pinned Lean toolchain through elan. The pinned dependencies must be available (Lake may fetch them on the first build). From the collection root:
+
+```sh
+python3 scripts/check.py --problem 85 --mode docs
+python3 scripts/check.py --problem 85 --mode full
+```
+
+Docs mode checks identities and links only. Full mode runs negative controls, builds the entire 65-module local closure, compares all declaration types and axiom dependencies against the frozen registry, runs all three official `check.sh` oracles and kernel-replays every local module. Each Lean subprocess is bounded at 240 seconds. A timeout is UNKNOWN.
+
+The individual oracle can also be run from `problems/85`:
+
+```sh
+timeout 240 bash check.sh Openmath/IncidenceRepair/Main.lean Erdos85.IncidenceRepair.projective_incidence_repair
+timeout 240 bash check.sh Openmath/IncidenceRepair/Corollaries.lean Erdos85.IncidenceRepair.repair_dichotomy
+timeout 240 bash check.sh Openmath/IncidenceRepair/Corollaries.lean Erdos85.IncidenceRepair.frameSurvival_bound_of_no_field_embedding
+```
+
+Each must report `RESULT: PASS`. Source or pin changes require renewed checking and statement review. The commands above produce the theorem-oracle output and collection check receipts. Record the exact Git commit when reproducing a result. The frozen source and declaration inventories are `scripts/proof-modules.json` and `scripts/headline-theorems.json`.

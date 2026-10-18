@@ -10,7 +10,7 @@ For an integer m ≥ 4, let f(m) be the least integer such that every simple gra
 
 ## Main results
 
-**AI-reviewed written candidate. No Lean verification or human mathematical review. Public priority remains unresolved.**
+**Lean-verified full stated repair theorem and corollaries. No human mathematical review. Public priority remains unresolved.**
 
 The conclusion says that changing a small number of point and hyperplane assignments makes both maps agree with one exact coordinate embedding.
 
@@ -36,7 +36,7 @@ The [proof](PROOF.md) gives the weighted chart transport and consistency argumen
 
 This is one contribution family. Its plane specialization, collapse/survival dichotomy and incompatible-field consequence are refinements or corollaries, not separate breakthroughs. The theorem is existential: no efficient decoder or bit-complexity bound is claimed. Its small-error threshold is restrictive and is not shown sharp. It concerns equal finite projective dimensions and complete incidence data in canonical Desarguesian spaces, not arbitrary buildings or non-Desarguesian targets.
 
-The written proof received separate AI correctness review during research. This establishes a review history, not mathematical certainty, human endorsement or formal verification. Older Lean results from the research do not verify this theorem and are not included as its dependencies.
+The full stated repair theorem and its two corollaries have passed the official Lean checker with zero holes and only the standard allowed axioms. Independent AI review checked statement fidelity and exact dependency sources. This is not human mathematical review or evidence of public priority.
 
 ## Prior work
 
@@ -61,7 +61,7 @@ python3 scripts/check.py --problem 85 --mode docs
 python3 scripts/check.py --problem 85 --mode full
 ```
 
-For this written-only package both modes check document identities and local links. Full mode also exercises negative controls for those checks. Neither mode checks mathematical correctness. There is no Lean declaration, kernel replay or official theorem-oracle PASS for this result. See [verification details](VERIFICATION.md).
+Docs mode checks file identities and local links. Full mode additionally builds the complete Lean closure, audits declaration types and axiom dependencies, runs all three official theorem oracles, and replays every local module through the Lean kernel. See [verification details](VERIFICATION.md).
 
 ## Citation and corrections
 
