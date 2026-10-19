@@ -16,7 +16,15 @@ The theorem permits arbitrary finite fields, arbitrary point and hyperplane maps
 
 ## Reproduce
 
-Install the pinned Lean toolchain through elan. The pinned dependencies must be available (Lake may fetch them on the first build). From the collection root:
+Install Python 3.11 or later, Git, Bash, GNU `timeout` and elan, with `lean` and `lake` available on `PATH`. Use the toolchain and dependency revisions pinned in the package. From the collection root, fetch the dependency cache before running the bounded proof checks, as the hosted workflow does:
+
+```sh
+cd problems/85
+timeout 240 lake exe cache get
+cd ../..
+```
+
+The cache supplies compiled dependencies, not verification of this package's theorems. The full check below still builds and kernel-replays every configured local module. Preserve a failed or timed-out cache setup as a setup failure; do not treat it as a proof-check pass. From the collection root:
 
 ```sh
 python3 scripts/check.py --problem 85 --mode docs
