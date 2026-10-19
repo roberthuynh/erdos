@@ -1,0 +1,57 @@
+{
+  "result": "PASS",
+  "wbox": {
+    "points": 3279,
+    "minimum": "0",
+    "equality": [
+      [
+        1,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  "six_relabellings": [
+    [
+      "x",
+      "u",
+      "z"
+    ],
+    [
+      "x",
+      "z",
+      "u"
+    ],
+    [
+      "u",
+      "x",
+      "z"
+    ],
+    [
+      "u",
+      "z",
+      "x"
+    ],
+    [
+      "z",
+      "x",
+      "u"
+    ],
+    [
+      "z",
+      "u",
+      "x"
+    ]
+  ],
+  "u2_points": 41140,
+  "partition_points": 17424,
+  "hosts": {
+    "hosts": 5872,
+    "avoiding": 5827,
+    "deficient_triples_checked": 4,
+    "max_active_incidence_observed": 1,
+    "witness_edges": 8,
+    "limit": "bounded corroboration only; does not prove universal host or multi-active-anchor cases"
+  }
+}

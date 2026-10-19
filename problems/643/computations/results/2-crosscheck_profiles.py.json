@@ -1,0 +1,42 @@
+[
+  {
+    "t": [
+      0,
+      0,
+      0
+    ],
+    "profiles": 4913,
+    "integer_dp_equals_exhaustive": true,
+    "exact_minimum": "19/9"
+  },
+  {
+    "t": [
+      1,
+      0,
+      0
+    ],
+    "profiles": 6800,
+    "integer_dp_equals_exhaustive": true,
+    "exact_minimum": "289/140"
+  },
+  {
+    "t": [
+      2,
+      2,
+      2
+    ],
+    "profiles": 15625,
+    "integer_dp_equals_exhaustive": true,
+    "exact_minimum": "2"
+  },
+  {
+    "t": [
+      0,
+      2,
+      3
+    ],
+    "profiles": 10000,
+    "integer_dp_equals_exhaustive": true,
+    "exact_minimum": "49/24"
+  }
+]

@@ -49,7 +49,7 @@
   },
   "$pins": {
     "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
-    "lakefile.toml": "4704229faa8823fec1f8d24eac5aaf3d97f1ab38dd6c59bdf19472955717e7ef",
+    "lakefile.toml": "bcb7fb4f45587e1d2899ab8fef30532c3efce380696698b551d8b5ce133a72ac",
     "lake-manifest.json": "84f1e2a54574bd9e19d817640db956fe28f832d5b2e0c18e5625c69e9f2b5ed1"
   }
 }

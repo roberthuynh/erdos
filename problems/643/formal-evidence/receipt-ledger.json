@@ -1,0 +1,621 @@
+{
+  "bridge_record": {
+    "declaration": "Erdos643R3.FCBridge.hasRepeatedDisjointUnion_iff_forbidden",
+    "export_source_sha256": "a66ced22548577c95114f6e7e14bb8945591b6247236e55d9963314bb743290d",
+    "provenance": "Historical official check.sh result, copied without alteration",
+    "receipt": "receipts/FCBridge_hasRepeatedDisjointUnion_iff_forbidden.log",
+    "receipt_sha256": "e651c21a36ebc8ad852af4ff6cb2e4fcae88c04a485f0d2a90c0a4e8b1338ecc",
+    "receipt_source_sha256": "d013db1d857dd6dc3b2a39ed235cc5b08f0b37ed7d17a6f525b4aba8a5aadc2b",
+    "result": "PASS",
+    "source": "source/Openmath/Erdos643R3/FCBridge.lean"
+  },
+  "coefficient_one": "No unconditional Lean verification is present in this evidence",
+  "export_build": {
+    "description": "Fresh Lean compilation of 13 modules in official 24/23 check, followed by seven remaining exported modules in same build directory; not a standalone Lake build or full hardened check",
+    "extra_build_receipt": "receipts-export/all20-extra-build.log",
+    "extra_build_receipt_sha256": "b06749d12dcbe7d87e4f65536b6ab9399412972626a2f4b8160b84d3fcb7f8ff",
+    "modules": {
+      "FCBridge": "a66ced22548577c95114f6e7e14bb8945591b6247236e55d9963314bb743290d",
+      "G1Arith": "95133168489bb086d6f58bdce597ca53fc0b9e7e74933a46ae008281c81194cd",
+      "G3hpArith": "e21a65ac966d7b787036f123a18b32503596e2ba6b340b95d1e61748762aeb11",
+      "HypergraphBasics": "bb5c59fb53d56a61a18fe3b844631267495e11567d6e4096586161adc3f6f78b",
+      "Identity": "b4e523e15dbd28fbcc7847f2c0ba154bf2f482cddf093e2d79c6573deecf9011",
+      "L1Top": "95bc5eec5db70c6b4ace411c6ea723e6541f8502cc78285b541c3f0bca00ef77",
+      "Lemma1g": "7ba62cd0ef27a78d063fb3a4fe6e999c802a36d78b9a8309265fe725148a2637",
+      "Lemma3": "cd31563d93870dddb342246bb146c3ab1bbeb28068fc29643f94c9ffd301461d",
+      "Pw2312": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1",
+      "Pw2312Defs": "cb3d1084612cc1305bac23f8a5527334ad3305e243566dfc338be4662c3cd660",
+      "PwArith": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3",
+      "PwC1": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+      "PwC2": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+      "PwCheck": "d7599ffa13fd11546852caccceebfd59f7328c8fde69f511b0c9b944230a3c7d",
+      "RedistArith": "637c5811ef71ddaa5d8f2f1dacf9a49fa6786c4aa2d78543bb29bc3303776006",
+      "SlotModel": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc",
+      "WBox": "ec7cf0a83fcc5eb380d038ad0093d215748fc75fb50007ac80466112ab6ebdab",
+      "Weighting": "c93fcef9972a8f3fe4bc2f1fa45aa59618e429acfb6d9be24ade3421ae2e7bba",
+      "WeightingAuxArith": "44d136e459522ea5065928fea246f194ac41d77c88469e7b30b66953f7dcbf0c",
+      "WeightingBound": "e83241fcceacbc6b6338498944766515d4bcea43dee92ff6335065e2894231bb"
+    }
+  },
+  "export_checks": [
+    {
+      "checker": "Official check.sh run on corrected exported source bytes",
+      "declaration": "Erdos643R3.Pw2312Main.card_le_choose",
+      "import_closure_sha256": {
+        "HypergraphBasics": "bb5c59fb53d56a61a18fe3b844631267495e11567d6e4096586161adc3f6f78b",
+        "Identity": "b4e523e15dbd28fbcc7847f2c0ba154bf2f482cddf093e2d79c6573deecf9011",
+        "Lemma3": "cd31563d93870dddb342246bb146c3ab1bbeb28068fc29643f94c9ffd301461d",
+        "Pw2312": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1",
+        "Pw2312Defs": "cb3d1084612cc1305bac23f8a5527334ad3305e243566dfc338be4662c3cd660",
+        "PwArith": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3",
+        "PwC1": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+        "PwC2": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+        "PwCheck": "d7599ffa13fd11546852caccceebfd59f7328c8fde69f511b0c9b944230a3c7d",
+        "SlotModel": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc",
+        "Weighting": "c93fcef9972a8f3fe4bc2f1fa45aa59618e429acfb6d9be24ade3421ae2e7bba",
+        "WeightingAuxArith": "44d136e459522ea5065928fea246f194ac41d77c88469e7b30b66953f7dcbf0c",
+        "WeightingBound": "e83241fcceacbc6b6338498944766515d4bcea43dee92ff6335065e2894231bb"
+      },
+      "receipt": "receipts-export/Pw2312_card_le_choose.log",
+      "receipt_sha256": "9d1a03ec67e7b262e1aa708adfdab14e628f8821f2e089b4f802af7616cf3eab",
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Pw2312.lean",
+      "source_sha256": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1"
+    }
+  ],
+  "hardened_phased_export": {
+    "description": "Fresh 20-module export build and 50-declaration axiom/hygiene agreement, exact dependency pins, two unsafe negative controls, and kernel replay in three capped chunks. A separate full replay attempt timed out. This is not a single check-clean.sh or official check.sh run.",
+    "receipt": "receipts-export/hardened-phased/receipt.json",
+    "receipt_sha256": "fcf1075e550dfc295b5afa3aa810a22dbfd1a4a273f0d35b789f4d365b0bac36",
+    "result": "PASS",
+    "scope": "supporting-package-only; coefficient-one theorem unverified"
+  },
+  "historical_nine_eighths_declarations_listed_separately": 1,
+  "nine_eighths_records": [
+    {
+      "declaration": "Erdos643R3.WeightingBound.card_le_nine_eighths_choose",
+      "export_source_sha256": "e83241fcceacbc6b6338498944766515d4bcea43dee92ff6335065e2894231bb",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/WeightingBound_card_le_nine_eighths_choose.log",
+      "receipt_sha256": "df8ed226de75ed216b04dc43f0c4f119db5899836a39c36f6f3135e079c128b8",
+      "receipt_source_sha256": "ceb807e36820a80b6eb67e4199f7968306946a35f0a7b85a92230660c08a55c6",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=ceb807e36820a80b6eb67e4199f7968306946a35f0a7b85a92230660c08a55c6",
+      "source": "source/Openmath/Erdos643R3/WeightingBound.lean"
+    }
+  ],
+  "pin_verification": {
+    "package_module_data_files": 26080,
+    "receipt": "receipts-export/pins-verify.log",
+    "receipt_sha256": "49b7e2a701dd00e179e9185e46f673fd3534e06d99371501c895837982b8cd1e",
+    "result": "PASS",
+    "scope": "Current installed Lean 4.33.1 toolchain and cached packages; no clean-download proof",
+    "toolchain_files": 14928
+  },
+  "scope": "Historical source-matched official check receipts for supporting bounds; not a new run",
+  "standalone_lake_build": {
+    "description": "Fresh isolated Lake build of all 20 exported modules, using exact copied standalone config/manifest and the separately verified pinned package cache; not a clean dependency download or a full coefficient-one theorem check",
+    "receipt": "receipts-export/lake-all20.log",
+    "receipt_sha256": "ee233a8261db6635e5e53d7dc414e2074c6086eecf96fde6565cafff533be0fc",
+    "result": "PASS",
+    "source_modules_sha256": {
+      "FCBridge": "a66ced22548577c95114f6e7e14bb8945591b6247236e55d9963314bb743290d",
+      "G1Arith": "95133168489bb086d6f58bdce597ca53fc0b9e7e74933a46ae008281c81194cd",
+      "G3hpArith": "e21a65ac966d7b787036f123a18b32503596e2ba6b340b95d1e61748762aeb11",
+      "HypergraphBasics": "bb5c59fb53d56a61a18fe3b844631267495e11567d6e4096586161adc3f6f78b",
+      "Identity": "b4e523e15dbd28fbcc7847f2c0ba154bf2f482cddf093e2d79c6573deecf9011",
+      "L1Top": "95bc5eec5db70c6b4ace411c6ea723e6541f8502cc78285b541c3f0bca00ef77",
+      "Lemma1g": "7ba62cd0ef27a78d063fb3a4fe6e999c802a36d78b9a8309265fe725148a2637",
+      "Lemma3": "cd31563d93870dddb342246bb146c3ab1bbeb28068fc29643f94c9ffd301461d",
+      "Pw2312": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1",
+      "Pw2312Defs": "cb3d1084612cc1305bac23f8a5527334ad3305e243566dfc338be4662c3cd660",
+      "PwArith": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3",
+      "PwC1": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+      "PwC2": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+      "PwCheck": "d7599ffa13fd11546852caccceebfd59f7328c8fde69f511b0c9b944230a3c7d",
+      "RedistArith": "637c5811ef71ddaa5d8f2f1dacf9a49fa6786c4aa2d78543bb29bc3303776006",
+      "SlotModel": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc",
+      "WBox": "ec7cf0a83fcc5eb380d038ad0093d215748fc75fb50007ac80466112ab6ebdab",
+      "Weighting": "c93fcef9972a8f3fe4bc2f1fa45aa59618e429acfb6d9be24ade3421ae2e7bba",
+      "WeightingAuxArith": "44d136e459522ea5065928fea246f194ac41d77c88469e7b30b66953f7dcbf0c",
+      "WeightingBound": "e83241fcceacbc6b6338498944766515d4bcea43dee92ff6335065e2894231bb"
+    }
+  },
+  "supporting_declarations": 48,
+  "supporting_records": [
+    {
+      "declaration": "Erdos643R3.G1Arith.G1",
+      "export_source_sha256": "95133168489bb086d6f58bdce597ca53fc0b9e7e74933a46ae008281c81194cd",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/G1Arith_G1.log",
+      "receipt_sha256": "d604cdb446f63cf17850736ebe2239858c24c43f080cad61554c9166f47087a3",
+      "receipt_source_sha256": "4201e16ce05178ce111f167fc433eb2cfc0d2c7c6f7bd3cb25f65a8f423add5d",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=4201e16ce05178ce111f167fc433eb2cfc0d2c7c6f7bd3cb25f65a8f423add5d",
+      "source": "source/Openmath/Erdos643R3/G1Arith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.G1Arith.G3",
+      "export_source_sha256": "95133168489bb086d6f58bdce597ca53fc0b9e7e74933a46ae008281c81194cd",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/G1Arith_G3.log",
+      "receipt_sha256": "25905d3b7c9db3d41ceb7bbcdc97f3735595ec2ab999f0b6ea1812a5b4a2a593",
+      "receipt_source_sha256": "4201e16ce05178ce111f167fc433eb2cfc0d2c7c6f7bd3cb25f65a8f423add5d",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=4201e16ce05178ce111f167fc433eb2cfc0d2c7c6f7bd3cb25f65a8f423add5d",
+      "source": "source/Openmath/Erdos643R3/G1Arith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.G1Arith.lemma2g_profile",
+      "export_source_sha256": "95133168489bb086d6f58bdce597ca53fc0b9e7e74933a46ae008281c81194cd",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/G1Arith_lemma2g_profile.log",
+      "receipt_sha256": "0fea302f8fb53b8bdbb12287178c21abb5b3823e318f17c9d7eaeaefdda6535f",
+      "receipt_source_sha256": "4201e16ce05178ce111f167fc433eb2cfc0d2c7c6f7bd3cb25f65a8f423add5d",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=4201e16ce05178ce111f167fc433eb2cfc0d2c7c6f7bd3cb25f65a8f423add5d",
+      "source": "source/Openmath/Erdos643R3/G1Arith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.G1Arith.lemma3g",
+      "export_source_sha256": "95133168489bb086d6f58bdce597ca53fc0b9e7e74933a46ae008281c81194cd",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/G1Arith_lemma3g.log",
+      "receipt_sha256": "1f5e254e99b74a9a1f57e22c641296d12acc92fd7e38bf125063193958e84182",
+      "receipt_source_sha256": "4201e16ce05178ce111f167fc433eb2cfc0d2c7c6f7bd3cb25f65a8f423add5d",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=4201e16ce05178ce111f167fc433eb2cfc0d2c7c6f7bd3cb25f65a8f423add5d",
+      "source": "source/Openmath/Erdos643R3/G1Arith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.G3hpArith.lemma5",
+      "export_source_sha256": "e21a65ac966d7b787036f123a18b32503596e2ba6b340b95d1e61748762aeb11",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/G3hpArith_lemma5.log",
+      "receipt_sha256": "d85432df5ef70b210a025439509fa1f8480eff456dafd08928d835e72f35f30a",
+      "receipt_source_sha256": "e348331d693804070bb4598b8914f60ffa6bd602805e584a0729879eb1c4fc8b",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=e348331d693804070bb4598b8914f60ffa6bd602805e584a0729879eb1c4fc8b",
+      "source": "source/Openmath/Erdos643R3/G3hpArith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.G3hpArith.lemma6",
+      "export_source_sha256": "e21a65ac966d7b787036f123a18b32503596e2ba6b340b95d1e61748762aeb11",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/G3hpArith_lemma6.log",
+      "receipt_sha256": "68e87b4bf4e6cd94a76c245fc4cc4e886461e5291c624fad318bccac1a2efb02",
+      "receipt_source_sha256": "e348331d693804070bb4598b8914f60ffa6bd602805e584a0729879eb1c4fc8b",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=e348331d693804070bb4598b8914f60ffa6bd602805e584a0729879eb1c4fc8b",
+      "source": "source/Openmath/Erdos643R3/G3hpArith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.G3hpArith.lemma6_eq",
+      "export_source_sha256": "e21a65ac966d7b787036f123a18b32503596e2ba6b340b95d1e61748762aeb11",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/G3hpArith_lemma6_eq.log",
+      "receipt_sha256": "d4bd33f8d2417caebb9324468f885ea79a2c76d5530e487b75850b0ad28bffd5",
+      "receipt_source_sha256": "e348331d693804070bb4598b8914f60ffa6bd602805e584a0729879eb1c4fc8b",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=e348331d693804070bb4598b8914f60ffa6bd602805e584a0729879eb1c4fc8b",
+      "source": "source/Openmath/Erdos643R3/G3hpArith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.G3hpArith.lemma9_arith",
+      "export_source_sha256": "e21a65ac966d7b787036f123a18b32503596e2ba6b340b95d1e61748762aeb11",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/G3hpArith_lemma9_arith.log",
+      "receipt_sha256": "9e56d96a65f7a9e1e7fc7ed5377a85148e4c8d927e619f4164c2bb84b87d6015",
+      "receipt_source_sha256": "e348331d693804070bb4598b8914f60ffa6bd602805e584a0729879eb1c4fc8b",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=e348331d693804070bb4598b8914f60ffa6bd602805e584a0729879eb1c4fc8b",
+      "source": "source/Openmath/Erdos643R3/G3hpArith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Lemma1g.CN_type2",
+      "export_source_sha256": "7ba62cd0ef27a78d063fb3a4fe6e999c802a36d78b9a8309265fe725148a2637",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/Lemma1g_CN_type2.log",
+      "receipt_sha256": "cbebd9f62f54f83085c12a769314353d1f2fd267b5c6e7f3094b321bf164b1b1",
+      "receipt_source_sha256": "897dfee78595b1c8a76bd61baf41bdfa59898bc7bd072ff61933dcbb8faf12a7",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=897dfee78595b1c8a76bd61baf41bdfa59898bc7bd072ff61933dcbb8faf12a7",
+      "source": "source/Openmath/Erdos643R3/Lemma1g.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Lemma1g.card_triangle_options",
+      "export_source_sha256": "7ba62cd0ef27a78d063fb3a4fe6e999c802a36d78b9a8309265fe725148a2637",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/Lemma1g_card_triangle_options.log",
+      "receipt_sha256": "52b6c58337266eeb6b582e75735c84e1eb4cbbbb38e7ae81be8ef4559951286f",
+      "receipt_source_sha256": "897dfee78595b1c8a76bd61baf41bdfa59898bc7bd072ff61933dcbb8faf12a7",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=897dfee78595b1c8a76bd61baf41bdfa59898bc7bd072ff61933dcbb8faf12a7",
+      "source": "source/Openmath/Erdos643R3/Lemma1g.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Lemma1g.light_ab_iff",
+      "export_source_sha256": "7ba62cd0ef27a78d063fb3a4fe6e999c802a36d78b9a8309265fe725148a2637",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/Lemma1g_light_ab_iff.log",
+      "receipt_sha256": "ff811f4b93e56f8510b6d9e3f4a679cbe75ae1e51a7c49ae5ea2c41a1da04b4c",
+      "receipt_source_sha256": "897dfee78595b1c8a76bd61baf41bdfa59898bc7bd072ff61933dcbb8faf12a7",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=897dfee78595b1c8a76bd61baf41bdfa59898bc7bd072ff61933dcbb8faf12a7",
+      "source": "source/Openmath/Erdos643R3/Lemma1g.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Lemma1g.light_ac_iff",
+      "export_source_sha256": "7ba62cd0ef27a78d063fb3a4fe6e999c802a36d78b9a8309265fe725148a2637",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/Lemma1g_light_ac_iff.log",
+      "receipt_sha256": "956cd080360aa0c162bac7c44237ad15ea442d50758e73cd1e9796b75fe8a7a5",
+      "receipt_source_sha256": "897dfee78595b1c8a76bd61baf41bdfa59898bc7bd072ff61933dcbb8faf12a7",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=897dfee78595b1c8a76bd61baf41bdfa59898bc7bd072ff61933dcbb8faf12a7",
+      "source": "source/Openmath/Erdos643R3/Lemma1g.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Lemma1g.triangular_iff_type2",
+      "export_source_sha256": "7ba62cd0ef27a78d063fb3a4fe6e999c802a36d78b9a8309265fe725148a2637",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/Lemma1g_triangular_iff_type2.log",
+      "receipt_sha256": "bf532dc884cd7da0f1296f9c8419f6fdb1561822dbee4589adb84ce64537875e",
+      "receipt_source_sha256": "897dfee78595b1c8a76bd61baf41bdfa59898bc7bd072ff61933dcbb8faf12a7",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=897dfee78595b1c8a76bd61baf41bdfa59898bc7bd072ff61933dcbb8faf12a7",
+      "source": "source/Openmath/Erdos643R3/Lemma1g.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Lemma3.lemma3",
+      "export_source_sha256": "cd31563d93870dddb342246bb146c3ab1bbeb28068fc29643f94c9ffd301461d",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/Lemma3_lemma3.log",
+      "receipt_sha256": "a9ede95a5ea376127ae064845282973ffe9c2f5e10977cf275dc89d642c8fff1",
+      "receipt_source_sha256": "da25f9bfd995303e19960a2a03e0e7da1bd66462cfa53aa1e45a266aa015b3e2",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=da25f9bfd995303e19960a2a03e0e7da1bd66462cfa53aa1e45a266aa015b3e2",
+      "source": "source/Openmath/Erdos643R3/Lemma3.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Lemma3.lemma3_plus",
+      "export_source_sha256": "cd31563d93870dddb342246bb146c3ab1bbeb28068fc29643f94c9ffd301461d",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/Lemma3_lemma3_plus.log",
+      "receipt_sha256": "6a462fed2a411048f93d1367b131b56bce462eeeff51cccc5a0239f33dd63df5",
+      "receipt_source_sha256": "da25f9bfd995303e19960a2a03e0e7da1bd66462cfa53aa1e45a266aa015b3e2",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=da25f9bfd995303e19960a2a03e0e7da1bd66462cfa53aa1e45a266aa015b3e2",
+      "source": "source/Openmath/Erdos643R3/Lemma3.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Pw2312.Feas_rot",
+      "export_source_sha256": "cb3d1084612cc1305bac23f8a5527334ad3305e243566dfc338be4662c3cd660",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/Pw2312Defs_Feas_rot.log",
+      "receipt_sha256": "07ddec24e8bf1ed57975461e6e24bb4ac5328004daf807e5e1a7db2d35d9823a",
+      "receipt_source_sha256": "13db77e821077d1d3eca6ab97c9e5fed68a92c9240c37932670e879287f1db09",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[none] disallowed=[] source_sha256=13db77e821077d1d3eca6ab97c9e5fed68a92c9240c37932670e879287f1db09",
+      "source": "source/Openmath/Erdos643R3/Pw2312Defs.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Pw2312.Phi_le_PhiPlus",
+      "export_source_sha256": "cb3d1084612cc1305bac23f8a5527334ad3305e243566dfc338be4662c3cd660",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/Pw2312Defs_Phi_le_PhiPlus.log",
+      "receipt_sha256": "883898638f71b09d751ffaaa8d2bd2ba6af983ebb69b3f12add7a33bde89eaf7",
+      "receipt_source_sha256": "13db77e821077d1d3eca6ab97c9e5fed68a92c9240c37932670e879287f1db09",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=13db77e821077d1d3eca6ab97c9e5fed68a92c9240c37932670e879287f1db09",
+      "source": "source/Openmath/Erdos643R3/Pw2312Defs.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Pw2312.Phi_named",
+      "export_source_sha256": "cb3d1084612cc1305bac23f8a5527334ad3305e243566dfc338be4662c3cd660",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/Pw2312Defs_Phi_named.log",
+      "receipt_sha256": "a75c72776c174c545928d0436e864158062ae3b67686f65b9d97391eb370c857",
+      "receipt_source_sha256": "13db77e821077d1d3eca6ab97c9e5fed68a92c9240c37932670e879287f1db09",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=13db77e821077d1d3eca6ab97c9e5fed68a92c9240c37932670e879287f1db09",
+      "source": "source/Openmath/Erdos643R3/Pw2312Defs.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Pw2312.Phi_rot",
+      "export_source_sha256": "cb3d1084612cc1305bac23f8a5527334ad3305e243566dfc338be4662c3cd660",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/Pw2312Defs_Phi_rot.log",
+      "receipt_sha256": "67a31502c606f07c54234b190dbecc7724c8deb970e4aad1680bfec45c94a9bd",
+      "receipt_source_sha256": "13db77e821077d1d3eca6ab97c9e5fed68a92c9240c37932670e879287f1db09",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=13db77e821077d1d3eca6ab97c9e5fed68a92c9240c37932670e879287f1db09",
+      "source": "source/Openmath/Erdos643R3/Pw2312Defs.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Pw2312Main.card_le_O",
+      "export_source_sha256": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/Pw2312_card_le_O.log",
+      "receipt_sha256": "6ad6fc522e3b16a113846904dcca9a8b4683d493ef9bf156fc82544d94e1bb11",
+      "receipt_source_sha256": "9f50b40348bc328e104c73f03fc372ee34424d222f19f0ce21004f7510accb6e",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=9f50b40348bc328e104c73f03fc372ee34424d222f19f0ce21004f7510accb6e",
+      "source": "source/Openmath/Erdos643R3/Pw2312.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Pw2312Main.card_le_choose",
+      "export_source_sha256": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/Pw2312_card_le_choose.log",
+      "receipt_sha256": "d6ae98c31619bf6be9bdb987f5b434ab5b7be2368586a60d5294da5d0b390101",
+      "receipt_source_sha256": "9f50b40348bc328e104c73f03fc372ee34424d222f19f0ce21004f7510accb6e",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=9f50b40348bc328e104c73f03fc372ee34424d222f19f0ce21004f7510accb6e",
+      "source": "source/Openmath/Erdos643R3/Pw2312.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Pw2312Main.card_le_shadow_colink",
+      "export_source_sha256": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/Pw2312_card_le_shadow_colink.log",
+      "receipt_sha256": "73f70f035509f0083abc74245268926ef0f8c02768b1e8536de60fa05d4f5bc8",
+      "receipt_source_sha256": "9f50b40348bc328e104c73f03fc372ee34424d222f19f0ce21004f7510accb6e",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=9f50b40348bc328e104c73f03fc372ee34424d222f19f0ce21004f7510accb6e",
+      "source": "source/Openmath/Erdos643R3/Pw2312.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Pw2312Main.per_triple",
+      "export_source_sha256": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/Pw2312_per_triple.log",
+      "receipt_sha256": "a7a1e33fef49f5d541486221aa844ce2ae52ffcceb21041dd6c35461f75f6fa7",
+      "receipt_source_sha256": "9f50b40348bc328e104c73f03fc372ee34424d222f19f0ce21004f7510accb6e",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=9f50b40348bc328e104c73f03fc372ee34424d222f19f0ce21004f7510accb6e",
+      "source": "source/Openmath/Erdos643R3/Pw2312.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Pw2312Main.theorem2",
+      "export_source_sha256": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/Pw2312_theorem2.log",
+      "receipt_sha256": "63b4c7ba08c04db2b574af4cd758074ad35a13ee21e6f6f6ee33bf73feac2424",
+      "receipt_source_sha256": "9f50b40348bc328e104c73f03fc372ee34424d222f19f0ce21004f7510accb6e",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=9f50b40348bc328e104c73f03fc372ee34424d222f19f0ce21004f7510accb6e",
+      "source": "source/Openmath/Erdos643R3/Pw2312.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Pw2312.E1",
+      "export_source_sha256": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/PwArith_E1.log",
+      "receipt_sha256": "3539522a1aa76a55a882d23cac6fab45ee40c61d4d8a40609b00a9323f00171c",
+      "receipt_source_sha256": "775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+      "source": "source/Openmath/Erdos643R3/PwArith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Pw2312.E3",
+      "export_source_sha256": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/PwArith_E3.log",
+      "receipt_sha256": "454a7f2975f573d458abaae0f49f7a8201012c338ac8606e3d2b1127daf547d7",
+      "receipt_source_sha256": "775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+      "source": "source/Openmath/Erdos643R3/PwArith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Pw2312.E4",
+      "export_source_sha256": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/PwArith_E4.log",
+      "receipt_sha256": "c08ef7c6be374d1363daf58394e921997458d37d97b6a5f9a64b52650a063348",
+      "receipt_source_sha256": "775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+      "source": "source/Openmath/Erdos643R3/PwArith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Pw2312.K_ge",
+      "export_source_sha256": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/PwArith_K_ge.log",
+      "receipt_sha256": "c26ae7a7ad333ca5ba33963f77985516a3b7f15bef54a8d6588e802f6c8bd147",
+      "receipt_source_sha256": "775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+      "source": "source/Openmath/Erdos643R3/PwArith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Pw2312.S_one_sided",
+      "export_source_sha256": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/PwArith_S_one_sided.log",
+      "receipt_sha256": "b896c27510c93546e88c3da95869554a34043f4009cb91abc8a115436e051c46",
+      "receipt_source_sha256": "775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+      "source": "source/Openmath/Erdos643R3/PwArith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Pw2312.caseI_rel01",
+      "export_source_sha256": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/PwArith_caseI_rel01.log",
+      "receipt_sha256": "340fe667e411360351ebcc02f1800437ecb7cfd20fcdec8fb3fca858d9ade2aa",
+      "receipt_source_sha256": "775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+      "source": "source/Openmath/Erdos643R3/PwArith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.Pw2312.kappa_nonneg",
+      "export_source_sha256": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/PwArith_kappa_nonneg.log",
+      "receipt_sha256": "52c53c6a21b7c7ef9606cf790559ada8a34fa62c41ead3c39e402d04894a9346",
+      "receipt_source_sha256": "775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+      "source": "source/Openmath/Erdos643R3/PwArith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.PwC1.c1_cert",
+      "export_source_sha256": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/PwC1_c1_cert.log",
+      "receipt_sha256": "661299fc698004966d2c61e00cdea498350555164415c9dde87a68d3016e5511",
+      "receipt_source_sha256": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[none] disallowed=[] source_sha256=c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+      "source": "source/Openmath/Erdos643R3/PwC1.lean"
+    },
+    {
+      "declaration": "Erdos643R3.PwC1.caseII",
+      "export_source_sha256": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/PwC1_caseII.log",
+      "receipt_sha256": "d20c16222954d78c1f2e66d2879a41db2e8220faf8be26a5ba634e8ea1c87403",
+      "receipt_source_sha256": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+      "source": "source/Openmath/Erdos643R3/PwC1.lean"
+    },
+    {
+      "declaration": "Erdos643R3.PwC2.c2_cert",
+      "export_source_sha256": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/PwC2_c2_cert.log",
+      "receipt_sha256": "5c50feaca5f96b871edeb9cc25790c523177407d979f2723425c5ea8f7e1b050",
+      "receipt_source_sha256": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[none] disallowed=[] source_sha256=5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+      "source": "source/Openmath/Erdos643R3/PwC2.lean"
+    },
+    {
+      "declaration": "Erdos643R3.PwC2.caseIII",
+      "export_source_sha256": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/PwC2_caseIII.log",
+      "receipt_sha256": "171a8eb465fba345303cdd944f976d2b75b1dd3881e3ba50ed8d37e812bf2a5f",
+      "receipt_source_sha256": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+      "source": "source/Openmath/Erdos643R3/PwC2.lean"
+    },
+    {
+      "declaration": "Erdos643R3.PwCheck.bb2_sound",
+      "export_source_sha256": "d7599ffa13fd11546852caccceebfd59f7328c8fde69f511b0c9b944230a3c7d",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/PwCheck_bb2_sound.log",
+      "receipt_sha256": "e007813a6f966d4f95841a4f5376128e249e40ed63ebc30f529b524a761e9751",
+      "receipt_source_sha256": "29eedd06ab7523615d35a018322e4c7d40ac23c5b545ccff28c0415797dd6a88",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=29eedd06ab7523615d35a018322e4c7d40ac23c5b545ccff28c0415797dd6a88",
+      "source": "source/Openmath/Erdos643R3/PwCheck.lean"
+    },
+    {
+      "declaration": "Erdos643R3.PwCheck.bb_sound",
+      "export_source_sha256": "d7599ffa13fd11546852caccceebfd59f7328c8fde69f511b0c9b944230a3c7d",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/PwCheck_bb_sound.log",
+      "receipt_sha256": "8098a2670c583e2dd05b79a85f8d64da601caf073a14825c34da62e87fa5da7a",
+      "receipt_source_sha256": "29eedd06ab7523615d35a018322e4c7d40ac23c5b545ccff28c0415797dd6a88",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=29eedd06ab7523615d35a018322e4c7d40ac23c5b545ccff28c0415797dd6a88",
+      "source": "source/Openmath/Erdos643R3/PwCheck.lean"
+    },
+    {
+      "declaration": "Erdos643R3.PwCheck.kdC_sound",
+      "export_source_sha256": "d7599ffa13fd11546852caccceebfd59f7328c8fde69f511b0c9b944230a3c7d",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/PwCheck_kdC_sound.log",
+      "receipt_sha256": "4ab9aca0406bcf20d8c94dfc74810bb77436228c80bd7a433cfb0efb37201ace",
+      "receipt_source_sha256": "29eedd06ab7523615d35a018322e4c7d40ac23c5b545ccff28c0415797dd6a88",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=29eedd06ab7523615d35a018322e4c7d40ac23c5b545ccff28c0415797dd6a88",
+      "source": "source/Openmath/Erdos643R3/PwCheck.lean"
+    },
+    {
+      "declaration": "Erdos643R3.RedistArith.F_eq_zero",
+      "export_source_sha256": "637c5811ef71ddaa5d8f2f1dacf9a49fa6786c4aa2d78543bb29bc3303776006",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/RedistArith_F_eq_zero.log",
+      "receipt_sha256": "4627d33a97ce7c06972c2910b8429d9b9bae85f96add7c615212ac0ae09ba34d",
+      "receipt_source_sha256": "2bcadace9cd57e7805658182d253badf4b2ac973cf669a7d76f0c93a35649f96",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=2bcadace9cd57e7805658182d253badf4b2ac973cf669a7d76f0c93a35649f96",
+      "source": "source/Openmath/Erdos643R3/RedistArith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.RedistArith.F_nonneg",
+      "export_source_sha256": "637c5811ef71ddaa5d8f2f1dacf9a49fa6786c4aa2d78543bb29bc3303776006",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/RedistArith_F_nonneg.log",
+      "receipt_sha256": "511d97882d9c29af4b6dc5a5664449ac0313451702d4805eef705380871c2b8b",
+      "receipt_source_sha256": "2bcadace9cd57e7805658182d253badf4b2ac973cf669a7d76f0c93a35649f96",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=2bcadace9cd57e7805658182d253badf4b2ac973cf669a7d76f0c93a35649f96",
+      "source": "source/Openmath/Erdos643R3/RedistArith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.RedistArith.lemma_P",
+      "export_source_sha256": "637c5811ef71ddaa5d8f2f1dacf9a49fa6786c4aa2d78543bb29bc3303776006",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/RedistArith_lemma_P.log",
+      "receipt_sha256": "40480268ce7fe50ce7dc0580da0e4ed013e83fedfbe2b248928218985c20b409",
+      "receipt_source_sha256": "2bcadace9cd57e7805658182d253badf4b2ac973cf669a7d76f0c93a35649f96",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=2bcadace9cd57e7805658182d253badf4b2ac973cf669a7d76f0c93a35649f96",
+      "source": "source/Openmath/Erdos643R3/RedistArith.lean"
+    },
+    {
+      "declaration": "Erdos643R3.SlotModel.card_CN_slot",
+      "export_source_sha256": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/SlotModel_card_CN_slot.log",
+      "receipt_sha256": "d183030b67d68e52341bc40afe12449ddb78e1f2568854326307374295e43dc4",
+      "receipt_source_sha256": "224fd2eff3cce476bdad55c1ad3835cdeb7c0808175ecded175203ce7c0c3cee",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=224fd2eff3cce476bdad55c1ad3835cdeb7c0808175ecded175203ce7c0c3cee",
+      "source": "source/Openmath/Erdos643R3/SlotModel.lean"
+    },
+    {
+      "declaration": "Erdos643R3.SlotModel.group_exact",
+      "export_source_sha256": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/SlotModel_group_exact.log",
+      "receipt_sha256": "bcf5f5c8f81d349cb2184d4c7a40d4c9ce38060f719d4dc768af4440e1c809c1",
+      "receipt_source_sha256": "224fd2eff3cce476bdad55c1ad3835cdeb7c0808175ecded175203ce7c0c3cee",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=224fd2eff3cce476bdad55c1ad3835cdeb7c0808175ecded175203ce7c0c3cee",
+      "source": "source/Openmath/Erdos643R3/SlotModel.lean"
+    },
+    {
+      "declaration": "Erdos643R3.SlotModel.lemma2",
+      "export_source_sha256": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/SlotModel_lemma2.log",
+      "receipt_sha256": "f82bda6a719e4e9d7ca44c8b38ec16a5b79eee9d5c9971ea4fedeb1c01651510",
+      "receipt_source_sha256": "224fd2eff3cce476bdad55c1ad3835cdeb7c0808175ecded175203ce7c0c3cee",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=224fd2eff3cce476bdad55c1ad3835cdeb7c0808175ecded175203ce7c0c3cee",
+      "source": "source/Openmath/Erdos643R3/SlotModel.lean"
+    },
+    {
+      "declaration": "Erdos643R3.SlotModel.sigmaW_slots",
+      "export_source_sha256": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/SlotModel_sigmaW_slots.log",
+      "receipt_sha256": "84b51507e6a501415e1900a861e9be198628ab6a2294b615235afd28ef37bda5",
+      "receipt_source_sha256": "224fd2eff3cce476bdad55c1ad3835cdeb7c0808175ecded175203ce7c0c3cee",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=224fd2eff3cce476bdad55c1ad3835cdeb7c0808175ecded175203ce7c0c3cee",
+      "source": "source/Openmath/Erdos643R3/SlotModel.lean"
+    },
+    {
+      "declaration": "Erdos643R3.SlotModel.tauW_slots",
+      "export_source_sha256": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/SlotModel_tauW_slots.log",
+      "receipt_sha256": "d1f789e9cc81941ee24c3f40c0acfa15bdf51e8ae1bb3785ff1075d2bc905f1d",
+      "receipt_source_sha256": "224fd2eff3cce476bdad55c1ad3835cdeb7c0808175ecded175203ce7c0c3cee",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=224fd2eff3cce476bdad55c1ad3835cdeb7c0808175ecded175203ce7c0c3cee",
+      "source": "source/Openmath/Erdos643R3/SlotModel.lean"
+    },
+    {
+      "declaration": "Erdos643R3.WBox.wbox",
+      "export_source_sha256": "ec7cf0a83fcc5eb380d038ad0093d215748fc75fb50007ac80466112ab6ebdab",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/WBox_wbox.log",
+      "receipt_sha256": "5d3cc019598661f9b5a6b44ca5a33a7e82cefc03c4b4f31dc8b9469cb637e4e3",
+      "receipt_source_sha256": "e665c5e602200df79f7fac302903878917dff68ce7b5a48db602763a958eef4e",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=e665c5e602200df79f7fac302903878917dff68ce7b5a48db602763a958eef4e",
+      "source": "source/Openmath/Erdos643R3/WBox.lean"
+    },
+    {
+      "declaration": "Erdos643R3.WBox.wcheck_true",
+      "export_source_sha256": "ec7cf0a83fcc5eb380d038ad0093d215748fc75fb50007ac80466112ab6ebdab",
+      "provenance": "Historical official check.sh result, copied without alteration",
+      "receipt": "receipts/WBox_wcheck_true.log",
+      "receipt_sha256": "8b553353ee6594d20ed58fb88ffc33ced227182308adfd1acb4864f14867c79a",
+      "receipt_source_sha256": "e665c5e602200df79f7fac302903878917dff68ce7b5a48db602763a958eef4e",
+      "result": "RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=e665c5e602200df79f7fac302903878917dff68ce7b5a48db602763a958eef4e",
+      "source": "source/Openmath/Erdos643R3/WBox.lean"
+    }
+  ],
+  "twentyfour_over_twentythree_import_closure": {
+    "HypergraphBasics": "bb5c59fb53d56a61a18fe3b844631267495e11567d6e4096586161adc3f6f78b",
+    "Identity": "bb8e2c89c58a5603e0c938ff5f116c8210f85d1df310100a9c3c91f337b8ef8b",
+    "Lemma3": "da25f9bfd995303e19960a2a03e0e7da1bd66462cfa53aa1e45a266aa015b3e2",
+    "Pw2312": "9f50b40348bc328e104c73f03fc372ee34424d222f19f0ce21004f7510accb6e",
+    "Pw2312Defs": "13db77e821077d1d3eca6ab97c9e5fed68a92c9240c37932670e879287f1db09",
+    "PwArith": "775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+    "PwC1": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+    "PwC2": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+    "PwCheck": "29eedd06ab7523615d35a018322e4c7d40ac23c5b545ccff28c0415797dd6a88",
+    "SlotModel": "224fd2eff3cce476bdad55c1ad3835cdeb7c0808175ecded175203ce7c0c3cee",
+    "Weighting": "2d0688fdac329d0bb446d54c8fa665856949c7360350dc451ca6d4afe005348a",
+    "WeightingAuxArith": "f598c850547c73b671bdb0c3f13546d21374d7d652630e1eb489a82c59580442",
+    "WeightingBound": "ceb807e36820a80b6eb67e4199f7968306946a35f0a7b85a92230660c08a55c6"
+  }
+}

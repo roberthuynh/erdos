@@ -1,0 +1,817 @@
+{
+  "aggregate_olean_sha256": "3695dc39aa1eff48ef4f1fe82570c1c2704d1cdf768bee0ac241fd149b83b346",
+  "build": [
+    {
+      "module": "Openmath.Erdos643R3.HypergraphBasics",
+      "olean_sha256": "068bbb0431beb841f7da32c1895696b32ca489f3c7c0ffaa8b46e66e33543c33",
+      "source_sha256": "bb5c59fb53d56a61a18fe3b844631267495e11567d6e4096586161adc3f6f78b"
+    },
+    {
+      "module": "Openmath.Erdos643R3.Identity",
+      "olean_sha256": "30cb8efe3048cef0747891eb569c03dc3b00b8a83467248de761d5380d21cc10",
+      "source_sha256": "b4e523e15dbd28fbcc7847f2c0ba154bf2f482cddf093e2d79c6573deecf9011"
+    },
+    {
+      "module": "Openmath.Erdos643R3.Weighting",
+      "olean_sha256": "5ab045640b9b90d06fa2c267a7e4798d934e9b96fed89ad533269cbbda03566d",
+      "source_sha256": "c93fcef9972a8f3fe4bc2f1fa45aa59618e429acfb6d9be24ade3421ae2e7bba"
+    },
+    {
+      "module": "Openmath.Erdos643R3.WeightingAuxArith",
+      "olean_sha256": "4924eae2a7e24ddf5a35e3de43efc7f09f670eb34e79994b9aa16eeec40cc3da",
+      "source_sha256": "44d136e459522ea5065928fea246f194ac41d77c88469e7b30b66953f7dcbf0c"
+    },
+    {
+      "module": "Openmath.Erdos643R3.WeightingBound",
+      "olean_sha256": "da26011fc9294af0c6db14aebb2bb6141952c7b01897104538366d4094a0912a",
+      "source_sha256": "e83241fcceacbc6b6338498944766515d4bcea43dee92ff6335065e2894231bb"
+    },
+    {
+      "module": "Openmath.Erdos643R3.SlotModel",
+      "olean_sha256": "ec3c50e5575b01b1d3b6077af2d2426b5d360ed77a88f6d74121bd93ea6ce2bb",
+      "source_sha256": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc"
+    },
+    {
+      "module": "Openmath.Erdos643R3.Pw2312Defs",
+      "olean_sha256": "69888548ca0360d6009f6f0a6f47eb282769f408df9dfb160fd104b2f6a9d29f",
+      "source_sha256": "cb3d1084612cc1305bac23f8a5527334ad3305e243566dfc338be4662c3cd660"
+    },
+    {
+      "module": "Openmath.Erdos643R3.Lemma3",
+      "olean_sha256": "55b6ab967fb7c763b7ff860afd64cdfa0f977f38cd515943e2127e83dc81bdc5",
+      "source_sha256": "cd31563d93870dddb342246bb146c3ab1bbeb28068fc29643f94c9ffd301461d"
+    },
+    {
+      "module": "Openmath.Erdos643R3.PwArith",
+      "olean_sha256": "312dfbe1ccd5a57bba1125468a938368844b9a0e3d0944303569452d3586490a",
+      "source_sha256": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3"
+    },
+    {
+      "module": "Openmath.Erdos643R3.PwCheck",
+      "olean_sha256": "f7815ce4270bc65fbffa2253fbc47164fe18fae54c69f49a457b4776be4a81e2",
+      "source_sha256": "d7599ffa13fd11546852caccceebfd59f7328c8fde69f511b0c9b944230a3c7d"
+    },
+    {
+      "module": "Openmath.Erdos643R3.PwC1",
+      "olean_sha256": "ca80324a629f81a7fa6932ba5d7a6958da625c1e0169eab754bb695b1462cd8d",
+      "source_sha256": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40"
+    },
+    {
+      "module": "Openmath.Erdos643R3.PwC2",
+      "olean_sha256": "cbe21b093ee473eebd00a5c6748a1f44cedea1bb8bedfa3d7082312889b9043e",
+      "source_sha256": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b"
+    },
+    {
+      "module": "Openmath.Erdos643R3.Pw2312",
+      "olean_sha256": "6ac1d3e8b184a295a515a7cf217a742601746f048dc22684fb132f7138dcf1db",
+      "source_sha256": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1"
+    },
+    {
+      "module": "Openmath.Erdos643R3.FCBridge",
+      "olean_sha256": "9e885d515752de4275fb0da665982251ea454831f208bbb0a55197699df479f4",
+      "source_sha256": "a66ced22548577c95114f6e7e14bb8945591b6247236e55d9963314bb743290d"
+    },
+    {
+      "module": "Openmath.Erdos643R3.G1Arith",
+      "olean_sha256": "e0b34ae1385b2923e566c0802c86ad319aba37d855891f3ea1f1ef421274dfd8",
+      "source_sha256": "95133168489bb086d6f58bdce597ca53fc0b9e7e74933a46ae008281c81194cd"
+    },
+    {
+      "module": "Openmath.Erdos643R3.G3hpArith",
+      "olean_sha256": "43b39baf0b76d66309c298a17251986ad6527d51adf73be6a4fb746568de9de3",
+      "source_sha256": "e21a65ac966d7b787036f123a18b32503596e2ba6b340b95d1e61748762aeb11"
+    },
+    {
+      "module": "Openmath.Erdos643R3.L1Top",
+      "olean_sha256": "1f289cb67904f9c9c4e1802fd7dfec36bd3abe0b04cf6934622f2efa94fdd7d3",
+      "source_sha256": "95bc5eec5db70c6b4ace411c6ea723e6541f8502cc78285b541c3f0bca00ef77"
+    },
+    {
+      "module": "Openmath.Erdos643R3.Lemma1g",
+      "olean_sha256": "d4b8e7e18b5acb68aaa4c586f8fa4c68bf3cda2264967f8c6a68cb5c687afd65",
+      "source_sha256": "7ba62cd0ef27a78d063fb3a4fe6e999c802a36d78b9a8309265fe725148a2637"
+    },
+    {
+      "module": "Openmath.Erdos643R3.RedistArith",
+      "olean_sha256": "09ef8fcf6ecf941a70bd4af6bab768cff48c17e0b0b4803f38257635e4b1502d",
+      "source_sha256": "637c5811ef71ddaa5d8f2f1dacf9a49fa6786c4aa2d78543bb29bc3303776006"
+    },
+    {
+      "module": "Openmath.Erdos643R3.WBox",
+      "olean_sha256": "4000c39727ec1d0cf94939d33f8fd7b3f246f6eab0cf167d876d02899cc8c73c",
+      "source_sha256": "ec7cf0a83fcc5eb380d038ad0093d215748fc75fb50007ac80466112ab6ebdab"
+    }
+  ],
+  "check_clean_script_sha256": "a613a5fd2f3f3a3ea7129d8b5f238c03184b2a34cf9e1d5de067a26ea69091a5",
+  "declarations": [
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.G1Arith.G1",
+      "defining_module": "Openmath.Erdos643R3.G1Arith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/G1Arith.lean",
+      "source_sha256": "95133168489bb086d6f58bdce597ca53fc0b9e7e74933a46ae008281c81194cd"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.G1Arith.G3",
+      "defining_module": "Openmath.Erdos643R3.G1Arith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/G1Arith.lean",
+      "source_sha256": "95133168489bb086d6f58bdce597ca53fc0b9e7e74933a46ae008281c81194cd"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.G1Arith.lemma2g_profile",
+      "defining_module": "Openmath.Erdos643R3.G1Arith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/G1Arith.lean",
+      "source_sha256": "95133168489bb086d6f58bdce597ca53fc0b9e7e74933a46ae008281c81194cd"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.G1Arith.lemma3g",
+      "defining_module": "Openmath.Erdos643R3.G1Arith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/G1Arith.lean",
+      "source_sha256": "95133168489bb086d6f58bdce597ca53fc0b9e7e74933a46ae008281c81194cd"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.G3hpArith.lemma5",
+      "defining_module": "Openmath.Erdos643R3.G3hpArith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/G3hpArith.lean",
+      "source_sha256": "e21a65ac966d7b787036f123a18b32503596e2ba6b340b95d1e61748762aeb11"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.G3hpArith.lemma6",
+      "defining_module": "Openmath.Erdos643R3.G3hpArith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/G3hpArith.lean",
+      "source_sha256": "e21a65ac966d7b787036f123a18b32503596e2ba6b340b95d1e61748762aeb11"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.G3hpArith.lemma6_eq",
+      "defining_module": "Openmath.Erdos643R3.G3hpArith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/G3hpArith.lean",
+      "source_sha256": "e21a65ac966d7b787036f123a18b32503596e2ba6b340b95d1e61748762aeb11"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.G3hpArith.lemma9_arith",
+      "defining_module": "Openmath.Erdos643R3.G3hpArith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/G3hpArith.lean",
+      "source_sha256": "e21a65ac966d7b787036f123a18b32503596e2ba6b340b95d1e61748762aeb11"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Lemma1g.CN_type2",
+      "defining_module": "Openmath.Erdos643R3.Lemma1g",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Lemma1g.lean",
+      "source_sha256": "7ba62cd0ef27a78d063fb3a4fe6e999c802a36d78b9a8309265fe725148a2637"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Lemma1g.card_triangle_options",
+      "defining_module": "Openmath.Erdos643R3.Lemma1g",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Lemma1g.lean",
+      "source_sha256": "7ba62cd0ef27a78d063fb3a4fe6e999c802a36d78b9a8309265fe725148a2637"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Lemma1g.light_ab_iff",
+      "defining_module": "Openmath.Erdos643R3.Lemma1g",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Lemma1g.lean",
+      "source_sha256": "7ba62cd0ef27a78d063fb3a4fe6e999c802a36d78b9a8309265fe725148a2637"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Lemma1g.light_ac_iff",
+      "defining_module": "Openmath.Erdos643R3.Lemma1g",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Lemma1g.lean",
+      "source_sha256": "7ba62cd0ef27a78d063fb3a4fe6e999c802a36d78b9a8309265fe725148a2637"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Lemma1g.triangular_iff_type2",
+      "defining_module": "Openmath.Erdos643R3.Lemma1g",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Lemma1g.lean",
+      "source_sha256": "7ba62cd0ef27a78d063fb3a4fe6e999c802a36d78b9a8309265fe725148a2637"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Lemma3.lemma3",
+      "defining_module": "Openmath.Erdos643R3.Lemma3",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Lemma3.lean",
+      "source_sha256": "cd31563d93870dddb342246bb146c3ab1bbeb28068fc29643f94c9ffd301461d"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Lemma3.lemma3_plus",
+      "defining_module": "Openmath.Erdos643R3.Lemma3",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Lemma3.lean",
+      "source_sha256": "cd31563d93870dddb342246bb146c3ab1bbeb28068fc29643f94c9ffd301461d"
+    },
+    {
+      "axioms": [],
+      "declaration": "Erdos643R3.Pw2312.Feas_rot",
+      "defining_module": "Openmath.Erdos643R3.Pw2312Defs",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Pw2312Defs.lean",
+      "source_sha256": "cb3d1084612cc1305bac23f8a5527334ad3305e243566dfc338be4662c3cd660"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Pw2312.Phi_le_PhiPlus",
+      "defining_module": "Openmath.Erdos643R3.Pw2312Defs",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Pw2312Defs.lean",
+      "source_sha256": "cb3d1084612cc1305bac23f8a5527334ad3305e243566dfc338be4662c3cd660"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Pw2312.Phi_named",
+      "defining_module": "Openmath.Erdos643R3.Pw2312Defs",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Pw2312Defs.lean",
+      "source_sha256": "cb3d1084612cc1305bac23f8a5527334ad3305e243566dfc338be4662c3cd660"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Pw2312.Phi_rot",
+      "defining_module": "Openmath.Erdos643R3.Pw2312Defs",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Pw2312Defs.lean",
+      "source_sha256": "cb3d1084612cc1305bac23f8a5527334ad3305e243566dfc338be4662c3cd660"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Pw2312Main.card_le_O",
+      "defining_module": "Openmath.Erdos643R3.Pw2312",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Pw2312.lean",
+      "source_sha256": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Pw2312Main.card_le_choose",
+      "defining_module": "Openmath.Erdos643R3.Pw2312",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Pw2312.lean",
+      "source_sha256": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Pw2312Main.card_le_shadow_colink",
+      "defining_module": "Openmath.Erdos643R3.Pw2312",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Pw2312.lean",
+      "source_sha256": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Pw2312Main.per_triple",
+      "defining_module": "Openmath.Erdos643R3.Pw2312",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Pw2312.lean",
+      "source_sha256": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Pw2312Main.theorem2",
+      "defining_module": "Openmath.Erdos643R3.Pw2312",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/Pw2312.lean",
+      "source_sha256": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Pw2312.E1",
+      "defining_module": "Openmath.Erdos643R3.PwArith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/PwArith.lean",
+      "source_sha256": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Pw2312.E3",
+      "defining_module": "Openmath.Erdos643R3.PwArith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/PwArith.lean",
+      "source_sha256": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Pw2312.E4",
+      "defining_module": "Openmath.Erdos643R3.PwArith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/PwArith.lean",
+      "source_sha256": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Pw2312.K_ge",
+      "defining_module": "Openmath.Erdos643R3.PwArith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/PwArith.lean",
+      "source_sha256": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Pw2312.S_one_sided",
+      "defining_module": "Openmath.Erdos643R3.PwArith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/PwArith.lean",
+      "source_sha256": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Pw2312.caseI_rel01",
+      "defining_module": "Openmath.Erdos643R3.PwArith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/PwArith.lean",
+      "source_sha256": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.Pw2312.kappa_nonneg",
+      "defining_module": "Openmath.Erdos643R3.PwArith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/PwArith.lean",
+      "source_sha256": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3"
+    },
+    {
+      "axioms": [],
+      "declaration": "Erdos643R3.PwC1.c1_cert",
+      "defining_module": "Openmath.Erdos643R3.PwC1",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/PwC1.lean",
+      "source_sha256": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.PwC1.caseII",
+      "defining_module": "Openmath.Erdos643R3.PwC1",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/PwC1.lean",
+      "source_sha256": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40"
+    },
+    {
+      "axioms": [],
+      "declaration": "Erdos643R3.PwC2.c2_cert",
+      "defining_module": "Openmath.Erdos643R3.PwC2",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/PwC2.lean",
+      "source_sha256": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.PwC2.caseIII",
+      "defining_module": "Openmath.Erdos643R3.PwC2",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/PwC2.lean",
+      "source_sha256": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.PwCheck.bb2_sound",
+      "defining_module": "Openmath.Erdos643R3.PwCheck",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/PwCheck.lean",
+      "source_sha256": "d7599ffa13fd11546852caccceebfd59f7328c8fde69f511b0c9b944230a3c7d"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.PwCheck.bb_sound",
+      "defining_module": "Openmath.Erdos643R3.PwCheck",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/PwCheck.lean",
+      "source_sha256": "d7599ffa13fd11546852caccceebfd59f7328c8fde69f511b0c9b944230a3c7d"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.PwCheck.kdC_sound",
+      "defining_module": "Openmath.Erdos643R3.PwCheck",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/PwCheck.lean",
+      "source_sha256": "d7599ffa13fd11546852caccceebfd59f7328c8fde69f511b0c9b944230a3c7d"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.RedistArith.F_eq_zero",
+      "defining_module": "Openmath.Erdos643R3.RedistArith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/RedistArith.lean",
+      "source_sha256": "637c5811ef71ddaa5d8f2f1dacf9a49fa6786c4aa2d78543bb29bc3303776006"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.RedistArith.F_nonneg",
+      "defining_module": "Openmath.Erdos643R3.RedistArith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/RedistArith.lean",
+      "source_sha256": "637c5811ef71ddaa5d8f2f1dacf9a49fa6786c4aa2d78543bb29bc3303776006"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.RedistArith.lemma_P",
+      "defining_module": "Openmath.Erdos643R3.RedistArith",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/RedistArith.lean",
+      "source_sha256": "637c5811ef71ddaa5d8f2f1dacf9a49fa6786c4aa2d78543bb29bc3303776006"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.SlotModel.card_CN_slot",
+      "defining_module": "Openmath.Erdos643R3.SlotModel",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/SlotModel.lean",
+      "source_sha256": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.SlotModel.group_exact",
+      "defining_module": "Openmath.Erdos643R3.SlotModel",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/SlotModel.lean",
+      "source_sha256": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.SlotModel.lemma2",
+      "defining_module": "Openmath.Erdos643R3.SlotModel",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/SlotModel.lean",
+      "source_sha256": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.SlotModel.sigmaW_slots",
+      "defining_module": "Openmath.Erdos643R3.SlotModel",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/SlotModel.lean",
+      "source_sha256": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.SlotModel.tauW_slots",
+      "defining_module": "Openmath.Erdos643R3.SlotModel",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/SlotModel.lean",
+      "source_sha256": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.WBox.wbox",
+      "defining_module": "Openmath.Erdos643R3.WBox",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/WBox.lean",
+      "source_sha256": "ec7cf0a83fcc5eb380d038ad0093d215748fc75fb50007ac80466112ab6ebdab"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.WBox.wcheck_true",
+      "defining_module": "Openmath.Erdos643R3.WBox",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/WBox.lean",
+      "source_sha256": "ec7cf0a83fcc5eb380d038ad0093d215748fc75fb50007ac80466112ab6ebdab"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.WeightingBound.card_le_nine_eighths_choose",
+      "defining_module": "Openmath.Erdos643R3.WeightingBound",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/WeightingBound.lean",
+      "source_sha256": "e83241fcceacbc6b6338498944766515d4bcea43dee92ff6335065e2894231bb"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "Erdos643R3.FCBridge.hasRepeatedDisjointUnion_iff_forbidden",
+      "defining_module": "Openmath.Erdos643R3.FCBridge",
+      "hygiene_probe_agree": true,
+      "result": "PASS",
+      "source": "source/Openmath/Erdos643R3/FCBridge.lean",
+      "source_sha256": "a66ced22548577c95114f6e7e14bb8945591b6247236e55d9963314bb743290d"
+    }
+  ],
+  "does_not_verify_coefficient_one_full_theorem": true,
+  "generated_safe_recursors": [
+    "Erdos643R3.PwCheck.bb._unsafe_rec",
+    "Erdos643R3.PwCheck.kdLoop._unsafe_rec",
+    "Erdos643R3.PwCheck.bb2._unsafe_rec"
+  ],
+  "logs_sha256": {
+    "hygiene.log": "f3dc76d0b47976a536c79a2cf7dd6582e1f66a83227d266f7eab4d864dda15dd",
+    "negative-control-hygiene.log": "924c9c7bf4088fc94418558318522c739a86d10a6ec23f612e0b956dd69e7a2f",
+    "negative-control-spoof-hygiene.log": "2b4b4010df706d25429328631d0f38396150564fa76ba97b8766b3bc1891a647",
+    "negative-control-spoof-srcscan.log": "97e2eb3d94ea141f2f99aa4e4a7ef15a964af6645ba02e44241230ffb48db663",
+    "negative-control-srcscan.log": "c0e4301717c2f8c654f71568bebfaa4cf1ad11ac1a89e93401df2b1a0dd38b35",
+    "probe.log": "67d8e1fa860d254c71a1e3fce5f57a479687541502676f06d9f9fd7759240667",
+    "replay-00-07.status.log": "edf0faf20ec2dd3350f8e48dec61e76f3de0d44cda58fcf537802769e6497c0d",
+    "replay-07-14.status.log": "9240567d72d68bdafaa5a26e1ca78c9d3a9fca538b27ac9e7cf05583924e3d9f",
+    "replay-14-21.status.log": "5c8da7d28fde0f56761c925e96085151893ecd7282e4bda00b585ec15edd7a0b",
+    "replay-status.log": "4a2f55e31758f18216418538313367a37329493d7c481cd9e22b95b86cb2ea8c",
+    "srcscan.log": "bf3b797fee28474f8e60e46cb010ce683f30093be5142c5d52bfea87779a98a8"
+  },
+  "negative_control_fixture_sha256": {
+    "fixtures/ControlUserUnsafe.lean.txt": "ddc6420537dcde4dc1928dfd48a8a9d917ad0450da21da688e412b8bf4e4c48c",
+    "fixtures/SpoofPwCheck.lean.txt": "0e0899f82c05ec6c1725d881e1399413fbc848d185988c7b1d9df15035b12403"
+  },
+  "not_an_official_check_sh_or_single_check_clean_sh_run": true,
+  "phase_timeout_seconds": 240,
+  "phases": {
+    "aggregate_import": "PASS",
+    "axiom_agreement_50": "PASS",
+    "environment_hygiene": "PASS",
+    "fresh_build_20": "PASS",
+    "independent_axiom_probe_50": "PASS",
+    "kernel_replay_20_plus_aggregate_in_three_chunks": "PASS",
+    "negative_controls": "PASS",
+    "one_full_replay_attempt": "UNKNOWN_TIMEOUT_240",
+    "package_toolchain_pins": "PASS",
+    "source_scan_20": "PASS"
+  },
+  "pin_receipt_sha256": "49b7e2a701dd00e179e9185e46f673fd3534e06d99371501c895837982b8cd1e",
+  "result": "PASS",
+  "scope": "fresh phased hardened check of exact 20-module exported supporting package",
+  "source_and_tool_sha256": {
+    "pins/package-oleans.sha256": "9eea9d64f6e59644b05db636ddd54c245a577025402a6a480479e572ad00923f",
+    "pins/toolchain.sha256": "8f854cadf5aef553f7849542f9825b5625d3d122fe84bc50cd5322a938a7b64f",
+    "source/Openmath/Erdos643R3/FCBridge.lean": "a66ced22548577c95114f6e7e14bb8945591b6247236e55d9963314bb743290d",
+    "source/Openmath/Erdos643R3/G1Arith.lean": "95133168489bb086d6f58bdce597ca53fc0b9e7e74933a46ae008281c81194cd",
+    "source/Openmath/Erdos643R3/G3hpArith.lean": "e21a65ac966d7b787036f123a18b32503596e2ba6b340b95d1e61748762aeb11",
+    "source/Openmath/Erdos643R3/HypergraphBasics.lean": "bb5c59fb53d56a61a18fe3b844631267495e11567d6e4096586161adc3f6f78b",
+    "source/Openmath/Erdos643R3/Identity.lean": "b4e523e15dbd28fbcc7847f2c0ba154bf2f482cddf093e2d79c6573deecf9011",
+    "source/Openmath/Erdos643R3/L1Top.lean": "95bc5eec5db70c6b4ace411c6ea723e6541f8502cc78285b541c3f0bca00ef77",
+    "source/Openmath/Erdos643R3/Lemma1g.lean": "7ba62cd0ef27a78d063fb3a4fe6e999c802a36d78b9a8309265fe725148a2637",
+    "source/Openmath/Erdos643R3/Lemma3.lean": "cd31563d93870dddb342246bb146c3ab1bbeb28068fc29643f94c9ffd301461d",
+    "source/Openmath/Erdos643R3/Pw2312.lean": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1",
+    "source/Openmath/Erdos643R3/Pw2312Defs.lean": "cb3d1084612cc1305bac23f8a5527334ad3305e243566dfc338be4662c3cd660",
+    "source/Openmath/Erdos643R3/PwArith.lean": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3",
+    "source/Openmath/Erdos643R3/PwC1.lean": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+    "source/Openmath/Erdos643R3/PwC2.lean": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+    "source/Openmath/Erdos643R3/PwCheck.lean": "d7599ffa13fd11546852caccceebfd59f7328c8fde69f511b0c9b944230a3c7d",
+    "source/Openmath/Erdos643R3/RedistArith.lean": "637c5811ef71ddaa5d8f2f1dacf9a49fa6786c4aa2d78543bb29bc3303776006",
+    "source/Openmath/Erdos643R3/SlotModel.lean": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc",
+    "source/Openmath/Erdos643R3/WBox.lean": "ec7cf0a83fcc5eb380d038ad0093d215748fc75fb50007ac80466112ab6ebdab",
+    "source/Openmath/Erdos643R3/Weighting.lean": "c93fcef9972a8f3fe4bc2f1fa45aa59618e429acfb6d9be24ade3421ae2e7bba",
+    "source/Openmath/Erdos643R3/WeightingAuxArith.lean": "44d136e459522ea5065928fea246f194ac41d77c88469e7b30b66953f7dcbf0c",
+    "source/Openmath/Erdos643R3/WeightingBound.lean": "e83241fcceacbc6b6338498944766515d4bcea43dee92ff6335065e2894231bb",
+    "source/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+    "standalone/lake-manifest.json": "89a851909558bb64930b33c8c2910fb00741cbfc71a4cda26040a52dbb01b8d4",
+    "tools/Hygiene.lean": "d8f2b2f37d8925c8b73b642291719ac1a081a54fd40ea26778ee0f1e6b1d3de0",
+    "tools/imports.py": "876da7239498275976e60ca15924f1b288acbc54f56f16d00c508d4c502e948f",
+    "tools/olean_pins.py": "8383647f64f718e6accce405c9e4b7903476e1f64e58267594468a9d30d8f8bb",
+    "tools/srcscan.py": "07020873f541c9cfd304b5185ad2955f1b37ce932c90a62949ecec12cc6a00f2",
+    "tools/toolchain_pins.py": "da4ad1799c09f23a672f08469157aa06707be2a598d66a818de0d8cd90b226df"
+  }
+}

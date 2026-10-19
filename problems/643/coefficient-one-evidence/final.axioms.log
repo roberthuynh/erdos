@@ -1,0 +1,33 @@
+'Erdos643Design.FiniteBaseOrders.base_orders' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643Design.FiniteBaseOrders.design_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643Design.FiniteBaseOrders.design_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643Design.FiniteBaseOrders.residue_designs_of_two_seeds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos643Design.HananiExistence.exists_design' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643Design.design_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643Design.design_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643R3.AnchorComplete.g3hPrime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643R3.CoefficientOneAssembly.coefficient_one_of_G3hPrimeAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos643R3.CoefficientOneFinal.coefficient_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643R3.CoefficientOneFinal.extremal_eq_of_supplied_design' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos643R3.CoefficientOneFinal.extremal_ratio_tendsto_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643R3.CoefficientOneFinal.extremal_three_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643R3.CoefficientOneFinal.extremal_three_le_choose_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643R3.CoefficientOneFinal.extremal_three_lower_matching' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos643R3.CoefficientOneFinal.forcing_isEquivalent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643R3.CoefficientOneFinal.forcing_three_le_choose_two_add_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos643R3.CoefficientOneFinal.phi_nonpos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643R3.CoefficientOneFinal.shadow_colink_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643R3.CoefficientOneFullSolution.forcing_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643R3.CoefficientOneHanani.extremal_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643R3.PublicSmallOrders.extremal_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643R3.PublicSmallOrders.extremal_one' depends on axioms: [propext, Classical.choice, Quot.sound]

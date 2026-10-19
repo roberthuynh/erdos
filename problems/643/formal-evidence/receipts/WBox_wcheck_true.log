@@ -1,0 +1,5 @@
+== lean -o Openmath.Erdos643R3.WBox (leanprover/lean4:v4.33.1)
+== sorry/native_decide in Openmath/Erdos643R3/WBox.lean, comments ignored: 0
+== axioms
+'Erdos643R3.WBox.wcheck_true' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=e665c5e602200df79f7fac302903878917dff68ce7b5a48db602763a958eef4e

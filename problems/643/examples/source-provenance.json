@@ -1,0 +1,13 @@
+{
+  "original_witness_sha256": "85f497048dd593124f86ced74de45b23bdef38b2661e5facd64a02f27b065045",
+  "original_construction_sha256": {
+    "da2.py": "9eb6402a92e92e75afc58bd57401f31076f65ec11e2615c0663212cf18290c0a",
+    "da.py": "70ddd0590eea65b9838030fafa2d890f0aaba9bd56977bdab7eec832dfe17444",
+    "eng.py": "27e98b185e8cc7e1399ee6892d3a8903c8426043238f01e37d889dde7c520947"
+  },
+  "construction": "Same complete DA2(9,26,19,17) edge set, verified under relabelling zs->z, Z2->Z, Er->E, Yp->Y; original class vertices numbered from 00 in each expanded class",
+  "portable_implementation": "New standard-library checker from explicit triples, literal disjoint-pair union collisions, vertex-link intersections and Fraction arithmetic; no imported original engine",
+  "cone_source": "Displayed three-base-vertex construction; all edges and local quantities recomputed",
+  "license": "Apache-2.0 collection sources",
+  "limit": "Finite hosts only; not human theorem review, equality classification or formal verification"
+}

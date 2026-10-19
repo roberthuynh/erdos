@@ -1,0 +1,162 @@
+{
+  "source_sha256": {
+    "check_profiles.py": "8b7ba7b8ebcda85ff88c23a01442b5875abd5bda2a801e04ac3ad4ca66366ff7",
+    "c1_integer.py": "6c3f4614b5ba4928c195e891f9c1df487c4d6cd980518c1976e8e5057b631337"
+  },
+  "tests": [
+    {
+      "kind": "small_profile_oracle",
+      "t": [
+        0,
+        0,
+        0
+      ],
+      "domain": "0..2^6",
+      "minimum": "11/5"
+    },
+    {
+      "kind": "small_profile_oracle",
+      "t": [
+        1,
+        0,
+        0
+      ],
+      "domain": "0..2^6",
+      "minimum": "89/42"
+    },
+    {
+      "kind": "small_profile_oracle",
+      "t": [
+        0,
+        1,
+        0
+      ],
+      "domain": "0..2^6",
+      "minimum": "89/42"
+    },
+    {
+      "kind": "small_profile_oracle",
+      "t": [
+        0,
+        0,
+        1
+      ],
+      "domain": "0..2^6",
+      "minimum": "89/42"
+    },
+    {
+      "kind": "small_profile_oracle",
+      "t": [
+        2,
+        0,
+        0
+      ],
+      "domain": "0..2^6",
+      "minimum": "2"
+    },
+    {
+      "kind": "small_profile_oracle",
+      "t": [
+        0,
+        2,
+        3
+      ],
+      "domain": "0..2^6",
+      "minimum": "49/24"
+    },
+    {
+      "kind": "small_profile_oracle",
+      "t": [
+        2,
+        2,
+        2
+      ],
+      "domain": "0..2^6",
+      "minimum": "2"
+    },
+    {
+      "kind": "small_profile_oracle",
+      "t": [
+        0,
+        0,
+        11
+      ],
+      "domain": "0..2^6",
+      "minimum": "451/156"
+    }
+  ],
+  "profile_checks": 5832,
+  "class_mask_checks": 49152,
+  "tail_pairs": 1248,
+  "rest_checks": 5000,
+  "wbox": {
+    "count": 3279,
+    "minimum": "0",
+    "equality": [
+      [
+        1,
+        0,
+        1,
+        0
+      ]
+    ],
+    "constraint_removal_negative_examples": [
+      [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        "-5/12"
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          2
+        ],
+        "-3/8"
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          3
+        ],
+        "-13/40"
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          4
+        ],
+        "-7/30"
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          5
+        ],
+        "-5/42"
+      ]
+    ],
+    "removed_negative_count": 24
+  },
+  "numeric_safety": {
+    "largest_S_numerator": 9306266417496064,
+    "int64_max": 9223372036854775807,
+    "six_INF": 1729382256910270464,
+    "finite_path_ceiling": 329853488332800
+  },
+  "false_target_control": {
+    "detected": true,
+    "exception": "([0, 0, 0, 0, 0, 0], (0, 0, 0), '3', '4')"
+  }
+}

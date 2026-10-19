@@ -81,7 +81,7 @@
     },
     "Openmath.Erdos642.Proofs.CampaignFe72210b.CycleSupport": {
       "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/CycleSupport.lean",
-      "sha256": "96bb0a704d21d7bc8c4cbc12f343ced7ed4c7613cb3c1293280480d0d76b2b54"
+      "sha256": "de7a5113ce88e81fca3f16ab02427e8d22dcb5575312f8f14341ad9ccc2c1b5a"
     },
     "Openmath.Erdos642.Proofs.CampaignFe72210b.FiniteMarkov": {
       "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/FiniteMarkov.lean",
@@ -349,7 +349,7 @@
     },
     "Openmath.Erdos642.Proofs.CampaignFe72210b.RichWalkCycle": {
       "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/RichWalkCycle.lean",
-      "sha256": "5f53a8375b51319982315b4714f5334f129e851e2d6bf7476bc27ef16080a413"
+      "sha256": "2ae08de8027d3140840fa257b7fd53d5c4b62c2e8ca108f99a116c306960514e"
     },
     "Openmath.Erdos642.Proofs.CampaignFe72210b.IntervalCycle": {
       "path": "Openmath/Erdos642/Proofs/CampaignFe72210b/IntervalCycle.lean",
@@ -565,7 +565,7 @@
     "scripts/check_full.py": "d1d4ac8e19c0ac979fab1a6b9d674cd596aee07f2d1c7a528b8526595406191c",
     "scripts/headline-theorems.json": "a0e7ee163532beeae83eb88260cdb76247e380e6234ad3f8c4ea6d0e9815e4f9",
     "scripts/oracle.py": "f4b8e66113ece665b05806620f62dbcb5da17867f0880cef199d2ee7eea8c7ea",
-    "scripts/proof-modules.json": "881aed458350decd39c8834827c27aa110a2d01e9aeb31d7845e7806e57aa8b5",
+    "scripts/proof-modules.json": "e17038147a076c7d306d83748b1c8533cd7402b4d2be49fba05b040dec4116fc",
     "scripts/replay_modules.py": "61aad8635df6caf253c6c1a061c41e1f68f77e9a5886bafa57129ef9e0f90a57",
     "scripts/source_modules.py": "64de21d21833aaccb431edca950a9abd11ab7c8bab8bafdaa2b989bf3eaaa213",
     "scripts/source_scan.py": "c33fb70e3dd25f748973fa4f59d927e9afb5ed89766672368185be6fa0f4c21e",

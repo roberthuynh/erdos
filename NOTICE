@@ -19,3 +19,11 @@ The nauty source under
 problems/585/findings/supplement/small-values/certificates/vendor/
 retains its original copyright and license notice in that directory.
 It is not relicensed by the collection Apache-2.0 license.
+
+The combined Erdős #643 design proof package under
+problems/643/coefficient-one-design/ is provided under GNU GPL version 3.
+Its COPYING, NOTICE-DESIGN.md and licenses/Sage-COPYING.txt retain the
+Sage-derived finite-table terms and provenance. Individual Apache-origin
+source files retain their original notices and LICENSE.upstream. The
+collection's default Apache-2.0 license does not relicense that combined
+package or the copied third-party material.

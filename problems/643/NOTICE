@@ -5,5 +5,22 @@ Apache License, Version 2.0.
 Mathematical antecedents are attributed in SOURCES.md. No third-party paper
 PDF or extracted paper text is distributed in this package. The pinned
 mathlib and formal-conjectures dependencies retain their own licenses and
-notices when fetched; they are not vendored here. Existing source comments
-and declarations are preserved byte for byte.
+notices when fetched. The isolated formal-evidence/upstream-bridge project
+includes three pinned upstream Formal Conjectures source files under vendor/;
+their original notices and LICENSE.upstream are retained. Source transformations
+and original versus exported hashes are recorded in the computation and
+formal-evidence provenance files. Historical receipts apply to their
+identified original sources; they are not new checks of transformed files.
+
+The combined coefficient-one-design/ proof package also includes the three pinned upstream
+FormalConjecturesForMathlib modules, with original source notices and
+coefficient-one-design/LICENSE.upstream. Its separate source manifests record these
+exact copied files. Public diagnostic-log transformations preserve original
+receipt identities and record exported-copy hashes separately.
+
+The combined proof program's GPLv3 terms and Sage-derived finite-table
+provenance are retained in coefficient-one-design/COPYING,
+coefficient-one-design/NOTICE-DESIGN.md and
+coefficient-one-design/licenses/Sage-COPYING.txt. Individual Apache-origin
+files retain their original notices. The default Apache-2.0 license above
+does not relicense the combined proof program or its third-party material.

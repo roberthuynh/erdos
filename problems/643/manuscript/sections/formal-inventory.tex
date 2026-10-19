@@ -1,0 +1,74 @@
+\section{Exact formal declaration inventory}
+\label{app:formal}
+This inventory lists historical official passing receipts, reused after source-hash matching. It is not a new kernel run or verification of the coefficient-one theorem. The accepted coefficient-one and classical design-existence declaration inventories are described in the formal verification ledger; these older entries retain only their original historical receipt scope. Each full declaration name below is keyed to its receipt and source hashes in the supplementary \path{../formal-evidence/receipt-ledger.json}. This table covers the subset of 48 M1--M5 declarations and the separately listed $9/8$ bound; the supplementary ledger also contains later bridge and exact-export checks. Arithmetic declarations named G1 or G3 must not be mistaken for the complete host-structural or anchor theorems.
+\begin{longtable}{p{.94\linewidth}}
+\toprule Exact declaration\\\midrule
+\path{Erdos643R3.G1Arith.G1}\\
+\path{Erdos643R3.G1Arith.G3}\\
+\path{Erdos643R3.G1Arith.lemma2g_profile}\\
+\path{Erdos643R3.G1Arith.lemma3g}\\
+\path{Erdos643R3.G3hpArith.lemma5}\\
+\path{Erdos643R3.G3hpArith.lemma6}\\
+\path{Erdos643R3.G3hpArith.lemma6_eq}\\
+\path{Erdos643R3.G3hpArith.lemma9_arith}\\
+\path{Erdos643R3.Lemma1g.CN_type2}\\
+\path{Erdos643R3.Lemma1g.card_triangle_options}\\
+\path{Erdos643R3.Lemma1g.light_ab_iff}\\
+\path{Erdos643R3.Lemma1g.light_ac_iff}\\
+\path{Erdos643R3.Lemma1g.triangular_iff_type2}\\
+\path{Erdos643R3.Lemma3.lemma3}\\
+\path{Erdos643R3.Lemma3.lemma3_plus}\\
+\path{Erdos643R3.Pw2312.Feas_rot}\\
+\path{Erdos643R3.Pw2312.Phi_le_PhiPlus}\\
+\path{Erdos643R3.Pw2312.Phi_named}\\
+\path{Erdos643R3.Pw2312.Phi_rot}\\
+\path{Erdos643R3.Pw2312Main.card_le_O}\\
+\path{Erdos643R3.Pw2312Main.card_le_choose}\\
+\path{Erdos643R3.Pw2312Main.card_le_shadow_colink}\\
+\path{Erdos643R3.Pw2312Main.per_triple}\\
+\path{Erdos643R3.Pw2312Main.theorem2}\\
+\path{Erdos643R3.Pw2312.E1}\\
+\path{Erdos643R3.Pw2312.E3}\\
+\path{Erdos643R3.Pw2312.E4}\\
+\path{Erdos643R3.Pw2312.K_ge}\\
+\path{Erdos643R3.Pw2312.S_one_sided}\\
+\path{Erdos643R3.Pw2312.caseI_rel01}\\
+\path{Erdos643R3.Pw2312.kappa_nonneg}\\
+\path{Erdos643R3.PwC1.c1_cert}\\
+\path{Erdos643R3.PwC1.caseII}\\
+\path{Erdos643R3.PwC2.c2_cert}\\
+\path{Erdos643R3.PwC2.caseIII}\\
+\path{Erdos643R3.PwCheck.bb2_sound}\\
+\path{Erdos643R3.PwCheck.bb_sound}\\
+\path{Erdos643R3.PwCheck.kdC_sound}\\
+\path{Erdos643R3.RedistArith.F_eq_zero}\\
+\path{Erdos643R3.RedistArith.F_nonneg}\\
+\path{Erdos643R3.RedistArith.lemma_P}\\
+\path{Erdos643R3.SlotModel.card_CN_slot}\\
+\path{Erdos643R3.SlotModel.group_exact}\\
+\path{Erdos643R3.SlotModel.lemma2}\\
+\path{Erdos643R3.SlotModel.sigmaW_slots}\\
+\path{Erdos643R3.SlotModel.tauW_slots}\\
+\path{Erdos643R3.WBox.wbox}\\
+\path{Erdos643R3.WBox.wcheck_true}\\
+\path{Erdos643R3.WeightingBound.card_le_nine_eighths_choose}\\
+\bottomrule\end{longtable}
+The table below identifies the historical original source closure imported by the $23/12$ module. These are receipt-source hashes, not hashes of transformed export files; the supplementary ledger tracks that distinction. In particular, \path{WeightingAuxArith} is included as a dependency; this listing does not manufacture a separate declaration-level receipt for it.
+\begingroup\small
+\begin{longtable}{p{.25\linewidth}p{.66\linewidth}}
+\toprule Module & SHA-256\\\midrule
+\path{HypergraphBasics} & \texttt{bb5c59fb53d56a61a18fe3b844631267}\newline\texttt{495e11567d6e4096586161adc3f6f78b}\\
+\path{Identity} & \texttt{bb8e2c89c58a5603e0c938ff5f116c82}\newline\texttt{10f85d1df310100a9c3c91f337b8ef8b}\\
+\path{Lemma3} & \texttt{da25f9bfd995303e19960a2a03e0e7da}\newline\texttt{1bd66462cfa53aa1e45a266aa015b3e2}\\
+\path{Pw2312} & \texttt{9f50b40348bc328e104c73f03fc372ee}\newline\texttt{34424d222f19f0ce21004f7510accb6e}\\
+\path{Pw2312Defs} & \texttt{13db77e821077d1d3eca6ab97c9e5fed}\newline\texttt{68a92c9240c37932670e879287f1db09}\\
+\path{PwArith} & \texttt{775743d33a23de323700c2a45c27dd10}\newline\texttt{7e03f3c9f1df09fb67f2bd40a688e647}\\
+\path{PwC1} & \texttt{c2e7239a8562b3819a2fee8e4cf6fb8f}\newline\texttt{faa3045ff6758d10679ca042d4eefc40}\\
+\path{PwC2} & \texttt{5276c63d7e3d39544c2e9358e55b847c}\newline\texttt{34b8677b766fdb7131242f1cceda942b}\\
+\path{PwCheck} & \texttt{29eedd06ab7523615d35a018322e4c7d}\newline\texttt{40ac23c5b545ccff28c0415797dd6a88}\\
+\path{SlotModel} & \texttt{224fd2eff3cce476bdad55c1ad3835cd}\newline\texttt{eb7c0808175ecded175203ce7c0c3cee}\\
+\path{Weighting} & \texttt{2d0688fdac329d0bb446d54c8fa66585}\newline\texttt{6949c7360350dc451ca6d4afe005348a}\\
+\path{WeightingAuxArith} & \texttt{f598c850547c73b671bdb0c3f13546d2}\newline\texttt{1374d7d652630e1eb489a82c59580442}\\
+\path{WeightingBound} & \texttt{ceb807e36820a80b6eb67e4199f79683}\newline\texttt{06946a35f0a7b85a92230660c08a55c6}\\
+\bottomrule\end{longtable}
+\endgroup

@@ -1,0 +1,43 @@
+{
+  "license": "Apache-2.0 for checker sources; NumPy is an external dependency and no binary is redistributed",
+  "source_scope": "Author-retained finite-check source snapshot; hashes identify original files, not a public source archive",
+  "sources": {
+    "check_profiles.py": "3dda9025776f436c169d161b212047c1198b3725c6eb9f38fa6a053c773a3c0d",
+    "check_additions.py": "786c1795c45a39a0e7c4e3713d366613f6a83c6f1ec3e2eda07a577b683eb098",
+    "crosscheck_profiles.py": "a85b4f404e3f880947b2c7fe398a376f423001e7168c6f7890c1b60aa7e3b60e",
+    "check_wbox.py": "c326b6e613f4bacabfc6e41e1ab68f15d98567549976cf8d1338438b44cb1e54",
+    "c1_integer.py": "6c3f4614b5ba4928c195e891f9c1df487c4d6cd980518c1976e8e5057b631337",
+    "replay.py": "a587b4777ef4cba01c568610d5e902634782b23012965ab769c23f47e9d88f23",
+    "requirements.txt": "b4d7d79541956da062897c340cd38d50ccc8dcd0f578c0f039c89faf1d6c0e73"
+  },
+  "transformations": {
+    "check_profiles.py": "Two docstring sentences revised; append exact target equality vectors in existing equality branches and output field; arithmetic and pruning unchanged",
+    "check_additions.py": "Docstring and explanatory limit string revised; arithmetic unchanged",
+    "replay.py": "Runner orchestration hardened; finite mathematical routines unchanged",
+    "crosscheck_profiles.py": "byte-identical",
+    "check_wbox.py": "byte-identical",
+    "c1_integer.py": "byte-identical",
+    "requirements.txt": "byte-identical"
+  },
+  "added_sources": [
+    "test_replay.py: new runner-only disposable-fixture controls"
+  ],
+  "auxiliary_minimization": "No branch-and-bound minimization source or full-domain auxiliary minimum certificate supplied",
+  "bounded_control_sources": {
+    "independent_audit.py": {
+      "original_sha256": "9ea9d179befb7459589880790adbf23768cbf36bbe13456286532123cc34b37d",
+      "transformation": "Local package path and non-optimized interpreter guard only; independent_audit source hash output restricted to two checker inputs to avoid mutable output/manifest identities. Mathematical test formulas unchanged.",
+      "scope": "Finite source/formula and pruning controls; not a full-domain independent reproduction or theorem review"
+    },
+    "pruning_controls.py": {
+      "original_sha256": "27eff2b5be3ebbe8680be641dbf907b3ddd83ec07953356683dc713708273502",
+      "transformation": "Local package path and non-optimized interpreter guard only; independent_audit source hash output restricted to two checker inputs to avoid mutable output/manifest identities. Mathematical test formulas unchanged.",
+      "scope": "Finite source/formula and pruning controls; not a full-domain independent reproduction or theorem review"
+    }
+  },
+  "sanitized_replay_receipt": {
+    "raw_source_sha256": "86e8f6806610242781a490ef58cefce0d2ee0703a6bc575bf6d0feed892d19c1",
+    "transformations": "Replace absolute package/interpreter paths with placeholders and remove command timing fields; preserve all exitcodes, semantic hashes and environment details",
+    "runner_control_receipt": "Derived from actual exit-zero eight-test invocation, not a mathematical receipt"
+  }
+}

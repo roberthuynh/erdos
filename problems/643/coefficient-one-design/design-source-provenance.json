@@ -1,0 +1,576 @@
+{
+  "Openmath/Erdos643Design/CompositeDesigns.lean": {
+    "export_sha256": "26a2c3d24f896134ca43fd9925c13e412c10b3969d51f5c190a82d6512e3fffd",
+    "import_relocations": {
+      "CompositeRows": "Openmath.Erdos643Design.CompositeRows",
+      "DesignTransport": "Openmath.Erdos643Design.DesignTransport",
+      "SharedPointFill": "Openmath.Erdos643Design.SharedPointFill",
+      "TDCompositeSeeds": "Openmath.Erdos643Design.TDCompositeSeeds",
+      "WeightedPairwiseConstruction": "Openmath.Erdos643Design.WeightedPairwiseConstruction"
+    },
+    "original_sha256": "616d1b3d622f5150b499d8d1888e5611d5b6353154aabbc46aba0fe3eb675931",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/CompositeRows.lean": {
+    "export_sha256": "4a2fd72ba7bb00966875f3584cb4bab07d032fbc343974f38ff3c4cc8257b283",
+    "import_relocations": {
+      "TransversalField": "Openmath.Erdos643Design.TransversalField",
+      "TransversalProducts": "Openmath.Erdos643Design.TransversalProducts",
+      "TransversalSymbols": "Openmath.Erdos643Design.TransversalSymbols"
+    },
+    "original_sha256": "690c39e729b154454e11669b7b51c1a0788262effe24515cda384b7159f1cbd2",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/CompositeSeed401.lean": {
+    "export_sha256": "4d7ff116e538fe152aab2d76b1d5a54ff4beb7f1b8b1b9f5b0eb0e06ade104ef",
+    "import_relocations": {
+      "CompositeDesigns": "Openmath.Erdos643Design.CompositeDesigns",
+      "CyclicSeed81": "Openmath.Erdos643Design.CyclicSeed81"
+    },
+    "original_sha256": "107815db38e72467dd72c578d96359e26a71e7db333b2ff35e7357131bc5f97a",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/CompositeSeedOrders.lean": {
+    "export_sha256": "8f583ec9efef1f8dbeba15dc00f0e4d5245c6b7d67c9c0a5fb49344bdb269084",
+    "import_relocations": {
+      "CompositeDesigns": "Openmath.Erdos643Design.CompositeDesigns",
+      "DesignPrime41": "Openmath.Erdos643Design.DesignPrime41",
+      "DesignPrime61": "Openmath.Erdos643Design.DesignPrime61",
+      "DesignSeed21": "Openmath.Erdos643Design.DesignSeed21",
+      "FieldFamily17": "Openmath.Erdos643Design.FieldFamily17",
+      "FieldFamily9": "Openmath.Erdos643Design.FieldFamily9"
+    },
+    "original_sha256": "1a439a49b98456e64700de970fc54c816bec938f1c7e54995d4bf46a82607587",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/CyclicSeed141.lean": {
+    "export_sha256": "736e67684b5e86d36943ac8e54009ba7135849ecaa92366decb67c3672ca1e5b",
+    "import_relocations": {
+      "DesignTransport": "Openmath.Erdos643Design.DesignTransport",
+      "DifferenceFamilyCertificate": "Openmath.Erdos643Design.DifferenceFamilyCertificate"
+    },
+    "original_sha256": "63374e64bce78dc088bfdad0fabfbf400a87fdfaf033316d671ae9cf2590123c",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/CyclicSeed161.lean": {
+    "export_sha256": "4378db0bdef98d7c476d0797b0e34f4219b1721982a53e16a1488f39954a4c55",
+    "import_relocations": {
+      "DesignTransport": "Openmath.Erdos643Design.DesignTransport",
+      "DifferenceFamilyCertificate": "Openmath.Erdos643Design.DifferenceFamilyCertificate"
+    },
+    "original_sha256": "51c7939fb13611f35e4692d3ffb82afccae5663c62f99cdaf08811f6ade0759f",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/CyclicSeed81.lean": {
+    "export_sha256": "3d51fd29879381e2d9e78d1c13bd258eaf2a6cd6cdb4e81d1a1fb70882941a24",
+    "import_relocations": {
+      "DesignTransport": "Openmath.Erdos643Design.DesignTransport",
+      "DifferenceFamilyCertificate": "Openmath.Erdos643Design.DifferenceFamilyCertificate"
+    },
+    "original_sha256": "cf153b5e984ff7d4482a9242f48262898e6e0c6645a62a83440a2957451e1723",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/DesignPencil.lean": {
+    "export_sha256": "9f27a16de24e5d9cb35e89731da9514f9ca7b3d418834818dbf08c41fcd401a6",
+    "import_relocations": {},
+    "original_sha256": "9f27a16de24e5d9cb35e89731da9514f9ca7b3d418834818dbf08c41fcd401a6",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/DesignPrime281.lean": {
+    "export_sha256": "f0a34eb7c6c77c7366791fc33524752b6a9507e156fe054b2c40699270fe07f9",
+    "import_relocations": {
+      "DesignTransport": "Openmath.Erdos643Design.DesignTransport",
+      "Prime281": "Openmath.Erdos643Design.Prime281"
+    },
+    "original_sha256": "3e0772f6f2ec7a28b1abf454d2f0b9355f73ec46a6fadc223da3df89950b617f",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/DesignPrime41.lean": {
+    "export_sha256": "11aad6b29695fce3f9e1418a40c9975a39e7cee3566bd03de6698eca0a9ca068",
+    "import_relocations": {
+      "DesignTransport": "Openmath.Erdos643Design.DesignTransport",
+      "Prime41": "Openmath.Erdos643Design.Prime41"
+    },
+    "original_sha256": "12b09f707795edfe91f17421e56beaebb0023d050e05e4ed33e723bca4566058",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/DesignPrime61.lean": {
+    "export_sha256": "c08c613e3a661032070e1b47a9d0903ac4092e7ab32d0cce75fd693c740433ba",
+    "import_relocations": {
+      "DesignTransport": "Openmath.Erdos643Design.DesignTransport",
+      "Prime61": "Openmath.Erdos643Design.Prime61"
+    },
+    "original_sha256": "2c092b9f16d57c3319e966ad6aadfd1928b60c30ed26a359e94d4b67d8a16e9c",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/DesignSeed21.lean": {
+    "export_sha256": "edb05020f9f8cf6f54f2cbd723a1de8db12757738bd16d3bd7793df8834ac592",
+    "import_relocations": {
+      "DesignTransport": "Openmath.Erdos643Design.DesignTransport",
+      "ProjectivePlaneDesign": "Openmath.Erdos643Design.ProjectivePlaneDesign"
+    },
+    "original_sha256": "207dde0e99833fb8c099ea8b7995747d6564a2875a7a6200166fe0f8812bbfaa",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/DesignSeed285.lean": {
+    "export_sha256": "f26b2fb24e96d2e588be2384b8ad60a4119c1e4139767b6149d451a7ae653686",
+    "import_relocations": {
+      "CompositeRows": "Openmath.Erdos643Design.CompositeRows",
+      "DesignPrime61": "Openmath.Erdos643Design.DesignPrime61",
+      "SharedBlockFill": "Openmath.Erdos643Design.SharedBlockFill"
+    },
+    "original_sha256": "35ac53ae152aa70314c0b37b644c1fbc44c39fa02551f63e77199247b2ba3b9b",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/DesignTransport.lean": {
+    "export_sha256": "28a6bf494b274d3f614dc4ee293af1b9b4fae8ba0a66d6f106dc7fe655566271",
+    "import_relocations": {},
+    "original_sha256": "28a6bf494b274d3f614dc4ee293af1b9b4fae8ba0a66d6f106dc7fe655566271",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/DifferenceFamilyCertificate.lean": {
+    "export_sha256": "4827461e49acc77fc3ad2c2e080d876cf5ea7884629745326d19739b7fd177d3",
+    "import_relocations": {
+      "DifferenceFamilyDesign": "Openmath.Erdos643Design.DifferenceFamilyDesign"
+    },
+    "original_sha256": "1ea865143f356b7064dbdee34a8599b2748e16dce575133f3f382e0c49dac795",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/DifferenceFamilyDesign.lean": {
+    "export_sha256": "877fab61742b91b7dadcd53be944c77704a91443984e66113befcf64ae9dcc55",
+    "import_relocations": {},
+    "original_sha256": "877fab61742b91b7dadcd53be944c77704a91443984e66113befcf64ae9dcc55",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/DifferenceMatrix.lean": {
+    "export_sha256": "20d9d83d656f100bad61dfa9c9453a67db8f02ae20873cba31b5cf05222dff8f",
+    "import_relocations": {
+      "TransversalFoundation": "Openmath.Erdos643Design.TransversalFoundation"
+    },
+    "original_sha256": "9e500f0830ab62bad8bd52376e0a3cea9ef90ba222b5f3dc4067904ebfabfdb5",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/DifferenceMatrixField.lean": {
+    "export_sha256": "53f9c80969bd3a2e78cd0908179c79f2747d8cd54c3767ed02245046e8c88a61",
+    "import_relocations": {
+      "DifferenceMatrix": "Openmath.Erdos643Design.DifferenceMatrix"
+    },
+    "original_sha256": "43abc70c71c9a93c986555261d3a1a1f0be5c8e776a1092a262366b04b825de2",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/FieldFamily121.lean": {
+    "export_sha256": "516cdaf2d99ecf46d03bfa7fb6e039c0a2dcb3d03766685ddf89c90d464a381e",
+    "import_relocations": {
+      "FieldFamilyCertificate": "Openmath.Erdos643Design.FieldFamilyCertificate"
+    },
+    "original_sha256": "ee5d3fa1d4ee31f66e9ae8ffaf8c487538c53453b6aad946fdad6a63a8e1cfb7",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/FieldFamily13.lean": {
+    "export_sha256": "d4192d6b799de9c3304c78d14d32622baf1ea38ec032b417dab7d174b136f0a8",
+    "import_relocations": {
+      "FieldFamilyCertificate": "Openmath.Erdos643Design.FieldFamilyCertificate"
+    },
+    "original_sha256": "33682f14526b91886bac0e33209b063cbaa6eb3605e3dacc031f37858305911f",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/FieldFamily17.lean": {
+    "export_sha256": "570efd9546e777ca13f5c749fe01e88f318fa1c9a58fec35cba8cce4fb475b1b",
+    "import_relocations": {
+      "FieldFamilyCertificate": "Openmath.Erdos643Design.FieldFamilyCertificate"
+    },
+    "original_sha256": "bf07248e72c0e4dfa860aaa7bf78ca214bb17af5dc0fb8941a127d1c5d6bf54b",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/FieldFamily25.lean": {
+    "export_sha256": "b879e4bb11bfc19190403ea0b258d9d8edf1504690b54a477e8025335c9e86b4",
+    "import_relocations": {
+      "FieldFamilyCertificate": "Openmath.Erdos643Design.FieldFamilyCertificate"
+    },
+    "original_sha256": "3b4661f03917669efefe2863d0d49bccd165957a463f39b22236ce5b0adab3b1",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/FieldFamily29.lean": {
+    "export_sha256": "ef7a02028c7371e018a7c9758628971edfb2e44cb26054db329c2e38d9e38176",
+    "import_relocations": {
+      "FieldFamilyCertificate": "Openmath.Erdos643Design.FieldFamilyCertificate"
+    },
+    "original_sha256": "c3b1e0f3f1c2a1a6d7c00c17184eb7fa4040ae505be8b7521f163403b1dcccc0",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/FieldFamily37.lean": {
+    "export_sha256": "3a8ce6928d0ac59790a9ae8475aefbb225db712195d58717cf83ed5c9ba2f949",
+    "import_relocations": {
+      "FieldFamilyCertificate": "Openmath.Erdos643Design.FieldFamilyCertificate"
+    },
+    "original_sha256": "8fa5ee1c4ea96bcbe6015b1a298e33634ecae7abb665fecd1839a00c2129a512",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/FieldFamily41.lean": {
+    "export_sha256": "e927039763804e69f2c64f0a3e50989393814dc4461abc10d0771080f5ef7746",
+    "import_relocations": {
+      "FieldFamilyCertificate": "Openmath.Erdos643Design.FieldFamilyCertificate"
+    },
+    "original_sha256": "1c1791987958a0d02c01f251e7de0d44754c66bc691cad6fb4b32cdbb8434b13",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/FieldFamily5.lean": {
+    "export_sha256": "cd5d563c24aa66a08619656c350f1835620ab80ce8ad7590dca4555526892752",
+    "import_relocations": {
+      "FieldFamilyCertificate": "Openmath.Erdos643Design.FieldFamilyCertificate"
+    },
+    "original_sha256": "e91ecb09001bcf7f6736d40d97d2ccdc9dc3bfb98bc6c62e5d7c8ef233755cb4",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/FieldFamily61.lean": {
+    "export_sha256": "640095f885eef90fb66f43f956d019d3ada3ddb7ded5b98e8c02e6208cf1fd1b",
+    "import_relocations": {
+      "FieldFamilyCertificate": "Openmath.Erdos643Design.FieldFamilyCertificate"
+    },
+    "original_sha256": "65dff0628ff01a63483aad88df6c9429381995af3061d4995b998fbb8a15d4ea",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/FieldFamily81.lean": {
+    "export_sha256": "d0d96b4829bf95f0d387449114da630c159deee00dcae0818c087db60108f7c0",
+    "import_relocations": {
+      "FieldFamilyCertificate": "Openmath.Erdos643Design.FieldFamilyCertificate"
+    },
+    "original_sha256": "efb32a4dae7aeee3f5960b047530b2b8eb49c805da697923cf970de524cbcf28",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/FieldFamily9.lean": {
+    "export_sha256": "6c7e6d478c8dae92fff6e03e5bd5594f3c73b19e6b6766d32ba4074a0f6c7a1a",
+    "import_relocations": {
+      "FieldFamilyCertificate": "Openmath.Erdos643Design.FieldFamilyCertificate"
+    },
+    "original_sha256": "268d5368593d9cccb630d07d41b6df09ccb2c79404ec6bdce4ffa66bd0b7fb60",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/FieldFamilyCertificate.lean": {
+    "export_sha256": "42366aa3f3160a6acbf78cee414a84ba8ca2203ee9b2be101fc5f01e208d943a",
+    "import_relocations": {
+      "RelativeDifferenceFamilyDesign": "Openmath.Erdos643Design.RelativeDifferenceFamilyDesign"
+    },
+    "original_sha256": "b4117619f35d9011cbd66949293f3aa7491b34f010fac996f99a2c7b44bf3c33",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/FiniteBaseOrders.lean": {
+    "comment_transformation": "The module summary states its mathematical construction and explicit hypotheses; declarations unchanged.",
+    "export_sha256": "394a1a500ad5f8b8f186ca55d53aa0b050e24af922c8bab326f8d3c48fdb8433",
+    "import_relocations": {
+      "CompositeRows": "Openmath.Erdos643Design.CompositeRows",
+      "CompositeSeed401": "Openmath.Erdos643Design.CompositeSeed401",
+      "CompositeSeedOrders": "Openmath.Erdos643Design.CompositeSeedOrders",
+      "CyclicSeed141": "Openmath.Erdos643Design.CyclicSeed141",
+      "CyclicSeed81": "Openmath.Erdos643Design.CyclicSeed81",
+      "DesignPrime281": "Openmath.Erdos643Design.DesignPrime281",
+      "DesignPrime41": "Openmath.Erdos643Design.DesignPrime41",
+      "DesignPrime61": "Openmath.Erdos643Design.DesignPrime61",
+      "DesignSeed21": "Openmath.Erdos643Design.DesignSeed21",
+      "FieldFamily121": "Openmath.Erdos643Design.FieldFamily121",
+      "FieldFamily13": "Openmath.Erdos643Design.FieldFamily13",
+      "FieldFamily17": "Openmath.Erdos643Design.FieldFamily17",
+      "FieldFamily25": "Openmath.Erdos643Design.FieldFamily25",
+      "FieldFamily29": "Openmath.Erdos643Design.FieldFamily29",
+      "FieldFamily37": "Openmath.Erdos643Design.FieldFamily37",
+      "FieldFamily41": "Openmath.Erdos643Design.FieldFamily41",
+      "FieldFamily5": "Openmath.Erdos643Design.FieldFamily5",
+      "FieldFamily61": "Openmath.Erdos643Design.FieldFamily61",
+      "FieldFamily81": "Openmath.Erdos643Design.FieldFamily81",
+      "FieldFamily9": "Openmath.Erdos643Design.FieldFamily9",
+      "HananiAssembly": "Openmath.Erdos643Design.HananiAssembly"
+    },
+    "original_sha256": "f62147a66aa1c9c74207eec64dc4c6925cdd5f2e9512d5129e861ec5b7993c31",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/HananiArithmetic.lean": {
+    "export_sha256": "cc63b2db043b2d11026efb7a195c4ba4b3d472f3c5eeff90a893d725e9d77c26",
+    "import_relocations": {},
+    "original_sha256": "cc63b2db043b2d11026efb7a195c4ba4b3d472f3c5eeff90a893d725e9d77c26",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/HananiAssembly.lean": {
+    "export_sha256": "c6f3f3cf0ab5f2fe5d53a53c6203adf633ce25570a1121a87836c3efc42f5171",
+    "import_relocations": {
+      "HananiArithmetic": "Openmath.Erdos643Design.HananiArithmetic",
+      "TransversalCoprime": "Openmath.Erdos643Design.TransversalCoprime",
+      "TruncatedTransversal": "Openmath.Erdos643Design.TruncatedTransversal",
+      "WeightedPairwiseConstruction": "Openmath.Erdos643Design.WeightedPairwiseConstruction"
+    },
+    "original_sha256": "0349d5d16a7a00f74c1c7415871b89fe9e18e0adb7ea7a4a9fa14172b1628781",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/HananiExistence.lean": {
+    "export_sha256": "53f303c946c301b50ed42a71c43a9380b9cdb1acd1e9446cdf72ddf8a47844ac",
+    "import_relocations": {
+      "CyclicSeed161": "Openmath.Erdos643Design.CyclicSeed161",
+      "DesignSeed285": "Openmath.Erdos643Design.DesignSeed285",
+      "FiniteBaseOrders": "Openmath.Erdos643Design.FiniteBaseOrders"
+    },
+    "original_sha256": "1c2c9efa8ece1e8b99c8aa2ee6b4851229672eb2c7fcf544c5bb26b1b0df419c",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/NormalizedPencil.lean": {
+    "export_sha256": "d3eb4c36afb99bff3a9ca455f04511964f09c0265651c8245fd5f84f6c2978d2",
+    "import_relocations": {
+      "DesignPencil": "Openmath.Erdos643Design.DesignPencil",
+      "DesignTransport": "Openmath.Erdos643Design.DesignTransport",
+      "UniformPartitionCoordinates": "Openmath.Erdos643Design.UniformPartitionCoordinates"
+    },
+    "original_sha256": "6d213262e9be618460c9aeeb9b5fc1daf178fc3cb04a5ad6c6de5a52c43477f6",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/Prime281.lean": {
+    "export_sha256": "ad77c6e432f8e018b2564449e024a57050e12930657527460d07d001d9b2b75a",
+    "import_relocations": {
+      "DifferenceFamilyCertificate": "Openmath.Erdos643Design.DifferenceFamilyCertificate"
+    },
+    "original_sha256": "5a1b472eae0fa02716f7706662b0e75c313c20018f20b6c552f4f95a5fd9921f",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/Prime41.lean": {
+    "export_sha256": "8c4a2e3687d2192423a0420900119a85342300212cf4f8c841068e2556cba65c",
+    "import_relocations": {
+      "DifferenceFamilyCertificate": "Openmath.Erdos643Design.DifferenceFamilyCertificate"
+    },
+    "original_sha256": "e8dd6a69a39f4f6d2f3c3758dfc31738ea1d4d1c41b76b18626744dcd900bf5b",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/Prime61.lean": {
+    "export_sha256": "80186ad6b06878e0aa1c6dc39fd981a19f0ca272245c1d682d3ac7a89853a5e4",
+    "import_relocations": {
+      "DifferenceFamilyCertificate": "Openmath.Erdos643Design.DifferenceFamilyCertificate"
+    },
+    "original_sha256": "20d68e2b9960309f04c1ca0e7971d48d4976eee43d20ceec284367f7c15478c8",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/ProjectivePlaneDesign.lean": {
+    "export_sha256": "248c7518cb1eb0d15a2b29d16d1796a39b28f17bf7abc58e0b11031858a6468f",
+    "import_relocations": {
+      "SharedPointFill": "Openmath.Erdos643Design.SharedPointFill",
+      "TransversalField": "Openmath.Erdos643Design.TransversalField"
+    },
+    "original_sha256": "756652260c47261a46ef287c527aa0b51fc4b665632a2837a50a872561de7542",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/RelativeDifferenceFamilyDesign.lean": {
+    "export_sha256": "87715d479389953539519f2f48c128b8b64aa4963f4004df799c4ca5279d29b3",
+    "import_relocations": {
+      "DesignTransport": "Openmath.Erdos643Design.DesignTransport",
+      "DifferenceFamilyCertificate": "Openmath.Erdos643Design.DifferenceFamilyCertificate",
+      "TransversalFoundation": "Openmath.Erdos643Design.TransversalFoundation"
+    },
+    "original_sha256": "0141e7912ff71bcb46bbe265329a9d6b2b06e1218562d67adf24ed7549cb72ab",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/SharedBlockFill.lean": {
+    "comment_transformation": "The module summary states its mathematical construction and explicit hypotheses; declarations unchanged.",
+    "export_sha256": "92d504f0223e933b092eeda474bdcd45ee50228dace748bfc480f1d5bad529c6",
+    "import_relocations": {
+      "DesignTransport": "Openmath.Erdos643Design.DesignTransport",
+      "TransversalFoundation": "Openmath.Erdos643Design.TransversalFoundation"
+    },
+    "original_sha256": "3b5f8b838935f87cd6bdd976a7b9e379f99ea6905ebfe529b3038c820d701306",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/SharedGroupCompletion.lean": {
+    "export_sha256": "ca6c3551971f618edfb39aaa3af6fd3a009d9998fd5d694efce435bd790784bc",
+    "import_relocations": {
+      "SharedPointFill": "Openmath.Erdos643Design.SharedPointFill"
+    },
+    "original_sha256": "6f55f21acb0dd1f947278a4c1479a75ffe431b3b353750f4fa11c08382e59471",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/SharedPointFill.lean": {
+    "export_sha256": "7cf80b3b6e9590987954f911ac27afe148080284a305d9d61d405dd55cb34e18",
+    "import_relocations": {
+      "TransversalFoundation": "Openmath.Erdos643Design.TransversalFoundation"
+    },
+    "original_sha256": "963912cc8b4bc4e6f1a3a2289caa5161b8593cae22af5d92d648b3347f2786e1",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/TD21.lean": {
+    "comment_transformation": "License notices cite the retained source provenance; declarations unchanged.",
+    "export_sha256": "9a81dbf5dbb81bf3ed3558024c03d012283a2b37a747cbeb9251019a44615214",
+    "import_relocations": {
+      "DifferenceMatrixField": "Openmath.Erdos643Design.DifferenceMatrixField",
+      "TransversalProducts": "Openmath.Erdos643Design.TransversalProducts",
+      "TransversalSymbols": "Openmath.Erdos643Design.TransversalSymbols"
+    },
+    "original_sha256": "d87cedb51bd4dbbf0e6746caf7141e4370d2af13c490e01b04023703ba02938a",
+    "resource_lines_removed": [
+      "set_option maxRecDepth 100000 in\n",
+      "set_option maxHeartbeats 4000000 in\n"
+    ],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/TD60.lean": {
+    "comment_transformation": "License notices cite the retained source provenance; declarations unchanged.",
+    "export_sha256": "5983b18a8b342369f80554f7f1c04c2c74f9acafe17ecf4a80e4b4e060aa77d3",
+    "import_relocations": {
+      "DifferenceMatrixField": "Openmath.Erdos643Design.DifferenceMatrixField",
+      "TransversalProducts": "Openmath.Erdos643Design.TransversalProducts",
+      "TransversalSymbols": "Openmath.Erdos643Design.TransversalSymbols"
+    },
+    "original_sha256": "1daa46a2f6755d0387f2c1639591a16ac9f4428b0deb04d21935127aad5d9152",
+    "resource_lines_removed": [
+      "set_option maxRecDepth 100000 in\n",
+      "set_option maxHeartbeats 4000000 in\n"
+    ],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/TD84.lean": {
+    "comment_transformation": "License notices cite the retained source provenance; declarations unchanged.",
+    "export_sha256": "a60cf37919efa1b465c9d5eaba000c50ed887f5571f78352e4e0c32c015e4a55",
+    "import_relocations": {
+      "TD21": "Openmath.Erdos643Design.TD21"
+    },
+    "original_sha256": "ead241bed043e351f5cd482c9224693d9f6e6e06c83562355eb46df72ededa70",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/TDCompositeSeeds.lean": {
+    "comment_transformation": "License notices cite the retained source provenance; declarations unchanged.",
+    "export_sha256": "c52ec432adf57a877459f7068ea69864177dbb6d5083b3eda003972880420715",
+    "import_relocations": {
+      "TD60": "Openmath.Erdos643Design.TD60",
+      "TD84": "Openmath.Erdos643Design.TD84"
+    },
+    "original_sha256": "6bcabf06ac8acb78c66c55a8ab8608f87ad95a8ebfcce574fde959cb57aa62af",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/TransversalCoprime.lean": {
+    "export_sha256": "955c16158bb8786a77e80579346a001f9328fafac8bd91e456e8db0700e250e0",
+    "import_relocations": {
+      "TransversalField": "Openmath.Erdos643Design.TransversalField",
+      "TransversalProducts": "Openmath.Erdos643Design.TransversalProducts",
+      "TransversalSymbols": "Openmath.Erdos643Design.TransversalSymbols"
+    },
+    "original_sha256": "9371e5b6e97ddef92057c43c2fa9eab75155dc542577188133c1ab9fc5fbc1f7",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/TransversalField.lean": {
+    "export_sha256": "5a27a7b3de3ccba77ff13be4cfd1955d5a66eeefc716b5aa501d1f990017f6de",
+    "import_relocations": {
+      "TransversalFoundation": "Openmath.Erdos643Design.TransversalFoundation"
+    },
+    "original_sha256": "96a859f23a63e3328b32d492c6817d6b81f0617e222b36a5b8502f5a6ef777b0",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/TransversalFoundation.lean": {
+    "export_sha256": "fd0785a5acb89cbefcf4e942e589a5149d65c98b87ab22618de77a2d88beec05",
+    "import_relocations": {},
+    "original_sha256": "fd0785a5acb89cbefcf4e942e589a5149d65c98b87ab22618de77a2d88beec05",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/TransversalProducts.lean": {
+    "export_sha256": "5470955321505cbf4fd9d07a0f761c51ea09b1d9c116cbbbc12204962613952d",
+    "import_relocations": {
+      "TransversalFoundation": "Openmath.Erdos643Design.TransversalFoundation"
+    },
+    "original_sha256": "71f6e1dee81227a839c65c241c9179ba11a6fc8d8bab6d04bc9c70c9fc229168",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/TransversalSymbols.lean": {
+    "export_sha256": "640f7b5615cc4aad1664174d39eb4ea2cd70a3cd3e38553d8a2641bbaed18042",
+    "import_relocations": {
+      "TransversalFoundation": "Openmath.Erdos643Design.TransversalFoundation"
+    },
+    "original_sha256": "e84b266575ee0a7de0a4723c3fafe3d36ac07ce09f84acc5251a287cdd7dc098",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/TruncatedTransversal.lean": {
+    "export_sha256": "dd1375b85aae3c4e8ca3ebb0af818d57322786e7ba97e6413f328f09ee44715c",
+    "import_relocations": {
+      "DesignTransport": "Openmath.Erdos643Design.DesignTransport",
+      "TransversalFoundation": "Openmath.Erdos643Design.TransversalFoundation"
+    },
+    "original_sha256": "37e7b8a0237ef3e0d05844dc9eb77fe69a865e409f1517099fc3962fc74779a1",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/UniformPartitionCoordinates.lean": {
+    "export_sha256": "f892095a5f2dbc4424096bbdb12d08ce781ff265969cec5d48e74edb7464f2c5",
+    "import_relocations": {},
+    "original_sha256": "f892095a5f2dbc4424096bbdb12d08ce781ff265969cec5d48e74edb7464f2c5",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643Design/WeightedPairwiseConstruction.lean": {
+    "export_sha256": "9f5573acad8881d58fae4e3665561a90fc4bd4d3458ce894683228bb11e342f8",
+    "import_relocations": {
+      "NormalizedPencil": "Openmath.Erdos643Design.NormalizedPencil",
+      "SharedGroupCompletion": "Openmath.Erdos643Design.SharedGroupCompletion"
+    },
+    "original_sha256": "343a59b6280365e9292ef9853da97773aa7cda95db5b2e68c2039493147e09ad",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643R3/CoefficientOneFullSolution.lean": {
+    "export_sha256": "96b88b707d8133f969ed27aa46e91230c0cb7765bd1d3cf9ef12d10fe10654bf",
+    "import_relocations": {
+      "CoefficientOneHanani": "Openmath.Erdos643R3.CoefficientOneHanani"
+    },
+    "original_sha256": "50d028356b2111365236286f9567e0dd42cea028c83d2ad2ea8f5a73ee4c053d",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  },
+  "Openmath/Erdos643R3/CoefficientOneHanani.lean": {
+    "export_sha256": "dc663ed728bbea9b426519adf6ea3dee51ff52bbbcc8d7be581a937a11d9cc84",
+    "import_relocations": {
+      "HananiExistence": "Openmath.Erdos643Design.HananiExistence"
+    },
+    "original_sha256": "eb5290338c97372cc7e8264d3bb02b38ad51dad4a9d38296e7d433f2fa4a7cee",
+    "resource_lines_removed": [],
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+  }
+}

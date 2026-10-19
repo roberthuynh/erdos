@@ -11,7 +11,7 @@ weak.linter.style.namespace = true
 weak.linter.style.stubs = true
 weak.linter.style.openClassical = true
 
-# The reviewed statement source. Pinned; bump deliberately and record the bump in log.md.
+# The statement-source dependency is pinned to the exact revision below.
 [[require]]
 name = "formal_conjectures"
 git = "https://github.com/google-deepmind/formal-conjectures"

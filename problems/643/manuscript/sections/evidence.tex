@@ -1,0 +1,79 @@
+\section{Computational certificates and evidence boundaries}
+The proof has five finite computations: C1, C2, C1g, C2g and the final anchor box. Their exact domains and target inequalities appear in technical subdivision~10. The analytic argument reduces arbitrary nonnegative integer profiles to these domains. Each reduction must be checked separately from the program output.
+
+For the profile box the recorded primary implementation floors every rational summand after multiplication by $2^{40}$. Min-plus products produce a lower bound; every candidate not excluded by that lower bound is evaluated as an exact rational number. Feasibility is encoded by excluded matrix entries. The tail implementation computes the auxiliary minimum $\kappa^*$ exactly over $23\leq p\leq160$ and checks positivity and monotonicity of its numerator beyond that range. Correct integer ranges, sentinel separation and the exhaustiveness of candidate enumeration are part of the certificate specification.
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.16\linewidth}>{\raggedright\arraybackslash}p{.38\linewidth}>{\raggedright\arraybackslash}p{.34\linewidth}}
+\toprule
+Certificate & Recorded result & Verification obligation\\\midrule
+C1 & $\Phi_{\rm prof}\geq23/12$ on the feasible box, $t\leq11$ & Exact primary, directed-rounding cross-check, and additional integer-only check for $t\leq1$.\\
+C2 & Tail contribution at least $11/12$; two equality gadgets & Exact tail cutoff and separation of minimisations.\\
+C1g & Threshold $2$; 41 ties for $t\geq2$ & All four noncompliant classes and all three positions for $t=1$.\\
+C2g & Tail threshold $1$; eight ties for $t\geq2$ & Correct masks for the one-type-2-slot cases.\\
+Final box & 3,279 admissible points; unique equality $(1,0,1,0)$ & Exclude the impossible mutual configuration; verify all admissibility implications.\\\bottomrule
+\end{tabular}
+\end{center}
+The historical evidence includes an exact primary implementation and an independent cross-check for each finite claim. For C1 with $t\leq1$, the historical cross-check uses rigorous directed floating-point rounding. A newer integer-only implementation checks the four type-count cases on $\{0,\ldots,92\}^6$ using rational matrix construction and scale $2^{32}$. Its smallest certified lower bound is $8277463527/4294967296$, exceeding $23/12$ by $136328629/12884901888$. It bounds every profile but does not certify the exact minimum or all minimisers. It was written after inspecting the primary checker and shares its method; it is a separate implementation, not a blind independent proof review. The existing exact C1g check covers $t\geq2$.
+
+Six checks passed a clean replay of a copied package in a fresh virtual environment, using CPython 3.14.7 and NumPy 2.5.4 with a hash-pinned offline macOS arm64 wheel. This was a same-machine replay: the operating system and interpreter were not rebuilt, and neither cross-platform nor human reproduction is claimed. The recorded corrected final box contains 3,279 points; the obsolete larger count included 122 impossible mutual configurations.
+
+The separate reproducibility record contains sources, commands, versions, hashes and replay outputs. A source-level AI check matched the finite profile equations, domains, admissibility masks and integer pruning to the supplementary programs. This check does not establish the universal host-to-profile reductions or replace their written proofs. Finite-host stress tests corroborate written arguments but are not substitutes for proof certificates.
+
+\clearpage
+\section{Formal verification ledger}
+\begin{longtable}{>{\raggedright\arraybackslash}p{.27\linewidth}>{\raggedright\arraybackslash}p{.60\linewidth}}
+\toprule
+Claim & Evidence in this draft\\\midrule
+Main theorem & The exact shadow--co-link inequality and coefficient-one bound in \path{Erdos643R3.CoefficientOneFinal} have complete official Lean verification and independent exact-source acceptance in the isolated proof project. The exact transformed supplementary source package has separately passed its complete check.\\
+Local $23/12$ bound & \path{Erdos643R3.Pw2312Main.per_triple}: $23/12\leq\sigma_W(H,T)+\tau_W(H,T)$ for each $T\in H$ under uniformity and forbidden-configuration avoidance. Historical official passing receipt recorded.\\
+Global $24/23$ bound & \path{Erdos643R3.Pw2312Main.card_le_choose}: $|H|\leq(24/23)\binom{|V|}{2}$. Historical official passing receipt recorded.\\
+Intermediate bounds & \path{Erdos643R3.Pw2312Main.card_le_shadow_colink}, \path{Erdos643R3.Pw2312Main.card_le_O}, and profile bound \path{Erdos643R3.Pw2312Main.theorem2} belong to the same source-matched verified module.\\
+Charge identity & \path{Erdos643R3.L1Top.sum_charge} and \path{Erdos643R3.L1Top.sum_charge_eq_neg_Phi} are in the exported module covered by the build, scan and kernel replay described below.\\
+Conservation and split & \path{Erdos643R3.L1Top.sum_final_eq_neg_Phi} and \path{Erdos643R3.L1Top.rule2p_split} have the same exported-module coverage.\\
+Nonnegative charges & \path{Erdos643R3.L1Top.final_nonneg_of_charge_nonneg} and \path{Erdos643R3.L1Top.final_eq_zero_of_donor} have that module coverage. These do not establish recovery of deficient triples.\\
+Conditional endpoint & \texttt{Erdos643R3.L1Top.conditional\_endpoint} assumes that every deficient triple is recovered. A proof of this conditional statement leaves the main obligation unpaid.\\
+Local structure and anchor estimates & The new unconditional source imports the structural and anchor chain, covered by the accepted complete 65-module core verification. This does not certify every written formulation in this exposition.\\
+Finite certificates & Supporting C1/C2 certificates enter the verified $23/12$ module. This does not formally verify all strengthened certificates or the full coefficient-1 argument.\\\bottomrule
+\end{longtable}
+The receipt check matched all 13 source-module hashes and inspected six relevant official passing logs. The local and global declarations above have zero \texttt{sorry} or \texttt{native\_decide} occurrences and only the allowed axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}. These are reused source-matched receipts, not new Lean runs for this manuscript. The supplementary formal-evidence ledger records the historical receipt hashes and the separately tracked export transformations; original source hashes must not be identified with transformed export hashes. Current export-check outcomes are recorded separately in the supplementary verification document and formal-evidence ledger. The historical receipts here apply only to their original source and import-closure hashes. Their scope is the $23/12$ local and $24/23$ global bounds; they do not certify the stronger coefficient-1 theorem. The new unconditional source has its own accepted complete passing receipt, described below.
+
+\pending{The unconditional final source has an accepted official passing receipt, complete dependency replay, allowed-axiom audit and independent exact-source acceptance. The expanded transformed supplementary source package passed its complete 126-module check, including general design existence and the exact admissible-order values. Historical module-level coverage is described separately. No proof using \texttt{sorry} or \texttt{native\_decide} would satisfy that requirement. Compilation of a helper, documentation validation, or a passing conditional endpoint is not formal verification of Theorem~\ref{thm:main}.}
+
+The supplementary phased verification receipt includes the comment-sanitized \path{L1Top} module in 20 fresh module builds, source scans and independent kernel replay in three disjoint chunks. Its 50 individual supporting-declaration checks do not include the L1Top statements listed here. The module source and replay hashes are recorded in \path{../formal-evidence/receipts-export/hardened-phased/receipt.json}. A separate monolithic replay reached its 240-second limit and remains unknown; it is not counted as a successful replay. The conditional endpoint still assumes that every deficient triple receives enough charge. Neither the supporting-module replay nor the conditional theorem proves that assumption.
+
+\paragraph{Unconditional final source and exact corollaries.}
+The new final source contains nine unconditional declarations and one declaration conditional on a supplied block design. They are listed below by their exact names in the namespace \path{Erdos643R3.CoefficientOneFinal}. The exact ten exports have accepted complete official verification in the isolated proof project; the inventory identifies that scope and does not itself replace the receipt.
+\begin{longtable}{>{\raggedright\arraybackslash}p{.48\linewidth}>{\raggedright\arraybackslash}p{.41\linewidth}}
+\toprule
+Declaration suffix & Exact scope\\\midrule
+\path{coefficient_one} & Finite coefficient-one bound for every finite avoiding triple system.\\
+\path{phi_nonpos} & Nonpositivity of the manuscript potential under uniformity and avoidance.\\
+\path{shadow_colink_bound} & The exact shadow--co-link inequality of Theorem~\ref{thm:main}.\\
+\path{extremal_three_le_choose_two} & Upper bound for the imported extremal number at every natural order.\\
+\path{forcing_three_le_choose_two_add_one} & Corresponding extremal-number-plus-one forcing bound.\\
+\path{extremal_three_bounds} & Finite star lower bound and coefficient-one upper bound together.\\
+\path{extremal_three_lower_matching} & Star-plus-matching lower bound at each positive natural order.\\
+\path{extremal_ratio_tendsto_one} & Ratio of the imported extremal number to the pair count tends to one.\\
+\path{forcing_isEquivalent} & The imported forcing threshold is asymptotically equivalent to the pair count.\\
+\path{extremal_eq_of_supplied_design} & Exact equality assuming an actual supplied two-design with block size five and pair multiplicity one.\\\bottomrule
+\end{longtable}
+The supplied-design declaration retains its displayed design hypothesis. The expanded proof package separately discharges that hypothesis at every admissible order: it constructs an actual two-design on the given finite vertex type, with block size five and every vertex pair in exactly one block. The construction is unconditional apart from the stated residue condition, including order one. The resulting extremal equality and forcing-plus-one equality are verified consequences. This formalizes the classical existence result of Hanani. The original 1961 paper and 1965 completion were visually read; that reading is not an independent validation of every finite table or block entry, or a formal audit of the historical proofs. The star construction suffices for the unconditional asymptotic consequence; no general design-existence theorem is an input to that consequence.
+
+\pending{The official core checker printed \texttt{RESULT: PASS}; the accepted receipt covers the ten exact final exports, 65 fresh module builds and source scans, complete independent kernel replay in 33 bounded chunks, twelve named declaration and axiom checks, and matching binary pins before and after the run. Only \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound} occur as axioms; no \texttt{sorry} or \texttt{native\_decide} is permitted. The earlier portable supplementary checker passed on its 69 exact exported modules, including the explicit one- and five-vertex design consequences. The expanded combined package separately passed its complete official check on all 126 exact modules, including general design existence: 126 fresh builds, full independent kernel replay in bounded chunks, twenty-three exact declaration/module/axiom checks, whole-closure source and hygiene scans, and binary pins before and after the check. Dependency setup cloned the pinned revisions into a fresh directory and obtained the official cache on the same machine; this is not independent reproduction on another machine. Formal coverage does not automatically extend to every intermediate exposition, example, or historical computation.}
+
+\paragraph{Classical design construction and exact values.}
+The expanded package includes three additional exact endpoints. Their shared order condition is that the natural order has residue one or five modulo twenty. The existence declaration constructs an actual finite upstream block design. At order one, the block family is empty and the pair-coverage condition is vacuous; the original triple extremal value is directly zero. Order five uses the single five-point block. These boundary cases are separate from the classical nontrivial five-block designs attributed to Hanani. Concrete finite seeds and transversal inputs are supplied by proved constructions; no free seed or recursive-existence premise remains at these endpoints.
+
+\path{Erdos643Design.HananiExistence.exists_design} constructs the actual two-design with block size five and pair multiplicity one. \path{Erdos643R3.CoefficientOneHanani.extremal_eq} proves that the original disjoint-union-free triple extremal number equals the pair count at every admissible order. \path{Erdos643R3.CoefficientOneFullSolution.forcing_eq} proves that the forcing threshold, namely the extremal number plus one, equals the pair count plus one at every admissible order. These statements formalize a classical construction and its exact-value consequence. They do not classify every extremal host, prove a higher-uniformity result or establish priority. Formal verification and AI source review do not constitute human mathematical review.
+
+\paragraph{Authorship and review provenance.}
+Robert Huynh directed the research and preparation of this draft. AI systems developed proof arguments, implemented finite computations, assisted formalization, checked parts of the mathematics and prepared the exposition. These activities do not constitute human mathematical endorsement or establish independence, correctness or priority. No human verification of any mathematical step is claimed.
+
+\paragraph{Formal target.}
+The target recorded in \path{FormalConjectures/ErdosProblems/643.lean} is \path{Erdos643.erdos_643.parts.ii}, the asymptotic forcing statement for all $t\ge3$. Its $t=3$ specialization requires
+\[
+ \bigl(\operatorname{extremalNumber}(n,3,\neg\operatorname{HasRepeatedDisjointUnion})+1\bigr)
+ \sim\binom n2.
+\]
+The verified $24/23$ bound does not prove this specialization. The new final source includes the host-to-extremal bridge, unconditional coefficient-one upper bound, star lower bound and asymptotic consequence. Its complete official check and independent exact-source acceptance are recorded for the isolated proof project. The exact expanded supplementary source package also passed its complete check: all 126 modules were rebuilt and independently kernel-replayed, with twenty-three named declaration and axiom checks. Its general design-existence theorem and exact admissible-order values are separate from the asymptotic squeeze, which uses only the star lower bound. The supplied Lean proof covers the triple case; the combined conclusion for every fixed uniformity at least three additionally relies on Huang, Ma and Yang's external preprint.

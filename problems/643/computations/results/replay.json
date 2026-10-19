@@ -1,0 +1,87 @@
+{
+  "result": "PASS",
+  "scope": "Six finite computations only; not full-theorem verification",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "numpy": "2.5.4",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "commands": [
+    {
+      "command": [
+        "<VENV_PATH>/bin/python",
+        "-I",
+        "<PACKAGE_PATH>/check_profiles.py",
+        "box"
+      ],
+      "cwd": "<PACKAGE_PATH>",
+      "timeout_seconds": 240,
+      "isolated_python": true,
+      "returncode": 0,
+      "semantic_sha256": "82bc36167e093897a74940e4928cd39fe3e907b98ee1809d424fd195016ce766"
+    },
+    {
+      "command": [
+        "<VENV_PATH>/bin/python",
+        "-I",
+        "<PACKAGE_PATH>/check_profiles.py",
+        "tail"
+      ],
+      "cwd": "<PACKAGE_PATH>",
+      "timeout_seconds": 240,
+      "isolated_python": true,
+      "returncode": 0,
+      "semantic_sha256": "2cffbca7db5fe38fe451c3a0f78c2d2c382e1b505e1acb97d8a51631b08061e4"
+    },
+    {
+      "command": [
+        "<VENV_PATH>/bin/python",
+        "-I",
+        "-c",
+        "import sys,runpy;sys.path.insert(0,sys.argv[1]);runpy.run_path(sys.argv[2],run_name='__main__')",
+        "<PACKAGE_PATH>",
+        "<PACKAGE_PATH>/crosscheck_profiles.py"
+      ],
+      "cwd": "<PACKAGE_PATH>",
+      "timeout_seconds": 240,
+      "isolated_python": true,
+      "returncode": 0,
+      "semantic_sha256": "0c7bff1d9ff9c2894450fde166c9ef5156c2d60d3ce78b65f20dd9d8dfd77718"
+    },
+    {
+      "command": [
+        "<VENV_PATH>/bin/python",
+        "-I",
+        "<PACKAGE_PATH>/check_wbox.py"
+      ],
+      "cwd": "<PACKAGE_PATH>",
+      "timeout_seconds": 240,
+      "isolated_python": true,
+      "returncode": 0,
+      "semantic_sha256": "984f6ab56302e038e69568c9ca250e365e74723f721af69d1f0b5096cc13251b"
+    },
+    {
+      "command": [
+        "<VENV_PATH>/bin/python",
+        "-I",
+        "<PACKAGE_PATH>/c1_integer.py"
+      ],
+      "cwd": "<PACKAGE_PATH>",
+      "timeout_seconds": 240,
+      "isolated_python": true,
+      "returncode": 0,
+      "semantic_sha256": "b6a333cb9540f1a071771454826a7ab2a5028b1833b2392492665eae113b3752"
+    },
+    {
+      "command": [
+        "<VENV_PATH>/bin/python",
+        "-I",
+        "<PACKAGE_PATH>/check_additions.py"
+      ],
+      "cwd": "<PACKAGE_PATH>",
+      "timeout_seconds": 240,
+      "isolated_python": true,
+      "returncode": 0,
+      "semantic_sha256": "295742f52cbb1a6e0152774e813db79f1ece2e8ea8babb2e4c986bf2992b42bf"
+    }
+  ],
+  "sanitization": "Absolute package/interpreter paths replaced by placeholders; volatile timing removed; command arguments, exit codes and semantic output hashes retained."
+}

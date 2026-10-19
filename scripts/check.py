@@ -66,10 +66,33 @@ def load_registry(root=ROOT):
             for key,value in lean.items():
                 if key != 'target': inside(package,value)
             for value in ['lean-toolchain','lakefile.toml','lake-manifest.json']: inside(package,value)
+        phased_plans(item, root)
         result[identifier] = item
     actual = {p.name for p in (root/'problems').iterdir() if p.is_dir()}
     if actual != set(result):
         raise ValueError('Unregistered or missing problem directory')
+    return result
+
+
+def phased_plans(item, root):
+    entries = item.get('phased_lean', [])
+    if not isinstance(entries, list): raise ValueError('Invalid phased Lean project list')
+    result=[]; seen=set(); package=root/item['path']
+    for cfg in entries:
+        if not isinstance(cfg,dict) or set(cfg)!={'path','plan','profile'}:
+            raise ValueError('Incomplete phased Lean project')
+        if not all(isinstance(v,str) and v for v in cfg.values()) or cfg['path'] in seen:
+            raise ValueError('Invalid or duplicate phased Lean project')
+        seen.add(cfg['path']); inside(package,cfg['path'],directory=True)
+        plan=json.loads(inside(package,cfg['plan']).read_text())
+        if (set(plan)!={'schema','profile','target','modules','build_chunk','kernel_chunk'}
+                or plan['schema']!=1 or plan['profile']!=cfg['profile']
+                or not isinstance(plan['target'],str) or not re.fullmatch(r'[A-Za-z_][A-Za-z_0-9.]*',plan['target'])
+                or any(type(plan[k]) is not int or not 1<=plan[k]<=10000 for k in ['modules','build_chunk','kernel_chunk'])):
+            raise ValueError('Invalid phased Lean command plan')
+        for name in ['tools/setup.py','tools/run_phase.py','check.sh']:
+            inside(package,cfg['path']+'/'+name)
+        result.append((cfg,plan))
     return result
 
 
@@ -141,9 +164,9 @@ def build_order(package, modules, target):
 def execute(cmd, cwd, log, run=subprocess.run):
     with log.open('w') as stream:
         try:
-            result=run(['timeout','240',*cmd],cwd=cwd,stdout=stream,stderr=subprocess.STDOUT,
-                       env={**os.environ,'LEAN_NUM_THREADS':'2','PYTHONDONTWRITEBYTECODE':'1'},timeout=245)
-            return result.returncode
+            result=run(['timeout','--signal=INT','--kill-after=5','240',*cmd],cwd=cwd,stdout=stream,stderr=subprocess.STDOUT,
+                       env={**os.environ,'LEAN_NUM_THREADS':'2','PYTHONDONTWRITEBYTECODE':'1'},timeout=250)
+            return 124 if result.returncode in {124,137} else result.returncode
         except subprocess.TimeoutExpired:
             stream.write('\nUNKNOWN: command exceeded 240 seconds\n')
             return 124
@@ -178,6 +201,17 @@ def run_problem(item, mode, output, root=ROOT, run=subprocess.run):
                        'oracle-'+entry['declaration'],require='RESULT: PASS')
         for module in modules:
             invoke(['python3','-B',cfg['replay'],'--module',module],'replay-'+module,require='KERNEL REPLAY: PASS')
+    if mode=='full':
+        for project,plan in phased_plans(item,root):
+            prefix=project['path']; invoke(['python3','-B',prefix+'/tools/setup.py'],'phased-setup')
+            runner=['python3','-B',prefix+'/tools/run_phase.py']
+            invoke(runner+['prepare'],'phased-prepare')
+            for i in range((plan['modules']+plan['build_chunk']-1)//plan['build_chunk']):
+                invoke(runner+['build',str(i)],'phased-build-'+str(i))
+            invoke(runner+['hygiene'],'phased-hygiene')
+            for i in range((plan['modules']+plan['kernel_chunk']-1)//plan['kernel_chunk']):
+                invoke(runner+['kernel',str(i)],'phased-kernel-'+str(i))
+            invoke(runner+['finalize'],'phased-finalize',require='RESULT: PASS')
     receipt=json.loads((output/'receipt.json').read_text());receipt['status']='PASS'
     (output/'receipt.json').write_text(json.dumps(receipt,indent=2)+'\n')
     print(f"{item['id']} {mode}: PASS; receipt {output/'receipt.json'}")

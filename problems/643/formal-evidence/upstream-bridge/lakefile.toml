@@ -1,0 +1,20 @@
+name = "erdos643r3_actual_upstream_bridge"
+defaultTargets = ["ActualImportBridge"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "0df444a360eaa60ab8c11dca51a86af692955474"
+
+[[lean_lib]]
+name = "FormalConjecturesForMathlib"
+srcDir = "vendor"
+globs = ["FormalConjecturesForMathlib.+"]
+
+[[lean_lib]]
+name = "Openmath"
+srcDir = "../source"
+globs = ["Openmath.Erdos643R3.+"]
+
+[[lean_lib]]
+name = "ActualImportBridge"

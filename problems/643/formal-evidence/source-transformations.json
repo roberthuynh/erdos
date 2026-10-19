@@ -1,0 +1,102 @@
+{
+  "source/Openmath/Erdos643R3/FCBridge.lean": {
+    "export_sha256": "a66ced22548577c95114f6e7e14bb8945591b6247236e55d9963314bb743290d",
+    "original_sha256": "d013db1d857dd6dc3b2a39ed235cc5b08f0b37ed7d17a6f525b4aba8a5aadc2b",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged"
+  },
+  "source/Openmath/Erdos643R3/G1Arith.lean": {
+    "export_sha256": "95133168489bb086d6f58bdce597ca53fc0b9e7e74933a46ae008281c81194cd",
+    "original_sha256": "4201e16ce05178ce111f167fc433eb2cfc0d2c7c6f7bd3cb25f65a8f423add5d",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged"
+  },
+  "source/Openmath/Erdos643R3/G3hpArith.lean": {
+    "export_sha256": "e21a65ac966d7b787036f123a18b32503596e2ba6b340b95d1e61748762aeb11",
+    "original_sha256": "e348331d693804070bb4598b8914f60ffa6bd602805e584a0729879eb1c4fc8b",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged"
+  },
+  "source/Openmath/Erdos643R3/HypergraphBasics.lean": {
+    "export_sha256": "bb5c59fb53d56a61a18fe3b844631267495e11567d6e4096586161adc3f6f78b",
+    "original_sha256": "bb5c59fb53d56a61a18fe3b844631267495e11567d6e4096586161adc3f6f78b",
+    "transformation": "Byte-identical copy"
+  },
+  "source/Openmath/Erdos643R3/Identity.lean": {
+    "export_sha256": "b4e523e15dbd28fbcc7847f2c0ba154bf2f482cddf093e2d79c6573deecf9011",
+    "original_sha256": "bb8e2c89c58a5603e0c938ff5f116c8210f85d1df310100a9c3c91f337b8ef8b",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged"
+  },
+  "source/Openmath/Erdos643R3/L1Top.lean": {
+    "export_sha256": "95bc5eec5db70c6b4ace411c6ea723e6541f8502cc78285b541c3f0bca00ef77",
+    "original_sha256": "b67ae59d7d7a49d6682ee43ae92a756b56c7b23dcde4c0565a560e1fcc5ec617",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged; replaced one private path in a theorem documentation comment"
+  },
+  "source/Openmath/Erdos643R3/Lemma1g.lean": {
+    "export_sha256": "7ba62cd0ef27a78d063fb3a4fe6e999c802a36d78b9a8309265fe725148a2637",
+    "original_sha256": "897dfee78595b1c8a76bd61baf41bdfa59898bc7bd072ff61933dcbb8faf12a7",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged"
+  },
+  "source/Openmath/Erdos643R3/Lemma3.lean": {
+    "export_sha256": "cd31563d93870dddb342246bb146c3ab1bbeb28068fc29643f94c9ffd301461d",
+    "original_sha256": "da25f9bfd995303e19960a2a03e0e7da1bd66462cfa53aa1e45a266aa015b3e2",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged"
+  },
+  "source/Openmath/Erdos643R3/Pw2312.lean": {
+    "export_sha256": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1",
+    "original_sha256": "9f50b40348bc328e104c73f03fc372ee34424d222f19f0ce21004f7510accb6e",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged"
+  },
+  "source/Openmath/Erdos643R3/Pw2312Defs.lean": {
+    "export_sha256": "cb3d1084612cc1305bac23f8a5527334ad3305e243566dfc338be4662c3cd660",
+    "original_sha256": "13db77e821077d1d3eca6ab97c9e5fed68a92c9240c37932670e879287f1db09",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged"
+  },
+  "source/Openmath/Erdos643R3/PwArith.lean": {
+    "export_sha256": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3",
+    "original_sha256": "775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged"
+  },
+  "source/Openmath/Erdos643R3/PwC1.lean": {
+    "export_sha256": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+    "original_sha256": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+    "transformation": "Byte-identical copy"
+  },
+  "source/Openmath/Erdos643R3/PwC2.lean": {
+    "export_sha256": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+    "original_sha256": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+    "transformation": "Byte-identical copy"
+  },
+  "source/Openmath/Erdos643R3/PwCheck.lean": {
+    "export_sha256": "d7599ffa13fd11546852caccceebfd59f7328c8fde69f511b0c9b944230a3c7d",
+    "original_sha256": "29eedd06ab7523615d35a018322e4c7d40ac23c5b545ccff28c0415797dd6a88",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged"
+  },
+  "source/Openmath/Erdos643R3/RedistArith.lean": {
+    "export_sha256": "637c5811ef71ddaa5d8f2f1dacf9a49fa6786c4aa2d78543bb29bc3303776006",
+    "original_sha256": "2bcadace9cd57e7805658182d253badf4b2ac973cf669a7d76f0c93a35649f96",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged"
+  },
+  "source/Openmath/Erdos643R3/SlotModel.lean": {
+    "export_sha256": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc",
+    "original_sha256": "224fd2eff3cce476bdad55c1ad3835cdeb7c0808175ecded175203ce7c0c3cee",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged"
+  },
+  "source/Openmath/Erdos643R3/WBox.lean": {
+    "export_sha256": "ec7cf0a83fcc5eb380d038ad0093d215748fc75fb50007ac80466112ab6ebdab",
+    "original_sha256": "e665c5e602200df79f7fac302903878917dff68ce7b5a48db602763a958eef4e",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged"
+  },
+  "source/Openmath/Erdos643R3/Weighting.lean": {
+    "export_sha256": "c93fcef9972a8f3fe4bc2f1fa45aa59618e429acfb6d9be24ade3421ae2e7bba",
+    "original_sha256": "2d0688fdac329d0bb446d54c8fa665856949c7360350dc451ca6d4afe005348a",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged"
+  },
+  "source/Openmath/Erdos643R3/WeightingAuxArith.lean": {
+    "export_sha256": "44d136e459522ea5065928fea246f194ac41d77c88469e7b30b66953f7dcbf0c",
+    "original_sha256": "f598c850547c73b671bdb0c3f13546d21374d7d652630e1eb489a82c59580442",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged"
+  },
+  "source/Openmath/Erdos643R3/WeightingBound.lean": {
+    "export_sha256": "e83241fcceacbc6b6338498944766515d4bcea43dee92ff6335065e2894231bb",
+    "original_sha256": "ceb807e36820a80b6eb67e4199f7968306946a35f0a7b85a92230660c08a55c6",
+    "transformation": "Removed first module documentation block with private development references; declarations unchanged"
+  }
+}

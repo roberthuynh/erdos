@@ -1,0 +1,176 @@
+[
+  {
+    "kind": "cycle-pruning",
+    "t": [
+      0,
+      0,
+      0
+    ],
+    "target": "15/7",
+    "equalities": 3,
+    "enumerated_candidates": 3
+  },
+  {
+    "kind": "cycle-pruning",
+    "t": [
+      1,
+      0,
+      0
+    ],
+    "target": "3257/1560",
+    "equalities": 2,
+    "enumerated_candidates": 2
+  },
+  {
+    "kind": "cycle-pruning",
+    "t": [
+      0,
+      1,
+      0
+    ],
+    "target": "3257/1560",
+    "equalities": 2,
+    "enumerated_candidates": 2
+  },
+  {
+    "kind": "cycle-pruning",
+    "t": [
+      0,
+      0,
+      1
+    ],
+    "target": "3257/1560",
+    "equalities": 2,
+    "enumerated_candidates": 2
+  },
+  {
+    "kind": "cycle-pruning",
+    "t": [
+      2,
+      2,
+      2
+    ],
+    "target": "2",
+    "equalities": 1,
+    "enumerated_candidates": 1
+  },
+  {
+    "kind": "cycle-pruning",
+    "t": [
+      0,
+      2,
+      3
+    ],
+    "target": "49/24",
+    "equalities": 1,
+    "enumerated_candidates": 1
+  },
+  {
+    "kind": "tail-pruning-domain-constants-only",
+    "t": [
+      0,
+      0,
+      0
+    ],
+    "noncompliant": false,
+    "target": "1",
+    "equalities": 15,
+    "enumerated_candidates": 15
+  },
+  {
+    "kind": "tail-pruning-domain-constants-only",
+    "t": [
+      1,
+      0,
+      0
+    ],
+    "noncompliant": false,
+    "target": "11/12",
+    "equalities": 1,
+    "enumerated_candidates": 1
+  },
+  {
+    "kind": "tail-pruning-domain-constants-only",
+    "t": [
+      0,
+      1,
+      0
+    ],
+    "noncompliant": false,
+    "target": "11/12",
+    "equalities": 1,
+    "enumerated_candidates": 1
+  },
+  {
+    "kind": "tail-pruning-domain-constants-only",
+    "t": [
+      0,
+      0,
+      1
+    ],
+    "noncompliant": false,
+    "target": "7/6",
+    "equalities": 3,
+    "enumerated_candidates": 3
+  },
+  {
+    "kind": "tail-pruning-domain-constants-only",
+    "t": [
+      2,
+      2,
+      2
+    ],
+    "noncompliant": false,
+    "target": "4/3",
+    "equalities": 1,
+    "enumerated_candidates": 1
+  },
+  {
+    "kind": "tail-pruning-domain-constants-only",
+    "t": [
+      0,
+      2,
+      3
+    ],
+    "noncompliant": false,
+    "target": "29/24",
+    "equalities": 1,
+    "enumerated_candidates": 1
+  },
+  {
+    "kind": "tail-pruning-domain-constants-only",
+    "t": [
+      1,
+      0,
+      0
+    ],
+    "noncompliant": true,
+    "target": "16/15",
+    "equalities": 1,
+    "enumerated_candidates": 1
+  },
+  {
+    "kind": "tail-pruning-domain-constants-only",
+    "t": [
+      0,
+      1,
+      0
+    ],
+    "noncompliant": true,
+    "target": "16/15",
+    "equalities": 1,
+    "enumerated_candidates": 1
+  },
+  {
+    "kind": "tail-pruning-domain-constants-only",
+    "t": [
+      0,
+      0,
+      1
+    ],
+    "noncompliant": true,
+    "target": "7/6",
+    "equalities": 3,
+    "enumerated_candidates": 3
+  }
+]

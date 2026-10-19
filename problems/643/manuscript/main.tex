@@ -1,0 +1,38 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,longtable,array}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor,hyperref,microtype}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,citecolor=blue!45!black}
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\CL}{\operatorname{CL}}
+\newcommand{\CN}{\operatorname{CN}}
+\newcommand{\act}{\operatorname{act}}
+\newcommand{\deficit}{\operatorname{def}}
+\newcommand{\pending}[1]{\par\noindent\textcolor{blue!45!black}{\textbf{Verification and review.} #1}\par}
+\title{A shadow and co-link bound for disjoint-union-free triple systems}
+\author{Robert Huynh}
+\date{Draft for review, 19 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We present a computer-assisted proof that every finite $3$-uniform hypergraph $H$ with no four distinct edges $A,B,C,D$ satisfying $A\cap B=C\cap D=\varnothing$ and $A\cup B=C\cup D$ obeys
+$2|H|\leq |\partial H|+|\CL(H)|$. Here $\partial H$ is its two-shadow and $\CL(H)$ consists of pairs of vertices having a nonempty common link. The inequality implies $|H|\leq\binom n2$ on $n$ vertices and, together with the classical star-plus-matching construction, the coefficient-$1$ asymptotic bound that answers the $t=3$ case of the asymptotic question of Erd\H{o}s problem 643. The argument uses a fractional pair count, a structural description of negatively charged triples, and proportional redistribution through six-edge bicones. Its finite rational inequalities and their analytic reductions are stated explicitly. The main inequality, its finite and asymptotic consequences, and the classical design construction giving exact values at admissible orders have complete Lean verification with independent exact-source acceptance. AI systems developed and checked the proof and formalization; no human mathematical review has been completed. No new theorem for $t\geq4$ or classification of equality cases is asserted.
+\end{abstract}
+\pending{The exact main theorem and its source-stated corollaries have accepted complete Lean verification in the isolated proof project. The expanded supplementary source package passed its complete 126-module check, including general classical five-block design existence and exact extremal and forcing values at every admissible order. This formalizes a known construction; it is not a claim of new design-existence mathematics.}
+\tableofcontents
+\input{sections/narrative}
+\input{sections/evidence}
+\appendix
+\section{Detailed written argument}
+The numbered subdivisions 2--10 in this appendix form a single technical sequence. References to these numbers within the appendix refer to that sequence. The definitions preceding it are collected in Section~\ref{sec:notation}. Lemmas S1--S11, Proposition S2 and Theorems S1 and S1' belong to subdivision 7; Theorem S3 belongs to subdivision 8. Unprefixed numerical slot lemmas belong to subdivision 2, and the suffix g identifies the strengthened profile argument. This presentation preserves the full critical proof path, including its finite certificate obligations.
+\input{sections/technical-proof}
+\input{sections/expanded-arguments}
+\input{sections/examples}
+\input{sections/formal-inventory}
+\input{sections/editorial}
+\input{references}
+\end{document}

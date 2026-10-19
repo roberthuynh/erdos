@@ -1,0 +1,88 @@
+{
+  "result": "PASS",
+  "domain": "all six counts 0..92; t<=1",
+  "rows": [
+    {
+      "t": [
+        0,
+        0,
+        0
+      ],
+      "integer_lower_bound": 8613150629,
+      "scale": 4294967296,
+      "bound": "8613150629/4294967296",
+      "margin_over_23_12": "1143389935/12884901888"
+    },
+    {
+      "t": [
+        1,
+        0,
+        0
+      ],
+      "integer_lower_bound": 8277463527,
+      "scale": 4294967296,
+      "bound": "8277463527/4294967296",
+      "margin_over_23_12": "136328629/12884901888"
+    },
+    {
+      "t": [
+        0,
+        1,
+        0
+      ],
+      "integer_lower_bound": 8277463527,
+      "scale": 4294967296,
+      "bound": "8277463527/4294967296",
+      "margin_over_23_12": "136328629/12884901888"
+    },
+    {
+      "t": [
+        0,
+        0,
+        1
+      ],
+      "integer_lower_bound": 8277463527,
+      "scale": 4294967296,
+      "bound": "8277463527/4294967296",
+      "margin_over_23_12": "136328629/12884901888"
+    }
+  ],
+  "self_tests": [
+    {
+      "t": [
+        0,
+        0,
+        0
+      ],
+      "small_feasible_profiles": 1000,
+      "oracle": "PASS"
+    },
+    {
+      "t": [
+        1,
+        0,
+        0
+      ],
+      "small_feasible_profiles": 1440,
+      "oracle": "PASS"
+    },
+    {
+      "t": [
+        0,
+        1,
+        0
+      ],
+      "small_feasible_profiles": 1440,
+      "oracle": "PASS"
+    },
+    {
+      "t": [
+        0,
+        0,
+        1
+      ],
+      "small_feasible_profiles": 1440,
+      "oracle": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+== lean -o Openmath.Erdos643R3.Pw2312Defs (leanprover/lean4:v4.33.1)
+== lean -o Openmath.Erdos643R3.PwArith (leanprover/lean4:v4.33.1)
+== lean -o Openmath.Erdos643R3.PwCheck (leanprover/lean4:v4.33.1)
+== lean -o Openmath.Erdos643R3.PwC2 (leanprover/lean4:v4.33.1)
+== sorry/native_decide in Openmath/Erdos643R3/PwC2.lean, comments ignored: 0
+== axioms
+'Erdos643R3.PwC2.c2_cert' does not depend on any axioms
+RESULT: PASS build=ok probe=ok sorry=0 axioms=[none] disallowed=[] source_sha256=5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b

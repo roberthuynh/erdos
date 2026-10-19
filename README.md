@@ -1,10 +1,12 @@
-# Erdős: combinatorics and graph theory
+# Erdős #643: the sharp bound for triple systems
+
+The t=3 asymptotic case, an all-order upper bound and exact classical design-order values, checked in Lean.
 
 Hi, I'm Robert Huynh, currently a second-year MBA student at Harvard Business School. I'm a founder and absolutely not a mathematician, but I'm excited to tackle questions from Erdős's collection of unsolved math problems.
 
 I'm always curious to see how far I can push the limits of AI before I find failure (and trust me, I've found a lot of it)!
 
-We have not solved any of these Erdős problems, but I hope this work inspires more collaboration between mathematicians and people like me, who found their interest in math later in life and still want to contribute.
+The work on Erdős #643 settles its t = 3 asymptotic case, completing the remaining case of the asymptotic question together with [Huang, Ma and Yang's preprint](https://arxiv.org/html/2609.37744v1), which treats every fixed t ≥ 4 for sufficiently large n. Our triple-system result is Lean-verified; their higher-uniformity proof is external and is not Lean-verified here. Other packages, including #60, #642 and #585, give partial results or separate research directions; #85 develops a separate projective-incidence theorem. I hope this work inspires more collaboration between mathematicians and people like me, who found their interest in math later in life and still want to contribute.
 
 ## How this was made
 
@@ -63,15 +65,17 @@ I am looking for help reviewing the written proofs linked from the [problem page
 
 ## Collection
 
-| Problem | Question | Main results | Verification |
-|---|---|---|---|
-| [585](problems/585/README.md) | How many edges force two edge-disjoint cycles on the same vertex set? | **Conditions that force regular subgraphs**, with explicit examples that avoid them. Further results include exact small cases and graph constructions. [Results and hypotheses](problems/585/README.md#main-results). | **Lean:** full regular-subgraph forcing bounds and avoiding constructions checked. Computational results and written arguments are labeled separately. |
-| [60](problems/60/README.md) | How many four-cycles must appear just above the extremal edge threshold? | **Exact count and equality classification** over a linear range of surplus edges at specified projective-plane orders. [Results and hypotheses](problems/60/README.md#main-results). | **Lean:** full count and equality-classification theorem checked, including the powers-of-two interpretation. |
-| [643](problems/643/README.md) | How many triples force a generalized four-cycle? | **An all-order four-thirds bound** for families avoiding the original six-vertex configuration. [Results and hypotheses](problems/643/README.md#main-results). | **Lean:** full per-family bound checked. Written extremal and forcing corollaries are labeled separately. |
-| [642](problems/642/README.md) | How many edges force a cycle with at least as many chords as vertices? | **A fifth-power logarithmic edge threshold** for every finite simple graph. [Results and hypotheses](problems/642/README.md#main-results). | **Lean:** full all-graph edge-threshold theorem checked. |
-| [85](problems/85/README.md) | Is the four-cycle minimum-degree threshold eventually nondecreasing? | **Projective-incidence repair** for arbitrary point and hyperplane maps under an explicit frame-survival/error hypothesis. A separate direction; the original question remains open. [Results and hypotheses](problems/85/README.md#main-results). | **Lean:** full projective-incidence repair theorem and its two corollaries checked. |
+The collection starts with the completed case of #643, followed by partial results on the original questions and then separate theorem families. The counts below group headline results, not Lean helper declarations, proof modules or successive improvements of the same bound. They are not counts of new discoveries; the linked result pages give exact statements, attribution and additional supporting results.
 
-None of the packages settles its original Erdős problem. The problem pages distinguish partial results from separate research directions and state their evidence and limitations.
+| Problem | Contribution to the original question | Headline results, grouped | Verification |
+|---|---|---|---|
+| [643](problems/643/README.md) | **Settles the t = 3 asymptotic case.** Together with the attributed higher-uniformity preprint, completes the asymptotic question for every fixed t ≥ 3. | **1 main theorem + 2 consequence groups:** the sharp triple-system bound; its asymptotic consequence; exact extremal and forcing values at classical design orders. [Results](problems/643/RESULTS.md). | **Lean-verified:** the full triple-system theorem and both consequence groups, including the required design construction. The external higher-uniformity theorem is not Lean-verified here. |
+| [60](problems/60/README.md) | **Partial result:** exact four-cycle counts and equality cases for specified orders and a restricted surplus range. The unrestricted problem remains open. | **2 theorem groups:** exact supersaturation with its lower bound and equality classification; first-excess structural control. The known extremal threshold is also formalized. [Results and hypotheses](problems/60/RESULTS.md). | **Lean-verified:** both theorem groups and the supporting extremal threshold, under their stated order and range hypotheses. |
+| [642](problems/642/README.md) | **Partial result:** an edge threshold forcing a cycle with at least as many chords as vertices. The original problem remains open. | **1 main theorem:** a fifth-power logarithmic edge threshold for every finite simple graph. [Result](problems/642/RESULTS.md). | **Lean-verified:** the full stated all-graph edge-threshold theorem. |
+| [585](problems/585/README.md) | **Separate theorem families and finite cases.** These do not improve the original problem's known asymptotic bounds. | **2 regular-subgraph theorem families:** sufficient conditions and avoiding constructions. Additional exact small values, lower witnesses and finite computations are listed separately. [Results](problems/585/RESULTS.md). | **Lean-verified:** the stated regular-subgraph bounds, avoiding constructions and registered finite results. Computational upper exclusions and written candidates have separate evidence labels. |
+| [85](problems/85/README.md) | **Separate theorem:** projective-incidence repair. The original eventual-monotonicity question remains open. | **1 main theorem + 2 formal corollaries:** coupled point–hyperplane repair, its dichotomy and its no-field-embedding bound. [Results and hypotheses](problems/85/RESULTS.md). | **Lean-verified:** the full repair theorem and both formal corollaries, under the explicit frame-survival/error hypothesis. |
+
+Lean verification checks the stated mathematics; it does not establish novelty or human review. The classical constructions and external results retain their attribution. No human mathematical review is claimed. Apart from the stated #643 asymptotic conclusion, the packages do not settle their original Erdős problems.
 
 ## Documentation
 
@@ -85,4 +89,4 @@ None of the packages settles its original Erdős problem. The problem pages dist
 
 ## License and citation
 
-Apache-2.0, with third-party notices retained. See [LICENSE](LICENSE), [NOTICE](NOTICE) and the [collection citation](CITATION.cff). Cite a particular result using its problem’s own citation and declaration or source file.
+Apache-2.0 is the collection default, with explicit package exceptions and third-party notices retained. The combined #643 design proof package is GPLv3; individual Apache-origin source notices remain intact. See [LICENSE](LICENSE), [NOTICE](NOTICE) and the [collection citation](CITATION.cff). Cite a particular result using its problem’s own citation and declaration or source file.

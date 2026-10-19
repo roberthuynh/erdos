@@ -1,0 +1,48 @@
+{
+  "changed_logs": {
+    "final-AnchorActivity.build.log": {
+      "exported_sha256": "d50fe09d6c63fbe8436d85873a6b083880ef2b93ebd6c8308180938ae81ca993",
+      "original_sha256": "9b1b3f8cab2dd33c9bfce1201aa194691fb97a2ecb585bbe1d8d8b69308963ad",
+      "path_prefix_replacements": 36
+    },
+    "final-AnchorApexAdapter.build.log": {
+      "exported_sha256": "7bcffd013cdd4aa17f072edb2ccf8ee838ad7b8770d0ac5db5acbfd23e626521",
+      "original_sha256": "45566f8df81647e08408581112afb34627729beed7e67c1914412ac89cb491f0",
+      "path_prefix_replacements": 9
+    },
+    "final-AnchorCaps.build.log": {
+      "exported_sha256": "993d2d2dd370aed8d38248c539220f99c76c1e924d4adef4cc582ae57b9e3893",
+      "original_sha256": "5048fcf050f893a8b40441fa3419ba43d3584c1f4c59bd40e74d0f08a57b7d5a",
+      "path_prefix_replacements": 77
+    },
+    "final-AnchorS3.build.log": {
+      "exported_sha256": "fa4e413ee8266f663c3c9599184fe6a2fe39105a5d842b85521dbce6d3842026",
+      "original_sha256": "dfbfd918f377f348458aff923f6dbbed06211c9ec1fa55122bed005099fc3152",
+      "path_prefix_replacements": 3
+    },
+    "final-GeneralizedPsi.build.log": {
+      "exported_sha256": "4e1026cbb2ef62e8defbf2bee797c4f5c866f32c9f2cad5d4e35df50f8b20d3a",
+      "original_sha256": "1f4b5654e5f61f48002d8972119bf7ef577a1daef4c81304b31bcdb7ec5ea6d0",
+      "path_prefix_replacements": 2
+    },
+    "final-HypergraphBasics.build.log": {
+      "exported_sha256": "8de0f4053aeab68b91ed5247cbebb9d7078fb5d62274d771eb2df9da6e0f699c",
+      "original_sha256": "a31145112a254b66948122ae99616c68ebb093368e52a905fb81e38fcf960a79",
+      "path_prefix_replacements": 4
+    },
+    "final-USideArith.build.log": {
+      "exported_sha256": "486e5ea4746ad2639a3cd6b97b498ee0fe32f97983aa7f4ea09a97eb85391fd3",
+      "original_sha256": "18f9df5bb80176e5e08ee37b36c2dcceeab1289427c9bec5f5fd33972734a38c",
+      "path_prefix_replacements": 1
+    },
+    "final-source-scan.log": {
+      "exported_sha256": "3585e4bdbebd44486043268c8c3bdbb91053dbc4804bda4f5f30eb9a085bd3e2",
+      "original_sha256": "163118a9e915af4796b5cc6df92c6fea1391dd47c796fde6f2fc1dc0d4046924",
+      "path_prefix_replacements": 126
+    }
+  },
+  "original_receipt_sha256": "94e2ee15c09f92b84805f73fbfd34d19fce6edea19ae765769240f5645999a3f",
+  "rule": "Replace the exact absolute checked project prefix with <PROOF_PACKAGE>; all other bytes unchanged.",
+  "scope": "Public display copies only; original passing receipt and raw logs remain unchanged.",
+  "total_prefix_replacements": 258
+}

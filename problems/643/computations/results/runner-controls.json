@@ -1,0 +1,49 @@
+{
+  "result": "PASS",
+  "scope": "Eight runner-only controls on disposable copies; not mathematical validation",
+  "command": [
+    "timeout",
+    "240",
+    "<VENV_PATH>/bin/python",
+    "-I",
+    "<PACKAGE_PATH>/test_replay.py"
+  ],
+  "exitcode": 0,
+  "tests": 8,
+  "test_source_sha256": "5b20ac1d6c81127ea1c4e3888358d8560ed5666a686f62ed0f49b40dc5b87fd6",
+  "cases": [
+    {
+      "name": "existing_success_rejected_unchanged",
+      "result": "PASS"
+    },
+    {
+      "name": "existing_empty_or_stale_directory_rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "nonzero",
+      "result": "PASS"
+    },
+    {
+      "name": "malformed_json",
+      "result": "PASS"
+    },
+    {
+      "name": "timeout_preserves_partial_bytes",
+      "result": "PASS"
+    },
+    {
+      "name": "tamper_before_checker",
+      "result": "PASS"
+    },
+    {
+      "name": "optimized_interpreter_rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "normalization_preserves_semantics",
+      "result": "PASS"
+    }
+  ],
+  "limits": "Timeout is injected with partial byte stdout/stderr; no 240-second wait. Existing PASS fixture is rejected and its old bytes remain unchanged."
+}

@@ -1,0 +1,2077 @@
+{
+  "axiom_log_sha256": "87319569b54d60dbc7667327b3fb4b08775615c25b54ebbe84f1a4dea7331c6d",
+  "axioms": {
+    "Erdos643Design.FiniteBaseOrders.base_orders": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643Design.FiniteBaseOrders.design_five": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643Design.FiniteBaseOrders.design_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643Design.FiniteBaseOrders.residue_designs_of_two_seeds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643Design.HananiExistence.exists_design": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643Design.design_five": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643Design.design_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643R3.AnchorComplete.g3hPrime": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643R3.CoefficientOneAssembly.coefficient_one_of_G3hPrimeAt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643R3.CoefficientOneFinal.coefficient_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643R3.CoefficientOneFinal.extremal_eq_of_supplied_design": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643R3.CoefficientOneFinal.extremal_ratio_tendsto_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643R3.CoefficientOneFinal.extremal_three_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643R3.CoefficientOneFinal.extremal_three_le_choose_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643R3.CoefficientOneFinal.extremal_three_lower_matching": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643R3.CoefficientOneFinal.forcing_isEquivalent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643R3.CoefficientOneFinal.forcing_three_le_choose_two_add_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643R3.CoefficientOneFinal.phi_nonpos": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643R3.CoefficientOneFinal.shadow_colink_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643R3.CoefficientOneFullSolution.forcing_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643R3.CoefficientOneHanani.extremal_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643R3.PublicSmallOrders.extremal_five": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos643R3.PublicSmallOrders.extremal_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "builds": {
+    "FormalConjecturesForMathlib.Combinatorics.Hypergraph.Basic": {
+      "log": "final-Basic.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "ec3805f43a939a2ea54f405660de5480fcb6a50db05a3860fdccf5c1171e1278",
+      "source_sha256": "b1719a6665154f31d14d7999cbe034ebf2942728d3b52b3f7f5b92cc20422e62"
+    },
+    "FormalConjecturesForMathlib.Combinatorics.Hypergraph.Finite": {
+      "log": "final-Finite.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "d0c382898dd12f31e4e78a54992e4cbee5ab8b1c93d196ee1e8e94d47fb9908f",
+      "source_sha256": "0823fba654c8fd849c821338e6624aefac6935a92836523dde9eb6524874949a"
+    },
+    "FormalConjecturesForMathlib.Combinatorics.SetFamily.PropertyB": {
+      "log": "final-PropertyB.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "0214807dc17a0e3c3b7bede16aa014b6c84faa9d68fa987218be8bb97c8466cf",
+      "source_sha256": "318833034fd920b3cef2f0e466621de34660c92ee7f593156011c21b6b342934"
+    },
+    "Openmath.Erdos643Design.CompositeDesigns": {
+      "log": "final-CompositeDesigns.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "ce56ceb5518cdeef517d67677ec61ac6acf115ec7995e3289bac0b950f72778c",
+      "source_sha256": "26a2c3d24f896134ca43fd9925c13e412c10b3969d51f5c190a82d6512e3fffd"
+    },
+    "Openmath.Erdos643Design.CompositeRows": {
+      "log": "final-CompositeRows.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "71451cafad48c921919cb257c9818eec408c655568874cd3bf1561d44d68c3f0",
+      "source_sha256": "4a2fd72ba7bb00966875f3584cb4bab07d032fbc343974f38ff3c4cc8257b283"
+    },
+    "Openmath.Erdos643Design.CompositeSeed401": {
+      "log": "final-CompositeSeed401.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "d2e87807fb92d64b1a00e598b88681834fe826d40b02490f1de5e8c024450d99",
+      "source_sha256": "4d7ff116e538fe152aab2d76b1d5a54ff4beb7f1b8b1b9f5b0eb0e06ade104ef"
+    },
+    "Openmath.Erdos643Design.CompositeSeedOrders": {
+      "log": "final-CompositeSeedOrders.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "fa70a5947da5db4c1b581f2bdf0dc48c51dbb1d365682eb27cc9a8762d3f4ca7",
+      "source_sha256": "8f583ec9efef1f8dbeba15dc00f0e4d5245c6b7d67c9c0a5fb49344bdb269084"
+    },
+    "Openmath.Erdos643Design.CyclicSeed141": {
+      "log": "final-CyclicSeed141.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "9627c9a045debccd1a01ab636aefcaa888cffdb39522ee4a64cd3f4a3dd65314",
+      "source_sha256": "736e67684b5e86d36943ac8e54009ba7135849ecaa92366decb67c3672ca1e5b"
+    },
+    "Openmath.Erdos643Design.CyclicSeed161": {
+      "log": "final-CyclicSeed161.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "b73dd6ff889352417aed4ab14d60fbaeb906deecd579b9d91c75db7abeff6f8c",
+      "source_sha256": "4378db0bdef98d7c476d0797b0e34f4219b1721982a53e16a1488f39954a4c55"
+    },
+    "Openmath.Erdos643Design.CyclicSeed81": {
+      "log": "final-CyclicSeed81.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "516f939c2c03cf968fa30ac0195cf3880c6d5d2b614e0cb74a02b43fb3218110",
+      "source_sha256": "3d51fd29879381e2d9e78d1c13bd258eaf2a6cd6cdb4e81d1a1fb70882941a24"
+    },
+    "Openmath.Erdos643Design.DesignPencil": {
+      "log": "final-DesignPencil.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "8cb80014bca48532a0464f01fd57ff7a35cb6b86d577359eb05e013e861d4418",
+      "source_sha256": "9f27a16de24e5d9cb35e89731da9514f9ca7b3d418834818dbf08c41fcd401a6"
+    },
+    "Openmath.Erdos643Design.DesignPrime281": {
+      "log": "final-DesignPrime281.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "573b695e88d52908838aa20f6a3a164e08c6bd5c817bf1027b4437b280f3586e",
+      "source_sha256": "f0a34eb7c6c77c7366791fc33524752b6a9507e156fe054b2c40699270fe07f9"
+    },
+    "Openmath.Erdos643Design.DesignPrime41": {
+      "log": "final-DesignPrime41.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "2066b039fba811f039c0fb6abe8eed6736792020d20df377665932e46384250b",
+      "source_sha256": "11aad6b29695fce3f9e1418a40c9975a39e7cee3566bd03de6698eca0a9ca068"
+    },
+    "Openmath.Erdos643Design.DesignPrime61": {
+      "log": "final-DesignPrime61.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "8d15ae7f81e0c6a2ecd3c2594984231febf5783b1bbd92b3da6dd5ad58f4e988",
+      "source_sha256": "c08c613e3a661032070e1b47a9d0903ac4092e7ab32d0cce75fd693c740433ba"
+    },
+    "Openmath.Erdos643Design.DesignSeed21": {
+      "log": "final-DesignSeed21.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "1a335bc4922c5df831ee4bfb7aa4606eb85cb118f4ee0296c7d3a3af80745c1b",
+      "source_sha256": "edb05020f9f8cf6f54f2cbd723a1de8db12757738bd16d3bd7793df8834ac592"
+    },
+    "Openmath.Erdos643Design.DesignSeed285": {
+      "log": "final-DesignSeed285.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "860d1be846a86550101dc49eb5a9a15c2a1b32a2df347f446c641bf7e4d9fc84",
+      "source_sha256": "f26b2fb24e96d2e588be2384b8ad60a4119c1e4139767b6149d451a7ae653686"
+    },
+    "Openmath.Erdos643Design.DesignTransport": {
+      "log": "final-DesignTransport.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "3d254ef71d0ab91507545c1fd89c662199d235c4324eb60e30246736bd4de348",
+      "source_sha256": "28a6bf494b274d3f614dc4ee293af1b9b4fae8ba0a66d6f106dc7fe655566271"
+    },
+    "Openmath.Erdos643Design.DifferenceFamilyCertificate": {
+      "log": "final-DifferenceFamilyCertificate.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "99241242f096fec84ddf5b081726ffbf5fa5b17da0f9689fb07493dbfb84bc43",
+      "source_sha256": "4827461e49acc77fc3ad2c2e080d876cf5ea7884629745326d19739b7fd177d3"
+    },
+    "Openmath.Erdos643Design.DifferenceFamilyDesign": {
+      "log": "final-DifferenceFamilyDesign.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "b2f52bdf28c4446590310804aafd7e429e422ff1b6d6327fe893ae05c2db7bbd",
+      "source_sha256": "877fab61742b91b7dadcd53be944c77704a91443984e66113befcf64ae9dcc55"
+    },
+    "Openmath.Erdos643Design.DifferenceMatrix": {
+      "log": "final-DifferenceMatrix.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "3cbdbe9caec8d591260f1fad113974cba0e21b13a47a2d7bea7891efbf9c48a0",
+      "source_sha256": "20d9d83d656f100bad61dfa9c9453a67db8f02ae20873cba31b5cf05222dff8f"
+    },
+    "Openmath.Erdos643Design.DifferenceMatrixField": {
+      "log": "final-DifferenceMatrixField.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "8dced8e1b0529626dbc42d1a6ca7a1d3dfed2b90f4a019668daf7aa30cc64c2c",
+      "source_sha256": "53f9c80969bd3a2e78cd0908179c79f2747d8cd54c3767ed02245046e8c88a61"
+    },
+    "Openmath.Erdos643Design.FieldFamily121": {
+      "log": "final-FieldFamily121.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "aec46269b2366a7e38d09fba3504c36bbb58410659098077f2ed5b1ae5e88d26",
+      "source_sha256": "516cdaf2d99ecf46d03bfa7fb6e039c0a2dcb3d03766685ddf89c90d464a381e"
+    },
+    "Openmath.Erdos643Design.FieldFamily13": {
+      "log": "final-FieldFamily13.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "7d4523667e8347d6d0c3fdd4e22e7e75acc308edc895022cd4502ae420845fe2",
+      "source_sha256": "d4192d6b799de9c3304c78d14d32622baf1ea38ec032b417dab7d174b136f0a8"
+    },
+    "Openmath.Erdos643Design.FieldFamily17": {
+      "log": "final-FieldFamily17.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "8def56aba22e5bf664f8dc743d109c11eb425ee62fb0b2ba5879bf4749e6e0ae",
+      "source_sha256": "570efd9546e777ca13f5c749fe01e88f318fa1c9a58fec35cba8cce4fb475b1b"
+    },
+    "Openmath.Erdos643Design.FieldFamily25": {
+      "log": "final-FieldFamily25.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "d0e2e5ed056b32101caed63bce8e10bc0c4d3b3df62bbe0d11604e10a83acf67",
+      "source_sha256": "b879e4bb11bfc19190403ea0b258d9d8edf1504690b54a477e8025335c9e86b4"
+    },
+    "Openmath.Erdos643Design.FieldFamily29": {
+      "log": "final-FieldFamily29.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "6c437b8850e44045193069c43ff8dd7bb7dcb33b2f38f8a84f01d0bfb5be2885",
+      "source_sha256": "ef7a02028c7371e018a7c9758628971edfb2e44cb26054db329c2e38d9e38176"
+    },
+    "Openmath.Erdos643Design.FieldFamily37": {
+      "log": "final-FieldFamily37.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "b1260bedcbb9b667f0332542176517464a4c8181872d7e120c7df7f6095ca236",
+      "source_sha256": "3a8ce6928d0ac59790a9ae8475aefbb225db712195d58717cf83ed5c9ba2f949"
+    },
+    "Openmath.Erdos643Design.FieldFamily41": {
+      "log": "final-FieldFamily41.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "8699c3f0bfc534266b8c4e3523000441dc3b0fb16fdc21c2fdc51fa223bcde06",
+      "source_sha256": "e927039763804e69f2c64f0a3e50989393814dc4461abc10d0771080f5ef7746"
+    },
+    "Openmath.Erdos643Design.FieldFamily5": {
+      "log": "final-FieldFamily5.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "196db41ca00484b61eafb9b99234b2694548ebd7dd2aab16c3f9e4e8ce4a2fac",
+      "source_sha256": "cd5d563c24aa66a08619656c350f1835620ab80ce8ad7590dca4555526892752"
+    },
+    "Openmath.Erdos643Design.FieldFamily61": {
+      "log": "final-FieldFamily61.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "e704b9ab01b697987a262604f0a992f18cdd660db491c9b1f647e2e4777a00ad",
+      "source_sha256": "640095f885eef90fb66f43f956d019d3ada3ddb7ded5b98e8c02e6208cf1fd1b"
+    },
+    "Openmath.Erdos643Design.FieldFamily81": {
+      "log": "final-FieldFamily81.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "3287a315625fffe4699a3f3e5216d18ce7d1400241acf4d65ac54cc32086da4e",
+      "source_sha256": "d0d96b4829bf95f0d387449114da630c159deee00dcae0818c087db60108f7c0"
+    },
+    "Openmath.Erdos643Design.FieldFamily9": {
+      "log": "final-FieldFamily9.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "33724749235f0d28b6f327831ab0035ae2453ff249d6ecd0d7dada7138673165",
+      "source_sha256": "6c7e6d478c8dae92fff6e03e5bd5594f3c73b19e6b6766d32ba4074a0f6c7a1a"
+    },
+    "Openmath.Erdos643Design.FieldFamilyCertificate": {
+      "log": "final-FieldFamilyCertificate.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "fe255c5a8df84d80b1d2d467b8a3989610645e4d181ac3bdd179e9561d4a2863",
+      "source_sha256": "42366aa3f3160a6acbf78cee414a84ba8ca2203ee9b2be101fc5f01e208d943a"
+    },
+    "Openmath.Erdos643Design.FiniteBaseOrders": {
+      "log": "final-FiniteBaseOrders.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "f1fc4a9a030c65aac5ac57d583a9830d634eb31ad2aca7d03a7d380698302cff",
+      "source_sha256": "394a1a500ad5f8b8f186ca55d53aa0b050e24af922c8bab326f8d3c48fdb8433"
+    },
+    "Openmath.Erdos643Design.HananiArithmetic": {
+      "log": "final-HananiArithmetic.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "ea480cf79e8e27df49386d6aba4e3e76c26ba512d713f926d24c2f1fbbce9a0e",
+      "source_sha256": "cc63b2db043b2d11026efb7a195c4ba4b3d472f3c5eeff90a893d725e9d77c26"
+    },
+    "Openmath.Erdos643Design.HananiAssembly": {
+      "log": "final-HananiAssembly.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "360798d185af545c3822d60e8b4ff50e4dbd87fa7f1e13a2db2eaa3f82fb50dd",
+      "source_sha256": "c6f3f3cf0ab5f2fe5d53a53c6203adf633ce25570a1121a87836c3efc42f5171"
+    },
+    "Openmath.Erdos643Design.HananiExistence": {
+      "log": "final-HananiExistence.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "3c9458f045db845b498e7c60ec585931480227dd469571ca2537605b9db0bfcb",
+      "source_sha256": "53f303c946c301b50ed42a71c43a9380b9cdb1acd1e9446cdf72ddf8a47844ac"
+    },
+    "Openmath.Erdos643Design.NormalizedPencil": {
+      "log": "final-NormalizedPencil.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "b9a4b76f59d8954bdcb186f5fbd505fd08be91ad81a0d4f8f4faba42150986d4",
+      "source_sha256": "d3eb4c36afb99bff3a9ca455f04511964f09c0265651c8245fd5f84f6c2978d2"
+    },
+    "Openmath.Erdos643Design.Prime281": {
+      "log": "final-Prime281.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "b9de573eb71d64ff367476bafc7b894801d884ac7aa7c13965b1a50a27d1382a",
+      "source_sha256": "ad77c6e432f8e018b2564449e024a57050e12930657527460d07d001d9b2b75a"
+    },
+    "Openmath.Erdos643Design.Prime41": {
+      "log": "final-Prime41.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "7a4ab631d1504c13b46d76106dcdf228b040d0ab16c6c966b03fd496ec9a7f01",
+      "source_sha256": "8c4a2e3687d2192423a0420900119a85342300212cf4f8c841068e2556cba65c"
+    },
+    "Openmath.Erdos643Design.Prime61": {
+      "log": "final-Prime61.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "3e55208d18ef624b3d2ffef21861a51497ad4b289fe1460a52734f66ee2242c5",
+      "source_sha256": "80186ad6b06878e0aa1c6dc39fd981a19f0ca272245c1d682d3ac7a89853a5e4"
+    },
+    "Openmath.Erdos643Design.ProjectivePlaneDesign": {
+      "log": "final-ProjectivePlaneDesign.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "9281138cbc3023f6b8645942ab8e6db305e415e242968d5434934f6fa7758733",
+      "source_sha256": "248c7518cb1eb0d15a2b29d16d1796a39b28f17bf7abc58e0b11031858a6468f"
+    },
+    "Openmath.Erdos643Design.RelativeDifferenceFamilyDesign": {
+      "log": "final-RelativeDifferenceFamilyDesign.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "1fa3093b66292d0f240d27b2d279b251ba3006a20bc6480026940d4f13068014",
+      "source_sha256": "87715d479389953539519f2f48c128b8b64aa4963f4004df799c4ca5279d29b3"
+    },
+    "Openmath.Erdos643Design.SharedBlockFill": {
+      "log": "final-SharedBlockFill.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "ad8688f642bc1880367d7501b80ed6aea19eb44c33f3d384ba9f99e06aa58852",
+      "source_sha256": "92d504f0223e933b092eeda474bdcd45ee50228dace748bfc480f1d5bad529c6"
+    },
+    "Openmath.Erdos643Design.SharedGroupCompletion": {
+      "log": "final-SharedGroupCompletion.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "7bb3705745446d93311d5e2c7c7fb8e3f9c38bfb7338045c9d57dd064f2ed1b1",
+      "source_sha256": "ca6c3551971f618edfb39aaa3af6fd3a009d9998fd5d694efce435bd790784bc"
+    },
+    "Openmath.Erdos643Design.SharedPointFill": {
+      "log": "final-SharedPointFill.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "25e48bf8043f535609b58a8947073eaaebd075a8320382dc001b831cd50370dc",
+      "source_sha256": "7cf80b3b6e9590987954f911ac27afe148080284a305d9d61d405dd55cb34e18"
+    },
+    "Openmath.Erdos643Design.TD21": {
+      "log": "final-TD21.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "571ae748fbe437e00997b64334aee74245a27be24587d698f5de2b9f4f8016ab",
+      "source_sha256": "9a81dbf5dbb81bf3ed3558024c03d012283a2b37a747cbeb9251019a44615214"
+    },
+    "Openmath.Erdos643Design.TD60": {
+      "log": "final-TD60.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "6ad72278f7d03d8dff1f2ff121aa63ad27a24cfb7c72719cead41a0cfb3c0e33",
+      "source_sha256": "5983b18a8b342369f80554f7f1c04c2c74f9acafe17ecf4a80e4b4e060aa77d3"
+    },
+    "Openmath.Erdos643Design.TD84": {
+      "log": "final-TD84.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "32088fcb07411158ff0b197c8b0cf2341d693a16677c5d7827bde0c1f2485f8e",
+      "source_sha256": "a60cf37919efa1b465c9d5eaba000c50ed887f5571f78352e4e0c32c015e4a55"
+    },
+    "Openmath.Erdos643Design.TDCompositeSeeds": {
+      "log": "final-TDCompositeSeeds.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "6018ad45fe6bec701dfb499bb25ad3a83e66aafe06d2bdf7c656aaba29cf03b0",
+      "source_sha256": "c52ec432adf57a877459f7068ea69864177dbb6d5083b3eda003972880420715"
+    },
+    "Openmath.Erdos643Design.TransversalCoprime": {
+      "log": "final-TransversalCoprime.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "6275f9de72bb2df213fba9ebec672b8ab174093a9d907f01923a3828ce89aca9",
+      "source_sha256": "955c16158bb8786a77e80579346a001f9328fafac8bd91e456e8db0700e250e0"
+    },
+    "Openmath.Erdos643Design.TransversalField": {
+      "log": "final-TransversalField.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "0837abb47375811fe92aaf57886f2e162650ba62e4240c34e883a24ac17d6ba5",
+      "source_sha256": "5a27a7b3de3ccba77ff13be4cfd1955d5a66eeefc716b5aa501d1f990017f6de"
+    },
+    "Openmath.Erdos643Design.TransversalFoundation": {
+      "log": "final-TransversalFoundation.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "dcc6266227ded37376c0b9abc568285130663c60ef167f0e28580297590987a8",
+      "source_sha256": "fd0785a5acb89cbefcf4e942e589a5149d65c98b87ab22618de77a2d88beec05"
+    },
+    "Openmath.Erdos643Design.TransversalProducts": {
+      "log": "final-TransversalProducts.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "cb60fa1597c6125aecb687e15295a660806a38042f335f8de3f64ae5bfb5f5f5",
+      "source_sha256": "5470955321505cbf4fd9d07a0f761c51ea09b1d9c116cbbbc12204962613952d"
+    },
+    "Openmath.Erdos643Design.TransversalSymbols": {
+      "log": "final-TransversalSymbols.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "01e3893c9339511b5ed3c06713314dfeaa8e7259af4db5850dbd6ee54a57acf1",
+      "source_sha256": "640f7b5615cc4aad1664174d39eb4ea2cd70a3cd3e38553d8a2641bbaed18042"
+    },
+    "Openmath.Erdos643Design.TruncatedTransversal": {
+      "log": "final-TruncatedTransversal.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "d5b1569391fe5fbacce0b2990b27c93adb75b39b011d48611b7a52c7eb501c3e",
+      "source_sha256": "dd1375b85aae3c4e8ca3ebb0af818d57322786e7ba97e6413f328f09ee44715c"
+    },
+    "Openmath.Erdos643Design.UniformPartitionCoordinates": {
+      "log": "final-UniformPartitionCoordinates.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "1f61f5f8bac141601d7bd3b88060431a7de8c178d3d8dd39b8df51e6894510f6",
+      "source_sha256": "f892095a5f2dbc4424096bbdb12d08ce781ff265969cec5d48e74edb7464f2c5"
+    },
+    "Openmath.Erdos643Design.WeightedPairwiseConstruction": {
+      "log": "final-WeightedPairwiseConstruction.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "e447a81d7802dff4395b36fbff077b358e5eceb7c4f8bd76e321995d2e8198ab",
+      "source_sha256": "9f5573acad8881d58fae4e3665561a90fc4bd4d3458ce894683228bb11e342f8"
+    },
+    "Openmath.Erdos643R3.AnchorActivity": {
+      "log": "final-AnchorActivity.build.log",
+      "log_sha256": "9b1b3f8cab2dd33c9bfce1201aa194691fb97a2ecb585bbe1d8d8b69308963ad",
+      "olean_sha256": "3513d562eb29cdc8aa106ec4c30df695f1ef1e63e2558edbdcb535f2ac3b1ebf",
+      "source_sha256": "2528f9df730a165c981c1dacebff63ba9170f7f5dd76ad48490c35b58dad1693"
+    },
+    "Openmath.Erdos643R3.AnchorApexAdapter": {
+      "log": "final-AnchorApexAdapter.build.log",
+      "log_sha256": "45566f8df81647e08408581112afb34627729beed7e67c1914412ac89cb491f0",
+      "olean_sha256": "5b541eac6827941775aae8649aaaf7a98cea949be880b4e8ea2cf47a180f22dc",
+      "source_sha256": "40f7065e9523c649f620061a66bc3c166fcd2f4c5859bd95d577dc6c646a0e4a"
+    },
+    "Openmath.Erdos643R3.AnchorAssemblyArith": {
+      "log": "final-AnchorAssemblyArith.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "a03393a97e1c30b0a3f68e7df88e30a094b37bf068c05352225b724d00220cd8",
+      "source_sha256": "29153e8c130d27d43599becee64ba6a5c1446ce73bab1c559e24bc0173395ce3"
+    },
+    "Openmath.Erdos643R3.AnchorCaps": {
+      "log": "final-AnchorCaps.build.log",
+      "log_sha256": "5048fcf050f893a8b40441fa3419ba43d3584c1f4c59bd40e74d0f08a57b7d5a",
+      "olean_sha256": "3236a5576cd3e132c8ac5f6a37f194592c29c9af6349b2dda167eb558587093e",
+      "source_sha256": "4ca4d77f7c6ffb0df5a2c40ba2e469668e307336911eb0397d651c0b031bbacb"
+    },
+    "Openmath.Erdos643R3.AnchorComplete": {
+      "log": "final-AnchorComplete.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "5f3124d0412dd155d914c503f840ad010a0dcadf5ac1123e38de8e373f641f77",
+      "source_sha256": "91da84fdf2394e8181f807b5dcc3d2d14466268f1989b7bd31e6efa23eff38a9"
+    },
+    "Openmath.Erdos643R3.AnchorDecomposition": {
+      "log": "final-AnchorDecomposition.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "2e7b2d8699f85793dae13b61d1a5c0e49b723c9aa07c43e0bec060dfbe0c91d5",
+      "source_sha256": "c02a573f06c0d3350dbbf6a58e6210aba1f954fd1e3643bd68629b4494ed1228"
+    },
+    "Openmath.Erdos643R3.AnchorHostAdapter": {
+      "log": "final-AnchorHostAdapter.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "597df95bf98915779e4f64ca832d64bfc9b9b01c8eea3d55f350c8a3b73816f3",
+      "source_sha256": "1ea92f76a45c5648a482519ae37396d598f56a80f88c2cd7f6d4d9ec215fa50c"
+    },
+    "Openmath.Erdos643R3.AnchorMargin": {
+      "log": "final-AnchorMargin.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "6c11321671b17cc42ce7be4e0f64a03b5c731344e85cdc9c04cc3ca82ef939ae",
+      "source_sha256": "60c168ea66cac1df593eac71bd539fec80cdd0fffda9cbd576103e9357053fc1"
+    },
+    "Openmath.Erdos643R3.AnchorNoType2": {
+      "log": "final-AnchorNoType2.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "42df9b5ab7ae70306a079f3134aa23b4770ad81b76217030a1c5f58aed7a8546",
+      "source_sha256": "a0a2c5e203465743bffc478d542b0481a535ff6f43eb8a34617f7334884f1900"
+    },
+    "Openmath.Erdos643R3.AnchorS3": {
+      "log": "final-AnchorS3.build.log",
+      "log_sha256": "dfbfd918f377f348458aff923f6dbbed06211c9ec1fa55122bed005099fc3152",
+      "olean_sha256": "18454b9e9bc36b16366af8adcaa185fd4189b92bed7a1650494ada4f7fa5d6b1",
+      "source_sha256": "aa0f072137fc3d2fffef5705baaeb8794d030249f44b30a1930abeebbda091ec"
+    },
+    "Openmath.Erdos643R3.AnchorShare": {
+      "log": "final-AnchorShare.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "f3d02a42b89b4106180abdcc96a9655fdfe9915a10a0414d8113a304f6729f0e",
+      "source_sha256": "eb46c531a376bf6185837fa230a9a33a70e78e04ef89b30de61e7c0796cb49f3"
+    },
+    "Openmath.Erdos643R3.AnchorSide": {
+      "log": "final-AnchorSide.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "39a8af2089c424c58929a4fbcdc92555b0f0a947f01fa0d812dfff2cfec81b95",
+      "source_sha256": "30b1edd7bc74291538be8051dc0b823af63faaa3510844e0217efa8cd4ac519f"
+    },
+    "Openmath.Erdos643R3.AnchorT1": {
+      "log": "final-AnchorT1.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "af6111264e1a7b4167a430fa36956c6b5e9f651b7d410884905a0a887500a6d6",
+      "source_sha256": "7993fbca870859151d671fa2d7675ec34c77c80bfd6dd5554758bfbcc45262ea"
+    },
+    "Openmath.Erdos643R3.AnchorViewSwap": {
+      "log": "final-AnchorViewSwap.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "4942a0a4adb4096c3b602fb0cfdb4d4d9283ad497af4400aeb4052a7592691fe",
+      "source_sha256": "d2ce001f05c029a55355dcd878005b0d91b191e89ced423f13bce5862ef8176c"
+    },
+    "Openmath.Erdos643R3.AnchorW": {
+      "log": "final-AnchorW.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "c6187b40ac944d61a4c4353df54ba4c6172c0c59cba77b9a73c671ef8b5f4c48",
+      "source_sha256": "2f2d16c4edb6a7ca8922338404a2560774a37d85056b42408f9ee97e5f3e89b7"
+    },
+    "Openmath.Erdos643R3.BothLight": {
+      "log": "final-BothLight.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "68e0f8747e4a1a4102330c30df5a374c244ebaeeeaf49ef381d8143fa35d8957",
+      "source_sha256": "e2332de732908e689a4d4dc157bb6815b24f7dd3da4fae270e9efa0380b37615"
+    },
+    "Openmath.Erdos643R3.CPrime": {
+      "log": "final-CPrime.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "40bfb2df0369043c2e1b9b1824d1bf1f364dc0791ef04c7942e07c5d1c12d344",
+      "source_sha256": "1f2b6fc8ae3b5b1af90b24f4b9b76b648755e77c404f8fc97a243d664bf2becb"
+    },
+    "Openmath.Erdos643R3.CPrimeMain": {
+      "log": "final-CPrimeMain.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "87a30debe8d481e2ed9b683a77d7ca1df39f8677ba552eb2af66ed8421fd5901",
+      "source_sha256": "859ca7366ab864d82446bb31fac9a734d20a14de9668c4e5164eaeee46886d39"
+    },
+    "Openmath.Erdos643R3.CoefficientOne": {
+      "log": "final-CoefficientOne.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "bfc2801082259056d5097f09266eaf2e7b61e67b809ca3860543e5d48318f569",
+      "source_sha256": "ba3669fc73a5f11413904c33de1f55e3d5393ecd0c6d3c3dfc13e8a377921874"
+    },
+    "Openmath.Erdos643R3.CoefficientOneAssembly": {
+      "log": "final-CoefficientOneAssembly.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "2d041a1bb6a80b0575956d4b550badcf492ed997c0f7b2779c053d03a9c436ad",
+      "source_sha256": "f71c8f94ab19dd432d49e387d1e468c4f50d1911c10aaf2aa467c09825bbb37b"
+    },
+    "Openmath.Erdos643R3.CoefficientOneFinal": {
+      "log": "final-CoefficientOneFinal.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "7e54a94aa00adaa26a8f342e8a1314925607138462080fc31f7c875dc72aaa85",
+      "source_sha256": "ed13920afae546297a8df8fd8356e072e6707b58f7c44b0952373d0463424b72"
+    },
+    "Openmath.Erdos643R3.CoefficientOneFullSolution": {
+      "log": "final-CoefficientOneFullSolution.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "fd3ccdde12c1ad882889555f82ceffd059403f6daaa624ea668d048cc34728d8",
+      "source_sha256": "96b88b707d8133f969ed27aa46e91230c0cb7765bd1d3cf9ef12d10fe10654bf"
+    },
+    "Openmath.Erdos643R3.CoefficientOneHanani": {
+      "log": "final-CoefficientOneHanani.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "e18a268ade1a4795ccdcf5d23610e4c7d7f0a0cc614c7a94abafd52d8aa7f9b0",
+      "source_sha256": "dc663ed728bbea9b426519adf6ea3dee51ff52bbbcc8d7be581a937a11d9cc84"
+    },
+    "Openmath.Erdos643R3.CoefficientOneUpstream": {
+      "log": "final-CoefficientOneUpstream.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "3099c80f805a1f4465d0eef40804412952058e512639c0fd80ffbc09a5bbe8e4",
+      "source_sha256": "b899914f74899e93a94edd80d9f1d3a4ede006965f1839e02dbb605ce81beae6"
+    },
+    "Openmath.Erdos643R3.DesignBaseOrders": {
+      "log": "final-DesignBaseOrders.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "cceba065fa539b9babe9eafdc81fe49dcf1e9969f8d72569d34275021df927ca",
+      "source_sha256": "c0921817866377c805bb35f12e7b187b19c25fb5a94213b908585c27339046a0"
+    },
+    "Openmath.Erdos643R3.DesignConstruction": {
+      "log": "final-DesignConstruction.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "d15ac47c2f9b6f6aba692198f7136189b4a812e6bb0ad3bb2b2bdfa9c8891c5c",
+      "source_sha256": "bfed8d2f62853bec3af949070648294016a5e783e4ad6606035f4c373faf42a3"
+    },
+    "Openmath.Erdos643R3.FCBridge": {
+      "log": "final-FCBridge.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "7c46183b1bc78fa0f1db33f771df174f24ff1e4056b290390e07d61201875180",
+      "source_sha256": "932cdc85b83579c5ff3365aaec9a807dcda0a9286c19c740d64b84d6e3d9aa4a"
+    },
+    "Openmath.Erdos643R3.G1Arith": {
+      "log": "final-G1Arith.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "3be5b858aa16c0893114af11549b7575fe6903447122b6c1e82f33e5278537b2",
+      "source_sha256": "b8f674f1942745fa6b64bc8cf640f48d1ddb197114518f553bf5eb03f676df23"
+    },
+    "Openmath.Erdos643R3.G1Bicone": {
+      "log": "final-G1Bicone.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "13872fa4c733f811467fb68b1306d83346ce3d7777d4e24a5431fd496793c578",
+      "source_sha256": "cc3e183906dcd6d1be3d7b28d2f0ac24fbf28f065dda94a12dc55f857f7eb3a6"
+    },
+    "Openmath.Erdos643R3.G1BiconeAdapter": {
+      "log": "final-G1BiconeAdapter.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "2ef448cddf134d8d6eb8c50eaa3e6b820ed0c9626dbafa81bff234dea6495858",
+      "source_sha256": "195284d15fae0b373ee23f361fba37dc3d9b6ef49f9131a04ef74dea2e3e13f4"
+    },
+    "Openmath.Erdos643R3.G1C1": {
+      "log": "final-G1C1.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "3d794dbe763642bef06ae7a5094e739bdb6059472b28976281c2a90c3c20c969",
+      "source_sha256": "a2cdeb5a20a7a603aefb8924d6cc8d2a727ac5ceb882f45c09040aa03b017f20"
+    },
+    "Openmath.Erdos643R3.G1C2": {
+      "log": "final-G1C2.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "6fe8bb8b5610e9b4d8ca00123c3dc54e39b7091b470610dd68dc046ed7691efe",
+      "source_sha256": "ed4c2cf8c8eb945226ceaa1584486fffb4010c54ae8330bf31ff03bed0cb8c02"
+    },
+    "Openmath.Erdos643R3.G1Check": {
+      "log": "final-G1Check.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "6276d65b1df3586de99c598cb105c6113d049ffdfaad272646d8efeacd4ad063",
+      "source_sha256": "cf8a6954315689544b4a2864a72f23ce54ce2dbd37769099d0338afe18627f90"
+    },
+    "Openmath.Erdos643R3.G1Check2": {
+      "log": "final-G1Check2.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "ed37ffc3ba470a88e8d25ad56c0e10c53ef0e1030e52e74fc48166ba6b9174c3",
+      "source_sha256": "1613938a83bc8c926da0cdedd6fd830f5ce2bea80e4f6c164961bbcae893041a"
+    },
+    "Openmath.Erdos643R3.G1Combinatorics": {
+      "log": "final-G1Combinatorics.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "558e866f9d98991cd6a235f8b3cdeeed58de448bcd08b181276078e621e65bc7",
+      "source_sha256": "81fa3bbbf8a4f5551f438b3b06874f3d2d88a20771827da9ba55864e80705446"
+    },
+    "Openmath.Erdos643R3.G1Main": {
+      "log": "final-G1Main.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "4c30d3260fc490d2bacca0f3c95c1437d090c86d6e19c763b0cc4db4c52c4ee8",
+      "source_sha256": "b2bb6850aa596888d735b23d23af17da5440e48cd24af145f568f269f276c464"
+    },
+    "Openmath.Erdos643R3.G1Threshold": {
+      "log": "final-G1Threshold.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "949ec6a4614a29e1b9e751c47f630454a2b5e0c6f683ca30e3d286af343a9965",
+      "source_sha256": "d1e1974ce7d75747bdcabee7fe69627df9a770ce4086b1cfff1fd507f2662420"
+    },
+    "Openmath.Erdos643R3.G3Interface": {
+      "log": "final-G3Interface.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "a672bb063001dc3be1750ffba36ca5bc98a0e7bf53eed9cb1ee539ae4ba4f648",
+      "source_sha256": "fa665affedc0af23158b9e3a3713939d9a8876333838dd9eefb5ba965e119385"
+    },
+    "Openmath.Erdos643R3.G3hpArith": {
+      "log": "final-G3hpArith.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "f5ca32c619d9697d8243cb89053029dcf2747d44e2338e85e73fd4a1e0242d47",
+      "source_sha256": "0b7a34c48ef6ee1e03f431bc969f1853c401eca3af7d81a91f229f017d03e34a"
+    },
+    "Openmath.Erdos643R3.GeneralizedPsi": {
+      "log": "final-GeneralizedPsi.build.log",
+      "log_sha256": "1f4b5654e5f61f48002d8972119bf7ef577a1daef4c81304b31bcdb7ec5ea6d0",
+      "olean_sha256": "8c5a387f00eed9e0dd614df861ce7aea76455eb67470b62ff103a8632576ba00",
+      "source_sha256": "5a499c230eff476e860f94f566bb4f718e0b3e24d61a77825b5d78fd5a5b050e"
+    },
+    "Openmath.Erdos643R3.HostPsi": {
+      "log": "final-HostPsi.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "e9be149595049f12bc746315becb06403b97b11fb03d01f0718ea757461f9753",
+      "source_sha256": "4b834aebc6843ac0a651345819bf56f17b6029917aed1fd2db3c9a426ca959e6"
+    },
+    "Openmath.Erdos643R3.HypergraphBasics": {
+      "log": "final-HypergraphBasics.build.log",
+      "log_sha256": "a31145112a254b66948122ae99616c68ebb093368e52a905fb81e38fcf960a79",
+      "olean_sha256": "aa44d02e6606fc056393b9d3ab2e37394cbc6f58023895c2c968c3e303a9a84c",
+      "source_sha256": "bb5c59fb53d56a61a18fe3b844631267495e11567d6e4096586161adc3f6f78b"
+    },
+    "Openmath.Erdos643R3.Identity": {
+      "log": "final-Identity.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "eb12a3a8ec6163e94829d10ce43b82f34f4a3d99eab18daa4c33c11391db1068",
+      "source_sha256": "bca03cbd48661b7e6236d9f6bc1cd18dbc3cadc3411363b6d27837e8d4902040"
+    },
+    "Openmath.Erdos643R3.L1Top": {
+      "log": "final-L1Top.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "6080c2727832da8b32072f38ebae992b81376a2a7d51f144e7f325c627819a17",
+      "source_sha256": "789d9218a41a98e39d6512d19d811f5f2978e611650fdbc59ad88412a5fe2429"
+    },
+    "Openmath.Erdos643R3.Lemma1g": {
+      "log": "final-Lemma1g.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "635f06ac8a360dd81a0a2b7ad87dd48c2fc55515ecc6aa2b5417516d4ff2cc53",
+      "source_sha256": "37687d8a96db315a6df5c94fc06c335b8ddb904c609e7ac9b2df70dc9af5c99b"
+    },
+    "Openmath.Erdos643R3.Lemma3": {
+      "log": "final-Lemma3.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "33aa445d226321d3cd0b63696b61ea8e4c710ebca8f827b62c54b3f90b7beb43",
+      "source_sha256": "e9fb9faad28b670ee373cbc045c0e65f88bb0492a0d055db8e76d1d91824fa4f"
+    },
+    "Openmath.Erdos643R3.PsiLoss": {
+      "log": "final-PsiLoss.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "f1f9bb9bf7e512171b9f8ae8d06f24b1ef8de7dcb74bb49d76b4cb6d7abc64ac",
+      "source_sha256": "452f22a32eec64bca694accfea45a0d7b09a0fe854ba627ab0f8a78b049b8049"
+    },
+    "Openmath.Erdos643R3.PublicSmallOrders": {
+      "log": "final-PublicSmallOrders.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "bf46e0888557c800e2227328da756487761d5b6f2ba80de0e5eedb363479e49d",
+      "source_sha256": "e38b39f178a16e840ab0a854de95fae09a575ab57788d92bdac3cf8779abe0e7"
+    },
+    "Openmath.Erdos643R3.Pw2312": {
+      "log": "final-Pw2312.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "b7b12fea78c4bfe625ac011f539bfafa4b2504165e1b1ed79dddf98b6bf50733",
+      "source_sha256": "3997962e0c5574264a6acd91bb04f9b776699bb3e23023d00501a097b9b65e03"
+    },
+    "Openmath.Erdos643R3.Pw2312Defs": {
+      "log": "final-Pw2312Defs.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "a710c7ae3d1836a2ed9927bb440fede9a748cab3b5650504f9a1f37255795d53",
+      "source_sha256": "7afd000c4cfc91af4e73cffdd1c3dba1cb0cc64c4285601dfddca041b270ce6f"
+    },
+    "Openmath.Erdos643R3.PwArith": {
+      "log": "final-PwArith.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "fceb125205e10ace6124928fcd5975c128fd2d7e6b38f1fb7acedc22c3aa9479",
+      "source_sha256": "de8289601d0b0756c7689f3284a38b25ad8d1d4ec7bfe14463a70d7db5a34a36"
+    },
+    "Openmath.Erdos643R3.PwC1": {
+      "log": "final-PwC1.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "43eae4124a252a28a035ca3a3dd543703260c328620dfff18552b50707f779ad",
+      "source_sha256": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40"
+    },
+    "Openmath.Erdos643R3.PwC2": {
+      "log": "final-PwC2.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "0c48e6b356d0737290707abd31b6e5139ac71b757036a9c992115d835cf47d61",
+      "source_sha256": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b"
+    },
+    "Openmath.Erdos643R3.PwCheck": {
+      "log": "final-PwCheck.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "91aee2fac258d7b7de16f719b8e9e0304c7a647a723cf298fae7fd834e498805",
+      "source_sha256": "9e5e6a139540f260ead06763c3d4f59a3fe524c1aaa5b5c14460e1f514c51840"
+    },
+    "Openmath.Erdos643R3.RedistArith": {
+      "log": "final-RedistArith.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "0d62d11515bcd62c78d2969a9f626480a1641dbdc716bc56289fd8751443f3c0",
+      "source_sha256": "6cbe833af49da8e7b4ad56c3af08d6a1ad82fe61bd25e213b7ded31dd625f821"
+    },
+    "Openmath.Erdos643R3.Redistribution": {
+      "log": "final-Redistribution.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "52169a0b44b7d04f01094622687e97e40675189315ecc62c63a024286d9450f0",
+      "source_sha256": "f9931fdc84f06b232e39705bd55d548d0f7595cad9a5f77c6650b433327d2d8e"
+    },
+    "Openmath.Erdos643R3.SlotModel": {
+      "log": "final-SlotModel.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "34803cb051446822e699f03784d918a1aa916366e51ea87cfc7308674dac7485",
+      "source_sha256": "5ee80811894919ffdfb550032479565e6ce08c1ec3ddbac70cca10fff08dbd37"
+    },
+    "Openmath.Erdos643R3.StarAsymptotic": {
+      "log": "final-StarAsymptotic.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "c5e28bf61706d811531c3df68299990c8c6c2a5dede15853e1ec2f05950408df",
+      "source_sha256": "7bd516e75bac24166ee090be58144df3d6165cd44bf8433dfaf8ae06995f5133"
+    },
+    "Openmath.Erdos643R3.StarMatching": {
+      "log": "final-StarMatching.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "cd94ee6928d6f8fe8c02858a5b2439a8ad367b2e00e368574a2ba286cf0551ec",
+      "source_sha256": "50ae5362c436a41fa7d9aa2509b648dc9a9846327b688ffd0051b170d388ca6e"
+    },
+    "Openmath.Erdos643R3.StarMatchingBase": {
+      "log": "final-StarMatchingBase.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "057dc221e56d13324372a17e43a5c82f0267b8a5b019fa6e5bc3435a7acf5345",
+      "source_sha256": "5b93f401a71cc3c13e21474cecb9cd2cca995c016d8a9f1fd9adb7947f7570b5"
+    },
+    "Openmath.Erdos643R3.USideArith": {
+      "log": "final-USideArith.build.log",
+      "log_sha256": "18f9df5bb80176e5e08ee37b36c2dcceeab1289427c9bec5f5fd33972734a38c",
+      "olean_sha256": "a77e958d0fb730f911fc807cbbe12d62387f3ad10fc6c762e1b480c6b1642331",
+      "source_sha256": "bfbed79e664c7c9dda5600ea46a228c5d48d817405eff373ed3605733d1d02e5"
+    },
+    "Openmath.Erdos643R3.WBeta": {
+      "log": "final-WBeta.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "ac6e57a2a14ed9bd8d2ed31b2d89b3b41139401fc5cb3c7b1ba2378fbc1c0914",
+      "source_sha256": "ec3ea59c3b39aa4476ff0b83a26961c7319d1be7dbf8a46ed3c6386223f6ce33"
+    },
+    "Openmath.Erdos643R3.WBox": {
+      "log": "final-WBox.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "0e4ce02aa5e57247d95a6d52fa2bdc196d7f2d88df96dc2655e82c3e6bad22f2",
+      "source_sha256": "c6cebdf64e2acbd8f1133d4db9bcd312a9e62896afcadfa3163d22836f2896f5"
+    },
+    "Openmath.Erdos643R3.WCost": {
+      "log": "final-WCost.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "3e8c98eefbd56773e113653732e261e52f7ca63c9b6432474f202f2487b67fc2",
+      "source_sha256": "c76ad36d93c5a5a2d26681fcf5442eceb99cd448230fe2ce1b1bc43f8c957b9e"
+    },
+    "Openmath.Erdos643R3.WUnbounded": {
+      "log": "final-WUnbounded.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "ab6417eda768955afdff8cb8573c2fffa7b6de92e6167b6e48025640a2f04d11",
+      "source_sha256": "0893fb1772cb358e7cf6aa08ed08b116871ba6bda1552a695f5d0b00b7f65ed5"
+    },
+    "Openmath.Erdos643R3.Weighting": {
+      "log": "final-Weighting.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "f97b1f4e5a1518c4f6647db248bb19d24d803a198eab4a4db35c47d5dfbb4562",
+      "source_sha256": "43325fb040fccdc9e1816c74495bdb8a9ecce7138c1d2cf7f5cd092cafa576b1"
+    },
+    "Openmath.Erdos643R3.WeightingAuxArith": {
+      "log": "final-WeightingAuxArith.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "76bab081d351d1e406faaccb2c1e8655dd31eb7782ce3d39565c26f5ebc9b021",
+      "source_sha256": "56758c214f93d5fffb2fb719b8999a8aa9a560aa5e189abc4b4a6360a7da5903"
+    },
+    "Openmath.Erdos643R3.WeightingBound": {
+      "log": "final-WeightingBound.build.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "175af6e60890c9179de3f4a84b2698b9f768e71c0593eda5a60252a7db049c31",
+      "source_sha256": "bb71453ebe330db111dbfae021fa69bd14b98a6a00886c9bb0d9d8871bb7e8b7"
+    }
+  },
+  "checker": "isolated-phased-check.sh",
+  "full_coefficient_one_verified": true,
+  "full_design_existence_verified": true,
+  "hygiene_sha256": "76ec2b97eda56cceac5f5a203e379f03dec34d8ac2f275385cf3ea63b430cc0a",
+  "input_hashes": {
+    "COPYING": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "LICENSE.upstream": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE-DESIGN.md": "263bc2ed70e629f4f3f7605a002a247801e97addaa182d1fcda104d077c73606",
+    "check.sh": "ae5e48945c37630f97dc21c106be35d3b83d1a4eb5895669e5a1e3925ed24295",
+    "design-scope.json": "f734a293310c8ea3d4c31c23dda92c07afaf350546e84f4713efdae73beb9d9b",
+    "design-source-provenance.json": "55c6b866a92460f396ddf8a9d1f6fea14cef97c6588773ed166506efc2480d5f",
+    "lake-manifest.json": "89a851909558bb64930b33c8c2910fb00741cbfc71a4cda26040a52dbb01b8d4",
+    "lakefile.toml": "5f516c9154a7c9e5e187d457f54f21eb3acd908ad4126c1941161cf892d49cb3",
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+    "licenses/Sage-COPYING.txt": "c7fe308343eafd6ca2926eaa9ddb430098d7267cb87b30a5c3e328f6b3d56ac8",
+    "new-source-manifest.json": "efd5190fa8c4d682c51aa54f1fe129d638090eff0ea5b7f51d09f2cc653a8bb2",
+    "pins/package-oleans.sha256": "9eea9d64f6e59644b05db636ddd54c245a577025402a6a480479e572ad00923f",
+    "pins/toolchain.sha256": "8f854cadf5aef553f7849542f9825b5625d3d122fe84bc50cd5322a938a7b64f",
+    "source-manifest.json": "b8481b788050b9a578a4501540a80e8c398fb537249417ff271e4f787ae84ab8",
+    "standalone/lake-manifest.json": "89a851909558bb64930b33c8c2910fb00741cbfc71a4cda26040a52dbb01b8d4",
+    "tools/Hygiene.lean": "b659b25a5f8d3458faaccef092e1b20e6c321de4edc0a6a0d4a50f379a4fa606",
+    "tools/bounded_process.py": "16c6e07788d92a16ad8fc0d5ee2a0ca60508f223a322e5bf0ac0fc38bc41a13b",
+    "tools/design_scope.py": "edccb5a217d1788d569aef6e78aaa714319672a399ee735c95dea5a942f1b32a",
+    "tools/olean_pins.py": "16f59a5011b568698e4cac56f46854ac0f821b430144afff1999ab6a5187a05e",
+    "tools/run_phase.py": "581b4c065d40dbd3b02ff89fbbaa97ce985bc97650069e95f4313f6da2e381a2",
+    "tools/runtime.py": "16c1ee311719d411aa89a70e85b21873ce66f04215da75d5cb4ebac45adca171",
+    "tools/srcscan.py": "21d14ab7db622e9aff9b4a8ea196ecfaa8450c20db16573787765e919323fbe1",
+    "tools/test_failure_control.py": "c751adf4368435d0c7c80f37e907d0f98a195d95991f445700298aa20d5c62e7",
+    "tools/toolchain_pins.py": "45612d561fd53559bf2a79938f057e4369a17177e1de8d4915ed2bbb2e7f7ab9",
+    "tools/verify_endpoint.py": "5dc4a28922cfd7cc84320995feadb7d020961ebe1226ff5ddc39f6b9c0909bd6",
+    "tools/verify_final_phased.py": "0de5797c88cf3025b13b7395c2c1f22b3654b311089d28f25124afe5b1124cdf",
+    "upstream-source-manifest.json": "98b3372aa738a716146197a118c39280256043e602ae8d6b2d4932f9ada2b20f"
+  },
+  "kernel_replays": {
+    "0": {
+      "log": "final.kernel.0.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.HananiArithmetic"
+      ]
+    },
+    "1": {
+      "log": "final.kernel.1.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "FormalConjecturesForMathlib.Combinatorics.Hypergraph.Basic"
+      ]
+    },
+    "10": {
+      "log": "final.kernel.10.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.SharedPointFill"
+      ]
+    },
+    "100": {
+      "log": "final.kernel.100.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.G1BiconeAdapter"
+      ]
+    },
+    "101": {
+      "log": "final.kernel.101.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.AnchorActivity"
+      ]
+    },
+    "102": {
+      "log": "final.kernel.102.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.AnchorMargin"
+      ]
+    },
+    "103": {
+      "log": "final.kernel.103.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.AnchorHostAdapter"
+      ]
+    },
+    "104": {
+      "log": "final.kernel.104.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.AnchorShare"
+      ]
+    },
+    "105": {
+      "log": "final.kernel.105.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.RedistArith"
+      ]
+    },
+    "106": {
+      "log": "final.kernel.106.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.Redistribution"
+      ]
+    },
+    "107": {
+      "log": "final.kernel.107.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.BothLight"
+      ]
+    },
+    "108": {
+      "log": "final.kernel.108.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.CPrime"
+      ]
+    },
+    "109": {
+      "log": "final.kernel.109.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.AnchorApexAdapter"
+      ]
+    },
+    "11": {
+      "log": "final.kernel.11.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.SharedGroupCompletion"
+      ]
+    },
+    "110": {
+      "log": "final.kernel.110.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.AnchorComplete"
+      ]
+    },
+    "111": {
+      "log": "final.kernel.111.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.CPrimeMain"
+      ]
+    },
+    "112": {
+      "log": "final.kernel.112.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.CoefficientOne"
+      ]
+    },
+    "113": {
+      "log": "final.kernel.113.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.CoefficientOneAssembly"
+      ]
+    },
+    "114": {
+      "log": "final.kernel.114.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.CoefficientOneUpstream"
+      ]
+    },
+    "115": {
+      "log": "final.kernel.115.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.StarAsymptotic"
+      ]
+    },
+    "116": {
+      "log": "final.kernel.116.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.StarMatchingBase"
+      ]
+    },
+    "117": {
+      "log": "final.kernel.117.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.StarMatching"
+      ]
+    },
+    "118": {
+      "log": "final.kernel.118.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.DesignConstruction"
+      ]
+    },
+    "119": {
+      "log": "final.kernel.119.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.CoefficientOneFinal"
+      ]
+    },
+    "12": {
+      "log": "final.kernel.12.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.WeightedPairwiseConstruction"
+      ]
+    },
+    "120": {
+      "log": "final.kernel.120.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.DesignBaseOrders"
+      ]
+    },
+    "121": {
+      "log": "final.kernel.121.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.FCBridge"
+      ]
+    },
+    "122": {
+      "log": "final.kernel.122.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.G3Interface"
+      ]
+    },
+    "123": {
+      "log": "final.kernel.123.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.PublicSmallOrders"
+      ]
+    },
+    "124": {
+      "log": "final.kernel.124.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.CoefficientOneHanani"
+      ]
+    },
+    "125": {
+      "log": "final.kernel.125.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.CoefficientOneFullSolution"
+      ]
+    },
+    "13": {
+      "log": "final.kernel.13.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.TransversalSymbols"
+      ]
+    },
+    "14": {
+      "log": "final.kernel.14.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.TransversalProducts"
+      ]
+    },
+    "15": {
+      "log": "final.kernel.15.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.TransversalField"
+      ]
+    },
+    "16": {
+      "log": "final.kernel.16.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.TransversalCoprime"
+      ]
+    },
+    "17": {
+      "log": "final.kernel.17.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.HananiAssembly"
+      ]
+    },
+    "18": {
+      "log": "final.kernel.18.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.ProjectivePlaneDesign"
+      ]
+    },
+    "19": {
+      "log": "final.kernel.19.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.DesignSeed21"
+      ]
+    },
+    "2": {
+      "log": "final.kernel.2.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "FormalConjecturesForMathlib.Combinatorics.SetFamily.PropertyB"
+      ]
+    },
+    "20": {
+      "log": "final.kernel.20.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.DifferenceFamilyDesign"
+      ]
+    },
+    "21": {
+      "log": "final.kernel.21.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.DifferenceFamilyCertificate"
+      ]
+    },
+    "22": {
+      "log": "final.kernel.22.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.Prime41"
+      ]
+    },
+    "23": {
+      "log": "final.kernel.23.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.DesignPrime41"
+      ]
+    },
+    "24": {
+      "log": "final.kernel.24.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.Prime61"
+      ]
+    },
+    "25": {
+      "log": "final.kernel.25.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.DesignPrime61"
+      ]
+    },
+    "26": {
+      "log": "final.kernel.26.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.Prime281"
+      ]
+    },
+    "27": {
+      "log": "final.kernel.27.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.DesignPrime281"
+      ]
+    },
+    "28": {
+      "log": "final.kernel.28.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.CyclicSeed81"
+      ]
+    },
+    "29": {
+      "log": "final.kernel.29.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.CyclicSeed141"
+      ]
+    },
+    "3": {
+      "log": "final.kernel.3.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "FormalConjecturesForMathlib.Combinatorics.Hypergraph.Finite"
+      ]
+    },
+    "30": {
+      "log": "final.kernel.30.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.CompositeRows"
+      ]
+    },
+    "31": {
+      "log": "final.kernel.31.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.DifferenceMatrix"
+      ]
+    },
+    "32": {
+      "log": "final.kernel.32.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.DifferenceMatrixField"
+      ]
+    },
+    "33": {
+      "log": "final.kernel.33.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.TD60"
+      ]
+    },
+    "34": {
+      "log": "final.kernel.34.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.TD21"
+      ]
+    },
+    "35": {
+      "log": "final.kernel.35.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.TD84"
+      ]
+    },
+    "36": {
+      "log": "final.kernel.36.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.TDCompositeSeeds"
+      ]
+    },
+    "37": {
+      "log": "final.kernel.37.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.CompositeDesigns"
+      ]
+    },
+    "38": {
+      "log": "final.kernel.38.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.RelativeDifferenceFamilyDesign"
+      ]
+    },
+    "39": {
+      "log": "final.kernel.39.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.FieldFamilyCertificate"
+      ]
+    },
+    "4": {
+      "log": "final.kernel.4.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.TransversalFoundation"
+      ]
+    },
+    "40": {
+      "log": "final.kernel.40.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.FieldFamily9"
+      ]
+    },
+    "41": {
+      "log": "final.kernel.41.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.FieldFamily17"
+      ]
+    },
+    "42": {
+      "log": "final.kernel.42.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.CompositeSeedOrders"
+      ]
+    },
+    "43": {
+      "log": "final.kernel.43.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.CompositeSeed401"
+      ]
+    },
+    "44": {
+      "log": "final.kernel.44.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.FieldFamily5"
+      ]
+    },
+    "45": {
+      "log": "final.kernel.45.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.FieldFamily13"
+      ]
+    },
+    "46": {
+      "log": "final.kernel.46.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.FieldFamily25"
+      ]
+    },
+    "47": {
+      "log": "final.kernel.47.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.FieldFamily29"
+      ]
+    },
+    "48": {
+      "log": "final.kernel.48.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.FieldFamily37"
+      ]
+    },
+    "49": {
+      "log": "final.kernel.49.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.FieldFamily41"
+      ]
+    },
+    "5": {
+      "log": "final.kernel.5.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.DesignTransport"
+      ]
+    },
+    "50": {
+      "log": "final.kernel.50.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.FieldFamily61"
+      ]
+    },
+    "51": {
+      "log": "final.kernel.51.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.FieldFamily81"
+      ]
+    },
+    "52": {
+      "log": "final.kernel.52.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.FieldFamily121"
+      ]
+    },
+    "53": {
+      "log": "final.kernel.53.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.FiniteBaseOrders"
+      ]
+    },
+    "54": {
+      "log": "final.kernel.54.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.CyclicSeed161"
+      ]
+    },
+    "55": {
+      "log": "final.kernel.55.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.SharedBlockFill"
+      ]
+    },
+    "56": {
+      "log": "final.kernel.56.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.DesignSeed285"
+      ]
+    },
+    "57": {
+      "log": "final.kernel.57.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.HananiExistence"
+      ]
+    },
+    "58": {
+      "log": "final.kernel.58.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.HypergraphBasics"
+      ]
+    },
+    "59": {
+      "log": "final.kernel.59.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.Identity"
+      ]
+    },
+    "6": {
+      "log": "final.kernel.6.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.TruncatedTransversal"
+      ]
+    },
+    "60": {
+      "log": "final.kernel.60.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.Weighting"
+      ]
+    },
+    "61": {
+      "log": "final.kernel.61.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.WeightingAuxArith"
+      ]
+    },
+    "62": {
+      "log": "final.kernel.62.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.WeightingBound"
+      ]
+    },
+    "63": {
+      "log": "final.kernel.63.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.SlotModel"
+      ]
+    },
+    "64": {
+      "log": "final.kernel.64.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.AnchorCaps"
+      ]
+    },
+    "65": {
+      "log": "final.kernel.65.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.AnchorViewSwap"
+      ]
+    },
+    "66": {
+      "log": "final.kernel.66.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.L1Top"
+      ]
+    },
+    "67": {
+      "log": "final.kernel.67.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.AnchorT1"
+      ]
+    },
+    "68": {
+      "log": "final.kernel.68.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.AnchorS3"
+      ]
+    },
+    "69": {
+      "log": "final.kernel.69.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.WBox"
+      ]
+    },
+    "7": {
+      "log": "final.kernel.7.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.DesignPencil"
+      ]
+    },
+    "70": {
+      "log": "final.kernel.70.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.WUnbounded"
+      ]
+    },
+    "71": {
+      "log": "final.kernel.71.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.G3hpArith"
+      ]
+    },
+    "72": {
+      "log": "final.kernel.72.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.WBeta"
+      ]
+    },
+    "73": {
+      "log": "final.kernel.73.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.WCost"
+      ]
+    },
+    "74": {
+      "log": "final.kernel.74.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.AnchorW"
+      ]
+    },
+    "75": {
+      "log": "final.kernel.75.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.AnchorDecomposition"
+      ]
+    },
+    "76": {
+      "log": "final.kernel.76.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.GeneralizedPsi"
+      ]
+    },
+    "77": {
+      "log": "final.kernel.77.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.PsiLoss"
+      ]
+    },
+    "78": {
+      "log": "final.kernel.78.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.HostPsi"
+      ]
+    },
+    "79": {
+      "log": "final.kernel.79.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.USideArith"
+      ]
+    },
+    "8": {
+      "log": "final.kernel.8.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.UniformPartitionCoordinates"
+      ]
+    },
+    "80": {
+      "log": "final.kernel.80.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.AnchorAssemblyArith"
+      ]
+    },
+    "81": {
+      "log": "final.kernel.81.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.Pw2312Defs"
+      ]
+    },
+    "82": {
+      "log": "final.kernel.82.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.Lemma3"
+      ]
+    },
+    "83": {
+      "log": "final.kernel.83.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.PwArith"
+      ]
+    },
+    "84": {
+      "log": "final.kernel.84.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.PwCheck"
+      ]
+    },
+    "85": {
+      "log": "final.kernel.85.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.PwC1"
+      ]
+    },
+    "86": {
+      "log": "final.kernel.86.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.PwC2"
+      ]
+    },
+    "87": {
+      "log": "final.kernel.87.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.Pw2312"
+      ]
+    },
+    "88": {
+      "log": "final.kernel.88.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.AnchorSide"
+      ]
+    },
+    "89": {
+      "log": "final.kernel.89.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.AnchorNoType2"
+      ]
+    },
+    "9": {
+      "log": "final.kernel.9.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643Design.NormalizedPencil"
+      ]
+    },
+    "90": {
+      "log": "final.kernel.90.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.Lemma1g"
+      ]
+    },
+    "91": {
+      "log": "final.kernel.91.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.G1Arith"
+      ]
+    },
+    "92": {
+      "log": "final.kernel.92.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.G1Combinatorics"
+      ]
+    },
+    "93": {
+      "log": "final.kernel.93.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.G1Bicone"
+      ]
+    },
+    "94": {
+      "log": "final.kernel.94.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.G1Check"
+      ]
+    },
+    "95": {
+      "log": "final.kernel.95.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.G1C1"
+      ]
+    },
+    "96": {
+      "log": "final.kernel.96.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.G1Check2"
+      ]
+    },
+    "97": {
+      "log": "final.kernel.97.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.G1C2"
+      ]
+    },
+    "98": {
+      "log": "final.kernel.98.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.G1Threshold"
+      ]
+    },
+    "99": {
+      "log": "final.kernel.99.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modules": [
+        "Openmath.Erdos643R3.G1Main"
+      ]
+    }
+  },
+  "lean_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "leanchecker_sha256": "9b9a22ecb11e8e5962ddfa09ed547851e599495e7eeb5eba2ee82ccf5ec930a1",
+  "limitations": [
+    "Human mathematical review remains outstanding."
+  ],
+  "order": [
+    "Openmath.Erdos643Design.HananiArithmetic",
+    "FormalConjecturesForMathlib.Combinatorics.Hypergraph.Basic",
+    "FormalConjecturesForMathlib.Combinatorics.SetFamily.PropertyB",
+    "FormalConjecturesForMathlib.Combinatorics.Hypergraph.Finite",
+    "Openmath.Erdos643Design.TransversalFoundation",
+    "Openmath.Erdos643Design.DesignTransport",
+    "Openmath.Erdos643Design.TruncatedTransversal",
+    "Openmath.Erdos643Design.DesignPencil",
+    "Openmath.Erdos643Design.UniformPartitionCoordinates",
+    "Openmath.Erdos643Design.NormalizedPencil",
+    "Openmath.Erdos643Design.SharedPointFill",
+    "Openmath.Erdos643Design.SharedGroupCompletion",
+    "Openmath.Erdos643Design.WeightedPairwiseConstruction",
+    "Openmath.Erdos643Design.TransversalSymbols",
+    "Openmath.Erdos643Design.TransversalProducts",
+    "Openmath.Erdos643Design.TransversalField",
+    "Openmath.Erdos643Design.TransversalCoprime",
+    "Openmath.Erdos643Design.HananiAssembly",
+    "Openmath.Erdos643Design.ProjectivePlaneDesign",
+    "Openmath.Erdos643Design.DesignSeed21",
+    "Openmath.Erdos643Design.DifferenceFamilyDesign",
+    "Openmath.Erdos643Design.DifferenceFamilyCertificate",
+    "Openmath.Erdos643Design.Prime41",
+    "Openmath.Erdos643Design.DesignPrime41",
+    "Openmath.Erdos643Design.Prime61",
+    "Openmath.Erdos643Design.DesignPrime61",
+    "Openmath.Erdos643Design.Prime281",
+    "Openmath.Erdos643Design.DesignPrime281",
+    "Openmath.Erdos643Design.CyclicSeed81",
+    "Openmath.Erdos643Design.CyclicSeed141",
+    "Openmath.Erdos643Design.CompositeRows",
+    "Openmath.Erdos643Design.DifferenceMatrix",
+    "Openmath.Erdos643Design.DifferenceMatrixField",
+    "Openmath.Erdos643Design.TD60",
+    "Openmath.Erdos643Design.TD21",
+    "Openmath.Erdos643Design.TD84",
+    "Openmath.Erdos643Design.TDCompositeSeeds",
+    "Openmath.Erdos643Design.CompositeDesigns",
+    "Openmath.Erdos643Design.RelativeDifferenceFamilyDesign",
+    "Openmath.Erdos643Design.FieldFamilyCertificate",
+    "Openmath.Erdos643Design.FieldFamily9",
+    "Openmath.Erdos643Design.FieldFamily17",
+    "Openmath.Erdos643Design.CompositeSeedOrders",
+    "Openmath.Erdos643Design.CompositeSeed401",
+    "Openmath.Erdos643Design.FieldFamily5",
+    "Openmath.Erdos643Design.FieldFamily13",
+    "Openmath.Erdos643Design.FieldFamily25",
+    "Openmath.Erdos643Design.FieldFamily29",
+    "Openmath.Erdos643Design.FieldFamily37",
+    "Openmath.Erdos643Design.FieldFamily41",
+    "Openmath.Erdos643Design.FieldFamily61",
+    "Openmath.Erdos643Design.FieldFamily81",
+    "Openmath.Erdos643Design.FieldFamily121",
+    "Openmath.Erdos643Design.FiniteBaseOrders",
+    "Openmath.Erdos643Design.CyclicSeed161",
+    "Openmath.Erdos643Design.SharedBlockFill",
+    "Openmath.Erdos643Design.DesignSeed285",
+    "Openmath.Erdos643Design.HananiExistence",
+    "Openmath.Erdos643R3.HypergraphBasics",
+    "Openmath.Erdos643R3.Identity",
+    "Openmath.Erdos643R3.Weighting",
+    "Openmath.Erdos643R3.WeightingAuxArith",
+    "Openmath.Erdos643R3.WeightingBound",
+    "Openmath.Erdos643R3.SlotModel",
+    "Openmath.Erdos643R3.AnchorCaps",
+    "Openmath.Erdos643R3.AnchorViewSwap",
+    "Openmath.Erdos643R3.L1Top",
+    "Openmath.Erdos643R3.AnchorT1",
+    "Openmath.Erdos643R3.AnchorS3",
+    "Openmath.Erdos643R3.WBox",
+    "Openmath.Erdos643R3.WUnbounded",
+    "Openmath.Erdos643R3.G3hpArith",
+    "Openmath.Erdos643R3.WBeta",
+    "Openmath.Erdos643R3.WCost",
+    "Openmath.Erdos643R3.AnchorW",
+    "Openmath.Erdos643R3.AnchorDecomposition",
+    "Openmath.Erdos643R3.GeneralizedPsi",
+    "Openmath.Erdos643R3.PsiLoss",
+    "Openmath.Erdos643R3.HostPsi",
+    "Openmath.Erdos643R3.USideArith",
+    "Openmath.Erdos643R3.AnchorAssemblyArith",
+    "Openmath.Erdos643R3.Pw2312Defs",
+    "Openmath.Erdos643R3.Lemma3",
+    "Openmath.Erdos643R3.PwArith",
+    "Openmath.Erdos643R3.PwCheck",
+    "Openmath.Erdos643R3.PwC1",
+    "Openmath.Erdos643R3.PwC2",
+    "Openmath.Erdos643R3.Pw2312",
+    "Openmath.Erdos643R3.AnchorSide",
+    "Openmath.Erdos643R3.AnchorNoType2",
+    "Openmath.Erdos643R3.Lemma1g",
+    "Openmath.Erdos643R3.G1Arith",
+    "Openmath.Erdos643R3.G1Combinatorics",
+    "Openmath.Erdos643R3.G1Bicone",
+    "Openmath.Erdos643R3.G1Check",
+    "Openmath.Erdos643R3.G1C1",
+    "Openmath.Erdos643R3.G1Check2",
+    "Openmath.Erdos643R3.G1C2",
+    "Openmath.Erdos643R3.G1Threshold",
+    "Openmath.Erdos643R3.G1Main",
+    "Openmath.Erdos643R3.G1BiconeAdapter",
+    "Openmath.Erdos643R3.AnchorActivity",
+    "Openmath.Erdos643R3.AnchorMargin",
+    "Openmath.Erdos643R3.AnchorHostAdapter",
+    "Openmath.Erdos643R3.AnchorShare",
+    "Openmath.Erdos643R3.RedistArith",
+    "Openmath.Erdos643R3.Redistribution",
+    "Openmath.Erdos643R3.BothLight",
+    "Openmath.Erdos643R3.CPrime",
+    "Openmath.Erdos643R3.AnchorApexAdapter",
+    "Openmath.Erdos643R3.AnchorComplete",
+    "Openmath.Erdos643R3.CPrimeMain",
+    "Openmath.Erdos643R3.CoefficientOne",
+    "Openmath.Erdos643R3.CoefficientOneAssembly",
+    "Openmath.Erdos643R3.CoefficientOneUpstream",
+    "Openmath.Erdos643R3.StarAsymptotic",
+    "Openmath.Erdos643R3.StarMatchingBase",
+    "Openmath.Erdos643R3.StarMatching",
+    "Openmath.Erdos643R3.DesignConstruction",
+    "Openmath.Erdos643R3.CoefficientOneFinal",
+    "Openmath.Erdos643R3.DesignBaseOrders",
+    "Openmath.Erdos643R3.FCBridge",
+    "Openmath.Erdos643R3.G3Interface",
+    "Openmath.Erdos643R3.PublicSmallOrders",
+    "Openmath.Erdos643R3.CoefficientOneHanani",
+    "Openmath.Erdos643R3.CoefficientOneFullSolution"
+  ],
+  "package_pin_post_sha256": "bdfabf4e624ac5057b9aa217f70aad97a6428f9321a79e3f6c93a0e54a3e3641",
+  "package_pin_pre_sha256": "bdfabf4e624ac5057b9aa217f70aad97a6428f9321a79e3f6c93a0e54a3e3641",
+  "package_revisions": {
+    "Cli": "6130a47896ce867c6a4a55373441e59e565bad0f",
+    "LeanSearchClient": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+    "Qq": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+    "aesop": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+    "batteries": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+    "importGraph": "16f02aa7642864af59f1ff0e384a015994db9118",
+    "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "plausible": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
+  },
+  "result": "PASS_FULL_COEFFICIENT_ONE_AND_DESIGN",
+  "source_hashes": {
+    "FormalConjecturesForMathlib/Combinatorics/Hypergraph/Basic.lean": "b1719a6665154f31d14d7999cbe034ebf2942728d3b52b3f7f5b92cc20422e62",
+    "FormalConjecturesForMathlib/Combinatorics/Hypergraph/Finite.lean": "0823fba654c8fd849c821338e6624aefac6935a92836523dde9eb6524874949a",
+    "FormalConjecturesForMathlib/Combinatorics/SetFamily/PropertyB.lean": "318833034fd920b3cef2f0e466621de34660c92ee7f593156011c21b6b342934",
+    "Openmath/Erdos643Design/CompositeDesigns.lean": "26a2c3d24f896134ca43fd9925c13e412c10b3969d51f5c190a82d6512e3fffd",
+    "Openmath/Erdos643Design/CompositeRows.lean": "4a2fd72ba7bb00966875f3584cb4bab07d032fbc343974f38ff3c4cc8257b283",
+    "Openmath/Erdos643Design/CompositeSeed401.lean": "4d7ff116e538fe152aab2d76b1d5a54ff4beb7f1b8b1b9f5b0eb0e06ade104ef",
+    "Openmath/Erdos643Design/CompositeSeedOrders.lean": "8f583ec9efef1f8dbeba15dc00f0e4d5245c6b7d67c9c0a5fb49344bdb269084",
+    "Openmath/Erdos643Design/CyclicSeed141.lean": "736e67684b5e86d36943ac8e54009ba7135849ecaa92366decb67c3672ca1e5b",
+    "Openmath/Erdos643Design/CyclicSeed161.lean": "4378db0bdef98d7c476d0797b0e34f4219b1721982a53e16a1488f39954a4c55",
+    "Openmath/Erdos643Design/CyclicSeed81.lean": "3d51fd29879381e2d9e78d1c13bd258eaf2a6cd6cdb4e81d1a1fb70882941a24",
+    "Openmath/Erdos643Design/DesignPencil.lean": "9f27a16de24e5d9cb35e89731da9514f9ca7b3d418834818dbf08c41fcd401a6",
+    "Openmath/Erdos643Design/DesignPrime281.lean": "f0a34eb7c6c77c7366791fc33524752b6a9507e156fe054b2c40699270fe07f9",
+    "Openmath/Erdos643Design/DesignPrime41.lean": "11aad6b29695fce3f9e1418a40c9975a39e7cee3566bd03de6698eca0a9ca068",
+    "Openmath/Erdos643Design/DesignPrime61.lean": "c08c613e3a661032070e1b47a9d0903ac4092e7ab32d0cce75fd693c740433ba",
+    "Openmath/Erdos643Design/DesignSeed21.lean": "edb05020f9f8cf6f54f2cbd723a1de8db12757738bd16d3bd7793df8834ac592",
+    "Openmath/Erdos643Design/DesignSeed285.lean": "f26b2fb24e96d2e588be2384b8ad60a4119c1e4139767b6149d451a7ae653686",
+    "Openmath/Erdos643Design/DesignTransport.lean": "28a6bf494b274d3f614dc4ee293af1b9b4fae8ba0a66d6f106dc7fe655566271",
+    "Openmath/Erdos643Design/DifferenceFamilyCertificate.lean": "4827461e49acc77fc3ad2c2e080d876cf5ea7884629745326d19739b7fd177d3",
+    "Openmath/Erdos643Design/DifferenceFamilyDesign.lean": "877fab61742b91b7dadcd53be944c77704a91443984e66113befcf64ae9dcc55",
+    "Openmath/Erdos643Design/DifferenceMatrix.lean": "20d9d83d656f100bad61dfa9c9453a67db8f02ae20873cba31b5cf05222dff8f",
+    "Openmath/Erdos643Design/DifferenceMatrixField.lean": "53f9c80969bd3a2e78cd0908179c79f2747d8cd54c3767ed02245046e8c88a61",
+    "Openmath/Erdos643Design/FieldFamily121.lean": "516cdaf2d99ecf46d03bfa7fb6e039c0a2dcb3d03766685ddf89c90d464a381e",
+    "Openmath/Erdos643Design/FieldFamily13.lean": "d4192d6b799de9c3304c78d14d32622baf1ea38ec032b417dab7d174b136f0a8",
+    "Openmath/Erdos643Design/FieldFamily17.lean": "570efd9546e777ca13f5c749fe01e88f318fa1c9a58fec35cba8cce4fb475b1b",
+    "Openmath/Erdos643Design/FieldFamily25.lean": "b879e4bb11bfc19190403ea0b258d9d8edf1504690b54a477e8025335c9e86b4",
+    "Openmath/Erdos643Design/FieldFamily29.lean": "ef7a02028c7371e018a7c9758628971edfb2e44cb26054db329c2e38d9e38176",
+    "Openmath/Erdos643Design/FieldFamily37.lean": "3a8ce6928d0ac59790a9ae8475aefbb225db712195d58717cf83ed5c9ba2f949",
+    "Openmath/Erdos643Design/FieldFamily41.lean": "e927039763804e69f2c64f0a3e50989393814dc4461abc10d0771080f5ef7746",
+    "Openmath/Erdos643Design/FieldFamily5.lean": "cd5d563c24aa66a08619656c350f1835620ab80ce8ad7590dca4555526892752",
+    "Openmath/Erdos643Design/FieldFamily61.lean": "640095f885eef90fb66f43f956d019d3ada3ddb7ded5b98e8c02e6208cf1fd1b",
+    "Openmath/Erdos643Design/FieldFamily81.lean": "d0d96b4829bf95f0d387449114da630c159deee00dcae0818c087db60108f7c0",
+    "Openmath/Erdos643Design/FieldFamily9.lean": "6c7e6d478c8dae92fff6e03e5bd5594f3c73b19e6b6766d32ba4074a0f6c7a1a",
+    "Openmath/Erdos643Design/FieldFamilyCertificate.lean": "42366aa3f3160a6acbf78cee414a84ba8ca2203ee9b2be101fc5f01e208d943a",
+    "Openmath/Erdos643Design/FiniteBaseOrders.lean": "394a1a500ad5f8b8f186ca55d53aa0b050e24af922c8bab326f8d3c48fdb8433",
+    "Openmath/Erdos643Design/HananiArithmetic.lean": "cc63b2db043b2d11026efb7a195c4ba4b3d472f3c5eeff90a893d725e9d77c26",
+    "Openmath/Erdos643Design/HananiAssembly.lean": "c6f3f3cf0ab5f2fe5d53a53c6203adf633ce25570a1121a87836c3efc42f5171",
+    "Openmath/Erdos643Design/HananiExistence.lean": "53f303c946c301b50ed42a71c43a9380b9cdb1acd1e9446cdf72ddf8a47844ac",
+    "Openmath/Erdos643Design/NormalizedPencil.lean": "d3eb4c36afb99bff3a9ca455f04511964f09c0265651c8245fd5f84f6c2978d2",
+    "Openmath/Erdos643Design/Prime281.lean": "ad77c6e432f8e018b2564449e024a57050e12930657527460d07d001d9b2b75a",
+    "Openmath/Erdos643Design/Prime41.lean": "8c4a2e3687d2192423a0420900119a85342300212cf4f8c841068e2556cba65c",
+    "Openmath/Erdos643Design/Prime61.lean": "80186ad6b06878e0aa1c6dc39fd981a19f0ca272245c1d682d3ac7a89853a5e4",
+    "Openmath/Erdos643Design/ProjectivePlaneDesign.lean": "248c7518cb1eb0d15a2b29d16d1796a39b28f17bf7abc58e0b11031858a6468f",
+    "Openmath/Erdos643Design/RelativeDifferenceFamilyDesign.lean": "87715d479389953539519f2f48c128b8b64aa4963f4004df799c4ca5279d29b3",
+    "Openmath/Erdos643Design/SharedBlockFill.lean": "92d504f0223e933b092eeda474bdcd45ee50228dace748bfc480f1d5bad529c6",
+    "Openmath/Erdos643Design/SharedGroupCompletion.lean": "ca6c3551971f618edfb39aaa3af6fd3a009d9998fd5d694efce435bd790784bc",
+    "Openmath/Erdos643Design/SharedPointFill.lean": "7cf80b3b6e9590987954f911ac27afe148080284a305d9d61d405dd55cb34e18",
+    "Openmath/Erdos643Design/TD21.lean": "9a81dbf5dbb81bf3ed3558024c03d012283a2b37a747cbeb9251019a44615214",
+    "Openmath/Erdos643Design/TD60.lean": "5983b18a8b342369f80554f7f1c04c2c74f9acafe17ecf4a80e4b4e060aa77d3",
+    "Openmath/Erdos643Design/TD84.lean": "a60cf37919efa1b465c9d5eaba000c50ed887f5571f78352e4e0c32c015e4a55",
+    "Openmath/Erdos643Design/TDCompositeSeeds.lean": "c52ec432adf57a877459f7068ea69864177dbb6d5083b3eda003972880420715",
+    "Openmath/Erdos643Design/TransversalCoprime.lean": "955c16158bb8786a77e80579346a001f9328fafac8bd91e456e8db0700e250e0",
+    "Openmath/Erdos643Design/TransversalField.lean": "5a27a7b3de3ccba77ff13be4cfd1955d5a66eeefc716b5aa501d1f990017f6de",
+    "Openmath/Erdos643Design/TransversalFoundation.lean": "fd0785a5acb89cbefcf4e942e589a5149d65c98b87ab22618de77a2d88beec05",
+    "Openmath/Erdos643Design/TransversalProducts.lean": "5470955321505cbf4fd9d07a0f761c51ea09b1d9c116cbbbc12204962613952d",
+    "Openmath/Erdos643Design/TransversalSymbols.lean": "640f7b5615cc4aad1664174d39eb4ea2cd70a3cd3e38553d8a2641bbaed18042",
+    "Openmath/Erdos643Design/TruncatedTransversal.lean": "dd1375b85aae3c4e8ca3ebb0af818d57322786e7ba97e6413f328f09ee44715c",
+    "Openmath/Erdos643Design/UniformPartitionCoordinates.lean": "f892095a5f2dbc4424096bbdb12d08ce781ff265969cec5d48e74edb7464f2c5",
+    "Openmath/Erdos643Design/WeightedPairwiseConstruction.lean": "9f5573acad8881d58fae4e3665561a90fc4bd4d3458ce894683228bb11e342f8",
+    "Openmath/Erdos643R3/AnchorActivity.lean": "2528f9df730a165c981c1dacebff63ba9170f7f5dd76ad48490c35b58dad1693",
+    "Openmath/Erdos643R3/AnchorApexAdapter.lean": "40f7065e9523c649f620061a66bc3c166fcd2f4c5859bd95d577dc6c646a0e4a",
+    "Openmath/Erdos643R3/AnchorAssemblyArith.lean": "29153e8c130d27d43599becee64ba6a5c1446ce73bab1c559e24bc0173395ce3",
+    "Openmath/Erdos643R3/AnchorCaps.lean": "4ca4d77f7c6ffb0df5a2c40ba2e469668e307336911eb0397d651c0b031bbacb",
+    "Openmath/Erdos643R3/AnchorComplete.lean": "91da84fdf2394e8181f807b5dcc3d2d14466268f1989b7bd31e6efa23eff38a9",
+    "Openmath/Erdos643R3/AnchorDecomposition.lean": "c02a573f06c0d3350dbbf6a58e6210aba1f954fd1e3643bd68629b4494ed1228",
+    "Openmath/Erdos643R3/AnchorHostAdapter.lean": "1ea92f76a45c5648a482519ae37396d598f56a80f88c2cd7f6d4d9ec215fa50c",
+    "Openmath/Erdos643R3/AnchorMargin.lean": "60c168ea66cac1df593eac71bd539fec80cdd0fffda9cbd576103e9357053fc1",
+    "Openmath/Erdos643R3/AnchorNoType2.lean": "a0a2c5e203465743bffc478d542b0481a535ff6f43eb8a34617f7334884f1900",
+    "Openmath/Erdos643R3/AnchorS3.lean": "aa0f072137fc3d2fffef5705baaeb8794d030249f44b30a1930abeebbda091ec",
+    "Openmath/Erdos643R3/AnchorShare.lean": "eb46c531a376bf6185837fa230a9a33a70e78e04ef89b30de61e7c0796cb49f3",
+    "Openmath/Erdos643R3/AnchorSide.lean": "30b1edd7bc74291538be8051dc0b823af63faaa3510844e0217efa8cd4ac519f",
+    "Openmath/Erdos643R3/AnchorT1.lean": "7993fbca870859151d671fa2d7675ec34c77c80bfd6dd5554758bfbcc45262ea",
+    "Openmath/Erdos643R3/AnchorViewSwap.lean": "d2ce001f05c029a55355dcd878005b0d91b191e89ced423f13bce5862ef8176c",
+    "Openmath/Erdos643R3/AnchorW.lean": "2f2d16c4edb6a7ca8922338404a2560774a37d85056b42408f9ee97e5f3e89b7",
+    "Openmath/Erdos643R3/BothLight.lean": "e2332de732908e689a4d4dc157bb6815b24f7dd3da4fae270e9efa0380b37615",
+    "Openmath/Erdos643R3/CPrime.lean": "1f2b6fc8ae3b5b1af90b24f4b9b76b648755e77c404f8fc97a243d664bf2becb",
+    "Openmath/Erdos643R3/CPrimeMain.lean": "859ca7366ab864d82446bb31fac9a734d20a14de9668c4e5164eaeee46886d39",
+    "Openmath/Erdos643R3/CoefficientOne.lean": "ba3669fc73a5f11413904c33de1f55e3d5393ecd0c6d3c3dfc13e8a377921874",
+    "Openmath/Erdos643R3/CoefficientOneAssembly.lean": "f71c8f94ab19dd432d49e387d1e468c4f50d1911c10aaf2aa467c09825bbb37b",
+    "Openmath/Erdos643R3/CoefficientOneFinal.lean": "ed13920afae546297a8df8fd8356e072e6707b58f7c44b0952373d0463424b72",
+    "Openmath/Erdos643R3/CoefficientOneFullSolution.lean": "96b88b707d8133f969ed27aa46e91230c0cb7765bd1d3cf9ef12d10fe10654bf",
+    "Openmath/Erdos643R3/CoefficientOneHanani.lean": "dc663ed728bbea9b426519adf6ea3dee51ff52bbbcc8d7be581a937a11d9cc84",
+    "Openmath/Erdos643R3/CoefficientOneUpstream.lean": "b899914f74899e93a94edd80d9f1d3a4ede006965f1839e02dbb605ce81beae6",
+    "Openmath/Erdos643R3/DesignBaseOrders.lean": "c0921817866377c805bb35f12e7b187b19c25fb5a94213b908585c27339046a0",
+    "Openmath/Erdos643R3/DesignConstruction.lean": "bfed8d2f62853bec3af949070648294016a5e783e4ad6606035f4c373faf42a3",
+    "Openmath/Erdos643R3/FCBridge.lean": "932cdc85b83579c5ff3365aaec9a807dcda0a9286c19c740d64b84d6e3d9aa4a",
+    "Openmath/Erdos643R3/G1Arith.lean": "b8f674f1942745fa6b64bc8cf640f48d1ddb197114518f553bf5eb03f676df23",
+    "Openmath/Erdos643R3/G1Bicone.lean": "cc3e183906dcd6d1be3d7b28d2f0ac24fbf28f065dda94a12dc55f857f7eb3a6",
+    "Openmath/Erdos643R3/G1BiconeAdapter.lean": "195284d15fae0b373ee23f361fba37dc3d9b6ef49f9131a04ef74dea2e3e13f4",
+    "Openmath/Erdos643R3/G1C1.lean": "a2cdeb5a20a7a603aefb8924d6cc8d2a727ac5ceb882f45c09040aa03b017f20",
+    "Openmath/Erdos643R3/G1C2.lean": "ed4c2cf8c8eb945226ceaa1584486fffb4010c54ae8330bf31ff03bed0cb8c02",
+    "Openmath/Erdos643R3/G1Check.lean": "cf8a6954315689544b4a2864a72f23ce54ce2dbd37769099d0338afe18627f90",
+    "Openmath/Erdos643R3/G1Check2.lean": "1613938a83bc8c926da0cdedd6fd830f5ce2bea80e4f6c164961bbcae893041a",
+    "Openmath/Erdos643R3/G1Combinatorics.lean": "81fa3bbbf8a4f5551f438b3b06874f3d2d88a20771827da9ba55864e80705446",
+    "Openmath/Erdos643R3/G1Main.lean": "b2bb6850aa596888d735b23d23af17da5440e48cd24af145f568f269f276c464",
+    "Openmath/Erdos643R3/G1Threshold.lean": "d1e1974ce7d75747bdcabee7fe69627df9a770ce4086b1cfff1fd507f2662420",
+    "Openmath/Erdos643R3/G3Interface.lean": "fa665affedc0af23158b9e3a3713939d9a8876333838dd9eefb5ba965e119385",
+    "Openmath/Erdos643R3/G3hpArith.lean": "0b7a34c48ef6ee1e03f431bc969f1853c401eca3af7d81a91f229f017d03e34a",
+    "Openmath/Erdos643R3/GeneralizedPsi.lean": "5a499c230eff476e860f94f566bb4f718e0b3e24d61a77825b5d78fd5a5b050e",
+    "Openmath/Erdos643R3/HostPsi.lean": "4b834aebc6843ac0a651345819bf56f17b6029917aed1fd2db3c9a426ca959e6",
+    "Openmath/Erdos643R3/HypergraphBasics.lean": "bb5c59fb53d56a61a18fe3b844631267495e11567d6e4096586161adc3f6f78b",
+    "Openmath/Erdos643R3/Identity.lean": "bca03cbd48661b7e6236d9f6bc1cd18dbc3cadc3411363b6d27837e8d4902040",
+    "Openmath/Erdos643R3/L1Top.lean": "789d9218a41a98e39d6512d19d811f5f2978e611650fdbc59ad88412a5fe2429",
+    "Openmath/Erdos643R3/Lemma1g.lean": "37687d8a96db315a6df5c94fc06c335b8ddb904c609e7ac9b2df70dc9af5c99b",
+    "Openmath/Erdos643R3/Lemma3.lean": "e9fb9faad28b670ee373cbc045c0e65f88bb0492a0d055db8e76d1d91824fa4f",
+    "Openmath/Erdos643R3/PsiLoss.lean": "452f22a32eec64bca694accfea45a0d7b09a0fe854ba627ab0f8a78b049b8049",
+    "Openmath/Erdos643R3/PublicSmallOrders.lean": "e38b39f178a16e840ab0a854de95fae09a575ab57788d92bdac3cf8779abe0e7",
+    "Openmath/Erdos643R3/Pw2312.lean": "3997962e0c5574264a6acd91bb04f9b776699bb3e23023d00501a097b9b65e03",
+    "Openmath/Erdos643R3/Pw2312Defs.lean": "7afd000c4cfc91af4e73cffdd1c3dba1cb0cc64c4285601dfddca041b270ce6f",
+    "Openmath/Erdos643R3/PwArith.lean": "de8289601d0b0756c7689f3284a38b25ad8d1d4ec7bfe14463a70d7db5a34a36",
+    "Openmath/Erdos643R3/PwC1.lean": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+    "Openmath/Erdos643R3/PwC2.lean": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+    "Openmath/Erdos643R3/PwCheck.lean": "9e5e6a139540f260ead06763c3d4f59a3fe524c1aaa5b5c14460e1f514c51840",
+    "Openmath/Erdos643R3/RedistArith.lean": "6cbe833af49da8e7b4ad56c3af08d6a1ad82fe61bd25e213b7ded31dd625f821",
+    "Openmath/Erdos643R3/Redistribution.lean": "f9931fdc84f06b232e39705bd55d548d0f7595cad9a5f77c6650b433327d2d8e",
+    "Openmath/Erdos643R3/SlotModel.lean": "5ee80811894919ffdfb550032479565e6ce08c1ec3ddbac70cca10fff08dbd37",
+    "Openmath/Erdos643R3/StarAsymptotic.lean": "7bd516e75bac24166ee090be58144df3d6165cd44bf8433dfaf8ae06995f5133",
+    "Openmath/Erdos643R3/StarMatching.lean": "50ae5362c436a41fa7d9aa2509b648dc9a9846327b688ffd0051b170d388ca6e",
+    "Openmath/Erdos643R3/StarMatchingBase.lean": "5b93f401a71cc3c13e21474cecb9cd2cca995c016d8a9f1fd9adb7947f7570b5",
+    "Openmath/Erdos643R3/USideArith.lean": "bfbed79e664c7c9dda5600ea46a228c5d48d817405eff373ed3605733d1d02e5",
+    "Openmath/Erdos643R3/WBeta.lean": "ec3ea59c3b39aa4476ff0b83a26961c7319d1be7dbf8a46ed3c6386223f6ce33",
+    "Openmath/Erdos643R3/WBox.lean": "c6cebdf64e2acbd8f1133d4db9bcd312a9e62896afcadfa3163d22836f2896f5",
+    "Openmath/Erdos643R3/WCost.lean": "c76ad36d93c5a5a2d26681fcf5442eceb99cd448230fe2ce1b1bc43f8c957b9e",
+    "Openmath/Erdos643R3/WUnbounded.lean": "0893fb1772cb358e7cf6aa08ed08b116871ba6bda1552a695f5d0b00b7f65ed5",
+    "Openmath/Erdos643R3/Weighting.lean": "43325fb040fccdc9e1816c74495bdb8a9ecce7138c1d2cf7f5cd092cafa576b1",
+    "Openmath/Erdos643R3/WeightingAuxArith.lean": "56758c214f93d5fffb2fb719b8999a8aa9a560aa5e189abc4b4a6360a7da5903",
+    "Openmath/Erdos643R3/WeightingBound.lean": "bb71453ebe330db111dbfae021fa69bd14b98a6a00886c9bb0d9d8871bb7e8b7"
+  },
+  "source_scan_sha256": "163118a9e915af4796b5cc6df92c6fea1391dd47c796fde6f2fc1dc0d4046924",
+  "state_sha256": "20194fb60820ecb51aa9d6747d527ddf70ec83958d3298e654f26365882e5ad0",
+  "target": "Openmath.Erdos643R3.CoefficientOneFullSolution",
+  "timestamp_utc": "2026-10-20T04:39:10.838697+00:00",
+  "toolchain_pin_post_sha256": "a0c926e1c8f815f71eba333f1f12f4cf50409c69849751b96ba16adc041d76a2",
+  "toolchain_pin_pre_sha256": "a0c926e1c8f815f71eba333f1f12f4cf50409c69849751b96ba16adc041d76a2",
+  "unproved_inputs": []
+}

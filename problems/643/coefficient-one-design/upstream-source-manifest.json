@@ -1,0 +1,10 @@
+{
+  "files": {
+    "FormalConjecturesForMathlib/Combinatorics/Hypergraph/Basic.lean": "b1719a6665154f31d14d7999cbe034ebf2942728d3b52b3f7f5b92cc20422e62",
+    "FormalConjecturesForMathlib/Combinatorics/Hypergraph/Finite.lean": "0823fba654c8fd849c821338e6624aefac6935a92836523dde9eb6524874949a",
+    "FormalConjecturesForMathlib/Combinatorics/SetFamily/PropertyB.lean": "318833034fd920b3cef2f0e466621de34660c92ee7f593156011c21b6b342934"
+  },
+  "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "upstream_commit": "95b199bfbc08f7b1183196bab59ed3b08f27c2c9",
+  "upstream_repository": "google-deepmind/formal-conjectures"
+}

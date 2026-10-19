@@ -1,8 +1,7 @@
 cff-version: 1.2.0
-message: "Unpublished AI-developed formal proof. Cite the exact source snapshot and retain the review and priority limits."
+message: "Cite the exact source snapshot. The coefficient-one, t=3 asymptotic, general design-existence and residue-class equality declarations are Lean-verified; human mathematical review remains outstanding. Historical partial-result evidence has separate statement and source identities. Retain the verification and priority limits. The collection defaults to Apache-2.0, subject to package-specific exceptions. The combined design proof package is GPL-3.0-only; individual Apache-origin source notices remain intact. See ../../NOTICE, coefficient-one-design/COPYING and coefficient-one-design/NOTICE-DESIGN.md."
 title: "Erdős #643: Generalized four-cycles in 3-uniform hypergraphs"
 authors:
   - family-names: Huynh
     given-names: Robert
 repository-code: "https://github.com/roberthuynh/erdos"
-license: Apache-2.0

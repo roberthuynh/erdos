@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "scope": "Three explicit finite hosts and bounded negative controls only",
+  "command": [
+    "timeout",
+    "240",
+    "python3",
+    "-I",
+    "<EXAMPLES_PATH>/check_examples.py"
+  ],
+  "exitcode": 0,
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "dependencies": "Python standard library only",
+  "source_sha256": {
+    "check_examples.py": "a16e75cfa7c13722440015b2b8888dd0f7fb9c47ac4e683e138745df05d28cd4",
+    "generate_examples.py": "01790fa9d5318581921af0378be42de00ef34c0f96a625b90d4eb20ce540afc6"
+  },
+  "result_sha256": "24698a184f0b8f197355e6c9b14a67d01f42b1abfc8e5db7d5d84e525a7a0913",
+  "host_sha256": {
+    "cone3-host.json": "810010b021f4456fb14f112cb323dc9d9f8dd0e70f7313ac982fe99fa896d5c7",
+    "cone4-host.json": "62aa14c9ac3c5d63d47d89c3a33066762f03ec7579f24ebce70bdadabce1e55e",
+    "da2-host.json": "f9b1471d5033f0180064104815a349441db9b1cef17e3735a995b7bcbfd04fa0"
+  }
+}

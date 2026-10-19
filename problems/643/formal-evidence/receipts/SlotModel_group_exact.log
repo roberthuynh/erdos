@@ -1,0 +1,16 @@
+== lean -o Openmath.Erdos643R3.HypergraphBasics (leanprover/lean4:v4.33.1)
+Openmath/Erdos643R3/HypergraphBasics.lean:43:0: warning: automatically included section variable(s) unused in theorem `Erdos643.HypergraphBasics.uniform_nonempty`:
+Openmath/Erdos643R3/HypergraphBasics.lean:47:0: warning: automatically included section variable(s) unused in theorem `Erdos643.HypergraphBasics.disjoint_ne_of_uniform`:
+Openmath/Erdos643R3/HypergraphBasics.lean:99:19: warning: Variable name `hxP` is not explicitly referenced.
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+Openmath/Erdos643R3/HypergraphBasics.lean:100:19: warning: Variable name `hyQ` is not explicitly referenced.
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+== lean -o Openmath.Erdos643R3.Identity (leanprover/lean4:v4.33.1)
+== lean -o Openmath.Erdos643R3.Weighting (leanprover/lean4:v4.33.1)
+== lean -o Openmath.Erdos643R3.WeightingAuxArith (leanprover/lean4:v4.33.1)
+== lean -o Openmath.Erdos643R3.WeightingBound (leanprover/lean4:v4.33.1)
+== lean -o Openmath.Erdos643R3.SlotModel (leanprover/lean4:v4.33.1)
+== sorry/native_decide in Openmath/Erdos643R3/SlotModel.lean, comments ignored: 0
+== axioms
+'Erdos643R3.SlotModel.group_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=224fd2eff3cce476bdad55c1ad3835cdeb7c0808175ecded175203ce7c0c3cee

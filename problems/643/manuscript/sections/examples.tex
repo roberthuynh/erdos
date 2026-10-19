@@ -1,0 +1,45 @@
+\section{Exact equality examples and a tight local branch}
+\label{app:examples}
+Let $B$ have three vertices and let $X$ be a disjoint set of $k\ge1$ vertices. Put $\operatorname{cone}_k=\{P\cup\{x\}:P\in\binom B2,x\in X\}$. Its common links are stars for base-base pairs, triangles for apex-apex pairs, and empty for mixed pairs, so it is avoiding. Direct counting gives
+\[
+ |H|=3k,\quad |\partial H|=3+3k,\quad |\CL(H)|=3+\binom k2,
+ \quad\Phi(H)=-\frac{(k-3)(k-4)}2.
+\]
+Each triple has one pair of codegree $k$, two of codegree two, two base-base options of common-link size $k$, and $k-1$ apex-apex options of size three. Hence
+\[
+ \sigma=1+\frac1k,\quad\tau=\frac1k+\frac{k-1}{6},\quad
+ c=-1+\frac2k+\frac{k-1}{6}.
+\]
+For $k=3,4$, every charge and $\Phi$ are zero. These equality examples are not unions of $K_5$ blocks. Equality in the shadow--co-link bound does not assert equality in the weaker edge bound.
+
+More generally, join two triples when they share a pair and call the connected components pair-components. Different components have disjoint shadows. A co-link pair $xy$ also belongs to only one component: each witness pair $P$ joins $xP$ to $yP$, and two witness pairs intersect by avoidance, joining their $x$-triples through a shared pair. Thus edges, shadow pairs and co-link pairs partition over pair-components, and $\Phi$ is additive over them. This observation supplies combinations of tight components without asserting an exhaustive classification.
+
+\paragraph{An explicit deficient host attaining Lemma W.}
+Take seven singleton vertices $a,b,c,w,t,r,z$ and four disjoint sets $X,Z,E,Y$ of sizes $9,26,19,17$, all mutually disjoint. A pattern such as $bXZ$ denotes every triple with one vertex from each indicated class. Take exactly
+\[
+\begin{gathered}
+abc,acw,abt,atw,btw,bcw,bcr,brz,crz,cwz,bwz,abz,\\
+abX,bXw,bcZ,bXZ,abE,bEr,bEZ,bzZ,bwY,bYZ.
+\end{gathered}
+\]
+This gives 1,307 triples on 78 vertices. Exact checks by common links and by disjoint-pair union collisions verify avoidance. For the bicone with apexes $c,t$ and base $a,b,w$, set $x=c,y=t,u=b,v=a$. The anchor is $A=bcw$, with
+\[
+c(abc)=-\frac{409}{755160},\quad c(acw)=\frac12,\quad
+c(A)=\frac{367}{1566},\quad\act(A)=2.
+\]
+The active bicones containing $A$ have apex pairs $\{c,t\}$ and $\{w,r\}$. The slot groups are
+\[
+\mathcal A=\{t,z\}\cup X\cup Y,\quad\mathcal B=\{a,z\},\quad
+\mathcal C=\{a,r\}\cup Z.
+\]
+In $\mathcal B$, with degree coordinates ordered as $(R_w,R_x)$, $a$ has relation degrees $(1,0)$ and $z$ has degrees $(0,1)$; $r$ is the unique type-2 slot of $\mathcal C$. Thus
+\[
+(n_B,n_C,m,m')=(1,0,1,0),\quad W^-=\frac7{12},\quad
+X_{\rm cost}=\frac5{12},\quad H_w=\frac1{12}=\tau_W.
+\]
+Here $X_{\rm cost}$ is the cost sum called $X$ in subdivision 8.1, not the vertex class. The local Lemma W bound has no slack. Nevertheless, with $D=409/755160$ and $k_{uw}=29$,
+\[
+\frac{c(A)}{\act(A)}-D=\frac{792709}{6796440}>0,\qquad
+c(A)-\act(A)D-\frac1{k_{uw}}=\frac{675529}{3398220}>0.
+\]
+This realizes the local equality coordinate with deficiency, not global equality or a proof of the universal anchor lemma. No limiting-rate assertion is inferred from this finite host.

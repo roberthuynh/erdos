@@ -1,0 +1,54 @@
+\subsection*{3. Triples without a triangle option}
+\addcontentsline{toc}{subsection}{3. Triples without a triangle option}
+\subsubsection*{3.1 Theorem A}
+\paragraph{Theorem A.} If $H$ is avoiding and $T\in H$ has no option with triangular common link, then $\sigma(T)+\tau(T)>2$.
+
+\paragraph{Lemma 3g.} Every feasible profile with $t=0$ satisfies $\Phi_{\rm prof}>2$.
+\begin{proof}
+With $t=0$, $S(p,q,0)=p/(2(1+q))$, including $p=0$. Put
+\[
+ g(p,q)=\frac12\left(\frac p{1+q}+\frac q{1+p}\right).
+\]
+Then
+\[
+ \Phi_{\rm prof}=\sum_{i=0}^2\frac1{1+n_i}
+       +\sum_{i=0}^2g(f_i,g_{i+1}),\qquad n_i=f_i+g_i,
+\]
+and (F) reads $f_i\geq1\iff g_{i+1}\geq1$. We use three inequalities.
+\begin{enumerate}
+\item[(G1)] For integers $p,q\geq0$, $g(p,q)+1/(1+p)\geq1$. Multiplication by $2(1+p)(1+q)$ reduces this to $(p-q)(p-q-1)\geq0$.
+\item[(G2)] $g(p,q)\geq1-\tfrac12(1/(1+p)+1/(1+q))$, by (E3).
+\item[(G3)] For integers $x,y\geq1$,
+\[
+ \frac12\left(\frac1{1+x}+\frac1{1+y}\right)-\frac1{1+x+y}\leq\frac14.
+\]
+Indeed, put $u=1/(1+x)$ and $v=1/(1+y)$, both in $(0,1/2]$. Since $1+x+y\leq(u+v)/(uv)$, the left side is at most
+\[
+ \frac{u+v}{2}-\frac{uv}{u+v}
+ =\frac{u^2+v^2}{2(u+v)}\leq\frac{\max(u,v)}2\leq\frac14.
+\]
+\end{enumerate}
+Let $r$ be the number of nonempty relations, equivalently the number of indices with $f_i\geq1$. We may cyclically rotate their indices.
+
+If $r=0$, all counts vanish and $\Phi_{\rm prof}=3$.
+
+If $r=1$, take $\rho_0$ nonempty. Then $n_0=f_0,n_1=g_1,n_2=0$, and (G1) gives
+\[
+ \Phi_{\rm prof}=\frac1{1+f_0}+\frac1{1+g_1}+1+g(f_0,g_1)
+ \geq2+\frac1{1+g_1}>2.
+\]
+If $r=2$, take $\rho_0$ empty, so $f_0=g_1=0$, $n_0=g_0$ and $n_1=f_1$. By (G1) twice and symmetry of $g$,
+\[
+ \Phi_{\rm prof}=\left[\frac1{1+f_1}+g(f_1,g_2)\right]
+ +\left[\frac1{1+g_0}+g(g_0,f_2)\right]+\frac1{1+n_2}
+ \geq2+\frac1{1+n_2}>2.
+\]
+If $r=3$, all six type-1 counts are positive. Apply (G2) to every relation and (G3) to every group:
+\[
+ \Phi_{\rm prof}\geq3-\sum_{i=0}^2\left[
+ \frac12\left(\frac1{1+f_i}+\frac1{1+g_i}\right)-\frac1{1+f_i+g_i}\right]
+ \geq3-\frac34>2.
+\]
+These four cases prove the lemma.
+\end{proof}
+A type-2 slot has a triangular common link, so the hypothesis of Theorem A forces $t=0$. Lemma 3 gives $\sigma(T)+\tau(T)\geq\Phi_{\rm prof}$, proving Theorem A.
