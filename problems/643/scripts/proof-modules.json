@@ -5,7 +5,7 @@
   },
   "Openmath.Erdos643.DegreeCharge": {
     "source": "Openmath/Erdos643/DegreeCharge.lean",
-    "sha256": "3488e953c64551ddefee44a900afdb347253270af4fbedf439699fa596185203"
+    "sha256": "b2812ef82092dde554ea1315970a91825789754005a6ae41b77f6d7716746aa0"
   },
   "Openmath.Erdos643.FinalBound": {
     "source": "Openmath/Erdos643/FinalBound.lean",
@@ -13,11 +13,11 @@
   },
   "Openmath.Erdos643.GraphDeletion": {
     "source": "Openmath/Erdos643/GraphDeletion.lean",
-    "sha256": "716b3a7ca8a2c9c9694523a54b2797a1bfd383d5bb14d97076422723bc67d7e9"
+    "sha256": "83e78aece5ef09e4a2f34920dd550f5e4725c6de455839a6a9c9eaa61ce833d0"
   },
   "Openmath.Erdos643.HypergraphBasics": {
     "source": "Openmath/Erdos643/HypergraphBasics.lean",
-    "sha256": "bb5c59fb53d56a61a18fe3b844631267495e11567d6e4096586161adc3f6f78b"
+    "sha256": "614b3b95d13e0d90c97c66eb58917f4d3eb99bd65728744c3d782251d67c9aeb"
   },
   "Openmath.Erdos643.K5Cleaning": {
     "source": "Openmath/Erdos643/K5Cleaning.lean",

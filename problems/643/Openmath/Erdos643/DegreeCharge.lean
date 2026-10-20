@@ -1,4 +1,6 @@
-import Mathlib
+import Mathlib.Algebra.BigOperators.Field
+import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
 
 /-! The finite weighted incidence argument used in published PV Lemma 11. -/
 namespace Erdos643
