@@ -2,7 +2,7 @@ import NEQAssembly.Counts
 import NEQAssembly.Critical
 
 /-! Minimum actual original dense support and exact original edge thinning.
-Frozen23792c95: no cut/factor criterion is assumed in this extraction. -/
+No cut/factor criterion is assumed in this extraction. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
 open Finset SimpleGraph

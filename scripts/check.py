@@ -11,6 +11,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import tomllib
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -135,7 +136,21 @@ def build_order(package, modules, target):
     if any(not re.fullmatch(r'[A-Za-z_][A-Za-z_0-9.]*',m) for m in modules):
         raise ValueError('Invalid module list')
     configured=set(modules)
-    if target not in configured: raise ValueError('Build root is not configured')
+    roots = [target]
+    library_target = target not in configured
+    if library_target:
+        # Lake library names can name several explicit module roots. The pinned
+        # lakefile supplies these roots; never synthesize an aggregate source.
+        lakefile = inside(package, 'lakefile.toml')
+        libraries = tomllib.loads(lakefile.read_text()).get('lean_lib', [])
+        matches = [lib for lib in libraries if isinstance(lib, dict) and lib.get('name') == target]
+        if len(matches) != 1:
+            raise ValueError('Build root is not a unique configured Lake library')
+        roots = matches[0].get('roots', [target])
+        if (not isinstance(roots, list) or not roots or
+                not all(isinstance(root, str) and root in configured for root in roots) or
+                len(roots) != len(set(roots))):
+            raise ValueError('Lake library roots are missing or unconfigured')
     dependencies={}
     for module in sorted(configured):
         source=inside(package,module.replace('.','/')+'.lean')
@@ -146,7 +161,18 @@ def build_order(package, modules, target):
                 raise ValueError(f'Unconfigured local import: {imported}')
     # Requiring every other module before the aggregate also detects a child
     # importing the aggregate instead of silently breaking dependency order.
-    dependencies[target].update(configured-{target})
+    if library_target:
+        reached = set()
+        pending = list(roots)
+        while pending:
+            module = pending.pop()
+            if module not in reached:
+                reached.add(module)
+                pending.extend(dependencies[module])
+        if reached != configured:
+            raise ValueError('Configured modules are outside the Lake library roots')
+    else:
+        dependencies[target].update(configured-{target})
     users={m:set() for m in configured}
     for module,deps in dependencies.items():
         for dependency in deps: users[dependency].add(module)

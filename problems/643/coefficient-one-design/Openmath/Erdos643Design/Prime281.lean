@@ -26,8 +26,30 @@ theorem uniform : base.IsUniform 5 := by
   simp only [base, Finset.mem_insert, Finset.mem_singleton] at hB
   rcases hB with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl <;> decide
 
+private theorem smallWitnesses_card_sum (d : ZMod 281) :
+    (smallWitnesses base d).card =
+      ∑ B ∈ base, ((B ×ˢ B).filter (fun xy => xy.1 - xy.2 = d)).card := by
+  rw [smallWitnesses, Finset.filter_biUnion]
+  have hdis : (base : Set (Finset (ZMod 281))).PairwiseDisjoint
+      (fun B => ((B ×ˢ B).image (fun xy => (B, xy))).filter
+        (fun w => w.2.1 - w.2.2 = d)) := by
+    intro B hB C hC hBC
+    apply Finset.disjoint_left.mpr
+    intro w hwB hwC
+    obtain ⟨xy, _, hxy⟩ := Finset.mem_image.mp (Finset.mem_filter.mp hwB).1
+    obtain ⟨uv, _, huv⟩ := Finset.mem_image.mp (Finset.mem_filter.mp hwC).1
+    exact hBC ((congrArg Prod.fst hxy).trans (congrArg Prod.fst huv).symm)
+  rw [Finset.card_biUnion hdis]
+  apply Finset.sum_congr rfl
+  intro B hB
+  rw [Finset.filter_image]
+  apply Finset.card_image_of_injective
+  intro x y hxy
+  exact (Prod.mk.inj hxy).2
+
 theorem counts : ∀ d : ZMod 281, d ≠ 0 → (smallWitnesses base d).card = 1 := by
   intro d hd
+  rw [smallWitnesses_card_sum]
   fin_cases d <;> first | exact False.elim (hd rfl) | decide
 
 def supplied : Supplied (ZMod 281) 5 := Supplied.of_small_counts base uniform counts

@@ -1,7 +1,9 @@
 # B-1 calibration: what degree 5 says about the degree-6 census
 
-Historical census, 2026-10-05. Rung (b),
-computed. Nothing here is reviewed. A "pair" is two edge-disjoint cycles on the same vertex set.
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
+Historical census, 2026-10-05. computational evidence,
+computed. The original record did not assert independent review. A "pair" is two edge-disjoint cycles on the same vertex set.
 
 Tools: nauty 2.9.3 `geng` (`~/.cache/erdos585/nauty2_9_3/geng`, SHA-256 `588052a8…7fdaca1`),
 `pairc` (`<PAIR_TEST_EXECUTABLE>`, SHA-256 `a8a4af8e…6c611366`, complete enumeration), and
@@ -132,7 +134,7 @@ W1 forces each side to have at least 15 vertices. The bound is written here and 
    and by R3 any example there is 4-edge-connected. This is the case unpublished historical research note §1 describes as a pure
    Hamilton-decomposition question.
 
-Two measurements would calibrate this case (the lead's call; neither was run):
+Two measurements would calibrate this case (neither was run):
 - the 5-regular census at n = 16 with a pair-pruned generator (new code, since the old filters stop at
   12 vertices);
 - the least deficiency of 4-edge-connected pair-free graphs with Δ ≤ 6 at small n.

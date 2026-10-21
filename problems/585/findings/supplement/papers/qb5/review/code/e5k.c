@@ -1,6 +1,6 @@
 /* e5k.c: for E5 instances, (1) where good pairs (p,q) lie relative to the unique cut,
  * (2) the set of k = |A'|-|C'| over violations (A',C') of G - p - q, all bad pairs, both orientations.
- * Independent referee code. */
+ * Independent implementation. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

@@ -1,10 +1,12 @@
-# Referee report on the rigid-set theory: PAPER.md and ADDENDUM-B.md
+# AI review report on the rigid-set theory: PAPER.md and ADDENDUM-B.md
+
+> Export clarification (2026-10-19): Census provenance correction from c1type/REVIEW.md F1: the pair census F2 itself used geng -b + pairc (one method). The second method for the smallest-counterexample class is the separate E4/C1 census; a quartic-subgraph replication is not a second pair census. Other counts and verdicts below are dated historical records, not fresh verification.
 
 AI review, October 5, 2026. Status: FINAL.
 
 Papers (neither was edited):
-- `PAPER.md`, SHA-256 `521a1139...24b7`: matches `FROZEN.sha256` at the start and at the end of the review.
-- `ADDENDUM-B.md`, SHA-256 `555b8ef3...b496`: matches `FROZEN-B.sha256` at the start and at the end.
+- `PAPER.md`, SHA-256 `521a1139...24b7`: matches the omitted historical receipt `FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json) at the start and at the end of the review.
+- `ADDENDUM-B.md`, SHA-256 `555b8ef3...b496`: matches the omitted historical receipt `FROZEN-B.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json) at the start and at the end.
 
 Method. Every proof was re-derived by hand before any code was written (log: `review/LOG.md`). Every
 computational claim was then re-checked with code written for this review (`review/code/`), validated
@@ -106,7 +108,7 @@ Case 2: U0 = (5,1) set (PAIRS Prop 3), sides at least 4 (a balanced 2-set side w
 degree 2). Case 3: (A) would make T thin, hence U0; so (B) with S of type U1-U4, ∂_P(S) ≤ 3 (U3 is
 impossible since E0(T) ≠ ∅), the same for E1(T) via V − T, so ∂(T) ≤ 6 and g(T) = g(V − T) = 10 by (1.2);
 |T| = 2 forces two degree-4 ends and c_F(T) = 3 for every F. Theorem 5.1 then needs PAIRS Prop 5 with the
-referee's |S| ≥ 3 (both sides have at least 3 vertices) and L5; the last sentence follows from Cases 1
+AI review's |S| ≥ 3 (both sides have at least 3 vertices) and L5; the last sentence follows from Cases 1
 and 2, which do not use rigidity. The "n < 2(m + 1)" remark is right.
 
 ### 1d. Lemma 6.1 and Proposition 6.6: ACCEPT
@@ -215,7 +217,7 @@ connected and 2-cut-free; otherwise it is connected with c_F(T) = 1 (§6.2a), Th
 one-crossing cycle, Proposition 6.6 gives a 2-cut-free 4-factor, and H22 gives two edge-disjoint
 Hamilton cycles, a pair. With F2, a smallest counterexample on at most 22 vertices is of C1 type with
 n ∈ {19, 21}. The inputs and their status: PAIRS Lemmas 1, 2, Example 4 and Prop 5 (with |S| ≥ 3) as
-refereed in `findings/supplement/papers/pairs/REVIEW.md`; census F2 (two methods); L5 (one method, referee spot check); the
+AI-reviewed in `findings/supplement/papers/pairs/REVIEW.md`; census F2 (two methods); L5 (one method, AI review spot check); the
 5 + 5 census (now two methods); H22 (two methods for n ≤ 20, one method at n = 22). The §6 table of the
 addendum states these correctly, except that the 5 + 5 census now has a second method (P5).
 

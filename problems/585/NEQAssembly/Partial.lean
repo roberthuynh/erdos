@@ -1,7 +1,8 @@
 import NEQAssembly.Minimal
 
 /-! Explicit conditional assembly.
-FullCarrierBarrierKernel below is an UNPAID Prop input, not a theorem/axiom.
+FullCarrierBarrierKernel below is an explicit proposition assumed by the theorem.
+This file does not prove that proposition or introduce it as an axiom.
 The bare endpoint is not claimed by this source. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
@@ -51,8 +52,8 @@ lemma no_spanning_of_no_original_support {V : Type u} [Fintype V] [DecidableEq V
   have hv : v ∈ H.verts := by rw [hspanning.verts_eq_univ]; exact Set.mem_univ _
   exact havoid ⟨H, ⟨v, hv⟩, hregular⟩
 
-/-- PARTIAL ONLY: hkernel is the precise unpaid actual cut theorem.
-No bare endpoint credit until an actually proved criterion supplies it. -/
+/-- This theorem assumes the cut proposition FullCarrierBarrierKernel through hkernel.
+It does not establish the conclusion without that premise. -/
 theorem neq_from_full_carrier_barrier_kernel {V : Type u} [Fintype V] [DecidableEq V]
     (q : ℕ) (hq : 6 ≤ q) (heven : Even q)
     (hkernel : FullCarrierBarrierKernel.{u} q) (G : SimpleGraph V)

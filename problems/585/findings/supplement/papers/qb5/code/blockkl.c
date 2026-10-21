@@ -1,4 +1,4 @@
-/* blockkl.c (lane qb5, round 3; NOTES.md section 7).
+/* blockkl.c (QB(5), version 3; NOTES.md section 7).
  *
  * Block-level M-form.  Input lines: "na nc m_1 ... m_nc" where m_j is the bitmask over A = {0..na-1}
  * of the 6 neighbours of the j-th C-vertex (a 2-block: |A| = |C| + 2, C saturated into A).

@@ -247,7 +247,7 @@ def lattice_checks(G, fam):
             npairs += 1
             if (Q & Qp) in (Q, Qp):
                 ncomparable += 1
-            L.ok("N4 (referee claim): in a sparse instance P is a chain", (Q & Qp) in (Q, Qp))
+            L.ok("N4 (supplementary claim): in a sparse instance P is a chain", (Q & Qp) in (Q, Qp))
             L.ok("chain L4.2(a) |QnQ'|>=2", popc(Q & Qp) >= 2)
             L.ok("chain L4.2(b) QuQ' != V", (Q | Qp) != G.Vmask)
             L.ok("chain L4.2(c) QnQ', QuQ' in P", (Q & Qp) in fam and (Q | Qp) in fam,

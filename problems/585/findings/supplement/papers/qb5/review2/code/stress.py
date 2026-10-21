@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Referee's own random stress test of Corollary 5.2 / Theorem 4.1 (independent generator).
+"""Independent random stress test of Corollary 5.2 / Theorem 4.1 (independent generator).
 Builds random sparse E5 instances without a 4-factor from two random 2-blocks and a random
 7-edge cut, n <= 26, and checks: every big-side vertex generic, some good pair (max flow),
 covering rule = flow on every A x D pair.  Usage: stress.py SEED COUNT OUTFILE [lowmatch]"""

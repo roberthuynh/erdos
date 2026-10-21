@@ -1,3 +1,5 @@
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
 # Independent mixed-modulus twin review
 
 October 3, 2026. The complete [TWIN-ZEROSUM.md](TWIN-ZEROSUM.md) and its separate one-singleton core extension (not included) were independently reviewed. No mathematical gap was found in the stated forcing arguments. No Lean, oracle or numerical search was performed. This is paper validation, not a project result or novelty claim.

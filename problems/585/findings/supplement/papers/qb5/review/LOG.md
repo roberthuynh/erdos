@@ -1,4 +1,6 @@
-# Referee log, QB(5) PAPER.md review
+# AI review log, QB(5) PAPER.md review
+
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
 
 - 16:37 start. FROZEN.sha256: all OK (PAPER.md + 16 code/data files).
 - 16:45 read PAPER.md in full, C1-PAPER.md 1-250, P4 PAPER.md 1-60, 140-200, 275-395, FLAW.md 25-40, CENSUS.md 1-45, 104-140, unpublished historical census-status note 31. Cited hashes match (3c67d183, 825189da, 50486165, c2018a72).
@@ -7,7 +9,7 @@
 - 17:00 rv.c built (clang -O3). P4 Thm 3.1(c) three n=15 graphs: C2, sparse, Z_U={u0}, 4 ports of degree 4, all bad by type gamma only, every degree-6 W-vertex good. Matches 8.1.
 - 17:05 Classes regenerated with PLAIN genbg 2.9.3 (no prune hook): -d4:4 -D6:6 5 6 28:28 / 6 7 34:34 / 7 8 40:40 give 2 / 29 / 2,895 graphs, all sparse by my subset DP, labelg canonical sets identical to P4's files. So the n = 11, 13, 15 sparse C2 classes are complete and equal P4's.
   A.1 reproduced on my own classes: bad W-vertices 4 / 36 / 2,640, all gamma; no alpha/beta violation at any W-vertex; core check of Thm 5.1 holds in all; u0/u1u2 split 1+1, 9+20, 660+2,235. Lemma 3.1 identities asserted on every (A,C): 0 failures. Flow and violation enumeration agree on every W-vertex.
-  Ports-only failure: every port bad in 0 / 0 / 3 graphs at n = 11 / 13 / 15, so n = 15 is the smallest (C2 has odd n). Supported by computation (rung b), but the paper gives no argument for it in 8.1.
+  Ports-only failure: every port bad in 0 / 0 / 3 graphs at n = 11 / 13 / 15, so n = 15 is the smallest (C2 has odd n). Supported by computation (computational evidence, but the paper gives no argument for it in 8.1.
 - 17:08 E5 classes: plain genbg 6 6 31 / 7 7 37 / 8 8 43 give 13 / 819 / 229,913 two-colored graphs; sparse 13 / 818 / 229,728 (= P4 counts), all sparse ones have a 4-factor. Note: as uncoloured graphs these are 9 / 447 / 115,932 (genbg keeps color-swapped copies), so "13, 818 E5 graphs" counts colored graphs.
 - 17:12 tb19_split.g6 (12 graphs) verified by rv c2: all sparse C2 n=19 (3 u0, 9 u1u2), exactly one W-small 2-block containing Z_U (T={0..9}), alpha-petals Q=T+18, Q'=T+17 with Q cap Q' = T (kappa 2), kappa(Q cup Q') = 0, u0 = 5 in graph 0. Bad W-vertices = T_W + {17,18}, none a port; split petals contain no port.
 - 17:14 e5_n22.g6 (60) and e5_n24.g6 (40) verified by rv e5pairs: sparse, no 4-factor (flow), exactly one violation per orientation, Thm 6.1 structure on it, cut matching number 3, K44 present, good pairs 35-40/121 and 40-47/144. Note: labelg shows only 18 and 33 pairwise non-isomorphic graphs (60 and 40 count repeats).

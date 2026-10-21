@@ -1,0 +1,18 @@
+n=7 exit=0
+n=8 exit=0
+n=9 exit=0
+n=10 part 1 exit=0
+n=10 part 2 exit=0
+n=10 part 6 exit=0
+n=10 part 3 exit=0
+n=10 part 9 exit=0
+n=10 part 0 exit=0
+n=10 part 8 exit=0
+n=10 part 4 exit=0
+n=10 part 5 exit=0
+n=10 part 11 exit=0
+n=10 part 7 exit=0
+n=10 part 13 exit=0
+n=10 part 10 exit=0
+n=10 part 12 exit=0
+DONE

@@ -53,7 +53,7 @@ def PhysicalRepair : Prop :=
 def HasInternal44 (G : SimpleGraph V) (A C : Finset V) : Prop :=
   ∃ X ⊆ A, ∃ Y ⊆ C, #X = 4 ∧ #Y = 4 ∧ ∀ x ∈ X, ∀ y ∈ Y, G.Adj x y
 
-/-- Actual block inputs of the reviewed six-supply argument; size floors are outputs. -/
+/-- Actual block inputs of the six-supply argument; size floors are outputs. -/
 structure DoubleScarBlock (G : SimpleGraph V) [DecidableRel G.Adj]
     (A C : Finset V) : Prop where
   disjoint : Disjoint A C

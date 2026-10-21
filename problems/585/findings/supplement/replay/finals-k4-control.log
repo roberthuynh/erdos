@@ -1,0 +1,2 @@
+FINAL lines: 1
+{"n": 4, "m": 6, "mindeg": 3, "maxdeg": 3, "brute": "NOPAIR", "oracle": "NOPAIR", "shape_ok": true, "counterexample": true} edges: [(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)]

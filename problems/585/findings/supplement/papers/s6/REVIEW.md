@@ -1,4 +1,6 @@
-# Referee report on findings/supplement/papers/s6/PAPER.md
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
+# AI review report on findings/supplement/papers/s6/PAPER.md
 
 Status: FINAL. Every claim below carries a final verdict.
 AI review, October 5, 2026. PAPER.md checked against FROZEN.sha256 at start and at end: OK
@@ -157,7 +159,7 @@ Own code (`code/cert.py ../data/ml1_counterexample.json brute`, `out/cert_ml1.tx
 - The author's `verify_min.py` and `verify_depth.py` import nothing from `frames.py`, which bears out
   the "shares no code" claim.
 
-### 14. §4.2 evidence (lines 21, 209-231): ACCEPT (rung (b), now two methods in kind)
+### 14. §4.2 evidence (lines 21, 209-231): ACCEPT (computational evidence, now two methods in kind)
 - Every row of the table reconciles with `data/escape_*.txt` and `data/escapeB_*.txt`, and the
   totals are 4,472 frames and 1,532 minima. Rows with two files: |B| = 24 is M12 + escapeB_M12,
   |B| = 40 is M20 + escapeB_M20, and PG(2,5) is pg25 + pg25_b.
@@ -206,7 +208,7 @@ Own code (`code/cert.py`, `code/pg_e10.py`, `code/variants.py`; `out/cert_pg25.t
     them (`out/deep_h23_105_0_365.json`, `out/deep_h23_check.txt`).
   - Delete the girth clause and say "at least 4 moves".
 - Note: `data/pg25_e10_check.txt` holds only the E10 line and a vacuous "no sequence of <= 0
-  moves" line. The 9/47/211 run cited in Appendix A is not saved in `data/`.
+  moves" line. At the historical review date, the 9/47/211 run cited in Appendix A was not saved in `data/`. The recovered `review/out/variants_pg25.txt` and the new replay in supplement-root RECOVERED-REPLAY.md now supply the labelled-state counts.
 
 ### 16. §4.3 (lines 244-263): ACCEPT WITH FIXES
 - Fix (lines 250-253): "from odd Φ the last step is a swap of a cycle color with a leftover color
@@ -222,11 +224,11 @@ Own code (`code/cert.py`, `code/pg_e10.py`, `code/variants.py`; `out/cert_pg25.t
 
 ### 17-19. §5 bank (lines 265-278)
 - Census bullet: ACCEPT WITH FIXES.
-  - S6 for |B| = 16, 18 is in va6 PAPER §4 and was reproduced by the va6 referee. |B| = 12, 14 come
+  - S6 for |B| = 16, 18 is in va6 PAPER §4 and was reproduced by the va6 AI review. |B| = 12, 14 come
     from va6 REVIEW only. Cite both.
   - "Every B on 16, 18 or 20 vertices is E10" is va6 REVIEW, and Lemma 6.1 (non-E10 needs ≥ 22
     vertices) proves it.
-  - The slice 0/600 and the 80 random graphs at 22 and 24 vertices were re-run by the va6 referee
+  - The slice 0/600 and the 80 random graphs at 22 and 24 vertices were re-run by the va6 AI review
     with independent code, so "one method each" understates those rows.
   - The 28/30 numbers match `va6/S6-RESULT.md` and SCOUT §7 (7,909 + 6,368 = 14,277 graphs;
     1,328,494 + 1,145,933 = 2,474,427 decisions).
@@ -242,7 +244,7 @@ Own code (`code/cert.py`, `code/pg_e10.py`, `code/variants.py`; `out/cert_pg25.t
 ### 20-26. §6, part (ii) (lines 280-361)
 - Preamble: ACCEPT WITH FIXES.
   - (F0)-(F3) are correct.
-  - Corollary B of `585-fable/PROOF-R1.md` (line 157 there) states the B6 ⟺ VA6 equivalence.
+  - Corollary B of the historical `PROOF-R1.md` note (original source reference) (line 157 there) states the B6 ⟺ VA6 equivalence.
   - Cut types: |∂_I − ∂_O| = 6||T_I| − |T_O|| ≤ 8 forces the listed types. Connectivity excludes
     c = 0.
   - Line 284: N ≥ 22 uses VA6 at 12 and 14 vertices too (va6 REVIEW, trivial).
@@ -260,7 +262,7 @@ Own code (`code/cert.py`, `code/pg_e10.py`, `code/variants.py`; `out/cert_pg25.t
   va6 Lemma 1 are accurate.
 - Lemma 6.4: ACCEPT. The count is c − d(v) + (6 − d(v)).
 - Theorem 6.5: ACCEPT WITH FIXES. Every case was re-derived.
-  - c = 2: va6 Cor. 2(a), with the va6 referee's parity fix, gives |T| ≥ 22.
+  - c = 2: va6 Cor. 2(a), with the va6 AI review's parity fix, gives |T| ≥ 22.
   - c = 4: the paper's disjunction is equivalent to "not va6 Lemma 1 case 3 and not case 4", since
     2|T| ≥ N implies 3|T| ≥ N. Lemma 6.3 excludes more.
   - c ∈ {6, 8}: if d(v) ≥ 3, then (T − v, T̄ + v) has size ≤ c. It is essential (|T| ≥ 11 by
@@ -281,13 +283,13 @@ Own code (`code/cert.py`, `code/pg_e10.py`, `code/variants.py`; `out/cert_pg25.t
   - The VA6_f count (k − d(p) forbidden edges) is right.
 
 ### 27. §7 (lines 368-372): ACCEPT
-- With s = g/2 − j − b (theory PAPER Lemma 1.1, accepted by its referee), s = 0 and ∂_P ≥ 1 give
+- With s = g/2 − j − b (theory PAPER Lemma 1.1, accepted by its AI review), s = 0 and ∂_P ≥ 1 give
   b − a − 2j ≥ 1, and 1.2(ii) gives j ≥ 2. So b = 5, a = 0, j = 2, g = 14, ∂_P = 1 and ∂_Q = 8. Only
   (ii) and (1.1) are used.
 - ∂_B(S + y) = 14 + 6 − 10 = 10. Its I-part carries ∂_Q = 8 cut edges, and its O-part carries
   ∂_P + a + [oy] = 2. So it is a 10-edge cut of type (8,2) containing oy. Correct.
 
-## Computations (rung (b), own code, under 10 CPU-minutes in all)
+## Computations (computational evidence, own code, under 10 CPU-minutes in all)
 - `code/s6rev.py` holds the library, written from the paper's definitions: E10 by brute force (Gray
   code) and by flows between disjoint edge pairs, frames, legal Kempe swaps, re-pairings,
   Λ re-pairings, BFS escape, random hosts by edge switches, 4-factor by max flow and Kuhn

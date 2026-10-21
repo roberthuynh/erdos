@@ -1,4 +1,4 @@
-"""Referee 2 helpers (own code; nothing imported from G110/c1checks or G110/checks).
+"""Second independent implementation helpers (own code; nothing imported from G110/c1checks or G110/checks).
 
 Graph convention: vertices 0..n-1, U = 0..s-1 (smaller side, size s), W = s..2s (size s+1).
 adj[v] is an int bitmask of neighbours. Edges always join U and W.

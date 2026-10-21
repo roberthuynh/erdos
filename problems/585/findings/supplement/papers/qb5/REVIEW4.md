@@ -1,7 +1,9 @@
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
 # REVIEW4: QB(5) round 4, KL1 for every 2-block, hence QB(5) (findings/supplement/papers/qb5/PAPER4.md)
 
-Independent adversarial referee, October 5, 2026. Status: FINAL.
-Object: `PAPER4.md` as frozen in `FROZEN4.sha256` (`shasum -a 256 -c FROZEN4.sha256`: all 16 entries OK at the
+Independent adversarial AI review, October 5, 2026. Status: FINAL.
+Object: `PAPER4.md` as frozen in the omitted historical receipt `FROZEN4.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json) (the omitted historical receipt `shasum -a 256 -c FROZEN4.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json): all 16 entries OK at the
 start and at the end of this review). Working files, log and code: `review4/` (`review4/LOG.md`, `review4/code/`,
 `review4/data/`). Nothing here is a project-oracle PASS: no Lean, no `check.sh`.
 
@@ -28,8 +30,8 @@ Compute used: about 20 core-minutes, at most 2 processes at a time.
 | §5 computations | **ACCEPT WITH FIX** (J1) | Every count of `code/r4/merge_check.out` reproduced exactly by own code. But §0 line 27 says "every lemma of §3 checked"; F1 to F5 do not test Lemma 3.5 or Lemma 3.4(b), (d), and in these 1,753 blocks no hub ever occurs under a covering m, so the count of Theorem 3.1 is never exercised by the author's data. |
 
 No REJECT. I found no mathematical error. **KL1 holds for every 2-block of every sparse E5 instance without a
-4-factor, and with PAPER, PAPER2 and PAPER3 as refereed, QB(5) is proved** (written proof with one computed finite
-lemma; rung (a) with a computed lemma, not a Lean result).
+4-factor, and with PAPER, PAPER2 and PAPER3 as AI-reviewed, QB(5) is proved** (written proof with one computed finite
+lemma; written-proof evidence with a computed lemma, not a Lean result).
 
 ## 2. Fixes, with locations
 
@@ -173,6 +175,6 @@ step above except G1 (pairs taken in P × Q), which step 4 respects.
 
 **"QB(5) is proved": ACCEPT WITH FIXES.** The fix list is J1 (required, wording of the computational claim on
 line 27 and in §5) and J2 to J4 (optional, editorial). No mathematical error was found in PAPER4 or on the QB(5)
-path through PAPER, PAPER2 and PAPER3. QB(5) rests on written proofs, refereed in REVIEW to REVIEW4, plus one
+path through PAPER, PAPER2 and PAPER3. QB(5) rests on written proofs, AI-reviewed in REVIEW to REVIEW4, plus one
 finite computed lemma (PAPER3 Lemma 4.1), now confirmed by four programs (five enumerations). It is not a Lean
 result and not a `check.sh` PASS.

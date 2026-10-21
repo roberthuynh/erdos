@@ -13,7 +13,7 @@ two F-edges across the cut. Constraints are exactly the facts the paper proof us
     D(F)[A], the vertex y' is outside a closed set of D(F)[B] that contains x' (closure variables).
 UNSAT in every configuration = no configuration without a one-crossing cycle.
 Controls: the same model with the failure clauses removed must be SAT; for the 6+6 / 7+7 sides the
-model with the B-side constraints removed is also reported (expected SAT: the constraints are needed).
+model with the B-side constraints removed is also reported (historical expectation was SAT; the recorded UNSAT results show those constraints were unnecessary for the tested shapes).
 Usage: python lemmaB_sat.py  (prints one line per configuration and a summary)."""
 import itertools, sys
 from pysat.formula import IDPool

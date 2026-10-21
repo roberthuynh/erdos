@@ -1,5 +1,5 @@
 #!/bin/bash
-# driver.sh (wave8/s6spot): W workers (xargs -P) over data/jobs.txt ("r mode" per line), then
+# driver.sh (census/s6n22/spot-check): W workers (xargs -P) over data/jobs.txt ("r mode" per line), then
 # code/collect.py. STOP file or STOP_EPOCH: no new slices; KILL_EPOCH: the whole process group
 # is killed (slices without a done marker are simply not counted).
 set -u

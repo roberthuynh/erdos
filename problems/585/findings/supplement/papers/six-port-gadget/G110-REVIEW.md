@@ -1,10 +1,12 @@
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
 # G110 independent review
 
 Status: complete, October 4, 2026. **ACCEPT the stated limited conclusions.**
 
 Scope: inspect the G110 distinct-port six-gadget argument and its sole parity
 repair, independently replay the small factor-count control, and replay the
-root's fixed-matching certificate. No new route, census, Lean, or oracle run.
+the supplied fixed-matching certificate. No new route, census, Lean, or oracle run.
 
 The open target is existence of a nonempty 4-regular subgraph in a simple
 bipartite gadget with shores I, O, `|O| = |I| + 1`, all I-degrees 6, six

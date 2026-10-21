@@ -356,13 +356,14 @@
     "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
   },
   "Openmath/Erdos643Design/Prime281.lean": {
-    "export_sha256": "ad77c6e432f8e018b2564449e024a57050e12930657527460d07d001d9b2b75a",
+    "export_sha256": "0e4d8608af6240de3e34b80f7bf73fc7dcbbb8b014e61d1dd31cde00139a07ae",
     "import_relocations": {
       "DifferenceFamilyCertificate": "Openmath.Erdos643Design.DifferenceFamilyCertificate"
     },
     "original_sha256": "5a1b472eae0fa02716f7706662b0e75c313c20018f20b6c552f4f95a5fd9921f",
+    "previous_export_sha256": "ad77c6e432f8e018b2564449e024a57050e12930657527460d07d001d9b2b75a",
     "resource_lines_removed": [],
-    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed."
+    "scope": "Source and exported hashes are recorded separately; imports are relabeled as listed. The finite witness count now uses a proved sum over disjoint block-tagged witnesses. Public statements, base blocks and hypotheses are unchanged."
   },
   "Openmath/Erdos643Design/Prime41.lean": {
     "export_sha256": "8c4a2e3687d2192423a0420900119a85342300212cf4f8c841068e2556cba65c",

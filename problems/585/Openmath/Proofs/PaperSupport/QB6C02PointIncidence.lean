@@ -1,8 +1,8 @@
 import Openmath.Proofs.PaperSupport.QB6Assembly
 
 /-! Actual original-neighbor incidence for a family meeting exactly at one row.
-The written five-D4 argument is credited; no maximality, cover or theta input
-is supplied. The defining actual dg/cpr/C02Input imports are unchanged.
+The proof uses a five-D4 argument; no maximality, cover or theta input
+is supplied. The definitions dg, cpr and C02Input come from QB6Assembly.
 -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false

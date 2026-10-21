@@ -20,6 +20,7 @@ grouped by vertex set, all pairs); for n <= brute_max a brute-force pass over
 all 2^C(n,2) labelled graphs with that from-scratch test.
 """
 import argparse, math, random, sys, time
+from pathlib import Path
 
 
 def bc(x):
@@ -407,7 +408,7 @@ def main():
     ap.add_argument('--nmin', type=int, default=1)
     ap.add_argument('--nmax', type=int, default=7)
     ap.add_argument('--brute-max', type=int, default=6)
-    ap.add_argument('--md', default='triage/585-small-n.md')
+    ap.add_argument('--md', default=str(Path(__file__).with_name('585-small-n.md')))
     ap.add_argument('--fresh', action='store_true')
     ap.add_argument('--fprev', type=int, default=None, help='f(nmin-1) when nmin > 1')
     ap.add_argument('--value-only', action='store_true', help='find f(n) with <= pruning, no enumeration')
@@ -429,7 +430,7 @@ def main():
             fh.write('# Erdos 585, small n: exact f(n)\n\n'
                      'f(n) = max edges of a simple graph on n labelled vertices with no two '
                      'edge-disjoint cycles (>= 3 vertices) on the same vertex set.\n'
-                     'Produced by `triage/erdos585_small.py` (Python 3, stdlib only); each '
+                     'Produced by `erdos585_small.py` in this directory (Python 3, stdlib only); each '
                      'section is appended as soon as that n finishes.\n\n')
     rng = random.Random(585)
     if args.selftest:

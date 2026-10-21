@@ -1,4 +1,4 @@
-/* e5check.c (lane qb5, round 2): independent decider for E5 pair certificates.
+/* e5check.c (computational checks): independent decider for E5 pair certificates.
  * Build: /usr/bin/clang -O3 -o e5check e5check.c
  * Reads graph6 lines (n <= 32) on stdin. For each graph prints:
  *   bipartite, balanced, maxdeg, mindeg, e - (3n - 5), sparse (every S with 3 <= |S| <= n-1 spans at most

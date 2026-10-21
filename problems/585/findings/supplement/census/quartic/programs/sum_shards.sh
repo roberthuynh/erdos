@@ -7,10 +7,10 @@
 # --expect-unsat (independent pysat check) and says so loudly.
 set -u
 TAG=$1; MOD=$2
-C=[local path]
+C="${ERDOS585_CENSUS_QUARTIC_PROGRAMS_SUM_SHARDS_SH_C:?Set ERDOS585_CENSUS_QUARTIC_PROGRAMS_SUM_SHARDS_SH_C to the original C dependency; see REPRODUCTION-BOUNDARY.md}"
 L="$C/logs/$TAG"
-PY=[temporary path]
-V=[local path]
+PY="${ERDOS585_CENSUS_QUARTIC_PROGRAMS_SUM_SHARDS_SH_PY:?Set ERDOS585_CENSUS_QUARTIC_PROGRAMS_SUM_SHARDS_SH_PY to the original PY dependency; see REPRODUCTION-BOUNDARY.md}"
+V="${ERDOS585_CENSUS_QUARTIC_PROGRAMS_SUM_SHARDS_SH_V:?Set ERDOS585_CENSUS_QUARTIC_PROGRAMS_SUM_SHARDS_SH_V to the original V dependency; see REPRODUCTION-BOUNDARY.md}"
 total=0; done_n=0; missing=(); cpu=0
 for ((r = 0; r < MOD; r++)); do
   err="$L/shard_$r.err"

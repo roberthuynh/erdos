@@ -2,7 +2,7 @@ import Mathlib.Combinatorics.SimpleGraph.Bipartite
 import Mathlib.Data.Finset.Sort
 import Mathlib.Tactic
 
-/- Source: BqBirthCore.lean; only its import lines removed. -/
+/- Embedded section: BqBirthCore.lean; its original imports are consolidated above; no separate source file is required. -/
 
 /- 
 -/
@@ -158,7 +158,7 @@ theorem opposite_slots (r a b m c C : ℕ) (hab : a ≤ b)
 #print axioms opposite_slots
 end BqLowerFamily
 
-/- Source: BqSeedHelpers.lean; only its import lines removed. -/
+/- Embedded section: BqSeedHelpers.lean; its original imports are consolidated above; no separate source file is required. -/
 
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
@@ -266,7 +266,7 @@ theorem row_degree_one (q : ℕ) (hq : 4 ≤ q) :
 #print axioms row_degree_one
 end BqLowerFamily
 
-/- Source: BqSeedSupport-v1.lean; only its import lines removed. -/
+/- Embedded section: BqSeedSupport-v1.lean; its original imports are consolidated above; no separate source file is required. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
 set_option maxHeartbeats 400000
@@ -383,7 +383,7 @@ theorem seed_no_balanced_support (q : ℕ) (hq : 4 ≤ q)
 #print axioms seed_no_balanced_support
 end BqLowerFamily
 
-/- Source: BqSeedMatrix.lean; only its import lines removed. -/
+/- Embedded section: BqSeedMatrix.lean; its original imports are consolidated above; no separate source file is required. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
 set_option maxHeartbeats 600000
@@ -582,7 +582,7 @@ theorem seed_no_regular_subgraph (hq : 4 ≤ q) :
 #print axioms seed_no_regular_subgraph
 end BqLowerFamily
 
-/- Source: BqGood.lean; only its import lines removed. -/
+/- Embedded section: BqGood.lean; its original imports are consolidated above; no separate source file is required. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
 set_option maxHeartbeats 2000000
@@ -705,7 +705,7 @@ theorem eligible_card (hq : 4 ≤ q) {A B : Finset V}
 #print axioms eligible_card
 end BqLowerFamily
 
-/- Source: BqLeastLabels.lean; only its import lines removed. -/
+/- Embedded section: BqLeastLabels.lean; its original imports are consolidated above; no separate source file is required. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
 set_option maxHeartbeats 400000
@@ -782,7 +782,7 @@ theorem leastNeighbors_le_omitted (r : ℕ) (S : Finset V) (label : V → ℕ)
 #print axioms leastNeighbors_le_omitted
 end BqLowerFamily
 
-/- Source: BqLabel-v1.lean; only its import lines removed. -/
+/- Embedded section: BqLabel-v1.lean; its original imports are consolidated above; no separate source file is required. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
 set_option maxHeartbeats 400000
@@ -875,7 +875,7 @@ theorem Labeling.image_range {V : Type*} [Fintype V] (L : Labeling V) :
 #print axioms Labeling.image_range
 end BqLowerFamily
 
-/- Source: BqSeedInvariant.lean; only its import lines removed. -/
+/- Embedded section: BqSeedInvariant.lean; its original imports are consolidated above; no separate source file is required. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
 set_option maxHeartbeats 600000
@@ -990,7 +990,7 @@ theorem seed_good (q : ℕ) (hq : 4 ≤ q) :
 #print axioms seed_good
 end BqLowerFamily
 
-/- Source: BqStep.lean; only its import lines removed. -/
+/- Embedded section: BqStep.lean; its original imports are consolidated above; no separate source file is required. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
 set_option maxHeartbeats 500000
@@ -1085,7 +1085,7 @@ omit [DecidableEq V] in
 #print axioms nextNeighbors_least
 end BqLowerFamily
 
-/- Source: BqLowerFamily.lean; only its import lines removed. -/
+/- Embedded section: BqLowerFamily.lean; its original imports are consolidated above; no separate source file is required. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
 set_option maxHeartbeats 600000

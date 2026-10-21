@@ -50,5 +50,5 @@
     "CONTROL-CHECK.json": "2df037af3a360acb25c8d8fe662f7fc3d01eb840206b40606508535f00c10603"
   },
   "initial_paper_sha256": "cf4740593fc82fac403138071419773db110d87d794ac0adde3777b70118a6dc",
-  "final_text_revision": "Three requested clarifications applied; canonical Fable source pointers recorded. Math/control data unchanged; final manifest verified without repeating finite checks."
+  "final_text_revision": "Three textual clarifications applied; Fable source pointers recorded. Math/control data unchanged; final manifest verified without repeating finite checks."
 }

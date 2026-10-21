@@ -4,9 +4,9 @@
 # (epoch s) stops the loop before the next graph.
 set -u
 which=$1
-LANE=[local path]
-PY=[local path]
-SP=[local scratch folder]
+LANE="${ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_GLUE18_SH_LANE:?Set ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_GLUE18_SH_LANE to the original LANE dependency; see REPRODUCTION-BOUNDARY.md}"
+PY="${ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_GLUE18_SH_PY:?Set ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_GLUE18_SH_PY to the original PY dependency; see REPRODUCTION-BOUNDARY.md}"
+SP="${ERDOS585_SCRATCH_DIR:?Set ERDOS585_SCRATCH_DIR to a writable scratch directory}"
 L=$LANE/logs/glue18; mkdir -p "$L" "$SP"
 N=$(wc -l < "$LANE/data/glue18-classes.input.g6")
 for i in $(seq 1 "$N"); do

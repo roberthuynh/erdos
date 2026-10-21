@@ -1,6 +1,6 @@
 # S6 at |B| = 22: run result (collector output)
 
-Written by `code/collect.py` at 2026-10-06 03:22:51 EDT from the slices with a done marker. Rung (b) computation; nothing here is reviewed. Definitions and method: `JOBS.md`.
+Written by `code/collect.py` at 2026-10-06 03:22:51 EDT from the slices with a done marker. Finite computational evidence; the original record did not assert independent review. Definitions and method: `JOBS.md`.
 
 ## Coverage
 

@@ -1,16 +1,20 @@
 # QB(5), round 2: the E5 pair statement holds for generic blocks
 
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with REVIEW4.md, REVIEW3.md, REVIEW.md, REVIEW2.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
 AI-written historical note, October 5, 2026. Status: frozen for independent review (SHA-256 in
-`FROZEN2.sha256`). Not reviewed. This is rung 2 of the round-2 ladder: a proof of the E5 pair statement
+the omitted historical receipt `FROZEN2.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json)). Not reviewed. Historical scope: a proof of the E5 pair statement
 of PAPER.md §8.4 under an extra hypothesis (every big-side vertex is *generic*, Definition 3.2) that holds
 on every built instance, together with the smallest instance where the natural step fails (n = 28). It is
 not a proof of QB(5). All proofs are written out; one finite lemma (Lemma 4.2, about 7-edge graphs) is
 verified by computer, by two independent programs. No Lean, no `check.sh`, so nothing here is a
-project-oracle PASS. Rungs: (a) for Fact 2.1, Theorem 2.2, Lemma 3.3, Corollary 3.4 and Proposition 5.1;
+project-oracle PASS. Evidence categories: (a) for Fact 2.1, Theorem 2.2, Lemma 3.3, Corollary 3.4 and Proposition 5.1;
 (a) with a computed lemma (Lemma 4.2) for Theorem 4.1 and Corollaries 5.2, 5.3; (b) for the certificate
 of §6 and the data of §7.
 
-PAPER.md (frozen, `FROZEN.sha256`) is cited by section and number; its referee report REVIEW.md is FINAL
+PAPER.md (frozen, the omitted historical receipt `FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json)) is cited by section and number; its AI review report REVIEW.md is FINAL
 (no mathematical error; Theorems 5.1 and 7.1 accepted). The fixes F1 to F7 of REVIEW.md are in force
 here (§1.3).
 
@@ -32,7 +36,7 @@ such that G − p − q has a 4-factor. It implies QB(5) (PAPER.md §8.4 and The
 | §6 | the natural step (covering ⇒ 4-factor) fails first at n = 28; certificate, both deciders | proved smallest, certified | §6 |
 | §7 | no counterexample to the pair statement: 34,255 random instances (n = 20 to 26), 24 core instances (n = 28), 100 built | computed | §7 |
 
-**Where a referee should attack first.**
+**Sensitive steps and hypotheses.**
 1. Theorem 2.2: the separate minimization over C1 ⊆ C and B1 ⊆ B, and the identity
    Σ_b (4 − e(b, D1))^+ = 4|B| − 4|D1| + dem_Y(D1).
 2. Lemma 3.3: the three cases, in particular the relevance case (ii).
@@ -351,7 +355,7 @@ core-hour.
 | A.8 | §7 genericity in random instances | `generic_inst.py data/search/dump_mixed.g6` | 750 instances: every vertex generic; rule = Theorem 2.2 on every pair; = flow on the first 60 |
 | A.9 | §7 permissive core model | `core_model.py` (with and without `minimal`) | the proved core constraints alone allow a whole side to be non-generic |
 
-Script hashes are listed in `FROZEN2.sha256` together with this file and the certificate.
+Script hashes are listed in the omitted historical receipt `FROZEN2.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json) together with this file and the certificate.
 
 ## Appendix B. Sources (paths relative to the repository root)
 

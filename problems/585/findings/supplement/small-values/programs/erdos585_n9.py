@@ -2,8 +2,8 @@
 """Erdos 585 beyond n = 8 (Python 3 standard library only).
 
 The pair test, witness re-check and canonical form are imported from the
-verified checker triage/erdos585_verify.py (find_pair, witness_ok, canon).
-A second, separately written cycle test comes from triage/erdos585_small.py
+verified checker erdos585_verify.py in this directory (find_pair, witness_ok, canon).
+A second, separately written cycle test comes from erdos585_small.py in this directory
 (is_good_full) and, for n <= 10, the brute-force cycle list of the verifier
 (naive_cycles + naive_pair_grouped).
 
@@ -16,7 +16,7 @@ Steps (run each under `timeout 230`; resumable state in --state):
   comp     complements of the level-k classes: bad with verified witness, or good
   ext10    one-vertex extensions of the good classes found by `comp` (n = 9)
   ext11    one-vertex extensions of the 27-edge n = 10 classes found by ext10
-Sections are appended to triage/585-n9.md as each chunk finishes.
+Sections are appended to 585-n9.md beside this script as each chunk finishes.
 """
 import argparse
 import ast

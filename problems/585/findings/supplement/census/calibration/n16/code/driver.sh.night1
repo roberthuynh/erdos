@@ -3,8 +3,8 @@
 # (code/geng_pp), split into MOD=20000 res/mod shards, run in the fixed shuffled order of
 # data/shard_order.txt by WORKERS parallel workers. Resumable: done shards are skipped.
 # Stops taking shards at 06:10 EDT, kills running shards at 06:13:30, then writes REG5N16.md.
-# Start: cd <lane>; nohup nice -n 10 bash code/driver.sh >> logs/driver.log 2>&1 &
-# Graceful stop (no new shards): touch <lane>/STOP. Hard stop: see JOBS.md.
+# Historical driver snapshot. The fixed dates below describe the original run.
+# This file is retained as method evidence, not as a current launch command.
 set -u
 LANE="$(cd "$(dirname "$0")/.." && pwd)"
 MOD=20000

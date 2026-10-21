@@ -1,8 +1,14 @@
 # Rigid cuts in sparse bipartite instances: spanning pairs fail, thin sets, a one-swap repair lemma
 
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with REVIEW.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
+> Export clarification (2026-10-19): Read together with REVIEW.md fixes F1–F6. The set-size and Corollary 6 corrections are applied below. Historical mpair outputs carry the labeling-bug restriction described in REVIEW.md; this export does not certify regenerated census data.
+
 Pairs scout investigation, October 5, 2026. Status: frozen for review (SHA-256 in
-`FROZEN.sha256`). Written proofs plus computer certificates. Not reviewed. No Lean, no `check.sh`.
-Rungs: Lemmas 1, 2, 7 and Propositions 3, 5 are (a); Examples 4, 8 are (b) counterexamples; Corollary 6
+the omitted historical receipt `FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json)). Written proofs plus computer certificates. Not reviewed. No Lean, no `check.sh`.
+Evidence categories: Lemmas 1, 2, 7 and Propositions 3, 5 are (a); Examples 4, 8 are (b) counterexamples; Corollary 6
 is (a) given the census L5, which is (b). These are small results that steer the C1 step of
 unpublished historical research note; none is a pair theorem.
 
@@ -99,7 +105,7 @@ matching 0–15, 1–16, 2–17, 3–18, 4–19, and the edge 10–5. Then n = 2
 graph6: `data/rigid20.g6`. Consequence: "every sparse instance has two edge-disjoint Hamilton cycles"
 and "every sparse E4 instance has a 4-factor with no 2-edge cut" are both false. Every sparse E4
 instance on ≤ 18 vertices does have two edge-disjoint Hamilton cycles (census in `SCOUT.md` §2.1), and
-a (5,1) side T needs 6t − 5 = e(T) ≤ t², so t ≥ 5 and n ≥ 20: R20 is the smallest possible size.
+a (5,1) side T needs 6t − 5 = e(T) ≤ t², so t = 1 or t ≥ 5; t = 1 would give a vertex of degree 2, impossible since a sparse instance has δ ≥ 4. The same holds for V − T, hence n ≥ 20: R20 is the smallest possible size.
 
 ## 4. Sets with g = 10 in a smallest counterexample
 
@@ -108,16 +114,16 @@ graph with δ ≥ 4, Δ ≤ 6 and e = 3n − 5 on ≤ 17 vertices (classes 5+5, 
 7+8, 8+9: 1, 13, 819, 229,913, 0, 2, 29, 2,895, 1,237,978 graphs (1,471,650 in all), none pair-free; level −5 forces
 class difference ≤ 1 by Identity 1.1).
 
-**Proposition 5.** Let X be as in Lemma 1 and S a set with 2 ≤ |S| ≤ n − 1 and g(S) = 10. Then the
+**Proposition 5.** Let X be as in Lemma 1 and S a set with 3 ≤ |S| ≤ n − 1 and g(S) = 10. Then the
 4-core K of X[S] is nonempty, pair-free, e(K) = 3|K| − 5, and (by L5) |K| ≥ 18.
 
 *Proof.* e(S) = 3|S| − 5. Deleting a vertex of degree ≤ 3 does not decrease e − 3n, so if K ≠ ∅ then
-e(K) ≥ 3|K| − 5; if K = ∅ then X[S] is 3-degenerate and e(S) ≤ 3|S| − 6. K is a proper subset with
+e(K) ≥ 3|K| − 5; if K = ∅ then X[S] is 3-degenerate and, as |S| ≥ 3, e(S) ≤ 3|S| − 6. K is a proper subset with
 ≥ 2 vertices, so sparsity gives e(K) ≤ 3|K| − 5. K is pair-free, bipartite, Δ ≤ 6, δ ≥ 4. ∎
 
 **Corollary 6.** If X (Lemma 1) is of E4 type and has a (5,1) set T, then n ≥ 36.
 
-*Proof.* g(T) = g(V − T) = 10 by Proposition 3; apply Proposition 5 to both. ∎
+*Proof.* Both sides have at least four vertices: a side with one vertex per class would contain a vertex of degree 2 (D(T_Q) = 4 or D(P − T) = 4 on one vertex), against δ ≥ 4. Now g(T) = g(V − T) = 10 by Proposition 3; apply Proposition 5 to both. ∎
 
 ## 5. One-swap repair
 

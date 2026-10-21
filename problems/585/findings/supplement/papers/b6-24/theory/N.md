@@ -1,6 +1,8 @@
 # N.md: what N the rigid-set exclusion plus a census gives for B6
 
-Historical note, 2026-10-05. One page; details in `NOTES.md` §3-§7.
+> Export clarification (2026-10-19): Census provenance correction from c1type/REVIEW.md F1: the pair census F2 itself used geng -b + pairc (one method). The second method for the smallest-counterexample class is the separate E4/C1 census; a quartic-subgraph replication is not a second pair census. Other counts and verdicts below are dated historical records, not fresh verification.
+
+Historical note, 2026-10-05. One page; details in `NOTES.md` (original historical note not bundled) §3-§7.
 
 ## The chain
 
@@ -43,10 +45,10 @@ of generation (likely far more), plus the pair tests.
 | PAPER Lemma 1 (smallest W1b counterexample is sparse E4 or C1, δ ≥ 4) | reviewed, ACCEPT (findings/supplement/papers/pairs/REVIEW.md) |
 | PAPER Lemma 2 (sparse E4 has a 4-factor), Prop 3 ((5,1) sets) | reviewed, ACCEPT |
 | PAPER Prop 5 (g = 10, \|S\| ≥ 3 ⇒ core ≥ 18) and Cor 6 (n ≥ 36) | reviewed, ACCEPT WITH FIX (\|S\| ≥ 3) |
-| Census L5 (no pair-free level −5 bipartite, δ ≥ 4, n ≤ 17) | census, one method (genbg + pairc); referee spot-check to 13 vertices with own code |
-| W1b n ≤ 18 | census, two methods: F2 (geng -b + pairc, 585-fable) and the pairs-investigation E4 a ≤ 9 / C1 s ≤ 8 censuses (genbg + ptool; referee re-ran a ≤ 7) |
-| H22 (bipartite 4-regular, no 2-edge cut, n ≤ 22 ⇒ HD) | census: one method at n = 22, two methods for n ≤ 20 (referee) |
-| C1-PAPER Lemma 4.4 (bad ports carry ≤ 2 units) | reviewed, two referees ACCEPT |
+| Census L5 (no pair-free level −5 bipartite, δ ≥ 4, n ≤ 17) | census, one method (genbg + pairc); AI review spot-check to 13 vertices with own code |
+| W1b n ≤ 18 | census, two methods: F2 (geng -b + pairc, original census) and the pairs-investigation E4 a ≤ 9 / C1 s ≤ 8 censuses (genbg + ptool; AI review re-ran a ≤ 7) |
+| H22 (bipartite 4-regular, no 2-edge cut, n ≤ 22 ⇒ HD) | census: one method at n = 22, two methods for n ≤ 20 (AI review) |
+| C1-PAPER Lemma 4.4 (bad ports carry ≤ 2 units) | reviewed, two AI reviewers ACCEPT |
 | LP rigidity criterion, classification of s ≤ 1 sets, no rigid set for n < 36 (NOTES §3-§7) | unreviewed paper; criterion code-checked on 386,304 sets, classification on all 52,557 sparse E4 with n ≤ 16 |
 | 2EC' | OPEN. No counterexample in ~800 sparse instances (random, block, necklace); a repair rule (atom plus shortest Lemma 7 cycle) lowered the number of bad sets at every step in all 362 necklace instances |
 | C1 analog (gap item 4) | not done |

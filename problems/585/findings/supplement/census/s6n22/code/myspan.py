@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""myspan.py -- the s6hunt lane's own exact deciders (wave5/s6hunt). Written from the definitions; it
-shares no code with wave4/va6/tools/span_oracle.py or 585-fable-wildcard/tools/pair_oracle.py.
+"""myspan.py -- the exact deciders from the S6 investigation. Written from the definitions; it
+shares no code with span_oracle.py or the original pair_oracle.py.
 
   span2hc(n, edges, seconds)   two edge-disjoint Hamilton cycles of the whole graph (a spanning pair).
                                SAT (Glucose 4.1): x[c][e] for colors c = 0, 1; every vertex has

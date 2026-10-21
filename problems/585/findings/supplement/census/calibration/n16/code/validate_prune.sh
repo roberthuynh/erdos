@@ -4,7 +4,7 @@
 set -u
 HERE="$(cd "$(dirname "$0")" && pwd)"
 G="$HOME/.cache/erdos585/nauty2_9_3/geng"
-P="$HERE/../../../../585-fable/tools/pairc"
+P="${PAIRC:-pairc}"
 T="${TMPDIR:-/tmp}"
 for spec in "9 21:21" "9 20:20" "10 23:23" "10 22:22" "11 26:26" "11 27:27" "10 0:25" "8 0:20"; do
   set -- $spec

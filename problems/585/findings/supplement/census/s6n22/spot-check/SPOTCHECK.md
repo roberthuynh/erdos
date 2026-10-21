@@ -1,13 +1,15 @@
 # S6 at |B| = 22: independent spot-check of the S6 census
 
-Historical computation, 2026-10-06. Rung (b) computation. Nothing here is reviewed. No `check.sh`, no
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
+Historical computation, 2026-10-06. Finite computational evidence. The original record did not assert independent review. No `check.sh`, no
 Lean. Run record: `JOBS.md`; code in `code/`; data in `data/`.
 
 **Verdict: s6n22 checks out on the sample.** On 50 random slices (588,094 colored graphs, 0.3758% of the 156,473,848 classes; 38,814,204 (graph, edge) tests, 0.3758% of s6n22's 10,327,273,770) every compared count matches s6n22's per-slice record (genbg count, E10 count, min-cut histogram, tests), and every test has two edge-disjoint Hamilton cycles in Y = B - o - y, found by a SAT encoding written here and checked edge by edge against the graph: 38,814,204 SPAN, 0 NO, 0 witness failures. The three non-E10 graphs are confirmed not E10 by two methods (min essential cuts 8, 6, 8, as recorded). S6's conclusion fails on each of them, exactly on the edges of the minimum cut (8 + 6 + 8 of 198 tests), so S6 needs its E10 hypothesis already at |B| = 22.
 
 ## What was checked, and what is shared with s6n22
 
-S6 (unpublished historical S6 source §7): if Γ = B - o is sparse, every port y of o has two edge-disjoint Hamilton
+S6 (../../../papers/s6/PAPER.md (statement only)): if Γ = B - o is sparse, every port y of o has two edge-disjoint Hamilton
 cycles in B - o - y. For a 6-regular B, g(S) = |δ_B(S)| for S avoiding o, so "B - o sparse" for
 one o, or for all o, is the same as "B is E10" (every edge cut with at least 2 vertices on each side
 has at least 10 edges). The test for an edge oy does not depend on which end is called o, so a
@@ -16,8 +18,7 @@ each is tested in its own slice, as in s6n22 (JOBS.md there).
 
 - **Shared with s6n22:** the genbg binary `~/.cache/erdos585/nauty2_9_3/genbg` (SHA-256
   `502f5f46e613f9ee…`) and its command line `genbg -X-3 -d6:6 -D6:6 11 11 r/10000` (read from
-  s6n22's `run_shard.sh`); the PySAT library (s6n22 used it, through unpublished historical S6 source's
-  `span_oracle.py`, only for its 0 survivors and its post-run SAT check of the 333,908 stalled AM
+  s6n22's `run_shard.sh`); the PySAT library (s6n22 used it, through the supplied `../code/span_oracle.py`, only for its 0 survivors and its post-run SAT check of the 333,908 stalled AM
   tests; its decisions came from its own C tool, a DFS and the AM walk).
 - **Written here, sharing no code with `findings/supplement/census/s6n22/code`:** `code/e10cut.c` (graph6 decoder and
   exact minimum essential cut), `code/spantest.py` (graph6 decoder, SAT encoding, witness checker),

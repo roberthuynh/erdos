@@ -1,4 +1,4 @@
-"""SAT check of the one-crossing step at a port of a C1-type instance (c1type lane).
+"""SAT check of the one-crossing step at a port of a C1-type instance (C1 type).
 
 Setting (NOTES.md §1): X is a smallest W1b counterexample of C1 type on n vertices, y a good port,
 Y = X - y with classes P = W - y and Q = U (|P| = |Q| = m/2, m = n - 1), F a 4-factor of Y with bad

@@ -1,6 +1,10 @@
 # E110: Hall losses and actual boundary compatibility
 
-2026-10-04. Frozen attempt for independent review. E110 remains unresolved; the registered mechanism is closed. No project result is claimed. Only a official oracle PASS can establish one. This paper tests the E110 extraction statement registered in `unpublished historical research note` (not included), Section 4. The terminal subgraph may have arbitrarily small order. No polynomial retained-order hypothesis is introduced.
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with E110-REVIEW.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
+2026-10-04. Historical argument. E110 remains unresolved, and this paper claims no verified theorem. The extraction statement is given in Section 1 below; the original research note is not included. The terminal subgraph may have arbitrarily small order. No polynomial retained-order hypothesis is introduced.
 
 ## 1. Exact target and comparison boundary
 

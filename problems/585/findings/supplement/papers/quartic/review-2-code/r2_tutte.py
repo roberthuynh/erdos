@@ -1,4 +1,4 @@
-"""Referee 2: Tutte form and budget identity used by REPORT.md Theorem 5 (c = 2) (own code).
+"""Second independent implementation: Tutte form and budget identity used by REPORT.md Theorem 5 (c = 2) (own code).
 
 For random simple graphs with min degree >= 4 and max degree <= 6 (n = 7..9):
   T1  delta(S,T) = f(S) + 4|T| - e(S,T) - q(S,T), q = #components C of G - S - T with e(C,S) odd,

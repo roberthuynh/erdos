@@ -1,5 +1,5 @@
-/* hdq.c -- wave4/h22b: second, independent checker for H22 (connected bipartite 4-regular graphs).
- * Written for this lane; it shares no code with pairs/ptool.c, pairs/cuts.c or review/code/hd.c,
+/* hdq.c -- census/h22: second, independent checker for H22 (connected bipartite 4-regular graphs).
+ * Written for this investigation; it shares no code with pairs/ptool.c, pairs/cuts.c or review/code/hd.c,
  * and its HD search is a different algorithm (edge 2-colouring search, not Hamilton-cycle enumeration).
  *
  * Input: graph6 lines on stdin, n <= 32. For every graph:

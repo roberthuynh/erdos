@@ -1,10 +1,10 @@
 #!/bin/bash
 # Calibration of pairsat.py against brute.py and against the B-1 ladder counts (CALIBRATION.md R2).
 set -u
-LANE=[local path]
-NA=[local path]
-PY=[local path]
-SP=[local scratch folder]
+LANE="${ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_CALIB_SH_LANE:?Set ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_CALIB_SH_LANE to the original LANE dependency; see REPRODUCTION-BOUNDARY.md}"
+NA="${ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_CALIB_SH_NA:?Set ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_CALIB_SH_NA to the original NA dependency; see REPRODUCTION-BOUNDARY.md}"
+PY="${ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_CALIB_SH_PY:?Set ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_CALIB_SH_PY to the original PY dependency; see REPRODUCTION-BOUNDARY.md}"
+SP="${ERDOS585_SCRATCH_DIR:?Set ERDOS585_SCRATCH_DIR to a writable scratch directory}"
 L=$LANE/logs/calib
 mkdir -p "$SP" "$L"
 # (1) every graph on 3..8 vertices: SAT verdict vs exhaustive verdict, graph by graph

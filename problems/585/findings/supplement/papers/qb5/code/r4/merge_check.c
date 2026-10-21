@@ -1,4 +1,4 @@
-/* Round 4 (lane qb5): computer check of the lemmas behind the KL1 proof of PAPER4.
+/* Round 4 (computational checks): computer check of the lemmas behind the KL1 proof of PAPER4.
  * Input lines: "na nc mask_1 ... mask_nc [ignored]" (mask_j = A-neighbours of the j-th C-vertex).
  * For every multiset m on A with m(A) = 4 and m(a) <= min(3, delta_a) (covering L_A or not):
  *   theta*(T) = m(T) + 4 - 4|T| + sum_c (e(c,T) - 2)^+  for all T (PAPER3 theta(T)).

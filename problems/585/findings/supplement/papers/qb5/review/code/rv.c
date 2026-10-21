@@ -1,5 +1,5 @@
-/* rv.c: independent referee checker for the QB(5) paper (wave4/qb5/PAPER.md).
- * Written from scratch by the referee; shares no code with qb5/code/.
+/* rv.c: independent checker for the QB(5) paper (papers/qb5/PAPER.md).
+ * Written from scratch independently; shares no code with qb5/code/.
  *
  * Reads graph6 lines on stdin. Modes (argv[1]):
  *   c2     full C2 analysis per graph (Lemma 3.1 identities, Lemma 3.2 types,

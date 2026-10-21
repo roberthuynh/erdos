@@ -1,9 +1,11 @@
-# Independent adversarial referee report on `findings/supplement/papers/quartic/C1-PAPER.md`
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
+# Independent adversarial AI review report on `findings/supplement/papers/quartic/C1-PAPER.md`
 
 AI review (Fable). Date: 2026-10-05. Paper frozen at the SHA-256 in
-`findings/supplement/papers/quartic/C1-FROZEN.sha256`; checked `OK` at the start and at the end of this review (LOG.md). I did not
-open `C1-REVIEW.md`, `C1-CORRECTIONS.md`, `review-c1/` or `findings/supplement/papers/quartic/review-2-code/` before writing the verdict in
-§1 to §7; §8 (added last) compares with them. All code here is my own (`code/`), nothing reused
+the omitted historical receipt `findings/supplement/papers/quartic/C1-FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json); checked `OK` at the start and at the end of this review (C1-REVIEW-3-LOG.md). I did not
+open `C1-REVIEW.md`, `C1-CORRECTIONS.md`, `review-1-code/` or `findings/supplement/papers/quartic/review-2-code/` before writing the verdict in
+§1 to §7; §8 (added last) compares with them. All code here is my own (`review-3-code/`), nothing reused
 from `G110/c1checks` or `G110/checks`; nauty `genbg`/`geng` 2.9.3 are used only as generators.
 
 ## 1. FINAL verdict: ACCEPT WITH FIXES (one required wording fix, R1; no mathematical error)
@@ -17,7 +19,7 @@ with it the remark follows from Corollary 5.3. No statement or proof changes.
 
 Honesty note on provenance: my independent pass (§2-§7 below, written before I opened any other
 review) found no required fix and would have returned plain ACCEPT. R1 was found by the first
-referee (C1-REVIEW.md) and confirmed by the second (a separate AI review); I checked it against the paper's
+AI review (C1-REVIEW.md) and confirmed by the second (a separate AI review); I checked it against the paper's
 line 242 and CORRECTIONS.md's own text and agree it is required, because a stranger would read the
 remark as a claim about all graphs. I missed it because I checked the remark's mathematics (true for
 bipartite graphs) and not its paraphrase of the source word for word. The verdict on every theorem, lemma and corollary is unchanged: ACCEPT.
@@ -33,7 +35,7 @@ for n ≤ 10, and the minimality-free core (Lemma 4.4) on exactly sparse built i
 Apart from R1 above, §6 lists three optional clarifications of wording; none changes a statement
 or a proof.
 
-Rung, in the project's vocabulary: Theorem 4.3 and Corollaries 5.1 to 5.4 are rung (a) written
+Rung, in the project's vocabulary: Theorem 4.3 and Corollaries 5.1 to 5.4 are written-proof evidence written
 proofs, not Lean-checked; this review does not change that. Not a `check.sh` result.
 
 ## 2. What the proof rests on (my reconstruction)
@@ -195,7 +197,7 @@ D(S_W)), H5 (in-P1 deficiencies 2 and 2 + 6 = 8, so 4 and 4 after α), H6 (6c + 
 Olson (1969) itself was not re-fetched (the paper says so too); it is not load-bearing for Theorem
 4.3, and the group-ring proof quoted from PAPER.md stands on its own.
 
-## 5. My code checks (all in `code/`, all exit 0, outputs in `code/out_*.json`)
+## 5. My code checks (all in `review-3-code/`, all exit 0, outputs in `review-3-code/out_*.json`)
 
 | Script | What it checks | Result |
 |---|---|---|
@@ -227,7 +229,7 @@ What the code cannot check: Lemma 2.1 itself and the use of minimality in Lemmas
    not: κ(Q) = 1 gives k = 2, g(Q) = 10 and u1 ∈ Q give D(C) = 0 and σ = −1. So in a sparse
    instance G − w has no 4-factor for every W-vertex of the union of petals. My first version of
    check (E) wrongly demanded that such w be a *port* and flagged degree-6 vertices; that was my
-   error, corrected (LOG.md 15:29).
+   error, corrected (C1-REVIEW-3-LOG.md 15:29).
 2. **In a sparse C1 instance with D_U = 1, 𝒫 is a chain.** Suppose Q1, Q2 ∈ 𝒫 are incomparable.
    By Lemma 4.2, Q = Q1 ∪ Q2 and Q0 = Q1 ∩ Q2 are in 𝒫 and e(X1, X2) = 0 for X_i = Q_i − Q0 ≠ ∅;
    κ(X_i) = 0, |X_i| ≥ 2, so g(X_i) ≥ 10 by sparsity, and g(Q_i) = g(Q0) + g(X_i) − 2e(Q0, X_i)
@@ -246,13 +248,13 @@ What the code cannot check: Lemma 2.1 itself and the use of minimality in Lemmas
 
 ## 8. Comparison with the other reviews
 
-(Written after §1-§7; see LOG.md for the time.)
+(Written after §1-§7; see C1-REVIEW-3-LOG.md for the time.)
 
 Read after §1-§7 were written: `findings/supplement/papers/quartic/C1-REVIEW.md` (investigation M3-R), `findings/supplement/papers/quartic/C1-CORRECTIONS.md`, the
 verdict table of `findings/supplement/papers/quartic/C1-REVIEW-2.md`, and the file listings of `findings/supplement/papers/quartic/review-1-code/` and
 `findings/supplement/papers/quartic/review-2-code/` (their code was not read).
 
-- **Verdicts agree on every item.** Both earlier referees: ACCEPT WITH FIXES, no mathematical
+- **Verdicts agree on every item.** Both earlier AI reviewers: ACCEPT WITH FIXES, no mathematical
   error, every lemma, theorem and corollary ACCEPT. Mine, independently: every lemma, theorem and
   corollary ACCEPT, no gap.
 - **R1.** Both found the missing word "bipartite" at line 242; I had not. Adopted above as the one
@@ -262,7 +264,7 @@ verdict table of `findings/supplement/papers/quartic/C1-REVIEW-2.md`, and the fi
   sparse instance (C1-REVIEW.md N4, ref2 §2.6, my §7.2; the three proofs differ in the final
   counting step but reach the same contradiction). All three also note w(C) ≥ 4 is the sharp
   bound in §5.4 (my §6.3 only spells out the ≥ 3 step).
-- **Second referee's optional wording notes** (from C1-CORRECTIONS.md): line 22 "saturated side"
+- **Second AI review's optional wording notes** (from C1-CORRECTIONS.md): line 22 "saturated side"
   should read "side U" (U is not saturated when D_U = 1; I agree, it is loose), and Appendix A.6
   "would have refuted Theorem 4.3" should read "Lemma 4.4" (I agree: an instance where every port
   is bad and every named set has g ≥ 10 would contradict the minimality-free lemma, not by itself

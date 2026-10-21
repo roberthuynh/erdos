@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""check_stall_frames.py -- independent check of the stalled-frame lines (wave6/s6n22).
+"""check_stall_frames.py -- independent check of the stalled-frame lines (census/s6n22).
 
 For each line of data/stall_frames.txt (format in RESULT.md): rebuild Y = B - o - y and Y+ = Y + Lambda
 from the line alone, and check that the colours form a frame (every vertex of Y+ meets exactly one edge

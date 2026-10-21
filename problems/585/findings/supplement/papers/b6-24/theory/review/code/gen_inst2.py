@@ -1,4 +1,4 @@
-"""gen_inst2.py (referee's own generator): two-block graphs that always have a 4-factor.
+"""gen_inst2.py (independent generator): two-block graphs that always have a 4-factor.
 
 Block types: K44 - e (ends p, q of degree 3) and K55 - perfect matching - e (ends of degree 3).
 Two blocks are joined by the two compensating edges p(1)q(2), p(2)q(1) (so a 4-factor exists),

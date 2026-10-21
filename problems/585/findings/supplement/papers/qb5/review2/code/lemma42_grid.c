@@ -1,6 +1,6 @@
-/* lemma42_grid.c -- referee's re-implementation of the enumeration *described* in PAPER2 §4,
+/* lemma42_grid.c -- independent re-implementation of the enumeration *described* in PAPER2 §4,
  * program (1), to reproduce its counts (22,792 graphs, 15,342,638 labellings), with the
- * referee's own decision (superset closure of achievable OK-pairs, as in lemma42.c).
+ * independent decision (superset closure of achievable OK-pairs, as in lemma42.c).
  * Graphs: 7-edge subsets of {0..6} x {0..6}, every degree <= 3, degree sequences
  * non-increasing on both sides (isolated vertices last).
  * mode 0: p, q ends of cut edges; mode 1: p or q may be an isolated vertex (or absent).

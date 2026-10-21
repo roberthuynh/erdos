@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""json2g6.py: B_edges (+ M) from a lane JSON host/trap file -> graph6 line, vertex order kept
+"""json2g6.py: B_edges (+ M) from a JSON host/trap file -> graph6 line, vertex order kept
 (A = 0..M-1, B = M..2M-1). Usage: json2g6.py file.json [...] > out.g6"""
 import json, sys
 

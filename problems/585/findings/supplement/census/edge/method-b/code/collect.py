@@ -1,4 +1,4 @@
-"""collect.py -- collector for method B (wave8/exb).
+"""collect.py -- collector for method B (census/edge/method-b).
 
 Reads code/jobs.tsv, code/queue.txt and logs/<tag>/shard_<r>.{g6,err,done};
 sums shards per job; re-decides every output graph three ways (h4filt, the

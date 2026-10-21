@@ -1047,28 +1047,28 @@
     "declaration": "Erdos60.Statistics.two_mul_choose_two",
     "oracle": false,
     "type": "\u2200 (n : \u2115), 2 * n.choose 2 = n * (n - 1)",
-    "source_sha256": "30e7d2db7d2f351b2b86638ddee8a25dfe5e53993f6fbf5145569fabe2b1f62a"
+    "source_sha256": "238e0a7035c4715a4072abc65b00dcb7d881280f4e6496d89cbbf6ee89bedf60"
   },
   {
     "module": "SubsetPathCount",
     "declaration": "Erdos60.Statistics.codegree_eq_full_sum",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V) (x y : V), Erdos60.Statistics.codegree G x y = \u2211 w, if G.Adj x w \u2227 G.Adj y w then 1 else 0",
-    "source_sha256": "30e7d2db7d2f351b2b86638ddee8a25dfe5e53993f6fbf5145569fabe2b1f62a"
+    "source_sha256": "238e0a7035c4715a4072abc65b00dcb7d881280f4e6496d89cbbf6ee89bedf60"
   },
   {
     "module": "SubsetPathCount",
     "declaration": "Erdos60.Statistics.subset_ordered_twoPath_count",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V) (A : Finset V), \u2211 x \u2208 A, \u2211 y \u2208 A.erase x, Erdos60.Statistics.codegree G x y = \u2211 w, (G.neighborFinset w \u2229 A).card * ((G.neighborFinset w \u2229 A).card - 1)",
-    "source_sha256": "30e7d2db7d2f351b2b86638ddee8a25dfe5e53993f6fbf5145569fabe2b1f62a"
+    "source_sha256": "238e0a7035c4715a4072abc65b00dcb7d881280f4e6496d89cbbf6ee89bedf60"
   },
   {
     "module": "SubsetPathCount",
     "declaration": "Erdos60.Statistics.subset_path_bound",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V) (A : Finset V), \u2211 w, (G.neighborFinset w \u2229 A).card.choose 2 \u2264 2 * Erdos60.Counting.cycleCount G + A.card.choose 2",
-    "source_sha256": "30e7d2db7d2f351b2b86638ddee8a25dfe5e53993f6fbf5145569fabe2b1f62a"
+    "source_sha256": "238e0a7035c4715a4072abc65b00dcb7d881280f4e6496d89cbbf6ee89bedf60"
   },
   {
     "module": "DegreeBounds",
@@ -1376,14 +1376,14 @@
     "declaration": "Erdos60.Completion.exists_isolated_neighbor",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (v : V), Odd (G.degree v) \u2192 \u2203 w, G.Adj v w \u2227 \u2200 (a : V), G.Adj v a \u2192 \u00acG.Adj w a",
-    "source_sha256": "2d74086a7a030eeed1a26b92e0d2aae04e26f1b791299af00797f20d1e0c19d0"
+    "source_sha256": "4c89a816fca40059469e6627126772cd462c7f2e42be7563d9e3505dfc5df9e4"
   },
   {
     "module": "RegularVertex",
     "declaration": "Erdos60.Completion.regular_vertex_structure",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (q : \u2115), Even q \u2192 Fintype.card V = q ^ 2 + q + 1 \u2192 \u2200 (v low : V), G.degree v = q + 1 \u2192 G.Adj v low \u2192 G.degree low = q \u2192 (\u2200 (a : V), G.Adj v a \u2192 a \u2260 low \u2192 G.degree a = q + 1) \u2192 \u2203 w, G.Adj v w \u2227 (\u2200 (a : V), G.Adj v a \u2192 \u00acG.Adj w a) \u2227 (\u2200 (a : V), G.Adj v a \u2192 a \u2260 w \u2192 \u2203! b, G.Adj v b \u2227 G.Adj a b) \u2227 \u2200 (x : V), x \u2260 v \u2192 \u00acG.Adj v x \u2192 \u2203! a, G.Adj v a \u2227 x \u2208 Erdos60.Completion.cell G v a",
-    "source_sha256": "2d74086a7a030eeed1a26b92e0d2aae04e26f1b791299af00797f20d1e0c19d0"
+    "source_sha256": "4c89a816fca40059469e6627126772cd462c7f2e42be7563d9e3505dfc5df9e4"
   },
   {
     "module": "HighPair",
@@ -1586,42 +1586,42 @@
     "declaration": "Erdos60.Completion.paired_cells_no_edges",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 {v a b x y : V}, G.Adj v a \u2192 G.Adj v b \u2192 G.Adj a b \u2192 x \u2208 Erdos60.Completion.cell G v a \u2192 y \u2208 Erdos60.Completion.cell G v b \u2192 \u00acG.Adj x y",
-    "source_sha256": "c1a6fed301b22b115b4fb08a158ec7986fef000579f6d4e14635efed457263f9"
+    "source_sha256": "afd56da566a0280a0e679f2e7b4252756e61ab75939ee99b408f2707761735f7"
   },
   {
     "module": "RegularLowIsolation",
     "declaration": "Erdos60.Completion.cross_cell_neighbor_unique",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 {v a b x y z : V}, G.Adj v a \u2192 x \u2208 Erdos60.Completion.cell G v a \u2192 y \u2208 Erdos60.Completion.cell G v a \u2192 z \u2208 Erdos60.Completion.cell G v b \u2192 G.Adj x z \u2192 G.Adj y z \u2192 x = y",
-    "source_sha256": "c1a6fed301b22b115b4fb08a158ec7986fef000579f6d4e14635efed457263f9"
+    "source_sha256": "afd56da566a0280a0e679f2e7b4252756e61ab75939ee99b408f2707761735f7"
   },
   {
     "module": "RegularLowIsolation",
     "declaration": "Erdos60.Completion.within_cell_neighbor_unique",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 {v a x y z : V}, x \u2208 Erdos60.Completion.cell G v a \u2192 y \u2208 Erdos60.Completion.cell G v a \u2192 z \u2208 Erdos60.Completion.cell G v a \u2192 G.Adj x y \u2192 G.Adj x z \u2192 y = z",
-    "source_sha256": "c1a6fed301b22b115b4fb08a158ec7986fef000579f6d4e14635efed457263f9"
+    "source_sha256": "afd56da566a0280a0e679f2e7b4252756e61ab75939ee99b408f2707761735f7"
   },
   {
     "module": "RegularLowIsolation",
     "declaration": "Erdos60.Completion.cell_center_neighbor_iff",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 {v a x b : V}, G.Adj v a \u2192 x \u2208 Erdos60.Completion.cell G v a \u2192 G.Adj v b \u2192 (G.Adj x b \u2194 b = a)",
-    "source_sha256": "c1a6fed301b22b115b4fb08a158ec7986fef000579f6d4e14635efed457263f9"
+    "source_sha256": "afd56da566a0280a0e679f2e7b4252756e61ab75939ee99b408f2707761735f7"
   },
   {
     "module": "RegularLowIsolation",
     "declaration": "Erdos60.Completion.two_low_of_degree_sum",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) (q : \u2115) (s : Finset V), (\u2200 x \u2208 s, q \u2264 G.degree x) \u2192 \u2211 x \u2208 s, G.degree x + 2 \u2264 (q + 1) * s.card \u2192 2 \u2264 {x \u2208 s | G.degree x \u2264 q}.card",
-    "source_sha256": "c1a6fed301b22b115b4fb08a158ec7986fef000579f6d4e14635efed457263f9"
+    "source_sha256": "afd56da566a0280a0e679f2e7b4252756e61ab75939ee99b408f2707761735f7"
   },
   {
     "module": "RegularLowIsolation",
     "declaration": "Erdos60.Completion.odd_neighbor_set_internal_bound",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (a : V) (s : Finset V), (\u2200 x \u2208 s, G.Adj a x) \u2192 Odd s.card \u2192 let H := SimpleGraph.comap Subtype.val G; \u2211 x, H.degree x + 1 \u2264 s.card",
-    "source_sha256": "c1a6fed301b22b115b4fb08a158ec7986fef000579f6d4e14635efed457263f9"
+    "source_sha256": "afd56da566a0280a0e679f2e7b4252756e61ab75939ee99b408f2707761735f7"
   },
   {
     "module": "DegreeDeficiency",
@@ -1999,126 +1999,126 @@
     "declaration": "Erdos60.Completion.cross_pairs_le_missing",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] [Configuration.HasLines P L] (A B : Finset P) (M : Finset L) (l m : L), (\u2200 a \u2208 A, a \u2208 l \u2227 a \u2209 m) \u2192 (\u2200 b \u2208 B, b \u2208 m \u2227 b \u2209 l) \u2192 (\u2200 a \u2208 A, \u2200 b \u2208 B, \u2200 (n : L), a \u2208 n \u2192 b \u2208 n \u2192 n \u2208 M) \u2192 A.card * B.card \u2264 M.card",
-    "source_sha256": "8fa998c2bc1de9dc8c464b30bff664b3d23fb86ef4e3a1591c747ed94c6651db"
+    "source_sha256": "fd17ee47fbd4432e3db08db051846c49d7d476d8e785e0707fe8f6251b9b05eb"
   },
   {
     "module": "NeighborhoodLines",
     "declaration": "Erdos60.Completion.off_line_join_family",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] [Configuration.HasLines P L] [DecidableEq L] (A : Finset P) (M : Finset L) (l : L), \u2200 w \u2209 l, (\u2200 a \u2208 A, a \u2208 l) \u2192 (\u2200 a \u2208 A, \u2200 (n : L), w \u2208 n \u2192 a \u2208 n \u2192 n \u2208 M) \u2192 \u2203 Q \u2286 M, Q.card = A.card \u2227 \u2200 n \u2208 Q, w \u2208 n",
-    "source_sha256": "8fa998c2bc1de9dc8c464b30bff664b3d23fb86ef4e3a1591c747ed94c6651db"
+    "source_sha256": "fd17ee47fbd4432e3db08db051846c49d7d476d8e785e0707fe8f6251b9b05eb"
   },
   {
     "module": "NeighborhoodLines",
     "declaration": "Erdos60.Completion.large_pencils_same_center",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] [Configuration.HasLines P L] [DecidableEq P] [DecidableEq L] (M Q R : Finset L) (w z : P), Q \u2286 M \u2192 R \u2286 M \u2192 (\u2200 n \u2208 Q, w \u2208 n) \u2192 (\u2200 n \u2208 R, z \u2208 n) \u2192 M.card + 1 < Q.card + R.card \u2192 w = z",
-    "source_sha256": "8fa998c2bc1de9dc8c464b30bff664b3d23fb86ef4e3a1591c747ed94c6651db"
+    "source_sha256": "fd17ee47fbd4432e3db08db051846c49d7d476d8e785e0707fe8f6251b9b05eb"
   },
   {
     "module": "NeighborhoodLines",
     "declaration": "Erdos60.Completion.three_pencil_dominant",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] [Configuration.HasLines P L] [inst_2 : DecidableEq P] (N A B C : Finset P) (M : Finset L) (l m n : L) (u : P) (q : \u211d), 10 ^ 8 \u2264 q \u2192 999 * q / 1000 \u2264 \u2191N.card \u2192 \u2191M.card \u2264 1002 * q / 1000 \u2192 u \u2208 l \u2192 N \u2286 insert u (A \u222a B \u222a C) \u2192 A \u2286 N \u2192 B \u2286 N \u2192 C \u2286 N \u2192 (\u2200 a \u2208 A, a \u2208 l \u2227 a \u2209 m \u2227 a \u2209 n) \u2192 (\u2200 b \u2208 B, b \u2208 m \u2227 b \u2209 l) \u2192 (\u2200 c \u2208 C, c \u2208 n \u2227 c \u2209 l) \u2192 B.card \u2264 A.card \u2192 C.card \u2264 A.card \u2192 (\u2200 x \u2208 N, \u2200 y \u2208 N, x \u2260 y \u2192 \u2200 (k : L), x \u2208 k \u2192 y \u2208 k \u2192 k \u2208 M) \u2192 {x \u2208 N | x \u2209 l}.card \u2264 6",
-    "source_sha256": "8fa998c2bc1de9dc8c464b30bff664b3d23fb86ef4e3a1591c747ed94c6651db"
+    "source_sha256": "fd17ee47fbd4432e3db08db051846c49d7d476d8e785e0707fe8f6251b9b05eb"
   },
   {
     "module": "NeighborhoodLines",
     "declaration": "Erdos60.Completion.common_exception_point",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] [Configuration.HasLines P L] [DecidableEq P] [DecidableEq L] (A B : Finset P) (M : Finset L) (l m : L) (w z : P) (q : \u211d), 10 ^ 8 \u2264 q \u2192 \u2191M.card \u2264 1002 * q / 1000 \u2192 999 * q / 1000 - 6 \u2264 \u2191A.card \u2192 999 * q / 1000 - 6 \u2264 \u2191B.card \u2192 w \u2209 l \u2192 z \u2209 m \u2192 (\u2200 a \u2208 A, a \u2208 l) \u2192 (\u2200 b \u2208 B, b \u2208 m) \u2192 (\u2200 a \u2208 A, \u2200 (k : L), w \u2208 k \u2192 a \u2208 k \u2192 k \u2208 M) \u2192 (\u2200 b \u2208 B, \u2200 (k : L), z \u2208 k \u2192 b \u2208 k \u2192 k \u2208 M) \u2192 w = z",
-    "source_sha256": "8fa998c2bc1de9dc8c464b30bff664b3d23fb86ef4e3a1591c747ed94c6651db"
+    "source_sha256": "fd17ee47fbd4432e3db08db051846c49d7d476d8e785e0707fe8f6251b9b05eb"
   },
   {
     "module": "RegularCellDeficit",
     "declaration": "Erdos60.Completion.mem_cellFinset",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) (v a x : V), x \u2208 Erdos60.Completion.cellFinset G v a \u2194 x \u2208 Erdos60.Completion.cell G v a",
-    "source_sha256": "510e8b7730c46fd7f078d1eac57b5a4d0a19ec67b796fccb0c50b57932dde15f"
+    "source_sha256": "c31e22b55075649394bb05179f35d57978b53e949d8666b3e35a47c7f2900420"
   },
   {
     "module": "RegularCellDeficit",
     "declaration": "Erdos60.Completion.cell_neighbor_decomposition",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (v a x : V), G.Adj v a \u2192 x \u2208 Erdos60.Completion.cell G v a \u2192 (\u2200 (y : V), y \u2260 v \u2192 \u00acG.Adj v y \u2192 \u2203 b, G.Adj v b \u2227 y \u2208 Erdos60.Completion.cell G v b) \u2192 G.neighborFinset x = insert a ((G.neighborFinset v).biUnion fun b => G.neighborFinset x \u2229 Erdos60.Completion.cellFinset G v b)",
-    "source_sha256": "510e8b7730c46fd7f078d1eac57b5a4d0a19ec67b796fccb0c50b57932dde15f"
+    "source_sha256": "c31e22b55075649394bb05179f35d57978b53e949d8666b3e35a47c7f2900420"
   },
   {
     "module": "RegularCellDeficit",
     "declaration": "Erdos60.Completion.cell_degree_decomposition",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (v a x : V), G.Adj v a \u2192 x \u2208 Erdos60.Completion.cell G v a \u2192 (\u2200 (y : V), y \u2260 v \u2192 \u00acG.Adj v y \u2192 \u2203 b, G.Adj v b \u2227 y \u2208 Erdos60.Completion.cell G v b) \u2192 G.degree x = 1 + \u2211 b \u2208 G.neighborFinset v, (G.neighborFinset x \u2229 Erdos60.Completion.cellFinset G v b).card",
-    "source_sha256": "510e8b7730c46fd7f078d1eac57b5a4d0a19ec67b796fccb0c50b57932dde15f"
+    "source_sha256": "c31e22b55075649394bb05179f35d57978b53e949d8666b3e35a47c7f2900420"
   },
   {
     "module": "RegularCellDeficit",
     "declaration": "Erdos60.Completion.neighbor_inter_card",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) (x : V) (s : Finset V), (G.neighborFinset x \u2229 s).card = \u2211 y \u2208 s, if G.Adj x y then 1 else 0",
-    "source_sha256": "510e8b7730c46fd7f078d1eac57b5a4d0a19ec67b796fccb0c50b57932dde15f"
+    "source_sha256": "c31e22b55075649394bb05179f35d57978b53e949d8666b3e35a47c7f2900420"
   },
   {
     "module": "RegularCellDeficit",
     "declaration": "Erdos60.Completion.cross_sum_symm",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) (s t : Finset V), \u2211 x \u2208 s, (G.neighborFinset x \u2229 t).card = \u2211 y \u2208 t, (G.neighborFinset y \u2229 s).card",
-    "source_sha256": "510e8b7730c46fd7f078d1eac57b5a4d0a19ec67b796fccb0c50b57932dde15f"
+    "source_sha256": "c31e22b55075649394bb05179f35d57978b53e949d8666b3e35a47c7f2900420"
   },
   {
     "module": "RegularCellDeficit",
     "declaration": "Erdos60.Completion.cell_cross_degree_le_one",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 {v b x : V}, G.Adj v b \u2192 \u00acG.Adj v x \u2192 (G.neighborFinset x \u2229 Erdos60.Completion.cellFinset G v b).card \u2264 1",
-    "source_sha256": "510e8b7730c46fd7f078d1eac57b5a4d0a19ec67b796fccb0c50b57932dde15f"
+    "source_sha256": "c31e22b55075649394bb05179f35d57978b53e949d8666b3e35a47c7f2900420"
   },
   {
     "module": "RegularCellDeficit",
     "declaration": "Erdos60.Completion.cell_cross_sum_le_left",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 {v a b : V}, G.Adj v b \u2192 \u2211 x \u2208 Erdos60.Completion.cellFinset G v a, (G.neighborFinset x \u2229 Erdos60.Completion.cellFinset G v b).card \u2264 (Erdos60.Completion.cellFinset G v a).card",
-    "source_sha256": "510e8b7730c46fd7f078d1eac57b5a4d0a19ec67b796fccb0c50b57932dde15f"
+    "source_sha256": "c31e22b55075649394bb05179f35d57978b53e949d8666b3e35a47c7f2900420"
   },
   {
     "module": "RegularCellDeficit",
     "declaration": "Erdos60.Completion.cell_cross_sum_le_right",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 {v a b : V}, G.Adj v a \u2192 \u2211 x \u2208 Erdos60.Completion.cellFinset G v a, (G.neighborFinset x \u2229 Erdos60.Completion.cellFinset G v b).card \u2264 (Erdos60.Completion.cellFinset G v b).card",
-    "source_sha256": "510e8b7730c46fd7f078d1eac57b5a4d0a19ec67b796fccb0c50b57932dde15f"
+    "source_sha256": "c31e22b55075649394bb05179f35d57978b53e949d8666b3e35a47c7f2900420"
   },
   {
     "module": "RegularCellDeficit",
     "declaration": "Erdos60.Completion.induced_degree_eq_cross",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) (s : Finset V) (x : \u21a5s), (SimpleGraph.comap Subtype.val G).degree x = (G.neighborFinset \u2191x \u2229 s).card",
-    "source_sha256": "510e8b7730c46fd7f078d1eac57b5a4d0a19ec67b796fccb0c50b57932dde15f"
+    "source_sha256": "c31e22b55075649394bb05179f35d57978b53e949d8666b3e35a47c7f2900420"
   },
   {
     "module": "RegularCellDeficit",
     "declaration": "Erdos60.Completion.actual_cell_degree_sum_deficit_two",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (v i j low : V) (q : \u2115), G.degree v = q + 1 \u2192 G.Adj v i \u2192 G.Adj v j \u2192 G.Adj v low \u2192 G.Adj i j \u2192 i \u2260 low \u2192 j \u2260 low \u2192 Odd (Erdos60.Completion.cellFinset G v i).card \u2192 (Erdos60.Completion.cellFinset G v low).card + 1 \u2264 (Erdos60.Completion.cellFinset G v i).card \u2192 (\u2200 (y : V), y \u2260 v \u2192 \u00acG.Adj v y \u2192 \u2203 b, G.Adj v b \u2227 y \u2208 Erdos60.Completion.cell G v b) \u2192 \u2211 x \u2208 Erdos60.Completion.cellFinset G v i, G.degree x + 2 \u2264 (q + 1) * (Erdos60.Completion.cellFinset G v i).card",
-    "source_sha256": "510e8b7730c46fd7f078d1eac57b5a4d0a19ec67b796fccb0c50b57932dde15f"
+    "source_sha256": "c31e22b55075649394bb05179f35d57978b53e949d8666b3e35a47c7f2900420"
   },
   {
     "module": "RegularCellDeficit",
     "declaration": "Erdos60.Completion.matched_cell_card",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 {v a b : V}, G.Adj v a \u2192 G.Adj v b \u2192 G.Adj a b \u2192 (Erdos60.Completion.cellFinset G v a).card + 2 = G.degree a",
-    "source_sha256": "510e8b7730c46fd7f078d1eac57b5a4d0a19ec67b796fccb0c50b57932dde15f"
+    "source_sha256": "c31e22b55075649394bb05179f35d57978b53e949d8666b3e35a47c7f2900420"
   },
   {
     "module": "RegularCellDeficit",
     "declaration": "Erdos60.Completion.isolated_cell_card",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) {v a : V}, G.Adj v a \u2192 (\u2200 (b : V), G.Adj v b \u2192 \u00acG.Adj a b) \u2192 (Erdos60.Completion.cellFinset G v a).card + 1 = G.degree a",
-    "source_sha256": "510e8b7730c46fd7f078d1eac57b5a4d0a19ec67b796fccb0c50b57932dde15f"
+    "source_sha256": "c31e22b55075649394bb05179f35d57978b53e949d8666b3e35a47c7f2900420"
   },
   {
     "module": "RegularCellDeficit",
     "declaration": "Erdos60.Completion.regular_low_isolated",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (q : \u2115), 100000000 \u2264 q \u2192 Even q \u2192 Fintype.card V = q ^ 2 + q + 1 \u2192 \u2200 (v low : V), G.degree v = q + 1 \u2192 G.Adj v low \u2192 G.degree low = q \u2192 (\u2200 (a : V), G.Adj v a \u2192 a \u2260 low \u2192 G.degree a = q + 1) \u2192 1000 * {x | G.degree x \u2264 q}.card \u2264 1001 * q \u2192 1000 * {x | G.degree x \u2264 q - 1}.card \u2264 q \u2192 \u2200 (a : V), G.Adj v a \u2192 \u00acG.Adj low a",
-    "source_sha256": "510e8b7730c46fd7f078d1eac57b5a4d0a19ec67b796fccb0c50b57932dde15f"
+    "source_sha256": "c31e22b55075649394bb05179f35d57978b53e949d8666b3e35a47c7f2900420"
   },
   {
     "module": "HighIncidenceNeighbor",
@@ -2160,49 +2160,49 @@
     "declaration": "Erdos60.Completion.local_neighbor_card_le_one",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (x a : V), G.Adj x a \u2192 (Finset.filter (G.Adj a) (G.neighborFinset x)).card \u2264 1",
-    "source_sha256": "f3841b8f2cd091ad4f715cf6168bedc2bdfed6a46c8a10008accda541cb47a54"
+    "source_sha256": "111c2c176a36ab97bebf06eaa4d92761d34870a6b522ca1db97cfc36e3656e5a"
   },
   {
     "module": "RegularPopulation",
     "declaration": "Erdos60.Completion.many_regular_neighbors",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (q : \u2115), Even q \u2192 100000000 \u2264 q \u2192 Fintype.card V = q ^ 2 + q + 1 \u2192 (\u2200 (v : V), G.degree v \u2264 q + 1) \u2192 1000 * {v | G.degree v \u2264 q}.card \u2264 1001 * q \u2192 1000 * {v | G.degree v \u2264 q - 1}.card \u2264 q \u2192 \u2200 (x : V), G.degree x = q + 1 \u2192 100 * {v \u2208 G.neighborFinset x | G.degree v \u2264 q}.card < q \u2192 100 * (Finset.filter (Erdos60.Completion.IsRegularVertex G q) (G.neighborFinset x)).card > q + 100",
-    "source_sha256": "f3841b8f2cd091ad4f715cf6168bedc2bdfed6a46c8a10008accda541cb47a54"
+    "source_sha256": "111c2c176a36ab97bebf06eaa4d92761d34870a6b522ca1db97cfc36e3656e5a"
   },
   {
     "module": "FullRowIntersection",
     "declaration": "Erdos60.Completion.disjoint_rows_regular_neighbor_low",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (q : \u2115), 100000000 \u2264 q \u2192 Even q \u2192 Fintype.card V = q ^ 2 + q + 1 \u2192 1000 * {x | G.degree x \u2264 q}.card \u2264 1001 * q \u2192 1000 * {x | G.degree x \u2264 q - 1}.card \u2264 q \u2192 \u2200 {x y z : V}, G.degree x = q + 1 \u2192 G.degree y = q + 1 \u2192 \u00acG.Adj x y \u2192 (\u2200 (a : V), \u00ac(G.Adj x a \u2227 G.Adj y a)) \u2192 G.Adj x z \u2192 Erdos60.Completion.IsRegularVertex G q z \u2192 \u2203 w, G.Adj y w \u2227 G.degree w = q \u2227 G.Adj z w",
-    "source_sha256": "51d2fbc94157deb7a2baeb8429f38f18906fc101670f4e4ea31983acd40ad1c8"
+    "source_sha256": "99b085d66d633a4d62ef46057f8d057827573221c052b9bec2f3fc7ec4717844"
   },
   {
     "module": "FullRowIntersection",
     "declaration": "Erdos60.Completion.full_rows_intersect_of_regular_count",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (q : \u2115), 100000000 \u2264 q \u2192 Even q \u2192 Fintype.card V = q ^ 2 + q + 1 \u2192 1000 * {x | G.degree x \u2264 q}.card \u2264 1001 * q \u2192 1000 * {x | G.degree x \u2264 q - 1}.card \u2264 q \u2192 \u2200 {x y : V}, G.degree x = q + 1 \u2192 G.degree y = q + 1 \u2192 x \u2260 y \u2192 q + 100 < 100 * (Finset.filter (Erdos60.Completion.IsRegularVertex G q) (G.neighborFinset x)).card \u2192 100 * {a \u2208 G.neighborFinset y | G.degree a \u2264 q}.card < q \u2192 \u2203! a, G.Adj x a \u2227 G.Adj y a",
-    "source_sha256": "51d2fbc94157deb7a2baeb8429f38f18906fc101670f4e4ea31983acd40ad1c8"
+    "source_sha256": "99b085d66d633a4d62ef46057f8d057827573221c052b9bec2f3fc7ec4717844"
   },
   {
     "module": "FullRowIntersection",
     "declaration": "Erdos60.Completion.full_rows_intersect",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (q : \u2115), 100000000 \u2264 q \u2192 Even q \u2192 Fintype.card V = q ^ 2 + q + 1 \u2192 (\u2200 (a : V), G.degree a \u2264 q + 1) \u2192 1000 * {a | G.degree a \u2264 q}.card \u2264 1001 * q \u2192 1000 * {a | G.degree a \u2264 q - 1}.card \u2264 q \u2192 \u2200 {x y : V}, G.degree x = q + 1 \u2192 G.degree y = q + 1 \u2192 x \u2260 y \u2192 100 * {a \u2208 G.neighborFinset x | G.degree a \u2264 q}.card < q \u2192 100 * {a \u2208 G.neighborFinset y | G.degree a \u2264 q}.card < q \u2192 \u2203! a, G.Adj x a \u2227 G.Adj y a",
-    "source_sha256": "51d2fbc94157deb7a2baeb8429f38f18906fc101670f4e4ea31983acd40ad1c8"
+    "source_sha256": "99b085d66d633a4d62ef46057f8d057827573221c052b9bec2f3fc7ec4717844"
   },
   {
     "module": "FullRowIntersection",
     "declaration": "Erdos60.Completion.full_rows_intersection_card",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (q : \u2115), 100000000 \u2264 q \u2192 Even q \u2192 Fintype.card V = q ^ 2 + q + 1 \u2192 (\u2200 (a : V), G.degree a \u2264 q + 1) \u2192 1000 * {a | G.degree a \u2264 q}.card \u2264 1001 * q \u2192 1000 * {a | G.degree a \u2264 q - 1}.card \u2264 q \u2192 \u2200 {x y : V}, G.degree x = q + 1 \u2192 G.degree y = q + 1 \u2192 x \u2260 y \u2192 100 * {a \u2208 G.neighborFinset x | G.degree a \u2264 q}.card < q \u2192 100 * {a \u2208 G.neighborFinset y | G.degree a \u2264 q}.card < q \u2192 (G.neighborFinset x \u2229 G.neighborFinset y).card = 1",
-    "source_sha256": "51d2fbc94157deb7a2baeb8429f38f18906fc101670f4e4ea31983acd40ad1c8"
+    "source_sha256": "99b085d66d633a4d62ef46057f8d057827573221c052b9bec2f3fc7ec4717844"
   },
   {
     "module": "FullRowIntersection",
     "declaration": "Erdos60.Completion.full_rows_distinct",
     "oracle": false,
     "type": "\u2200 {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (q : \u2115), 100000000 \u2264 q \u2192 Even q \u2192 Fintype.card V = q ^ 2 + q + 1 \u2192 (\u2200 (a : V), G.degree a \u2264 q + 1) \u2192 1000 * {a | G.degree a \u2264 q}.card \u2264 1001 * q \u2192 1000 * {a | G.degree a \u2264 q - 1}.card \u2264 q \u2192 \u2200 {x y : V}, G.degree x = q + 1 \u2192 G.degree y = q + 1 \u2192 x \u2260 y \u2192 100 * {a \u2208 G.neighborFinset x | G.degree a \u2264 q}.card < q \u2192 100 * {a \u2208 G.neighborFinset y | G.degree a \u2264 q}.card < q \u2192 G.neighborFinset x \u2260 G.neighborFinset y",
-    "source_sha256": "51d2fbc94157deb7a2baeb8429f38f18906fc101670f4e4ea31983acd40ad1c8"
+    "source_sha256": "99b085d66d633a4d62ef46057f8d057827573221c052b9bec2f3fc7ec4717844"
   },
   {
     "module": "ExceptionalSet",
@@ -2489,84 +2489,84 @@
     "declaration": "Erdos60.Completion.nonfeasible_pair_lines_missing",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] (G : SimpleGraph P), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (A : Finset P) (row : P \u2192 L), (\u2200 a \u2208 A, \u2200 (x : P), x \u2208 row a \u2194 G.Adj a x) \u2192 \u2200 (v : P), (\u00ac\u2203 l, \u2200 (x : P), G.Adj v x \u2192 x \u2208 l) \u2192 \u2200 (x y : P), x \u2260 y \u2192 G.Adj v x \u2192 G.Adj v y \u2192 \u2200 (l : L), x \u2208 l \u2192 y \u2208 l \u2192 l \u2209 Finset.image row A",
-    "source_sha256": "05bc726b5368112b957730172970a7fd25e4501c4682c5493573249bbf4a09c9"
+    "source_sha256": "a04f2ed161a314ccae43d2821ba5e16a3168a2c768286e22c92af1cbfc07e46f"
   },
   {
     "module": "NeighborhoodAssignment",
     "declaration": "Erdos60.Completion.small_pencil_dominant",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] [Configuration.ProjectivePlane P L] (N : Finset P) (M : Finset L) (u : P) (q : \u211d), 10 ^ 8 \u2264 q \u2192 999 * q / 1000 \u2264 \u2191N.card \u2192 \u2191M.card \u2264 1002 * q / 1000 \u2192 u \u2208 N \u2192 {l \u2208 M | u \u2208 l}.card \u2264 3 \u2192 (\u2200 x \u2208 N, \u2200 y \u2208 N, x \u2260 y \u2192 \u2200 (l : L), x \u2208 l \u2192 y \u2208 l \u2192 l \u2208 M) \u2192 \u2203 l, {x \u2208 N | x \u2209 l}.card \u2264 6",
-    "source_sha256": "05bc726b5368112b957730172970a7fd25e4501c4682c5493573249bbf4a09c9"
+    "source_sha256": "a04f2ed161a314ccae43d2821ba5e16a3168a2c768286e22c92af1cbfc07e46f"
   },
   {
     "module": "NeighborhoodAssignment",
     "declaration": "Erdos60.Completion.actual_full_rows_injOn",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] [inst_1 : Fintype P] (G : SimpleGraph P), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (A : Finset P) (row : P \u2192 L) (q : \u2115), 1 \u2264 q \u2192 (\u2200 a \u2208 A, G.degree a = q + 1) \u2192 (\u2200 a \u2208 A, \u2200 (x : P), x \u2208 row a \u2194 G.Adj a x) \u2192 Set.InjOn row \u2191A",
-    "source_sha256": "05bc726b5368112b957730172970a7fd25e4501c4682c5493573249bbf4a09c9"
+    "source_sha256": "a04f2ed161a314ccae43d2821ba5e16a3168a2c768286e22c92af1cbfc07e46f"
   },
   {
     "module": "NeighborhoodAssignment",
     "declaration": "Erdos60.Completion.high_incidence_small_missing_pencil",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] [inst_1 : Fintype P] [Fintype L] [inst_3 : Configuration.ProjectivePlane P L] (G : SimpleGraph P) (A : Finset P) (row : P \u2192 L) (M : Finset L) (q : \u2115), 2 \u2264 q \u2192 Configuration.ProjectivePlane.order P L = q \u2192 Set.InjOn row \u2191A \u2192 (\u2200 a \u2208 A, \u2200 (x : P), x \u2208 row a \u2194 G.Adj a x) \u2192 (\u2200 a \u2208 A, row a \u2209 M) \u2192 \u2200 (u : P), q - 2 \u2264 (G.neighborFinset u \u2229 A).card \u2192 {l \u2208 M | u \u2208 l}.card \u2264 3",
-    "source_sha256": "05bc726b5368112b957730172970a7fd25e4501c4682c5493573249bbf4a09c9"
+    "source_sha256": "a04f2ed161a314ccae43d2821ba5e16a3168a2c768286e22c92af1cbfc07e46f"
   },
   {
     "module": "NeighborhoodAssignment",
     "declaration": "Erdos60.Completion.neighborhood_dominant_lines",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] [inst_1 : Fintype P] [inst_2 : Fintype L] [inst_3 : Configuration.ProjectivePlane P L] (G : SimpleGraph P), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (A : Finset P) (row : P \u2192 L) (q : \u2115), 10 ^ 8 \u2264 q \u2192 Configuration.ProjectivePlane.order P L = q \u2192 (\u2200 a \u2208 A, G.degree a = q + 1) \u2192 (\u2200 a \u2208 A, \u2200 (x : P), x \u2208 row a \u2194 G.Adj a x) \u2192 (\u2200 (v : P), 999 * \u2191q / 1000 \u2264 \u2191(G.degree v)) \u2192 \u2191(Finset.univ \\ Finset.image row A).card \u2264 1002 * \u2191q / 1000 \u2192 (\u2200 (v : P), \u2203 u, G.Adj v u \u2227 q - 2 \u2264 (G.neighborFinset u \u2229 A).card) \u2192 \u2200 (v : P), \u2203 l, {x \u2208 G.neighborFinset v | x \u2209 l}.card \u2264 6 \u2227 ((\u2203 m, \u2200 (x : P), G.Adj v x \u2192 x \u2208 m) \u2192 \u2200 (x : P), G.Adj v x \u2192 x \u2208 l)",
-    "source_sha256": "05bc726b5368112b957730172970a7fd25e4501c4682c5493573249bbf4a09c9"
+    "source_sha256": "a04f2ed161a314ccae43d2821ba5e16a3168a2c768286e22c92af1cbfc07e46f"
   },
   {
     "module": "NeighborhoodAssignment",
     "declaration": "Erdos60.Completion.dominant_section_large",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] [inst_1 : Fintype P] (G : SimpleGraph P) (f : P \u2192 L) (v : P) (q : \u211d), 999 * q / 1000 \u2264 \u2191(G.degree v) \u2192 {x \u2208 G.neighborFinset v | x \u2209 f v}.card \u2264 6 \u2192 999 * q / 1000 - 6 \u2264 \u2191{x \u2208 G.neighborFinset v | x \u2208 f v}.card",
-    "source_sha256": "05bc726b5368112b957730172970a7fd25e4501c4682c5493573249bbf4a09c9"
+    "source_sha256": "a04f2ed161a314ccae43d2821ba5e16a3168a2c768286e22c92af1cbfc07e46f"
   },
   {
     "module": "NeighborhoodAssignment",
     "declaration": "Erdos60.Completion.dominant_lines_common_exception",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] [inst_1 : Fintype P] [inst_2 : Fintype L] [Configuration.ProjectivePlane P L] (G : SimpleGraph P), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (A : Finset P) (row f : P \u2192 L) (q : \u2115), 10 ^ 8 \u2264 q \u2192 (\u2200 a \u2208 A, \u2200 (x : P), x \u2208 row a \u2194 G.Adj a x) \u2192 (\u2200 (v : P), 999 * \u2191q / 1000 \u2264 \u2191(G.degree v)) \u2192 \u2191(Finset.univ \\ Finset.image row A).card \u2264 1002 * \u2191q / 1000 \u2192 (\u2200 (v : P), {x \u2208 G.neighborFinset v | x \u2209 f v}.card \u2264 6) \u2192 (\u2200 (v : P), (\u2203 m, \u2200 (x : P), G.Adj v x \u2192 x \u2208 m) \u2192 \u2200 (x : P), G.Adj v x \u2192 x \u2208 f v) \u2192 \u2203 w, \u2200 (v x : P), G.Adj v x \u2192 x \u2260 w \u2192 x \u2208 f v",
-    "source_sha256": "05bc726b5368112b957730172970a7fd25e4501c4682c5493573249bbf4a09c9"
+    "source_sha256": "a04f2ed161a314ccae43d2821ba5e16a3168a2c768286e22c92af1cbfc07e46f"
   },
   {
     "module": "NeighborhoodAssignment",
     "declaration": "Erdos60.Completion.neighborhood_line_assignment_injective",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] [inst_1 : Fintype P] [Fintype L] [inst_3 : Configuration.ProjectivePlane P L] (G : SimpleGraph P), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (f : P \u2192 L) (w : P) (q : \u2115), 10 ^ 8 \u2264 q \u2192 Configuration.ProjectivePlane.order P L = q \u2192 (\u2200 (v : P), 999 * \u2191q / 1000 \u2264 \u2191(G.degree v)) \u2192 (\u2200 (v x : P), G.Adj v x \u2192 x \u2260 w \u2192 x \u2208 f v) \u2192 Function.Injective f",
-    "source_sha256": "05bc726b5368112b957730172970a7fd25e4501c4682c5493573249bbf4a09c9"
+    "source_sha256": "a04f2ed161a314ccae43d2821ba5e16a3168a2c768286e22c92af1cbfc07e46f"
   },
   {
     "module": "NeighborhoodAssignment",
     "declaration": "Erdos60.Completion.assigned_full_row_eq",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] [inst_1 : Fintype P] [Configuration.ProjectivePlane P L] (G : SimpleGraph P) (A : Finset P) (row f : P \u2192 L) (w : P) (q : \u2115), 2 \u2264 q \u2192 (\u2200 a \u2208 A, G.degree a = q + 1) \u2192 (\u2200 a \u2208 A, \u2200 (x : P), x \u2208 row a \u2194 G.Adj a x) \u2192 (\u2200 (v x : P), G.Adj v x \u2192 x \u2260 w \u2192 x \u2208 f v) \u2192 \u2200 a \u2208 A, f a = row a",
-    "source_sha256": "05bc726b5368112b957730172970a7fd25e4501c4682c5493573249bbf4a09c9"
+    "source_sha256": "a04f2ed161a314ccae43d2821ba5e16a3168a2c768286e22c92af1cbfc07e46f"
   },
   {
     "module": "NeighborhoodAssignment",
     "declaration": "Erdos60.Completion.assigned_full_rows_symmetric",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] [Fintype P] [Fintype L] [Configuration.ProjectivePlane P L] (G : SimpleGraph P) (A : Finset P) (line : P \u2243 L) (w : P), (\u2200 a \u2208 A, \u2200 (x : P), x \u2208 line a \u2194 G.Adj a x) \u2192 (\u2200 (v x : P), G.Adj v x \u2192 x \u2260 w \u2192 x \u2208 line v) \u2192 Erdos60.PartialSymmetry.SymmetricAt line \u2191(A.erase w)",
-    "source_sha256": "05bc726b5368112b957730172970a7fd25e4501c4682c5493573249bbf4a09c9"
+    "source_sha256": "a04f2ed161a314ccae43d2821ba5e16a3168a2c768286e22c92af1cbfc07e46f"
   },
   {
     "module": "NeighborhoodAssignment",
     "declaration": "Erdos60.Completion.embedded_rows_produce_polarity",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] [inst_1 : Fintype P] [inst_2 : Fintype L] [inst_3 : Configuration.ProjectivePlane P L] (G : SimpleGraph P), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (A : Finset P) (row : P \u2192 L) (q : \u2115), 10 ^ 8 \u2264 q \u2192 Configuration.ProjectivePlane.order P L = q \u2192 (\u2200 a \u2208 A, G.degree a = q + 1) \u2192 (\u2200 a \u2208 A, \u2200 (x : P), x \u2208 row a \u2194 G.Adj a x) \u2192 (\u2200 (v : P), 999 * \u2191q / 1000 \u2264 \u2191(G.degree v)) \u2192 \u2191(Finset.univ \\ Finset.image row A).card \u2264 1002 * \u2191q / 1000 \u2192 (\u2200 (v : P), \u2203 u, G.Adj v u \u2227 q - 2 \u2264 (G.neighborFinset u \u2229 A).card) \u2192 q ^ 2 - q + 4 \u2264 A.card \u2192 \u2203 \u03c0, G \u2264 \u03c0.graph",
-    "source_sha256": "05bc726b5368112b957730172970a7fd25e4501c4682c5493573249bbf4a09c9"
+    "source_sha256": "a04f2ed161a314ccae43d2821ba5e16a3168a2c768286e22c92af1cbfc07e46f"
   },
   {
     "module": "EmbeddedCoreCompletion",
     "declaration": "Erdos60.Completion.embedded_good_rows_complete_graph",
     "oracle": false,
     "type": "\u2200 {P : Type u_1} {L : Type u_2} [inst : Membership P L] [inst_1 : Fintype P] [Fintype L] [inst_3 : Configuration.ProjectivePlane P L] (G : SimpleGraph P), Erdos60.Completion.NoFourCycle G \u2192 \u2200 (q : \u2115), Even q \u2192 100000000 \u2264 q \u2192 Fintype.card P = q ^ 2 + q + 1 \u2192 (\u2200 (v : P), 999 * q \u2264 1000 * G.degree v) \u2192 (\u2200 (v : P), G.degree v \u2264 q + 1) \u2192 1000 * {v | G.degree v \u2264 q}.card \u2264 1001 * q \u2192 1000 * {v | G.degree v \u2264 q - 1}.card \u2264 q \u2192 Configuration.ProjectivePlane.order P L = q \u2192 \u2200 (row : P \u2192 L), (\u2200 a \u2208 Erdos60.Completion.goodFullVertices G q {v | G.degree v \u2264 q}, \u2200 (x : P), x \u2208 row a \u2194 G.Adj a x) \u2192 \u2203 \u03c0, G \u2264 \u03c0.graph",
-    "source_sha256": "47780e75fe89215beae174b60de8dd9ea062406fb2f90ab3a038b21f60fe75e9"
+    "source_sha256": "6702494f6d004a7434db666d8f1d3d1ff36d22de0a60d6ab1cf22213dcc5a57e"
   },
   {
     "module": "ActualCore",
@@ -2755,98 +2755,98 @@
     "declaration": "Erdos60.Embedding.IndexedDesign.outside_meeting_count",
     "oracle": false,
     "type": "\u2200 {q : \u2115} {X : Type u_1} {I : Type u_2} [inst : Fintype X] [inst_1 : Fintype I] (D : Erdos60.Embedding.IndexedDesign q X I) {x : X} {i : I}, \u00acD.inc x i \u2192 (D.pointLines x \u2229 D.meetingLines i).card = D.lineDegree i",
-    "source_sha256": "329311e4b07e5abfb9b8f6076c1b730370b4fae5f2d887240cefefc46d1cd395"
+    "source_sha256": "8d1bd4fa652e8a93e2052fcf02d209c3b9bb9de60c1c0700d65adad785fd8cf2"
   },
   {
     "module": "ParallelCounts",
     "declaration": "Erdos60.Embedding.IndexedDesign.outside_parallel_count_add",
     "oracle": false,
     "type": "\u2200 {q : \u2115} {X : Type u_1} {I : Type u_2} [inst : Fintype X] [inst_1 : Fintype I] (D : Erdos60.Embedding.IndexedDesign q X I) {x : X} {i : I}, \u00acD.inc x i \u2192 (D.pointLines x \u2229 D.parallelLines i).card + D.lineDegree i = q + 1",
-    "source_sha256": "329311e4b07e5abfb9b8f6076c1b730370b4fae5f2d887240cefefc46d1cd395"
+    "source_sha256": "8d1bd4fa652e8a93e2052fcf02d209c3b9bb9de60c1c0700d65adad785fd8cf2"
   },
   {
     "module": "ParallelCounts",
     "declaration": "Erdos60.Embedding.IndexedDesign.point_parallel_count",
     "oracle": false,
     "type": "\u2200 {q : \u2115} {X : Type u_1} {I : Type u_2} [inst : Fintype X] [inst_1 : Fintype I] (D : Erdos60.Embedding.IndexedDesign q X I) (x : X) (i : I), (D.pointLines x \u2229 D.parallelLines i).card = if D.inc x i then 0 else D.lineDeficit i",
-    "source_sha256": "329311e4b07e5abfb9b8f6076c1b730370b4fae5f2d887240cefefc46d1cd395"
+    "source_sha256": "8d1bd4fa652e8a93e2052fcf02d209c3b9bb9de60c1c0700d65adad785fd8cf2"
   },
   {
     "module": "ParallelCounts",
     "declaration": "Erdos60.Embedding.IndexedDesign.sum_lineDegrees_subset",
     "oracle": false,
     "type": "\u2200 {q : \u2115} {X : Type u_1} {I : Type u_2} [inst : Fintype X] [inst_1 : Fintype I] (D : Erdos60.Embedding.IndexedDesign q X I) (J : Finset I), \u2211 j \u2208 J, D.lineDegree j = \u2211 x, (D.pointLines x \u2229 J).card",
-    "source_sha256": "329311e4b07e5abfb9b8f6076c1b730370b4fae5f2d887240cefefc46d1cd395"
+    "source_sha256": "8d1bd4fa652e8a93e2052fcf02d209c3b9bb9de60c1c0700d65adad785fd8cf2"
   },
   {
     "module": "ParallelCounts",
     "declaration": "Erdos60.Embedding.IndexedDesign.sum_parallel_lineDegrees",
     "oracle": false,
     "type": "\u2200 {q : \u2115} {X : Type u_1} {I : Type u_2} [inst : Fintype X] [inst_1 : Fintype I] (D : Erdos60.Embedding.IndexedDesign q X I) (i : I), \u2211 j \u2208 D.parallelLines i, D.lineDegree j = (Fintype.card X - D.lineDegree i) * D.lineDeficit i",
-    "source_sha256": "329311e4b07e5abfb9b8f6076c1b730370b4fae5f2d887240cefefc46d1cd395"
+    "source_sha256": "8d1bd4fa652e8a93e2052fcf02d209c3b9bb9de60c1c0700d65adad785fd8cf2"
   },
   {
     "module": "ParallelCounts",
     "declaration": "Erdos60.Embedding.IndexedDesign.linePoints_inter_card",
     "oracle": false,
     "type": "\u2200 {q : \u2115} {X : Type u_1} {I : Type u_2} [inst : Fintype X] [inst_1 : Fintype I] (D : Erdos60.Embedding.IndexedDesign q X I) {i j : I}, i \u2260 j \u2192 (D.linePoints i \u2229 D.linePoints j).card = if \u2203 x, D.inc x i \u2227 D.inc x j then 1 else 0",
-    "source_sha256": "329311e4b07e5abfb9b8f6076c1b730370b4fae5f2d887240cefefc46d1cd395"
+    "source_sha256": "8d1bd4fa652e8a93e2052fcf02d209c3b9bb9de60c1c0700d65adad785fd8cf2"
   },
   {
     "module": "ParallelCounts",
     "declaration": "Erdos60.Embedding.IndexedDesign.subset_incidence_sum",
     "oracle": false,
     "type": "\u2200 {q : \u2115} {X : Type u_1} {I : Type u_2} [inst : Fintype X] [inst_1 : Fintype I] (D : Erdos60.Embedding.IndexedDesign q X I) (S : Finset X) (J : Finset I), \u2211 j \u2208 J, (D.linePoints j \u2229 S).card = \u2211 x \u2208 S, (D.pointLines x \u2229 J).card",
-    "source_sha256": "329311e4b07e5abfb9b8f6076c1b730370b4fae5f2d887240cefefc46d1cd395"
+    "source_sha256": "8d1bd4fa652e8a93e2052fcf02d209c3b9bb9de60c1c0700d65adad785fd8cf2"
   },
   {
     "module": "ParallelCounts",
     "declaration": "Erdos60.Embedding.IndexedDesign.parallel_line_incidence",
     "oracle": false,
     "type": "\u2200 {q : \u2115} {X : Type u_1} {I : Type u_2} [inst : Fintype X] [inst_1 : Fintype I] (D : Erdos60.Embedding.IndexedDesign q X I) (i j : I), \u2211 k \u2208 D.parallelLines i, (D.linePoints k \u2229 D.linePoints j).card = ((D.linePoints j).card - (D.linePoints j \u2229 D.linePoints i).card) * D.lineDeficit i",
-    "source_sha256": "329311e4b07e5abfb9b8f6076c1b730370b4fae5f2d887240cefefc46d1cd395"
+    "source_sha256": "8d1bd4fa652e8a93e2052fcf02d209c3b9bb9de60c1c0700d65adad785fd8cf2"
   },
   {
     "module": "ParallelCounts",
     "declaration": "Erdos60.Embedding.IndexedDesign.intersection_degree_sum",
     "oracle": false,
     "type": "\u2200 {q : \u2115} {X : Type u_1} {I : Type u_2} [inst : Fintype X] [inst_1 : Fintype I] (D : Erdos60.Embedding.IndexedDesign q X I) (J : Finset I) (j : I), \u2211 k \u2208 J, (D.linePoints k \u2229 D.linePoints j).card = (if j \u2208 J then D.lineDegree j else 0) + (J \u2229 D.meetingLines j).card",
-    "source_sha256": "329311e4b07e5abfb9b8f6076c1b730370b4fae5f2d887240cefefc46d1cd395"
+    "source_sha256": "8d1bd4fa652e8a93e2052fcf02d209c3b9bb9de60c1c0700d65adad785fd8cf2"
   },
   {
     "module": "ParallelCounts",
     "declaration": "Erdos60.Embedding.IndexedDesign.label_partition_card",
     "oracle": false,
     "type": "\u2200 {q : \u2115} {X : Type u_1} {I : Type u_2} [inst : Fintype X] [inst_1 : Fintype I] (D : Erdos60.Embedding.IndexedDesign q X I) (J : Finset I) (j : I), ((J \u2229 D.meetingLines j).card + (J \u2229 D.parallelLines j).card + if j \u2208 J then 1 else 0) = J.card",
-    "source_sha256": "329311e4b07e5abfb9b8f6076c1b730370b4fae5f2d887240cefefc46d1cd395"
+    "source_sha256": "8d1bd4fa652e8a93e2052fcf02d209c3b9bb9de60c1c0700d65adad785fd8cf2"
   },
   {
     "module": "ParallelCounts",
     "declaration": "Erdos60.Embedding.IndexedDesign.common_parallel_card_of_meet",
     "oracle": false,
     "type": "\u2200 {q : \u2115} {X : Type u_1} {I : Type u_2} [inst : Fintype X] [inst_1 : Fintype I] (D : Erdos60.Embedding.IndexedDesign q X I) {i j : I}, Fintype.card I = q ^ 2 + q + 1 \u2192 D.lineDegree i \u2264 q + 1 \u2192 D.lineDegree j \u2264 q + 1 \u2192 i \u2260 j \u2192 (\u2203 x, D.inc x i \u2227 D.inc x j) \u2192 (D.parallelLines i \u2229 D.parallelLines j).card = D.lineDeficit i * D.lineDeficit j",
-    "source_sha256": "329311e4b07e5abfb9b8f6076c1b730370b4fae5f2d887240cefefc46d1cd395"
+    "source_sha256": "8d1bd4fa652e8a93e2052fcf02d209c3b9bb9de60c1c0700d65adad785fd8cf2"
   },
   {
     "module": "ParallelCounts",
     "declaration": "Erdos60.Embedding.IndexedDesign.common_parallel_balance_of_parallel",
     "oracle": false,
     "type": "\u2200 {q : \u2115} {X : Type u_1} {I : Type u_2} [inst : Fintype X] [inst_1 : Fintype I] (D : Erdos60.Embedding.IndexedDesign q X I) {i j : I}, Fintype.card I = q ^ 2 + q + 1 \u2192 D.lineDegree i \u2264 q + 1 \u2192 D.Parallel i j \u2192 (D.parallelLines i \u2229 D.parallelLines j).card + 1 + D.lineDegree j * D.lineDeficit i = q * D.lineDeficit i + D.lineDegree j",
-    "source_sha256": "329311e4b07e5abfb9b8f6076c1b730370b4fae5f2d887240cefefc46d1cd395"
+    "source_sha256": "8d1bd4fa652e8a93e2052fcf02d209c3b9bb9de60c1c0700d65adad785fd8cf2"
   },
   {
     "module": "ParallelCounts",
     "declaration": "Erdos60.Embedding.IndexedDesign.common_parallel_card_of_parallel_int",
     "oracle": false,
     "type": "\u2200 {q : \u2115} {X : Type u_1} {I : Type u_2} [inst : Fintype X] [inst_1 : Fintype I] (D : Erdos60.Embedding.IndexedDesign q X I) {i j : I}, Fintype.card I = q ^ 2 + q + 1 \u2192 D.lineDegree i \u2264 q + 1 \u2192 D.lineDegree j \u2264 q + 1 \u2192 D.Parallel i j \u2192 \u2191(D.parallelLines i \u2229 D.parallelLines j).card = \u2191q - 1 + (\u2191(D.lineDeficit i) - 1) * (\u2191(D.lineDeficit j) - 1)",
-    "source_sha256": "329311e4b07e5abfb9b8f6076c1b730370b4fae5f2d887240cefefc46d1cd395"
+    "source_sha256": "8d1bd4fa652e8a93e2052fcf02d209c3b9bb9de60c1c0700d65adad785fd8cf2"
   },
   {
     "module": "ParallelCounts",
     "declaration": "Erdos60.Embedding.IndexedDesign.common_parallel_card_deficit_two",
     "oracle": false,
     "type": "\u2200 {q : \u2115} {X : Type u_1} {I : Type u_2} [inst : Fintype X] [inst_1 : Fintype I] (D : Erdos60.Embedding.IndexedDesign q X I) {i j : I}, Fintype.card I = q ^ 2 + q + 1 \u2192 D.lineDegree i \u2264 q + 1 \u2192 D.lineDegree j \u2264 q + 1 \u2192 D.Parallel i j \u2192 D.lineDeficit i = 2 \u2192 (D.parallelLines i \u2229 D.parallelLines j).card + 2 = q + D.lineDeficit j",
-    "source_sha256": "329311e4b07e5abfb9b8f6076c1b730370b4fae5f2d887240cefefc46d1cd395"
+    "source_sha256": "8d1bd4fa652e8a93e2052fcf02d209c3b9bb9de60c1c0700d65adad785fd8cf2"
   },
   {
     "module": "EmbeddingParameters",

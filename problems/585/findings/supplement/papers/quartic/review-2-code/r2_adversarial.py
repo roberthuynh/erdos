@@ -1,4 +1,4 @@
-"""Referee 2: adversarial searches against the conclusions (own code).
+"""Second independent implementation: adversarial searches against the conclusions (own code).
 
   G1  greedy maximal quartic-free bipartite graphs with max degree <= 6: add random edges
       (sides p, q chosen at random, |p - q| <= 2) while SAT says no quartic subgraph; record

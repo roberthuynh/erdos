@@ -27,7 +27,7 @@ def run():
         match = re.search(r'>Z (\d+) graphs generated', txt)
         if match is None and time.monotonic()-started < 165:
             with log.open('w') as err, stem.with_suffix('.stdout').open('w') as out:
-                result = subprocess.run(['timeout','210','[temporary path]','-d5',
+                result = subprocess.run(['timeout','210',__import__('os').environ['ERDOS585_SMALL_VALUES_PROGRAMS_ERDOS585_TWELVE_PARTITION_PY_L30'],'-d5',
                     '12','36:36',f'{residue}/32',str(stem.with_suffix('.g6'))],
                     stdout=out,stderr=err)
             txt = log.read_text()

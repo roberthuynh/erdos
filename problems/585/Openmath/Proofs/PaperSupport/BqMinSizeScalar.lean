@@ -7,7 +7,7 @@ open QB4 B5
 universe u
 variable {V : Type u} [DecidableEq V] {G : SimpleGraph V} [DecidableRel G.Adj]
 
-/-- Faithful formalization of the previously paid simple bipartite ceiling. -/
+/-- Faithful formalization of the simple bipartite ceiling. -/
 theorem dense_order {q : ℕ} {P Q : Finset V} (hq : 5 ≤ q)
     (hn : 2 ≤ #P + #Q) (he : (q - 1) * (#P + #Q) ≤ ec G P Q + q) :
     4 * q - 5 ≤ #P + #Q := by

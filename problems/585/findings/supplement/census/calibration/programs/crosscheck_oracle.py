@@ -12,7 +12,7 @@ Exit 0 only if no TIMEOUT, every witness replays, and NOPAIR == pairc pair-free 
 import os, sys, time
 from multiprocessing import Pool
 
-sys.path.insert(0, "[local path]")
+sys.path.insert(0, __import__('os').environ['ERDOS585_CENSUS_CALIBRATION_PROGRAMS_CROSSCHECK_ORACLE_PY_L15'])
 import pair_oracle as po  # noqa: E402
 
 SECONDS = 120.0

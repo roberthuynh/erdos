@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""flowsample.py (wave8/s6spot): second method for the E10 check on a random subset.
+"""flowsample.py (census/s6n22/spot-check): second method for the E10 check on a random subset.
 For every finished full slice, pick K graph indices (random.Random(SEED + r)) and recompute their
 minimum essential cut by max-flow (validate.flow); also every graph that e10cut found non-E10 in
 any finished slice. Usage: flowsample.py [K]. Output on stdout."""

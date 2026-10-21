@@ -1,4 +1,4 @@
-/* Referee check of PAPER3 Lemma 4.1 (refined covering lemma), written from scratch.
+/* Independent check of PAPER3 Lemma 4.1 (refined covering lemma), written from scratch.
  *
  * Objects: E = 7 edges of a simple bipartite graph, sides A (rows) and D (cols), every vertex in 1..3
  * edges (only ends of E matter).  L_A subset of A: contains every c=3 vertex, sum_{L_A}(3-c) <= 5.

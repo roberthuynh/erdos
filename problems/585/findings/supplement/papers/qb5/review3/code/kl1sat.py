@@ -1,4 +1,4 @@
-"""SAT search for a block that violates KL1 (referee 3, own encoding).
+"""SAT search for a block that violates KL1 (third implementation, own encoding).
 
 Block: A = 0..nA-1, C = 0..nC-1 (nC = nA - 2), x[a][c] adjacency, every c of degree 6, every a of
 in-block degree d_a in 3..6.  Cut vector c_a with max(0, delta_a - 2) <= c_a <= min(3, delta_a),

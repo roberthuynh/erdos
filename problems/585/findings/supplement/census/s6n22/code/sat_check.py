@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""sat_check.py -- exact SAT decision of S6 tests (wave6/s6n22).
+"""sat_check.py -- exact SAT decision of S6 tests (census/s6n22).
 
 Input: lines "<graph6> o y" (the s6n22 .surv format; extra fields ignored). For each line, Y = B - o - y
 is decided by the colocated span_oracle.py (MiniSat, lazy connectivity cuts). A SPAN witness is

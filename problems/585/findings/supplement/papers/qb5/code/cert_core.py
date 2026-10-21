@@ -1,4 +1,4 @@
-"""Readable certificate for the n = 28 core instance (lane qb5, round 2; PAPER2.md §6).
+"""Readable certificate for the n = 28 core instance (QB(5), version 2; PAPER2.md §6).
 
 Prints the block structure, the cut, in-block degrees, the non-generic relevant group of p, the generic
 rule's verdict on (p, q) and the max-flow verdict (networkx), and a demand witness (A1, D1) with

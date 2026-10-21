@@ -2,7 +2,7 @@
 
 Historical computation, 2026-10-06 EDT. ex(n) is the maximum number of edges of a simple bipartite graph on
 n vertices with maximum degree at most 6 and no nonempty 4-regular subgraph. Method 1 is
-`findings/supplement/census/edge/` (EX.md). Rung (b) throughout: computed exact values, no Lean, no
+`findings/supplement/census/edge/` (EX.md). computational evidence throughout: computed exact values, no Lean, no
 `check.sh`.
 
 ## 1. Answer
@@ -235,4 +235,4 @@ brute force), `code/sat4.py`, `code/chain.py`, `code/witcheck.py`, `code/selftes
 `code/gencheck.py`, `code/samplecheck.py`, `code/pipecheck.sh`, `code/build.sh` and `code/BUILD.txt`
 (SHA-256), `code/run_exb.sh` (driver), `code/jobs.tsv`, `code/queue.txt`, `code/collect.py`;
 `data/` (chain, witnesses, checks, collector output), `logs/` (pilots, shards, driver log), `JOBS.md`,
-`RESUME.md`.
+`RESUME.md` (original historical note not bundled).

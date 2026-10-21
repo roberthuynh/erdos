@@ -1,4 +1,4 @@
-/* pairprune.c -- geng PRUNE hook and standalone decider, reg5n16 lane (Erdos 585).
+/* pairprune.c -- geng PRUNE hook and standalone decider, reg5n16 census (Erdos 585).
  *
  * A pair is two edge-disjoint cycles on the same vertex set S. Graphs here have max degree <= 5
  * and at most 32 vertices (asserted).

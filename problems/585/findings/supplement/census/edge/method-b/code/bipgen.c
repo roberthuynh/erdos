@@ -1,4 +1,4 @@
-/* bipgen.c -- method B generator (wave8/exb), written for this lane.
+/* bipgen.c -- method B generator (census/edge/method-b), written for this investigation.
 
    Generates bicoloured graphs: class A of n1 vertices (0..n1-1) and class
    B of n2 vertices (n1..n1+n2-1), every edge between A and B, degrees of

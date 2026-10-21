@@ -1,5 +1,7 @@
 # Supplement to "Erdős Problem 585: kernel-checked finite results, three pair-free 5-regular graphs, and a reduction at degree six"
 
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
 This folder holds the files that the findings document cites and that are not elsewhere in the public
 repository [roberthuynh/erdos-585](https://github.com/roberthuynh/erdos-585) at tag `v0.3`, plus,
 for convenience, copies of the three edge lists and the census logs that are also there. The programs in
@@ -199,18 +201,10 @@ One folder per argument of the findings document, each with the written argument
 papers only.
 
 `quartic/` holds the written proof of QB(4) and P_2 (`C1-PAPER.md`, whose original reviewed-source identity is recorded in
-`C1-FROZEN.sha256`), its three reviews with each referee's own
+`C1-FROZEN.sha256`), its three reviews with each independently produced
 code (`C1-REVIEW.md` and `review-1-code/`; `C1-REVIEW-2.md` and `review-2-code/`; `C1-REVIEW-3.md`,
 its log `C1-REVIEW-3-LOG.md` and `review-3-code/`), the one correction (`C1-CORRECTIONS.md`), the
-checks of its appendix A (`c1checks/`), and the two earlier reports it cites. The second referee
-re-derived every step and wrote its own code before reading the first review, but it was given
-`C1-CORRECTIONS.md` at the start, which records the first review's verdict, its one fix and its two
-optional observations; so it confirmed that fix rather than finding it. It was requested on a
-different model, but every call in its transcript ran on Claude Opus 5.5, the first referee's model;
-the AI attribution correction at the top of `C1-REVIEW-2.md` corrects its closing
-sentence ("Two referees on different models"). The third referee ran on Claude Fable 5.1 and was
-told not to open the other reviews or the correction note before writing its verdict; its log shows
-when it opened them. The earlier
+checks of its appendix A (`c1checks/`), and the two earlier reports it cites. The second AI review re-derived the argument and wrote separate code, but had access to the first correction note before its verdict; its confirmation of that correction is not independent discovery. Both first and second reviews used Claude Opus 5.5 in separate contexts. The third AI review used Claude Fable 5.1; its log records the order of reading. These are AI review records, not human journal peer review. The earlier
 reports are `PAPER.md` (with
 `REVIEW.md` and `CORRECTIONS.md`) for the 4-factor criterion, and `REPORT.md` (with
 `QUARTIC-REVIEW.md`) for the E4 reduction and the reductions behind P_2. `PAPER.md` retains the mathematical argument of the original reviewed source
@@ -221,7 +215,7 @@ in loopless multigraphs, when the maximum degree is at most 7).
 
 `qb5/` holds the written proof of QB(5) (section 4.1; the Lean proof, `Erdos585.qb5`, is in the public
 repository's `Openmath/Proofs/QB5/`): four papers, with their original reviewed-source identities in
-`FROZEN.sha256` to `FROZEN4.sha256` and each with its referee's report. `PAPER.md` shows that a
+`FROZEN.sha256` to `FROZEN4.sha256` and each with its AI-generated review report. `PAPER.md` shows that a
 smallest counterexample to QB(5) is an E5 instance, two blocks joined by seven edges, and states the E5
 pair statement (some G − p − q has a 4-factor), which implies QB(5) (`REVIEW.md`); `PAPER2.md` proves
 that statement for generic blocks, hence for n ≤ 26 (`REVIEW2.md`); `PAPER3.md` reduces it to one block
@@ -230,15 +224,15 @@ QB(5) (`REVIEW4.md`). Read section 0 of `PAPER4.md` first; its section 1.1 says 
 three reports require are carried. All four reports are final and found no mathematical error;
 `REVIEW4.md` requires one wording fix (J1) that the original reviewed `PAPER4.md` does not carry: the paper's
 account of its own computer checks overstates which lemmas they test. The code and data that the
-hash lists name are in `code/` (two of the files are in `review3/data/`). Each referee's own code and
-log are in `review/` to `review4/`, without compiled binaries; the referees' other data are not
+hash lists name are in `code/` (two of the files are in `review3/data/`). Separately written code and
+log are in `review/` to `review4/`, without compiled binaries; the AI reviewers' other data are not
 included. The four hash lists identify original reviewed-source bytes, including
 `code/generic_check.py` (named in `FROZEN2.sha256` and `FROZEN3.sha256`) and
 `code/run_all.sh` (in `FROZEN.sha256`). Public copies have layout and editorial changes;
 `MANIFEST.md` records their current byte identities. The historical lists do not certify the edited public copies.
-The author and the four referees were Claude Opus 5.5 agents of the third track. The public proof files are in `papers/qb5/`.
+The proof text and four review reports were generated using Claude Opus 5.5. The public proof files are in `papers/qb5/`.
 
-`pairs/` holds the third track's pairs paper (`PAPER.md`, original reviewed-source identity in `FROZEN.sha256`), its
+`pairs/` holds the pairs paper (`PAPER.md`, original reviewed-source identity in `FROZEN.sha256`), its
 final review (`REVIEW.md`: accept with fixes; read its fixes F1 to F6 with the paper), and the
 certificates behind section 5, question 3: the 20-vertex example (`data/rigid20.g6`) and the six
 11-vertex counterexamples with their marked edges (`data/t1_none.txt`, checked by `verify_t1.py`).
@@ -252,9 +246,9 @@ needs |S| ≥ 3) and F5 (the T2 count in its sections 0 and 3.2 is 6, not 82) ap
 pair (section 5, question 2). `theory/` has the rigid-set paper (`PAPER.md`) and its addendum
 (`ADDENDUM-B.md`: Theorem B and Corollary B, no smallest E4-type counterexample to W1b on at most
 22 vertices), with original reviewed-source identities in `FROZEN.sha256` and `FROZEN-B.sha256`, one
-referee report for both (`REVIEW.md`: the results the chain uses are accepted; its fixes P1 and P2
+AI review report for both (`REVIEW.md`: the results the chain uses are accepted; its fixes P1 and P2
 reword two statements of section 7 (P2 also the results-table row of Lemma 7.3) and P3 corrects
-stale counts in the "Evidence" paragraph of section 6.2; P4 and P5 are optional), the referee's
+stale counts in the "Evidence" paragraph of section 6.2; P4 and P5 are optional), the AI review's
 log and code (`review/`), the note `N.md`, whose step 1 is the reduction from B to B − o, and the
 records that the paper's appendix A and the addendum's section 5 cite: the 5 + 5 census
 (`final_checks.sh`, `census55*`), the side census of Lemma B2 (`census_side.*`, `cs_*`), the SAT
@@ -262,17 +256,16 @@ model of Theorem B (`lemmaB_sat*`), the LP and identity checks, and the direct c
 vertices (`run_b6_20.sh`, `b6_20_part_*.err`). The repair experiments `exp1` to `exp12` (except the
 library `exp11lib.py`, which `check_identities.py` imports), `FLAW.md` and the graph lists are not
 included. `c1type/` has the C1-type paper (`PAPER.md`: Theorem C and Corollary C,
-with its original reviewed-source identity in `FROZEN.sha256`), its referee report (`REVIEW.md`: Theorem C accepted; Corollary C accepted
+with its original reviewed-source identity in `FROZEN.sha256`), its AI review report (`REVIEW.md`: Theorem C accepted; Corollary C accepted
 with fix F1, which corrects the provenance of census F2; fixes F2 to F4 replace stale status words
-in sections 0, 7 and 8; read them with the paper), the referee's log and code (`review/`), and the
-author's SAT checks (`code/`). The referee settled by computation the one shape the author's model
+in sections 0, 7 and 8; read them with the paper), the AI review's log and code (`review/`), and the
+author's SAT checks (`code/`). The AI review settled by computation the one shape the author's model
 left open (`review/code/n23k44_enum.out`, `k44free_*`, `k44split_*`); `review/code/n23_55_free.*`
 and `k44free_y1b1_d5.*` are stopped runs, not cited. The chain also uses Lemma 1 and Proposition 5
-of `pairs/PAPER.md` and Lemma 4.4 of `quartic/C1-PAPER.md`. Authors and referees were third-track
-agents (section 7). The public proof files are in `papers/b6-24/theory/` and `papers/b6-24/c1type/`.
+of `pairs/PAPER.md` and Lemma 4.4 of `quartic/C1-PAPER.md`. Authors and reviewers were AI systems; their identities are recorded in section 7. The public proof files are in `papers/b6-24/theory/` and `papers/b6-24/c1type/`.
 
 `s6/` holds the first paper of the S6 written argument (`PAPER.md`, with its original reviewed-source identity in `FROZEN.sha256`)
-and its referee's report (`REVIEW.md`: nothing rejected; fixes to wording, citations and framing).
+and its AI-generated review report (`REVIEW.md`: nothing rejected; fixes to wording, citations and framing).
 Section 5, question 3 uses only its Lemma 1.1 (B − o is sparse if and only if B is E10, for every
 o; accepted) and its section 6 (Corollary 6.6, accepted; read lines 288-289 with the report's fix:
 "S6 gives B6 once such cuts are ruled out"). Its Lemma K, the route of its Theorem 4.1, was later
@@ -283,36 +276,21 @@ S6 and section 6 are not affected.
 `checks/check_deep.py`), the 11-vertex graph of section 4.1 (`checks/data/qb8_counterexample.g6`) and
 the logs of the n = 13 minimal-counterexample search (`checks/data/spq4_n13_*.err`).
 
-These are the project's working documents. The original v0.3 export applied three kinds of edit: absolute local
-paths are shown as `[local path]`, `[temporary path]` or `[local scratch folder]`, or replaced by
-the supplement path or archive name they stand for, link targets are remapped into this folder or marked "not
-included", and one sentence of `r1-substitution/PROOF-R1.md` about an integer program is corrected
-against its own log. Other edits, each marked or recorded: the copyright line of the Lean files
-written for this project is matched to the public repository; in `bipartite-hamilton/` and
-`extraction-attempt/PAPER.md` a few passages outside these findings are omitted, each omission marked
-in the text; one path in a graph file's header is relocated to the public layout; and in the
-Markdown working documents that no hash list names and no other file cites by hash, British
-spellings are changed to American ones.
-One more edit is recorded only in `PROVENANCE.json`: `checks/leanchecker-main-oct4.tsv` omits the row
-of one Lean file that is not part of this release (its other rows include a few scratch
-modules of the project, which are not shipped either). `PROVENANCE.json` preserves the original
-v0.3 export's source paths, SHA-256 values and edits. It does not inventory the current corrections
-or the added small-value certificate packet. `MANIFEST.md` lists the current files and byte hashes.
-Where a report has a correction header, the header
-takes precedence over the body. Line numbers that working documents cite in the findings document or
-in each other refer to the versions current when they were written. Historical review hashes identify the original reviewed text; current file hashes are listed in `MANIFEST.md`. Historical interpreter and cache paths may need adjustment for reproduction. Scripts that name a local interpreter or path, shown
-as `[temporary path]` or `[local path]` (for example `papers/quartic/c1checks/run_all.sh` and
-`census/calibration/programs/oracle_plain.py`), need that path set before a rerun.
+These historical mathematical documents have been edited for the public layout and corrected where the supplied reviews identify errors. Correction headers take precedence over superseded text. Line numbers in older reviews refer to the versions reviewed at that time.
+
+`PROVENANCE.json` records public relative paths, available original-source hashes, prior-export hashes and current hashes. It omits historical machine paths and coordination records. Original hash receipt files are not included; references to them describe historical evidence, not checks that can be replayed against these edited bytes. Published proof-check logs remain in `checks/` with their stated source scope. `MANIFEST.md` inventories this exact payload.
+
+`REPRODUCTION-BOUNDARY.md` and `REPRODUCTION-CONFIG.json` distinguish supplied tools, external dependencies and missing inputs. Current packaging does not establish new mathematical verification.
 
 ## Glossary of the working documents
 
 - **Codex**: OpenAI GPT-6 Astra agents used in the numbered research passes.
-- **Claude Opus 5.5**: the AI model used in the third research track described in section 7 and in the attribution correction at the top of `papers/quartic/C1-REVIEW-2.md`.
-- **Fable**: the Claude Fable 5.1 track on degree six, with Claude Opus 5.5 AI research agents. "Fable R1" is
+- **Claude Opus 5.5**: the AI model identified in section 7 and in the attribution correction at the top of `papers/quartic/C1-REVIEW-2.md`.
+- **Fable**: a historical attribution label involving Claude Fable 5.1 and Claude Opus 5.5 AI research. "Fable R1" is
   Theorem R1 of the findings document.
-- **Opus**, wildcard: the Claude Opus 5.5 track that extended the census and wrote BM-2 (Theorem BM in its working documents).
+- **Opus**, wildcard: Claude Opus 5.5 AI research that extended the census and wrote BM-2 (Theorem BM in its working documents).
 - **reviewer**: an AI reviewer.
-- **rung (a) to (d)**: result categories: (a) proof, (b) special case, bound or counterexample,
+- **Categories (a) to (d)**: result categories: (a) proof, (b) special case, bound or counterexample,
   (c) literature find, (d) formalization.
 - **check.sh**, **oracle**, **PASS**: the result checker described in section 3 of the findings
   document, and its success line.
@@ -343,10 +321,9 @@ as `[temporary path]` or `[local path]` (for example `papers/quartic/c1checks/ru
   `papers/b6-24/theory/PAPER.md`, or a fix label: F1 to F6 of `papers/pairs/REVIEW.md`, F1 to F7 of
   `papers/qb5/REVIEW.md` and of `papers/b6-24/c1type/REVIEW.md`, or the checks F1 to F5 of
   `papers/qb5/PAPER4.md` section 5.
-- In `papers/qb5/`: F1 to F7, G1 to G3, H1, and J1 and J2 are the four referees' fix labels; (H1) to
+- In `papers/qb5/`: F1 to F7, G1 to G3, H1, and J1 and J2 are the four AI reviewers' fix labels; (H1) to
   (H3) in `PAPER4.md` are hypotheses, and (B1), (B2) in `PAPER2.md` are facts.
-  The historical QB(5) account's progression has rung 1 (a proof of QB(5)) and rung 2 (a reduction to an exactly stated
-  remainder), not the rungs (a) to (d) above.
+  The successive QB(5) papers distinguish a full proof from a reduction to an exactly stated remainder.
 - **W1b**: W1 for bipartite graphs (section 5, questions 2 and 3). **T1**, **T2**: two computations in
   the pairs notes; T1 is the marked-edge statement of section 5, question 3.
 - **VA6**: the vertex-deleted form of B6 (section 5, question 2).
@@ -371,13 +348,17 @@ as `[temporary path]` or `[local path]` (for example `papers/quartic/c1checks/ru
   **Theorem C**, **Corollary C**, **Lemma C1**, **Proposition C2**, **Lemma C3**, **Theorem C3**,
   **Lemma C4** (in `papers/b6-24/c1type/PAPER.md`): steps of section 5, question 2. Not Corollary B
   of `papers/r1-substitution/PROOF-R1.md` (section 4.6).
-- **P1** to **P5** (in `papers/b6-24/theory/REVIEW.md`): that referee's fix labels.
+- **P1** to **P5** (in `papers/b6-24/theory/REVIEW.md`): that AI review's fix labels.
 - **AM walk** (in `census/s6n22/`), **frame**, **Φ** (there and in `papers/s6/`): the randomized
   recoloring search of the S6 program and its state; a frame with Φ = 2 gives two edge-disjoint
   Hamilton cycles (`papers/s6/PAPER.md`, Lemma 2.3). The program uses it only to find pairs, which
   it checks.
 - **shard**, **slice**: one of the parts `r/mod` into which nauty's generators split their output.
-- **briefed hints** (section 6 of `C1-PAPER.md`): suggestions given to the author agent at the start
-  during AI research; that section checks each one. H10, the route of its sections 3
-  and 4, is one of them. Its port-uncrossing suggestion also originated in AI research.
+- **Auxiliary observations** (section 6 of `C1-PAPER.md`): supplementary calculations H1–H10. The port-uncrossing suggestion originated in AI research.
 - **SMS**: SAT Modulo Symmetries, the solver of `papers/census-extension/`.
+
+## Recovered computational inputs
+
+[RECOVERED-REPLAY.md](RECOVERED-REPLAY.md) identifies the recovered inputs, separate new finite replays, and their limits. Original incorrect streams are retained as historical data with explicit corrections; they are not corrected certificates. Recovery and replay do not verify the all-sizes theorem or resolve the conditional n16 coverage claim.
+
+[Licensing and source attribution](LICENSING.md) describes the project-owned and third-party boundaries. [Recovered source identities](RECOVERED-SOURCES.json) list the source hashes and license basis for each recovered file.

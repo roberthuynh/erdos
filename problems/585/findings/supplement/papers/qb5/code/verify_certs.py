@@ -1,4 +1,4 @@
-"""Independent checks for the qb5 lane (Python + networkx; shares no code with petal.c / clcheck.c).
+"""Independent checks for QB(5) (Python + networkx; shares no code with petal.c / clcheck.c).
 
 Usage: verify_certs.py MODE < file.g6
   c2core : every C2 instance has a good W-vertex; for u0 instances a good W-vertex off N(u0), for

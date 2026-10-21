@@ -1,4 +1,4 @@
-"""Random E5 block pairs with a 7-edge cut of matching number <= 3 (lane qb5).
+"""Random E5 block pairs with a 7-edge cut of matching number <= 3 (computational checks).
 
 Usage: python gen_e5.py COUNT SEED [big] > out.g6   (big: Y also has sides 5, 7, n = 24)
 X: C (5) saturated into A (7), each C-vertex misses one A-vertex; a1 is missed by two C-vertices

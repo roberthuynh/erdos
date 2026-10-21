@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
-"""Cross-check gen585's C pair test (-p mode) against LANE/tools/pair_oracle.decide and brute.decide.
+"""Cross-check gen585's C pair test (-p mode) against ERDOS585_VALIDATION_TOOLS/pair_oracle.decide and brute.decide.
 
 Random graphs: G(n, p) and random max-degree-6 graphs, n = 6..13, seeded. Prints disagreements.
-Run: timeout 240 [temporary path] test_pair.py 600
+Run: timeout 240 python3 test_pair.py 600
 """
 import json, os, random, subprocess, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LANE = os.path.dirname(os.path.dirname(HERE))
-sys.path.insert(0, os.path.join(LANE, "tools"))
+TOOLS = os.environ.get("ERDOS585_VALIDATION_TOOLS", os.path.join(HERE, "validation_tools"))
+if not TOOLS or not os.path.isdir(TOOLS):
+    raise SystemExit("Validation modules not found. Set ERDOS585_VALIDATION_TOOLS to their verified directory; see REPRODUCTION-BOUNDARY.md.")
+sys.path.insert(0, TOOLS)
 import pair_oracle, brute  # noqa: E402
 
 
@@ -42,7 +45,7 @@ def main():
             E = rand_maxdeg(n, m, 6, rng)
         graphs.append((n, E))
     inp = "".join("%d %d %s\n" % (n, len(E), " ".join("%d %d" % e for e in E)) for n, E in graphs)
-    out = subprocess.run([os.path.join(HERE, "gen585"), "-p"], input=inp, capture_output=True, text=True,
+    out = subprocess.run([os.environ.get("ERDOS585_GEN585", os.path.join(HERE, "gen585")), "-p"], input=inp, capture_output=True, text=True,
                          check=True).stdout.split()
     bad = 0
     stats = {"pair": 0, "nopair": 0}

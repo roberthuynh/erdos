@@ -1,8 +1,12 @@
 # P_4 and P_3 for general graphs: where the C1 method stops (residual record)
 
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with the supplement README and correction records. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
 October 5, 2026.
-Status: frozen residual record (SHA-256 in `FROZEN.sha256`). Not reviewed. No Lean, no `check.sh`, so
-nothing here is a project-oracle PASS. Rungs: (a) for the lemmas and reductions of §2 and §4-§5,
+Status: frozen residual record (SHA-256 in the omitted historical receipt `FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json)). Not reviewed. No Lean, no `check.sh`, so
+nothing here is a project-oracle PASS. Evidence categories: (a) for the lemmas and reductions of §2 and §4-§5,
 (b) for the counter-instances and computations of §3 and Appendix A.
 
 ## 0. Results at a glance
@@ -26,7 +30,7 @@ can be certified, and one repair was carried out; this file records both and the
 The residual (§6): P_3 is open exactly at barrier types 2, 3, 10, 11 (with the restrictions of
 Theorem 5.2); P_4 at 52 of its 58 types, and at 41, 42 with small cut matchings.
 
-**Where a referee should attack first.**
+**Sensitive steps and hypotheses.**
 1. Lemma 2.1 and its use in Corollaries 2.3 and 2.4 (all signs, and the claim S ≠ ∅).
 2. Theorem 3.1: the hand verification of the n = 9 graph in `FLAW.md`, and whether the stated
    hypotheses really are everything the C1 core lemma used.
@@ -75,7 +79,7 @@ tuple (δ, s − t, e(S), e(T), D_T, D_S, components of G[R] with their (D_C, e(
 `unpublished historical obstruction-type output` (P_3 block, P_4 block),
 reproduced in `checks/data/type_table.txt`. A component with |C| ≥ 2 is a *piece*.
 
-**Proved tools used** (`findings/supplement/papers/quartic/C1-PAPER.md`, accepted by two independent referees,
+**Proved tools used** (`findings/supplement/papers/quartic/C1-PAPER.md`, accepted by two independent AI reviewers,
 `C1-REVIEW.md` and `C1-CORRECTIONS.md`): C1 (Theorem 4.3: a bipartite graph with sides s and s + 1,
 Δ ≤ 6 and deficiency at most 1 on the smaller side has a 4-regular subgraph), hence C0, E4
 (Corollary 5.2), QB(4) (Corollary 5.3) and P_2 (Corollary 5.4).
@@ -343,7 +347,7 @@ reductions to C0, C1, E4, QB(4) by deletion and by moving singletons between S, 
 statement QB(5) needed next (port method fails at n = 15, Theorem 3.1(c); a quartic search finds no
 counterexample in its sparse class for n ≤ 16, and F1 covers n ≤ 18).
 
-Suggested next steps, in order of expected value:
+Unperformed extensions (no result is claimed):
 1. **QB(5) with all W-vertices.** In the n = 15 graphs the degree-6 W-vertices are good. A C1-type
    argument over every W-vertex (not only ports), plus the E5 case (every violation splits V into two
    tight blocks joined by 7 edges, closed by gluing whenever the 7 edges contain a 4-matching), is the
@@ -391,5 +395,5 @@ Lemma 2.2 on every barrier it meets (0 mismatches at n = 7, 8, 9).
   (lines 64-79), Lemma 4 (82-104), Theorem 5 reproduced (105-121).
 - `findings/supplement/papers/quartic/C1-PAPER.md` (SHA-256 3c67d183...0cf8): Lemma 1.4 (91-95), Lemma 3.1 (137-155),
   Theorem 4.3 (206-211), Lemma 4.4 (213-221), Corollaries 5.1-5.4 (227-246);
-  `C1-REVIEW.md` (verdict, lines 15-33); `C1-CORRECTIONS.md` (second referee, lines 13-17).
+  `C1-REVIEW.md` (verdict, lines 15-33); `C1-CORRECTIONS.md` (second AI review, lines 13-17).
 - `unpublished historical census-status note`: F1 and its extensions (lines 18, 31, 33), C1-CLOSE (line 44).

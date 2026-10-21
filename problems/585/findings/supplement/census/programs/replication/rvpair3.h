@@ -1,4 +1,4 @@
-/* rvpair3.h -- reviewer's third pair test (SMS-CENSUS-REVIEW), tuned for graphs that do have a pair.
+/* rvpair3.h -- independent third pair test (SMS-CENSUS-REVIEW), tuned for graphs that do have a pair.
  * Requires rvpair.h and rvpair2.h (shares rv_verify, rv_eid/rv_eu/rv_ev, r2_A, r2_supports, r2_sup).
  *
  * Supports are the same as in rvpair2.h (w in S, S inside the 4-core component of w, |S| >= 5,

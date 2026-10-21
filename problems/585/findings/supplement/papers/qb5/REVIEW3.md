@@ -1,7 +1,9 @@
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
 # REVIEW3: QB(5) round 3, cores reduce to one block lemma (findings/supplement/papers/qb5/PAPER3.md)
 
-Independent adversarial referee, October 5, 2026. Status: FINAL.
-Object: `PAPER3.md` as frozen in `FROZEN3.sha256` (`shasum -a 256 -c FROZEN3.sha256`: all 20 entries OK at the
+Independent adversarial AI review, October 5, 2026. Status: FINAL.
+Object: `PAPER3.md` as frozen in the omitted historical receipt `FROZEN3.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json) (the omitted historical receipt `shasum -a 256 -c FROZEN3.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json): all 20 entries OK at the
 start and at the end of this review). Working files, log and code: `review3/` (`review3/LOG.md`, `review3/code/`,
 `review3/data/`, `review3/runs/`). Nothing here is a project-oracle PASS: no Lean, no `check.sh`.
 
@@ -28,7 +30,7 @@ genbg 2.9.3 only to cross-check class counts, own Dinic max flow, own block chec
 No REJECT. I found no mathematical error. **"KL1 implies QB(5)" is a complete reduction**: KL1 for both blocks of
 a minimal counterexample contradicts minimality.
 
-**KL1 counterexample: none found.** In addition, §6 below proves (referee observation, not part of any verdict)
+**KL1 counterexample: none found.** In addition, §6 below proves (AI review observation, not part of any verdict)
 that a KL1 failure needs a minimal family with at least **four** core-type sets: the case s = 3 is impossible.
 
 ## 2. Required fix, with location
@@ -106,7 +108,7 @@ PAPER3 §1.2 lists all ten with the content of REVIEW.md §2 and REVIEW2.md §2.
 correctly: G1 in Theorem 2.1 (pairs p ∈ P, q ∈ Q; Fact 2.1 then gives A × D), F2 in §0 (n ≥ 3), the counting
 converse of PAPER2 Corollary 2.3 in Theorem 2.1. F3 to F7, G2 and G3 concern statements PAPER3 does not use.
 
-## 6. KL1: where a counterexample could still be (referee observation, not refereed)
+## 6. KL1: where a counterexample could still be (AI review observation, not AI-reviewed)
 
 Offered to the author; no verdict depends on it. Setting of §5: M covers L_A, U = V(M) ∩ A. I_X(M) = ∅ iff some
 family of core-type under-supplied sets has intersection inside U; take one minimal under inclusion,
@@ -132,7 +134,7 @@ In (A), w(⋃I) ≥ 7 and w(Ex) ≤ 1; in (B) to (D), w(N) = w(Ex) = 0 and I_12,
 weighted pair with κ = e'' = 0 on both sides has C''_i ∩ C''_j ≠ ∅, hence κ(Z) ≥ 2 by (c). (A): (d) gives
 Σκ(Z) ≤ 4, so one such pair, the other two are single vertices of weight 0, and w(A1_3) ≤ 1 < 5. (B): Σκ(Z) ≥ 6.
 (C): Σκ(Z) ≥ 6 (f ≤ 1), so g(U'') ≤ 2. (D): κ(Z_23) ≥ 2 and (d) give κ(Z_12) + κ(Z_13) ≤ 1 + ε/3, while each is
-≥ 2 unless its f ≥ 3 and f_12 + f_13 + ε ≤ 3. All impossible. (D) includes the sub-case left open in `NOTES.md`
+≥ 2 unless its f ≥ 3 and f_12 + f_13 + ε ≤ 3. All impossible. (D) includes the sub-case left open in `NOTES.md` (original historical note not bundled)
 §7.6: three C''_1-edges at a single N-vertex is ε = 3.
 
 *V_0 ≠ ∅.* m(A1_i) ≥ m(V_0) forces k_i ≥ 2 and κ_i ≤ 0; \|V_0\| ≥ 2 or m(V_0) ≥ 2 makes every κ_i = −1 and

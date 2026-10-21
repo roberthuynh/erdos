@@ -1,4 +1,4 @@
-"""Write the graphs of a file that have an alpha-petal pair with a (2,0) or (0,2) split (lane qb5)."""
+"""Write the graphs of a file that have an alpha-petal pair with a (2,0) or (0,2) split (computational checks)."""
 import sys
 from split_detail import analyze
 for line in sys.stdin:

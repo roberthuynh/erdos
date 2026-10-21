@@ -5,8 +5,8 @@ set_option autoImplicit false
 set_option relaxedAutoImplicit false
 
 /-!
-Requested routine conditional QB7 assembly. Three unpaid physical repairs remain
-explicit. The closed reverse-two branch uses only the strict V2 producer.
+Conditional QB7 assembly. The propositions C4Repair, U2Repair and E73Repair
+remain explicit assumptions. The closed reverse-two branch uses only the strict V2 producer.
 The exact conditional statement and its hypotheses are given below.
 -/
 
@@ -374,8 +374,8 @@ theorem quartic_of_gv_le_fourteen
     exact hq (QB6Assembly.quartic_mono_graph hHG hquarticH)
 
 open scoped Classical in
-/-- Conditional QB7 endpoint on the original graph. Exactly three unpaid whole
-    physical cases are explicit; the reverse-two case is already produced. -/
+/-- Conditional QB7 endpoint on the original graph. The assumptions C4Repair, U2Repair
+    and E73Repair are explicit; the reverse-two case is already produced. -/
 theorem qb7_conditional
     (repair4 : C4Repair.{u}) (repair2 : U2Repair.{u}) (repairE : E73Repair.{u})
     {V : Type u} [Fintype V] (G : SimpleGraph V) (hbip : G.IsBipartite)

@@ -1,4 +1,4 @@
-# Referee log, wave4 theory (PAPER.md + ADDENDUM-B.md)
+# AI review log, wave4 theory (PAPER.md + ADDENDUM-B.md)
 
 - start: FROZEN.sha256 OK (PAPER.md), FROZEN-B.sha256 OK (ADDENDUM-B.md).
 - Independently prepared review code and examined both papers and the pairs inputs.
@@ -9,7 +9,7 @@
   edge by edge), Lemma 7.1, Cor 7.2, Lemma 7.3 (all four cases), Lemma B1, (D1)-(D3), B2, B3, Thm B
   4.1, 4.2, 4.3 Steps 1-5 and mirrors, Cor B. No error found yet. Minor wording: Cor 7.2 needs T
   nonempty and proper (T = empty set has dQ = 0). Checked: 308,832 = 24 x (C(16,8) - 2).
-- Next: own code in review/code/: (1) LP/rigidity brute force, (2) low-slack classifier in C,
+- Proposed follow-up at that date: own code in review/code/: (1) LP/rigidity brute force, (2) low-slack classifier in C,
   (3) 5+5 pair census in C, (4) B2 side census, (5) own SAT model of (star) for Thm B.
 - 17:50 records read: check_lp_*.out (4 seeds x 6 instances x 12,868 balanced T = 308,832; rigid 6+6+4+4 = 20),
   census55.out, census_side.out match the numbers quoted in App. A and Addendum section 5.
@@ -30,7 +30,7 @@
   U3 <-> U4 by complement.) R20: one U0 set per orientation, 4 U2.
 - own code/rigidcheck.c written (4-factor enumeration, Lemma 1.1 out-degree, Cor 2.2 (i)/(ii) for E0 and
   E1, Thm 2.1 min over pi in {0..R}^V); running on own random/two-block instances, a6, a7, a8 head, R20.
-- next: own SAT model of (star) for Theorem B (pysat; co-reach closure per y', lazy sparsity cuts).
+- Proposed follow-up at that date: own SAT model of (star) for Theorem B (pysat; co-reach closure per y', lazy sparsity cuts).
 - 18:20 rigidcheck results (own code): 0 failures of Lemma 1.1 (out-degree = s on every S for 6 sampled
   4-factors per graph), Cor 2.2(i), Cor 2.2(ii) for E0 and for E1, rigid(T) = rigid(V-T), PAPER (1).
   Graphs: 180 random a+a (a = 4..7), 180 two-block (gen_inst.py; 138 without a 4-factor, skipped),
@@ -45,7 +45,7 @@
   no one-crossing cycle, so the (star) clauses really forbid one-crossing cycles.
   Full model: n = 20 part (45 configs) UNSAT in coreach, reach and no-B-side modes; n = 22 running.
   (star') of 4.2 (pairs blocked by Fbar edges only, n = 20, 44 configs): UNSAT in all 44.
-- 18:40 (resumed after a network interruption; state re-read from this log.) Interim REVIEW.md
+- 18:40 Interim REVIEW.md
   (PARTIAL) saved.
 - record check of the repair experiments (exp7-12 logs): exp7 79 + 36 = 115 sparse necklaces; exp8
   116 + 118 + 128 = 362 dyn_good; exp9 inst 135, M_tests 1,000, rand 3,996, rand_newbad 13; exp11 inst
@@ -80,7 +80,7 @@
   1,187,258 / 1,162,097 after the summarize fix logged in rigid/LOG.md (two sparse no-rigid instances
   had been filed as skipped). Stale numbers, conclusion unchanged: wording fix. 975,700 good ports and
   "within 10 swaps" match.
-- Next: final hash check, write FINAL REVIEW.md.
+- Proposed follow-up at that date: final hash check, write FINAL REVIEW.md.
 - 19:25 FINAL REVIEW.md written. Count corrections against the earlier log lines: rigidcheck used 300
   random a + a graphs (180 with a = 4, 5 and 120 with a = 6, 7), not 180; balanced T total 10,850,962;
   Identity 6.2 tests 19,924 in all, other identities 28,000 each. Verdicts: 1a-1d ACCEPT, 1e ACCEPT WITH

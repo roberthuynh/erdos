@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Referee's own re-check of PAPER2 §7 data, one graph6 file at a time.
+"""Independent re-check of PAPER2 §7 data, one graph6 file at a time.
 Usage: data_check.py FILE.g6 OUTFILE [allpairs] [crit_first=N]
 Per instance: E5 numbers, sparsity (sparse_gray), all violations / decompositions, genericity of
 every big-side vertex in every decomposition, good pairs by max flow (all P x Q pairs if

@@ -16,8 +16,8 @@ import subprocess
 import sys
 import time
 
-E = "[local path]"
-QDIR = "[local path]"
+E = __import__('os').environ['ERDOS585_CENSUS_EDGE_CODE_COLLECT_PY_L19']
+QDIR = __import__('os').environ['ERDOS585_CENSUS_EDGE_CODE_COLLECT_PY_L20']
 sys.path.insert(0, QDIR)
 BEGIN, END = "<!-- COLLECT:BEGIN -->", "<!-- COLLECT:END -->"
 
@@ -160,7 +160,7 @@ def verdicts(st):
     elif found(A):
         ex18 = 47
         rows.append(("18", "**47 (!!!)**", "job A found graphs with e = 47 and no 4-regular subgraph: "
-                     "`data/found_n18_99_e47.g6`. Tell the lead; the n = 19, 20 rows assumed ex(18) = 46."))
+                     "`data/found_n18_99_e47.g6`. This invalidates later rows that rely on the stated bound; the n = 19, 20 rows assumed ex(18) = 46."))
     else:
         rows.append(("18", "46 or 47", f"job A (9 + 9, e = 47): {prog(A)}"))
     if ex18 == 46:
@@ -171,7 +171,7 @@ def verdicts(st):
         elif found(B):
             ex19 = 50
             rows.append(("19", "**50 (!!!)**", "job B found graphs with e = 50: `data/found_n19_910_e50.g6`; e = 51 (δ ≥ 5) gave 0, "
-                         "e ≥ 52 impossible. Tell the lead; the n = 20 row assumed ex(19) = 49."))
+                         "e ≥ 52 impossible. This invalidates later rows that rely on the stated bound; the n = 20 row assumed ex(19) = 49."))
         else:
             rows.append(("19", "49 or 50", f"job B (9 + 10, e = 50): {prog(B)}; e = 51 (δ ≥ 5) gave 0; e ≥ 52 impossible"))
     else:
@@ -182,7 +182,7 @@ def verdicts(st):
                          "e = 53 not run (over budget, section 5); lower bound `data/witness_n20.g6`"))
         elif found(C):
             rows.append(("20", "**54 (!!!)**", "job C found δ ≥ 5 graphs with e = 54 = 3n − 6 and no 4-regular subgraph: "
-                         "`data/found_n20_1010_e54_d5.g6`, so QB(6) fails at n = 20. Tell the lead."))
+                         "`data/found_n20_1010_e54_d5.g6`, so QB(6) fails at n = 20. Dependent conclusions require revalidation."))
         else:
             rows.append(("20", "52 to 54", f"job C (10 + 10, e = 54, δ ≥ 5): {prog(C)}; QB(5) gives ex(20) ≤ 54"))
     else:

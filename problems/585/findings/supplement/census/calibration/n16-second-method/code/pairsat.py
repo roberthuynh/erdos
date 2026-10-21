@@ -3,7 +3,7 @@
 
 A pair is two edge-disjoint cycles C1, C2 of a simple graph G with V(C1) = V(C2).
 
-Encoding (written for this lane; shares nothing with pairc, pairprune.c or the B-1 tools).
+Encoding (written for this investigation; shares nothing with pairc, pairprune.c or the B-1 tools).
 One CNF per vertex count n, built once over all n(n-1)/2 vertex pairs; a graph enters only
 through assumptions -g[p] for the non-edges p. Variables:
   g[p]          pair p is an edge of G (assumption-controlled)

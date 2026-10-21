@@ -426,7 +426,7 @@ structure ScarBlock (G : SimpleGraph V) [DecidableRel G.Adj] (A C : Finset V) : 
   capA : ∀ a ∈ A, dg G C a ≤ 6
   sparse : ∀ T ⊆ A, ∀ J ⊆ C, 3 ≤ #T + #J → 14 ≤ gv G T J
 
-/-- Unpaid covered KL5 producer. It contains no factor or deletion input. -/
+/-- Assumed covered KL5 producer. It contains no factor or deletion input. -/
 def CoveredFiveSupply : Prop :=
   ∀ {V : Type u} [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj]
     (A C : Finset V), ScarBlock G A C → ∀ m : V → ℕ, msum m A = 5 →
@@ -444,7 +444,7 @@ def UsableFive (G : SimpleGraph V) [DecidableRel G.Adj]
 /-- Multiplicity counts the literal members of an actual finite pair set. -/
 def mult (M : Finset (V × V)) (r : V × V → V) (v : V) : ℕ := #{e ∈ M | r e = v}
 
-/-- Unpaid actual seven-to-five support choice; no desired demand is supplied. -/
+/-- Assumed actual seven-to-five support choice; no desired demand is supplied. -/
 def ActualFiveSelection : Prop :=
   ∀ {V : Type u} [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj]
     (P Q A C : Finset V), E6Input G P Q A C →
@@ -534,7 +534,7 @@ theorem supply_of_usable (cover : CoveredFiveSupply.{u})
   · exact ⟨p, hp, hmp, fun T hT =>
       forced_scar_supply h.card h.edges hm h.sparse h.minA hcap hp hd hmp hb hT⟩
 
-/-- Exact conditional endpoint. Its two unpaid physical producers remain explicit. -/
+/-- Exact conditional endpoint. Its two physical producers remain explicit assumptions. -/
 theorem e6_of_physical_producers (cover : CoveredFiveSupply.{u})
     (choose : ActualFiveSelection.{u}) : E6Repair.{u} := by
   intro V _ G _ P Q A C h

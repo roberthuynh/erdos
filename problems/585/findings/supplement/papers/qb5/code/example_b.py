@@ -1,4 +1,4 @@
-"""Type (b) example of NOTES 7.3 / PAPER3 (lane qb5, round 3): a 22-vertex 2-block X and a 4-set M of
+"""Type (b) example of NOTES 7.3 / PAPER3 (computational checks): a 22-vertex 2-block X and a 4-set M of
 cut edges that misses exactly one in-degree-3 vertex a, with a not in I_X(M).
 A = T u U, T = {a=0, t2..t6 = 1..5}, U = {6..11}; C' = {c1..c6}, C'' = {c7..c10} (C'' complete to U).
 Prints the block line (blockkl format), sparsity, dem(U), I_X(m) for m = {t2, t3, t4, u1}.

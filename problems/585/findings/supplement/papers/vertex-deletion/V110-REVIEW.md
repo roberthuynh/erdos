@@ -1,3 +1,5 @@
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
 # Independent mathematical review of V110
 
 2026-10-04. **Mathematical verdict: ACCEPT as a paper consequence of the stated

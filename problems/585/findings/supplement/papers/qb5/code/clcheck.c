@@ -1,4 +1,4 @@
-/* clcheck.c: test the chain of Theorem 5.1 (lane qb5) on C2 instances, exhaustively over vertex sets.
+/* clcheck.c: test the chain of Theorem 5.1 (computational checks) on C2 instances, exhaustively over vertex sets.
  * For each graph6 C2 instance (n <= 24): sparsity (min g over 3 <= |S| <= n-1), Z_U, whether a
  * W-small 2-block contains Z_U (g = 12, kappa = 2), the bad ports and their petal types, and:
  *  (A) every petal of a bad port is alpha, beta1a or gamma;

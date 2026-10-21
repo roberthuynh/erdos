@@ -1,15 +1,17 @@
 # QB(5), round 3: cores reduce to one lemma about a single block
 
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with REVIEW4.md, REVIEW3.md, REVIEW.md, REVIEW2.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
 AI-written historical note, October 5, 2026. Status: frozen for independent review (SHA-256 in
-`FROZEN3.sha256`). Not reviewed. This is rung 2 of the round-3 ladder: QB(5) is proved under one extra
+the omitted historical receipt `FROZEN3.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json)). Not reviewed. Historical scope: QB(5) is proved under one extra
 hypothesis, Key Lemma KL1 below, a statement about one 2-block and one 4-set of cut edges. KL1 holds on every
 block built so far, two of its cases are proved here, and the exact remaining case is stated (§5.4). It is
-not a proof of QB(5). No Lean, no `check.sh`, so nothing here is a project-oracle PASS. Rungs: (a) for
+not a proof of QB(5). No Lean, no `check.sh`, so nothing here is a project-oracle PASS. Evidence categories: (a) for
 Theorem 2.1, Lemmas 3.1 to 3.4, Propositions 5.2 and 5.3; (a) with a computed lemma (Lemma 4.1, two
 independent programs) for Theorem 4.2 and Corollary 4.3; (b) for the example of §6.1 and the data of §6.
 
-PAPER.md (frozen, `FROZEN.sha256`) and PAPER2.md (frozen, `FROZEN2.sha256`) are cited by section and number.
-Their referee reports REVIEW.md and REVIEW2.md are FINAL with no mathematical error; the fixes F1 to F7 and
+PAPER.md (frozen, the omitted historical receipt `FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json)) and PAPER2.md (frozen, the omitted historical receipt `FROZEN2.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json)) are cited by section and number.
+Their AI review reports REVIEW.md and REVIEW2.md are FINAL with no mathematical error; the fixes F1 to F7 and
 G1 to G3 are in force (§1.2).
 
 ## 0. Results at a glance
@@ -36,7 +38,7 @@ needs a core (PAPER2 Proposition 5.1). This paper handles cores up to one block-
 **Key Lemma KL1 (for the block X).** For every 4-set M of cut edges such that every in-degree-3 vertex of A
 is an end of an edge of M, I_X(M) is nonempty. KL1 for Y is the same statement with D, B in place of A, C.
 
-**Where a referee should attack first.**
+**Sensitive steps and hypotheses.**
 1. Theorem 2.1: the two directions, in particular that I_X(M) avoids the ends of M.
 2. Lemma 3.1(i) for every T (the split of C into C'(T) and C''(T)) and its use in Lemma 3.4.
 3. Lemma 4.1: that its rigid sets K are exactly what Lemma 3.4 produces, that giving every end outside L the
@@ -71,7 +73,7 @@ The *weight* of v ∈ A is w(v) = δ_v − m(v) = def(v) + (c_v − m(v)) ≥ 0,
 
 F1 to F7 (REVIEW.md §2) as stated in PAPER2 §1.3; G1 (REVIEW2.md): pairs are taken with p ∈ P, q ∈ Q, and
 Fact 2.1 of PAPER2 then gives p ∈ A, q ∈ D; G2: (R1) of PAPER2 §7 goes through PAPER2 Corollary 3.4; G3: the
-"permissive model" sentence of PAPER2 §7 is an unrefereed observation. REVIEW2.md §2 (optional items) also
+"permissive model" sentence of PAPER2 §7 is an not independently reviewed observation. REVIEW2.md §2 (optional items) also
 records an elementary converse of PAPER2 Corollary 2.3, used in Theorem 2.1.
 
 ## 2. The M-form of the pair criterion
@@ -235,7 +237,7 @@ with empty intersection that contains at least three core-type sets.** In such a
 member A1_i has an overloaded complement T_i with m(T_i) ≥ 2, w(T_i) ≤ 2m(T_i) − 3, κ_i ≤ 1 and k_i ≤ 3
 (Lemma 3.2); any two members meet (Proposition 5.2); the complements of the core-type members, together with
 the vertices removed by trivial members, cover A, so their weights add up to at least 8 while M has 4 units.
-`NOTES.md` §7.6 sketches how the case of exactly three core-type members and no trivial member reduces to
+`NOTES.md` (original historical note not bundled) §7.6 sketches how the case of exactly three core-type members and no trivial member reduces to
 one small configuration; that sketch is not claimed here.
 
 ## 6. Examples and evidence
@@ -282,7 +284,7 @@ core-minutes.
 | A.4 | §6.1 example | `example_b.py`; `blockkl.c` on its block line | sparse, dem(U) = 2, I_X = ∅ for M ends {t2, t3, t4, 6}; KL1 holds (129 covering multisets) |
 | A.5 | searches | `klsearch.c` (`data/kl/kls_*`), `klplant.c` (`data/kl/kp_*`) | no KL1 failure; no case (b) found by search |
 
-Script hashes are listed in `FROZEN3.sha256` together with this file.
+Script hashes are listed in the omitted historical receipt `FROZEN3.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json) together with this file.
 
 ## Appendix B. Sources (paths relative to the repository root)
 

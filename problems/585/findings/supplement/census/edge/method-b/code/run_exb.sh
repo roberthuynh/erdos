@@ -1,5 +1,5 @@
 #!/bin/bash
-# run_exb.sh -- detached, sharded, resumable driver for method B (wave8/exb).
+# run_exb.sh -- detached, sharded, resumable driver for method B (census/edge/method-b).
 #
 #   run_exb.sh launch   start the driver detached (nohup, nice 10); refuses if one is alive
 #   run_exb.sh drive    the driver loop itself (launch calls this)

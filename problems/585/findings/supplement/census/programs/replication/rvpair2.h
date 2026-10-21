@@ -1,4 +1,4 @@
-/* rvpair2.h -- reviewer's second pair test (SMS-CENSUS-REVIEW), faster than rvpair.h.
+/* rvpair2.h -- independent second pair test (SMS-CENSUS-REVIEW), faster than rvpair.h.
  * Requires rvpair.h (shares rv_verify, rv_eid/rv_eu/rv_ev and rv_die).
  *
  * 1. K = 4-core of G; if w is not in K, no pair through w. Restrict to the component of w in G[K]

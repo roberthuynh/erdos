@@ -1,14 +1,15 @@
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
 # Review: sms-census computation, S10(13) and S10(14)
 
-Status: FINAL (2026-10-04, 05:40). Reviewer: independent subagent; tasks 1 to 4 complete.
+Status: FINAL (2026-10-04, 05:40). Reviewer: independent AI review; four stated checks completed.
 
 Reviewed: `findings/supplement/papers/census-extension/REPORT.md`; `gen585.c` (sha256 prefix 715d011fa1673d37, matches runs.log);
 `gen585_run14.c` (e24007ee9dec1fbb; differs from gen585.c only by the sibling pair cache and the STATUS
 line); `run_slices.sh`; `runs.log`; the n = 14 state files.
 
 Reviewer's sources and slice logs: `census/programs/replication/` (in this supplement) (durable copy). Binaries and bulk
-outputs stayed in the session scratch folder (`scratchpad/review-sms/`, temporary). Nothing in the investigation
-folder was edited; investigation scripts were only run read-only.
+bulk outputs are not bundled. The review records its checks below; those omitted outputs cannot be independently replayed from this copy alone.
 
 ## Lemmas
 
@@ -84,7 +85,7 @@ folder was edited; investigation scripts were only run read-only.
   determinism). The n = 14 run log was checked instead: both halves `STATUS complete ... finals=0`, the
   subtree counts cover every level-10 node, and the level sums equal the report's table.
 
-## Independent replication of S10(13): DONE, 0 graphs (rung (b), computation)
+## Independent replication of S10(13): DONE, 0 graphs (computational evidence, computation)
 
 Different generator, vertex order, reduction and pair test from the investigation. Sources and scripts are in
 `census/programs/replication/` (in this supplement); slice logs are copied there as `status.txt` (main run and pos12)

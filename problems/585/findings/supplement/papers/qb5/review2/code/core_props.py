@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Referee's own check of Proposition 5.1 (a)-(d) on every actual core, and of Remark 5.4
+"""Independent check of Proposition 5.1 (a)-(d) on every actual core, and of Remark 5.4
 (dem_X(A1) <= c(A1) + 1 for all A1; <= c(A1) for A1 proper when the violation is unique),
 on graph6 files given as arguments.  Both blocks (X and the mirror Y) are checked."""
 import sys

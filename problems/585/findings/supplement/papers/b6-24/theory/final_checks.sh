@@ -1,8 +1,8 @@
 #!/bin/bash
-# Session 3 re-runs for PAPER Appendix A (saved outputs). Run from wave4/theory. Each step time-limited.
+# Third-pass checks for PAPER Appendix A (saved outputs). Run from papers/b6-24/theory. Each step time-limited.
 cd "$(dirname "$0")"
 G="$HOME/.cache/erdos585/nauty2_9_3/genbg"
-PC="../../../585-fable/tools/pairc"
+PC="${PAIRC:-pairc}"
 PY="$HOME/.cache/erdos585/venv/bin/python"
 # (1) pair-free 5+5 bipartite graphs by edge count (Lemma 6.1(a)); genbg default: no degree bounds
 : > census55.out

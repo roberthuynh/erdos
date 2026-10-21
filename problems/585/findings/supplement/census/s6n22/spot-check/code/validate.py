@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""validate.py (wave8/s6spot): controls for e10cut and spantest.
+"""validate.py (census/s6n22/spot-check): controls for e10cut and spantest.
 
   validate.py controls         build K66 (= K_{6,6}) and NEG24 (two copies of K_{6,6} minus an
                                edge, joined by two edges: a 2-edge cut, so no test can have a pair)

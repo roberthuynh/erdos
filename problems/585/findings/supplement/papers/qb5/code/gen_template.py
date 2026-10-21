@@ -1,4 +1,4 @@
-"""Random C2 instances built around a planted port violation (lane qb5).
+"""Random C2 instances built around a planted port violation (computational checks).
 
 Usage: python gen_template.py MODE COUNT SEED > out.g6
 MODE alpha: S = K_{c,c+2} (C saturated, a U-small 2-block), a planted alpha violation (k = 2, eps = 0)

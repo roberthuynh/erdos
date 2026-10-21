@@ -1,4 +1,4 @@
-/* Fresh cycle-pair decider, finite-upper-11-12 lane, 2026-10-07.
+/* Fresh cycle-pair decider, finite upper-bound computation for orders 11 and 12, 2026-10-07.
  * No earlier solver source is included or copied.
  * Enumerates supports, first Hamilton cycles, then residual Hamilton cycles.
  * Supports use actual vertex indices and every reported cycle is connected.

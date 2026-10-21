@@ -1,4 +1,4 @@
-/* Referee-3 block checker, written from scratch.
+/* Third independent block checker, written from scratch.
  * Input lines:  nA nC mask_1 .. mask_nC  [c_0 .. c_{nA-1}]
  *   mask_j = neighbourhood of C-vertex j as a bitmask over A (bit i = A-vertex i).
  *   If a cut vector is given, only it is used; otherwise every admissible cut vector

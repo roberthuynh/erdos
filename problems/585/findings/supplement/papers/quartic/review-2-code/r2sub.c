@@ -1,4 +1,4 @@
-/* Referee 2: exact subset enumeration for C1 instances (own code).
+/* Second independent implementation: exact subset enumeration for C1 instances (own code).
  *
  * Input on stdin:  s r m   then m lines "u w" (0 <= u < s <= w < s+r).
  * Vertices 0..s-1 are U, s..s+r-1 are W. n = s + r <= 40.

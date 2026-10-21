@@ -1,8 +1,8 @@
 import RegularTransport
 import DisjointCellBudget
 
-/-! Source: COUNT-BASED-COMPLETION-PROOF-v2.md Section 3, first paragraph.
-Frozen source SHA256: d07eaa46889ac5a9808a097f281e43c25a768e5057e19ddefe5b72952d9eacbb.
+/-! Source: COUNT-BASED-COMPLETION.md Section 3, first paragraph.
+Historical source SHA256 (before public exposition edits): d07eaa46889ac5a9808a097f281e43c25a768e5057e19ddefe5b72952d9eacbb.
 This proves the required strict population threshold for actual regular neighbors.
 A weaker aggregate count than the displayed source .957q count suffices: discard
 the at-most-2|Sx| unsafe neighbors, then charge every nonregular clean cell two

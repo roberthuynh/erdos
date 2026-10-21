@@ -1,4 +1,4 @@
-"""Extract both 2-blocks of sparse E5 instances in blockkl.c format (lane qb5, round 3).
+"""Extract both 2-blocks of sparse E5 instances in blockkl.c format (computational checks).
 
 Line format: "na nc mask_1 ... mask_nc" (mask_j = neighbours in A of the j-th small-side vertex).
 For the Y block the roles are D (big side) and B (small side).

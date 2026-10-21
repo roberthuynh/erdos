@@ -1,8 +1,10 @@
 # Bipartite Hamiltonicity: written quantitative candidate
 
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with BM-REVIEW.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
 Current publication status: the old review verdicts below are historical records. Main BM and its power-five/power-six Hamiltonicity claims are unverified candidates. The supporting lemmas and earlier written AI reviews do not constitute a complete proof of the router and main Hamiltonicity theorem. Positive degree, even order n >= 4, and the sufficiently-large-order convention belong to the intended application. Lemma Ch also needs the positive-degree correction below. Every application of main BM in this dossier is conditional on completing and independently reviewing that theorem.
 
-> **Review status (added by the investigation lead, 2026-10-04).** Heavy independent review:
+> **Review status (historical note, 2026-10-04).** Heavy independent review:
 > `BM-REVIEW.md` (FINAL). **No gap found: Theorem BM holds at c = 5, and at c = 6
 > under the conservative reading of Müyesser's Lemma 4.7.** Lemma B4.7 is ACCEPTED WITH FIX (one
 > clarifying sentence). Lemma Ch, Part 2, Lemmas B2.2 and R2, the Section 4 quotes, and the
@@ -22,21 +24,21 @@ Current publication status: the old review verdicts below are historical records
 > matrix Bernstein, hypergeometric Chernoff bounds, and BJ Lemma 3.3.
 
 
-Lane: bipartite-hamilton. Session 2026-10-04. Status: FINAL (Sections 0-11; the log sits just before the summary).
+Investigation: bipartite-hamilton. Dated 2026-10-04. Status: FINAL (Sections 0-11; the log sits just before the summary).
 
-Rungs: (a) proof, (b) special case, bound or counterexample, (c) literature find, (d) formalization.
+Evidence categories: (a) proof, (b) special case, bound or counterexample, (c) literature find, (d) formalization.
 
 ## 0. Bottom line
 
-1. **Theorem BM holds, with exponent c = 5** (rung (a), written proof below, unpublished
+1. **Theorem BM holds, with exponent c = 5** (written-proof evidence, written proof below, unpublished
    adaptation, needs heavy review). There is an absolute constant C_BM such that every bipartite
    d-regular n-vertex graph G with λ2(G) <= (1-δ)d, δ in (0,1), and d >= C_BM δ^-5 (log n)^3 is
    Hamiltonian. Taking Müyesser's Lemma 4.7 exactly as stated gives c = 6 (his exponent). The
    improvement to 5 comes from slack in his Lemma 4.7, which asks for δ^3 where δ^2 suffices
    (Section 10, item U3). If a reviewer rejects that, c = 6 holds with no other change.
-2. **Edge-expansion form, c' = 10** (rung (a)). A bipartite d-regular γ-expander (Bradač-Janzer
+2. **Edge-expansion form, c' = 10** (written-proof evidence). A bipartite d-regular γ-expander (Bradač-Janzer
    sense) with d >= C_γ γ^-10 (log n)^3 is Hamiltonian, via BJ Lemma 3.3 (δ = γ^2/32).
-3. **Corollary** (rung (a)). If λ2(G) <= (1-δ)d and d >= 33 C_BM δ^-5 (log n)^3, or G is a
+3. **Corollary** (written-proof evidence). If λ2(G) <= (1-δ)d and d >= 33 C_BM δ^-5 (log n)^3, or G is a
    γ-expander with d >= 2^11 C_γ γ^-10 (log n)^3, then G minus one Hamilton cycle satisfies the
    hypotheses again (with δ/2 or γ/2), so G has two edge-disjoint Hamilton cycles: a pair with
    support V(G).
@@ -50,7 +52,7 @@ Rungs: (a) proof, (b) special case, bound or counterexample, (c) literature find
    - The divisibility step. The remainder r < k is removed by contracting r disjoint P-Q-P paths of
      3 vertices ("cherries") into super-vertices, found greedily in spare layers (Lemma Ch, Section 6
      Steps 4-7). [Omitted from this copy.]
-5. **Checks** (rung (b), sanity only). Lemma 4.5's explicit pairing verified for every even cycle
+5. **Checks** (computational evidence, sanity only). Lemma 4.5's explicit pairing verified for every even cycle
    length 6..600. Proposition 4.4 verified for router orders 2..9. 40 random basic routers built
    from Lemma 4.5 comparators with random subdivisions, embedded in bipartite 2-colorings with
    A in P and B in Q, orders 2..5, up to 128 vertices: all proper, all balanced, and the router
@@ -611,7 +613,7 @@ report. It does not change the spectral investigation's floor (K >= 4 for "apply
 theorem to a regular subgraph", their Corollary 5.2), since that floor depends only on the
 (log n)^3 factor.
 
-## 9. Computational checks (rung (b), sanity checks only)
+## 9. Computational checks (computational evidence, sanity checks only)
 
 Scripts and output are in `checks/` in this folder; run with `/usr/bin/python3 <script>` from that
 folder (`sampling.py` needs `OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1`;
@@ -670,7 +672,7 @@ multithreaded BLAS stalled on this machine).
   quoted from memory of Hoory-Linial-Wigderson and only affects constants.
 
 ## Log
-- Read BRIEF.md and spectral/REPORT.md in full (BM audit table, Section 3.3).
+- Historical background records BRIEF.md and spectral/REPORT.md are unbundled; their contents are not established by this export.
 - Fetched arXiv:2609.35766v1 and arXiv:2605.15043v1 with the investigation user agent; pdftotext plain and
   -layout. Read Müyesser in full; read BJ Theorem 1.3, Corollary 1.4, Lemma 3.3, Definitions 1.2,
   3.1, 3.2 and the Cheeger remark.
@@ -681,7 +683,7 @@ multithreaded BLAS stalled on this machine).
   pruning and smaller instances.
 - Wrote Sections 0-11.
 
-## 11. Summary for the lead
+## 11. Historical conclusions and limits
 
 **What I tried.** Read Müyesser arXiv:2609.35766v1 in full and the Bradač-Janzer statements and
 Section 3.1 (arXiv:2605.15043v1). Went through every lemma for a bipartite host. Wrote new proofs
@@ -690,7 +692,7 @@ parity lemma and the subdivision and terminal-extension lemmas, wrote a complete
 argument [Omitted from this copy.], and re-derived the proofs of Lemmas 3.1 and 5.1 and of Proposition 4.4.
 Checked the purely combinatorial parts by computer.
 
-**Results by rung.**
+**Results by evidence category.**
 - (a) Theorem BM: bipartite d-regular, λ2 <= (1-δ)d, d >= C δ^-5 (log n)^3 implies Hamiltonian
   (c = 6 if U3 is rejected). Written proof, Sections 4-6.
 - (a) Theorem BM-γ: bipartite d-regular γ-expander, d >= C γ^-10 (log n)^3 implies Hamiltonian
@@ -705,10 +707,7 @@ Checked the purely combinatorial parts by computer.
 - (c) Typos in the source: Lemma 4.5's M0, and "log log n" in the main proof.
 - No obstruction found: the bipartite version follows from Müyesser's method.
 
-**Single most promising next step.** Have an independent reviewer check Sections 5.4, 5.5 and
-6.3 (Steps 2-8) against Müyesser's text, and rule on U3 (δ^2 versus δ^3 in Lemma 4.7). If it
-passes, the spectral investigation's bipartite Proposition C is unconditional, and the remaining gap for
-any general exponent K is their ML-R or REL (regular expander extraction), not Hamiltonicity.
+**Unresolved review dependency.** Sections 5.4, 5.5 and their applications require independent exact-statement validation. No verification is inferred from this historical report.
 
 **Independent review needed: YES, heavy.** Theorem BM is an unpublished adaptation of a 13-page
 proof with a new divisibility argument and a claimed exponent improvement (U3, U4).

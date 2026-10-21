@@ -1,4 +1,4 @@
-"""Referee's own helpers for PAPER2 checks: graph6 parsing, Dinic max flow, E5 decompositions,
+"""Independent helpers for PAPER2 checks: graph6 parsing, Dinic max flow, E5 decompositions,
 demands, genericity (Definition 3.2), the pair criterion (Theorem 2.2) and the covering rule
 (Lemma 4.2 / Corollary 3.4).  No code shared with qb5/code/."""
 from itertools import combinations

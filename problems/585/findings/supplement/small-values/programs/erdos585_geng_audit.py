@@ -24,7 +24,7 @@ def run():
         for _ in range(100):cases.append((n,sorted(rng.sample(es,rng.randrange(min(35,len(es))+1)))))
     cases.extend([(11,WITNESS11),(11,WITNESS11+[(9,10)])])
     inp=''.join(f'{n} {mask(es)}\n' for n,es in cases)
-    proc=subprocess.run(['[temporary path]'],input=inp,text=True,
+    proc=subprocess.run([__import__('os').environ['ERDOS585_SMALL_VALUES_PROGRAMS_ERDOS585_GENG_AUDIT_PY_L27']],input=inp,text=True,
         capture_output=True,check=True,timeout=200)
     rows=proc.stdout.splitlines();assert len(rows)==len(cases)
     yes=no=0

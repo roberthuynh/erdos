@@ -1,4 +1,4 @@
-"""Adversarial check of the proof chain of C1-PAPER.md Theorem 4.3 (lane M3).
+"""Adversarial check of the proof chain of C1-PAPER.md Theorem 4.3 (computational checks).
 
 The proof uses sparsity (g >= 10) only on named sets. For an instance in which EVERY port is bad
 (G - y has no 4-factor for every W-vertex y of degree <= 5), the chain is run with one min-cut

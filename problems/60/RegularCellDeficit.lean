@@ -2,8 +2,8 @@ import RegularVertex
 import RegularLowIsolation
 import DisjointCellBudget
 
-/-! Exact source correspondence: COUNT-BASED-COMPLETION-PROOF-v2.md §2,
-regular-neighbor isolation paragraph. Source SHA256:
+/-! Exact source correspondence: COUNT-BASED-COMPLETION.md §2,
+regular-neighbor isolation paragraph. Historical source SHA256 (before public exposition edits):
 d07eaa46889ac5a9808a097f281e43c25a768e5057e19ddefe5b72952d9eacbb.
 
 This file discharges the formerly unpaid aggregate bridge. It partitions each

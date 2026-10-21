@@ -275,7 +275,7 @@ lemma original_edges_cut (P Q A T : Finset V) (hA : A ⊆ P) (_hT : T ⊆ Q) :
   · rintro ⟨⟨ha,hq,ht⟩,hadj⟩
     exact ⟨⟨⟨hA ha,hq⟩,hadj⟩,ha,ht⟩
 
-/-- Uses the banked actual unit-edge Hall theorem; only local proper-support
+/-- Uses the actual unit-edge Hall theorem; only local proper-support
 floor and original degree assumptions are inputs, never a cut certificate. -/
 theorem single_omission_left_supplier {P Q : Finset V} {z : V}
     (hmin : ∀ x ∈ P, 5 ≤ dg G Q x)

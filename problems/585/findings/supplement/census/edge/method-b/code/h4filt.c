@@ -1,4 +1,4 @@
-/* h4filt.c -- method B stand-alone decider (wave8/exb).
+/* h4filt.c -- method B stand-alone decider (census/edge/method-b).
 
    Reads graph6 lines on stdin.  For each graph: decode (own decoder),
    check it is bipartite (BFS 2-colouring), record edges, minimum and

@@ -1,3 +1,5 @@
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
 # Review: quartic-subgraph investigation, theory claims (sections 5, 5.1, 6)
 
 Status: **FINAL** (2026-10-04, 06:13 to 06:41)

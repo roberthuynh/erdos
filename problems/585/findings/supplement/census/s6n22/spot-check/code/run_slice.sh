@@ -1,5 +1,5 @@
 #!/bin/bash
-# run_slice.sh r mode (wave8/s6spot). Regenerates slice r/10000 with the original's genbg flags
+# run_slice.sh r mode (census/s6n22/spot-check). Regenerates slice r/10000 with the original's genbg flags
 # into data/slices/s<r>.g6, runs e10cut (exact min essential cut of every graph), then
 #   mode full:    spantest.py on every E10 graph, all 66 edges (SAT, witnesses verified)
 #   mode e10only: spantest.py only on the graphs that are not E10 (the 3 known non-E10 slices)

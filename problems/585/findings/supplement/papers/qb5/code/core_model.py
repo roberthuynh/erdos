@@ -1,4 +1,4 @@
-"""Permissive core model (lane qb5, round 2; NOTES.md section 6, PAPER2.md section 7).
+"""Permissive core model (QB(5), version 2; NOTES.md section 6, PAPER2.md section 7).
 
 Question: if every admissible core is present at once, is there still a pair (p, q) of generic vertices and
 4 cut edges avoiding p, q that cover (L_A - p) u (L_D - q)?  If yes for every configuration, the E5 pair

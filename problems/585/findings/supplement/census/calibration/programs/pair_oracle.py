@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Decide whether a simple graph contains a pair: two edge-disjoint cycles on one vertex set.
 
-Written for this lane without reading the team's decider. Encoding:
+Written for this investigation without reading the team's decider. Encoding:
   s[v]      v is in the support S
   x[c][e]   edge e has color c (c = 0, 1)
   - a colored edge has both ends in S; no edge has both colors

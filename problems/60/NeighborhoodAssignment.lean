@@ -4,8 +4,8 @@ import PartialSymmetryFinal
 import Polarity
 import Mathlib.Tactic
 /-!
-Actual source-to-formal correspondence: COUNT-BASED-COMPLETION-PROOF-v2.md
-SHA256 d07eaa46889ac5a9808a097f281e43c25a768e5057e19ddefe5b72952d9eacbb,
+Actual source-to-formal correspondence: COUNT-BASED-COMPLETION.md
+Historical source SHA256 (before public exposition edits): d07eaa46889ac5a9808a097f281e43c25a768e5057e19ddefe5b72952d9eacbb,
 §§6–7. All cycles in this file are ordinary C4s; ambient diagonals are allowed.
 
 The frozen NeighborhoodLines geometric injections are used on actual plane

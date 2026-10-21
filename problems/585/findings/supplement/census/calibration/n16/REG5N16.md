@@ -1,6 +1,8 @@
 # 5-regular pair-free graphs on 16 vertices (reg5n16 investigation)
 
-Written by `code/collect.sh` at 2026-10-06 11:42:55 EDT. Rung (b), computed, not reviewed.
+> Export clarification (2026-10-19): data/incomplete_shards.txt is not bundled. The complete-coverage conclusion remains conditional on the historical census; no independent full-census replication is claimed.
+
+Written by `code/collect.sh` at 2026-10-06 11:42:55 EDT. computational evidence, computed, not reviewed.
 A pair is two edge-disjoint cycles on the same vertex set.
 
 ## Verdict
@@ -53,7 +55,7 @@ The collector reports completion of all 20000 shards and zero pair-free 5-regula
     - Bipartite (geng -b): 41 graphs. pairc: 41 with a pair. Pruned geng_pp -b: 0 outputs. Files: data/struct/bipartite-all.g6, logs/struct/bipartite-all.err.
     - Square-free (geng -f, no 4-cycle): no 5-regular graph on 16 vertices exists.
     - Small edge cuts: CALIBRATION.md R3 (wave3 census) already shows that a 5-regular pair-free graph on 16 vertices has no edge cut of at most 3 edges (it relies on the B-1 ladder values L5(8) = -2 and L5(12) = -1.5).
-    - K4-free (geng -k) was piloted and is too large for tonight: shard 0/2000 ran over 120 s.
+    - K4-free (geng -k) was piloted and exceeded the historical time budget: shard 0/2000 ran over 120 s.
 
 ## Files
 

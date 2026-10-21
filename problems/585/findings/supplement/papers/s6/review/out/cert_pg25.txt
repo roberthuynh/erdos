@@ -1,0 +1,15 @@
+file ../data/pg25_depth4.json M 31 |B| 62 o 23 y 52
+B: simple, bipartite (I = 0..M-1), 6-regular: OK; girth 6
+frame check: OK
+c(C) = 2  c(C') = 1  Phi = 3  (file says Phi = 3)
+Lambda edges (O-vertex, I-vertex, colour): [(33, 0, 5), (39, 25, 5), (45, 21, 4), (51, 24, 4), (58, 22, 4)]
+c(H + Lambda) = 2  m = 30
+legal Kempe swaps: 22 (of which change the frame: 21)
+all Kempe chains (legal or not): 35
+legal swaps per colour pair: {(0, 1): 2, (0, 2): 2, (0, 3): 5, (1, 2): 2, (1, 3): 3, (1, 5): 2, (2, 3): 1, (2, 4): 1, (2, 5): 2, (4, 5): 2}
+Phi after legal swaps: {3: 5, 9: 1, 7: 4, 5: 11, 4: 1}
+Phi after legal swaps that touch C or C' (pairs other than (0,1),(2,3),(4,5)): {9: 1, 7: 4, 5: 11, 4: 1}
+Phi after the two re-pairings: [5, 7]
+Lambda re-pairings available: 4
+BFS escape (Lambda re-pairings ON): depth 4, new Phi-neutral frames per level [6, 21, 81], escape, 0.0s
+BFS escape (Lambda re-pairings OFF): depth 4, new Phi-neutral frames per level [2, 4, 21], escape, 0.0s

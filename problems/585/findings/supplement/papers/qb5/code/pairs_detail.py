@@ -1,4 +1,4 @@
-"""Classify good pairs (p, q) of an E5 block pair by block membership and cut degree (lane qb5)."""
+"""Classify good pairs (p, q) of an E5 block pair by block membership and cut degree (computational checks)."""
 import sys
 from collections import Counter
 from g6 import decode

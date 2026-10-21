@@ -1,4 +1,4 @@
-/* rigidcheck.c (referee's own code, wave4/theory review).
+/* rigidcheck.c (independent code, papers/b6-24/theory review).
  * Brute-force test of PAPER Lemma 1.1, Theorem 2.1 and Corollary 2.2 on small bipartite graphs.
  * For each graph6 line (from a file): BFS 2-colouring (P = colour of the smallest vertex of each
  * component), all 4-factors by backtracking, Ex = edges in no 4-factor, s(S) for all 2^n sets.

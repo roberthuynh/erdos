@@ -1,4 +1,4 @@
-/* lemma42.c -- referee's own check of PAPER2 Lemma 4.2 (covering lemma for 7-edge cuts).
+/* lemma42.c -- independent check of PAPER2 Lemma 4.2 (covering lemma for 7-edge cuts).
  *
  * Enumeration (own): a 7-edge simple bipartite graph without isolated vertices and with max
  * degree <= 3 is given by na A-rows (bitmasks over nd D-columns), rows sorted non-increasing

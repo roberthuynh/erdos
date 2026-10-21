@@ -1,4 +1,4 @@
-"""lemmaB_own.py (referee's own SAT model of Theorem B's case analysis; written without reading the
+"""lemmaB_own.py (independent SAT model of Theorem B's case analysis; written without reading the
 author's lemmaB_sat.py).
 
 Setting (ADDENDUM-B section 1): bad pair {A, B}, c_F(A) = 1, e1 = p1 q' (p1 in A_P, q' in B_Q),

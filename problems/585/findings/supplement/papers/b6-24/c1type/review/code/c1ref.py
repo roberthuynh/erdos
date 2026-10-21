@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Referee's own SAT model for Theorem C3 of wave4/c1type/PAPER.md (written without reading c1_sat.py).
+"""Independent SAT model for Theorem C3 of papers/b6-24/c1type/PAPER.md (written without reading c1_sat.py).
 
 Setting: Y = X - w at a good port w, F a 4-factor of Y with bad pair {A, B}, A the smaller side.
 A side fixed (K44 - p1q1, or a 5+5 side given by Fbar config and H[A]); B side: F[B] fixed (one

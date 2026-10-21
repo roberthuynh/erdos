@@ -17,7 +17,7 @@ Binaries (SHA-256; full table and build commands in `BUILD.md`):
 | sat_all.py | `findings/supplement/census/quartic/programs/sat_all.py` (imports validate_sat's `has_q4` and `check_witness` unchanged; writes UNSAT graphs out) | `b4bf00d7...7625d6c` |
 | pairc | `<PAIR_TEST_EXECUTABLE>` (pair test; one control only) | `a8a4af8e...6c611366` |
 
-Python: `[temporary path]`.
+The original Python environment path was not retained. Reproduction requires Python with the dependencies used by the supplied programs.
 
 ## Summary
 
@@ -44,7 +44,7 @@ saved and were re-decided by `validate_sat.py --expect-unsat` (all UNSAT, exit 0
 | 5. C0 m = 8, independent | plain genbg 2.9.3 + SAT: 18963 graphs, all SAT | replicated (independent) |
 | 5. C0 m = 9 | genbg_q4 swapped order: 0 (3.4-5.3 s); plain genbg class has 12,576,934 graphs | re-run by a second order; independent run projected ~1 core-h, `run_c0_m9_indep.sh` |
 
-## Launch scripts for the lead
+## Historical reproduction scripts
 
 All run 12 shards at a time under `nohup nice -n 15` (they detach themselves), log each shard to
 `logs/<tag>/shard_<r>.{g6,err}`, skip finished shards on restart, and end by calling
@@ -217,7 +217,7 @@ answer is a checked witness, and UNSAT graphs are written to a file.
 `sat_all.py` controls: on the 290 known 4-regular-free n = 14 graphs it reports UNSAT 290 and
 writes all 290; on the C0 m = 8 file it reports SAT 18963.
 
-## Lead addendum (2026-10-05 ~01:10 EDT): F2 at n = 21, projected only
+## Historical addendum (2026-10-05 ~01:10 EDT): F2 at n = 21, projected only
 
 With Δ ≤ 6 and e ≥ 3·21 − 4 = 59, both sides have ≥ 10 vertices, so the sides are 10 + 11 and
 e ∈ {59, 60}. e = 60 is exactly the C0 class at m = 10 (done: 0 graphs, `logs/c0_m10/`). e = 59 is the
@@ -232,5 +232,4 @@ C1 shape at m' = 10 with δ ≥ 4: `genbg_q4 -u -X-2 -d4:5 -D6:6 11 10 59:59 r/M
 | 7/200 | timed out at 240 s | 237 s |
 
 Fit t = P + W/M: W ≈ 56,000 core-s (≈ 15.5 core-h), P ≈ 0. Not launched: it would raise the C0 bound
-from m ≤ 65 (with F2(20)) to m ≤ 68, which is not worth 15.5 core-h this session. Listed as a decision
-for Robert. Logs: `logs/pilot_c1_m10/`.
+from m ≤ 65 (with F2(20)) to m ≤ 68. This extension was not run and supplies no additional bound. Logs: `logs/pilot_c1_m10/`.

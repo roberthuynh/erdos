@@ -1,4 +1,4 @@
-"""E5 instances whose X-block carries a planted core (lane qb5, round 2; NOTES.md section 6).
+"""E5 instances whose X-block carries a planted core (QB(5), version 2; NOTES.md section 6).
 
 X (18 vertices): T = 4 A-vertices, C' = 5 C-vertices adjacent to all of T (T u C' = K_{4,5}), A1 = 6
 A-vertices, C'' = 3 C-vertices adjacent to all of A1 (K_{3,6}); every C'-vertex has 2 more neighbours in

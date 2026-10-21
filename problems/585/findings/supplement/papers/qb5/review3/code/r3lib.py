@@ -1,4 +1,4 @@
-"""Referee-3 library, written from scratch: graph6, Dinic, E5 block decompositions, demands, I_X(M).
+"""Third independent library, written from scratch: graph6, Dinic, E5 block decompositions, demands, I_X(M).
 
 Nothing here imports or reads the author's code.
 """

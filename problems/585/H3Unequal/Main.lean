@@ -30,7 +30,7 @@ structure OriginalInput (q j : ℕ) {V : Type u} [Fintype V]
     3 * (q : ℤ) - 31 ≤ ((q : ℤ) - 1) * #X -
       ((G.induce (X : Set V)).edgeSet.ncard : ℤ)
 
-/-- The exact intended full original conclusion, saved before its proof.
+/-- The full original conclusion, stated as a proposition.
 FactorOn expands to actual original capacity-one adjacent pairs and full quotas. -/
 def H3UnequalClaim : Prop :=
   ∀ (q j : ℕ), ∀ {V : Type u} [Fintype V] (G : SimpleGraph V) (A B : Finset V),
@@ -1284,7 +1284,7 @@ lemma original_petal_pool {q j : ℕ} {A B K C : Finset V} (hi : Input q j G A B
   rw [sum_add_distrib, hsP, hsJ]
   linarith
 
-/-- Complete-family finite counting, frozen separately before its proof. -/
+/-- Complete-family finite counting. -/
 lemma complete_family_uncovered (R ban : Finset V) (F : Finset (Finset V))
     (large : Finset V → Prop) [DecidablePred large] (weight : Finset V → ℤ)
     (W L H : ℤ) (u v t h b : ℕ)
@@ -1440,7 +1440,7 @@ omit [DecidableEq V] in
 lemma dg_le_ec_left {X Y : Finset V} {a : V} (ha : a ∈ X) : dg G Y a ≤ ec G X Y := by
   exact single_le_sum (fun _ _ => Nat.zero_le _) ha
 
-/-- Original resource identities shared by the accepted high and local cores. -/
+/-- Original resource identities shared by the high and local cores. -/
 lemma Optimizer.resource_bounds {q j : ℕ} {A B K C : Finset V}
     (h : Optimizer q G A B K C) (hi : Input q j G A B) (hK : K ⊆ B) :
     (ec G (A \ C) K : ℤ) + deficiency (2 * (q : ℤ) - 2) G B (A \ C) ≤
@@ -2062,7 +2062,7 @@ theorem Input.common_omission {q j : ℕ} {A B : Finset V} (hi : Input q j G A B
     exact hi.common_omission_two
 
 omit [DecidableEq V] [DecidableRel G.Adj] in
-/-- The entire accepted original H3 unequal endpoint, with no supplied selector or factor. -/
+/-- The entire original H3 unequal endpoint, with no supplied selector or factor. -/
 theorem h3_unequal : H3UnequalClaim.{u} := by
   intro q j V instV G A B hOriginal
   classical

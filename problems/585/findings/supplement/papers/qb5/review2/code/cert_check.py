@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Referee's own check of the PAPER2 §6 certificate (n = 28).  Usage: cert_check.py file.g6
+"""Independent check of the PAPER2 §6 certificate (n = 28).  Usage: cert_check.py file.g6
 Sparsity is checked separately by sparse_gray.c (all 2^28 subsets)."""
 import sys
 from e5lib import g6_decode, bipartition, has_4factor, decompositions, Block

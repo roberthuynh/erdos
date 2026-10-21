@@ -6,9 +6,9 @@ LANE="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$LANE" || exit 1
 MOD=20000
 QUICK=0; [ "${1:-}" = "--quick" ] && QUICK=1
-PAIRC=[local path]
+PAIRC="${ERDOS585_CENSUS_CALIBRATION_N16_CODE_COLLECT_SH_PAIRC:?Set ERDOS585_CENSUS_CALIBRATION_N16_CODE_COLLECT_SH_PAIRC to the original PAIRC dependency; see REPRODUCTION-BOUNDARY.md}"
 PY="$HOME/.cache/erdos585/venv/bin/python"
-ORACLE=[local path]
+ORACLE="${ERDOS585_CENSUS_CALIBRATION_N16_CODE_COLLECT_SH_ORACLE:?Set ERDOS585_CENSUS_CALIBRATION_N16_CODE_COLLECT_SH_ORACLE to the original ORACLE dependency; see REPRODUCTION-BOUNDARY.md}"
 /bin/ls logs/shards | grep '\.done$' | sed 's/\.done$//' | sort -n > data/done_shards.txt
 ND=$(wc -l < data/done_shards.txt | tr -d ' ')
 # Incomplete = shards logged as killed or failed that have no .done marker (a rerun may have covered them).
@@ -45,14 +45,14 @@ fi
 if [ "$NF" -gt 0 ]; then
   VERDICT="FOUND: $NF pair-free 5-regular graph(s) on 16 vertices in the covered shards (data/found.g6). Certification: $CERT."
 elif [ "$ND" -eq "$MOD" ]; then
-  VERDICT="NONE AT ALL: the census completed (all $MOD shards) and no 5-regular graph on 16 vertices is pair-free. So the least order of a 5-regular pair-free graph is 18."
+  VERDICT="NONE AT ALL: the census completed (all $MOD shards) and no 5-regular graph on 16 vertices is pair-free. Conditional on the correctness and completeness of this historical census, the least order is 18. The full 16-vertex exclusion has not been independently replicated; the separate unpruned check covers only a sample."
 else
   VERDICT="NONE IN THE COVERED PART: $ND of $MOD shards completed with no output. The other $((MOD - ND)) shards were not run, so the question at 16 vertices stays open."
 fi
 cat > REG5N16.md <<MD
-# 5-regular pair-free graphs on 16 vertices (reg5n16 lane)
+# 5-regular pair-free graphs on 16 vertices (historical census)
 
-Written by \`code/collect.sh\` at $(date '+%Y-%m-%d %H:%M:%S %Z'). Rung (b), computed, not reviewed.
+Written by \`code/collect.sh\` at $(date '+%Y-%m-%d %H:%M:%S %Z'). Computed evidence; not a Lean theorem.
 A pair is two edge-disjoint cycles on the same vertex set.
 
 ## Verdict
@@ -80,8 +80,7 @@ $VERDICT
 - Pilot (03:37 EDT): six shards of mod 20000 took 12.3-13.6 s each. Per shard, about 1.04M
   14-vertex graphs pass the pair test and about 2.09M 15-vertex children are generated, 99.99%
   of them with a pair through the new vertex. geng's own generation is about 80% of the time.
-  The whole census is about 250k core-seconds, about 4.7 h on 16 workers, so it could not finish
-  before 06:10. Five speed-ups were tried and none gave the 2.3x needed (LOG.md).
+  The historical estimate was about 250k core-seconds, about 4.7 h on 16 workers. Timing estimates are not coverage evidence.
 - Shards: geng res/mod with mod $MOD, run in the shuffled order \`data/shard_order.txt\`
   (seed 585). A shard counts as covered only when geng finished with its >Z line
   (\`logs/shards/<r>.done\`). The union of all $MOD shards is every 5-regular graph on 16 vertices.

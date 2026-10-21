@@ -1,8 +1,21 @@
 name: Collection checks
 on:
   push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Check receipt bindings, or explicitly reproduce full Lean verification'
+        type: choice
+        options: [bindings, full]
+        default: bindings
+        required: true
+      problem:
+        description: 'Optional problem ID; leave empty to check every registered package'
+        type: string
+        default: ''
+        required: false
 permissions:
   contents: read
 jobs:
@@ -21,6 +34,8 @@ jobs:
           timeout 240 python3 -B scripts/check_collection.py
           timeout 240 python3 -B scripts/test_collection.py
           timeout 240 python3 -B scripts/test_export_manifest.py
+          timeout 240 python3 -B scripts/test_check_plan.py
+          timeout 240 python3 -B scripts/test_proof_receipts.py
           timeout 240 python3 -B scripts/export_manifest.py --output /tmp/public-export-manifest.json
       - name: Check every package's documentation
         run: |
@@ -37,13 +52,24 @@ jobs:
             /tmp/public-export-manifest.json
             ${{ runner.temp }}/erdos-docs/
           if-no-files-found: warn
-      - name: Select affected packages
+      - name: Select packages for receipt checks or requested reproduction
         id: scope
         env:
-          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+          REQUESTED_PROBLEM: ${{ github.event_name == 'workflow_dispatch' && inputs.problem || '' }}
         run: |
-          MATRIX=$(timeout 240 python3 -B scripts/select_problems.py --base "$BASE")
-          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+          python3 -B - <<'PYTHON'
+          import json, os, sys
+          sys.path.insert(0, 'scripts')
+          from check import load_registry
+          registry = load_registry()
+          requested = os.environ['REQUESTED_PROBLEM']
+          if requested and requested not in registry:
+              raise SystemExit('Unknown requested problem')
+          selected = [requested] if requested else sorted(registry)
+          matrix = {'include': [{'id': key, 'lean': 'lean' in registry[key]} for key in selected]}
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('matrix=' + json.dumps(matrix, separators=(',', ':')) + '\n')
+          PYTHON
       - name: Check tracked files unchanged
         if: always()
         run: git diff --exit-code HEAD -- .
@@ -53,7 +79,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix: ${{ fromJSON(needs.collection.outputs.matrix) }}
-    runs-on: ${{ matrix.id == '643' && 'macos-15' || 'ubuntu-24.04' }}
+    runs-on: ${{ github.event_name == 'workflow_dispatch' && inputs.mode == 'full' && matrix.id == '643' && 'macos-15' || 'ubuntu-24.04' }}
     timeout-minutes: 150
     env:
       LEAN_NUM_THREADS: "2"
@@ -62,7 +88,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Prepare strict proof-check platform
-        if: matrix.id == '643'
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'full' && matrix.id == '643'
         env:
           HOMEBREW_NO_ANALYTICS: '1'
           HOMEBREW_NO_AUTO_UPDATE: '1'
@@ -91,7 +117,7 @@ jobs:
           print(version.stdout.splitlines()[0])
           PY
       - uses: leanprover/lean-action@f061402b660e0c34644504b324e830f2991d4865 # v1.6.1
-        if: matrix.lean
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'full' && matrix.lean
         with:
           lake-package-directory: problems/${{ matrix.id }}
           auto-config: false
@@ -101,10 +127,16 @@ jobs:
           use-github-cache: false
           use-mathlib-cache: false
       - name: Fetch pinned Mathlib cache
-        if: matrix.lean
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'full' && matrix.lean
         working-directory: problems/${{ matrix.id }}
         run: timeout 240 lake exe cache get
-      - name: Run required package checks
+      - name: Check current mathematical receipt bindings
+        if: github.event_name != 'workflow_dispatch' || inputs.mode != 'full'
+        env:
+          PROBLEM: ${{ matrix.id }}
+        run: timeout 240 python3 -B scripts/check_proof_receipts.py --problem "$PROBLEM" --output "$RUNNER_TEMP/erdos-evidence"
+      - name: Reproduce full verification on explicit manual request
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'full'
         env:
           PROBLEM: ${{ matrix.id }}
         run: python3 -B scripts/check.py --problem "$PROBLEM" --mode full --output "$RUNNER_TEMP/erdos-evidence"

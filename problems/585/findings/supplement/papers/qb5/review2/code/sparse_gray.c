@@ -1,4 +1,4 @@
-/* sparse_gray.c -- referee's own exhaustive sparsity check for one graph6 graph (n <= 30).
+/* sparse_gray.c -- independent exhaustive sparsity check for one graph6 graph (n <= 30).
  * Visits every vertex subset S in Gray-code order, keeping e(S) incrementally, and reports
  *   max over 3 <= |S| <= n-1 of e(S) - 3|S|   (sparse iff this is <= -6),
  * the number of S attaining it, the number of violating S (e(S) > 3|S| - 6), and one argmax.

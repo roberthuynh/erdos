@@ -1,5 +1,5 @@
 #!/bin/bash
-# build.sh -- build method B binaries into code/bin (wave8/exb).
+# build.sh -- build method B binaries into code/bin (census/edge/method-b).
 #   geng_h4    nauty 2.9.3 geng with PRUNE = h4prune (own decider h4.h)
 #   geng_plain nauty 2.9.3 geng, unmodified, same flags
 #   h4filt     stand-alone decider (own graph6 decoder + h4.h)

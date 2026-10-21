@@ -1,12 +1,16 @@
 # Addendum B: one-crossing cycles below 23 vertices (Lemma B), and no smallest E4-type counterexample on at most 22 vertices
 
-Historical note, October 5, 2026. Frozen for review (SHA-256 in `FROZEN-B.sha256`).
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with REVIEW.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
+> Export clarification (2026-10-19): Census provenance correction from c1type/REVIEW.md F1: the pair census F2 itself used geng -b + pairc (one method). The second method for the smallest-counterexample class is the separate E4/C1 census; a quartic-subgraph replication is not a second pair census. Other counts and verdicts below are dated historical records, not fresh verification.
+
+Historical note, October 5, 2026. Frozen for review (SHA-256 in the omitted historical receipt `FROZEN-B.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json)).
 Written proof plus a SAT cross-check. Not reviewed. No Lean, no `check.sh`. Evidence categories:
 Theorem B is (a); Corollary B is (a) given the censuses listed in §6; the checks of §5 are (b).
 
 "PAPER" is `findings/supplement/papers/b6-24/theory/PAPER.md` (frozen, SHA-256 521a1139…). "PAIRS" is
-`findings/supplement/papers/pairs/PAPER.md` (frozen 6fad9b43…, refereed ACCEPT WITH FIXES in
-`findings/supplement/papers/pairs/REVIEW.md`; Prop 5 is used with the referee's fix |S| ≥ 3). Notation is PAPER §1.
+`findings/supplement/papers/pairs/PAPER.md` (frozen 6fad9b43…, AI-reviewed ACCEPT WITH FIXES in
+`findings/supplement/papers/pairs/REVIEW.md`; Prop 5 is used with the AI review's fix |S| ≥ 3). Notation is PAPER §1.
 
 ## 0. Results
 
@@ -243,7 +247,7 @@ turns the shortest one into a 4-factor F' with no cut of at most 2 edges; H22 ag
 F2 (no counterexample on at most 18 vertices), a smallest counterexample on at most 22 vertices is of C1
 type, with n odd: 19 or 21. ∎
 
-## 5. Computer checks (rung (b))
+## 5. Computer checks (computational evidence)
 
 - `lemmaB_sat.py` (pysat CaDiCaL; output `lemmaB_sat.out`). For each shape, the side A is fixed
   (K_{4,4} − p1q1, or F̄ in configuration (α) or (β) together with each of the 22 choices of H[A] ⊆ F̄
@@ -273,12 +277,12 @@ type, with n odd: 19 or 21. ∎
 
 | Item | Status |
 |---|---|
-| PAIRS Lemma 1, Lemma 2 | refereed, ACCEPT |
-| PAIRS Example 4 (K_{4,4} has a pair) | refereed, ACCEPT WITH FIX F2 (the fix concerns a remark, not this claim) |
-| PAIRS Prop 5 (g = 10, \|S\| ≥ 3 ⇒ 4-core ≥ 18 vertices) | refereed, ACCEPT WITH FIX F1 (\|S\| ≥ 3) |
+| PAIRS Lemma 1, Lemma 2 | AI-reviewed, ACCEPT |
+| PAIRS Example 4 (K_{4,4} has a pair) | AI-reviewed, ACCEPT WITH FIX F2 (the fix concerns a remark, not this claim) |
+| PAIRS Prop 5 (g = 10, \|S\| ≥ 3 ⇒ 4-core ≥ 18 vertices) | AI-reviewed, ACCEPT WITH FIX F1 (\|S\| ≥ 3) |
 | Census F2 (no counterexample with n ≤ 18) | two methods |
-| Census L5 (used by Prop 5) | one method, referee spot check |
-| 5 + 5 pair-free census (PAPER Lemma 6.1(a)) | one method (genbg + pairc), re-run in this session |
+| Census L5 (used by Prop 5) | one method, AI review spot check |
+| 5 + 5 pair-free census (PAPER Lemma 6.1(a)) | one method (genbg + pairc), re-run in the historical computation |
 | Census H22 (Corollary B only) | one method at n = 22, two for n ≤ 20 |
 | PAPER Lemma 1.1, Lemma 3.1, Lemma 6.1, Proposition 6.6 | unreviewed (PAPER is frozen for review) |
 | Theorem B (this addendum) | unreviewed; SAT cross-check of the case analysis in §5 |

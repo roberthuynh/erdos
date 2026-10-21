@@ -1,7 +1,9 @@
 # Corrections to findings/supplement/papers/quartic/PAPER.md (applied by reference; the reviewed file is left byte-identical)
 
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
 PAPER.md SHA-256 `cfce4fcc7d40732c2f2a6c23b9d5fe50823c37f9d37f940b7857d8eda52ab0c9` is the version the
-referee reviewed (REVIEW.md, overall verdict: no mathematical error; one required fix). This file
+independently AI-reviewed (REVIEW.md, overall verdict: no mathematical error; one required fix). This file
 takes precedence over the paper where they differ.
 
 ## Fix F1 (required by REVIEW.md; provenance only, no statement changes)

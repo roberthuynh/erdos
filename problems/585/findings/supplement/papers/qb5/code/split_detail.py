@@ -1,4 +1,4 @@
-"""Print alpha/beta petals of a C2 graph and the alpha pairs with a (2,0)/(0,2) split (lane qb5).
+"""Print alpha/beta petals of a C2 graph and the alpha pairs with a (2,0)/(0,2) split (computational checks).
 Exhaustive over vertex sets; meant for n <= 20. Usage: split_detail.py < file.g6 (first graph with a split)."""
 import sys
 from itertools import combinations

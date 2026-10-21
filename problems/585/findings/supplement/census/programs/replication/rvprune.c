@@ -1,4 +1,4 @@
-/* rvprune.c -- reviewer's PRUNE hook for geng (SMS-CENSUS-REVIEW replication of S10).
+/* rvprune.c -- independent PRUNE hook for geng (SMS-CENSUS-REVIEW replication of S10).
  *
  * geng builds each graph by adding vertices 0,1,2,... and calls PRUNE on every intermediate graph
  * (order 1..maxn); the call for order n implies the call for order n-1 passed. So for the graph

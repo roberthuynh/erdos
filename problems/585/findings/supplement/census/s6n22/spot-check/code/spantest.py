@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""spantest.py (wave8/s6spot): the S6 test by SAT, written independently of wave6/s6n22/code.
+"""spantest.py (census/s6n22/spot-check): the S6 test by SAT, written independently of census/s6n22/code.
 
 For every graph B in a graph6 file whose minimum essential cut (from e10cut's output for the same
 file) is at least 10, and every edge oy of B, decide exactly whether Y = B - o - y has two

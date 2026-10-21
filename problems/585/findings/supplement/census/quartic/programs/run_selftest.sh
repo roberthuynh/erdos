@@ -4,20 +4,20 @@
 # Cores: 12 concurrent (nice 15). Projected: ~340 core-s (0.1 core-h), ~1 min wall on 12 cores
 # (pilot: shards 0,13,26,39 of 40 took 6.8-9.7 s each, 2026-10-04, machine load 4-13).
 # Expected output: 0 graphs (every shard .err ends '>Z 0 graphs generated'; found.g6 empty).
-# Already known by other methods: plain geng + pairc (CHECKPOINT-05) and genbg_q4 9 9 50:54 (0, 57 s).
-# Launch:  bash [local path]
+# Already known by other methods: plain geng + pairc and genbg_q4 9 9 50:54 (0, 57 s).
+# Historical launch path was not retained; configure the dependencies described in REPRODUCTION-BOUNDARY.md.
 #          (detaches itself: nohup nice -n 15, at most 12 shards at a time; driver log in
 #          census/logs/selftest/driver.log, shard i writes logs/selftest/shard_i.g6 and shard_i.err)
-# Status:  bash [local path] selftest 40
+# Historical launch path was not retained; configure the dependencies described in REPRODUCTION-BOUNDARY.md.
 # Stop:    pkill -f 'run_selftest.sh'; then pkill -f 'geng_q4 -b -d4 -D6 14 30:42 '
 # Restart: run the launch line again; shards whose .err already has a ">Z" line are skipped.
 set -u
 TAG=selftest
 MOD=8
 MAXJ=12
-BIN=[local path]
+BIN="${ERDOS585_CENSUS_QUARTIC_PROGRAMS_RUN_SELFTEST_SH_BIN:?Set ERDOS585_CENSUS_QUARTIC_PROGRAMS_RUN_SELFTEST_SH_BIN to the original BIN dependency; see REPRODUCTION-BOUNDARY.md}"
 ARGS=(-b -d4 -D6 14 30:42)
-C=[local path]
+C="${ERDOS585_CENSUS_QUARTIC_PROGRAMS_RUN_SELFTEST_SH_C:?Set ERDOS585_CENSUS_QUARTIC_PROGRAMS_RUN_SELFTEST_SH_C to the original C dependency; see REPRODUCTION-BOUNDARY.md}"
 L="$C/logs/$TAG"
 SELF="$C/run_$TAG.sh"
 mkdir -p "$L"

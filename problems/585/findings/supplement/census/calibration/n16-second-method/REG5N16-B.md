@@ -1,6 +1,6 @@
 # 5-regular graphs on 16 vertices: second-method checks (reg5b)
 
-Historical computation, 2026-10-06. Rung (b), computed, not reviewed. A pair is two
+Historical computation, 2026-10-06. computational evidence, computed, not reviewed. A pair is two
 edge-disjoint cycles on the same vertex set. This investigation checks the reg5n16 investigation (method 1,
 `findings/supplement/census/calibration/n16/`) with code written here that shares nothing with `reg5n16/code`,
 `pairc` or the B-1 tools. Method 1 and B-1 files were only read, as data, for the comparisons named
@@ -18,7 +18,7 @@ below.
 Every graph in checks 1 to 3 got a pair from the SAT decider, and every pair was verified against the
 graph by a separate check (`verify_pair`, below). These verdicts therefore do not depend on the SAT
 encoding being complete. They depend on the generator output and on that check. No pair-free graph
-was found, so there is nothing to certify or freeze (no `FROZEN.sha256`).
+was found, so there is nothing to certify or freeze (no the omitted historical receipt `FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json)).
 
 ## Method
 
@@ -162,7 +162,7 @@ The counts match B-1 R1. Totals and per-shard rows: `logs/check2_n14.collected.j
 ## Reproduce
 
 ```
-cd [local path]
+cd <EXTRACTED_DIRECTORY_FOR_THIS_REPORT>
 bash code/run_check1.sh
 nohup bash code/run_check2_n14.sh > logs/check2_n14_driver.log 2>&1 &
 for n in 6 8 10 12; do bash code/shard.sh check2 $n 0 1; done
@@ -175,7 +175,7 @@ bash code/run_xcheck.sh
 ~/.cache/erdos585/venv/bin/python code/collect.py check3 16
 ```
 
-The scripts write graph6 files to this session's scratchpad (the `SP` variable in the scripts that
+The scripts write graph6 files to an external writable scratch directory (the `SP` variable in the scripts that
 set one); change `SP` to rerun elsewhere. `run_xcheck.sh` reads the files `run_calib.sh` writes there.
 
 ## Budget

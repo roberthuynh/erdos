@@ -9,7 +9,7 @@ universe u
 variable {V : Type u} [DecidableEq V] {G : SimpleGraph V} [DecidableRel G.Adj]
 attribute [local instance] Classical.propDecidable
 
-/-- Four banked arguments cover every ordered lobe profile, with no size guard. -/
+/-- Four proved arguments cover every ordered lobe profile, with no size guard. -/
 theorem oriented_exists {U W S U₁ U₂ W₁ W₂ : Finset V} {u0 : V}
     (hi : QB7Conditional.U2Input G U W) (h : Split G U W S U₁ U₂ W₁ W₂)
     (hu : u0 ∈ U₁) (hdu : dg G W u0 = 5)

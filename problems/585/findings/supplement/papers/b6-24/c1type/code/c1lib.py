@@ -1,9 +1,9 @@
-"""Small helpers for the c1type lane: graph6 output and the exact pair test (pairc, via files)."""
+"""Small helpers for the C1-type computations: graph6 output and the exact pair test (pairc, via files)."""
 import os, subprocess, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-PAIRC = os.path.normpath(os.path.join(HERE, '../../../../585-fable/tools/pairc'))
-GENBG = os.path.expanduser('~/.cache/erdos585/nauty2_9_3/genbg')
+PAIRC = os.environ.get('PAIRC', 'pairc')
+GENBG = os.environ.get('GENBG', 'genbg')
 
 
 def to_g6(nv, edges):

@@ -484,7 +484,7 @@ proving (1.2). Undoing the independent source and target frame normalizations le
 
 ## 9. Controls and exact limits of the claim
 
-* For n=2, the complement and membership sums are empty. The transport cost is one original plane flag per induced flag, and there is one coordinate chart. The proof uses the accepted protected plane, reciprocal, Pexider, and fixed-row mechanisms, now with weighted equivariant sampling; no rank-two baseline credit is claimed again.
+* For n=2, the complement and membership sums are empty. The transport cost is one original plane flag per induced flag, and there is one coordinate chart. The proof uses the protected-plane, reciprocal, Pexider and fixed-row arguments from Section 2 with weighted equivariant sampling.
 * An exact projective-semilinear embedding, including a proper subfield embedding, has T=0, rho=1, and D=0. Its target frame images are independent over F_r because its underlying target matrix is invertible.
 * Constant incident point and hyperplane maps have T=0 and rho=0. The positive survival hypothesis fails, as required.
 * More generally, arbitrary point values in a proper target subspace W and arbitrary hyperplane values containing W can give exact incidence-preserving collapse. These have rho=0. The proof does not try to exclude them through individual fibers and is unaffected by the size of r.

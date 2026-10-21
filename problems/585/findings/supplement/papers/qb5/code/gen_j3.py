@@ -1,4 +1,4 @@
-"""Random block-pair instances of shape j = 3 or j = 1 (lane qb5).
+"""Random block-pair instances of shape j = 3 or j = 1 (computational checks).
 
 Usage: python gen_j3.py MODE COUNT SEED > out.g6
 T = K_{4,6}: T_W (4) saturated into T_U (6), a W-small 2-block.

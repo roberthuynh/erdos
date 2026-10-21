@@ -1,11 +1,11 @@
 # FACTS: the lemmas this investigation relies on, each with a proof
 
 Graphs are finite and simple unless stated. A *pair* on S is two edge-disjoint cycles C1, C2 with
-V(C1) = V(C2) = S. An *avoider* has no pair. e(S) counts edges with both ends in S. Rung labels:
+V(C1) = V(C2) = S. An *avoider* has no pair. e(S) counts edges with both ends in S. Evidence categories:
 (a) proof, (b) special case, bound or counterexample, (c) literature, (d) formalization. Nothing here
-is a project result until `check.sh` passes; these are written proofs, rung (a) or (b) on paper.
+is a project result until `check.sh` passes; these are written proofs, written-proof evidence or (b) on paper.
 
-## The three facts from the brief
+## The three stated facts
 
 **B1. A pair is a 4-regular graph.** Each vertex of S has degree 2 in C1 and 2 in C2, and the cycles
 share no edge, so C1 ∪ C2 is 4-regular on S. Conversely a 4-regular graph on S that splits into two

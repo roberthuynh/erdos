@@ -1,6 +1,8 @@
 # s6n22 jobs: exhaustive S6 at |B| = 22
 
-Historical computation, October 5-6, 2026. Rung (b) computation.
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
+Historical computation, October 5-6, 2026. Finite computational evidence.
 
 ## What runs
 
@@ -24,7 +26,7 @@ Pipeline per test (chosen from the pilot, see below):
   span_oracle.py, MiniSat with lazy cuts; witness re-checked; a non-SPAN answer is re-decided by
   historical Hamilton-cycle test myspan.span2hc, Glucose, and a certificate JSON is written).
 
-Why the DFS goes first (deviation from the brief, which put the recoloring pass first): on the pilot
+Why the DFS goes first (comparison with running the recoloring pass first): on the pilot
 slice 3333 (2,000 graphs, 132,000 tests) the AM walk costs 30.6 us per test (frame construction about
 4 us, about 2 us per move), the DFS 1.4 us per test. The cutoff that minimizes total time per (o, y)
 is therefore "no recoloring", so the recoloring pass runs on a fixed 25% sample instead, which is
@@ -59,39 +61,25 @@ where the stalled frames for the written argument come from.
 
 ## Processes (launched 2026-10-05 23:54:46 EDT)
 
-- Driver PID **35748**, its own session and process group (PGID 35748), nice 10, 9 workers
+- Historical configuration: 9 workers
   (`xargs -P 9`), each running `code/run_shard.sh r` = `genbg -X-3 -d6:6 -D6:6 11 11 r/10000 |
   code/s6n22 -A 4 -M 64 -X 1000 -F 1000 -R 3 -N 50000 -B 5000000`, then SAT on survivors, then the
   done marker `data/shards/<r/100>/s<r>.done` (only after the genbg count equals the count s6n22
   read).
-- Driver command: `cd [local path] && W=9 code/launch.sh`
-  (launch.sh = nohup + setsid + nice 10 around `code/driver.sh`; log `logs/driver.log`).
 - Slice order: `data/order.txt` (fixed random permutation of 0..9999), so a partial run covers a
   uniform random set of slices.
 - The driver stops claiming slices at 06:50 EDT (STOP_EPOCH) and kills anything still running at
   06:58 EDT (KILL_EPOCH); killed slices have no done marker. When xargs finishes it runs
   `code/collect.py`, which writes RESULT.md.
 
-## Commands
-
-- Graceful stop (in-flight slices finish, no new ones):
-  `touch [local path]`
-- Hard stop (kills driver, workers, genbg and s6n22): `kill -TERM -- -35748` (and `kill 59865`
-  for the post-run waiter)
-- Resume (skips done slices; remove STOP first if it exists):
-  `cd [local path] && rm -f STOP && W=9 code/launch.sh`
-- Progress: `ls [local path] | wc -l`
-- Collect (any time): `~/.cache/erdos585/venv/bin/python [local path]`
-
 ## Projected finish
 
 Measured 23:54-23:58: 0.75 slices/s, 9,300 graphs/s, mean 12,200 graphs per slice (so about 1.22e8
 colored classes in all). 10,000 slices at that rate: **about 03:40 EDT**, well before the 06:50 stop.
 
-## Post-run steps (automatic: `code/postrun.sh`, PID 59865, own session, waits for the driver)
+## Historical post-run checks
 
-When the driver exits, postrun.sh runs the two steps below under nice 10 (skipped after 06:52 EDT) and
-appends a line to LOG.md. To cancel it: `kill 59865`. To run them by hand instead:
+The post-run checks used `code/postrun.sh`. The following early samples precede the final totals in LOG.md and RESULT.md.
 
 1. `code/sat_stalls.sh 8`: SAT on every stalled AM-sample test (about 4 ms each; about 260k lines
    expected), then rewrites RESULT.md with the totals. The first 2,462 stalls were all SPAN

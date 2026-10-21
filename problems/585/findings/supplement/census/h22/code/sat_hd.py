@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""wave4/h22b: second HD decider, SAT with lazy subtour cuts (PySAT). Shares no code with hdq.c.
+"""census/h22: second HD decider, SAT with lazy subtour cuts (PySAT). Shares no code with hdq.c.
 
 For a 4-regular graph G: variable x_e (true = red). At each vertex exactly 2 of its 4 edges are
 red (no 3 red, no 3 blue). Solve; if the red edges form several cycles, add for each red cycle

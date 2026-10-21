@@ -1,8 +1,8 @@
 #!/bin/bash
-# Timing slices for N.md (cost estimates only). Run from wave4/theory. Each step is time-limited.
+# Timing slices for N.md (cost estimates only). Run from papers/b6-24/theory. Each step is time-limited.
 G="$HOME/.cache/erdos585/nauty2_9_3/genbg"
-PT="../../wave3/pairs/ptool"
-PC="../../../585-fable/tools/pairc"
+PT="${PTOOL:-ptool}"
+PC="${PAIRC:-pairc}"
 : > timing.out
 # H24: graphs generated in 60 s (one process), then HD-test rate on them
 timeout 60 "$G" -q -c -d4:4 -D4:4 12 12 48:48 > h24_sample.g6 2> /dev/null

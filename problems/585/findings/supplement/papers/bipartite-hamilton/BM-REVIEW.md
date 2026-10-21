@@ -1,3 +1,5 @@
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
 # BM review: bipartite Müyesser (investigation bipartite-hamilton)
 
 Reviewer: independent skeptical review, 2026-10-04. Status: FINAL.
@@ -9,7 +11,7 @@ Definition 1.2, Theorem 1.3, Corollary 1.4, Definition 3.1, Lemma 3.3, the nearl
 definition, reference [19]). Reran combinatorics.py, controls.py and sampling.py from a scratch
 copy (outputs match the report). Two new scratch scripts: `arith.py` (Section 6 inequalities at the
 smallest admissible d) and `multi_check.py` (multi-edges in sampling.py). Scratch folder:
-`[local scratch folder]`.
+an original scratch directory whose path was not retained.
 
 ## Verdicts
 
@@ -26,7 +28,7 @@ smallest admissible d) and `multi_check.py` (multi-edges in sampling.py). Scratc
 
 **Overall.** Theorem BM at c = 5: ACCEPT. I found no gap in the written proof. Theorem BM at c = 6:
 ACCEPT (weaker statement, same proof with k := c1 δ^3 qn/L^2). Theorem BM-γ at c' = 10 and
-Corollary BM-2: ACCEPT, with F2 for the fallback constants. Rung (a), single independent review.
+Corollary BM-2: ACCEPT, with F2 for the fallback constants. written-proof evidence, single independent review.
 Residual trust sits in cited results that neither the investigation nor I re-derived: Haxell's theorem (as
 stated in Asadpour-Feige-Saberi), the Alon-Hoory-Linial Moore bound, Tropp's matrix Bernstein,
 the hypergeometric Chernoff bounds, and BJ Lemma 3.3 (from [19], Draganić-Methuku-Munhá

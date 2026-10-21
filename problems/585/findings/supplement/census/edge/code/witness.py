@@ -28,9 +28,9 @@ import sys
 import networkx as nx
 from pysat.solvers import Solver
 
-E = "[local path]"
-QDIR = "[local path]"
-SRC = "[local path]"
+E = __import__('os').environ['ERDOS585_CENSUS_EDGE_CODE_WITNESS_PY_L31']
+QDIR = __import__('os').environ['ERDOS585_CENSUS_EDGE_CODE_WITNESS_PY_L32']
+SRC = __import__('os').environ['ERDOS585_CENSUS_EDGE_CODE_WITNESS_PY_L33']
 sys.path.insert(0, QDIR)
 from validate_sat import has_q4  # noqa: E402
 

@@ -1,10 +1,12 @@
 # FLAW: the C1 port method cannot prove P_4 or P_3
 
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
 Historical P_4 investigation, October 5, 2026.
 
 ## The step that fails
 
-The C1 proof (`findings/supplement/papers/quartic/C1-PAPER.md`, Theorem 4.3, two referee ACCEPTs) ends with a
+The C1 proof (`findings/supplement/papers/quartic/C1-PAPER.md`, Theorem 4.3, two AI review ACCEPTs) ends with a
 minimality-free core lemma (its Lemma 4.4): in a *sparse* C1 instance, the ports y for which G - y has
 no 4-factor carry total deficiency at most 2. A minimal counterexample is sparse and has every port bad,
 so it cannot exist.

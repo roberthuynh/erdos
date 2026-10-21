@@ -6,7 +6,7 @@ set_option maxRecDepth 10000
 open Finset SimpleGraph BqLowerFamily
 namespace Erdos585.L17HCq
 
-/-- Exactly the55 original unit pairs in the bound pure raw source. -/
+/-- The 55 unit pairs defining l17RawEdges are listed below. -/
 def l17RawEdges : Finset (Fin 17 × Fin 17) :=
   {(0,10),(0,11),(0,12),(0,14),(0,16),(1,8),(1,9),(1,13),(1,15),(1,16),(2,8),(2,9),(2,11),(2,13),(2,14),(2,15),(2,16),(3,8),(3,9),(3,10),(3,12),(3,13),(3,15),(3,16),(4,8),(4,9),(4,10),(4,11),(4,12),(4,14),(4,16),(5,8),(5,9),(5,10),(5,11),(5,12),(5,13),(5,14),(5,15),(6,8),(6,9),(6,10),(6,11),(6,12),(6,13),(6,14),(6,15),(7,8),(7,9),(7,10),(7,11),(7,12),(7,13),(7,14),(7,15)}
 

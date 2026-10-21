@@ -1,4 +1,4 @@
-/* lowslack.c (referee's own code, wave4/theory review).
+/* lowslack.c (independent code, papers/b6-24/theory review).
  * For each graph (graph6, one per line, read from a file): 2-colour it by BFS, check that it is an
  * E4 instance (connected bipartite, |P| = |Q|, Delta <= 6, e = 3n - 4, D(P) = D(Q) = 4), check
  * sparsity by brute force (g(S) >= 10 for 2 <= |S| <= n-1), and list every S with 2 <= |S| <= n-1

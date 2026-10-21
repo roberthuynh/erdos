@@ -1,6 +1,8 @@
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
 > AI attribution correction (2026-10-05): the transcript identifies both C1 reviewers as Claude Opus 5.5, in separate fresh contexts with independently written code. The sentence near the end about "different models" is incorrect; the review itself is otherwise unchanged.
 
-# Referee 2 review of findings/supplement/papers/quartic/C1-PAPER.md (the petal lattice closes C1)
+# AI review 2 review of findings/supplement/papers/quartic/C1-PAPER.md (the petal lattice closes C1)
 
 Second independent AI review. October 5, 2026.
 
@@ -8,17 +10,17 @@ Second independent AI review. October 5, 2026.
   `3c67d183d93b8bb512dba6e46656dc6e11991bb5e29f2b22ff3f37e5dd960cf8`, checked at the start and at
   the end of this review (see section 7). Not edited. Read together with `findings/supplement/papers/quartic/C1-CORRECTIONS.md`
   (fix R1).
-- Background read: `585-fable-wildcard/findings/supplement/papers/quartic/REPORT.md` (section 5: Lemmas 1, 2, 4,
-  Theorem 5, section 5.1), `585-fable-wildcard/findings/supplement/papers/quartic/QUARTIC-REVIEW.md`, and the cited parts of
+- Background read: `REPORT.md` (section 5: Lemmas 1, 2, 4,
+  Theorem 5, section 5.1), `QUARTIC-REVIEW.md`, and the cited parts of
   `findings/supplement/papers/quartic/PAPER.md` (section 0.1) and `findings/supplement/papers/quartic/CORRECTIONS.md`.
 - Method. I re-derived every step of sections 1 to 5 and 5.4 by hand before opening the first review
   (`findings/supplement/papers/quartic/C1-REVIEW.md`) or the author's checks (`findings/supplement/papers/quartic/c1checks/`). I wrote my own code under
-  `findings/supplement/papers/quartic/review-2-code/`; it imports nothing from `c1checks/`, `checks/`, `review/` or `review-c1/`.
+  `findings/supplement/papers/quartic/review-2-code/`; it imports nothing from `c1checks/`, `checks/`, `review/` or `review-1-code/`.
   Sections 0 to 5 were written before I read C1-REVIEW.md. After reading it I only added the counts
   of four tallied reruns to section 3 (seeds 31 to 33 and 41), restated the Corollary 5.3 row in the
   ACCEPT WITH FIXES format, and sharpened the A.5 remarks in 2.6 and F5. No verdict changed.
   Section 6 compares the two reviews.
-- Rung. Theorem 4.3 and its corollaries are written proofs (rung (a) claims), with no Lean and no
+- Evidence status. Theorem 4.3 and its corollaries are written proof claims, with no Lean and no
   `check.sh` run, so none of this is a project oracle PASS. The paper says the same.
 
 ## 0. Verdicts at a glance
@@ -49,7 +51,7 @@ Second independent AI review. October 5, 2026.
 **Overall: ACCEPT WITH FIXES.** I found no mathematical error and no gap. The one required fix is
 R1 (one missing word at line 242), as in C1-CORRECTIONS.md. The other notes are optional.
 
-## 1. The six briefed attack points
+## 1. The six review questions
 
 ### 1.1 Well-foundedness of the minimality setup (section 2, (M))
 
@@ -245,7 +247,7 @@ section 3 replaces it with independent code. One optional wording note (F4 below
 
 ## 3. Own computations (all exit 0, all under `timeout 240`)
 
-Interpreter `[temporary path]` (networkx, pysat CaDiCaL 1.5.3). C code
+Interpreter `python3` (networkx, pysat CaDiCaL 1.5.3). C code
 compiled with `/usr/bin/clang -O2`. The SAT decider forbids every incident pattern with a count
 outside {0, 4} and re-validates every witness.
 
@@ -301,7 +303,7 @@ deficiency pattern. P_2 uses REPORT.md Theorem 5 only for c = 2, which I re-deri
 ## 6. Comparison with C1-REVIEW.md
 
 Written after sections 0 to 5 were on disk. I read C1-REVIEW.md (investigation M3-R, FINAL) once, at this
-point. I did not open the author's `c1checks/` or the first referee's `review-c1/` code.
+point. I did not open the author's `c1checks/` or the first AI review's `review-1-code/` code.
 
 **Verdicts: identical.** Both reviews ACCEPT every lemma, Theorem 4.3 and every corollary. Both
 require only R1 (line 242, "bipartite") and find no fatal gap. Neither review is a project-oracle
@@ -359,23 +361,23 @@ numbers. Both found 0 incomparable pairs of members of 𝒫. Both observe that r
 far from counterexamples (no bad port in any sparse random instance), so only built instances
 exercise Lemma 4.4. Both observe that the minimality steps can only be checked on paper.
 
-**Net.** Two referees on different models reached the same verdict by independent derivations and
-independent code. This review adds no new required fix. The paper plus R1 stands as a rung (a)
+**Net.** Two AI reviews in separate contexts on Claude Opus 5.5 reached the same verdict by independent derivations and
+independent code. This review adds no new required fix. The paper plus R1 stands as a written-proof evidence
 written proof of Theorem 4.3, QB(4), C0, E3, E4, G110-quartic and P_2, pending formalization.
 
 ## 7. Hash check and reproduction
 
 - Paper SHA-256 at start: `3c67d183d93b8bb512dba6e46656dc6e11991bb5e29f2b22ff3f37e5dd960cf8`.
 - Paper SHA-256 at end (10:31 EDT): `3c67d183d93b8bb512dba6e46656dc6e11991bb5e29f2b22ff3f37e5dd960cf8`,
-  equal to the start value and to `findings/supplement/papers/quartic/C1-FROZEN.sha256`. The paper was not edited.
+  equal to the start value and to the omitted historical receipt `findings/supplement/papers/quartic/C1-FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json). The paper was not edited.
 - Reproduce from `findings/supplement/papers/quartic/review-2-code/`:
   - `/usr/bin/clang -O2 -o r2sub r2sub.c` (do not use `cc` in this shell; it is aliased).
-  - `timeout 240 [temporary path] r2_identities.py 2718 40`
-  - `timeout 240 [temporary path] r2_sparse_core.py 11 200 build`
+  - `timeout 240 python3 r2_identities.py 2718 40`
+  - `timeout 240 python3 r2_sparse_core.py 11 200 build`
     (likewise seeds 1, 12, 13, 31, 32, 33; and `21 200 random`, `41 200 random`)
-  - `timeout 240 [temporary path] r2_adversarial.py 77 200 G1`
+  - `timeout 240 python3 r2_adversarial.py 77 200 G1`
     (likewise `78 200 G1`, `77 200 G2`, `77 200 G3`)
-  - `timeout 240 [temporary path] r2_tutte.py 6 50`
+  - `timeout 240 python3 r2_tutte.py 6 50`
 - Outputs: `out_identities.json`, `out_sparse_*.json`, `out_adv_*.json`, `out_tutte.json`,
   `run_*.txt`. The time-bounded scripts process a seed-determined sequence of instances, so counts
   can differ slightly between machines.

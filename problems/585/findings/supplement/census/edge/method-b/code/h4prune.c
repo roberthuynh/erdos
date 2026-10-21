@@ -1,4 +1,4 @@
-/* h4prune.c -- PRUNE hook for nauty geng (method B, wave8/exb).
+/* h4prune.c -- PRUNE hook for nauty geng (method B, census/edge/method-b).
 
    Built into geng with -DPRUNE=h4prune -DSUMMARY=h4summary (see build.sh).
    geng builds each output graph by adding vertices 0, 1, 2, ... in order,

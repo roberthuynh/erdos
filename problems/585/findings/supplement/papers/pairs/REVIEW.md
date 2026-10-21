@@ -1,10 +1,16 @@
-# Referee report on findings/supplement/papers/pairs/PAPER.md
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
+# AI review report on findings/supplement/papers/pairs/PAPER.md
+
+> Export clarification (2026-10-19): The recovered review/code sources and text outputs are now bundled; compiled binaries are excluded. RECOVERED-REPLAY.md at the supplement root records new bounded replays separately from this historical review.
+
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
 
 AI review, October 5, 2026. Status: FINAL.
 
 Paper: `findings/supplement/papers/pairs/PAPER.md`, SHA-256
 `6fad9b431ca5e4afa6abfa01a38073b636c5ebfae72d3f200acd34beb1483ae0`.
-- Start of review: hash matches `FROZEN.sha256`.
+- Start of review: hash matches the omitted historical receipt `FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json).
 - End of review: hash recomputed, still matches. The paper was not edited.
 
 Method. Every lemma was re-derived by hand before I opened the author's code. Every computed claim was
@@ -227,7 +233,7 @@ The author's own T1 and T2 outputs contradict each other on these six graphs.
   an out-closed X holds ≥ 3 units of Q-deficiency."
 - **F4 (Example 8 method, required for the record).** Replace the "Checks:" sentence by: "Checks: `mpair.c`
   as frozen has a labeling bug (`path1[0]` is never set, so the residual graph uses vertex 0 in place of
-  the mark a) and is reliable only for lines with a = 0, which includes the six NONE lines; the referee
+  the mark a) and is reliable only for lines with a = 0, which includes the six NONE lines; the AI review
   re-decided all 76,975 lines with an independent tester and found the same six. `verify_t1.py`
   re-checked the six NONE answers." Fix `mpair.c` with `path1[0] = ea;` before the `ham1` call.
 - **F5 (SCOUT.md §0 row T2, §3.2, LOG.md; data).** Replace "exactly 2 in 82 (4 on 11 vertices, 78 on 12)"
@@ -245,7 +251,7 @@ My verdicts were fixed before reading the author's code. Afterwards:
   exists through the edge) is correct, and minimal violators contain an edge (|S| = 2 has g ≥ 10, larger
   ones have internal δ ≥ 4). Agrees with my brute force on R20. Its spanning-pair search starts at depth 1
   (no `path1[0]` problem) and agrees with my testers wherever I ran both.
-- `brute_sparse.py` (Gray code) is correct. `pairc` (585-fable tools) starts at depth 1 and has no
+- `brute_sparse.py` (Gray code) is correct. `pairc` (the original pair-tester tools) starts at depth 1 and has no
   `path1[0]` problem; its L5 answers agree with mine at the small orders.
 - `mpair.c`: wrong when the first mark is not vertex 0 (§4). The author's T1 count survives; the T2
   details do not.

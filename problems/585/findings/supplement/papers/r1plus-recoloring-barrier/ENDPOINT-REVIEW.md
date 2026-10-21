@@ -13,7 +13,7 @@ The exact reviewed declaration is
 
 ## Frozen input and compilation evidence
 
-All seven source hashes were matched against root's
+All seven source hashes were matched against the recorded
 `paper104/integration/FROZEN-COMPILE.json` before their exact bytes
 were copied into the review directory. The receipt has SHA-256
 `36853c270e527fd586e47df00b8ac1543d0ecd7c2b7618328df2d87d4090ae08`.

@@ -1,4 +1,4 @@
-"""sat4.py -- PySAT decider of method B (wave8/exb), own CNF (deciders.cnf_h4).
+"""sat4.py -- PySAT decider of method B (census/edge/method-b), own CNF (deciders.cnf_h4).
 
 Reads graph6 lines on stdin and decides for each graph whether it has a
 nonempty 4-regular subgraph.  SAT answers are checked (the model's edges

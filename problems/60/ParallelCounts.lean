@@ -1,6 +1,6 @@
 import BasicCounts
 
-/-! Metsch (1991), published book supplied by the user, printed pages2 and15:
+/-! Metsch (1991), printed pages 2 and 15:
 source(B4) and Lemma3.1(a,b,c), specialized to the original fixed line-label
 count q^2+q+1. Every incidence sum counts indexed labels; empty lines and
 repeated singleton supports remain distinct. The formulas are derived by actual

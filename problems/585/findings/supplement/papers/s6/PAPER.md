@@ -1,11 +1,17 @@
 # S6 at all sizes: frames of the split graph, a Kempe-descent reduction, and the cuts of B
 
-Historical written argument, October 5, 2026. Status: see the end of the file and `FROZEN.sha256`.
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with REVIEW.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
+> Export clarification (2026-10-19): The parity, frame, depth-three and sufficiency wording below incorporates the existing REVIEW.md corrections. Lemma K was subsequently refuted as recorded in the supplement README; its conditional reduction is retained only as a historical implication. No general S6 or B6 theorem is certified here.
+
+Historical written argument, October 5, 2026. Status: see the end of the file and the omitted historical receipt `FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json).
 Written proofs plus computer checks. Not reviewed. No Lean, no `check.sh`. Evidence categories:
 proofs are (a), computations (b).
 
-"va6 PAPER" is `unpublished historical S6 source` (frozen, refereed in `unpublished historical S6 source`); "theory PAPER" is
-`findings/supplement/papers/b6-24/theory/PAPER.md` (draft); "pairs PAPER" is `findings/supplement/papers/pairs/PAPER.md` (frozen, refereed).
+"va6 PAPER" is `unpublished historical S6 source` (frozen, AI-reviewed in `unpublished historical S6 source`); "theory PAPER" is
+`findings/supplement/papers/b6-24/theory/PAPER.md` (draft); "pairs PAPER" is `findings/supplement/papers/pairs/PAPER.md` (frozen, AI-reviewed).
 
 ## 0. Results
 
@@ -16,7 +22,7 @@ proofs are (a), computations (b).
 | Lemma 2.1 | Y has a 4-factor, for every size | proof |
 | Lemma 2.2, 2.3 | frames (1-factorizations of the split graph Y⁺ with the five split edges in two classes) exist, and S6 at (o, y) holds iff some frame has Φ = 2 | proof |
 | Lemma 3.1 | parity: (−1)^Φ is a product of matching signs; a Kempe swap on a chain with ℓ edges per colour changes a cycle count by ℓ − 1 mod 2; consequences for merging | proof |
-| Theorem 4.1 | **rung 2: Lemma K (Kempe descent, all sizes) implies S6 for all sizes** | proof |
+| Theorem 4.1 | **Conditional reduction: Lemma K (Kempe descent, all sizes) implies S6 for all sizes** | proof |
 | Example 4.2 | the one-move form of Lemma K is false (\|B\| = 16, certified by two programs) | certificate |
 | §4.2 | Lemma K holds in every test: all 1,532 strict local minima reached from 4,472 random frames (\|B\| = 16-62, PG(2,5), two Haar graphs) escape; its bounded form K3 (three moves) is false (PG(2,5), two programs) | computation |
 | §5 (bank) | fixed sizes: S6 for \|B\| ≤ 24 from H22 and the assumed 2EC for Y; census evidence | conditional proof |
@@ -154,14 +160,14 @@ with a transposition of Q. The identity is (b) times (a) for (N_4, N_5), with N_
 number of cycles of C or of C' by exactly one; merging two cycles of C' into one by a swap of a
 C'-colour needs a chain whose length is divisible by 4. (ii) From a frame with Φ odd, every sequence
 of moves reaching Φ = 2 contains a swap of a colour in {0, ..., 3} with a colour in {4, 5} along a
-Λ-free chain of length divisible by 4: the leftover of B must supply the last merge. (iii) Kempe
+Λ-free chain of length divisible by 4. Some parity-changing step uses a leftover colour; it need not be the last merge when the initial Φ exceeds 3. (iii) Kempe
 swaps alone preserve INV, so a Kempe class of frames for a fixed π meets only one value of INV.
 
 So a merging move (NOTES §A) is constrained by parity: in girth-6
 hosts such as PG(2, 5) there are no Kempe 4-cycles, and a single merge needs a chain of length
 ≥ 8.
 
-## 4. The all-sizes lemma and the reduction (rung 2)
+## 4. The all-sizes lemma and the conditional reduction
 
 ### 4.1 Lemma K and the reduction
 
@@ -182,15 +188,15 @@ Everything in this reduction except Lemma K is proved here for every size: E10 g
 frame with Φ = 2 is the pair (Lemma 2.3).
 
 **What Lemma K uses of B.** (B1) the hypothesis E10, through Lemma 1.2; (B2) the split graph
-Y⁺ = Y + Λ: a frame is a 1-factorization of B cut open at o and y, so the four classes forming the
+Y⁺ = Y + Λ: a frame is a 1-factorization of Y⁺, so the four classes forming the
 two Hamilton cycles are chosen together with the two leftover classes of B, not as a 4-factor in
 isolation; (B3) the leftover classes N_4, N_5 ⊇ Λ are the source of exchanges, and by
-Corollary 3.2(ii) they must supply the last merge whenever Φ is odd. Nothing in Lemma K refers to
+Corollary 3.2(ii) some parity-changing step must use them when the initial Φ is odd (the last merge is forced only when the initial Φ is 3). Nothing in Lemma K refers to
 2-edge cuts of a 4-factor. The 350-vertex Meredith-type graph (theory PAPER §8) is a 4-regular,
 4-connected bipartite graph that is not Hamilton-decomposable; Lemma K never fixes the 4-factor
 C ∪ C', since Kempe swaps with colours 4, 5 change it.
 
-**The hypothesis is needed.** For B24 with o = 7 (va6 PAPER Ex. 4 and its referee's fix), all six
+**The hypothesis is needed.** For B24 with o = 7 (va6 PAPER Ex. 4 and its AI review's fix), all six
 ports are good, so frames exist, but the balanced set T = copy 1 has at most one edge of Y leaving
 each colour class, every 4-factor F of Y has ∂_F(T) ≤ 2, and no frame has Φ = 2. A frame of minimum Φ (≥ 3) then
 admits no Φ-lowering sequence: Lemma K fails without E10.
@@ -236,8 +242,7 @@ max flow; the networkx check of `code/verify_depth.py` is reported in Appendix A
 from which no sequence of at most three moves (all move types, including Λ re-pairings) that never
 raises Φ lowers Φ, while four moves do. Checked by `code/escape.py` (breadth-first search, depth 4)
 and by `code/verify_depth.py` (shares no code with it: 9, 47, 211 Φ-neutral frames at depths 1, 2, 3,
-none with a Φ-lowering move; an escape at depth 4). So any proof of Lemma K has to allow sequences of
-unbounded or at least growing length, and girth 6 is where the long sequences appear first.
+no Φ-lowering move from depths zero through two, and seventeen lowering moves from depth-three frames, giving escapes of four moves). This establishes a lower bound of four moves for this example; it does not establish unbounded escape length or that girth six is necessary.
 
 ### 4.3 Where the proof of Lemma K is stuck (the main obstruction)
 
@@ -247,17 +252,17 @@ unbounded or at least growing length, and girth 6 is where the long sequences ap
    X of an auxiliary digraph whose cut contradicts sparsity. "C is a Hamilton cycle" asks C to cross
    every set at once, and a failure of one exchange does not produce a closed set. This is the step
    where Lemma 1.2 has to enter and where no argument is known.
-2. *Parity* (Corollary 3.2): from odd Φ the last step is a swap of a cycle colour with a leftover
+2. *Parity* (Corollary 3.2): from odd Φ some parity-changing step is a swap of a cycle colour with a leftover
    colour along a Λ-free chain of length ≡ 0 (mod 4). The five Λ edges lie in N_4 ∪ N_5 and block
    every leftover chain through them; in small hosts N_i ∪ N_4 often has only one to three
    components, so most leftover chains are blocked. Λ re-pairings exist to move the blocks.
 3. *No local potential.* Single moves (Example 4.2), single moves after recolouring inside C, C' and
-   H + Λ (5 to 15% of minima still stuck, `code/escape2.py`), a lexicographic potential
+   H + Λ (6 to 16% of minima still stuck, `code/escape2.py`), a lexicographic potential
    (Φ, −Σ|K|², `code/lexdesc.py`: 53 to 72 of 225 descents stuck per size) and three moves
    (Example 4.3) all fail. What survives is reachability within a level set of Φ.
 
 What a proof has to show is a statement about the frame graph: no nonempty set of frames with
-Φ ≥ 3 is closed under the moves that do not raise Φ (this is Lemma K restated). E10 is necessary
+Φ ≥ 3 is closed under the moves that do not raise Φ (this is Lemma K restated). Lemma K can fail without E10 (B24)
 (§4.1, B24). The natural shape of the missing argument: from a closed set of frames at level
 Φ_0 ≥ 3, extract a vertex set S with g(S), g(S + o), g(S + y) or g(S + o + y) below the bounds of
 Lemma 1.2.
@@ -265,7 +270,7 @@ Lemma 1.2.
 ## 5. Bank: fixed sizes (not the target; recorded separately)
 
 - **Census.** S6 holds for every B with |B| ≤ 18, every o and every port y (va6 PAPER §4, reproduced
-  by its referee with independent code; every B on 16, 18 or 20 vertices is E10, va6 REVIEW). At |B| = 20 it holds
+  by its AI review with independent code; every B on 16, 18 or 20 vertices is E10, va6 REVIEW). At |B| = 20 it holds
   on the slice 0/600 (227 graphs), and on random graphs at |B| = 22, 24 (40 each, every o, every y)
   and 28, 30 (14,277 graphs, 2,474,427 decisions; `unpublished historical S6 source`), one method each.
 - **Conditional, |B| ≤ 24.** Let 2EC_Y be: *Y has a 4-factor with no edge cut of at most 2 edges.*
@@ -280,13 +285,13 @@ Lemma 1.2.
 ## 6. Part (ii): what S6 needs in order to give B6
 
 VA6: for every simple bipartite 6-regular B and every vertex o, B − o has a pair. VA6 implies B6
-trivially, and B6 implies VA6 (Corollary B of `585-fable/PROOF-R1.md`). Let (B, o) be a counterexample
+trivially, and B6 implies VA6 (Corollary B of the historical `PROOF-R1.md` note (original source reference)). Let (B, o) be a counterexample
 to VA6 with N = |B| minimum. Then (F0) VA6 holds below N, and N ≥ 22 (va6 PAPER §4: VA6 for all
 |B| ≤ 20); (F1) B[T] has no pair for every T ⊆ V(B) − o; (F2) B is connected (a component avoiding o
 is a smaller 6-regular bipartite graph, and VA6 at any of its vertices gives a pair in it). (F3) If B
 is E10, S6 gives a pair in B − o − y ⊆ B − o for any port y. So **S6 implies that a smallest VA6
 counterexample has an essential cut (both sides ≥ 2 vertices) of 2, 4, 6 or 8 edges**, and S6 gives
-B6 exactly when such cuts are ruled out.
+B6 if such cuts are ruled out; the converse is not established by this argument.
 
 For a cut (T, T̄) with o ∉ T write c = |∂T| and, for v ∈ T, d(v) for the number of cut edges at v.
 By va6 PAPER (1), ∂_I(T) − ∂_O(T) = 6(|T_I| − |T_O|); for c ≤ 8 the types are the balanced (1,1),
@@ -371,7 +376,7 @@ cannot remove. These residual cuts are open.
   ∂_P(S) = 1, ∂_Q(S) = 8; then S + y is the side of a 10-edge cut of B of type (8,2) that contains the
   edge oy. Whether such sets occur was not pursued.
 
-## Appendix A. Computations (rung (b)) and files
+## Appendix A. Computations (computational evidence) and files
 
 All code is in `code/`, outputs in `data/`. Python 3 (`/usr/bin/python3`); networkx only in
 `verify_depth.py`. Every command was run under `timeout 240` or a longer cap noted in `LOG.md`.
@@ -394,7 +399,7 @@ All code is in `code/`, outputs in `data/`. Python 3 (`/usr/bin/python3`); netwo
 - `verify_depth.py` (no shared code; networkx max flow over all pairs of disjoint edges for E10,
   `data/pg25_e10_check.txt`: minimum essential cut ≥ 10 for PG(2, 5)): breadth-first search over all
   move types including Λ re-pairings, keeping only Φ-neutral frames. On `pg25_depth4.json`: 9, 47, 211
-  neutral frames at depths 1, 2, 3, none with a Φ-lowering move; a Φ-lowering move at depth 4. (A
+  neutral frames at depths 1, 2, 3: no lowering move from depths zero through two, and seventeen lowering moves from depth-three frames, producing four-move escapes (REVIEW.md, item 15). (A
   first version kept Φ-raising frames in the frontier and reported a spurious escape at depth 2; fixed
   before the reported run, `LOG.md`.)
 - Hosts: PG(2, 5) from `unpublished historical host generator pg25`; H(Z_19, {3,7,8,14,15,16}) and
@@ -402,7 +407,4 @@ All code is in `code/`, outputs in `data/`. Python 3 (`/usr/bin/python3`); netwo
 
 ## Status
 
-Frozen for review: the SHA-256 of this file is in `FROZEN.sha256`. Rung reached: 2 (Theorem 4.1:
-S6 reduced to the all-sizes Lemma K, every other step proved). Not reached: rung 1 (Lemma K open),
-rung 3 (no counterexample to S6 found; in the 4,472 test frames on E10 hosts every strict local
-minimum of Φ had a Φ-lowering escape).
+The original reviewed-source identity is recorded in FROZEN.sha256 (the original receipt is omitted; available identities are mapped in PROVENANCE.json). Theorem 4.1 is conditional on Lemma K, subsequently refuted as described in the supplement README. The historical tests found no counterexample to S6; this is not an all-sizes proof. Current edited bytes are inventoried separately in MANIFEST.md.

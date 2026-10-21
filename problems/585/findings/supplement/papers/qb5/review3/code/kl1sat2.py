@@ -1,4 +1,4 @@
-"""SAT search for a block violating KL1, version 2 (referee 3, own encoding).
+"""SAT search for a block violating KL1, version 2 (third implementation, own encoding).
 
 Same model as kl1sat.py, plus:
   anchors : minimal core family WLOG -> vertex i-1 (i = 1..s) lies in every A1_j (j != i), not in A1_i,

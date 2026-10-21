@@ -1,13 +1,15 @@
 # Historical pairs investigation log
 
+> Export clarification (2026-10-19): The T2 count “82 exactly-two-pairing examples” is superseded by papers/pairs/REVIEW.md §5 and fix F5: exactly six examples, all on twelve vertices; all examples on at most eleven vertices realize all three pairings. The 82 old NONE answers were labeling errors, not examples. Original erroneous result streams remain historical records. The separately regenerated corrected stream in replay/t2-replay.out has 66,992 rows; see RECOVERED-REPLAY.md.
+
 Historical computational log, October 5, 2026. No `check.sh` verification was performed.
 
 ## Done
 - 2026-10-05: reviewed the scientific inputs, including findings/supplement/papers/quartic/C1-PAPER.md and historical pair/census records.
 
-## Next
-- Survey tools (pairc, genbg, census dir), write a spanning-pair tester.
-- Generate sparse E4 / sparse C1 instances (bipartite) at small sizes; test candidate statements.
+## Historical observations
+- Methods used: pairc, genbg, census data and a spanning-pair tester.
+- The investigation generated small sparse E4 / sparse C1 bipartite instances to test candidate statements.
 - 10:05-10:20: wrote ptool.c (sparsity by flows, validated vs brute force on 42 graphs; spanning-pair test;
   C1 port test). Results so far:
   - sparse E4 (genbg -d4:4 -D6:6 a a 6a-4): a=6: 10/10 sparse, all spanning pair; a=7: 267/267, all SP;
@@ -35,14 +37,13 @@ Historical computational log, October 5, 2026. No `check.sh` verification was pe
     (12 vertices, level -4) has pairs through v only with the two other pairings. So W1-MINIMAL 4a's
     statement is FALSE at m = 11 (not only its proof). data/t1_none.txt.
   - T2 (pairing richness): for X = Z + v, deg v = 4, Delta <= 6 (66,992 graphs X on <= 12 vertices),
-    pairs through v realize >= 2 of the 3 pairings in every case; exactly 2 in 82 cases (4 at n=11, 78 at
-    n=12). data/t2_res.txt, data/t2_none.txt.
+    pairs through v realize >= 2 of the 3 pairings in every case; the original count was erroneous. The later correction establishes exactly 2 in six cases, all at n=12; all examples through n=11 realize all three. Original data/t2_res.txt and data/t2_none.txt are not corrected result streams.
 - 11:05: q4 a=11 DONE: genbg -q -c -d4:4 -D4:4 11 11 44:44 in 24 shards piped to ptool H: 5,582,592
   connected bipartite 4-regular graphs on 22 vertices (genbg keeps the color classes, so asymmetric
   graphs may appear twice), 236 without a Hamilton decomposition, and every one of the 236 has a 2-edge
   cut (cuts.c Gray-code enumeration). With a <= 10: every connected bipartite 4-regular graph on <= 22
   vertices without a 2-edge cut is HD ("H22"). data/q4bip_a11_nonhd.g6.
-- Plan: closure attempt on Lemma 2EC (sparse instance has a 4-factor with no 2-edge cut; for C1 at some
+- Historical proposed approach: closure attempt on Lemma 2EC (sparse instance has a 4-factor with no 2-edge cut; for C1 at some
   good port). With H22 it would give W1b for n <= 23 (minimal counterexamples are sparse).
 - 11:30: SP REFUTED at n = 20. data/rigid20.g6 = two K_{5,5} (T, W) joined by a perfect matching T_P-W_Q
   (5 edges) and one edge T_Q-W_P. Sparse E4 (ptool s and brute force: min g over proper sets = 10),
@@ -59,14 +60,14 @@ Historical computational log, October 5, 2026. No `check.sh` verification was pe
 - SCOUT.md written (full draft): Lemmas 1.1-1.4, Cor 1.5, census tables, T1 refutation, T2, closure attempt
   (Lemma 2EC' via one-swap Lemma D), exact gap. Corrected one claim of mine (a "flow-rigid" example was
   in fact thin on the Q side).
-- Next: computational check of Lemma D's mechanism (greedy one-swap repair on random 4-factors of sparse
-  instances) if time allows; then final reply.
+- Proposed follow-up at that date: computational check of Lemma D's mechanism (greedy one-swap repair on random 4-factors of sparse
+  instances) (not a result).
 - 12:05: witness check. ptool2 mode w prints both Hamilton cycles; verify_sp.py (networkx, own code)
   checks spanning, edges present, edge-disjoint. E4 a=8: 52,295/52,295 verified; q4 a=10: 121,768 HD
   verified + 17 non-HD (matches); E4 a=9 shard 37/100: 319,185/319,185 verified; q4 a=11 shard 5/24:
   233,873 verified + 13 non-HD (matches the census shard summary 233,886 / 233,873). The non-HD graphs
   are certified non-HD by their 2-edge cuts (cuts.c). Added Corollary 1.6 to SCOUT.md.
-- Next: PAPER.md with the complete pieces, freeze, final reply.
+- The written results were subsequently collected in PAPER.md.
 - 12:20: PAPER.md written (Lemmas 1, 2, 7; Props 3, 5; Cor 6; Examples 4 (R20) and 8 (T1)) and frozen:
   see FROZEN.sha256. SCOUT.md final. One closure attempt ended at the
   rigid-set classification and the multi-swap potential.

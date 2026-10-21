@@ -1,14 +1,14 @@
 # REVIEW4 log
 
 - 23:19 start. FROZEN4.sha256: all 16 entries OK.
-- 23:19 read PAPER4, PAPER3, REVIEW3. Next: PAPER, PAPER2, REVIEW, REVIEW2.
-- 23:20 read PAPER, PAPER2. Next: REVIEW, REVIEW2, then hand re-derivation of PAPER4 §2-3.
+- 23:19 read PAPER4, PAPER3, REVIEW3. Proposed follow-up at that date: PAPER, PAPER2, REVIEW, REVIEW2.
+- 23:20 read PAPER, PAPER2. Proposed follow-up at that date: REVIEW, REVIEW2, then hand re-derivation of PAPER4 §2-3.
 - 23:31 hand re-derivation of PAPER4 §2 (Lemmas 2.1, 2.2) and §3 (Lemmas 3.2-3.5, Thm 3.1) done once: no error found yet.
   Lemma 3.3 m(v)=3 equality case, 3.4(c) single-vertex case, 3.5(a) S_i ∩ S_j = K+, final counts all re-derived.
 - 23:31 (N1) analysis by hand: using g(X'(T) - a) >= 12 for every a in a big overloaded T gives e(a, C'(T)) >= 5 - m(T) + kappa + theta.
   For an (N1) pair this forces m(a) = 3, |J| = 1 with a ~ c*, b in exactly one of T, T' (m(T)+m(T') = 7), (kappa,kappa') in {(-1,-1),(-1,0)}.
   m(a) = 2 impossible. So (N1) needs |X| >= ~28; the data blocks have |X| <= 22, which explains 0 (N1) in the data.
-- 23:31 data: blocks1750_all.blk has |A| <= 10; caseb_sat |A| = 11, 12; §6.1 block |A| = 12. Next: own C checker review4/code/kl1rev.c.
+- 23:31 data: blocks1750_all.blk has |A| <= 10; caseb_sat |A| = 11, 12; §6.1 block |A| = 12. Proposed follow-up at that date: own C checker review4/code/kl1rev.c.
 - 23:33 code/kl1rev.c (own, from scratch): validates (H1)-(H3) incl. block sparsity via the subset form
   sum_c (e(c,T)-3)^+ <= 3|T| - 6 for |T| >= 3; enumerates m; checks Lemma 2.1 identities (random S), 2.2(b)(c),
   3.2 on all pairs of maximal sets, 3.3 (hub-free family never covers; minimal subcovers), 3.4/3.5 on the whole
@@ -28,7 +28,7 @@
 - 23:40 (N1) sweep (code/run_n1.sh, data/run_n1_sweep.log): |A| = 15..19, 8 size configs x 40 blocks; 241 sparse
   blocks, each realizes the planted (N1) pair (plus 196 from the first two runs: 437 in all). Every (N1) has exactly
   the predicted shape; I_X = Z nonempty every time; 0 violations of any check. (W nonempty needs |Z| >= 6.)
-- 23:40 next: hub + covering m (never in the data: all 9,612 data hubs are non-covering), via planted hubs.
+- 23:40 Proposed follow-up at that date: hub + covering m (never in the data: all 9,612 data hubs are non-covering), via planted hubs.
 - 23:41 kl1rev now counts hubs under covering m. Data: 0 of the 9,612 data hubs are under a covering m, so the
   covering part of the Thm 3.1 count was never exercised by the author's data. Hand note: {y,c} and {y,y'} petals
   are impossible (c in P_i needs e(c,Q_i) >= 2; {y,y'} would need e(X,y)+e(X,y') = 7-m(Q) while theta*(K+y) <= 1
@@ -38,7 +38,7 @@
 - 23:43 second hub sweep (data/run_hub2_sweep.log): 12 configs, |A| 11-13; hubs under covering m: 3,305
   (beta 2,741, delta 564), {y} petals 7,782; no big petal produced by the planted generator; 0 violations; I_X
   never empty. Hand note: in case beta a petal's C-part has no K-neighbor (d_A(K+) = 0), so big petals need
-  e(c, Q_i) >= 3; tight kappa = 0 big petals need |P_i| >= 10. Next: SA perturbation from planted-hub starts.
+  e(c, Q_i) >= 3; tight kappa = 0 big petals need |P_i| >= 10. Proposed follow-up at that date: SA perturbation from planted-hub starts.
 - 23:46 SA (code/sa_kl1.c, energy 10*min_cov |I_X| - bigcov - ...; 2 workers, starts = planted hubs, (N1)
   blocks, data blocks; 300k steps each): ~570k distinct hub blocks dumped so far, no covering m with I_X empty.
 - 23:46 (N1) supplement by hand: with an (N1) pair the maximal family is exactly {T, T'} and
@@ -56,7 +56,7 @@
 - 23:50 kl1rev on SA dump_1 (407,566 blocks, |A| = 12, 13): 45.4M multisets (37.3M covering); 408,692 hub
   multisets under covering m (beta 408,550, delta 142), 818,554 {y} petals; I_X empty only for 32,353
   non-covering m, each with a w=3 one-vertex petal; all violation counters 0. Still no petal with |P| >= 3.
-  Next: planted big petal (tight kappa=0 petal K_{5,5}-e on Q u P_C, E = 5) next to an A45 hub.
+  Proposed follow-up at that date: planted big petal (tight kappa=0 petal K_{5,5}-e on Q u P_C, E = 5) next to an A45 hub.
 - 23:52 big petal: code/gen_big.py (A45 hub + {y} + tight K_{5,5}-e petal, E = 5): 300 blocks, 300 big petals
   (|P| = 10, kappa = 0) under covering m; 0 violations. kl1rev on SA dump_2 (309,806 blocks): 0 violations;
   all 4,909 (N1) pairs of the predicted shape. Covering hubs with a singleton member (Lemma 3.4(d)) occur

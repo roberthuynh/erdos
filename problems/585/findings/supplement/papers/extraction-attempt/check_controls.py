@@ -8,7 +8,7 @@ import re
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
-SOURCE = ROOT / 'openmath/Openmath/Proofs/BipartiteFive.lean'
+SOURCE = ROOT / 'Openmath/Proofs/BipartiteFive.lean'
 text = SOURCE.read_text()
 block = ast.literal_eval(re.search(r'def blockEdges\b.*?:=\s*(\[.*?\])', text, re.S).group(1))
 

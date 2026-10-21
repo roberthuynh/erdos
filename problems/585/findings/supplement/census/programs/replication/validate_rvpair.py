@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Compare rvpairtest (reviewer's C pair test) with tools/brute.py on random graphs.
+"""Compare rvpairtest (independent C pair test) with tools/brute.py on random graphs.
 Usage: validate_rvpair.py COUNT SEED [OUT_GRAPHS_FILE]"""
 import random, subprocess, sys, time, os
-sys.path.insert(0, "[local path]")
+sys.path.insert(0, __import__('os').environ['ERDOS585_CENSUS_PROGRAMS_REPLICATION_VALIDATE_RVPAIR_PY_L5'])
 import brute  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))

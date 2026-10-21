@@ -1,4 +1,4 @@
-"""Random instance generators for wave4/theory experiments.
+"""Random instance generators for papers/b6-24/theory experiments.
 
 realize(dp, dq, rng): random simple bipartite graph with degree lists dp (P side), dq (Q side),
 by a randomized Gale-Ryser greedy plus random switches; None if not realizable.

@@ -33,7 +33,7 @@
   "chain L4.1(1) |Q|>=3": 98,
   "chain L4.1(2) D^Q(Q_W)=2, D(Q_W)<=2": 98,
   "chain L4.1(3) deg_Q(u1)>=3": 98,
-  "N4 (referee claim): in a sparse instance P is a chain": 52,
+  "N4 (supplementary claim): in a sparse instance P is a chain": 52,
   "chain L4.2(a) |QnQ'|>=2": 52,
   "chain L4.2(b) QuQ' != V": 52,
   "chain L4.2(c) QnQ', QuQ' in P": 52,

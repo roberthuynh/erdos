@@ -1,4 +1,4 @@
-"""M-form of the pair criterion (lane qb5, round 3; NOTES.md section 7).
+"""M-form of the pair criterion (QB(5), version 3; NOTES.md section 7).
 
 For a 4-set M of cut edges let m be its endpoint multiplicity on A (resp. D).  A set A1 of A is
 *under-supplied* by M if m(A1) < dem_X(A1).  I_X(M) = intersection of all under-supplied A1 (A itself is

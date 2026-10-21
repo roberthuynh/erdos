@@ -3,7 +3,7 @@
 max degree <= 6 and e = 3n - 5 on <= 17 vertices).
 
 A *pair* is two edge-disjoint cycles with the same vertex set. This file shares no code with
-pairc, ptool, mpair or the referee's rpair/genbip; the method is a SAT encoding, not a search.
+pairc, ptool, mpair or the independent rpair/genbip; the method is a SAT encoding, not a search.
 
 Reads graph6 lines on stdin (one graph per line). For each graph:
   1. class filter (mode "census"): e = 3n - 5, every degree in [4, 6], bipartite (BFS 2-colouring

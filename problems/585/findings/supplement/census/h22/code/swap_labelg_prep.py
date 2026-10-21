@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""wave4/h22b: cross-check of hdq's colour-swap flag with nauty labelg (sample only).
+"""census/h22: cross-check of hdq's colour-swap flag with nauty labelg (sample only).
 
 For each hdq output line (<g6> H|C ... with the swap flag), writes the graph twice, relabelled so
 that one side comes first (A-first) and then the other side first (B-first). labelg with the

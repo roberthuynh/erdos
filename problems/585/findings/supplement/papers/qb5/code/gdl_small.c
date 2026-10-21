@@ -1,4 +1,4 @@
-/* gdl_small.c (lane qb5, round 2): exhaustive check that small 2-blocks are generic (NOTES.md section 6).
+/* gdl_small.c (computational checks): exhaustive check that small 2-blocks are generic (NOTES.md section 6).
  * Build: /usr/bin/clang -O3 -o gdl_small gdl_small.c
  * Input: graph6 lines from  genbg -q -d6:0 -D6:6 c c+2 6c:6c  (first c vertices = small side C, all of
  *   degree 6; last c+2 = big side A).  Keeps blocks with every in-block degree d_a >= 3 that are sparse

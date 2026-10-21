@@ -1,4 +1,4 @@
-"""selftest.py -- cross-validate the method B deciders (wave8/exb).
+"""selftest.py -- cross-validate the method B deciders (census/edge/method-b).
 
 Builds test graphs, runs the C decider (bin/h4filt -a) on all of them, and
 compares with the PySAT decider (all graphs) and the flow decider (small
@@ -6,7 +6,7 @@ bipartite graphs).  Any disagreement is printed and the exit code is 1.
 
 Test sets (graph6 files are written to data/selftest/):
   known   the 23,094 graphs of census/f1/q4free_bip_n15_e33-45.g6
-          (census lane: no 4-regular subgraph; here they are only test input)
+          (original census: no 4-regular subgraph; here they are only test input)
   plus1   each of 4,000 sampled 'known' graphs plus one random edge
           (same colour classes, max degree <= 6)
   rbip    random bipartite graphs, sides 4..10, max degree <= 6 (some 7)

@@ -1,8 +1,10 @@
 # Candidate barrier: one Kempe switch cannot force the pair at any polylogarithmic degree
 
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with ROOT-REVIEW.md, ADDENDUM-REVIEW.md, ENDPOINT-REVIEW.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
 October 4, 2026. Complete written argument submitted for independent
 review. Not yet a check.sh result. Historical priority is unestablished;
-a primary-source comparison is assigned separately. This is a method
+a primary-source comparison remains separate. This is a method
 boundary, not an improved bound on f(n) or an avoiding construction.
 
 ## 1. Exact method class and theorem
@@ -208,18 +210,6 @@ Hence r_k>C(log_2 N_k)^a for all sufficiently large k. Changing the log
 base only changes the fixed constant. The graphs are C4-free, so no
 large balanced biclique is being used to produce this method failure.
 
-## 8. Verification boundary and kill criterion
+## 8. Verification boundary
 
-The paper is a proposed complete proof, not an oracle result. Independent
-adversary and reviewer must check all four-point affine relations, the
-complete component classification and the exact cross-state predicate.
-Primary comparison must distinguish prior one-step/local-repair barriers,
-the classical parabola construction, and this claimed detector boundary.
-
-No graph avoidance conclusion or improved f(n) bound is drawn. Full
-Kempe-class growth is still open; the failed KS102 proof attempt is not
-reopened by this one-step barrier. No k=1/degree-three case earns credit.
-If the classification or the growing-degree construction fails and no
-single precisely stated repair survives independent review by end103,
-close R1. If accepted, assess the method-barrier Lean gate before writing
-any formalization. No computation or Lean has been run for this note.
+This is a written argument, not a Lean verification result. Its mathematical dependencies include the four-point affine relations, component classification and exact cross-state predicate. No graph-avoidance conclusion or improved f(n) bound is drawn. Full Kempe-class growth remains open. Comparison with earlier local-repair barriers and the classical parabola construction is a separate novelty question. No computation or Lean check was run for this note.

@@ -1,0 +1,16 @@
+{
+  "rows": 66992,
+  "matches_archived_corrected_multiset": true,
+  "pairing_counts": {
+    "3": 66986,
+    "2": 6
+  },
+  "two_pairing_rows": [
+    "K?zP`cnF~eX_ 11 realised=011 count=2 pair_avoiding_v=NO cycles=19810",
+    "K@zP`cNF~FX_ 11 realised=011 count=2 pair_avoiding_v=NO cycles=19908",
+    "K?zP`c^NvFX_ 11 realised=011 count=2 pair_avoiding_v=NO cycles=19893",
+    "KEo`NK}Fg}z? 11 realised=011 count=2 pair_avoiding_v=NO cycles=18708",
+    "K@zPWwrK}Fx_ 11 realised=011 count=2 pair_avoiding_v=NO cycles=19906",
+    "KEo`H{}pg}z? 11 realised=011 count=2 pair_avoiding_v=NO cycles=18524"
+  ]
+}

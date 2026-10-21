@@ -1,4 +1,4 @@
-/* e10cut.c (wave8/s6spot): exact minimum essential edge cut of every graph in a graph6 file.
+/* e10cut.c (census/s6n22/spot-check): exact minimum essential edge cut of every graph in a graph6 file.
  *
  * For each graph B on n <= 31 vertices: min |delta(S)| over all S with 2 <= |S| <= n - 2, by
  * Gray-code enumeration of every S that contains vertex 0 (each bipartition {S, V - S} once).
@@ -13,7 +13,7 @@
  * Summary on stderr: graphs read and the histogram of mincut values.
  *
  * Usage: e10cut [-r deg] [-b n1] file.g6 > file.cut
- * Shares no code with wave6/s6n22.
+ * Shares no code with census/s6n22.
  */
 #include <stdio.h>
 #include <stdlib.h>

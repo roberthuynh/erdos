@@ -1,4 +1,4 @@
-"""Identity checks for C1-PAPER.md (lane M3) on random C1 instances.
+"""Identity checks for C1-PAPER.md (computational checks) on random C1 instances.
 
 Checked, for random C1(s) instances (D_U in {0, 1}), s = 5..8, every port y and EVERY cut
 S = A u C of G - y (A = S_W subset of W - y, C = S_U subset of U), Q = V - S:

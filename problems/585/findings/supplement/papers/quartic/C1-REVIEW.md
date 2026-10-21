@@ -1,13 +1,15 @@
-# C1-REVIEW: independent referee report on C1-PAPER.md (investigation M3-R)
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
+# C1-REVIEW: independent AI review report on C1-PAPER.md (investigation M3-R)
 
 AI review: October 5, 2026. Status: FINAL.
 
 Paper: `findings/supplement/papers/quartic/C1-PAPER.md`, SHA-256
 `3c67d183d93b8bb512dba6e46656dc6e11991bb5e29f2b22ff3f37e5dd960cf8`.
-- Start of review: hash matches `C1-FROZEN.sha256`.
+- Start of review: hash matches the omitted historical receipt `C1-FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json).
 - End of review (02:51 EDT): hash recomputed, still matches. The paper was not edited.
 
-Method: every step re-derived by hand before reading the author's checks (`c1checks/`, `M3-LOG.md`).
+Method: every step re-derived by hand before reading the author's checks (`c1checks/`, `M3-LOG.md` (original historical note not bundled)).
 Own code only, in `findings/supplement/papers/quartic/review-1-code/`. The minimality steps (Lemma 2.1, and its uses
 in Lemmas 3.2, 4.1, 4.2) can only be checked on paper: they say a minimal counterexample would
 contain a smaller one, and there is no counterexample to run them on.
@@ -55,7 +57,7 @@ paper.
 | Cor 5.2 | ACCEPT | |
 | Cor 5.3 (QB(4), and QB(4) ⟺ C1) | ACCEPT | statement and proof correct; fix R1 applies to the remark after it (line 242) |
 | Cor 5.4 (P_2) and §5.4 | ACCEPT | budget identity and c = 2 case re-derived from Tutte's form |
-| §6 hints | ACCEPT | not load-bearing; H1 to H9 re-derived as paraphrased in §6 (the brief's original hint wording is not on disk, so this covers the paraphrase); H10 is the route of §3-§4 |
+| §6 hints | ACCEPT | not load-bearing; H1 to H9 re-derived as paraphrased in §6 (the original wording is not bundled, so this covers the paraphrase); H10 is the route of §3-§4 |
 
 ### Required fix
 
@@ -79,7 +81,7 @@ bipartite, δ ≥ 4, Δ ≤ 6, e ≥ 3n − 4 implies a 4-regular subgraph, n �
 - N3. Appendix A.5 says Lemma 4.2 was never exercised on two distinct petals. That is a coverage gap
   in the computation, not in the proof, which I re-derived by hand. My own tests (below) address it
   as far as I could.
-- N4 (a strengthening, referee's own, proved here). **In a sparse C1 instance with D_U = 1, 𝒫 is a
+- N4 (a strengthening, independently produced, proved here). **In a sparse C1 instance with D_U = 1, 𝒫 is a
   chain under inclusion.** Proof: let Q, Q' ∈ 𝒫 be incomparable, X = Q − Q', Y = Q' − Q (nonempty,
   disjoint), Q0 = Q ∩ Q'. By Lemma 4.2 all four sets lie in 𝒫, so Identity 1.2 gives
   20 = 20 − 2e(X, Y), that is e(X, Y) = 0, and κ(X) = κ(Q) − κ(Q0) = 0, so |X| ≥ 2 and, by sparsity,
@@ -92,7 +94,7 @@ bipartite, δ ≥ 4, Δ ≤ 6, e ≥ 3n − 4 implies a 4-regular subgraph, n �
   hand proof, which I checked twice, and on Identity 1.2, which I recomputed. The chain property
   itself is tested below (0 incomparable pairs, as predicted).
 
-## Referee notes on the attack list
+## AI review notes on the attack list
 
 **1. Minimality setup, (M), Lemma 2.1.** Well founded. s is the least size of a quartic-free C1
 instance, with the class orientation-free: the smaller side carries deficiency ≤ 1, and since the
@@ -148,7 +150,7 @@ proper), singletons w = 12 − a − 3[a odd] ≥ 4; so R = ∅, e(S) = 1, e(T) 
 (the side of o keeps degree 6, the other side has one more vertex); gadgets are exactly these graphs.
 Corollary 5.2: immediate.
 
-## Recomputed (own code, `review-c1/`, all runs under `timeout 240`)
+## Recomputed (own code, `review-1-code/`, all runs under `timeout 240`)
 
 Outputs are the `out_*.json` and `log_*.txt` files beside each script. The two s = 7 `rc_lattice.py`
 runs (C1 and C0) share the name `out_lattice_g6_s7.json`; their separate outputs are
@@ -166,7 +168,7 @@ runs (C1 and C0) share the name `out_lattice_g6_s7.json`; their separate outputs
 | QB(4) census: every bipartite graph with Δ ≤ 6, e ≥ 3n - 4 has a quartic subgraph | `rc_census.py` (own graph6 decoder, own CNF, every witness validated) | genbg, e = 3n - 4 exactly: C1(5) 1, C1(6) 28, C1(7) 1,053, E4(6) 16, E4(7) 420, E4(8) 65,340 (n = 11..16); geng -b -D6, all e ≥ 3n - 4, no bipartition fixed: n = 11, 12, 13, 14: 2, 18, 39, 297 | all have one |
 | Lemma 1.5 on every violation of every exhaustive E4(6), E4(7) graph (e = 6a − 4), both orientations | `rc_e4.py` | 16 + 420 graphs, 12 + 356 violations, 872 orientations for min slack = maxflow − 4a | 0 failures |
 | Lemmas 4.1, 4.2, 4.4 by brute force over ALL vertex subsets (𝒫 enumerated completely) | `rc_lattice.py` | genbg C1 with W-degree ≥ 4, s = 6 (8 graphs), s = 7 (518); C0 with W-degree ≥ 5, s = 7 (11); random D_U = 1, s = 8 (1,200, W-degree ≥ 4) and s = 7..8 (800, W-degree ≥ 2: 539 sparse); random C0 gadgets s = 7..8 (400) | 0 failures. Every sparse instance here has 𝒫 = ∅ and no bad port, so these are vacuous for Lemma 4.2 |
-| Same, on referee-built sub-case instances (own builder `rc_build.py`, written before reading `c1checks/`) | `rc_built.py` seeds 1-7 | 512 instances, s = 10, 11 (c ∈ {4, 5}, t ∈ {6, 7}, ε ∈ {0, 1}), all exactly sparse (brute force agrees with the flow test on all 512) | 0 failures. Always |𝒫| = 1 (the planted petal); bad-port deficiency 1 (368) or 2 (144); bad ports = ports in a member of 𝒫; maxflow(G − y) = 4s − 1 at every bad port |
+| Same, on independently built sub-case instances (own builder `rc_build.py`, written before reading `c1checks/`) | `rc_built.py` seeds 1-7 | 512 instances, s = 10, 11 (c ∈ {4, 5}, t ∈ {6, 7}, ε ∈ {0, 1}), all exactly sparse (brute force agrees with the flow test on all 512) | 0 failures. Always |𝒫| = 1 (the planted petal); bad-port deficiency 1 (368) or 2 (144); bad ports = ports in a member of 𝒫; maxflow(G − y) = 4s − 1 at every bad port |
 | Exact 𝒫 by min-cut enumeration (closures of the residual graph of G − w, all w ∈ W), validated against brute force | `rc_xcheck.py` | 9,200 sparse instances (19 with 𝒫 ≠ ∅) | identical families |
 | Lemma 4.2 on distinct members: chain instances S2 → X → Q1 with two planted petals | `rc_chain.py` seeds 1, 11-18 | 890 built, 420 exactly sparse, s = 16..18 (n = 33..37; c2 ∈ {4, 5}, p ∈ {5, 6}, t ∈ {6, 7}); |𝒫| = 2 (411) or 3 (9); 438 pairs | 0 failures: Lemma 4.1 on 849 members, 4.2(a)(b)(c) on 438 pairs, union in 𝒫, bad ports = ports in a member of 𝒫, deficiency ≤ 2, no W-vertex with maxflow ≤ 4s − 2. All 438 pairs nested, as N4 predicts |
 | Lemma 4.4 at larger s, flows only; contrapositive "every port bad ⟹ not sparse" | `rc_random_core.py` seeds 41-44 | 16,578 random instances, s = 9..14 (C0 gadgets with W-degree ≥ 5, C1 with D_U = 1 and W-degree ≥ 4); 1,661 sampled for exact sparsity, all sparse | 0 failures, but vacuous: no instance had a bad port. Random instances of this kind are far from counterexamples; only built instances exercise the core lemma |
@@ -191,7 +193,7 @@ runs (C1 and C0) share the name `out_lattice_g6_s7.json`; their separate outputs
 
 ## Comparison with the author's checks (read after my derivations)
 
-- `M3-LOG.md` gives the same four-step argument as the paper. Its 02:40 entry reports adversarial
+- `M3-LOG.md` (original historical note not bundled) gives the same four-step argument as the paper. Its 02:40 entry reports adversarial
   counts (147,785 and 10,294) that differ from Appendix A.6 (145,753 and 10,168). The log says its
   early timestamps were estimates, and A.6 is a 200-second time-budgeted run, so different counts
   across runs are expected. Appendix A's numbers match the author's `out_*.json` files
@@ -215,6 +217,6 @@ runs (C1 and C0) share the name `out_lattice_g6_s7.json`; their separate outputs
   counterexample) were checked on paper only. No computation can run them, since a counterexample
   would have to exist.
 - No Lean formalization exists and `check.sh` was not run (outside this investigation's scope), so no result
-  here is a project-oracle PASS. On the project's ladder the paper's own labels stand: rung (a) as a
+  here is a project-oracle PASS. On the project's ladder the paper's own labels stand: written-proof evidence as a
   written proof for Theorem 4.3 and its corollaries, pending formalization.
-- §6 is checked against its own paraphrase of the hints, not against the original brief text.
+- §6 is checked against its own paraphrase of the hints, not against the unbundled original text.

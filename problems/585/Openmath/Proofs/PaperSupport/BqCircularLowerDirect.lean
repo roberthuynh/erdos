@@ -1,12 +1,11 @@
 import Mathlib.Combinatorics.SimpleGraph.Bipartite
 import Mathlib.Data.Finset.Sort
 import Mathlib.Tactic
-/- Owned literal circular all-q lower family after CENTRAL e985e3d7.
-Only authenticated generic birth/label/original-Subgraph mechanics are credited.
-New circular seed and all-support exclusion are proved below.
-Development compilation is not project RESULT:PASS. -/
+/- Circular all-q lower family. The source below contains the circular seed,
+all-support exclusion and the birth, label and original-subgraph constructions.
+The constituent section names identify embedded code, not separate imports. -/
 
-/- OWN flattened component BqCircularCore.lean. Import lines removed only. -/
+/- Embedded section BqCircularCore.lean. Its original imports are consolidated above. -/
 
 /- 
 -/
@@ -520,7 +519,7 @@ omit [DecidableEq V] in
 #print axioms nextNeighbors_least
 end BqCircularLowerFamily
 
-/- OWN flattened component BqCircularIntervals.lean. Import lines removed only. -/
+/- Embedded section BqCircularIntervals.lean. Its original imports are consolidated above. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
 set_option maxHeartbeats 1000000
@@ -683,7 +682,7 @@ theorem common_missing_card (z : ℕ) (I T : Finset ℕ)
 #print axioms common_missing_card
 end BqCircularLowerFamily
 
-/- OWN flattened component BqCircularSeed.lean. Import lines removed only. -/
+/- Embedded section BqCircularSeed.lean. Its original imports are consolidated above. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
 set_option maxHeartbeats 2000000
@@ -841,7 +840,7 @@ theorem seed_column_bounds (q : ℕ) (hq : 5 ≤ q) (j : Fin (2*(q-2)+2)) :
 #print axioms seed_column_bounds
 end BqCircularLowerFamily
 
-/- OWN flattened component BqCircularSupport.lean. Import lines removed only. -/
+/- Embedded section BqCircularSupport.lean. Its original imports are consolidated above. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
 set_option maxHeartbeats 2000000
@@ -971,9 +970,9 @@ theorem seed_no_balanced_support (q : ℕ) (hq : 5 ≤ q)
 #print axioms seed_no_balanced_support
 end BqCircularLowerFamily
 
-/- OWN flattened component BqCircularMatrix.lean. Import lines removed only. -/
-/- Original-edge matrix/Subgraph bridge adapted from authenticated generic source
-0ab7e9f4. The support exclusion supplier is the new proved circular lemma,
+/- Embedded section BqCircularMatrix.lean. Its original imports are consolidated above. -/
+/- Original-edge matrix/Subgraph bridge. The support exclusion supplier is the
+circular lemma proved above,
 not the old five-missing seed theorem. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
@@ -1173,7 +1172,7 @@ theorem seed_no_regular_subgraph (hq : 5 ≤ q) :
 #print axioms seed_no_regular_subgraph
 end BqCircularLowerFamily
 
-/- OWN flattened component BqCircularInvariant.lean. Import lines removed only. -/
+/- Embedded section BqCircularInvariant.lean. Its original imports are consolidated above. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
 set_option maxHeartbeats 2000000
@@ -1181,7 +1180,8 @@ set_option maxRecDepth 100000
 open Finset SimpleGraph
 namespace BqCircularLowerFamily
 /- Generic Sum-shore cover/bipartite/matrix count mechanics adapted from the
-exact authenticated BqSeedInvariant source. No old seed invariant is imported. -/
+BqSeedInvariant section embedded in BqLowerFamilyDirect.lean.
+No old seed invariant is imported. -/
 def seedA (q : ℕ) : Finset (Fin (2*(q-2)+1) ⊕ Fin (2*(q-2)+2)) := univ.image Sum.inl
 def seedB (q : ℕ) : Finset (Fin (2*(q-2)+1) ⊕ Fin (2*(q-2)+2)) := univ.image Sum.inr
 def seedMatrix (q : ℕ) : Finset (Fin (2*(q-2)+1) × Fin (2*(q-2)+2)) :=
@@ -1302,7 +1302,7 @@ theorem seed_good (q : ℕ) (hq : 5 ≤ q) :
 #print axioms seed_good
 end BqCircularLowerFamily
 
-/- OWN flattened component BqCircularFamily.lean. Import lines removed only. -/
+/- Embedded section BqCircularFamily.lean. Its original imports are consolidated above. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
 set_option maxHeartbeats 1000000
@@ -1310,7 +1310,7 @@ set_option maxRecDepth 20000
 open Finset SimpleGraph
 namespace BqCircularLowerFamily
 /- The original literal seed coordinate labels. Pattern credited to the
-older generic Sum-shore labeling proof; dimensions and labels changed here. -/
+BqLabel section embedded in BqLowerFamilyDirect.lean; dimensions and labels differ here. -/
 def seedLabel (q : ℕ) : (Fin (2*(q-2)+1) ⊕ Fin (2*(q-2)+2)) → ℕ
   | .inl i => i.val
   | .inr j => 2*(q-2)+1+j.val

@@ -1,4 +1,4 @@
-"""Built C1 instances with an actual sub-case violation (lane M3, own builder).
+"""Built C1 instances with an actual sub-case violation (C1 sub-case, own builder).
 
 Construction: U = C' (c vertices) + U - C' (t vertices, u1 the last, degree 5); W = A (c + 2) +
 W - A (t - 1, containing the port y). P2 = G[A u C'] and P1 = G[(U - C') u (W - A)] are random simple

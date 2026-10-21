@@ -1,7 +1,9 @@
 # quartic-subgraph investigation report
 
-> **Lead note (2026-10-04).** Written by the investigation itself. Review status:
-> - The two n = 12 graphs: checked by the lead (`../../LOG.md` Entry 23). pair_oracle and brute.py
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with C1-REVIEW-3-LOG.md, C1-REVIEW-2.md, C1-REVIEW.md, QUARTIC-REVIEW.md, C1-REVIEW-3.md, REVIEW.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
+> **Historical note (2026-10-04).** Written by the investigation itself. Review status:
+> - The two n = 12 graphs: checked in the historical record (`../../LOG.md` Entry 23). pair_oracle and brute.py
 >   return NOPAIR, and an independent SAT test finds no 4-regular subgraph. The census program's
 >   positive control (`gen585 12 31 6 3 4`) finds exactly these two graphs.
 > - The 3n - 4 column of the census is implied by S10 for n <= 13, which is reviewed separately.
@@ -19,7 +21,7 @@ and D = D_V = 6n - 2e. So e >= 3n - c means D <= 2c, and excess = e - (3n - 6) =
 
 ## 1. Bottom line
 
-- **(i) holds for every n <= 13, by exhaustive enumeration (rung b).** For n = 13 the e = 35 = 3n - 4
+- **(i) holds for every n <= 13, by exhaustive enumeration (computational evidence.** For n = 13 the e = 35 = 3n - 4
   run is complete (none of about 4.4e9 graphs lacks a 4-regular subgraph); e >= 36 follows by
   Lemma A of the evolve investigation (a direct e = 36..39 run was stopped after 48 of 100 slices, 0 found).
   This is consistent with the sms-census S10 result: a pair is a 4-regular subgraph, so S10 at n
@@ -30,7 +32,7 @@ and D = D_V = 6n - 2e. So e >= 3n - c means D <= 2c, and excess = e - (3n - 6) =
   **11: 0, 12: 2 (new), 13: 0**. The n <= 10 graphs are exactly the 17 known ones (isomorphism-checked).
   The two n = 12 graphs are new excess-1, min-degree-4 avoiders (no 4-regular subgraph, hence no
   pair). Both are (3,5)-tight: every proper vertex set U spans at most 3|U| - 5 edges.
-- **Theory (rung a):** an exact identity for Tutte's f-factor quantity (Lemma 2) gives:
+- **Theory (written-proof evidence:** an exact identity for Tutte's f-factor quantity (Lemma 2) gives:
   max degree <= 6 and e >= 3n - 1 force a spanning 4-regular subgraph (Corollary 3); and a
   minimal counterexample to (i) has a Tutte barrier of one of 58 explicit parameter types, all
   "near-bipartite": |S| - |T| in {1, 2, 3}, T almost independent and saturated, almost all edges
@@ -79,7 +81,7 @@ and D = D_V = 6n - 2e. So e >= 3n - c means D <= 2c, and excess = e - (3n - 6) =
     one, by networkx isomorphism, with the 17 graphs of `data/avoiders/k{7,8,9}_D6_m4_def10.json`
     (classes) and `lanes/evolve/data_n10_excess1_mindeg4.json`.
 
-## 3. Census (rung b)
+## 3. Census (computational evidence
 
 Graphs with min degree >= 4 and max degree <= 6, all isomorphism classes (connected or not).
 Each cell: total number of graphs / number with no 4-regular subgraph.
@@ -101,13 +103,13 @@ Each cell: total number of graphs / number with no 4-regular subgraph.
   e = 36..39 and found 0.
 - Per-slice logs: `out/slices_<tag>.log` (n = 12, 13) and `census.tsv` (n <= 11). Graphs without a
   4-regular subgraph: `out/q4free_n{n}_e{e}.g6` (n <= 11) and `out/found_<tag>.g6` (n >= 12).
-- **(i) holds for n <= 13** (rung b): n <= 12 by the 3n-4 to 3n columns; n = 13 by the 3n-4 column
+- **(i) holds for n <= 13** (computational evidence: n <= 12 by the 3n-4 to 3n columns; n = 13 by the 3n-4 column
   and Lemma A (evolve investigation), which reduces e > 3n - 4 to e = 3n - 4 for n >= 8. For n <= 6 (i) is
   vacuous or immediate (n = 6 needs e >= 14, and K6 minus an edge contains K5).
 - To reproduce one cell: `cd lanes/quartic-subgraph && ./geng_q4 -d4 -D6 12 31:31 > x.g6` (about
-  2.5 CPU-min) then `[temporary path] validate_sat.py --expect-unsat x.g6`.
+  2.5 CPU-min) then `python3 validate_sat.py --expect-unsat x.g6`.
 
-## 4. New extremal graphs at n = 12 (rung b)
+## 4. New extremal graphs at n = 12 (computational evidence
 
 Saved in `data_n12_excess1_no4reg.json` (graph6 and edge lists). Both have 12 vertices, 31 edges
 (3n - 5), max degree 6, min degree 4, no 4-regular subgraph (q4 search, SAT), and no pair
@@ -126,7 +128,7 @@ U with |U| >= 2 gives max e(U) - 3|U| = -5.
   of their edges into S = the other 8 vertices, with e(S) = 7 and delta(S,T) = -2. This is the
   Case-0 type of section 5 at D = 10. K2 ∨ C5 instead has S = the pentagon, T = one hub, and the
   other hub as a single odd component.
-- Validation: `[temporary path] validate_sat.py --expect-unsat
+- Validation: `python3 validate_sat.py --expect-unsat
   out/found_n12_e31_q4.g6` (exit 0).
 
 ## 5. Theory
@@ -137,7 +139,7 @@ P_c is the statement "max degree <= 6, n >= 2 and e >= 3n - c imply a 4-regular 
 (i) is P_4 (min degree >= 4 may be added or dropped: peeling a vertex of degree <= 3 keeps
 e - 3n >= -c, and a 3-degenerate graph has e <= 3n - 6).
 
-### Lemma 1 (Tutte's condition with f = deg - 4), rung (a)
+### Lemma 1 (Tutte's condition with f = deg - 4), written-proof evidence
 
 Let min degree >= 4 and f(v) = deg(v) - 4. A spanning 4-regular subgraph is the complement of an
 f-factor. Tutte's f-factor theorem ([review fix] Tutte, Canad. J. Math. 6 (1954), Theorem C; Tutte
@@ -157,7 +159,7 @@ the parity is Tutte 1952 Theorem I); the formula as used was checked numerically
 degrees in [4,6]) and its verdict (min delta >= 0) matched a SAT test for a spanning 4-regular
 subgraph on 40 of 40.
 
-### Lemma 2 (budget identity), rung (a)
+### Lemma 2 (budget identity), written-proof evidence
 
 With s = |S|, t = |T|, R = V - S - T and its components C:
 
@@ -178,7 +180,7 @@ single vertex x with a = e(x,S): w = 12 - a - 3[a odd] >= 4. The identity was ch
 
 Also from (**): a barrier has 4(s - t) >= 2e(S) + e(S,R) - q + 2 >= 2, so **|S| > |T| always**.
 
-### Corollary 3, rung (a)
+### Corollary 3, written-proof evidence
 
 **Max degree <= 6 and e >= 3n - 1 imply a spanning 4-regular subgraph.** Here D <= 2, so every
 degree is >= 4 and 3·delta >= -2D >= -4; delta is even, so delta >= 0 for all (S,T).
@@ -193,7 +195,7 @@ except si, plus the edge s1s2 (n = 13, e = 37 = 3n - 2). A spanning 4-regular H 
 4|S| - 4|T| = 2e_H(S) <= 2, impossible. It still has a 4-regular subgraph: K5,5 minus the perfect
 matching {ti si}, on {t1..t5} ∪ {s1..s5}.
 
-### Lemma 4 (minimal counterexample), rung (a)
+### Lemma 4 (minimal counterexample), written-proof evidence
 
 Let c <= 4 and let G be a counterexample to P_c with n minimal, then e minimal. Then n >= 7,
 min degree >= 4, e = 3n - c (so D = 2c), and **every proper U with |U| >= 2 has
@@ -202,7 +204,7 @@ subgraph and is smaller). In particular, for any barrier (S, T) ([review fix]: n
 every component C with |C| >= 2 of G - S - T has
 D_C + e(C,S) + e(C,T) >= 2c + 2, so w(C) >= 2c - 1 (odd) or >= 2c + 2 (even).
 
-### Theorem 5 (barrier types of a minimal counterexample), rung (a)
+### Theorem 5 (barrier types of a minimal counterexample), written-proof evidence
 
 A minimal counterexample to P_c has no spanning 4-regular subgraph, so it has a barrier with
 delta in {-2, -4}, and by Lemma 2: 2e(S) + 4e(T) + 4D_T + sum_C w(C) = 3·delta + 4c <= 4c - 6.
@@ -233,7 +235,7 @@ To finish (i) one must show that each of the 58 near-bipartite configurations, u
 sparsity of Lemma 4, contains a 4-regular subgraph. Section 5.1 does this for c = 2 up to one
 bipartite statement.
 
-### 5.1 The case c = 2 (e >= 3n - 2) reduced to bipartite statements, rung (a) with one gap
+### 5.1 The case c = 2 (e >= 3n - 2) reduced to bipartite statements, written-proof evidence with one gap
 
 By Theorem 5, P_2 follows from **Lemma C0**: every bipartite graph with sides X, Y, |Y| = |X| + 1,
 every X-vertex of degree 6 and max degree <= 6, has a 4-regular subgraph. Define the classes
@@ -266,7 +268,7 @@ and E_4(m) reduce to sizes < m):
 
 So **P_2 holds if C1 holds**, and C1 is open only in that sub-case.
 
-**Bipartite census (rung b), computational support.** `geng_q4 -b -d4 -D6 n 3n-12:3n` lists every
+**Bipartite census (computational evidence, computational support.** `geng_q4 -b -d4 -D6 n 3n-12:3n` lists every
 bipartite graph with min degree >= 4, max degree <= 6 and no 4-regular subgraph in that edge
 window. Counts by e: n <= 10 none; n = 11: e = 24 (2), 25 (1); n = 12: 25 (2), 26 (2);
 n = 13: 28 (28), 29 (50), 30 (37), 31 (9); n = 14: 30 (94), 31 (108), 32 (77), 33 (11). So for
@@ -284,7 +286,7 @@ K5,5-minus-matching example of Corollary 3. Also, Chevalley-Warning in the Alon-
 style needs more edges than sum of degrees of the mod-4 polynomials (3n over F_2), so it needs
 e > 3n and cannot apply at max degree 6.
 
-## 6. Where the excess-1 graphs come from (rung b)
+## 6. Where the excess-1 graphs come from (computational evidence
 
 Barrier types of the extremal (D = 10) graphs, computed by brute force over all (S,T) for
 n <= 9 and by the structured probe below for n = 10, 12. Notation (delta, |S|-|T|, e(S), e(T), D_T).
@@ -336,7 +338,7 @@ Open:
    is empty at t = 5 (n = 14), but other barrier types at D = 10 were not probed beyond n = 13.
 4. The census does not cover n = 14 (estimated over 50 CPU-hours with this method).
 
-## 8. Single most promising next step
+## 8. Unperformed extension
 
 Use Theorem 5 to drive an exact search. A minimal counterexample to (i) at order n realizes one of
 the 58 barrier types: |T| saturated hubs sending all but at most 5 of their 6|T| edge-ends into S,
@@ -367,15 +369,15 @@ the C1 sub-case of section 5.1 would prove e >= 3n - 2 outright.
 ## 10. Independent checks to run, and review flag
 
 - Every graph claimed to have no 4-regular subgraph:
-  `cd lanes/quartic-subgraph && [temporary path] validate_sat.py --expect-unsat out/excess1_all17.g6 out/found_n12_e31_q4.g6`
+  `cd lanes/quartic-subgraph && python3 validate_sat.py --expect-unsat out/excess1_all17.g6 out/found_n12_e31_q4.g6`
   (exit 0). Pair check of the new graphs: `tools/pair_oracle.decide` gave NOPAIR for both.
 - Census controls: `./crosscheck.sh "-d4 -D6 11 26:33"` (plain geng plus filter versus PRUNE geng).
-- Lemma 2 numerics: `[temporary path] identity_check.py 40 7`.
+- Lemma 2 numerics: `python3 identity_check.py 40 7`.
 - Note: our census counts graphs with no 4-regular subgraph. An excess-1 graph can avoid pairs
   while containing a 4-regular subgraph, so "0 at n = 11" is not a statement about all
   excess-1 avoiders.
 
-**Review flag: independent review needed** for Lemma 2, Corollary 3 and Theorem 5 (rung a, numerically
+**Review flag: independent review needed** for Lemma 2, Corollary 3 and Theorem 5 (written-proof evidence, numerically
 checked here but not read by a second party), for the reductions in section 5.1, and for the
 two new n = 12 graphs (validated three ways). The census numbers are reproducible with the
 commands above.

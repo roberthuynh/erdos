@@ -1,4 +1,4 @@
-"""Referee checks of Identities 1.1-1.3, Lemma 1.4 (slack formula and min-cut = maxflow), Lemma 1.5
+"""Independent checks of Identities 1.1-1.3, Lemma 1.4 (slack formula and min-cut = maxflow), Lemma 1.5
 (piece deficiencies), Lemma 3.1 (g(Q), kappa(Q)), basic counts, the (j, d) arithmetic of Lemma 2.1,
 and the localized Lemma 3.2 implication. Usage: rc_ident.py SEED NINST"""
 import sys, json, random, time

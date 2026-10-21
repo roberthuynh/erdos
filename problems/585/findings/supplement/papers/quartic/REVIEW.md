@@ -1,6 +1,10 @@
-# Referee report on findings/supplement/papers/quartic/PAPER.md (investigation M1-R)
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
 
-Referee: investigation M1-R, October 5, 2026. Independent of the author investigation M1. Every step was re-derived by
+# AI review report on findings/supplement/papers/quartic/PAPER.md (investigation M1-R)
+
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
+AI review: investigation M1-R, October 5, 2026. Independent of the author investigation M1. Every step was re-derived by
 hand before any code was run; all code is my own (`review/`, no imports from `checks/`).
 M1-LOG.md and `checks/` were read only after every verdict below was formed.
 
@@ -11,7 +15,7 @@ Paper SHA-256 at start: `cfce4fcc7d40732c2f2a6c23b9d5fe50823c37f9d37f940b7857d8e
 
 No mathematical error found. Every lemma, proposition and theorem in §0.1-§3 is correct as stated,
 with the proofs given. The remarks in §4 are correct, including the paper's own correction of the
-C1 sub-case count (3n − 2 − ε, false as briefed when ε = 1). One required fix concerns the census
+C1 sub-case count (3n − 2 − ε, false as originally stated when ε = 1). One required fix concerns the census
 provenance text in §3 and §5, which is out of date; it does not change any statement.
 
 | Section | Verdict |
@@ -195,7 +199,7 @@ N2 ≥ 13 (3 · 13 + 5 = 44 > 41).
   no edges between them, so k petals give k − 3; cluster formula 21 − 3 ov − 3(#clusters) = 3 − 3β1 and
   cluster degree 7|K| − 6 ov_K; petal minus shared vertices has e − 3n = −4. All correct; the remark
   correctly stops at the lifting step.
-- §4.4: P2 + β has 2|C'| + 3 vertices and 6|C'| − ε + 7 = 3n − 2 − ε edges, so the briefed "3n − 2"
+- §4.4: P2 + β has 2|C'| + 3 vertices and 6|C'| − ε + 7 = 3n − 2 − ε edges, so the originally stated "3n − 2"
   is false when ε = 1. The ε = 1 branch is nonempty (I built 12 such instances myself; d0 = 5 is forced
   and consistent). The 8-edge cut and the modified trace identity x − x' = 4(...) are right.
   P1 + α_τ ∈ E4 is right (deficiencies 2 + 2 and 8 − 4). FLAW.md is accurate.
@@ -216,7 +220,7 @@ scripts.
 
 ## What I recomputed, and how
 
-All runs: `[temporary path]` under `timeout 240`, own code in `review/`
+All runs: `python3` under `timeout 240`, own code in `review/`
 (a from-scratch pysat CaDiCaL 1.5.3 encoding of "nonempty, every degree in {0,4}", with optional free
 vertices for "realizes τ"; every witness re-checked; flows by networkx; exact negative-cut enumeration by
 fixing C ⊆ I and branching on A with Φ = 4|C| + Σ_{a∈A}(e(a, I − C) − 4)). nauty genbg/geng 2.9.3 were

@@ -1,4 +1,4 @@
-"""flaw_own.py (referee's own check of FLAW.md F1 / randfail.txt, PAPER 6.2 remark).
+"""flaw_own.py (independent check of FLAW.md F1 / randfail.txt, PAPER 6.2 remark).
 Reads randfail.txt (graph6, P, F, T, Z_random, U_new, Z_shortest). Checks:
   instance: bipartite with classes P, Q, |P| = |Q|, Delta <= 6, e = 3n - 4, D(P) = D(Q) = 4;
   sparsity by max-closure flows: for every edge uv and every vertex w outside {u, v},

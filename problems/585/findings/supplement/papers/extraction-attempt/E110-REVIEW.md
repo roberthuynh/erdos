@@ -1,5 +1,7 @@
 # Independent review of E110
 
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
 Date: 2026-10-04. Final disposition: **accept the packet as a correct failure analysis with finite controls. E110 is unproved and unrefuted.** The registered mechanism is closed after its single repair. No E110 statement is recommended for promotion as a proved result.
 
 Reviewed final `main-extraction/PAPER.md` SHA256:
@@ -46,8 +48,8 @@ These checks did not search for avoidance or run Lean or `check.sh`. H102's avoi
 
 ## Synthesis and BM scope
 
-Within the assigned E110/BM scope, the current `unpublished historical research note` uses the inputs and terminal outcome correctly. The balanced near-regular extension is already supplied by reviewed local Lemma F; reproving it would not pay E110. For E110's fixed `gamma_0` and `k>=16/gamma_0^2`, F yields a factor degree at least `k/2` and BJ expansion parameter at least `gamma_0/4`. Thus a sufficiently large absolute A can pay BM-2's degree and expansion constants, with `log h<=log(2N)`. The subsequent `O(n(log n)^4)` ledger remains conditional on E110 and the stated local BM/CJMM inputs.
+Within the E110/BM scope of this review, the current `unpublished historical research note` uses the inputs and terminal outcome correctly. The balanced near-regular extension is already supplied by reviewed local Lemma F; reproving it would not pay E110. For E110's fixed `gamma_0` and `k>=16/gamma_0^2`, F yields a factor degree at least `k/2` and BJ expansion parameter at least `gamma_0/4`. Thus a sufficiently large absolute A can pay BM-2's degree and expansion constants, with `log h<=log(2N)`. The subsequent `O(n(log n)^4)` ledger remains conditional on E110 and the stated local BM/CJMM inputs.
 
-BM is a reviewed local paper argument, not a kernel-checked result in this pass. Its growing `log^3` degree threshold gives no degree-six statement. A full Hamilton decomposition of a suitable host would imply a pair, while a pair only gives a Hamilton-decomposable quartic subgraph on its own support; the reverse host-level implication is absent. The exact published-source qualifications are recorded in the orientation review (not included). This review does not certify other lanes of the final synthesis.
+BM is a reviewed local paper argument, not a kernel-checked result in this pass. Its growing `log^3` degree threshold gives no degree-six statement. A full Hamilton decomposition of a suitable host would imply a pair, while a pair only gives a Hamilton-decomposable quartic subgraph on its own support; the reverse host-level implication is absent. The exact published-source qualifications are recorded in the orientation review (not included). This review does not certify other mathematical components.
 
 This AI review used no new mathematical route or Lean/oracle command.

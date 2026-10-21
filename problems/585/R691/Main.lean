@@ -22,7 +22,7 @@ def sA (q : ℕ) (G : SimpleGraph V) (A B S : Finset V) : ℤ :=
 def sB (q : ℕ) (G : SimpleGraph V) (A B S : Finset V) : ℤ :=
   deficiency (2 * (q : ℤ) - 2) G A (B ∩ S)
 
-/-- Only literal original graph hypotheses used by the accepted prefix. -/
+/-- Only literal original graph hypotheses used by the preceding argument. -/
 structure Host (q : ℕ) (L : ℤ) (G : SimpleGraph V) (A B : Finset V) : Prop where
   large : 16384 ≤ q
   loss : 0 ≤ L ∧ L ≤ 14

@@ -1,4 +1,6 @@
-# Independent review of root's radius-one proof
+# Independent review of the radius-one proof
+
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
 
 October 4, 2026. Accept the mathematical R1 statement and proof
 unchanged. No gap or correction was found. This review was completed

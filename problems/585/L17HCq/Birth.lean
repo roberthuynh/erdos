@@ -7,8 +7,8 @@ open Finset SimpleGraph BqLowerFamily
 namespace Erdos585.L17HCq
 variable {V : Type*} [DecidableEq V] [Fintype V]
 variable (q c : ℕ) (G : SimpleGraph V) [DecidableRel G.Adj] (N : Finset V)
-/- The following physical extension proof is adapted from the authenticated paid
-   Direct source, replacing only its fixed deficit by the exact parameter c. -/
+/- This physical extension proof uses the construction in BqLowerFamilyDirect.lean,
+   replacing its fixed deficit by the parameter c. -/
 structure Good (A B : Finset V) : Prop where
   disjoint : Disjoint A B
   cover : A ∪ B = univ

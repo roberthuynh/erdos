@@ -1,4 +1,4 @@
-/* rvpairtest.c -- stdin harness for the reviewer's pair tests.
+/* rvpairtest.c -- stdin harness for the independent pair tests.
  * Usage: rvpairtest [v1|v2|v3] [g6|el] [sparse SP SPMIN] [toel]
  *   input  : "n m u1 v1 ... um vm" lines (el, default) or graph6 lines (g6)
  *   output : "1"/"0" per graph (has a pair); with sparse: second column, 1 iff every proper S with

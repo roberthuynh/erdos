@@ -1,5 +1,5 @@
 """Assert Proposition 5.1 (a)-(d) of PAPER2.md on every relevant non-generic group of the given instances.
-Usage: prop51_check.py FILE.g6 ...  (lane qb5, round 2)."""
+Usage: prop51_check.py FILE.g6 ...  (computational checks)."""
 import sys
 from itertools import combinations
 from g6 import decode

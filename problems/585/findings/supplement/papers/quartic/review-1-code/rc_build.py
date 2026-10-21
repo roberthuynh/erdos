@@ -1,4 +1,4 @@
-"""Referee's own builder of C1 instances carrying a sub-case violation (written without reading
+"""Independent builder of C1 instances carrying a sub-case violation (written without reading
 c1checks/). Pieces: P2 on C (size c) and A (size c+2), P1 on U-C (size t, contains u1) and W-A (size t-1,
 contains the port y), T = 7 edges between A and U-C, and eps in {0,1} edges f between C and W-A.
 Constraints chosen so that the obvious non-sparse sets are avoided: s(a) <= 3, r(x) + def(x) <= 3,

@@ -1,4 +1,4 @@
-"""Referee 2: Lemma 4.4 (minimality-free core) and Lemma 4.2 (lattice) on built instances.
+"""Second independent implementation: Lemma 4.4 (minimality-free core) and Lemma 4.2 (lattice) on built instances.
 
 For each instance from r2_build.build (or random C0/C1 instances with --random):
   - exact min g over proper sets with >= 2 vertices (r2sub ming); sparse iff min g >= 10;

@@ -143,7 +143,7 @@
         {
           "path": "coefficient-one-design",
           "plan": "scripts/coefficient-one-design-phases.json",
-          "profile": "erdos643-full-design-v2"
+          "profile": "erdos643-full-design-v3"
         }
       ],
       "title": "Generalized four-cycles in 3-uniform hypergraphs",

@@ -2,7 +2,7 @@ import Mathlib.Combinatorics.Configuration
 import Mathlib.Tactic
 
 /-!
-Actual projective-incidence ingredients of COUNT-BASED-COMPLETION-PROOF-v2.md §6.
+Actual projective-incidence ingredients of COUNT-BASED-COMPLETION.md §6.
 `cross_pairs_le_missing` constructs an injection from actual cross pairs of
 points on two pencil lines into the actual missing-line set.
 `three_pencil_dominant` proves at most six outliers on an actual dominant

@@ -2,7 +2,7 @@
 # Pair-free bipartite graphs with parts (t, r) and e edges, for the s <= 1 set sizes of Lemma 3.1 inside a side B.
 cd "$(dirname "$0")"
 G="$HOME/.cache/erdos585/nauty2_9_3/genbg"
-PC="../../../585-fable/tools/pairc"
+PC="${PAIRC:-pairc}"
 : > census_side.out
 run() { t=$1; r=$2; e=$3
   f="cs_${t}_${r}_e${e}"

@@ -9,20 +9,20 @@
 # P ~ 2.1 s, W ~ 660 s.
 # Expected output: 0 graphs. Any graph found is a 4-regular-free bipartite graph with δ ≥ 4,
 # Δ ≤ 6 and e = 3n − 6 or 3n − 5 at n = 18: sum_shards.sh re-decides it with
-# validate_sat.py --expect-unsat. Report it to the lead at once.
-# Launch:  bash [local path]
+# validate_sat.py --expect-unsat. A surviving graph invalidates the proposed exclusion until independently resolved.
+# Historical launch path was not retained; configure the dependencies described in REPRODUCTION-BOUNDARY.md.
 #          (detaches itself: nohup nice -n 15, at most 12 shards at a time; driver log in
 #          census/logs/f1_n18/driver.log, shard i writes logs/f1_n18/shard_i.g6 and shard_i.err)
-# Status:  bash [local path] f1_n18 24
+# Historical launch path was not retained; configure the dependencies described in REPRODUCTION-BOUNDARY.md.
 # Stop:    pkill -f 'run_f1_n18.sh'; then pkill -f 'genbg_q4 -X-2 -d4:4 -D6:6 9 9 48:49 '
 # Restart: run the launch line again; shards whose .err already has a ">Z" line are skipped.
 set -u
 TAG=f1_n18
 MOD=24
 MAXJ=12
-BIN=[local path]
+BIN="${ERDOS585_CENSUS_QUARTIC_PROGRAMS_RUN_F1_N18_SH_BIN:?Set ERDOS585_CENSUS_QUARTIC_PROGRAMS_RUN_F1_N18_SH_BIN to the original BIN dependency; see REPRODUCTION-BOUNDARY.md}"
 ARGS=(-X-2 -d4:4 -D6:6 9 9 48:49)
-C=[local path]
+C="${ERDOS585_CENSUS_QUARTIC_PROGRAMS_RUN_F1_N18_SH_C:?Set ERDOS585_CENSUS_QUARTIC_PROGRAMS_RUN_F1_N18_SH_C to the original C dependency; see REPRODUCTION-BOUNDARY.md}"
 L="$C/logs/$TAG"
 SELF="$C/run_$TAG.sh"
 mkdir -p "$L"

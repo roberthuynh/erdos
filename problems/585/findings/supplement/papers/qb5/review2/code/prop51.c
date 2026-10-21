@@ -1,4 +1,4 @@
-/* prop51.c -- referee's own check of PAPER2 Proposition 5.1, exhaustive part (blocks <= 16).
+/* prop51.c -- independent check of PAPER2 Proposition 5.1, exhaustive part (blocks <= 16).
  *
  * Input: graph6 lines of 2-block graphs X from `genbg -q -d6:0 -D6:6 c c+2 6c:6c`:
  * vertices 0..c-1 = C (degree 6, all neighbours in A), c..2c+1 = A.

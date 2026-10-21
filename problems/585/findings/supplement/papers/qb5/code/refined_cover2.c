@@ -1,4 +1,4 @@
-/* refined_cover2.c (lane qb5, round 3; NOTES.md section 7.4): second, independent program for the
+/* refined_cover2.c (QB(5), version 3; NOTES.md section 7.4): second, independent program for the
  * refined covering lemma.  No code shared with refined_cover.py, no nauty.
  *
  * Enumeration: for every pair of degree sequences (r_1 >= ... >= r_a), (s_1 >= ... >= s_b) of 7 with parts

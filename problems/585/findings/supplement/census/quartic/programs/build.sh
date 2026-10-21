@@ -1,9 +1,9 @@
 #!/bin/bash
 # Build the PRUNE geng (geng_q4) and the filter from the sms-census nauty tree (read-only).
 set -euo pipefail
-N="[local path]"
+N="${ERDOS585_CENSUS_QUARTIC_PROGRAMS_BUILD_SH_N:?Set ERDOS585_CENSUS_QUARTIC_PROGRAMS_BUILD_SH_N to the original N dependency; see REPRODUCTION-BOUNDARY.md}"
 D="$(cd "$(dirname "$0")" && pwd)"
-B="[local scratch folder]"
+B="${ERDOS585_SCRATCH_DIR:?Set ERDOS585_SCRATCH_DIR to a writable scratch directory}"
 mkdir -p "$B"; cd "$B"
 W1=(-DMAXN=WORDSIZE -DWORDSIZE=32)
 for f in gtools nauty nautil naugraph; do cc -O3 "${W1[@]}" -I"$N" -c "$N/$f.c" -o "${f}W1.o"; done

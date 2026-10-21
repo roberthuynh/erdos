@@ -1,5 +1,5 @@
 #!/bin/bash
-# pipecheck.sh -- validate the method B pipeline on a small class (wave8/exb).
+# pipecheck.sh -- validate the method B pipeline on a small class (census/edge/method-b).
 # Usage: pipecheck.sh TAG "GENG-ARGS" [REFERENCE.g6]
 #   A = geng_h4 GENG-ARGS                  (pruned by the own decider)
 #   B = geng_plain GENG-ARGS | h4filt      (whole class, own decider on each graph)

@@ -1,14 +1,16 @@
 # QB(5), round 4: KL1 holds for every 2-block, hence QB(5)
 
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with REVIEW4.md, REVIEW3.md, REVIEW.md, REVIEW2.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
 AI-written historical note, October 5, 2026. Status: frozen for independent review (SHA-256 in
-`FROZEN4.sha256`). Not reviewed. This is rung 1 of the round-4 ladder: a proof of the Key Lemma KL1 of
-PAPER3, which by the refereed reduction of PAPER3 (REVIEW3: "KL1 implies QB(5) is a complete reduction")
-proves QB(5). No Lean, no `check.sh`, so nothing here is a project-oracle PASS. Rungs: (a) for Theorem 3.1
-(KL1) and its lemmas; (a) with a computed finite lemma (PAPER3 Lemma 4.1: two author programs and the referee's own program, with two enumerations)
+the omitted historical receipt `FROZEN4.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json)). Not reviewed. Historical scope: a proof of the Key Lemma KL1 of
+PAPER3, which by the AI-reviewed reduction of PAPER3 (REVIEW3: "KL1 implies QB(5) is a complete reduction")
+proves QB(5). No Lean, no `check.sh`, so nothing here is a project-oracle PASS. Evidence categories: (a) for Theorem 3.1
+(KL1) and its lemmas; (a) with a computed finite lemma (PAPER3 Lemma 4.1: two author programs and the independent checking program, with two enumerations)
 for Theorem 4.1 (QB(5)); (b) for the checks of §5.
 
-PAPER.md, PAPER2.md and PAPER3.md (frozen: `FROZEN.sha256`, `FROZEN2.sha256`, `FROZEN3.sha256`) are cited by
-section and number. Their referee reports REVIEW.md, REVIEW2.md and REVIEW3.md are FINAL with no mathematical
+PAPER.md, PAPER2.md and PAPER3.md (frozen: the omitted historical receipt `FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json), the omitted historical receipt `FROZEN2.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json), the omitted historical receipt `FROZEN3.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json)) are cited by
+section and number. Their AI review reports REVIEW.md, REVIEW2.md and REVIEW3.md are FINAL with no mathematical
 error; the fixes they require are in force (§1.1).
 
 ## 0. Results at a glance
@@ -26,7 +28,7 @@ QB(5): every finite simple bipartite graph with maximum degree at most 6, n ≥ 
 | **Theorem 4.1** | **QB(5)** | **proved, with PAPER3 Lemma 4.1 (computed)** | §4 |
 | §5 | every lemma of §3 checked on 1,753 blocks and all 165,610 multisets m; the proof's structure predicted exactly on the 9,612 multisets that miss an in-degree-3 vertex | computed | §5 |
 
-**Where a referee should attack first.**
+**Sensitive steps and hypotheses.**
 1. Lemma 3.3: the identity (3.1), the bound at a shared vertex, and the equality case m(v) = 3.
 2. Lemma 3.4(c): a big member meeting the hub in a single vertex.
 3. Lemma 3.5(a): that two big members meet in exactly K⁺ as subsets of X.
@@ -259,7 +261,7 @@ cases) and the pair petals {y, y'} (case (β)); Lemmas 3.2 to 3.5 do not use it,
 w(u) ≤ 3 − m(u) ≤ 2 anyway. Without it the conclusion fails (PAPER3 §6.1); §5 shows that every failure then
 has exactly the shape where the proof uses it.
 
-Theorem 3.1 supersedes PAPER3 Propositions 5.2 and 5.3 and the referee observation of REVIEW3 §6 (s = 3).
+Theorem 3.1 supersedes PAPER3 Propositions 5.2 and 5.3 and the AI review observation of REVIEW3 §6 (s = 3).
 
 ## 4. QB(5)
 
@@ -276,7 +278,7 @@ covering Lemma 4.1, computed) then gives p ∈ A, q ∈ D with a 4-factor in G �
 What the proof rests on: PAPER.md (Theorems 5.1, 6.1, 7.1; REVIEW.md FINAL), PAPER2 Theorem 2.2 and
 Corollary 2.3 (REVIEW2.md FINAL), PAPER3 Theorems 2.1, 4.2 and Lemma 3.4 (REVIEW3.md FINAL), the finite Lemma
 4.1 of PAPER3 (checked by `code/refined_cover.py`, `code/refined_cover2.c` and by REVIEW3's own program
-(`review3/code/lemma41.c`, two enumerations: 142 classes and 22,792 matrices), 0 failures), and Theorem 3.1 here (not yet refereed).
+(`review3/code/lemma41.c`, two enumerations: 142 classes and 22,792 matrices), 0 failures), and Theorem 3.1 here (not yet AI-reviewed).
 
 ## 5. Computations
 

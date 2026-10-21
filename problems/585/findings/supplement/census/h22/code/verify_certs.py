@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""wave4/h22b: independent re-check of hdq output (own graph6 parser, no code shared with hdq.c).
+"""census/h22: independent re-check of hdq output (own graph6 parser, no code shared with hdq.c).
 
 Line types checked:
   <g6> H <hexmask> <sw>              the graph is 4-regular, connected, bipartite with equal sides,

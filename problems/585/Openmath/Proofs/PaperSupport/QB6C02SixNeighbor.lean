@@ -3,7 +3,7 @@ import Mathlib.Data.Finset.Card
 import Mathlib.Tactic
 
 /-! Actual six-neighbor linear-family positive trace weight.
-Credit the written no-theta3 count and ordinary disjoint-fibre double counting.
+The proof uses a no-theta3 count and disjoint-fibre double counting.
 No chosen favorable family, rank supplier or bounded ambient type is assumed.
 -/
 set_option autoImplicit false

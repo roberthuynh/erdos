@@ -1,7 +1,7 @@
 /* rvsave.c -- second pass: geng with rvprune, plus a final-level filter that keeps only graphs G
  * admitting at least one extension neighbourhood (t = EF - e(G) in [MINDF, 6], #deg(t-1) <= t,
  * #deg in [t,5] >= t - #deg(t-1)); every kept G is written as graph6. Used to compare with the
- * lane's level-12 set of the n = 13 tree. */
+ * original level-12 set of the n = 13 tree. */
 #include "rvprune.c"
 static long long sv_dprej = 0, sv_out = 0;
 static int sv_EF = 35, sv_MINDF = 4, sv_ready = 0;

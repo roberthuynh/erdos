@@ -1,8 +1,8 @@
 # L5B: a second, independent method for census L5
 
-Lane: L5B, October 5, 2026. Log: `LOG.md`. Resume notes: `RESUME.md`. Code: `code/`. Data:
+Investigation: L5B, October 5, 2026. Log: `LOG.md`. Resume notes: `RESUME.md` (original historical note not bundled). Code: `code/`. Data:
 `data/census/` (17 MB, one certificate line per graph), `data/superset/`, `data/validation/`.
-No `check.sh`, no Lean. Rung (b).
+No `check.sh`, no Lean. computational evidence.
 
 ## Verdict
 
@@ -12,7 +12,7 @@ explicit certificate, and separate code re-checked every one of them. The decide
 UNSAT, so there were no exceptions to re-decide.
 
 Converted to genbg's color-preserving classes, the counts equal the original's at every side split,
-1,471,650 in all (SCOUT §2.4; the referee checked the same sum). L5 now has two independent methods
+1,471,650 in all (SCOUT §2.4; the AI review checked the same sum). L5 now has two independent methods
 at every order through 17, not just through 6+7.
 
 ## Statement checked
@@ -29,15 +29,15 @@ is bipartite, pair-free, δ ≥ 4, Δ ≤ 6, e(K) = 3|K| − 5). Proposition 5 f
   7+7, 8+8, 4+5, 5+6, 6+7, 7+8 and 8+9 (8+9 in 12 shards). genbg generates bicoloured graphs up to
   color-preserving isomorphism. So for a = b, a graph is listed twice unless it has an automorphism
   that exchanges the sides.
-- **Decider:** `pairc f` (585-fable/tools/pairc.c). It tries every vertex subset S with min degree
+- **Decider:** `pairc f` (census/programs/pairc.c). It tries every vertex subset S with min degree
   ≥ 4 in G[S], enumerates every Hamilton cycle C1 of G[S] through min S by DFS, then runs a DFS for a
   Hamilton cycle of G[S] − E(C1).
-- **Referee** (findings/supplement/papers/pairs/REVIEW.md §3): own generator and own cycle-grouping tester, through 6+7
+- **AI review** (findings/supplement/papers/pairs/REVIEW.md §3): own generator and own cycle-grouping tester, through 6+7
   only.
 
 ## This method
 
-Nothing below calls or copies pairc, ptool, mpair or the referee's genbip, rpair or hd. All code is in
+Nothing below calls or copies pairc, ptool, mpair or the AI review's genbip, rpair or hd. All code is in
 `code/`.
 
 1. **Generator: nauty `geng -b`, not genbg.** geng builds all graphs on n vertices one vertex at a
@@ -101,7 +101,7 @@ Nothing below calls or copies pairc, ptool, mpair or the referee's genbip, rpair
 ## Commands
 
 ```
-cd [local path]
+cd <EXTRACTED_DIRECTORY_FOR_THIS_REPORT>
 JOBS=6 nohup nice -n 10 bash code/run_census.sh all > logs/driver.out 2>&1 < /dev/null &
 #   each shard ("bash code/run_census.sh one n mod r"):
 #   geng -b -d4 -D6 n 3n-5:3n-5 [r/mod] | python code/l5b_sat.py --solver m22 --summary B.sat.json | gzip -9 > B.out.gz
@@ -179,7 +179,7 @@ only by the count match with genbg.
 
 The brute force (`validate.py`) enumerates every cycle once and looks for two edge-disjoint cycles
 with the same vertex set. It is written here and shares no code with the census path. Its method
-resembles the referee's rpair (cycle grouping), but the code is independent.
+resembles the AI review's rpair (cycle grouping), but the code is independent.
 
 No UNSAT answer occurred in the census. So the verdict rests on the certificates and on the
 generator's completeness. It does not rest on the encoding or the solver.
@@ -222,5 +222,5 @@ generator's completeness. It does not rest on the encoding or the solver.
     n = 17 (see above).
 - **The SAT solver would matter only for UNSAT answers, and there were none.** If the solver erred
   toward "pair", the certificate re-check would catch it; none failed.
-- The census path shares no code with pairc, ptool, mpair or the referee's tools. The test inputs
+- The census path shares no code with pairc, ptool, mpair or the AI review's tools. The test inputs
   t1_Z.g6 and the frontier cores are the author's data, used as test cases only.

@@ -5,8 +5,8 @@ import Openmath.Proofs.PaperSupport.QB6C02One4
 
 /-! Conditional universal QB6 adapter. Exactly the literal minimum-five C02
 producer remains an input. C3S/E6 and the original-degree-four C02 case are
-closed actual graph producers. A clean conditional check does not remove
-this last premise or claim unconditional QB6. -/
+proved graph producers. This module retains the minimum-five premise;
+QB6Unconditional.lean supplies that premise in the unconditional result. -/
 open Finset
 open Erdos585.QB4 Erdos585.QB5 Erdos585.QB6Assembly
 open Erdos585.QB6C02Five4 Erdos585.QB6C02One4
@@ -41,7 +41,7 @@ theorem c02_repair_from_minfive (repairMin5 : LiteralMinFiveC02Repair.{u}) :
       omega
     exact repairMin5 G A C h hfive
 
-/-- Actual arbitrary finite support version, with only the minimum-five producer unpaid. -/
+/-- Actual arbitrary finite support version, with the minimum-five producer assumed. -/
 theorem quartic_from_minfive (repairMin5 : LiteralMinFiveC02Repair.{u})
     {V : Type u} [DecidableEq V] {G : SimpleGraph V} [DecidableRel G.Adj]
     {X Y : Finset V} (hd : Disjoint X Y)

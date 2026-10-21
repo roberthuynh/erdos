@@ -321,7 +321,7 @@ lemma minimum_strict_floor (host : Host 3 q G A B) {P Q : Finset V}
       by have hh := piece.2.2.2.1; omega,by omega⟩
   have hm := minimal (S∩A) (S∩B) p
   omega
-/-- The requested actual original Q0 package, with all floors derived internally. -/
+/-- The actual original Q0 package, with all floors derived internally. -/
 structure Q0 (q : ℕ) (G : SimpleGraph V) (A B P Q : Finset V) : Prop where
   left_subset : P ⊆ A
   right_subset : Q ⊆ B

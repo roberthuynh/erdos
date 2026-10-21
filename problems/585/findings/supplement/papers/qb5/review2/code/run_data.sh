@@ -1,5 +1,5 @@
 #!/bin/bash
-# referee data runs (background); each writes its own .out as it goes
+# Independent data checks (background); each writes its own .out as it goes
 cd "$(dirname "$0")"
 PY=/usr/bin/python3
 timeout 900 "$PY" data_check.py core28.g6 dc_core28.out allpairs crit_first=24 &

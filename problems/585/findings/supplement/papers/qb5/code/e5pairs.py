@@ -1,4 +1,4 @@
-"""E5 pair analysis (lane qb5, round 2).
+"""E5 pair analysis (computational checks).
 
 For a sparse E5 graph G without a 4-factor: find the block pair X = A u C, Y = B u D and the 7 cut
 edges from a minimum cut, then for every pair (p, q) decide whether G - p - q has a 4-factor, and

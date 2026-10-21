@@ -6,17 +6,15 @@ job; 5,151 core-s of user CPU; the driver exited after running the collector (`d
 check ran, 3 two-process pipelines in the whole-class phase).
 
 Launched 2026-10-06 10:18:16 EDT. One driver, detached with `nohup`, `nice -n 10`. Workers: 4
-before 11:00 EDT, 6 from 11:00 (the machine is shared with a census job until about 11:00);
+before 11:00 EDT, 6 from 11:00 (historical concurrency setting);
 `data/WORKERS` (a number) overrides. Each shard runs under `timeout 3000`. When the queue is done
 (or after STOP), the driver runs `code/collect.py`, which writes `data/COLLECT.md` and the results
 block of `EX-B.md`.
 
-## Process
+## Historical output layout
 
 | What | Value |
 |---|---|
-| Driver PID | 34809 (exited 10:48:31 EDT; `logs/driver.pid` is removed at exit) |
-| Driver command | `nohup nice -n 10 /bin/bash code/run_exb.sh drive` (started by `run_exb.sh launch`) |
 | Driver log | `logs/driver.log` (one line per finished shard) |
 | Job table | `code/jobs.tsv` (13 jobs) |
 | Work list | `code/queue.txt` (313 lines, run in order) |
@@ -43,34 +41,5 @@ Binaries: `code/bin/bipgen` (own generator, own decider `code/h4.h` as the prune
 Projected total: about 7,700 core-s (2.1 core-h) at pilot speed, plus about 0.3 core-h of pilots
 and checks. The load average was about 46 on 18 cores at launch, so wall time is longer than CPU.
 
-## Commands
 
-Status (prints the table, writes nothing):
-
-```
-/bin/bash [local path] status
-```
-
-Graceful stop (running shards finish, nothing new starts, then the collector runs):
-
-```
-touch [local path]
-```
-
-Immediate stop (then run the collector by hand):
-
-```
-touch [local path]
-pkill -f 'findings/supplement/census/edge/method-b/code/run_exb.sh'
-pkill -f 'bin/bipgen'
-[local path] [local path]
-```
-
-(`pkill -f 'bin/bipgen'` matches only this investigation's generator; no other investigation uses that name.)
-
-Resume (skips finished shards, clears stale claims; refuses if a driver is alive):
-
-```
-rm -f [local path]
-/bin/bash [local path] launch
-```
+These are dated run records and pilot projections, not current execution instructions. Final coverage is in the companion result report. Original inputs and executable identities are subject to REPRODUCTION-BOUNDARY.md at the supplement root.

@@ -6,7 +6,7 @@ check_witness (nonempty, 4-regular, inside the graph). Every UNSAT graph (no 4-r
 is written to UNSAT_OUT.g6. Independent of q4core.h.
 """
 import sys
-sys.path.insert(0, "[local path]")
+sys.path.insert(0, __import__('os').environ['ERDOS585_CENSUS_QUARTIC_PROGRAMS_SAT_ALL_PY_L9'])
 import networkx as nx
 from validate_sat import has_q4, check_witness
 

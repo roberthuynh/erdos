@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""wave4/h22b: sum the shard summaries in OUTDIR/done/ (one line per shard, written by run_shard.sh).
+"""census/h22: sum the shard summaries in OUTDIR/done/ (one line per shard, written by run_shard.sh).
 
 usage: collect.py OUTDIR MOD
 Prints totals of every hdq counter, geng's own count, the colour-preserving count 2U - S,

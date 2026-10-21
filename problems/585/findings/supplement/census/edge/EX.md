@@ -1,8 +1,10 @@
 # ex(n) for n = 17 to 20: bipartite, Δ ≤ 6, no nonempty 4-regular subgraph
 
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
 Historical computation, 2026-10-05 23:19 to 2026-10-06 EDT. ex(n) is the maximum number of edges of a
 simple bipartite graph on n vertices with maximum degree at most 6 and no nonempty 4-regular
-subgraph. Rung (b) throughout: computed bounds and exact values, no Lean, no `check.sh`.
+subgraph. computational evidence throughout: computed bounds and exact values, no Lean, no `check.sh`.
 
 ## 1. Answer
 
@@ -37,11 +39,11 @@ Lower bounds: ex(n) ≥ 3n − 8 for n = 15 to 20 by the explicit graphs `data/w
 
 | Fact | Statement | Status | Where |
 |---|---|---|---|
-| QB(4) | simple bipartite, Δ ≤ 6, n ≥ 2, e ≥ 3n − 4 ⇒ nonempty 4-regular subgraph | Lean, `check.sh` PASS (`Erdos585.qb4`) | `unpublished historical census-status note` LEAN-QB4 |
-| QB(5) | same with n ≥ 3 and e ≥ 3n − 5; so ex(n) ≤ 3n − 6 for every n ≥ 3 | paper, refereed: `findings/supplement/papers/qb5/PAPER4.md` Theorem 4.1; `REVIEW4.md` (FINAL) "QB(5) is proved": ACCEPT WITH FIXES, no mathematical error, no census input | `findings/supplement/papers/qb5/` |
+| QB(4) | simple bipartite, Δ ≤ 6, n ≥ 2, e ≥ 3n − 4 ⇒ nonempty 4-regular subgraph | Lean, `check.sh` PASS (`Erdos585.qb4`) | `../../checks/v0.4/independent-rerun-2026-10-11.json` (Erdos585.qb4; source Openmath/Proofs/QB4/Statement.lean in the full #585 package) |
+| QB(5) | same with n ≥ 3 and e ≥ 3n − 5; so ex(n) ≤ 3n − 6 for every n ≥ 3 | paper, AI-reviewed: `findings/supplement/papers/qb5/PAPER4.md` Theorem 4.1; `REVIEW4.md` (FINAL) "QB(5) is proved": ACCEPT WITH FIXES, no mathematical error, no census input | `findings/supplement/papers/qb5/` |
 | base | c(n') ≤ 3n' − 8 for every n' ≤ 16 (c = maximum with δ ≥ 4 added). No counted graph with δ ≥ 4 for n' ≤ 10; maxima 25, 26, 31, 33, 37 at n' = 11 to 15 (so 3n' − 8 is attained at 11, 13, 15); c(16) ≤ 39 | computed: census computation (geng_q4: every e for n' ≤ 13, e ≥ 30 at 14, e ≥ 33 at 15, e ≥ 40 at 16) and re-run here: `geng_q4 -b -d4 -D6 -u n (3n−7):(3n)` → 0 for n = 8..16 (`logs/base/`) | `findings/supplement/census/quartic/CENSUS.md` Jobs 2-3, `findings/supplement/census/quartic/f1/q4free_bip_n1{1,2,3,5}*.g6` |
 | F1(17) | δ ≥ 4, e ≥ 45 at n = 17: none (`genbg_q4 -u -d4:4 -D6:6 9 8 45:48`, sides forced 8 + 9) | computed, one method | `findings/supplement/census/quartic/CENSUS.md` Job 3 |
-| F1(18) | δ ≥ 4, e ≥ 48 at n = 18: none (pieces 10 + 8 at e = 48, 9 + 9 at e = 48..54) | computed, one method | `findings/supplement/census/quartic/CENSUS.md` Job 3, `unpublished historical census-status note` F1-18 |
+| F1(18) | δ ≥ 4, e ≥ 48 at n = 18: none (pieces 10 + 8 at e = 48, 9 + 9 at e = 48..54) | computed, one method | `findings/supplement/census/quartic/CENSUS.md` Job 3, `../quartic/CENSUS.md` and its retained F1 logs |
 
 ## 3. The argument
 
@@ -158,4 +160,4 @@ n = 18 at 8 + 10 (8,584,858) and n = 19 at e = 51, δ ≥ 5 (10,055,368).
 
 `code/run_excensus.sh` (driver), `code/jobs.tsv`, `code/queue.txt`, `code/collect.py` (collector),
 `code/witness.py`, `code/certify.py` (DRAT certificates), `code/selftest/` (self-tests), `data/` (witnesses, CNFs, DRAT proofs,
-collector output), `logs/` (shards, pilots, base re-run, `driver.log`), `JOBS.md`, `RESUME.md`, `LOG.md`.
+collector output), `logs/` (shards, pilots, base re-run, `driver.log`), `JOBS.md`, `RESUME.md` (original historical note not bundled), `LOG.md`.

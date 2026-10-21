@@ -1,4 +1,8 @@
-# Root review of the new forcing statements
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
+# Source review of the forcing statements
+
+> Export clarification (2026-10-19): The local verification.json, oracle-grouped-no-singletons.log and lean-partition/PLAN.md cited below are not bundled here. Public formal declaration/source locations and retained receipts are indexed in lean/DECLARATIONS.md and checks/ from the supplement root; those are not asserted to be identical to these omitted original records.
 
 October 3, 2026. This review concerns the newly implemented statements. It is
 not a rerun of older mathematical audits or a novelty assessment.
@@ -49,7 +53,7 @@ graph. It passed the unchanged oracle; see `verification.json` and
 
 ## Arbitrary graph with typed bipartite shores
 
-Root read the complete `TwinNoSingleton.lean` source. The public statement takes
+The review covered the complete `TwinNoSingleton.lean` source. The public statement takes
 an actual graph on `A + R`, no same-shore edges, maximum degree six,
 `e+2=3v`, and a distinct equal-right-neighborhood partner for every left vertex.
 The finite image of the actual neighborhood function names its maximal
@@ -59,13 +63,13 @@ and the resulting faithful pair. No quotient representation is supplied in
 the public hypotheses. The typed shores state bipartiteness explicitly.
 
 The complete finite partition argument was written in `lean-partition/PLAN.md`
-before implementation. The source compiles; root's final oracle for this
+before implementation. The source compiles; the final oracle for this
 endpoint is pending at this note's creation. Later verification belongs in
 `verification.json`, not an inferred PASS from this review.
 
 ## Scope retained
 
-These are restricted forcing statements, rung(b) when the specific endpoint
+These are restricted forcing statements, computational evidence when the specific endpoint
 passes check.sh. The degree record remains general five and bipartite four.
 There is no unrestricted degree-six forcing theorem or improved growth bound.
 The one-singleton and at-most-two-singleton paper corollaries must not be

@@ -1,4 +1,4 @@
-"""For E5 graphs: which pairs (p, q), p, q on opposite sides, leave G - p - q with a 4-factor (lane qb5).
+"""For E5 graphs: which pairs (p, q), p, q on opposite sides, leave G - p - q with a 4-factor (computational checks).
 4-factor of a balanced bipartite graph by max flow (networkx), capacities 4 at every vertex.
 Usage: pairs_e5.py < e5.g6 ; prints per graph: number of good pairs, and whether G has a 4-factor."""
 import sys

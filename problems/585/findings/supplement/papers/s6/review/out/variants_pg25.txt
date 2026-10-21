@@ -1,0 +1,10 @@
+labelled                     Lambda ON  escape depth 4  levels [9, 47, 211, 1035] lowering moves from level 3: 17
+labelled                     Lambda OFF escape depth 4  levels [5, 16, 64, 355] lowering moves from level 3: 16
+45unordered                  Lambda ON  escape depth 4  levels [8, 36, 150, 716] lowering moves from level 3: 11
+45unordered                  Lambda OFF escape depth 4  levels [4, 11, 44, 247] lowering moves from level 3: 10
+pairs-unordered-within       Lambda ON  escape depth 4  levels [6, 21, 81, 375] lowering moves from level 3: 7
+pairs-unordered-within       Lambda OFF escape depth 4  levels [2, 4, 21, 118] lowering moves from level 3: 6
+quotient(G)                  Lambda ON  escape depth 4  levels [6, 21, 81, 375] lowering moves from level 3: 7
+quotient(G)                  Lambda OFF escape depth 4  levels [2, 4, 21, 118] lowering moves from level 3: 6
+C,C' edge sets + leftover    Lambda ON  escape depth 4  levels [5, 14, 46, 180] lowering moves from level 3: 3
+C,C' edge sets + leftover    Lambda OFF escape depth 4  levels [1, 1, 7, 37] lowering moves from level 3: 2

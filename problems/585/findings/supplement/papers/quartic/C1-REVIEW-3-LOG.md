@@ -1,14 +1,16 @@
-# Referee log: C1-PAPER.md (independent adversarial referee, Fable investigation)
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
+# AI review log: C1-PAPER.md (independent adversarial AI review, Fable investigation)
 
 ## 15:11 EDT
 - Frozen hash check at start: `C1-PAPER.md: OK`.
 - Review scripts were prepared independently.
-- Not opening C1-REVIEW.md, C1-CORRECTIONS.md, review-c1/, findings/supplement/papers/quartic/review-2-code/ until my verdict is written.
-- Plan: read the paper end to end, then attack Lemma 2.1, 3.2, 4.1, 4.2, the three-set count in Thm 4.3, Cor 5.4; check cited inputs (REPORT.md Theorem 5, E4->C1, E3->C0, Olson); write my own code.
+- Not opening C1-REVIEW.md, C1-CORRECTIONS.md, review-1-code/, findings/supplement/papers/quartic/review-2-code/ until my verdict is written.
+- Historical proposed approach: read the paper end to end, then attack Lemma 2.1, 3.2, 4.1, 4.2, the three-set count in Thm 4.3, Cor 5.4; check cited inputs (REPORT.md Theorem 5, E4->C1, E3->C0, Olson); write my own code.
 
 ## 15:20 EDT
 - Read C1-PAPER.md end to end (487 lines). Hand re-derivation, first pass, of Identities 1.1-1.3, Lemma 1.4 (flow criterion via max-flow/min-cut), Lemma 1.5, (M), Lemma 2.1, basic counts, Lemma 3.1 (full expansion), Lemma 3.2, Lemmas 4.1, 4.2, Thm 4.3, Cor 5.1-5.4, and the Tutte budget identity of §5.4 (derived w(C) = 2D_C + e(C,S) + 2e(C,T) - 3[e(C,S) odd] myself; parity condition of q reduces to e(C,S) odd). No error found yet on the first pass.
-- Next: pull the cited line ranges of PAPER.md, REPORT.md, QUARTIC-REVIEW.md and compare against the paper's claims; then code.
+- Proposed follow-up at that date: pull the cited line ranges of PAPER.md, REPORT.md, QUARTIC-REVIEW.md and compare against the paper's claims; then code.
 
 ## 15:27 EDT
 - Cited sources pulled and compared: PAPER.md 53-60 (classes, gadget = B - o), 87-122 (Lemma 0.1 flow criterion, Lemma 0.2 Olson group-ring), 141-157 (E3 reduction), 573-590 (sub-case counts); REPORT.md 130-221 (Lemma 1 Tutte, Lemma 2 budget identity with w(C) = 2D_C + e(C,S) + 2e(C,T) - 3[e(C,S) odd], Lemma 4, Theorem 5 c = 2 type), 236-267 (reductions E3->C0, E4->C1, C0 and C1 steps); QUARTIC-REVIEW.md 17-21, 82-104; CORRECTIONS.md census bounds m <= 41/59/62.

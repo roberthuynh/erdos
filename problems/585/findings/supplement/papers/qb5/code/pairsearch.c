@@ -1,4 +1,4 @@
-/* pairsearch.c (lane qb5, round 2): random sparse E5 block pairs and the E5 pair statement.
+/* pairsearch.c (computational checks): random sparse E5 block pairs and the E5 pair statement.
  *
  * Build: /usr/bin/clang -O3 -o pairsearch pairsearch.c
  * Usage: pairsearch NC NB COUNT SEED NUMODE TWIN

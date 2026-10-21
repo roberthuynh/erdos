@@ -1,10 +1,14 @@
 # G110: the small-cut lemma, a minimal C0 counterexample, petal uncrossing, and size bounds
 
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with C1-REVIEW-3-LOG.md, C1-REVIEW-2.md, C1-REVIEW.md, QUARTIC-REVIEW.md, C1-REVIEW-3.md, REVIEW.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
 AI-written historical note, October 4-5, 2026. Status: frozen for independent review (SHA-256 in
-`FROZEN.sha256`). Written proofs, with computational checks of the counting identities in
+the omitted historical receipt `FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json)). Written proofs, with computational checks of the counting identities in
 Appendix A. Not reviewed. No Lean and no `check.sh` run, so nothing here is a project oracle PASS.
-Rungs: the lemmas are (a); the size statements are (b) (special cases), proved on paper, three of
-them conditional on a census. One item of the brief is false as stated (FLAW.md).
+Evidence categories: the lemmas are (a); the size statements are (b) (special cases), proved on paper, three of
+them conditional on a census. One earlier proposed statement is false as stated (FLAW.md).
 
 ## 0. Results at a glance
 
@@ -31,14 +35,14 @@ A C0 instance of size m is B − o for |V(B)| = 2m + 2 when it is a G110 gadget,
 gives G110-quartic for every simple bipartite 6-regular B on at most 84 vertices, without a census.
 None of this is a pair statement (§5).
 
-**Where to attack first.**
+**Sensitive steps and hypotheses.**
 1. Theorem 2.9 (U) with Lemma 2.8. Everything after §2.4 rests on it: the submodularity of ε (a
    directed cut count), the use of the minimum slack −1 in step 2, and the two uses of minimality
    in steps 4 and 5 (Γ[W] and Γ[Z] are C0 instances).
 2. Prop. 2.3 (claim 1b): excluding k = 1 cuts uses (M) for E3 pieces of size at most m − 1, and
    (M) uses Corollary 0.6, the reviewed E3 reduction with the trivial-piece case made explicit.
 3. Prop. 2.12(3)-(4), Lemma 3.4 and Theorem 3.5 (C0 for m ≤ 41 with no census). These are new
-   here and were not in the brief: check sh_y ≤ 2 (7 is not a multiple of 3), R_O ≠ ∅, and the
+   here: check sh_y ≤ 2 (7 is not a multiple of 3), R_O ≠ ∅, and the
    t_y = 6, 7 cases.
 4. Corollary 2.10 applies Prop. 2.7(1) to both ports of a shared vertex.
 5. F1 and F2 enter only Theorems 3.1 to 3.3.
@@ -197,14 +201,14 @@ In particular |V(B)| = |X| + |Y| ≥ 22, and ≥ 24 when k = 1.
      6 neighbors in I − C. If O − A = {y}, then t = 2 < 5, impossible. Otherwise some vertex of
      O − A − y has 6 neighbors in I − C, so t ≥ 6, and |Y| = t + (t − 1) + 1 = 2t ≥ 12. ∎
 
-The lead's sketch for the Y side, "o has only 6 − p ≤ 3 − ε neighbors outside A (or 1 when
+The earlier sketch for the Y side, "o has only 6 − p ≤ 3 − ε neighbors outside A (or 1 when
 k = 2), which forces |O − A| ≥ 6 or 5", agrees with item 4: |O − A| = t ≥ 6 when k = 1 and
 |O − A| = t − 1 ≥ 5 when k = 2. The proof above uses the deficiency count instead.
 
 **Corollary 1.2.** Suppose B has no vertex set X ⊆ V(B) with ∂_B(X) ≤ 12, |X| ≥ 10 and
 |V(B) − X| ≥ 12. Then for every edge oy, B − o − y has a spanning 4-regular subgraph, which is a
 quartic subgraph of B − o (it has 2m ≥ 10 vertices). So every B − o has a quartic subgraph. The
-lead's hypothesis, "every edge cut of B with at most 12 edges has a side with at most 9 vertices",
+earlier hypothesis, "every edge cut of B with at most 12 edges has a side with at most 9 vertices",
 implies this one.
 
 *Wording note on "covers every B on at most 20 vertices".* True, but through the sizes in Lemma 1.1:
@@ -398,7 +402,7 @@ Equivalently, Q_y ∩ Q_{y'} is empty or one I-vertex; in particular O_y ∩ O_{
    i ∈ I.
 So W = V(Γ) or W = V(Γ) − {i}, and Q_y ∩ Q_{y'} = V(Γ) − W. ∎
 
-(The lead's outline states "minimality, or simplicity when that side has size ≤ 4" in step 5;
+(The earlier outline states "minimality, or simplicity when that side has size ≤ 4" in step 5;
 minimality alone suffices, since (M) covers every size from 1 to m − 1, and sizes 1 to 4 have no
 instances at all.)
 
@@ -542,7 +546,7 @@ So the minimal counterexample is a hub R with six petals hanging from it: petal 
 C1 instance with e = 3|Q_y| − 4, joined to the rest of Γ only by its seven T_y edges (and to o by
 the edge yo in B), and two petals can share a single I-vertex.
 
-### 4.3 Remark: contracting petals (lead's request; arithmetic only)
+### 4.3 Remark: contracting petals (arithmetic only)
 
 Contracting a vertex set Z to one vertex changes e − 3n by −e(Γ[Z]) + 3|Z| − 3. For a petal this is
 −(3|Q_y| − 4) + 3|Q_y| − 3 = +1. Γ has e − 3n = −3 and Lemma 0.2 needs ≥ −2.
@@ -579,7 +583,7 @@ G[(U − C') ∪ (W − A)] (smaller side W − A, deficiency 2) and P2 = G[A �
 Here ε = e(C', W − A) because D_{C'} = 0 (u1 ∉ C').
 - e(A, U − C') = 6·2 − D_A + ε = 7 (QUARTIC-REVIEW.md line 256).
 - **P2 + β** (β on the U side, joined to the A-ends of those 7 edges) has 2|C'| + 3 vertices and
-  (6|C'| − ε) + 7 edges, which is **3n − 2 − ε**. The lead's "P2 + β at 3n − 2" holds for ε = 0 and
+  (6|C'| − ε) + 7 edges, which is **3n − 2 − ε**. The earlier "P2 + β at 3n − 2" holds for ε = 0 and
   is **FALSE for ε = 1**, where P2 + β has 3n − 3 edges, one below Lemma 0.2. When ε = 1 the cut
   between P2 and P1 has 8 edges (the seven, plus one from C' to W − A), and the trace identity of
   Lemma 2.5(2) becomes x − x' = 4(|V(H) ∩ A| − |V(H) ∩ C'|) with x' ≤ 1 the number of trace edges
@@ -695,7 +699,7 @@ in Prop. 2.12 and §4.3, not of Theorem 2.9.
 **Script hashes (SHA-256, first and last 8 hex digits)** at the time of the frozen runs: `common.py`
 229c9ae2...2f172ce4, `check_eq1.py` b5c11887...93f92eb7, `check_synthetic.py` 45256565...9ec02550,
 `check_olson.py` 2358c456...454b8cf8, `check_g1.py` e57a0441...126a7b71, `check_c1sub.py`
-4f548de2...8a10994e, `check_hub.py` 906dce44...988080c9 (full values in `M1-LOG.md`). All six check
+4f548de2...8a10994e, `check_hub.py` 906dce44...988080c9 (full values in `M1-LOG.md` (original historical note not bundled)). All six check
 scripts were rerun from scratch after the last edit, with the counts above.
 
 **Not covered by computation.** The minimality arguments (Props. 2.2 to 2.7, Theorem 2.9,

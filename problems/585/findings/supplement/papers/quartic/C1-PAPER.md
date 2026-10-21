@@ -1,9 +1,13 @@
 # C1: the petal lattice closes the C1 sub-case
 
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with C1-REVIEW-3-LOG.md, C1-REVIEW-2.md, C1-REVIEW.md, QUARTIC-REVIEW.md, C1-REVIEW-3.md, REVIEW.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
 AI-written historical note, October 5, 2026. Status: frozen for independent review (SHA-256 in
-`C1-FROZEN.sha256`). Written proofs with computational checks of every identity and count
+the omitted historical receipt `C1-FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json)). Written proofs with computational checks of every identity and count
 (Appendix A). Not reviewed. No Lean and no `check.sh` run, so nothing here is a project oracle
-PASS. Rung (a) for the theorems; Corollary 0.1 is (b).
+PASS. written-proof evidence for the theorems; Corollary 0.1 is (b).
 
 ## 0. Results at a glance
 
@@ -24,7 +28,7 @@ degree 5 and at least 3 neighbors in each such set, any two of them overlap in a
 vertices, and they form a lattice under ∩ and ∪ (Lemma 4.2). The union of the petals of all ports
 is then one set with g = 10, which can hold W-deficiency at most 2, while the ports carry 7.
 
-**Where to attack first.**
+**Sensitive steps and hypotheses.**
 1. Lemma 2.1 (sparsity) and (M): the induction is on the size of C1 instances in either
    orientation, and it needs E4 at the same size s (for S = V − w), which Lemma 1.5 supplies.
 2. Lemma 3.1 (pure algebra) and the case analysis of Lemma 3.2, in particular D_A ≤ 6 for a port
@@ -262,12 +266,12 @@ vertex x with a = e(x, S) has w = 12 − a − 3[a odd] ≥ 4. Hence G − S −
 bipartite graph with sides S, T (T saturated) plus one edge inside S: B = G − f ∈ C0(|T|), and
 n = 2|T| + 1 is odd. This matches REPORT.md line 212.
 
-## 6. The briefed hints
+## 6. Auxiliary observations
 
 Sub-case notation (QUARTIC-REVIEW.md lines 240-246, PAPER.md §4.4): w0 a port, (A, C') a violation of
 G − w0 with |A| = |C'| + 2, D_A = 5 + ε, u1 ∉ C', ε = e(C', W − A); P1 = G[(U − C') ∪ (W − A)],
 P2 = G[A ∪ C'], c = |C'|, t = |U − C'|; T = E(A, U − C'), and f the edge from C' to W − A when ε = 1.
-None of H4-H9 is used by the proof of Theorem 4.3; they were checked because the brief asked.
+None of H4-H9 is used by the proof of Theorem 4.3; they are retained as auxiliary calculations.
 
 | # | Hint (short) | Verdict |
 |---|---|---|
@@ -469,7 +473,7 @@ a named sparsity premise.
 
 ## Appendix B. Sources (paths relative to the repository root)
 
-- `findings/supplement/papers/quartic/PAPER.md` (SHA-256 cfce4fcc...6ab0c9, frozen, refereed): classes and gadget
+- `findings/supplement/papers/quartic/PAPER.md` (SHA-256 cfce4fcc...6ab0c9, frozen, AI-reviewed): classes and gadget
   (lines 53-60), flow criterion Lemma 0.1 (87-102), Olson Lemma 0.2 (104-122), E3 reduction (141-157),
   C1 sub-case remark §4.4 (573-590), what was not proved (592-606).
 - `findings/supplement/papers/quartic/REVIEW.md`: summary (10-27), §0.1-§4 ACCEPT, overall verdict (269-).

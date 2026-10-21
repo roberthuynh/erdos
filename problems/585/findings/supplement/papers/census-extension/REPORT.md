@@ -1,20 +1,8 @@
 # sms-census computation: S10 at n = 13 and n = 14
 
-> **Saved by the investigation lead (2026-10-04).** The harness blocked the subagent's own write of this file,
-> so this text is its final report, saved verbatim apart from this note and two lines marked
-> [review fix]. Lead check: `runs.log` shows `STATUS complete ... finals=0` for the n = 13 runs
-> (first build, look-ahead build, certified build) and for both n = 14 halves (r0 and r1).
->
-> **Review status: reviewed** (`SMS-CENSUS-REVIEW.md`, final).
-> - S10(13): accepted, and independently replicated with a different generator, deletion order,
->   reduction and pair test (0 graphs).
-> - S10(14): accepted with a caveat. It rests on this one program and was not independently
->   replicated, so cite it as computed and reviewed. The reviewer found no line that could make the
->   search incomplete, and this program's level sets at n = 13 equal independent computations.
-> - Corollary 1: S4 at 14 is accepted. S4 at 15 and "no 6-regular avoider on 15 vertices" inherit
->   the S10(14) caveat.
-> - Fixes applied: the Lemma 5 wording, and the census dependence (the reviewer reran this program
->   for n = 4..12 and a geng route for n = 7..12, so the chain no longer needs the external census).
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with SMS-CENSUS-REVIEW.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
+> Historical report from 2026-10-04; computational and review limitations are stated below.
 
 The code, run log (`runs.log`) and state files are in this folder.
 
@@ -23,7 +11,7 @@ The code, run log (`runs.log`) and state files are in this folder.
 - **S10 holds at n = 13 and at n = 14.** Every graph on 13 vertices with max degree <= 6 and at
   least 35 edges has a pair, and every graph on 14 vertices with max degree <= 6 and at least 38
   edges has a pair.
-  - Rung (b), exhaustive computation.
+  - exhaustive computational evidence.
   - [review fix] It needs S10 for n <= 12. The reviewer's reruns of this program give it for
     n = 4..12 (finals 0), and an independent geng route confirms n = 7..12.
 - **Implication.** S10(n) implies S4(n+1), and it is included below as Corollary 1.
@@ -213,7 +201,7 @@ timeout 240 clang -O3 -march=native -DWORDSIZE=32 -DMAXN=WORDSIZE -Inauty2_8_9 -
 
 - **Success signal:** runs.log shows `STATUS complete ... finals=0`.
 - **If a final appears:** run
-  `timeout 240 [temporary path] validate_finals.py runs/finals_<tag>.txt 38 4`
+  `timeout 240 <PYTHON_WITH_REQUIRED_DEPENDENCIES> validate_finals.py runs/finals_<tag>.txt 38 4`
   on it.
 - **Controls:**
   - `for n in 7 8 9 10; do ./gen585 $n $((3*n-4)) 5 2 4 | grep STATUS; done` should give finals=0.
@@ -230,11 +218,9 @@ timeout 240 clang -O3 -march=native -DWORDSIZE=32 -DMAXN=WORDSIZE -Inauty2_8_9 -
 - To make the chain independent of the census, one n = 12 run of the same program is a
   seconds-long command.
 
-## Next step
+## Unperformed extension
 
-Have gen585.c reviewed, focusing on Lemmas 2 to 4. Then run S10 at n = 15 split across 16 or more
-cores, about 24 core-hours. The level-10 subtrees are independent (`-r/-m`), and the result would
-give S4 at 16 and no 6-regular avoider on 16 vertices.
+An n = 15 extension and a separate audit of gen585.c were not completed in this report. No conclusion depending on that extension is claimed.
 
 ## Review
 

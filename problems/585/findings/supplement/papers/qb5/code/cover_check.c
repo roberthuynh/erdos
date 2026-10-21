@@ -1,4 +1,4 @@
-/* cover_check.c (lane qb5, round 2): second, independent decider for Lemma 6.5 (NOTES.md section 6).
+/* cover_check.c (computational checks): second, independent decider for Lemma 6.5 (NOTES.md section 6).
  * Build: /usr/bin/clang -O3 -o cover_check cover_check.c
  * Statement checked (covering form): for every set E of 7 edges between A = {0..6} and D = {0..6}
  * (simple, every degree <= 3) and every admissible labelling L_A, L_D (subsets of the endpoints; every

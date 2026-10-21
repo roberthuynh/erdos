@@ -1,5 +1,7 @@
 # Independent AI review of the color-closure addendum
 
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with ROOT-REVIEW.md, ADDENDUM-REVIEW.md, ENDPOINT-REVIEW.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
 ## Disposition and exact artifact
 
 **Accepted unchanged as a complete paper argument for the stated

@@ -1,5 +1,5 @@
 #!/bin/bash
-# run_excensus.sh: sharded, resumable census driver for the excensus lane (wave6).
+# run_excensus.sh: sharded, resumable census driver for the edge census.
 #
 # Jobs are rows of code/jobs.tsv (tab-separated: tag, kind, mod, binary, args). The work list is
 # code/queue.txt, one "tag r" per line, run in file order by NW workers. Lines may be appended
@@ -21,7 +21,7 @@
 # Deadlines: no shard starts at or after CUTOFF (2026-10-06 06:00 EDT); every shard runs under
 # timeout so it is killed at HARDEND (06:58 EDT). Graceful stop: touch data/STOP.
 set -u
-E=[local path]
+E="${ERDOS585_CENSUS_EDGE_CODE_RUN_EXCENSUS_SH_E:?Set ERDOS585_CENSUS_EDGE_CODE_RUN_EXCENSUS_SH_E to the original E dependency; see REPRODUCTION-BOUNDARY.md}"
 C="$E/code"
 JOBS="${EXC_JOBS:-$C/jobs.tsv}"; export EXC_JOBS="$JOBS"
 QUEUE="${EXC_QUEUE:-$C/queue.txt}"
@@ -29,8 +29,8 @@ NW=${EXC_NW:-3}
 CUTOFF=1791280800    # date -j -f '%Y-%m-%d %H:%M:%S' '2026-10-06 06:00:00' +%s  (EDT)
 HARDEND=1791284280   # date -j -f '%Y-%m-%d %H:%M:%S' '2026-10-06 06:58:00' +%s  (EDT)
 TIMEOUT=/opt/homebrew/bin/timeout
-PY=[local path]
-SATALL=[local path]
+PY="${ERDOS585_CENSUS_EDGE_CODE_RUN_EXCENSUS_SH_PY:?Set ERDOS585_CENSUS_EDGE_CODE_RUN_EXCENSUS_SH_PY to the original PY dependency; see REPRODUCTION-BOUNDARY.md}"
+SATALL="${ERDOS585_CENSUS_EDGE_CODE_RUN_EXCENSUS_SH_SATALL:?Set ERDOS585_CENSUS_EDGE_CODE_RUN_EXCENSUS_SH_SATALL to the original SATALL dependency; see REPRODUCTION-BOUNDARY.md}"
 SELF="$C/run_excensus.sh"
 PIDFILE="$E/logs/driver.pid"
 

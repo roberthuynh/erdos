@@ -1,0 +1,6 @@
+K?zP`cnF~eX_ 11 realised=011 count=2 pair_avoiding_v=NO cycles=19810
+KEo`NK}Fg}z? 11 realised=011 count=2 pair_avoiding_v=NO cycles=18708
+K?zP`c^NvFX_ 11 realised=011 count=2 pair_avoiding_v=NO cycles=19893
+K@zPWwrK}Fx_ 11 realised=011 count=2 pair_avoiding_v=NO cycles=19906
+K@zP`cNF~FX_ 11 realised=011 count=2 pair_avoiding_v=NO cycles=19908
+KEo`H{}pg}z? 11 realised=011 count=2 pair_avoiding_v=NO cycles=18524

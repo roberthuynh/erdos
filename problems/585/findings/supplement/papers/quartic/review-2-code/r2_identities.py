@@ -1,4 +1,4 @@
-"""Referee 2: identity checks and cross-validation of r2sub (own code).
+"""Second independent implementation: identity checks and cross-validation of r2sub (own code).
 
 Checks on random C1 instances (D_U in {0,1}):
   I1  Identity 1.1: D^S(S_U) = 6|S_U| - e(S), D^S(S_W) = 6|S_W| - e(S),

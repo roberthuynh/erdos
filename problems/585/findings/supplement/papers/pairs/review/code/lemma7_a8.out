@@ -1,0 +1,2 @@
+graphs 600 {'cuts': 0, 'hedges': 0, 'case_a_edges': 0, 'case_b_edges': 0, 'a_ok': 0, 'b_ok': 0, 'eps0': 0, 'eps0_dxp0': 0, 'remark_ok': 0, 'fail': 0, 'thin': 0}
+exit=0

@@ -1,4 +1,4 @@
-"""identities_own.py (referee's own code): random tests of PAPER Identity 6.2, the H-balance of
+"""identities_own.py (independent code): random tests of PAPER Identity 6.2, the H-balance of
 Remark 6.4, (1.1), (1.2), Lemma 1.1 (s = out-degree, F-independent), and the claim that reversing a
 directed cycle of D(F) gives a 4-factor, on sparse E4 instances read from graph6 files.
 4-factors: max-flow b-matching (networkx), then random alternating-cycle walks.

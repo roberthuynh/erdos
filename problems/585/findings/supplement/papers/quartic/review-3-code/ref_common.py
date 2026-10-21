@@ -1,4 +1,4 @@
-"""Referee's own helpers for checking C1-PAPER.md. Written from scratch for this review;
+"""Independent helpers for checking C1-PAPER.md. Written from scratch for this review;
 nothing imported from G110/c1checks or G110/checks.
 
 Bipartite graph: vertices 0..s-1 are U, s..s+m-1 are W (m = |W|). Adjacency as sets.

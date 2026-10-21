@@ -1,8 +1,8 @@
 import RegularTransport
 import RegularPopulation
 
-/-! Source correspondence: COUNT-BASED-COMPLETION-PROOF-v2.md Sections 2-3.
-Frozen source SHA256:
+/-! Source correspondence: COUNT-BASED-COMPLETION.md Sections 2-3.
+Historical source SHA256 (before public exposition edits):
 d07eaa46889ac5a9808a097f281e43c25a768e5057e19ddefe5b72952d9eacbb.
 
 RegularTransport proves actual common-neighbor transport from the exact cell

@@ -1,4 +1,4 @@
-# Own random generator (referee): C2 instances with a W-small 2-block T on Z_U and a random 3-block B.
+# Own random generator (independent implementation): C2 instances with a W-small 2-block T on Z_U and a random 3-block B.
 # T: sides T_U (t+2), T_W (t), every T_W vertex adjacent to exactly 6 T_U vertices.
 # B: sides B_U (b), B_W (b+3), every B_U vertex adjacent to exactly 6 B_W vertices.
 # Cut: 10 edges T_U--B_W, T_U cut degrees forced by D(T_U) = 2 (Z_U = {u0} or {u1,u2}), Delta <= 6.

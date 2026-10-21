@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""nonE10.py (wave8/s6spot): the non-E10 graphs found by e10cut in the e10only slices.
+"""nonE10.py (census/s6n22/spot-check): the non-E10 graphs found by e10cut in the e10only slices.
 For each: graph6 (to data/nonE10.g6), min essential cut and the cut set S from e10cut, the 66
 tests from spantest (SPAN / NO), and for every NO test two extra checks:
   (1) one-cycle SAT: does Y = B - o - y have even one Hamilton cycle? (fresh solver, lazy cuts)

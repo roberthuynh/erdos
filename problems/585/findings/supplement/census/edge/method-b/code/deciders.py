@@ -1,4 +1,4 @@
-"""deciders.py -- method B Python deciders (wave8/exb), written for this lane.
+"""deciders.py -- method B Python deciders (census/edge/method-b), written for this investigation.
 
 Question for each graph G: does G have a nonempty 4-regular subgraph H
 (every vertex of H has degree exactly 4 in H)?

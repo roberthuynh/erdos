@@ -8,7 +8,7 @@ bad graph bad, so f(n) = m holds exactly when (a) some m-edge graph is good and
 (b) every (m+1)-edge graph is bad.
 
 Written from scratch for this check: it does not import or copy
-triage/erdos585_small.py.  Python 3 standard library only.
+erdos585_small.py in this directory.  Python 3 standard library only.
 
 Steps (each finishes well inside 4 minutes; run each under `timeout 230`):
   selftest    unit tests of the cycle checker and the canonical form
@@ -19,7 +19,7 @@ Steps (each finishes well inside 4 minutes; run each under `timeout 230`):
   extremal8   good 19-edge graphs on 8 vertices, counted up to isomorphism
   labelled8   every labelled 20-edge graph on 8 vertices (process pool, resumable)
   status      final table
-Each step appends its section to triage/585-verify.md as soon as it is known.
+Each step appends its section to 585-verify.md beside this script as soon as it is known.
 Level-by-level isomorphism classes (n = 8) and step results are checkpointed
 in the --state JSON file, so an interrupted step resumes where it stopped.
 """
@@ -47,7 +47,7 @@ A008406 = {(7, 4): 10, (7, 5): 21, (8, 8): 221, (8, 9): 402}
 
 HEADER = """# Erdos 585, small n: independent check of f(7) = 16 and f(8) = 19
 
-Written from scratch in `triage/erdos585_verify.py` (Python 3 standard library only). `triage/erdos585_small.py` was not imported, copied or consulted for its search code.
+Written from scratch in `erdos585_verify.py` in this directory (Python 3 standard library only). `erdos585_small.py` in this directory was not imported, copied or consulted for its search code.
 Definitions as in `585-small-n.md`: a graph is **bad** if it has two edge-disjoint cycles (simple, >= 3 vertices) on the same vertex set, **good** otherwise. Adding edges keeps a bad graph bad, so f(n) = m holds exactly when some m-edge graph is good (lower bound) and every (m+1)-edge graph is bad (upper bound).
 
 Method:

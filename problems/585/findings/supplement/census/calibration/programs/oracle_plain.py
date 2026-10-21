@@ -3,8 +3,8 @@
 Usage: oracle_plain.py IN.g6 [--seconds 600] [--jobs 6]. Prints one line per graph and a summary."""
 import sys, time
 from multiprocessing import Pool
-sys.path.insert(0, "[local path]")
-sys.path.insert(0, "[local path]")
+sys.path.insert(0, __import__('os').environ['ERDOS585_CENSUS_CALIBRATION_PROGRAMS_ORACLE_PLAIN_PY_L6'])
+sys.path.insert(0, __import__('os').environ['ERDOS585_CENSUS_CALIBRATION_PROGRAMS_ORACLE_PLAIN_PY_L7'])
 import pair_oracle as po
 from crosscheck_oracle import g6_edges, replay
 SEC = float(sys.argv[sys.argv.index("--seconds") + 1]) if "--seconds" in sys.argv else 600.0

@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
-"""Validate every FINAL graph reported by gen585 (a claimed avoider) with the lane's tools.
+"""Validate every FINAL graph reported by gen585 (a claimed avoider) with the bundled validation modules (or an explicit override).
 
-For each FINAL line: check n, edge count, degree bounds; then run LANE/tools/brute.decide and
-LANE/tools/pair_oracle.decide. A true counterexample must get NOPAIR from both. If either finds a
-pair, the certificate is checked with LANE/tools/validate.check and the graph is reported as a
+For each FINAL line: check n, edge count, degree bounds; then run ERDOS585_VALIDATION_TOOLS/brute.decide and
+ERDOS585_VALIDATION_TOOLS/pair_oracle.decide. A true counterexample must get NOPAIR from both. If either finds a
+pair, the certificate is checked with ERDOS585_VALIDATION_TOOLS/validate.check and the graph is reported as a
 false positive of gen585's pair test (which would be a bug to fix, not a counterexample).
 
-Run: timeout 240 [temporary path] validate_finals.py runs/finals_<tag>.txt [EF] [MINDEG]
+Run: timeout 240 python3 validate_finals.py runs/finals_<tag>.txt [EF] [MINDEG]
 """
 import json, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LANE = os.path.dirname(os.path.dirname(HERE))
-sys.path.insert(0, os.path.join(LANE, "tools"))
+TOOLS = os.environ.get("ERDOS585_VALIDATION_TOOLS", os.path.join(HERE, "validation_tools"))
+if not TOOLS or not os.path.isdir(TOOLS):
+    raise SystemExit("Validation modules not found. Set ERDOS585_VALIDATION_TOOLS to their verified directory; see REPRODUCTION-BOUNDARY.md.")
+sys.path.insert(0, TOOLS)
 import brute, pair_oracle, validate  # noqa: E402
 
 

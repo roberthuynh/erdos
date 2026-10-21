@@ -3,7 +3,7 @@
  * parts S1 subset class1, S2 subset class2 with |S1| = |S2| >= 4 and G[S1 u S2] has a 4-factor;
  * enumerate all such pairs (pruned: S2 vertices need >= 4 neighbours in S1 and vice versa) and test
  * each by max flow. Prints counts; writes graphs with NO 4-regular subgraph to stdout.
- * Independent referee code. */
+ * Independent implementation. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

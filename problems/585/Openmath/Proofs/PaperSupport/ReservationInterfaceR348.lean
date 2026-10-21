@@ -2,8 +2,8 @@ import Openmath.Proofs.PaperSupport.B5Factor
 
 /-! R348 exact original mixed-matching reservation interface.
 This file declares a proposition,
-not a theorem proving the reservation endpoint. See FREEZE.json for exact time
-and pre-proof bytes. Ordered pairs encode each original edge exactly once from
+not a theorem proving the reservation endpoint. UnitBMatchingR352Modules.lean
+proves the separate cut-criterion interface. Ordered pairs encode each original edge exactly once from
 the disjoint A shore to the B shore. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
@@ -40,7 +40,9 @@ structure OriginalHost (r h j : ℕ) {V : Type u} [Fintype V]
     (r : ℤ) * Fintype.card V - (G.edgeSet.ncard : ℤ) + 1 ≤
       (r : ℤ) * #U - ((G.induce (U : Set V)).edgeSet.ncard : ℤ)
 
-/-- Exact unproved endpoint. Empty shores and matchings and j=0 are permitted.
+/-- Endpoint proposition, defined here. The separate UnitBMatchingCutCriterion
+is proved in UnitBMatchingR352Modules.lean.
+Empty shores and matchings and j=0 are permitted.
 The output is one actual original unit edge set with full A quota, B capacity,
 all prescribed L edges included, and all M edges excluded. -/
 def ReservationClaim : Prop :=
@@ -52,8 +54,8 @@ def ReservationClaim : Prop :=
         (∀ a ∈ A, #{e ∈ F | e.1 = a} = r) ∧
         (∀ b ∈ B, #{e ∈ F | e.2 = b} ≤ r)
 
-/-- Exact construction API needed by the proof. This is a named
-unproved proposition documenting the gap, not an assumption of ReservationClaim.
+/-- Construction proposition used by the proof. This file defines the proposition;
+it does not prove it or make it an assumption of ReservationClaim.
 For the application, E is the original residual edge set outside L union M,
 d a = r - deg_L(a), and c b = r - deg_L(b). -/
 def UnitBMatchingCutCriterion : Prop :=

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""collect.py -- sum the shard outputs of the s6n22 run into RESULT.md (wave6/s6n22).
+"""collect.py -- sum the shard outputs of the s6n22 run into RESULT.md (the original S6 census).
 
 Reads data/shards/*/s<r>.sum for every slice r with a done marker, plus the SAT logs, and writes
 RESULT.md, data/slices_done.txt (sorted slice list) and data/stall_frames.txt (all stall lines of
@@ -102,8 +102,8 @@ def main():
     now = time.strftime("%Y-%m-%d %H:%M:%S %Z")
     out = []
     out.append("# S6 at |B| = 22: run result (collector output)\n")
-    out.append("Written by `code/collect.py` at %s from the slices with a done marker. Rung (b) computation;"
-               " nothing here is reviewed. Definitions and method: `JOBS.md`.\n" % now)
+    out.append("Written by `code/collect.py` at %s from the slices with a done marker. Finite computation;"
+               " the original record did not assert independent review. Definitions and method: `JOBS.md`.\n" % now)
     out.append("## Coverage\n")
     out.append("- Slices done: **%d of %d** (`genbg -X-3 -d6:6 -D6:6 11 11 r/10000`, r in `data/slices_done.txt`; "
                "the run takes slices in the fixed random order `data/order.txt`)." % (len(slices), MOD))
@@ -165,7 +165,7 @@ def main():
     out.append("- AM sample, extra iterations when a stalled walk was continued and escaped: %s" % fmt_hist(
         hist["ams_cont_moves_log2_hist"]))
     out.append("")
-    out.append("## Stalled frames (for the S6 proof lane)\n")
+    out.append("## Stalled frames (for the S6 written argument)\n")
     out.append("`data/stall_frames.txt`: %d lines, one per AM-sample test whose walk did not reach Phi = 2 within the"
                " short budget. Format: `slice=<r> <graph6 of B> o=<o> y=<y> phi_stall=<Phi at the stall>"
                " phi_min=<min Phi seen> moves_short=<budget> cont_moves=<extra iterations to escape, -1 if the"

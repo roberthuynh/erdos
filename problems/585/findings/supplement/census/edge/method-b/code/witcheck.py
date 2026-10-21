@@ -1,4 +1,4 @@
-"""witcheck.py -- method B re-check of lower-bound witnesses (wave8/exb).
+"""witcheck.py -- method B re-check of lower-bound witnesses (census/edge/method-b).
 
 For each graph6 file given: n, edges, bipartite (own 2-colouring), side sizes,
 min / max degree, e = 3n - 8, and three deciders of our own for "no nonempty

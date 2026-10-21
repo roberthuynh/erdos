@@ -1,6 +1,8 @@
 # R1: unbalanced bipartite gadgets behave like vertices
 
-Status: written proof, rung (a) on paper for the theorem and rung (b) for the degree-5 graph. Not a
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
+Status: written proof, written-proof evidence on paper for the theorem and computational evidence for the degree-5 graph. Not a
 project result until a Lean file passes `check.sh`. Independent review: see REVIEW-R1.md.
 
 ## Conventions

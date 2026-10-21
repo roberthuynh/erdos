@@ -1,4 +1,4 @@
-/* petal.c: QB(5) petal and tight-set analyzer (lane qb5, wave 4).
+/* petal.c: QB(5) petal and tight-set analyzer (computational checks).
  *
  * Input: graph6 lines on stdin, bipartite, n <= 24. Sides by BFS 2-colouring (graphs are connected).
  * For a C2 instance (sides s, s+1; U = smaller side) it computes, by exhaustive enumeration of all

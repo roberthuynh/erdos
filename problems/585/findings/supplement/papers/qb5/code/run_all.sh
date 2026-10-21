@@ -1,12 +1,12 @@
 #!/bin/bash
-# Reproduce every computation of PAPER.md Appendix A (lane qb5). About 2-4 minutes on one core.
-# Inputs: supply P4 as the directory containing the original qb5_n*.g6 classes; these classes are not included here. Requires nauty genbg 2.9.3.
+# Reproduce every computation of PAPER.md Appendix A (computational checks). About 2-4 minutes on one core.
+# Inputs: five original qb5_n*.g6 classes are bundled in ../original-inputs; P4 optionally overrides that directory. Requires nauty genbg 2.9.3.
 # Writes regenerated files to $OUT (default: a scratch directory) and compares them with code/data.
 set -uo pipefail
 cd "$(dirname "$0")"
 PY="${PY:-python3}"
 GENBG="${GENBG:-genbg}"
-P4="${P4:?Set P4 to the directory of original sparse QB(5) graph6 inputs}"
+P4="${P4:-$(cd "$(dirname "$0")/../original-inputs" && pwd)}"
 OUT="${OUT:-$(mktemp -d)}"
 for input in qb5_n11_5_6 qb5_n12_6_6 qb5_n13_6_7 qb5_n14_7_7 qb5_n15_7_8; do
   [ -r "$P4/$input.g6" ] || { echo "Missing required original input: $P4/$input.g6" >&2; exit 2; }

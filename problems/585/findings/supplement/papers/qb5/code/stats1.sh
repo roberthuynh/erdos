@@ -1,5 +1,5 @@
 #!/bin/bash
-# Round-2 check of conjecture A (pairs with c_p = c_q = 0 are good) over random families (lane qb5).
+# Round-2 check of conjecture A (pairs with c_p = c_q = 0 are good) over random families (computational checks).
 cd "$(dirname "$0")"
 for cfg in "4 5" "5 5" "4 6" "4 7" "5 6"; do for tw in 0 60 90; do for nu in 1 0; do
   set -- $cfg

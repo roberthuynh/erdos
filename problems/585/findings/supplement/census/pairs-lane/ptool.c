@@ -1,4 +1,4 @@
-/* ptool.c -- pairs scout tool (wave3/pairs). graph6 on stdin, n <= 30.
+/* ptool.c -- pairs scout tool (census/pairs-lane). graph6 on stdin, n <= 30.
  *
  * Modes (argv[1]):
  *   s        print graphs that are SPARSE: g(S) = 6|S| - 2e(S) >= 10 for every S with

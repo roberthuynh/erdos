@@ -13,7 +13,7 @@ variable {V : Type u} [Fintype V] {G : SimpleGraph V}
 variable {q : ℕ} {A B P Q : Finset V}
 
 /-- Modular input: a q-factor on the literal balanced original h5 band host.
-Endpoint.lean proves this proposition from the banked exact-source R801 supplier. -/
+Endpoint.lean proves this proposition from the R801 supplier. -/
 def CoreFactorSupplier (q : ℕ) : Prop :=
   ∀ {W : Type u} [Fintype W] (K : SimpleGraph W) (L R : Finset W) (F : ℤ),
     AllHCommonPinsR773.Host 5 q F K L R →

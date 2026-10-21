@@ -3,10 +3,10 @@
 # Usage: shard.sh <tag> <n> <res> <mod>
 set -u
 tag=$1; n=$2; r=$3; mod=$4
-LANE=[local path]
-SP=[local scratch folder]
-GENG=[local path]
-PY=[local path]
+LANE="${ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_SHARD_SH_LANE:?Set ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_SHARD_SH_LANE to the original LANE dependency; see REPRODUCTION-BOUNDARY.md}"
+SP="${ERDOS585_SCRATCH_DIR:?Set ERDOS585_SCRATCH_DIR to a writable scratch directory}"
+GENG="${ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_SHARD_SH_GENG:?Set ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_SHARD_SH_GENG to the original GENG dependency; see REPRODUCTION-BOUNDARY.md}"
+PY="${ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_SHARD_SH_PY:?Set ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_SHARD_SH_PY to the original PY dependency; see REPRODUCTION-BOUNDARY.md}"
 mkdir -p "$SP" "$LANE/logs/$tag"
 base="$LANE/logs/$tag/n${n}_r${r}_m${mod}"
 g6="$SP/${tag}_n${n}_r${r}_m${mod}.g6"

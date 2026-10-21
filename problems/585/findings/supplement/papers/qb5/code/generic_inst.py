@@ -1,4 +1,4 @@
-"""Generic vertices and the (a)-(d) rule on concrete instances (lane qb5, round 2; NOTES.md section 6).
+"""Generic vertices and the (a)-(d) rule on concrete instances (QB(5), version 2; NOTES.md section 6).
 
 A vertex p in A is X-generic if dem_X(A1) <= |A1 n L_A| for every p-relevant A1 in A - p with
 |A1| <= |A| - 2 (relevant: dem_X(A1) > 4 - c(A - p - A1); an irrelevant witness group can be replaced by A - p)

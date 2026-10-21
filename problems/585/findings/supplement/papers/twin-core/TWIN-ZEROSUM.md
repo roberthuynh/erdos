@@ -238,8 +238,6 @@ threshold already works with p>=1 and does not need it.
   remain unresolved.
 
 The paper proves restricted forcing, not a new avoiding-degree record or a
-general upper bound for f(n). Root decides whether its complete reviewed proof
-justifies Lean under the current forcing-only rule. No project result exists
-until the required oracle reports PASS.
+general upper bound for f(n). Written review acceptance is distinct from formal verification. A Lean claim requires an exact-source verification record for the stated theorem.
 
 Independent review: [TWIN-ZEROSUM-REVIEW.md](TWIN-ZEROSUM-REVIEW.md).

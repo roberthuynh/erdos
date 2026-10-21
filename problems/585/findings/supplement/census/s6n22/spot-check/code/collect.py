@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""collect.py (wave8/s6spot): compare every finished slice with wave6/s6n22's per-slice records.
+"""collect.py (census/s6n22/spot-check): compare every finished slice with census/s6n22's per-slice records.
 
 For each job in data/jobs.txt with a done marker:
   mine:     genbg's own count (>Z line), lines in s<r>.g6, e10cut's min-cut histogram,
             spantest's counts (E10, tests, SPAN, NO, witness failures, decoder hash mismatches)
-  original: wave6/s6n22/data/shards/<r/100>/s<r>.sum (graphs, e10, non_e10, tests, mincut_hist)
+  original: census/s6n22/data/shards/<r/100>/s<r>.sum (graphs, e10, non_e10, tests, mincut_hist)
             and s<r>.genbg.err (>Z line)
   content:  every graph6 string in the original's s<r>.stall file must occur in my s<r>.g6
 Writes data/collect.json and data/compare.md (markdown tables), prints a one-line verdict.
@@ -12,7 +12,7 @@ Writes data/collect.json and data/compare.md (markdown tables), prints a one-lin
 import json, os, re, pathlib
 
 D = pathlib.Path(__file__).resolve().parent.parent
-ORIG = D.parent.parent / "wave6" / "s6n22" / "data" / "shards"
+ORIG = D.parent / "data" / "shards"
 
 
 def kv(path):

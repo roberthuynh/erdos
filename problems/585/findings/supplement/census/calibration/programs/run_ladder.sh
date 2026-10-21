@@ -7,7 +7,7 @@
 set -u -o pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 G="$HOME/.cache/erdos585/nauty2_9_3/geng"
-P=[local path]
+P="${ERDOS585_CENSUS_CALIBRATION_PROGRAMS_RUN_LADDER_SH_P:?Set ERDOS585_CENSUS_CALIBRATION_PROGRAMS_RUN_LADDER_SH_P to the original P dependency; see REPRODUCTION-BOUNDARY.md}"
 n=$1; K=${2:-1}; J=${3:-1}
 e_hi=${4:-$(( 5 * n / 2 ))}
 e_lo=${5:-$(( (3 * n + 1) / 2 ))}

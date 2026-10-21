@@ -1,4 +1,4 @@
-"""samplecheck.py -- deciders compared on members of the real classes (wave8/exb).
+"""samplecheck.py -- deciders compared on members of the real classes (census/edge/method-b).
 
 For each level, one shard of the whole class (bipgen -P, no pruning) is
 streamed and every K-th graph is kept (about 2,000 per level).  Each sampled

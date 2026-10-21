@@ -1,4 +1,4 @@
-"""Generic-case check of the E5 pair statement (lane qb5, round 2; NOTES.md section 6).
+"""Generic-case check of the E5 pair statement (QB(5), version 2; NOTES.md section 6).
 
 Under the generic hypothesis H_gen (every demand group of size <= |A| - 2 has demand at most its number of
 in-degree-3 vertices, same in Y), a pair (p, q) in A x D is bad iff one of
@@ -15,7 +15,7 @@ import subprocess
 import sys
 from itertools import combinations
 
-GENBG = '[local path]'
+GENBG = __import__('os').environ.get('GENBG', 'genbg')
 
 
 def decode(s):

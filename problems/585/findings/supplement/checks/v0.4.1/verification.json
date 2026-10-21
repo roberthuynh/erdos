@@ -3884,7 +3884,7 @@
       },
       "limits": [
         "Exact corollary hypotheses, arithmetic, casts and original-subgraph conclusion inspected.",
-        "Targeted elaboration only; full verification below was performed by the coordinator.",
+        "Targeted elaboration only; the separate aggregate formal checks are recorded below.",
         "No novelty or human-endorsement certification."
       ]
     },
@@ -3918,7 +3918,7 @@
       },
       "limits": [
         "Engineering fixes, bounded failure controls, CI, metadata and export boundary inspected.",
-        "No mathematical proof, census or novelty adjudication; full formal verification below is coordinator evidence."
+        "No mathematical proof, census or novelty adjudication; the separate aggregate formal checks are recorded below."
       ]
     }
   },

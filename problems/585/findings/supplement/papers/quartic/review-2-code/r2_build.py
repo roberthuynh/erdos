@@ -1,4 +1,4 @@
-"""Referee 2: builder of C1 instances (D_U = 1) that carry a sub-case cut (own code).
+"""Second independent implementation: builder of C1 instances (D_U = 1) that carry a sub-case cut (own code).
 
 Layout: U = C' (0..c-1) + (U - C') (c..s-1), u1 = s-1 has degree 5; W = A (s..s+c+1) +
 (W - A) (s+c+2..2s). The cut (A, C') has k = 2, D_A = 5 + eps, e(A, U - C') = 7, u1 not in C',

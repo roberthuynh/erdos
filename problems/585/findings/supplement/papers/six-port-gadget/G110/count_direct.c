@@ -1,4 +1,4 @@
-/* Reviewer-written exhaustive row-choice counter. No memoization or library. */
+/* Independently written exhaustive row-choice counter. No memoization or library. */
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>

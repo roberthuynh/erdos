@@ -1,6 +1,6 @@
 import CompletionBasic
 
-/-! Source correspondence: COUNT-BASED-COMPLETION-PROOF-v2.md Section 2,
+/-! Source correspondence: COUNT-BASED-COMPLETION.md Section 2,
 paragraph identifying the isolated neighbor. This module proves genuine local
 prerequisites only; it DOES NOT prove isolated=low.
 

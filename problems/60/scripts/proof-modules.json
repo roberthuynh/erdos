@@ -326,7 +326,7 @@
   {
     "module": "SubsetPathCount",
     "source": "SubsetPathCount.lean",
-    "sha256": "30e7d2db7d2f351b2b86638ddee8a25dfe5e53993f6fbf5145569fabe2b1f62a",
+    "sha256": "238e0a7035c4715a4072abc65b00dcb7d881280f4e6496d89cbbf6ee89bedf60",
     "declarations": [
       "Erdos60.Statistics.two_mul_choose_two",
       "Erdos60.Statistics.codegree_eq_full_sum",
@@ -422,7 +422,7 @@
   {
     "module": "RegularVertex",
     "source": "RegularVertex.lean",
-    "sha256": "2d74086a7a030eeed1a26b92e0d2aae04e26f1b791299af00797f20d1e0c19d0",
+    "sha256": "4c89a816fca40059469e6627126772cd462c7f2e42be7563d9e3505dfc5df9e4",
     "declarations": [
       "Erdos60.Completion.exists_isolated_neighbor",
       "Erdos60.Completion.regular_vertex_structure"
@@ -480,7 +480,7 @@
   {
     "module": "RegularLowIsolation",
     "source": "RegularLowIsolation.lean",
-    "sha256": "c1a6fed301b22b115b4fb08a158ec7986fef000579f6d4e14635efed457263f9",
+    "sha256": "afd56da566a0280a0e679f2e7b4252756e61ab75939ee99b408f2707761735f7",
     "declarations": [
       "Erdos60.Completion.paired_cells_no_edges",
       "Erdos60.Completion.cross_cell_neighbor_unique",
@@ -595,7 +595,7 @@
   {
     "module": "NeighborhoodLines",
     "source": "NeighborhoodLines.lean",
-    "sha256": "8fa998c2bc1de9dc8c464b30bff664b3d23fb86ef4e3a1591c747ed94c6651db",
+    "sha256": "fd17ee47fbd4432e3db08db051846c49d7d476d8e785e0707fe8f6251b9b05eb",
     "declarations": [
       "Erdos60.Completion.cross_pairs_le_missing",
       "Erdos60.Completion.off_line_join_family",
@@ -607,7 +607,7 @@
   {
     "module": "RegularCellDeficit",
     "source": "RegularCellDeficit.lean",
-    "sha256": "510e8b7730c46fd7f078d1eac57b5a4d0a19ec67b796fccb0c50b57932dde15f",
+    "sha256": "c31e22b55075649394bb05179f35d57978b53e949d8666b3e35a47c7f2900420",
     "declarations": [
       "Erdos60.Completion.mem_cellFinset",
       "Erdos60.Completion.cell_neighbor_decomposition",
@@ -646,7 +646,7 @@
   {
     "module": "RegularPopulation",
     "source": "RegularPopulation.lean",
-    "sha256": "f3841b8f2cd091ad4f715cf6168bedc2bdfed6a46c8a10008accda541cb47a54",
+    "sha256": "111c2c176a36ab97bebf06eaa4d92761d34870a6b522ca1db97cfc36e3656e5a",
     "declarations": [
       "Erdos60.Completion.local_neighbor_card_le_one",
       "Erdos60.Completion.many_regular_neighbors"
@@ -655,7 +655,7 @@
   {
     "module": "FullRowIntersection",
     "source": "FullRowIntersection.lean",
-    "sha256": "51d2fbc94157deb7a2baeb8429f38f18906fc101670f4e4ea31983acd40ad1c8",
+    "sha256": "99b085d66d633a4d62ef46057f8d057827573221c052b9bec2f3fc7ec4717844",
     "declarations": [
       "Erdos60.Completion.disjoint_rows_regular_neighbor_low",
       "Erdos60.Completion.full_rows_intersect_of_regular_count",
@@ -742,7 +742,7 @@
   {
     "module": "NeighborhoodAssignment",
     "source": "NeighborhoodAssignment.lean",
-    "sha256": "05bc726b5368112b957730172970a7fd25e4501c4682c5493573249bbf4a09c9",
+    "sha256": "a04f2ed161a314ccae43d2821ba5e16a3168a2c768286e22c92af1cbfc07e46f",
     "declarations": [
       "Erdos60.Completion.nonfeasible_pair_lines_missing",
       "Erdos60.Completion.small_pencil_dominant",
@@ -760,7 +760,7 @@
   {
     "module": "EmbeddedCoreCompletion",
     "source": "EmbeddedCoreCompletion.lean",
-    "sha256": "47780e75fe89215beae174b60de8dd9ea062406fb2f90ab3a038b21f60fe75e9",
+    "sha256": "6702494f6d004a7434db666d8f1d3d1ff36d22de0a60d6ab1cf22213dcc5a57e",
     "declarations": [
       "Erdos60.Completion.embedded_good_rows_complete_graph"
     ]
@@ -815,7 +815,7 @@
   {
     "module": "ParallelCounts",
     "source": "ParallelCounts.lean",
-    "sha256": "329311e4b07e5abfb9b8f6076c1b730370b4fae5f2d887240cefefc46d1cd395",
+    "sha256": "8d1bd4fa652e8a93e2052fcf02d209c3b9bb9de60c1c0700d65adad785fd8cf2",
     "declarations": [
       "Erdos60.Embedding.IndexedDesign.outside_meeting_count",
       "Erdos60.Embedding.IndexedDesign.outside_parallel_count_add",

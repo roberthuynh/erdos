@@ -29,7 +29,7 @@ lemma quota_host (host : Host h q j ξ G A B) : AllHQuotaNonstrict.Host h q j ξ
   omega
 
 open Classical in
-/-- The literal variable-offset original shore scar, using banked incidence transport. -/
+/-- The literal variable-offset original shore scar, using incidence transport. -/
 lemma original_scar (host : Host h q j ξ G A B) :
     deficiency (2*(q:ℤ)-2) G B A = (h:ℤ)*q-ξ-((q:ℤ)-1)*j := by
   exact (quota_host host).to_data.deficient

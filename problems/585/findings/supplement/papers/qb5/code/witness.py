@@ -1,4 +1,4 @@
-"""Demand witnesses for bad pairs (lane qb5, round 2; NOTES.md section 6).
+"""Demand witnesses for bad pairs (QB(5), version 2; NOTES.md section 6).
 
 For an E5 block pair given with the pairsearch.c vertex layout (C = 0..nc-1, A next nc+2, B next nb,
 D next nb+2) or found by min cut, compute dem_X, dem_Y and, for a pair (p, q), the maximum of

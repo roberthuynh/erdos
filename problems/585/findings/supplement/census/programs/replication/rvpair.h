@@ -1,5 +1,5 @@
-/* rvpair.h -- reviewer's independent pair test (SMS-CENSUS-REVIEW). Written from scratch; it does
- * not reuse any code from the lane's gen585.c.
+/* rvpair.h -- independent pair test (SMS-CENSUS-REVIEW). Written from scratch; it does
+ * not reuse any code from the original gen585.c.
  *
  * A pair is two edge-disjoint cycles C1, C2 with V(C1) = V(C2) = S. Every vertex of S then has
  * degree >= 4 in G[S], so |S| >= 5 and S lies inside the 4-core of G.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Referee's second check of PAPER2 Lemma 4.2, on the genbg isomorphism classes.
+"""Independent second check of PAPER2 Lemma 4.2, on the genbg isomorphism classes.
 
 Input: graph6 lines from `genbg -q -d1:1 -D3:3 na nd 7:7` (first na vertices = A, rest = D).
 Decision for fixed (p, q) by the edge-cover formula (Gallai/Konig), not by search:

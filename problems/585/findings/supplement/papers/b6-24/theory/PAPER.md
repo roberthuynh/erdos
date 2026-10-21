@@ -1,6 +1,8 @@
 # Rigid sets in sparse bipartite instances: an LP criterion, a classification, and no rigid set below 36 vertices
 
-Historical note, October 5, 2026. Frozen for review (SHA-256 in `FROZEN.sha256`). Written
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with REVIEW.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
+Historical note, October 5, 2026. Frozen for review (SHA-256 in the omitted historical receipt `FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json)). Written
 proofs plus computer checks. Not reviewed. No Lean, no `check.sh`. Evidence categories: the items marked
 "proof" in §0 are (a), some of them resting on the censuses named there; the checks of Appendix A are (b).
 Lemma B, Conjecture M*, Conjecture M*_1, Lemma 2EC' and (HD-OP) are open in this paper.
@@ -27,8 +29,8 @@ Lemma B, Conjecture M*, Conjecture M*_1, Lemma 2EC' and (HD-OP) are open in this
 | Lemma 7.3 | n ≤ 21: a forced set excluding an edge at a port needs n = 21; for n = 19 no edge at a port is excluded | proof |
 | (HD-OP) | connected bipartite 4-regular, no 2-edge cut and no non-trivial one-passage 4-cut implies Hamilton-decomposable | open (implied by H22 for n ≤ 22) |
 
-"PAPER" below is `findings/supplement/papers/pairs/PAPER.md` (frozen 6fad9b43…, refereed ACCEPT WITH FIXES in
-`findings/supplement/papers/pairs/REVIEW.md`). "C1-PAPER" is `findings/supplement/papers/quartic/C1-PAPER.md` (refereed twice).
+"PAPER" below is `findings/supplement/papers/pairs/PAPER.md` (frozen 6fad9b43…, AI-reviewed ACCEPT WITH FIXES in
+`findings/supplement/papers/pairs/REVIEW.md`). "C1-PAPER" is `findings/supplement/papers/quartic/C1-PAPER.md` (AI-reviewed twice).
 
 ## 1. Setting, and the orientation of a 4-factor
 
@@ -168,7 +170,7 @@ n < 36, then X has no rigid set. Moreover no edge of X lies outside every 4-fact
 set.
 
 *Proof.* By Proposition 4.1 a rigid set gives S with g(S) = g(V − S) = 10 and both sides of size at
-least 3. PAPER Proposition 5 (with the referee's fix |S| ≥ 3) and census L5 give each side a 4-core with
+least 3. PAPER Proposition 5 (with the AI review's fix |S| ≥ 3) and census L5 give each side a 4-core with
 at least 18 vertices, so n ≥ 36. Cases 1 and 2 of the proof of Proposition 4.1 produce the same kind of
 set S from an edge in no 4-factor and from a (5,1) set (a U0 set), which gives the last sentence. ∎
 
@@ -238,7 +240,7 @@ with a bad set some atom admits a cycle Z as above, then Y has a 4-factor with n
 T drops by at least 1, no term appears, none grows). Φ is a nonnegative integer, so the rule reaches
 Φ = 0. ∎
 
-Evidence (rung (b), the rigid-set theory): M* had no violation in 2,727 tests (exp9: 1,000 at 4-factors along
+Evidence (computational evidence, the rigid-set theory): M* had no violation in 2,727 tests (exp9: 1,000 at 4-factors along
 the repair dynamics of 135 necklace instances; exp11: 1,727 at 4-factors reached by random
 alternating-cycle walks in 204 necklace instances; n = 16 to 50), and no atom ever lacked a cycle Z.
 exp8 ran the rule to the end on 362 necklace instances; Φ decreased at every step and every run

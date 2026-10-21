@@ -1,0 +1,40 @@
+../original-inputs/qb5_n11_5_6.g6
+graphs 2 C2 2 E5 0 other 0 sparsity_fail 0
+C2: allWbad 0 portsbad 0; W-vertices good 8 bad 4
+E5: without 4-factor 0
+core: u0 instances 1, all W off N(u0) bad in 0; u1u2 instances 1, all ports bad in 0
+alpha petals: graphs 0, union kappa != 1 in 0; alpha pairs (1,1) 0 (2,0) 0 (0,2) 0 other 0; graphs with a split 0
+tight sets (g=12, 3<=|S|<=n-1) by kappa -2..2: 1 0 4 0 0; graphs with a 2-block 1
+bad W-vertex type sets: {gamma}:4
+../original-inputs/qb5_n12_6_6.g6
+graphs 13 C2 0 E5 13 other 0 sparsity_fail 0
+C2: allWbad 0 portsbad 0; W-vertices good 0 bad 0
+E5: without 4-factor 0
+core: u0 instances 0, all W off N(u0) bad in 0; u1u2 instances 0, all ports bad in 0
+alpha petals: graphs 0, union kappa != 1 in 0; alpha pairs (1,1) 0 (2,0) 0 (0,2) 0 other 0; graphs with a split 0
+tight sets (g=12, 3<=|S|<=n-1) by kappa -2..2: 0 15 4 15 0; graphs with a 2-block 0
+bad W-vertex type sets:
+../original-inputs/qb5_n13_6_7.g6
+graphs 29 C2 29 E5 0 other 0 sparsity_fail 0
+C2: allWbad 0 portsbad 0; W-vertices good 167 bad 36
+E5: without 4-factor 0
+core: u0 instances 9, all W off N(u0) bad in 0; u1u2 instances 20, all ports bad in 0
+alpha petals: graphs 0, union kappa != 1 in 0; alpha pairs (1,1) 0 (2,0) 0 (0,2) 0 other 0; graphs with a split 0
+tight sets (g=12, 3<=|S|<=n-1) by kappa -2..2: 9 8 73 0 0; graphs with a 2-block 9
+bad W-vertex type sets: {gamma}:36
+../original-inputs/qb5_n14_7_7.g6
+graphs 818 C2 0 E5 818 other 0 sparsity_fail 0
+C2: allWbad 0 portsbad 0; W-vertices good 0 bad 0
+E5: without 4-factor 0
+core: u0 instances 0, all W off N(u0) bad in 0; u1u2 instances 0, all ports bad in 0
+alpha petals: graphs 0, union kappa != 1 in 0; alpha pairs (1,1) 0 (2,0) 0 (0,2) 0 other 0; graphs with a split 0
+tight sets (g=12, 3<=|S|<=n-1) by kappa -2..2: 0 1002 489 1002 0; graphs with a 2-block 0
+bad W-vertex type sets:
+../original-inputs/qb5_n15_7_8.g6
+graphs 2895 C2 2895 E5 0 other 0 sparsity_fail 0
+C2: allWbad 0 portsbad 3; W-vertices good 20520 bad 2640
+E5: without 4-factor 0
+core: u0 instances 660, all W off N(u0) bad in 0; u1u2 instances 2235, all ports bad in 0
+alpha petals: graphs 0, union kappa != 1 in 0; alpha pairs (1,1) 0 (2,0) 0 (0,2) 0 other 0; graphs with a split 0
+tight sets (g=12, 3<=|S|<=n-1) by kappa -2..2: 660 607 7027 28 3; graphs with a 2-block 660
+bad W-vertex type sets: {gamma}:2640

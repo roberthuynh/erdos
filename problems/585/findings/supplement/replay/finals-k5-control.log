@@ -1,0 +1,2 @@
+FINAL lines: 1
+{"n": 5, "m": 10, "mindeg": 4, "maxdeg": 4, "brute": "PAIR (certificate valid: valid pair on 5 vertices)", "oracle": "PAIR (certificate valid: valid pair on 5 vertices)", "shape_ok": true, "counterexample": false} edges: [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]

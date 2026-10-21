@@ -1,4 +1,4 @@
-/* s6n22.c -- S6 test over a stream of bipartite 6-regular graphs (wave6/s6n22).
+/* s6n22.c -- S6 test over a stream of bipartite 6-regular graphs (census/s6n22).
  *
  * Input (stdin): graph6 lines, each a simple bipartite 6-regular graph B on 2m vertices with classes
  * A = 0..m-1 and B = m..2m-1 (genbg order). Lines starting with '>' are skipped.

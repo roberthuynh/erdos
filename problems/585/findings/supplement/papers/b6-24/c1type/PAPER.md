@@ -1,13 +1,17 @@
 # The C1 type at a port: no smallest W1b counterexample on 19, 21 or 23 vertices
 
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with REVIEW.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
+> Export clarification (2026-10-19): Census provenance correction from c1type/REVIEW.md F1: the pair census F2 itself used geng -b + pairc (one method). The second method for the smallest-counterexample class is the separate E4/C1 census; a quartic-subgraph replication is not a second pair census. Other counts and verdicts below are dated historical records, not fresh verification.
+
 Historical note, October 5, 2026. Written proofs plus SAT cross-checks. Not reviewed.
 No Lean, no `check.sh`. Evidence categories: Theorem C and Corollary C are (a), resting on the
 censuses listed in §8; the checks of §7 are (b).
 
 Sources. "THEORY" is `findings/supplement/papers/b6-24/theory/PAPER.md` (frozen, SHA-256 521a1139…), "ADD-B" is
 `findings/supplement/papers/b6-24/theory/ADDENDUM-B.md` (frozen, 555b8ef3…), "PAIRS" is `findings/supplement/papers/pairs/PAPER.md` (frozen 6fad9b43…,
-refereed ACCEPT WITH FIXES; Prop 5 is used with the referee's fix |S| ≥ 3), "C1P" is
-`findings/supplement/papers/quartic/C1-PAPER.md` (Lemma 4.4 refereed ACCEPT twice), "SCOUT" is `findings/supplement/papers/pairs/SCOUT.md` (censuses H22
+AI-reviewed ACCEPT WITH FIXES; Prop 5 is used with the AI review's fix |S| ≥ 3), "C1P" is
+`findings/supplement/papers/quartic/C1-PAPER.md` (Lemma 4.4 AI-reviewed ACCEPT twice), "SCOUT" is `findings/supplement/papers/pairs/SCOUT.md` (censuses H22
 and L5). Paths beginning `findings/supplement/` are relative to the #585 package.
 
 ## 0. Results
@@ -343,7 +347,7 @@ pair can have 12 or more vertices; (F3) also stops at |S| ≤ 16. And (K) needs 
 not available (H24 is estimated at 50-100 core-hours in `findings/supplement/papers/b6-24/theory/N.md`). So n = 23 is where this
 route stops; going further is the S6 investigation's all-sizes question.
 
-## 7. Computer checks (rung (b))
+## 7. Computer checks (computational evidence)
 
 All in `findings/supplement/papers/b6-24/c1type/code/`. Python is `~/.cache/erdos585/venv/bin/python` (pysat CaDiCaL 1.5.3),
 `pairc` is `<PAIR_TEST_EXECUTABLE>`.
@@ -380,14 +384,14 @@ All in `findings/supplement/papers/b6-24/c1type/code/`. Python is `~/.cache/erdo
 
 | Item | Used for | Status |
 |---|---|---|
-| PAIRS Lemma 1 (smallest counterexample is sparse E4 or C1, δ ≥ 4) | all | refereed, ACCEPT |
-| PAIRS Example 4 (K_{4,4} has a pair) | all | refereed |
-| C1P Lemma 4.4 (bad ports carry deficiency ≤ 2) | all | refereed twice, ACCEPT |
+| PAIRS Lemma 1 (smallest counterexample is sparse E4 or C1, δ ≥ 4) | all | AI-reviewed, ACCEPT |
+| PAIRS Example 4 (K_{4,4} has a pair) | all | AI-reviewed |
+| C1P Lemma 4.4 (bad ports carry deficiency ≤ 2) | all | AI-reviewed twice, ACCEPT |
 | Census F2 (no counterexample with n ≤ 18) | Corollary C | two methods |
 | 5 + 5 pair-free census (none with ≥ 22 edges) | all | one method (genbg + pairc), re-run in THEORY |
-| Census H18, H20 | n = 19, 21 | two methods (SCOUT §2.3, referee) |
+| Census H18, H20 | n = 19, 21 | two methods (SCOUT §2.3, AI review) |
 | Census H22 | n = 23; ADD-B Corollary B | one method |
-| PAIRS Proposition 5 with census L5 (via F3) | n = 23 only | Prop 5 refereed with fix; L5 one method, referee spot check |
+| PAIRS Proposition 5 with census L5 (via F3) | n = 23 only | Prop 5 AI-reviewed with fix; L5 one method, AI review spot check |
 | THEORY Lemma 1.1 and Proposition 6.6; ADD-B Lemmas B1, B3, (D1)-(D3) | all | unreviewed (frozen for review) |
 | ADD-B Corollary B (E4 type, n ≤ 22) | Corollary C | unreviewed (frozen) |
 | Theorem C (this paper) | | unreviewed; SAT cross-checks in §7 for every shape except K_{4,4} − e at n = 23 |

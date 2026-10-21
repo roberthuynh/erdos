@@ -87,7 +87,7 @@ lemma resource_budget_seven {I : Type u} [DecidableEq I] (F : Finset I)
   norm_num [resourcePotential] at hh
   exact hh
 
-/-- The requested literal Nat-resource ledger, including empty and arbitrary finite families. -/
+/-- The literal Nat-resource identity, including empty and arbitrary finite families. -/
 theorem two_scar_int {I : Type u} [DecidableEq I] (F : Finset I)
     (d delta : I → ℤ) (B scar : I → ℕ)
     (hdelta : ∀ i ∈ F, 0 ≤ delta i)

@@ -1,4 +1,4 @@
-/* klsearch.c (lane qb5, round 3; NOTES.md section 7).
+/* klsearch.c (QB(5), version 3; NOTES.md section 7).
  *
  * Local search for a 2-block X (|A| = na, |C| = nc = na - 2, every C-vertex of degree 6 into A, all
  * in-block degrees d_a >= 3, sparse inside the block, admissible: #{d_a = 3} <= 7) and a multiset m on A

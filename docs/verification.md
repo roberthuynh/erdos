@@ -11,6 +11,8 @@ Evidence belongs to an exact statement and version. The collection does not assi
 
 For #585, read the [current inventory and historical checks](../problems/585/README.md#build), [v0.4.1 record](../problems/585/findings/V0.4.1.md) and [result index](../problems/585/RESULTS.md). The stated inventory is 78 registered declarations, 77 whole-file oracle checks and 438 configured custom modules. A historical receipt is not a new run after relocation.
 
+The collection scripts require Python 3.11 or later. Individual packages retain their pinned Lean environments.
+
 From the collection root, use:
 
 ```bash
@@ -22,7 +24,7 @@ The `docs` mode checks collection/package documentation and metadata. It does no
 
 For individual package commands, change into `problems/585/` and use its existing instructions. The root `./check.sh <file> <declaration>` remains a compatibility entrypoint for #585. That wrapper does not check any other problem.
 
-A directory migration requires fresh verification at final paths. Unchanged source hashes preserve identity, but do not establish a successful relocated build. Historical finite-search coverage and human-review limitations retain their original scope unless a new check explicitly changes them.
+Accepted Lean evidence is reused when the theorem statements, proof terms, transitive imports, pinned toolchain and dependencies, axiom restrictions and verified coverage remain unchanged. The release checks authenticate the evidence and compare its mathematical inputs with the exported package. Documentation, directory, public-base and CI changes alone do not require another proof run. Comment edits require a comparison that preserves executable Lean text. Changed mathematical inputs require verification of the affected proofs and dependent scope. Reuse does not claim a new relocated or hosted build. Historical finite-search coverage and human-review limitations retain their recorded scope.
 
 For [#60](../problems/60/README.md), docs mode checks document identities and links. Full mode also builds its separate Lean package, checks 519 registered types and axiom closures, runs six main-theorem oracles, and replays all 82 configured modules. Its [verification record](../problems/60/VERIFICATION.md) distinguishes the completed resumed gate from a single uninterrupted run, and preserves the exact theorem scope. #585 and #60 have separate proof environments and verification.
 
@@ -32,8 +34,16 @@ For [#85](../problems/85/README.md), full mode checks the complete projective-in
 
 The historical four-thirds inventory does not cover the current #643 coefficient-one theorem. Its separate combined proof package passed its exact complete 126-source check, including general design existence and residue-class extremal/forcing equalities. The 23 named probes and 126 kernel replay chunks are scoped in its [verification record](../problems/643/VERIFICATION.md). Human mathematical review remains outstanding.
 
-## Continuous integration platform
+## Continuous integration
 
-The workflow checks collection documentation on Ubuntu and selects `macos-15` for #643's full proof job. Before that job runs, it requires Darwin arm64, Python 3.11 or later and GNU coreutils `timeout`. Other problem jobs retain their existing Ubuntu environment. The combined #643 proof package checks the exact supplied Lean and dependency artifact identities; the platform selection does not relax those checks.
+Pull requests and pushes to `main` check the current catalogue, documentation, export boundary and mathematical input bindings. Feature-branch pushes do not start a duplicate run. Each Lean package supplies `verification/accepted-mathematical-inputs.json`, which records the exported proof inputs and the coverage of accepted evidence.
 
-No hosted workflow result is supplied for this source snapshot. The recorded #643 verification applies to the exact locally checked macOS arm64 environment and pinned artifacts. A hosted run must produce its own logs and result; selecting a runner or passing workflow controls does not certify the mathematics.
+To check one package's binding from the collection root:
+
+```bash
+python3 -B scripts/check_proof_receipts.py --problem 585 --output /tmp/erdos-585-bindings
+```
+
+`MATCH` means the current files and declarations agree with the published binding. The release maintainer authenticates the underlying complete evidence before accepting the binding. A self-consistent JSON file or a successful binding check alone does not establish a proof's correctness or the evidence's origin. The automatic jobs execute no Lean builds, theorem probes, axiom audits or kernel replays.
+
+The manual `workflow_dispatch` action defaults to binding checks. Choosing `mode=full` explicitly requests the full reproduction commands, with an optional problem ID. Full reproduction for #643 selects `macos-15` and requires Darwin arm64, Python 3.11 or later and GNU coreutils `timeout`; other packages use Ubuntu. The combined #643 proof checks its exact Lean and dependency artifact identities. Local accepted evidence does not claim a new hosted proof run. Hosted content and binding results have their own logs and recorded commit identities.

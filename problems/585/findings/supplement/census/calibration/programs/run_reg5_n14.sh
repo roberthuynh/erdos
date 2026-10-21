@@ -5,7 +5,7 @@
 set -u -o pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 G="$HOME/.cache/erdos585/nauty2_9_3/geng"
-P=[local path]
+P="${ERDOS585_CENSUS_CALIBRATION_PROGRAMS_RUN_REG5_N14_SH_P:?Set ERDOS585_CENSUS_CALIBRATION_PROGRAMS_RUN_REG5_N14_SH_P to the original P dependency; see REPRODUCTION-BOUNDARY.md}"
 OUT="$HERE/data/reg5-n14"
 LOG="$HERE/logs/reg5-n14"
 mkdir -p "$OUT" "$LOG"

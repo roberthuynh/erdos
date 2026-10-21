@@ -1,5 +1,5 @@
-/* h4.h -- method B decider (wave8/exb): does a graph have a nonempty
-   4-regular subgraph?  Written from scratch for this lane; it shares no
+/* h4.h -- method B decider (census/edge/method-b): does a graph have a nonempty
+   4-regular subgraph?  Written from scratch for this investigation; it shares no
    code with method 1 (q4core.h, q4prune_bg.c, genbg_q4).
 
    Graphs have n <= 32 vertices.  adj[u] is a bit mask: bit w is set iff

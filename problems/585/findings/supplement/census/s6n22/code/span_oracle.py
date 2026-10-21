@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Spanning pair (two edge-disjoint Hamilton cycles) by SAT with lazy connectivity cuts.
 
-Same encoding as the wildcard lane's pair_oracle.py, with every vertex forced into the support,
+Same encoding as the original pair_oracle.py, with every vertex forced into the support,
 so each color class is a 2-factor and the lazy cuts make each a single Hamilton cycle. Written
 for wave4/va6 to test S6 (B - o - y has two edge-disjoint Hamilton cycles for every port y).
 

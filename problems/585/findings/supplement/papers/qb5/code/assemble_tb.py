@@ -1,4 +1,4 @@
-"""Assemble probe instances: 2-block T + block B + a cut graph (lane qb5).
+"""Assemble probe instances: 2-block T + block B + a cut graph (computational checks).
 
 Usage: python assemble_tb.py TU TW BU BW < cuts.g6 > out.g6
 T = K_{TW,TU} (T_W saturated when TU = 6), B = K_{BU,BW} (B_U saturated when BW = 6).

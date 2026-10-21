@@ -3,9 +3,9 @@
 # Part A (one worker): every graph on 8 vertices and the ladder levels vs pairsat.py/brute.py; the
 # check-1 sets. Part B (glue18.sh): the 120 known 18-vertex pair-free graphs, both encodings.
 set -u
-LANE=[local path]
-PY=[local path]
-SP=[local scratch folder]
+LANE="${ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_XCHECK_SH_LANE:?Set ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_XCHECK_SH_LANE to the original LANE dependency; see REPRODUCTION-BOUNDARY.md}"
+PY="${ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_XCHECK_SH_PY:?Set ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_XCHECK_SH_PY to the original PY dependency; see REPRODUCTION-BOUNDARY.md}"
+SP="${ERDOS585_SCRATCH_DIR:?Set ERDOS585_SCRATCH_DIR to a writable scratch directory}"
 L=$LANE/logs/xcheck
 mkdir -p "$L"
 for n in 3 4 5 6 7 8; do

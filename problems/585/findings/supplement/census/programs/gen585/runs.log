@@ -1,4 +1,4 @@
-# runs.log: commands and outcomes (sms-census lane). Times are wall-clock seconds on one core.
+# runs.log: commands and outcomes for the recorded census. Times are wall-clock seconds on one core.
 2026-10-04 02:34:24 built nauty 2.8.9 locally (sha256 c97ab42b...4ee) in nauty2_8_9/; gen585.c compiled with clang -O3 -DWORDSIZE=32.
 2026-10-04 02:34:24 test_pair.py 400: 0 disagreements vs pair_oracle/brute (233 pair, 167 nopair).
 2026-10-04 02:34:24 positive control (e>=3n-5, (3,6)-proper sparsity): finals n=7:1 (K2 v C5), n=8:2, n=9:3, n=10:11.

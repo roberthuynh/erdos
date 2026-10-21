@@ -1,4 +1,4 @@
-"""Refined covering model (lane qb5, round 3; NOTES.md section 7).
+"""Refined covering model (QB(5), version 3; NOTES.md section 7).
 
 M-form: the pair statement holds iff some 4-set M of cut edges has I_X(M) and I_Y(M) nonempty.
 Proved (NOTES 7.3): M is X-bad only if

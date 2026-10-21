@@ -1,9 +1,11 @@
-# Referee report on findings/supplement/papers/b6-24/c1type/PAPER.md (Theorem C: the C1 type at n = 19, 21, 23)
+# AI review report on findings/supplement/papers/b6-24/c1type/PAPER.md (Theorem C: the C1 type at n = 19, 21, 23)
+
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
 
 AI review, October 5, 2026. Status: FINAL.
 
 Paper: `findings/supplement/papers/b6-24/c1type/PAPER.md`, SHA-256 `df13580087f66a2c216ced5377c743133097f1b1990b13513cf3559b20c5f24d`.
-- Start of review (19:06): `shasum -a 256 -c FROZEN.sha256` gives `PAPER.md: OK`.
+- Start of review (19:06): the omitted historical receipt `shasum -a 256 -c FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json) gives `PAPER.md: OK`.
 - End of review: see §6.
 
 Method. Every step of PAPER §1-§5 was re-derived by hand before any code was written (log:
@@ -35,7 +37,7 @@ needed), are UNSAT throughout:
 - method 1: F[B] runs over all 208 classes of bipartite graphs on 7 + 7 vertices with degrees 4 except
   one vertex of degree 3 per class (nauty genbg 2.9.3; list checked by own code), × deg w ∈ {4, 5}:
   416/416 UNSAT, controls without (★) 416/416 SAT;
-- method 2 (no genbg): F[B] free, split on symmetry as the ADDENDUM-B referee did (an E0H edge at y1,
+- method 2 (no genbg): F[B] free, split on symmetry as the ADDENDUM-B AI review did (an E0H edge at y1,
   WLOG to p' or to b1) with lex-leader constraints for the residual group: all four (case, deg w) models
   UNSAT; the hardest one (case y1–b1, deg w = 5) was finished by a further complete split on the
   position of u1 (11/11 UNSAT); controls without (★) SAT.
@@ -44,7 +46,7 @@ No mathematical error was found. The fixes are about provenance and status words
 
 ## 2. Hand re-derivation (summary; details in review/LOG.md)
 
-- **§1.** C1P Lemma 4.4 (refereed ACCEPT in `findings/supplement/papers/quartic/C1-REVIEW.md` and `findings/supplement/papers/quartic/C1-REVIEW-3.md`)
+- **§1.** C1P Lemma 4.4 (AI-reviewed ACCEPT in `findings/supplement/papers/quartic/C1-REVIEW.md` and `findings/supplement/papers/quartic/C1-REVIEW-3.md`)
   needs only a sparse C1 instance with D(U) = 1, which X is (PAIRS Lemma 1); bad ports carry deficiency
   ≤ 2 < 7 = D(W), so a good port w exists. D_Y(q) = [q ∈ N(w)] + [q = u1] on Q = U, so at most one
   vertex of Q has D_Y = 2 and D_Y(Z) ≤ |Z| + 1 (F2); D_Y(Q) = D_Y(P) = 1 + deg w. (1.1) is THEORY
@@ -148,7 +150,7 @@ SAT at deg w = 5 in the relaxation, as stated), `sat23_y.out` (64 UNSAT, K_{4,4}
   generator and two pair testers.
 - H18, H20, H22 (SCOUT §2.3): no non-HD graph without a 2-edge cut at a = 9, 10, 11; PAIRS REVIEW §3
   reproduced a ≤ 10 with geng and its own HD tester; a = 11 is one method.
-- L5 (SCOUT §2.4): one method, spot-checked by the PAIRS referee at 5 + 5 to 6 + 7; used here only for
+- L5 (SCOUT §2.4): one method, spot-checked by the PAIRS AI review at 5 + 5 to 6 + 7; used here only for
   n = 23 through (F3).
 - C1P Lemma 4.4: ACCEPT in `findings/supplement/papers/quartic/C1-REVIEW.md` and in `findings/supplement/papers/quartic/C1-REVIEW-3.md`.
 - THEORY Lemma 1.1, Prop 6.6, ADD-B Lemmas B1, B3, (D1)-(D3), Corollary B: ACCEPT in
@@ -162,8 +164,8 @@ SAT at deg w = 5 in the relaxation, as stated), `sat23_y.out` (64 UNSAT, K_{4,4}
   "two methods" without naming them, and the only replication on record under the name F2 does not
   decide pairs: unpublished historical census-status note row F2-rep (`findings/supplement/census/quartic/CENSUS.md` Job 1, geng_q4/genbg_q4) decides 4-regular
   subgraphs (CENSUS.md line 70: "F2(n): bipartite, δ ≥ 4, Δ ≤ 6, e ≥ 3n − 4 ⇒ 4-regular subgraph").
-  The pair census F2 itself is one method (geng -b + pairc, `585-fable/unpublished historical research note` lines 12-13,
-  `unpublished historical research note` lines 28-33); the PAIRS referee said the same (`findings/supplement/papers/pairs/REVIEW.md` §1, Lemma
+  The pair census F2 itself is one method (geng -b + pairc, `unpublished historical research note` lines 12-13,
+  `unpublished historical research note` lines 28-33); the PAIRS AI review said the same (`findings/supplement/papers/pairs/REVIEW.md` §1, Lemma
   1). A genuine second method exists for what Corollary C needs (no smallest counterexample with
   n ≤ 18): by PAIRS Lemma 1 such an X is a sparse E4 instance with a ≤ 9 or a C1 instance with
   s ≤ 8, δ ≥ 4, and SCOUT §2.1 (genbg + ptool) finds two edge-disjoint Hamilton cycles in every E4
@@ -175,7 +177,7 @@ SAT at deg w = 5 in the relaxation, as stated), `sat23_y.out` (64 UNSAT, K_{4,4}
 - **F2 (status, §8 row "5 + 5 pair-free census").** "one method (genbg + pairc), re-run in THEORY" →
   "two methods (genbg + pairc; THEORY REVIEW's own generator and pair testers)".
 - **F3 (status, §8 rows "THEORY Lemma 1.1 and Proposition 6.6; ADD-B Lemmas B1, B3, (D1)-(D3)" and
-  "ADD-B Corollary B").** "unreviewed (frozen ...)" → "refereed ACCEPT (findings/supplement/papers/b6-24/theory/REVIEW.md 1a, 1d,
+  "ADD-B Corollary B").** "unreviewed (frozen ...)" → "AI-reviewed ACCEPT (findings/supplement/papers/b6-24/theory/REVIEW.md 1a, 1d,
   2a, 2b)".
 - **F4 (record, §0 "Where to check first" item (4), §7 last bullet, §8 last row).** "the one shape
   without a SAT cross-check" / "This shape rests on the written proof alone" are superseded: this review
@@ -203,5 +205,5 @@ Reproduction (`review/code/`, Python `~/.cache/erdos585/venv/bin/python`): `fb{5
 code was added to `c1ref.py`; the symA constraints are the same now (only the names of the
 auxiliary lex variables changed).
 
-End of review: `shasum -a 256 -c FROZEN.sha256` gives `PAPER.md: OK` (see LOG.md, final entry). PAPER.md
+End of review: the omitted historical receipt `shasum -a 256 -c FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json) gives `PAPER.md: OK` (see LOG.md, final entry). PAPER.md
 was not edited.

@@ -67,7 +67,7 @@ comparison are unchanged from PAPER.md. The 6/18-cycle classification in
 that paper remains valid for its narrower single-component move and is
 not asserted for this larger simultaneous-swap family by this addendum.
 
-Suggested faithful formal endpoint, only after review and the source gate:
+Candidate formal endpoint (no formal verification is established by this note):
 prove induced closure of actual color subgraphs, connect actual proper
 two-class recoloring and actual cycle edges to at most three canonical
 colors, then deduce faithful pair exclusion and the explicit growing

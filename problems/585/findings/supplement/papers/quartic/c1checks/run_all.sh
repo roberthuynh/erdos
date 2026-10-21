@@ -1,7 +1,8 @@
 #!/bin/bash
 # Reproduce Appendix A of C1-PAPER.md. Run from this directory: bash run_all.sh wave1; bash run_all.sh wave2
 # Every python run is under timeout 240. Each writes out_*.json and log_*.txt (last line: exit code).
-PY=[temporary path]
+PY="${PY:-python3}"
+cd "$(dirname "$0")"
 case "${1:-}" in
   wave1)
     for i in 0 1 2 3 4 5; do

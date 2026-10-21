@@ -1,5 +1,7 @@
 # G110: the distinct-port quartic question remains open in this pass
 
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with G110-REVIEW.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
 October 4, 2026. Bounded final scout. Status: conditional paper reductions and a
 small independently counted positive control; no project oracle result.
 

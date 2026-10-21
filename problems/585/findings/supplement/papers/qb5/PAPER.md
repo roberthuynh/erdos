@@ -1,11 +1,14 @@
 # QB(5): every sparse C2 instance has a good vertex, so a minimal counterexample is E5
 
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
+> Export clarification (2026-10-19): Historical argument, with editorial corrections in this export. Original review/hash statements identify earlier bytes; see PROVENANCE.json at the supplement root. Current scope must be read with REVIEW4.md, REVIEW3.md, REVIEW.md, REVIEW2.md. Historical “not reviewed” or pending labels below describe the original snapshot, not a new verification result.
+
 AI-written historical note, October 5, 2026. Status: frozen for independent review (SHA-256 in
-`FROZEN.sha256`). Written proofs with computational checks of the identities, of the minimality-free
+the omitted historical receipt `FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json)). Written proofs with computational checks of the identities, of the minimality-free
 core lemma and of every certificate instance (Appendix A). Not reviewed. No Lean, no `check.sh`, so
-nothing here is a project-oracle PASS. Rungs: (a) for Lemmas 2.1-6.4 and Theorems 5.1, 6.1, 7.1 (on
-paper); (b) for the instances of §8 and Appendix A. Ladder position: rung 2 (a reduction of QB(5) to an
-exactly stated residual), not rung 1.
+nothing here is a project-oracle PASS. Evidence categories: (a) for Lemmas 2.1-6.4 and Theorems 5.1, 6.1, 7.1 (on
+paper); (b) for the instances of §8 and Appendix A. Scope: a reduction of QB(5) to an exactly stated residual, not a full proof of QB(5).
 
 ## 0. Results at a glance
 
@@ -24,7 +27,7 @@ QB(5): every finite simple bipartite graph with maximum degree at most 6, n ≥ 
 | Corollary 7.2 | QB(5) holds iff every sparse E5 instance has a 4-regular subgraph; C0^(2) (2-blocks have 4-regular subgraphs) implies QB(5) | proved | §7 |
 | §8 | where the C1 argument fails, with the smallest instances: n = 15 (ports only), n = 19 (the petal lattice), n = 22 (E5 gluing); each size is proved smallest | computed, minimality of the sizes proved | §8 |
 
-**Where a referee should attack first.**
+**Sensitive steps and hypotheses.**
 1. Lemma 3.2: the signs in Lemma 3.1, and that ε contains D(C), which is what forces D(C) = 0 in types
    α, β1a and β2 (so their petals contain every deficient U-vertex).
 2. Theorem 5.1(ii) and (iv): the choice of a maximal 2-block T, the pairwise "meet exactly in T"
@@ -481,7 +484,7 @@ from a minimum cut, matching number by networkx.
 | A.5 `verify_certs.py e5`, `sparse` | first 10 of `e5_n22.g6`, first 4 of `e5_n24.g6`; first 3 of `tb19_split.g6` | E5: sparse, no 4-factor, min-cut violation with k = 2, g(X) = g(Y) = 12, 7 cut edges, matching number ≤ 3: 0 failures; split certificates sparse |
 | A.6 `petal`, `pairs_e5.py` | `gen_e5.py 60 5` (n = 22) and `gen_e5.py 40 9 big` (n = 24) | 100 sparse E5 graphs without a 4-factor, cut matching number 3 (checked in the generator by brute force); good pairs (p, q): 35 to 40 (n = 22), 40 to 47 (n = 24) of 121 and 144 |
 
-Script hashes (SHA-256, first and last 8 hex digits) at freezing: listed in `FROZEN.sha256` together with
+Script hashes (SHA-256, first and last 8 hex digits) at freezing: listed in the omitted historical receipt `FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json) together with
 this file.
 
 ## Appendix B. Sources (paths relative to the repository root)
@@ -489,7 +492,7 @@ this file.
 - `findings/supplement/papers/quartic/C1-PAPER.md` (SHA-256 3c67d183...): classes and Identity 1.1 (lines 66-84),
   Identities 1.2, 1.3 (86-89), Lemma 1.4 flow criterion (91-95), Lemma 3.1 cut identity (137-155),
   Lemma 3.2 (157-170), Lemma 4.2 lattice (194-204), Theorem 4.3 (206-211), Lemma 4.4 core lemma
-  (213-221), Corollary 5.3 QB(4) (234-240); accepted by two referees (`C1-REVIEW.md`,
+  (213-221), Corollary 5.3 QB(4) (234-240); accepted by two AI reviewers (`C1-REVIEW.md`,
   `C1-CORRECTIONS.md`).
 - `findings/supplement/papers/p4-attempt/PAPER.md` (SHA-256 825189da...): Theorem 3.1(c) and the remark on its
   graphs (161-163, 173-175), Corollary 5.4 (280-299), §7 step 1 (347-351), A.7 (374).

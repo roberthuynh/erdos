@@ -1,6 +1,6 @@
 import GraphStatistics
 
-/-! Actual subset two-path inequality, source SQUARE-ROOT-RANGE-PROOF.md §1
+/-! Actual subset two-path inequality, source LOCALIZATION-ARGUMENT.md §1
 (equation (3)). `subset_ordered_twoPath_count` proves the grouping from actual
 neighbor sets. `subset_path_bound` then applies n ≤ choose(n,2)+1 and the proved
 ordinary-unlabelled cycle normalization, with no grouping or count premise.

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Round-2 random search for counterexamples to the E5 pair statement (lane qb5).
+# Round-2 random search for counterexamples to the E5 pair statement (computational checks).
 cd "$(dirname "$0")"
 run(){ timeout 240 ./pairsearch "$@" > "data/search/ps_$1_$2_$5_$6_$4.out" 2> "data/search/ps_$1_$2_$5_$6_$4.err"; }
 for nu in 1 0; do for tw in 0 60; do

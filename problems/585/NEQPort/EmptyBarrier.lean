@@ -1,6 +1,6 @@
 import NEQPort.Numeric
 
-/-! Exact original empty-remainder intermediate, frozena487bb9b.
+/-! Exact original empty-remainder intermediate.
 This conditional helper is not the bare NEQ or a full criterion-only NEQ
 wrapper. Shore imbalance, zero internal T edges and every T saturation
 are proved here from actual original incidences, never supplied. -/

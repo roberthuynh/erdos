@@ -3,6 +3,7 @@
   "DEPENDENCIES.md": "bac0c1ea9f38b50d34839f1dc92d4546cf9c575de3344a10c27c8cf2f9900e9e",
   "FINDINGS.md": "b00956a0ce5204f18f3225f65c369c9a5960fc7dab7522807e5a03f1ec1e8a69",
   "NOTICE": "611d884a9b6b5df4c5510822b6021bc807c49b2b959db8372fd62dcc6861c31e",
+  "Openmath.lean": "3ae8ff4a0d335d7f904f1a5e8064333a895b9933e80f480b2ab73fc119b79b07",
   "Openmath/IncidenceRepair/AdditiveCorrection.lean": "f8b926e49d690f725e033b3512f9c051f800ed076e71df3f85a797d09102c8fa",
   "Openmath/IncidenceRepair/AffineGeometry.lean": "a82dd63f82ded067d0d0c0be6e0ae7c3c2cdee9fbbb7ac70aaf8e3ed799f7cf2",
   "Openmath/IncidenceRepair/AllSlopes.lean": "b4677948973e1de3525db864304ef941dd86793c431b162d53672cfb24071151",
@@ -67,8 +68,7 @@
   "Openmath/IncidenceRepair/TargetBounds.lean": "28b21177d0e979426e65527f2cd216d49c58f1e5c1531cff97816c7fc0e553a3",
   "Openmath/IncidenceRepair/WeightedPlane.lean": "a82dfba488be5426d6ab5cef0f462ddaba4ac3d9d671d6d2d5b207b504454de4",
   "Openmath/IncidenceRepair/WeightedPlaneTheorem.lean": "7ff7188554e6aa95b7e29c36ead6231ed1001abd7a866578ff6a6f8454ac114d",
-  "Openmath.lean": "3ae8ff4a0d335d7f904f1a5e8064333a895b9933e80f480b2ab73fc119b79b07",
-  "PROOF.md": "01ca75bc3d837830f21ef2301ee6ecda60c4a4855015764ba3a03fafdec126d9",
+  "PROOF.md": "f741a3de6a9b4bac8c0bae3861549babab1894148e0b80406a75913fd89f5c94",
   "README.md": "02f93b20f286aae002b660832d40418de3bd73b67c4958151d77fb8916630e15",
   "RESULTS.md": "0af3828ada18dc1bdc7616cbe3b10e6f610233fc426e6a207c2636e50c601220",
   "SOURCES.md": "0ba9eaf7fa0ec7e78f0817523b0595d36ac09e0bed51839015403a307fa8f5e7",
@@ -86,5 +86,6 @@
   "scripts/source_modules.py": "64de21d21833aaccb431edca950a9abd11ab7c8bab8bafdaa2b989bf3eaaa213",
   "scripts/source_scan.py": "c33fb70e3dd25f748973fa4f59d927e9afb5ed89766672368185be6fa0f4c21e",
   "scripts/test_check_docs.py": "c6d7c87b1f20f5b6d5113a481755e1f0996e4d3c4a90897ee9bb6dfca0cb0176",
-  "source-identity.json": "d310e3d28c7967bca19c1aa30fafa896d9b06bc7ddb8bc78d9a489f23a39c42d"
+  "source-identity.json": "d310e3d28c7967bca19c1aa30fafa896d9b06bc7ddb8bc78d9a489f23a39c42d",
+  "verification/accepted-mathematical-inputs.json": "8e2ba870ff0864e1e90f72e5abcdd44e3267cc36da422c3d02affc4a77b1d012"
 }

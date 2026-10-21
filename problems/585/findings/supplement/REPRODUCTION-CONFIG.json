@@ -1,0 +1,340 @@
+{
+  "status": "external_inputs_required",
+  "note": "These environment variables replace redacted original paths. Their values are not reconstructed or certified. Missing values deliberately stop the affected entrypoint. This is not full reproduction readiness.",
+  "entries": [
+    {
+      "path": "census/quartic/programs/run_selftest.sh",
+      "original_line": 18,
+      "variable": "ERDOS585_CENSUS_QUARTIC_PROGRAMS_RUN_SELFTEST_SH_BIN",
+      "purpose": "BIN",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/quartic/programs/run_selftest.sh",
+      "original_line": 20,
+      "variable": "ERDOS585_CENSUS_QUARTIC_PROGRAMS_RUN_SELFTEST_SH_C",
+      "purpose": "C",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/quartic/programs/build.sh",
+      "original_line": 4,
+      "variable": "ERDOS585_CENSUS_QUARTIC_PROGRAMS_BUILD_SH_N",
+      "purpose": "N",
+      "original_redaction": "\"[local path]\""
+    },
+    {
+      "path": "census/quartic/programs/run_f1_n18.sh",
+      "original_line": 23,
+      "variable": "ERDOS585_CENSUS_QUARTIC_PROGRAMS_RUN_F1_N18_SH_BIN",
+      "purpose": "BIN",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/quartic/programs/run_f1_n18.sh",
+      "original_line": 25,
+      "variable": "ERDOS585_CENSUS_QUARTIC_PROGRAMS_RUN_F1_N18_SH_C",
+      "purpose": "C",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/quartic/programs/sat_all.py",
+      "original_line": 9,
+      "variable": "ERDOS585_CENSUS_QUARTIC_PROGRAMS_SAT_ALL_PY_L9",
+      "purpose": "original executable or import/data path",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/quartic/programs/sum_shards.sh",
+      "original_line": 10,
+      "variable": "ERDOS585_CENSUS_QUARTIC_PROGRAMS_SUM_SHARDS_SH_C",
+      "purpose": "C",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/quartic/programs/sum_shards.sh",
+      "original_line": 12,
+      "variable": "ERDOS585_CENSUS_QUARTIC_PROGRAMS_SUM_SHARDS_SH_PY",
+      "purpose": "PY",
+      "original_redaction": "[temporary path]"
+    },
+    {
+      "path": "census/quartic/programs/sum_shards.sh",
+      "original_line": 13,
+      "variable": "ERDOS585_CENSUS_QUARTIC_PROGRAMS_SUM_SHARDS_SH_V",
+      "purpose": "V",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/programs/replication/validate_rvpair.py",
+      "original_line": 5,
+      "variable": "ERDOS585_CENSUS_PROGRAMS_REPLICATION_VALIDATE_RVPAIR_PY_L5",
+      "purpose": "original executable or import/data path",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/edge/code/run_excensus.sh",
+      "original_line": 24,
+      "variable": "ERDOS585_CENSUS_EDGE_CODE_RUN_EXCENSUS_SH_E",
+      "purpose": "E",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/edge/code/run_excensus.sh",
+      "original_line": 32,
+      "variable": "ERDOS585_CENSUS_EDGE_CODE_RUN_EXCENSUS_SH_PY",
+      "purpose": "PY",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/edge/code/run_excensus.sh",
+      "original_line": 33,
+      "variable": "ERDOS585_CENSUS_EDGE_CODE_RUN_EXCENSUS_SH_SATALL",
+      "purpose": "SATALL",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/edge/code/collect.py",
+      "original_line": 19,
+      "variable": "ERDOS585_CENSUS_EDGE_CODE_COLLECT_PY_L19",
+      "purpose": "original executable or import/data path",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/edge/code/collect.py",
+      "original_line": 20,
+      "variable": "ERDOS585_CENSUS_EDGE_CODE_COLLECT_PY_L20",
+      "purpose": "original executable or import/data path",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/edge/code/witness.py",
+      "original_line": 31,
+      "variable": "ERDOS585_CENSUS_EDGE_CODE_WITNESS_PY_L31",
+      "purpose": "original executable or import/data path",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/edge/code/witness.py",
+      "original_line": 32,
+      "variable": "ERDOS585_CENSUS_EDGE_CODE_WITNESS_PY_L32",
+      "purpose": "original executable or import/data path",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/edge/code/witness.py",
+      "original_line": 33,
+      "variable": "ERDOS585_CENSUS_EDGE_CODE_WITNESS_PY_L33",
+      "purpose": "original executable or import/data path",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/programs/run_reg5_n14.sh",
+      "original_line": 8,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_PROGRAMS_RUN_REG5_N14_SH_P",
+      "purpose": "P",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/programs/crosscheck_oracle.py",
+      "original_line": 15,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_PROGRAMS_CROSSCHECK_ORACLE_PY_L15",
+      "purpose": "original executable or import/data path",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/programs/run_ladder.sh",
+      "original_line": 10,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_PROGRAMS_RUN_LADDER_SH_P",
+      "purpose": "P",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/programs/oracle_plain.py",
+      "original_line": 6,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_PROGRAMS_ORACLE_PLAIN_PY_L6",
+      "purpose": "original executable or import/data path",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/programs/oracle_plain.py",
+      "original_line": 7,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_PROGRAMS_ORACLE_PLAIN_PY_L7",
+      "purpose": "original executable or import/data path",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16/code/collect.sh",
+      "original_line": 9,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_CODE_COLLECT_SH_PAIRC",
+      "purpose": "PAIRC",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16/code/collect.sh",
+      "original_line": 11,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_CODE_COLLECT_SH_ORACLE",
+      "purpose": "ORACLE",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/shard.sh",
+      "original_line": 6,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_SHARD_SH_LANE",
+      "purpose": "LANE",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/shard.sh",
+      "original_line": 8,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_SHARD_SH_GENG",
+      "purpose": "GENG",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/shard.sh",
+      "original_line": 9,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_SHARD_SH_PY",
+      "purpose": "PY",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/run_calib.sh",
+      "original_line": 4,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_CALIB_SH_LANE",
+      "purpose": "LANE",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/run_calib.sh",
+      "original_line": 5,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_CALIB_SH_NA",
+      "purpose": "NA",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/run_calib.sh",
+      "original_line": 6,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_CALIB_SH_PY",
+      "purpose": "PY",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/run_xcheck.sh",
+      "original_line": 6,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_XCHECK_SH_LANE",
+      "purpose": "LANE",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/run_xcheck.sh",
+      "original_line": 7,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_XCHECK_SH_PY",
+      "purpose": "PY",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/run_check3.sh",
+      "original_line": 5,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_CHECK3_SH_LANE",
+      "purpose": "LANE",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/glue18.sh",
+      "original_line": 7,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_GLUE18_SH_LANE",
+      "purpose": "LANE",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/glue18.sh",
+      "original_line": 8,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_GLUE18_SH_PY",
+      "purpose": "PY",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/run_check1.sh",
+      "original_line": 4,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_CHECK1_SH_LANE",
+      "purpose": "LANE",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/run_check1.sh",
+      "original_line": 5,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_CHECK1_SH_NA",
+      "purpose": "NA",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/run_check1.sh",
+      "original_line": 6,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_CHECK1_SH_PY",
+      "purpose": "PY",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/shard16.sh",
+      "original_line": 7,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_SHARD16_SH_LANE",
+      "purpose": "LANE",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/shard16.sh",
+      "original_line": 9,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_SHARD16_SH_GENG",
+      "purpose": "GENG",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/shard16.sh",
+      "original_line": 10,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_SHARD16_SH_PY",
+      "purpose": "PY",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "census/calibration/n16-second-method/code/run_check2_n14.sh",
+      "original_line": 3,
+      "variable": "ERDOS585_CENSUS_CALIBRATION_N16_SECOND_METHOD_CODE_RUN_CHECK2_N14_SH_LANE",
+      "purpose": "LANE",
+      "original_redaction": "[local path]"
+    },
+    {
+      "path": "small-values/programs/erdos585_geng_complete_audit.py",
+      "original_line": 16,
+      "variable": "ERDOS585_SMALL_VALUES_PROGRAMS_ERDOS585_GENG_COMPLETE_AUDIT_PY_L16",
+      "purpose": "original executable or import/data path",
+      "original_redaction": "[temporary path]"
+    },
+    {
+      "path": "small-values/programs/erdos585_geng_audit.py",
+      "original_line": 27,
+      "variable": "ERDOS585_SMALL_VALUES_PROGRAMS_ERDOS585_GENG_AUDIT_PY_L27",
+      "purpose": "original executable or import/data path",
+      "original_redaction": "[temporary path]"
+    },
+    {
+      "path": "small-values/programs/erdos585_twelve_partition.py",
+      "original_line": 30,
+      "variable": "ERDOS585_SMALL_VALUES_PROGRAMS_ERDOS585_TWELVE_PARTITION_PY_L30",
+      "purpose": "original executable or import/data path",
+      "original_redaction": "[temporary path]"
+    }
+  ],
+  "scratch_configuration": {
+    "variable": "ERDOS585_SCRATCH_DIR",
+    "purpose": "Writable scratch directory for supplied scripts; no original scientific data identity implied",
+    "paths": [
+      "census/quartic/programs/build.sh",
+      "census/calibration/n16-second-method/code/shard.sh",
+      "census/calibration/n16-second-method/code/run_calib.sh",
+      "census/calibration/n16-second-method/code/run_xcheck.sh",
+      "census/calibration/n16-second-method/code/glue18.sh",
+      "census/calibration/n16-second-method/code/shard16.sh"
+    ]
+  }
+}

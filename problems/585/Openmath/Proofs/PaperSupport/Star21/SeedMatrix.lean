@@ -7,8 +7,8 @@ set_option maxRecDepth 20000
 open Finset SimpleGraph
 namespace Erdos585.Star21
 
-/- Actual matrix/Subgraph transport follows the credited direct source, with the
-literal 9-by-12 graph and our newly proved disjoint-hole exclusion as supplier. -/
+/- Matrix/Subgraph transport for the literal 9-by-12 graph, using
+the disjoint-hole exclusion proved in SeedSupport.lean. -/
 def matrixRowDegree (F : Finset (Fin 9 × Fin 12)) (i : Fin 9) : ℕ :=
   (F.filter fun x => x.1 = i).card
 

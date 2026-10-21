@@ -1,5 +1,5 @@
 #!/bin/bash
-# wave4/h22b: checks after all n=22 shards are done. Writes data/final/*, logs to stdout.
+# census/h22: checks after all n=22 shards are done. Writes data/final/*, logs to stdout.
 # usage: final_checks.sh   (run from anywhere; detached with nohup)
 set -u
 D="$(cd "$(dirname "$0")/.." && pwd)"
@@ -55,9 +55,9 @@ step "canonical lines=$(wc -l < "$O/all.can") distinct=$(sort -u "$O/all.can" | 
 step "labelg: cut graphs vs original 236 non-HD"
 cut -d' ' -f1 "$O/cut_lines.txt" > "$O/cut.g6"
 "$L" -q "$O/cut.g6" "$O/cut.can"
-"$L" -q ../../wave3/pairs/data/q4bip_a11_nonhd.g6 "$O/orig236.can"
+"$L" -q ../pairs-lane/data/q4bip_a11_nonhd.g6 "$O/orig236.can"
 sort -u "$O/cut.can" > "$O/cut.can.sorted"; sort -u "$O/orig236.can" > "$O/orig236.can.sorted"
-step "mine distinct=$(wc -l < "$O/cut.can.sorted") original lines=$(wc -l < ../../wave3/pairs/data/q4bip_a11_nonhd.g6) original distinct=$(wc -l < "$O/orig236.can.sorted") identical=$(cmp -s "$O/cut.can.sorted" "$O/orig236.can.sorted" && echo yes || echo no)"
+step "mine distinct=$(wc -l < "$O/cut.can.sorted") original lines=$(wc -l < ../pairs-lane/data/q4bip_a11_nonhd.g6) original distinct=$(wc -l < "$O/orig236.can.sorted") identical=$(cmp -s "$O/cut.can.sorted" "$O/orig236.can.sorted" && echo yes || echo no)"
 
 step "swap flags vs labelg 2-coloured canonical forms, all graphs"
 $PY code/swap_labelg_prep.py "$O/swap_all" "$O/all_lines.txt"

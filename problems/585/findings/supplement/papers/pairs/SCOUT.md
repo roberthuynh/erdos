@@ -1,11 +1,15 @@
 # Pairs investigation: candidate statements, census verdicts, gaps
 
-Lane: pairs scout, October 5, 2026. Log: `LOG.md`. Code and data: this folder (`ptool.c`, `mpair.c`,
-`cuts.c`, `data/`). Nothing here is reviewed. No `check.sh`, no Lean. Rungs as in unpublished historical census-status note.
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
+> Export clarification (2026-10-19): The T2 count “82 exactly-two-pairing examples” is superseded by papers/pairs/REVIEW.md §5 and fix F5: exactly six examples, all on twelve vertices; all examples on at most eleven vertices realize all three pairings. The 82 old NONE answers were labeling errors, not examples. Original erroneous result streams remain historical records. The separately regenerated corrected stream in replay/t2-replay.out has 66,992 rows; see RECOVERED-REPLAY.md.
+
+Investigation: pairs scout, October 5, 2026. Log: `LOG.md`. Code and data: this folder (`ptool.c`, `mpair.c`,
+`cuts.c`, `data/`). The original record did not assert independent review. No `check.sh`, no Lean. Evidence categories distinguish written arguments from finite computations.
 
 ## 0. Verdict in brief
 
-| # | Statement | Verdict | Rung |
+| # | Statement | Verdict | Evidence category |
 |---|---|---|---|
 | A | A smallest W1b counterexample is a *sparse* E4 or C1 instance, n ≥ 19 | proved (§1) | (a) |
 | B | A sparse E4 instance has a spanning 4-factor | proved (§1) | (a) |
@@ -16,7 +20,7 @@ Lane: pairs scout, October 5, 2026. Log: `LOG.md`. Code and data: this folder (`
 | L5 | No pair-free bipartite graph with δ ≥ 4, Δ ≤ 6 and e = 3n − 5 on ≤ 17 vertices | census, one method (§2.4), 1.47M graphs | (b) |
 | A' | A smallest W1b counterexample of E4 type with a (5,1) set has n ≥ 36 | proved from L5 (§1, Cor. 1.5) | (a)+(b) |
 | T1 | One-mark CP4, prescribed pairing (W1-MINIMAL.md §4a) | **false** at m = 11, six instances, two independent checks (§3.1) | (b) |
-| T2 | X = Z + v (Z pair-free, level −5, deg v = 4): pairs through v realize ≥ 2 of the 3 pairings of N(v) | survives every X on ≤ 12 vertices (66,992 graphs); sharp (82 realize exactly 2) | (b) |
+| T2 | X = Z + v (Z pair-free, level −5, deg v = 4): pairs through v realize ≥ 2 of the 3 pairings of N(v) | survives every X on ≤ 12 vertices (66,992 graphs); sharp (six realize exactly two, all on twelve vertices; REVIEW.md F5) | (b) |
 | D | If a 2-edge cut of a 4-factor cannot be repaired by one alternating-cycle swap that keeps the two cut edges, an out-closed set holds ≥ 3 of the 4 units of Q-deficiency | proved (§4) | (a) |
 | SP' | Repair of SP: no *rigid* set ⇒ spanning pair | open; the closure attempt (§4) stops here | — |
 
@@ -28,7 +32,7 @@ proper subset. The repaired route (§4) needs a structure theory of rigid sets (
 deficiency) plus an HD statement for 4-regular bipartite graphs without 2-edge cuts; H22 gives the HD
 statement through 22 vertices, and Lemma D is the first step of the rigid-set theory. No closure.
 
-## 1. Lemmas (rung (a), written here, not reviewed)
+## 1. Lemmas (written-proof evidence, written here, not reviewed)
 
 Notation as in C1-PAPER §1: g(S) = 6|S| − 2e(S); D(Z) = Σ_{v∈Z}(6 − deg v); D^S(Z) is deficiency
 inside G[S]. For a bipartite graph with color classes P, Q and S ⊆ V, Identity 1.1 gives
@@ -68,7 +72,7 @@ D(P − T) = 4, g(V − T) = 10, and D^T(T_P) = D^T(T_Q) gives D(T_P) + 5 = 4 + 
 4-factor statement: summing F-degrees over T_P and over T_Q gives e_F(T_P, Q − T) = e_F(T_Q, P − T). ∎
 
 **Lemma 1.4 (a (5,1) set has a large 4-core).** In Lemma 1.1's X, let S be any set with
-2 ≤ |S| ≤ n − 1 and g(S) = 10 (for example either side of a (5,1) set). Then the 4-core K of X[S] is
+3 ≤ |S| ≤ n − 1 and g(S) = 10 (for example either side of a (5,1) set). Then the 4-core K of X[S] is
 nonempty, pair-free, bipartite, Δ ≤ 6, δ ≥ 4, e(K) = 3|K| − 5, and |K| ≥ 18.
 
 *Proof.* g(S) = 10 means e(S) = 3|S| − 5. Peeling a vertex of degree ≤ 3 does not lower e − 3n, so
@@ -83,7 +87,7 @@ and V − T have g = 10 (Lemma 1.3), so both contain ≥ 18 vertices (Lemma 1.4)
 4-regular subgraph has a 2-edge cut (a component without one would be Hamilton-decomposable by H22,
 §2.3, which is a pair).
 
-## 2. Census (rung (b); one method each unless said)
+## 2. Census (computational evidence; one method each unless said)
 
 Tools: `ptool.c` (sparsity by max flow: for every edge uv, min of g over sets containing u, v; an
 inclusion-minimal violator has an internal min degree ≥ 4, so it contains an edge; validated against
@@ -145,7 +149,7 @@ each a one-passage 4-cut). So "no 2-edge cut ⇒ HD" is false in general; H22 is
 e = 3n − 5 has ≤ 17 vertices (level −5 forces side difference ≤ 1, so these classes are complete).
 Contrast: for general graphs there are 17 such graphs on 7 to 10 vertices (K2 ∨ C5 and relatives).
 
-## 3. General graphs: one-mark statements (part (b) of the brief)
+## 3. General graphs: one-mark statements (historical analysis)
 
 Every pair-free graph Z with Δ ≤ 6, e(Z) = 3|Z| − 5 and |Z| ≤ 11 is one of the 17 cores of
 `findings/supplement/census/logs/frontier-n{7,8,9,10}-level-5.g6` plus vertices added with exactly three
@@ -175,7 +179,7 @@ backtick, so read it from the file, not from a command line).
 
 T2: for X = Z + v with deg v = 4 and Δ(X) ≤ 6, pairs through v realize at least two of the three
 pairings of N(v). `gen_t2.py` + `mpair` with a forbidden edge: 66,992 graphs X on ≤ 12 vertices, all
-realize ≥ 2; exactly 2 in 82 (4 on 11 vertices, 78 on 12). Use: across a cut contracted to a vertex of
+realize ≥ 2; exactly 2 in six, all on twelve vertices (corrected by REVIEW.md F5; the former 82 count was erroneous). Use: across a cut contracted to a vertex of
 degree 4 or 5, "≥ 2 of 3 on each side" forces a common pairing, so gluing succeeds. T2 implies W1 for
 graphs with a degree-4 vertex, so it is a strengthening, but I found no split step that proves T2
 from smaller T2: a minimal T2 counterexample X has X − v pair-free at level −5, and splitting another
@@ -245,9 +249,9 @@ The recorded investigation made one closure attempt (Lemma 2EC' via Lemma D) and
 
 - The C1 tools give a clean reduction (Lemma 1.1, 1.2) and a clean obstruction (Lemma 1.3, Lemma D):
   in sparse instances, small cuts of 4-factors are either repairable by one swap or certified by tight
-  sets with concentrated deficiency. That is the "rigid cut" structure the brief asked about; it is the
+  sets with concentrated deficiency. That is the rigid-cut structure analyzed here; it is the
   same deficiency-budget mechanism that closed C1, but here the objects are not yet shown to uncross.
-- Highest-value next step: a census of rigid sets (max over 4-factors of e_F(T_Q, P − T), by min-cost
+- Unperformed extension: a census of rigid sets (max over 4-factors of e_F(T_Q, P − T), by min-cost
   flow) in sparse E4/C1 instances at n = 20..30 built from tight sets, to see whether every rigid set is
   a (5,1) set or a Lemma D set, and whether two rigid sets can cross. If they cannot, gap items 1-2 may
   close for n ≤ 22, which with H22 and Corollary 1.5 would give W1b for E4-type counterexamples through
@@ -255,11 +259,11 @@ The recorded investigation made one closure attempt (Lemma 2EC' via Lemma D) and
 - The gluing route across a (5,1) set (contract one side to a degree-5 vertex: T + q* has e = 3n − 3)
   needs T2 for bipartite graphs, and by L5 the relevant Z have ≥ 18 vertices, far beyond any census.
 - T1 should be retired from the project's list of "true up to 11 vertices" claims (W1-MINIMAL.md §4a,
-  585-fable/REPORT.md section E).
+  the historical REPORT.md section E (not bundled)).
 - Not tested: whether SP's C1 half (good ports) also fails; R20 is E4. A C1 analog would need a thin
   set in X − y, where the deficiency budget is 5 or 6 per side, so it is likely easier to build.
 - The complete pieces are collected with proofs and certificates in `PAPER.md` (frozen,
-  `FROZEN.sha256`) for a referee. Numbering: Lemma 1.1 = PAPER Lemma 1, 1.2 = Lemma 2, 1.3 = Prop 3,
+  the omitted historical receipt `FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json)) for independent checking. Numbering: Lemma 1.1 = PAPER Lemma 1, 1.2 = Lemma 2, 1.3 = Prop 3,
   R20 = Example 4, 1.4 = Prop 5, 1.5 = Cor 6, Lemma D = Lemma 7, T1 = Example 8.
 - Reproducibility: the large census runs used the binary `ptool`, built from an earlier revision of
   `ptool.c`; the exact search is unchanged in the current file (built as `ptool2`, which adds a step

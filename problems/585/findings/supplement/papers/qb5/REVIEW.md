@@ -1,7 +1,11 @@
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
 # REVIEW: QB(5) reduced to E5 (findings/supplement/papers/qb5/PAPER.md)
 
-Independent adversarial referee, October 5, 2026. Status: FINAL.
-Object: `PAPER.md` as frozen in `FROZEN.sha256` (`shasum -a 256 -c FROZEN.sha256`: all 17 entries OK at the
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
+Independent adversarial AI review, October 5, 2026. Status: FINAL.
+Object: `PAPER.md` as frozen in the omitted historical receipt `FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json) (the omitted historical receipt `shasum -a 256 -c FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json): all 17 entries OK at the
 start and at the end of this review). Working files, log and code: `review/` (`review/LOG.md`, `review/code/`,
 `review/data/`). Nothing here is a project-oracle PASS: no Lean, no `check.sh`.
 
@@ -16,7 +20,7 @@ by labelg canonical forms. Compute used: about 45 core-minutes.
 
 | Claim | Verdict | Short reason |
 |---|---|---|
-| **Theorem 7.1** (a minimal QB(5) counterexample is E5: two 2-blocks, 7 cut edges with no 4-matching, n even, n ≥ 28; n ≥ 40 with the census) | **ACCEPT** | Every step re-derived (Lemma 2.1, Thm 5.1, Thm 6.1, Lemmas 6.2-6.4). n ≥ 28 is on paper. The n ≥ 40 clause rests on a computation (rung b) and inherits the citation fix F6 of Lemma 6.4; I re-checked exactly the subclass it needs by a second method (§4). |
+| **Theorem 7.1** (a minimal QB(5) counterexample is E5: two 2-blocks, 7 cut edges with no 4-matching, n even, n ≥ 28; n ≥ 40 with the census) | **ACCEPT** | Every step re-derived (Lemma 2.1, Thm 5.1, Thm 6.1, Lemmas 6.2-6.4). n ≥ 28 is on paper. The n ≥ 40 clause rests on a computation (computational evidence and inherits the citation fix F6 of Lemma 6.4; I re-checked exactly the subclass it needs by a second method (§4). |
 | **Theorem 5.1** (every sparse C2 instance has a good W-vertex; (i) ≤ 5, (ii) ≤ 6, (iii), (iv)) | **ACCEPT** | All four parts re-derived, including every "meet exactly in T" case split, the budget 3a + 6b + 5d ≤ 10 and the p ≥ 2 count in (iv). No minimality used. No counterexample in 1.24 million sparse instances at n = 17 (γ-only there), the complete n = 19 two-block family, and 1,011 of my own random instances at n = 21, 23. |
 | Petal-union (lattice) failure first at **n = 19**, proved smallest and certified | **ACCEPT WITH FIXES** (F4) | Lower bound (Lemma 4.2(d): 10 + 9) correct; all 12 certificates verified. But every split petal in them belongs to a degree-6 W-vertex, never a port. For petals of ports, the C1 step's literal form, the first failure is n = 21 (my certificate). |
 | E5 gluing failure first at **n = 22**, proved smallest and certified | **ACCEPT WITH FIXES** (F5) | König + Lemma 6.3's first step + K_{4,6} argument correct; all 100 instances verified (sparse, no 4-factor, unique cut, matching number 3 on it). The "60 and 40 instances" are 18 and 33 isomorphism classes. |

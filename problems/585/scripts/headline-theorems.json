@@ -878,7 +878,7 @@
     "oracle": true,
     "type": "∀ (q : ℕ), 5 ≤ q → ∀ (n : ℕ), 4 * q - 5 ≤ n → ∃ V vf vd G gd, Fintype.card V = n ∧ G.IsBipartite ∧ (∀ (v : V), q - 1 ≤ G.degree v) ∧ G.maxDegree ≤ 2 * q - 2 ∧ G.edgeFinset.card = (q - 1) * n - (q ^ 2 - 3 * q + 4) ∧ ¬∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree q",
     "scope_label": "supporting_result",
-    "source_sha256": "fbff1d22df48ab9cb47f73379c64220ab2b90e347bf90872ba7af6a048e5d83d",
+    "source_sha256": "b60676c23a770dd7f999c29da036697652009152af20399637be965aebf9bdd2",
     "registration_status": "exact_printed_type",
     "type_evidence": {
       "query_sha256": "d726d3e2d105255718bbd98828722af786be0cbc42275ae988b0f7de29ec7096",

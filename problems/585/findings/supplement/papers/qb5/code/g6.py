@@ -1,4 +1,4 @@
-"""graph6 helpers (n <= 62) and small graph utilities for the qb5 lane."""
+"""graph6 helpers (n <= 62) and small graph utilities for QB(5)."""
 
 
 def decode(s):

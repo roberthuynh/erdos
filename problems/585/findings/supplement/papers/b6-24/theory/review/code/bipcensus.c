@@ -1,4 +1,4 @@
-/* bipcensus.c (referee's own code, wave4/theory review).
+/* bipcensus.c (independent code, papers/b6-24/theory review).
  * Exhaustive census of bipartite graphs with fixed colour classes P (np vertices) and Q (nq
  * vertices) and e edges, emin <= e <= emax: every labelled subgraph of K_{np,nq} with that many
  * edges is generated (missing-edge subsets), tested for a pair (two edge-disjoint cycles on the

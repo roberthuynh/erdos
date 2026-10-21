@@ -1,4 +1,4 @@
-"""Referee lane M3-R helpers. Own code; nothing imported from c1checks/, checks/ or review/.
+"""Independent review helpers. Own code; nothing imported from c1checks/, checks/ or review/.
 
 Vertices 0..n-1. A bipartite instance is (s_u, s_w, adj) with U = range(s_u), W = range(s_u, s_u+s_w),
 adj[v] an int bitmask of neighbors. All quantities are recomputed from adjacency, never from formulas

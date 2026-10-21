@@ -1,4 +1,4 @@
-"""wave4/theory tools: sparse E4 instances, 4-factors, rigidity, 2-edge cuts, 2EC' search.
+"""papers/b6-24/theory tools: sparse E4 instances, 4-factors, rigidity, 2-edge cuts, 2EC' search.
 
 Conventions: Y is a networkx Graph on vertices 0..n-1, bipartite; P = colour class 0 of a fixed
 2-colouring (the class containing the smallest vertex of each component), Q = the other class.

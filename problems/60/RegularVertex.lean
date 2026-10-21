@@ -1,7 +1,7 @@
 import CompletionBasic
 
-/-! Source correspondence: COUNT-BASED-COMPLETION-PROOF-v2.md, Section 2 first
-paragraph, and Section 1 local matching fact. Frozen source SHA256:
+/-! Source correspondence: COUNT-BASED-COMPLETION.md, Section 2 first
+paragraph, and Section 1 local matching fact. Historical source SHA256 (before public exposition edits):
 d07eaa46889ac5a9808a097f281e43c25a768e5057e19ddefe5b72952d9eacbb.
 The result constructs the actual matching with one isolated neighbor and the
 actual outside-cell partition. The isolated neighbor is NOT identified with the

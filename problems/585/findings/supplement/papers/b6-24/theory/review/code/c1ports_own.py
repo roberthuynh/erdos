@@ -1,4 +1,4 @@
-"""c1ports_own.py (referee's own code): exhaustive test of PAPER Lemma 7.1 and of the parts of
+"""c1ports_own.py (independent code): exhaustive test of PAPER Lemma 7.1 and of the parts of
 Corollary 7.2 / Lemma 7.3 that do not use pair-freeness, on sparse C1 instances (graph6 file).
 For every port y (vertex of the larger class W with degree 4 or 5), Y = X - y, Q := U, P := W - y,
 u1 = the degree-5 vertex of U. For every nonempty proper S of V(Y):

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""report.py (wave8/s6spot): writes SPOTCHECK.md from data/collect.json, data/nonE10.txt,
+"""report.py (census/s6n22/spot-check): writes SPOTCHECK.md from data/collect.json, data/nonE10.txt,
 data/val/flow_sample.log and the validation logs. Run after collect.py, nonE10.py, flowsample.py."""
 import json, os, pathlib, re, hashlib
 
@@ -57,16 +57,15 @@ if not all_match or tot["no"] or tot["witness_fail"] or flow_dis or missing:
 
 table = open(D / "data" / "compare.md").read()
 
-md = f"""# S6 at |B| = 22: independent spot-check of wave6/s6n22
+md = f"""# S6 at |B| = 22: independent spot-check of the original S6 census
 
-Lane wave8/s6spot, 2026-10-06. Rung (b) computation. Nothing here is reviewed. No `check.sh`, no
-Lean, nothing sent off this machine. Run record: `JOBS.md`; code in `code/`; data in `data/`.
+Historical spot-check, 2026-10-06. Finite computational spot-check, not a Lean theorem. No official `check.sh` verification. Run record: `JOBS.md`; code in `code/`; data in `data/`.
 
 {verdict}
 
 ## What was checked, and what is shared with s6n22
 
-S6 (wave4/va6/SCOUT.md §7): if Γ = B - o is sparse, every port y of o has two edge-disjoint Hamilton
+S6 (the S6 statement in papers/s6/PAPER.md (relative to the supplement root)): if Γ = B - o is sparse, every port y of o has two edge-disjoint Hamilton
 cycles in B - o - y. For a 6-regular B, g(S) = |δ_B(S)| for S avoiding o, so "B - o sparse" for
 one o, or for all o, is the same as "B is E10" (every edge cut with at least 2 vertices on each side
 has at least 10 edges). The test for an edge oy does not depend on which end is called o, so a
@@ -75,10 +74,10 @@ each is tested in its own slice, as in s6n22 (JOBS.md there).
 
 - **Shared with s6n22:** the genbg binary `~/.cache/erdos585/nauty2_9_3/genbg` (SHA-256
   `{gsha[:16]}…`) and its command line `genbg -X-3 -d6:6 -D6:6 11 11 r/10000` (read from
-  s6n22's `run_shard.sh`); the PySAT library (s6n22 used it, through wave4/va6's
+  s6n22's `run_shard.sh`); the PySAT library (s6n22 used it, through the historical
   `span_oracle.py`, only for its 0 survivors and its post-run SAT check of the 333,908 stalled AM
   tests; its decisions came from its own C tool, a DFS and the AM walk).
-- **Written here, sharing no code with `wave6/s6n22/code`:** `code/e10cut.c` (graph6 decoder and
+- **Written here, sharing no code with the original S6 census code:** `code/e10cut.c` (graph6 decoder and
   exact minimum essential cut), `code/spantest.py` (graph6 decoder, SAT encoding, witness checker),
   `code/validate.py`, `code/nonE10.py`, `code/collect.py`, the driver scripts. Nothing in s6n22's
   `code/` was imported or run.
@@ -98,7 +97,7 @@ each is tested in its own slice, as in s6n22 (JOBS.md there).
 
 ## Counts compared, per slice
 
-"now" = this lane's regeneration; "s6n22 sum" and "s6n22 genbg" = s6n22's `s<r>.sum` and
+"now" = this independent regeneration; "s6n22 sum" and "s6n22 genbg" = s6n22's `s<r>.sum` and
 `s<r>.genbg.err`. "stall g6 found": every graph6 string in s6n22's `s<r>.stall` for that slice also
 occurs in the regenerated slice (a content check beyond the counts).
 

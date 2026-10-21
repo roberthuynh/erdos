@@ -1,4 +1,4 @@
-"""Shared helpers for the C1 checks (lane M3). Own code; nothing imported from G110/checks.
+"""Shared helpers for the C1 checks (computational checks). Own code; nothing imported from G110/checks.
 
 Convention: a bipartite graph is given by sizes (nu, nw) and an edge list of pairs (u, w) with
 0 <= u < nu (side U) and 0 <= w < nw (side W). Internally vertices are numbered U = 0..nu-1 and

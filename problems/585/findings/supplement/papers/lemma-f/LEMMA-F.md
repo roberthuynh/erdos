@@ -2,7 +2,7 @@
 
 Excerpt 1: the spectral report, section 4.5 (lines 322-342 of the source).
 
-### 4.5 Lemma F: the Tutte / Gale-Ryser step works when pieces are near-regular (rung (a))
+### 4.5 Lemma F: the Tutte / Gale-Ryser step works when pieces are near-regular (written-proof evidence)
 **Lemma F (bipartite, balanced).** Let H be bipartite with parts P, Q, |P| = |Q| = N/2, all degrees
 in [(1-η)k, k], and e_H(Z, V(H) \ Z) >= γk|Z| for every Z with 1 <= |Z| <= N/2, where 0 < γ <= 1,
 η <= γ^2/8 and k >= 16/γ^2. Put θ = (η + 2/k)/γ and k' = floor((1 - η - θ)k). Then H has a

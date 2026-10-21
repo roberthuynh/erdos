@@ -1,8 +1,9 @@
 import EvenFactor.Defs
 import NEQAssembly.Partial
 
-/-! Actual original retained-component/count/shore alignment, frozen16d0a597.
-The criterion's independent full source QA remains unresolved. -/
+/-! Alignment of original retained components, counts and shores.
+These alignment lemmas do not establish the full factor criterion.
+Verification of that criterion is separate. -/
 set_option autoImplicit false
 set_option relaxedAutoImplicit false
 open Finset SimpleGraph

@@ -2,8 +2,8 @@ import ExceptionalSet
 import HighIncidenceNeighbor
 import NeighborhoodAssignment
 
-/-! Source correspondence: COUNT-BASED-COMPLETION-PROOF-v2.md §§1, 4–7,
-SHA256 d07eaa46889ac5a9808a097f281e43c25a768e5057e19ddefe5b72952d9eacbb.
+/-! Source correspondence: COUNT-BASED-COMPLETION.md §§1, 4–7,
+Historical source SHA256 (before public exposition edits): d07eaa46889ac5a9808a097f281e43c25a768e5057e19ddefe5b72952d9eacbb.
 This conditional completion theorem retains an ACTUAL finite projective plane
 of order q on the graph's vertex type and actual incidence representations of
 all good full rows. Plane existence/embedding is not proved or postulated by

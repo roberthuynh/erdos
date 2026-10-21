@@ -121,6 +121,10 @@ The older endpoint/upstream/conditional-assembly entry points in
 `tools/verify_endpoint.py` verify only their named subsets and are not substitutes
 for the full phased check.
 
+## Finite certificate update
+
+The finite certificate in `Prime281.lean` counts witnesses within each base block and sums the counts. A kernel-checked disjointness argument identifies this sum with the original witness count. The base blocks, public theorem statements and hypotheses are unchanged. Historical receipts retain their original source identities; the full check must rebuild and replay the updated source. Its finalization writes a separate source-bound `receipts/final-receipt.json`. The required GitHub Actions full-package job executes this same procedure for the exact commit; a historical receipt is never substituted for that check.
+
 ## Upstream sources and license
 
 The three files under `FormalConjecturesForMathlib` are unchanged copies from

@@ -38,8 +38,8 @@ def SpanningFactorOn (q : ℕ) (G : SimpleGraph V) (U : Finset V) : Prop :=
   ∃ H : G.Subgraph, H.verts = (U : Set V) ∧ H.coe.IsRegularOfDegree q
 
 open scoped Classical in
-/-- UNPAID general constant-even-factor necessity, exactly the primary
-Theorem1.4. Kept explicit; Mathlib's perfect-matching Tutte is insufficient. -/
+/-- General constant-even-factor necessity, retained as an explicit proposition.
+This file does not prove it; Mathlib's perfect-matching Tutte theorem is insufficient. -/
 def ConstantEvenFactorCriterion (q : ℕ) : Prop :=
   ∀ {V : Type u} [Fintype V] (G : SimpleGraph V) (U : Finset V),
     0 < q → Even q → ¬SpanningFactorOn q G U →

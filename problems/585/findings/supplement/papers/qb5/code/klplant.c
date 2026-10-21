@@ -1,4 +1,4 @@
-/* klplant.c (lane qb5, round 3; NOTES.md section 7).
+/* klplant.c (QB(5), version 3; NOTES.md section 7).
  *
  * Random 2-blocks with planted dense pieces, then local search, looking for X-bad 4-sets M of types
  *   (b) M misses exactly one in-degree-3 vertex a of A and a is not in I(m)   [KL2 failure]

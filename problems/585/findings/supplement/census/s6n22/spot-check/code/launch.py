@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""launch.py (wave8/s6spot): start code/driver.sh detached (new session, nice 10), print its PID.
+"""launch.py (census/s6n22/spot-check): start code/driver.sh detached (new session, nice 10), print its PID.
 Environment passed through: W, STOP_EPOCH, KILL_EPOCH."""
 import os, subprocess, pathlib
 D = pathlib.Path(__file__).resolve().parent.parent

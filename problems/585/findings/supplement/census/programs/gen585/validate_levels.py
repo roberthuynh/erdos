@@ -2,7 +2,7 @@
 """Independent cross-check of gen585 level sets and final sets.
 
 Generator side A: nauty geng (independent generator) with degree/edge bounds, then
-  - pair filter: LANE/tools/pair_oracle.decide (SAT) or the C test (gen585 -p) when --fast,
+  - pair filter: ERDOS585_VALIDATION_TOOLS/pair_oracle.decide (SAT) or the C test (gen585 -p) when --fast,
   - sparsity filter in Python: e(S) <= 3|S| - SP for all S with |S| >= SPMIN
     (S = V excluded when --final),
   - --mindeg for the final level.
@@ -17,8 +17,11 @@ from itertools import combinations
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LANE = os.path.dirname(os.path.dirname(HERE))
-NAUTY = os.path.join(HERE, "nauty2_8_9")
-sys.path.insert(0, os.path.join(LANE, "tools"))
+NAUTY = os.environ.get("ERDOS585_NAUTY_DIR", os.path.join(HERE, "nauty2_8_9"))
+TOOLS = os.environ.get("ERDOS585_VALIDATION_TOOLS", os.path.join(HERE, "validation_tools"))
+if not TOOLS or not os.path.isdir(TOOLS):
+    raise SystemExit("Validation modules not found. Set ERDOS585_VALIDATION_TOOLS to their verified directory; see REPRODUCTION-BOUNDARY.md.")
+sys.path.insert(0, TOOLS)
 
 
 def parse_g6(line):
@@ -108,7 +111,7 @@ def main():
         graphs = [(n, E) for n, E in graphs if sparse_ok(n, E, args.SP, args.SPMIN, args.final)]
     if args.fast:
         inp = "".join("%d %d %s\n" % (n, len(E), " ".join("%d %d" % e for e in E)) for n, E in graphs)
-        out = subprocess.run([os.path.join(HERE, "gen585"), "-p"], input=inp, capture_output=True, text=True,
+        out = subprocess.run([os.environ.get("ERDOS585_GEN585", os.path.join(HERE, "gen585")), "-p"], input=inp, capture_output=True, text=True,
                              check=True).stdout.split()
         keep = [g for g, c in zip(graphs, out) if c == "0"]
         keep = [(n, E) for n, E in keep if sparse_ok(n, E, args.SP, args.SPMIN, args.final)]
@@ -125,7 +128,7 @@ def main():
             if r["status"] == "NOPAIR":
                 keep.append((n, E))
     A = canon([to_g6(n, E) for n, E in keep])
-    cmd = [os.path.join(HERE, os.environ.get("GEN", "gen585")), str(args.N), str(args.EF), str(args.SP), str(args.SPMIN),
+    cmd = [os.environ.get("ERDOS585_GEN585", os.path.join(HERE, os.environ.get("GEN", "gen585"))), str(args.N), str(args.EF), str(args.SP), str(args.SPMIN),
            str(args.MINDF), "-d", str(k), "-S", str(k)]
     if not args.final:
         cmd.append("-L")

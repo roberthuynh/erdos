@@ -1,8 +1,12 @@
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
 # REVIEW2: QB(5) round 2, the E5 pair statement for generic blocks (findings/supplement/papers/qb5/PAPER2.md)
 
-Independent adversarial referee, October 5, 2026. Status: FINAL.
-Object: `PAPER2.md` as frozen in `FROZEN2.sha256` (`shasum -a 256 -c FROZEN2.sha256`: all 22 entries OK at
-the start and at the end of this review; `FROZEN.sha256` of PAPER.md also all OK). Working files, log and
+> Export clarification (2026-10-19): Unavailable historical source names below identify omitted records, not usable file paths or independent verification. Public substitutes and remaining omissions are tracked in REPRODUCTION-BOUNDARY.md at the supplement root.
+
+Independent adversarial AI review, October 5, 2026. Status: FINAL.
+Object: `PAPER2.md` as frozen in the omitted historical receipt `FROZEN2.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json) (the omitted historical receipt `shasum -a 256 -c FROZEN2.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json): all 22 entries OK at
+the start and at the end of this review; the omitted historical receipt `FROZEN.sha256` (original identities, where available, are mapped in the supplement-root PROVENANCE.json) of PAPER.md also all OK). Working files, log and
 code: `review2/` (`review2/LOG.md`, `review2/code/`). Nothing here is a project-oracle PASS: no Lean, no
 `check.sh`.
 
@@ -45,7 +49,7 @@ whose big-side vertices are all generic. It remains open in general, as the pape
   (`code/core_model.py`) can make every vertex of one side non-generic, even with Remark 5.4". The paper never
   states which constraints the model imposes or what instance it produces, so a reader cannot check the claim
   from the text, and I did not run the author's code. Either define the model and give the assignment in the
-  text, or label the sentence as an unrefereed observation from `code/core_model.py`. Nothing else depends on it.
+  text, or label the sentence as an not independently reviewed observation from `code/core_model.py`. Nothing else depends on it.
 
 Optional, editorial:
 - Line 270: PAPER2's own "Theorem 6.1" (the natural step) has the same number as PAPER.md Theorem 6.1, which

@@ -13,7 +13,7 @@ def run():
         g=nx.from_graph6_bytes(line)
         if verify_both(8,sorted(g.edges())):expected.add(line)
         if (i+1)%2000==0:print(json.dumps(dict(checked=i+1,total=len(raw),seconds=time.monotonic()-start)),flush=True)
-    filtered=subprocess.run(['[temporary path]','-l','8'],capture_output=True,check=True)
+    filtered=subprocess.run([__import__('os').environ['ERDOS585_SMALL_VALUES_PROGRAMS_ERDOS585_GENG_COMPLETE_AUDIT_PY_L16'],'-l','8'],capture_output=True,check=True)
     actual=filtered.stdout.splitlines()
     assert len(actual)==len(set(actual))
     assert set(actual)==expected,(len(actual),len(expected),len(set(actual)^expected))

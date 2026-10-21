@@ -1,6 +1,8 @@
+> Historical AI-generated mathematical review record. First-person statements describe the original AI review process; acceptance labels are recorded assessments, not human peer review or Lean verification.
+
 # REVIEW-R1: adversarial review of PROOF-R1.md and data/bip5-avoider-104.edges
 
-Reviewer: independent subagent, 2026-10-04. Inputs read: PROOF-R1.md, FACTS.md (C1, B2a'),
+Reviewer: independent AI review, 2026-10-04. Inputs read: PROOF-R1.md, FACTS.md (C1, B2a'),
 data/bip5-avoider-104.edges. Nothing under tools/ was read, imported or run. All code for this
 review is in review/ and was written from scratch.
 
@@ -393,9 +395,9 @@ Findings.
   6-gadget).
 
 Statements in PROOF-R1.md this review could not verify:
-1. Lines 3-4: the status and rung labels (process statements, not mathematics).
+1. Lines 3-4: the status and evidence categories (process statements, not mathematics).
 2. Lines 59-62 (Remark): that tools/gadget_traces.py checks Lemma 1 "for d = 5 and d = 6 ... for
-   one gadget each". The program was not read, by instruction. The d = 5 statement for Γ5 is
+   one gadget each". The program was not read in that review. The d = 5 statement for Γ5 is
    confirmed by this review's own enumeration; the d = 6 gadget is not named in PROOF-R1.md and
    was not checked.
 3. Lines 111-112: that tools/bip5.py built the file and checks it. The properties it is said to

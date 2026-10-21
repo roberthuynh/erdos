@@ -392,7 +392,7 @@ lemma added_identity (N W : Finset V) (hn : g q G A B N < 0) :
   have va := rn.value
   omega
 
-/-- The stronger cross-cell identity retained in the independent accepted proof. -/
+/-- The stronger cross-cell identity used in the proof below. -/
 lemma cross_cell_identity (N W : Finset V) (hn : g q G A B N < 0) :
     f q G A B (N \ W) + f q G A B (W \ N) +
       (ec G (N ∩ W) (univ \ (N ∪ W)) : ℤ) =

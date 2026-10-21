@@ -1,4 +1,4 @@
-"""gen_inst.py (referee's own generator, wave4/theory review).
+"""gen_inst.py (independent generator, papers/b6-24/theory review).
 
 Writes graph6 files of small bipartite test graphs (Delta <= 6) for rigidcheck:
   rand_small.g6  random a+a graphs, a in {4, 5}, degrees in [4, 6]       (Theorem 2.1 brute force)
