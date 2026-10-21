@@ -1,0 +1,308 @@
+{
+  "hosts": {
+    "cone3": {
+      "Phi": 0,
+      "avoids_by_common_link_intersection": true,
+      "avoids_by_literal_disjoint_pair_unions": true,
+      "binomial_n_2": 15,
+      "charge_values": [
+        "0"
+      ],
+      "colink_pairs": 6,
+      "disjoint_edge_pairs_checked": 0,
+      "edge_binomial_equality": false,
+      "input_sha256": "810010b021f4456fb14f112cb323dc9d9f8dd0e70f7313ac982fe99fa896d5c7",
+      "shadow_colink_equality": true,
+      "shadow_pairs": 12,
+      "sigma_each": "4/3",
+      "tau_each": "2/3",
+      "triples": 9,
+      "vertices": 6
+    },
+    "cone4": {
+      "Phi": 0,
+      "avoids_by_common_link_intersection": true,
+      "avoids_by_literal_disjoint_pair_unions": true,
+      "binomial_n_2": 21,
+      "charge_values": [
+        "0"
+      ],
+      "colink_pairs": 9,
+      "disjoint_edge_pairs_checked": 0,
+      "edge_binomial_equality": false,
+      "input_sha256": "62aa14c9ac3c5d63d47d89c3a33066762f03ec7579f24ebce70bdadabce1e55e",
+      "shadow_colink_equality": true,
+      "shadow_pairs": 15,
+      "sigma_each": "5/4",
+      "tau_each": "3/4",
+      "triples": 12,
+      "vertices": 7
+    },
+    "da2": {
+      "Phi": -307,
+      "avoids_by_common_link_intersection": true,
+      "avoids_by_literal_disjoint_pair_unions": true,
+      "binomial_n_2": 3003,
+      "charge_values": [
+        "-3/1624",
+        "-409/755160",
+        "1/12",
+        "1/2",
+        "1/6",
+        "1021/1860",
+        "11747/21924",
+        "14011/43848",
+        "191707/923832",
+        "251311/755160",
+        "2617/12220",
+        "312229/1472040",
+        "367/1566",
+        "7303/696",
+        "75791/234360",
+        "8003/39480",
+        "8549/744"
+      ],
+      "colink_pairs": 1539,
+      "disjoint_edge_pairs_checked": 4904,
+      "edge_binomial_equality": false,
+      "input_sha256": "f9b1471d5033f0180064104815a349441db9b1cef17e3735a995b7bcbfd04fa0",
+      "local": {
+        "B_relation_degrees": {
+          "a": [
+            1,
+            0
+          ],
+          "z": [
+            0,
+            1
+          ]
+        },
+        "C_relation_degrees": {
+          "Z00": [
+            0,
+            27
+          ],
+          "Z01": [
+            0,
+            27
+          ],
+          "Z02": [
+            0,
+            27
+          ],
+          "Z03": [
+            0,
+            27
+          ],
+          "Z04": [
+            0,
+            27
+          ],
+          "Z05": [
+            0,
+            27
+          ],
+          "Z06": [
+            0,
+            27
+          ],
+          "Z07": [
+            0,
+            27
+          ],
+          "Z08": [
+            0,
+            27
+          ],
+          "Z09": [
+            0,
+            27
+          ],
+          "Z10": [
+            0,
+            27
+          ],
+          "Z11": [
+            0,
+            27
+          ],
+          "Z12": [
+            0,
+            27
+          ],
+          "Z13": [
+            0,
+            27
+          ],
+          "Z14": [
+            0,
+            27
+          ],
+          "Z15": [
+            0,
+            27
+          ],
+          "Z16": [
+            0,
+            27
+          ],
+          "Z17": [
+            0,
+            27
+          ],
+          "Z18": [
+            0,
+            27
+          ],
+          "Z19": [
+            0,
+            27
+          ],
+          "Z20": [
+            0,
+            27
+          ],
+          "Z21": [
+            0,
+            27
+          ],
+          "Z22": [
+            0,
+            27
+          ],
+          "Z23": [
+            0,
+            27
+          ],
+          "Z24": [
+            0,
+            27
+          ],
+          "Z25": [
+            0,
+            27
+          ],
+          "a": [
+            0,
+            11
+          ],
+          "r": [
+            1,
+            1
+          ]
+        },
+        "H_w": "1/12",
+        "W_minus": "7/12",
+        "X_cost": "5/12",
+        "act_anchor": 2,
+        "active_anchor_bicones": [
+          [
+            "c",
+            "t"
+          ],
+          [
+            "r",
+            "w"
+          ]
+        ],
+        "anchor_margin": "792709/6796440",
+        "charge_T1": "-409/755160",
+        "charge_T2": "1/2",
+        "charge_anchor": "367/1566",
+        "coordinate_order": [
+          "n_B",
+          "n_C",
+          "m",
+          "m_prime"
+        ],
+        "coordinates": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "deficit_at_apex": "409/755160",
+        "groups": {
+          "A": [
+            "X00",
+            "X01",
+            "X02",
+            "X03",
+            "X04",
+            "X05",
+            "X06",
+            "X07",
+            "X08",
+            "Y00",
+            "Y01",
+            "Y02",
+            "Y03",
+            "Y04",
+            "Y05",
+            "Y06",
+            "Y07",
+            "Y08",
+            "Y09",
+            "Y10",
+            "Y11",
+            "Y12",
+            "Y13",
+            "Y14",
+            "Y15",
+            "Y16",
+            "t",
+            "z"
+          ],
+          "B": [
+            "a",
+            "z"
+          ],
+          "C": [
+            "Z00",
+            "Z01",
+            "Z02",
+            "Z03",
+            "Z04",
+            "Z05",
+            "Z06",
+            "Z07",
+            "Z08",
+            "Z09",
+            "Z10",
+            "Z11",
+            "Z12",
+            "Z13",
+            "Z14",
+            "Z15",
+            "Z16",
+            "Z17",
+            "Z18",
+            "Z19",
+            "Z20",
+            "Z21",
+            "Z22",
+            "Z23",
+            "Z24",
+            "Z25",
+            "a",
+            "r"
+          ]
+        },
+        "k_uw": 29,
+        "strict_claim_margin": "675529/3398220",
+        "tau_W": "1/12"
+      },
+      "shadow_colink_equality": false,
+      "shadow_pairs": 1382,
+      "triples": 1307,
+      "vertices": 78
+    }
+  },
+  "negative_controls": {
+    "cone2_not_misclassified_as_shadow_colink_equality": true,
+    "disjoint_common_link_pairs_rejected": true,
+    "literal_forbidden_configuration_rejected": true
+  },
+  "result": "PASS",
+  "scope": "Three explicit finite hosts; not universal theorem verification"
+}

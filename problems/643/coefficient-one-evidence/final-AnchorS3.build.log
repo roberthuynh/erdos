@@ -1,0 +1,16 @@
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorS3.lean:94:23: warning: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorS3.lean:190:36: warning: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Nat.cast_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorS3.lean:274:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

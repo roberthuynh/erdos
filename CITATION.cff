@@ -1,10 +1,9 @@
 cff-version: 1.2.0
-message: "To cite a specific result, use its problem-specific citation and exact source or declaration."
+message: "To cite a specific result, use its problem-specific citation and exact source or declaration. The collection defaults to Apache-2.0, subject to package-specific exceptions. The combined #643 design proof package is GPL-3.0-only; individual Apache-origin source notices remain intact. See NOTICE, problems/643/coefficient-one-design/COPYING and problems/643/coefficient-one-design/NOTICE-DESIGN.md."
 title: "Erdős: AI-assisted research in combinatorics and graph theory"
 authors:
   - family-names: Huynh
     given-names: Robert
 type: software
 repository-code: "https://github.com/roberthuynh/erdos"
-license: Apache-2.0
 abstract: "A collection of written mathematical arguments, reproducible computations and Lean formalizations, organized by problem with result-specific evidence and limitations."

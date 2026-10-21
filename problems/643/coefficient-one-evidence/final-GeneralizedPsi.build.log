@@ -1,0 +1,12 @@
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/GeneralizedPsi.lean:46:45: warning: Variable name `hjk` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hjk
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/GeneralizedPsi.lean:46:59: warning: Variable name `hkr` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hkr
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

@@ -1,0 +1,251 @@
+\subsection*{8. G3h' when $d_x=1$ and $\mathcal B\cup\mathcal C$ has a type-2 slot}
+\addcontentsline{toc}{subsection}{8. G3h' with a type-2 slot}
+
+\textbf{Theorem S3.} In setting S with $d_x=1$, if $\mathcal B\cup\mathcal C$ contains a type-2 slot, then
+\[
+ c(A)-\operatorname{act}(A)D>\frac1{k_{uw}}.
+\]
+By the symmetry $u\leftrightarrow w$, assume that $T_1$ is deficient and $T_2$ is not. Thus
+$D=\operatorname{def}(T_1)=13/12-S_1$, and $0<D\le1/12$, since Theorem 1 of subdivision 2 gives $S_1\ge1$.
+The inputs are F1, Lemmas 1 and 2 and Theorem 1 of Section 2; Theorem G1; Lemmas S1, S2, S6, S8, S9, S10.1 and S10 of Section 7; and $U^-+S_1\ge\Psi_N-L^*$ from Section 7.7.
+
+\subsubsection*{8.1 Notation for both sides}
+Write
+\[
+ \mathcal C=\{v\}\cup R,\qquad R=R_U\cup R_X\cup R_0\cup R_2,
+ \qquad k=|R_U|,\ n_C=|R_X|,\ r_0=|R_0|,\ m=|R_2|.
+\]
+These four classes consist respectively of type-1 slots in $R_u$, type-1 slots in $R_x$, isolated slots, and type-2 slots. On the other side write
+\[
+ \mathcal B=\{v\}\cup R'_W\cup R'_X\cup R'_0\cup R'_2
+\]
+with corresponding cardinalities $k',n_B,r'_0,m'$. Also
+\[
+ \mathcal A=\{y\}\cup\mathcal A_u\cup\mathcal A_w\cup\mathcal A_0,
+ \qquad J_2=(Q\cap M)\setminus\{x,y\}\subseteq\mathcal A_w,
+ \qquad a=|\mathcal A_w|,\quad c=1+k'.
+\]
+By Lemma S1(d), $y$ is the only type-2 slot of $\mathcal A$.
+If $m\ge1$, let $z^*$ be the common partner of $R_2$ from Lemma S8(a). Then
+\[
+ z^*\in(M\cap X_w)\setminus\{x,u,v\},\qquad z^*\notin X_u,
+ \qquad z^*\in\mathcal A_u.
+\]
+If $m'\ge1$, its mirror $z'^*$ satisfies
+\[
+ z'^*\in(M\cap X_u)\setminus\{x,w,v\},\qquad z'^*\notin X_w,
+ \qquad z'^*\in\mathcal A_w.
+\]
+Indeed, $z^*\in\mathcal A$ is $R_u$-adjacent to $R_2$ and cannot be $y$, whose only $R_u$-neighbour is $v$ by Lemma S1(b). Since every slot of $R_2$ has a unique $R_x$-neighbour by Lemma 2 of subdivision 2, every $R_x$-neighbour of a slot of $R'_X$ lies in $R_X$, except that $z^*$ may also be adjacent to $R_2$. Set
+\[
+ U^-=U-\sum_{R_X\cup R_0}\operatorname{cost},\qquad
+ W^-=W-\sum_{R'_X\cup R'_0}\operatorname{cost}.
+\]
+Let $\alpha_u$ indicate that the bicone of the unique type-2 slot of $\mathcal C$ is active; set $\alpha_u=0$ if $m\ne1$. Define $\alpha_w$ by symmetry. Then
+$\operatorname{act}(A)=1+\alpha_u+\alpha_w$: the triangle options of $A$ are those of $y,R_2,R'_2$ by Lemma S1(e), distinct options give distinct bicones, $B_q$ is active, and Lemma S8(b) excludes active bicones of type-2 slots when their group has at least two slots.
+
+\textbf{Identity (1).} With $t_2(A)=1+m+m'$, define
+\begin{align*}
+ G_u&=U^-+\frac{r_0}2+S_1-2,\\
+ H_w&=W^-+\frac{r'_0}2-\frac{11}{12}+X,\\
+ X&=\sum_{R_X}\operatorname{cost}+\sum_{R'_X}\operatorname{cost}
+       +\frac{m+m'}6.
+\end{align*}
+Then
+\[
+ c(A)-\operatorname{act}(A)D
+ =\frac1{k_{uw}}+\frac{|\mathcal A_0|}2+G_u+H_w-(\alpha_u+\alpha_w)D.
+ \tag{1}
+\]
+\emph{Proof.} Lemma S2 gives
+\[
+ c(A)=\frac1{k_{uw}}+\frac{1+m+m'}6+\frac{|\mathcal A_0|}2+U+W-2,
+\]
+where $U=U^-+\sum_{R_X}\operatorname{cost}+r_0/2$, and similarly for $W$.
+Subtract $(1+\alpha_u+\alpha_w)(13/12-S_1)$ and use $1/6-13/12=-11/12$.
+\hfill$\square$
+
+\subsubsection*{8.2 Where the partners sit}
+\textbf{Lemma N.} If $m\ge1$, then $z^*$, as a slot of $\mathcal B$, lies in $R'_X$.
+By symmetry, if $m'\ge1$, then $z'^*$, as a slot of $\mathcal C$, lies in $R_X$.
+
+\emph{Proof.} The slot $z^*\in\mathcal B$ is $R_x$-adjacent to every slot of $R_2$, so is not isolated. Suppose it is type 2. Lemma 2 of subdivision 2 says its two neighbours are slots of one vertex, so $R_2=\{r\}$ and its $R_w$-neighbour is $r\in\mathcal A$, giving $wrz^*\in H$. The type-2 slot $r\in\mathcal C$ has partner $z^*$, so its $R_u$-neighbour is $z^*\in\mathcal A$, giving $urz^*\in H$. Hence $\{r,z^*\}\in\operatorname{CN}(u,w)$; the pair avoids $\{u,w\}$ because $r\in X_u\setminus\{w\}$ and $z^*\in X_w$.
+But $xv\in\operatorname{CN}(u,w)$ since $T_1,T_2\in H$, and
+$\{r,z^*\}\cap\{x,v\}=\varnothing$: neither vertex is $x$, as they belong to $L(xu),L(xw)$; $r\ne v$, since $v\in\mathcal C$ has no $R_x$ edge by Lemma S1(c); and $z^*\ne v$ by Lemma S8(a). These disjoint members of $\operatorname{CN}(u,w)$ contradict F1. Thus $z^*$ has $R_x$ edges and no $R_w$ edge, and is type 1 in $R_x$.
+\hfill$\square$
+
+Consequently the \emph{mutual case}, meaning $m=m'=1$ with $z^*$ the type-2 slot of $\mathcal B$ whose partner is the type-2 slot of $\mathcal C$, cannot occur in an avoiding host. Lemma N has no exception.
+
+\subsubsection*{8.3 The $u$-side}
+\textbf{Lemma U.} If $T_1$ is deficient, then:
+\begin{enumerate}
+\item[(a)] $m=0$ implies $G_u>0$;
+\item[(b)] $m=1$ implies $G_u>D-1/12$;
+\item[(c)] $m\ge2$ implies $G_u>-m/(3(m+3))$.
+\end{enumerate}
+\emph{Proof.} We have $G_u\ge U^-+S_1-2$. Parts (a) and (b) follow from Lemma S10 with $\sigma_u=0$ and $\sigma_u=S_1-1=1/12-D$, respectively.
+For (c), Section 7.7 gives $U^-+S_1\ge\Psi_N-L^*$, where
+\[
+ L^*=\begin{cases}
+ \dfrac1{2+k}-\dfrac1{2+k+m},&z^*\in J_1,\\[4pt]
+ \dfrac1{2(1+k)}-\dfrac1{2(1+k+m)},&z^*\in E_u.
+ \end{cases}
+\]
+Lemma S10.1, using Lemma S9, gives $\Psi_N>2$.
+If $k\ge1$, both expressions decrease with $k$, so
+\[
+ L^*\le\max\left\{\frac{m}{3(3+m)},\frac{m}{4(2+m)}\right\}
+ =\frac{m}{3(m+3)},
+\]
+since $3(3+m)\le4(2+m)$ for $m\ge1$. Hence $G_u>-m/(3(m+3))$.
+
+If $k=0$, then $k<j$, since Lemma S9 gives $j\ge2$. Thus case (ii) or (iii) of Lemma S10.1 applies. This uses its case bounds, not just the statement of Lemma S10. In case (ii), $\Psi_N-2\ge10/7>1/2>L^*$. In case (iii),
+\[
+ \Psi_N\ge\chi(j+1)+(r-k)
+ \left[\frac{j}{(2+k)(2+r)}-\frac1{2(1+j)}\right],
+\]
+where $\chi(j+1)>2$ and $j\ge r+1$. At $k=0$ the bracket is at least
+\[
+ \frac{r+1}{2(r+2)}-\frac1{2(r+2)}=\frac r{2(r+2)}.
+\]
+Therefore $\Psi_N-2>r^2/(2(r+2))\ge m^2/(2(m+2))$, using $r\ge m$ and monotonicity. Also, at $k=0$,
+\[
+ L^*\le\max\left\{\frac m{2(2+m)},\frac m{2(1+m)}\right\}
+ =\frac m{2(m+1)}.
+\]
+The inequality $m^2/(2(m+2))\ge m/(2(m+1))$ is equivalent to $m^2\ge2$. Hence
+\[
+ G_u>0\ge-\frac{m}{3(m+3)}.
+\]
+\hfill$\square$
+
+\subsubsection*{8.4 The $w$-side (Lemma W)}
+Put $N=n_B+m'$ and define, with brackets denoting indicators,
+\[
+ \tau_W=\begin{cases}
+ [m'=1]/12,&m=0,\\
+ 1/6,&m=1,\ m'=1,\\
+ 1/12,&m=1,\ m'\ne1,\\
+ \dfrac{m}{3(m+3)}+[m'=1]/12,&m\ge2.
+ \end{cases}
+\]
+\textbf{Lemma W.} $H_w\ge\tau_W$.
+
+\emph{Proof. Step 1: the $R_w$ part.}
+The costs of slots in $\mathcal B\setminus(R'_X\cup R'_0\cup R'_2)$ and $\mathcal A_w$ are bounded by degree caps. Each cap contains all neighbours of the slot. The slot $v\in\mathcal B$ costs exactly $1/(2(2+|J_2|))\ge1/(2(2+a))$ by the mirror of Lemma S1(c). A slot of $R'_W$ has its $R_w$-neighbours in $\mathcal A_w$, since $y$ is adjacent only to $v$, giving cap $a$. A slot of $J_2$ is adjacent to $v$ and slots of $R'_W$; a slot of $\mathcal A_w\setminus J_2$ only to $R'_W$, since it is not in $Q$; and $z'^*$ additionally to $R'_2$. These give caps $c$, $c-1$, and $c+m'$ for $z'^*$.
+The expression $g_W$ below uses the weaker uniform cap $c$ for all slots of $\mathcal A_w$; the exceptional extra neighbours of $z'^*$ are accounted for by $L'^*$.
+Also $1/|X_w|=1/(1+c+N+r'_0)$. Removing the $r'_0$ isolated slots raises this term by at most $r'_0/6$, since $1+c+N\ge2$, and saves $r'_0/2$. Hence
+\begin{align*}
+ W^-+\frac{r'_0}2&\ge B-L'^*,\\
+ B&=\frac1{1+c+N}+g_W(a,c),\\
+ g_W(a,c)&=\frac1{2(2+a)}+\frac{c-1}{2(1+a)}+\frac a{2(1+c)},
+\end{align*}
+where $L'^*=0$ for $m'=0$, and
+$L'^*=1/(2(1+c))-1/(2(1+c+m'))$ for $m'\ge1$. In the latter case $a\ge1$, since $z'^*\in\mathcal A_w$.
+We claim
+\[
+ B-L'^*\ge\beta:=\begin{cases}
+ \dfrac14+\dfrac1{2+N},&m'=0,\\[4pt]
+ \dfrac16+\dfrac1{2+N}+\dfrac1{2(2+m')},&m'\ge1.
+ \end{cases}
+\]
+For $c\ge2$, Lemma S6 gives
+$g_W=f(a,c)-1/(1+c)\ge11/12-1/(1+c)$.
+Since $1/(1+c+N)-1/(1+c)$ increases with $c$,
+\[
+ B\ge\frac7{12}+\frac1{3+N}\ge\frac14+\frac1{2+N}.
+\]
+For $m'\ge1$, we have
+\[
+ B-L'^*\ge\frac{11}{12}-\frac3{2(1+c)}
+                 +\frac1{1+c+N}+\frac1{2(1+c+m')}.
+\]
+This expression increases with $c$, and at $c=2$ exceeds the claimed bound by
+\[
+ \frac14-\frac1{(2+N)(3+N)}-\frac1{2(2+m')(3+m')}>0.
+\]
+For $c=1$, equivalently $k'=0$, the function
+$g_W(a,1)=1/(2(2+a))+a/4\ge1/4$ increases with $a$.
+Thus $B\ge1/4+1/(2+N)$ for every $N\ge0$. If $m'\ge1$, then $a\ge1$ and
+\[
+ g_W(a,1)-L'^*=\frac1{2(2+a)}+\frac{a-1}4+\frac1{2(2+m')}
+ \ge\frac16+\frac1{2(2+m')}.
+\]
+The argument does not infer $N\ge1$ merely from $|X_w|\ge3$: the identity
+$|X_w|=2+N+r'_0$ would give only $N+r'_0\ge1$.
+Nevertheless $N\ge1$ holds in Theorem S3's domain. If $m'\ge1$, then $N\ge m'$; otherwise $m\ge1$, so Lemma N gives $z^*\in R'_X$ and $n_B\ge1$.
+
+\emph{Step 2: the $R_x$ part.}
+By Section 8.1 and Lemma N, if $m\ge1$, then $z^*\in R'_X$ has cap $n_C+m$, while every other slot of $R'_X$ has cap $n_C$. If $m'\ge1$, then $z'^*\in R_X$ has cap $n_B+m'$, and the others have cap $n_B$. A type-1 slot needs a neighbour, so $n_C=0$ forces $R'_X\subseteq\{z^*\}$, and $n_B=0$ forces $R_X\subseteq\{z'^*\}$. Therefore $H_w\ge\Theta'$, where
+\begin{align*}
+ \Theta'&=\beta+X_B+X_C+\frac{m+m'}6-\frac{11}{12},\\
+ X_B&=\frac{[m\ge1]}{2(1+n_C+m)}
+          +\frac{n_B-[m\ge1]}{2(1+n_C)},\\
+ X_C&=\frac{[m'\ge1]}{2(1+n_B+m')}
+          +\frac{n_C-[m'\ge1]}{2(1+n_B)}.
+\end{align*}
+
+\emph{Step 3: reduction to a box.}
+Directly from the definition, $\beta\ge1/6$, $\tau_W\le(m+m')/6$, and $\tau_W<5/12$; here $m/(3(m+3))<1/3$.
+The stronger purported bound $\tau_W\le11/28$ is false from $m=40$ onward:
+$\tau_W(40,1)-11/28=1/1806$. Only $\tau_W<5/12$ is used.
+\begin{enumerate}
+\item[(i)] If $m+m'\ge7$, then
+\[
+ \Theta'-\tau_W\ge\frac16+\frac76-\frac{11}{12}-\frac5{12}=0.
+\]
+\item[(ii)] If $\min(n_B,n_C)\ge1$, then AM--GM gives
+\begin{align*}
+ X_B+X_C
+ &\ge\frac{n_B-1}{2(1+n_C)}+\frac{n_C-1}{2(1+n_B)}\\
+ &=\frac{n_B+1}{2(n_C+1)}+\frac{n_C+1}{2(n_B+1)}
+      -\frac1{n_C+1}-\frac1{n_B+1}\\
+ &\ge1-\frac1{n_C+1}-\frac1{n_B+1}.
+\end{align*}
+This is at least $3/4$ if $\min(n_B,n_C)\ge7$. If instead
+$1\le\min(n_B,n_C)\le6$ and $\max(n_B,n_C)\ge12$, the single term
+\[
+ \frac{\max(n_B,n_C)-1}{2(1+\min(n_B,n_C))}\ge\frac{11}{14}\ge\frac34
+\]
+suffices. In both cases
+$\Theta'-\tau_W\ge1/6+3/4+(m+m')/6-11/12-\tau_W\ge0$.
+\item[(iii)] If $\min(n_B,n_C)=0$, then $\max(n_B,n_C)\le1$ by Step 2.
+\end{enumerate}
+It remains to check $\Theta'\ge\tau_W$ at the admissible integer points with
+$0\le n_B,n_C\le11$ and $m+m'\le6$.
+
+The admissible points $(n_B,n_C,m,m')$ are defined by:
+\begin{enumerate}
+\item[(A1)] $m+m'\ge1$, the hypothesis of Theorem S3;
+\item[(A2)] $m\ge1\Rightarrow n_B\ge1$, and $m'\ge1\Rightarrow n_C\ge1$, by Lemma N and its mirror;
+\item[(A3)] $n_C=0\Rightarrow n_B\le[m\ge1]$, and $n_B=0\Rightarrow n_C\le[m'\ge1]$, by Step 2.
+\end{enumerate}
+Every configuration in Theorem S3's domain satisfies (A1)--(A3). These conditions imply $N\ge1$ and $n_C+m\ge1$, which the scripts also test. The scripts additionally evaluate the empty mutual variant at $m=m'=1$.
+
+\emph{Step 4: the finite check.}
+The recorded exact certificate \texttt{wbox}, described in Section 10, reports
+$\Theta'-\tau_W\ge0$ at all $3{,}279$ admissible points. Its minimum is zero, attained exactly at
+$(n_B,n_C,m,m')=(1,0,1,0)$, corresponding to $\mathcal B=\{v,z^*\}$ and one type-2 slot in $\mathcal C$.
+The alternative count $3{,}401$ includes $122$ points of the mutual variant, with another zero at $(0,0,1,1)$; that variant corresponds to no configuration by Lemma N.
+\hfill$\square$
+
+\subsubsection*{8.5 Proof of Theorem S3}
+By (1),
+\[
+ c(A)-\operatorname{act}(A)D-\frac1{k_{uw}}
+ \ge G_u+H_w-(\alpha_u+\alpha_w)D.
+\]
+Use Lemmas U and W, $D\le1/12$, $\alpha_u\le[m=1]$ and $\alpha_w\le[m'=1]$.
+\begin{itemize}
+\item If $m=0$, so $m'\ge1$, the right-hand side is strictly greater than
+$\tau_W-[m'=1]D=[m'=1](1/12-D)\ge0$.
+\item If $m=1$, it is strictly greater than
+$(D-1/12)+\tau_W-D-[m'=1]D$.
+This equals zero for $m'\ne1$, when $\tau_W=1/12$, and equals $1/12-D\ge0$ for $m'=1$, when $\tau_W=1/6$.
+\item If $m\ge2$, then $\alpha_u=0$, and it is strictly greater than
+\[
+ -\frac m{3(m+3)}+\tau_W-[m'=1]D=[m'=1](1/12-D)\ge0.
+\]
+\end{itemize}
+Lemma U supplies strictness in every case. Thus $c(A)-\operatorname{act}(A)D>1/k_{uw}$.
+\hfill$\square$

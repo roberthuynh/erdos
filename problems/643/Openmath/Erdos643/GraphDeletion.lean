@@ -1,4 +1,6 @@
-import Mathlib
+import Mathlib.Combinatorics.SimpleGraph.Finite
+import Mathlib.Combinatorics.SimpleGraph.DeleteEdges
+import Mathlib.Tactic
 
 namespace Erdos643
 namespace GraphDeletion

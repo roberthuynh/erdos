@@ -1,0 +1,108 @@
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:23:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:23:35: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:23:76: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:24:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:24:35: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:24:76: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:65:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:65:42: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:65:83: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:84:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:84:34: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:84:75: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:86:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:86:34: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:86:75: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:88:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:88:34: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:88:75: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:116:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:116:36: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:116:77: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:121:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:121:35: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:121:76: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:122:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:122:35: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:122:76: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:128:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:128:33: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:128:74: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:207:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:207:36: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:207:77: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:235:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:235:35: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/AnchorActivity.lean:235:76: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

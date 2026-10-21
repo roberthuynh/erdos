@@ -1,0 +1,138 @@
+\section{The problem and result}
+The problem page~\cite{erdos} asks: ``Estimate $f(n;t)$ -- in particular, is it true that for $t\ge3$''
+\[
+ f(n;t)=(1+o(1))\binom{n}{t-1}?
+\]
+The result below addresses only the $t=3$ specialization of this asymptotic question.
+A $3$-graph is a set of three-element subsets of a finite vertex set $V$; edges have no multiplicity. Call it \emph{avoiding} if it has no four distinct edges $A,B,C,D$ such that
+\[
+ A\cap B=C\cap D=\varnothing,\qquad A\cup B=C\cup D.
+\]
+All edges in this condition are edges of the original host. There is no replacement of the configuration by equal degrees, by an intersection pattern in a quotient, or by an edge count alone.
+
+\begin{theorem}[Main result]\label{thm:main}
+For every finite avoiding $3$-graph $H$,
+\begin{equation}\label{eq:main}
+ 2|H|\leq |\partial H|+|\CL(H)|.
+\end{equation}
+In particular, if $|V|=n$, then $|H|\leq\binom n2$.
+\end{theorem}
+The definitions of both pair sets appear below; each is a subset of $\binom V2$, even when they overlap. Consequently the final implication in the theorem divides the sum of two bounds $\binom n2$ by two. It does not require the pair sets to be disjoint.
+
+Let $\operatorname{ex}_3(n)$ be the maximum size of an avoiding $3$-graph on a fixed $n$-vertex set. Let $f(n;3)$ be the least integer edge threshold forcing the forbidden configuration. With this convention,
+\[
+ f(n;3)=\operatorname{ex}_3(n)+1.
+\]
+A threshold exceeding the total number of triples is understood vacuously. In particular, one must not identify the extremal maximum with the forcing threshold.
+
+\begin{corollary}[Consequences of Theorem~\ref{thm:main}]
+For all $n\geq0$, $\operatorname{ex}_3(n)\leq\binom n2$ and $f(n;3)\leq\binom n2+1$. For $n\geq1$, the classical star-plus-matching lower bound, cited rather than reproved here, gives
+\[
+ \binom{n-1}{2}+\left\lfloor\frac{n-1}{3}\right\rfloor
+ \leq\operatorname{ex}_3(n)\leq\binom n2.
+\]
+Thus $\operatorname{ex}_3(n)=(1+o(1))\binom n2$ and $f(n;3)=(1+o(1))\binom n2$ as $n\to\infty$.
+\end{corollary}
+For $n=0,1,2$, there are no triples and \eqref{eq:main} reads $0\leq0$; no positive codegree denominator is evaluated. The extremal statement for $n=0$ is separate from the displayed lower construction, which requires a distinguished vertex. More generally all denominators in the proof occur only at nonempty links, actual options, donors, or active bicones, as specified below.
+
+\paragraph{Equality and scope.}
+Whenever a Steiner system $S(2,5,n)$ exists, filling every block with its ten triples gives the classical construction in Example 1.3 of~\cite{furedi}. Hanani's 1961 existence theorem~\cite[(7.10), pp.~378--380]{hanani1961}, completed by the 1965 note~\cite[p.~711]{hanani1965}, supplies these systems for $n\ge5$ with $n\equiv1,5\pmod{20}$; $n=1$ is handled separately by the empty family. Together with the verified upper bound and the cited existence theorem, this gives $f(n;3)=\binom n2+1$ at those orders. This is an existence claim; the argument does not classify every extremal host or settle every finite value. The stronger structural conjecture of Howard~\cite[Conjecture~3.6]{howard} is not established by this inequality. The paper concerns $t=3$ only. Appendix~\ref{app:examples} exhibits cone configurations attaining the shadow--co-link bound, so equality there is not restricted to $K_5$ unions.
+
+\section{Conventions and the counting identity}\label{sec:notation}
+For a vertex pair $p$, put
+\[
+ L(p)=\{v:p\cup\{v\}\in H\},\quad k_p=|L(p)|,\quad
+ \partial H=\{p:k_p>0\}.
+\]
+For distinct vertices $x,y$, define
+\[
+ \CN(x,y)=\{P\in\tbinom V2:P\cap\{x,y\}=\varnothing,
+       \ P\cup\{x\},P\cup\{y\}\in H\},
+\quad s_{xy}=|\CN(x,y)|,
+\]
+\[
+ \CL(H)=\{\{x,y\}\in\tbinom V2:s_{xy}>0\}.
+\]
+Pairs such as $xy$ are unordered sets. Expressions such as $x+uv$ mean $\{x,u,v\}$, with the distinctness imposed by being an edge.
+
+For $T\in H$, a pair $P\subset T$ has a unique opposite vertex $a_P\in T\setminus P$. Its \emph{options} through $P$ are $q=\{a_P,z\}$ for $z\in L(P)\setminus\{a_P\}$. Every such option meets $T$ exactly in $a_P$ and has $P\in\CN(q)$, so $s_q\geq1$. Distinct pairs of $T$ cannot yield the same option. Set
+\[
+ \sigma(T)=\sum_{P\in\binom T2}\frac1{k_P},\qquad
+ \tau(T)=\sum_{q\text{ an option of }T}\frac1{2s_q},\qquad
+ c(T)=\sigma(T)+\tau(T)-2.
+\]
+Call $T$ deficient if $c(T)<0$ and then put $\deficit(T)=-c(T)>0$. The exact identities, proved in detail in the appendix, are
+\[
+ \sum_{T\in H}\sigma(T)=|\partial H|,\quad
+ \sum_{T\in H}\tau(T)=|\CL(H)|,\quad
+ \sum_{T\in H}c(T)=|\partial H|+|\CL(H)|-2|H|.
+\]
+For the second identity an option $q$ belongs to exactly $2s_q$ distinct triples, not merely at most that many. This exact multiplicity is essential.
+
+\paragraph{Slots.}
+Fix $T=abc$. Its groups are $A=L(bc)\setminus\{a\}$, $B=L(ca)\setminus\{b\}$ and $C=L(ab)\setminus\{c\}$. A slot is $(z,X)$ with $z\in X$: a vertex belonging to two groups has two distinct slots. Relations $R_b$ between $C,A$, $R_c$ between $A,B$, and $R_a$ between $B,C$ are defined by the triples $bxz$, $czy$, and $ayx$, respectively, with unequal slot vertices. A slot is isolated if it has no relation neighbour, type~1 if its neighbours lie in just one relation, and type~2 if they lie in both. Write $d(s)$ for its total relation degree and $\operatorname{cost}(s)=1/(2(1+d(s)))$. Avoidance forces every common link to be intersecting and every type~2 slot to have one neighbour in each relation, represented by the same vertex.
+
+\paragraph{Bicones.}
+A common link is triangular when $\CN(x,y)=\{uv,vw,uw\}$ for distinct $u,v,w$. Its bicone $B_q$, $q=xy$, consists of the six triples $x+uv,x+vw,x+uw,y+uv,y+vw,y+uw$. The vertices $x,y$ are its apexes. A triple belongs to $B_q$ precisely when $q$ is one of its triangle options. Write $t_2(T)$ for the number of these options.
+An apex-base pair is light if its codegree is two, heavy otherwise. A triple is exactly-one-light if exactly one of its two apex-base pairs is light. An apex with two such triples has a third triple, its anchor. The anchor is both-light or both-heavy. A bicone is active if it contains a deficient triple; $D_q$ is the set of those triples, $d_x$ counts them at apex $x$, and $\act(T)$ counts active bicones containing $T$.
+
+\section{Proof architecture and the final implication}
+\paragraph{Notation dictionary.}
+The host quantities $k_p,s_q,\sigma,\tau,c$ and $\Phi=2|H|-|\partial H|-|\CL(H)|$ are fixed throughout. The unadorned groups $A,B,C$ are slots around a generic triple; $\mathcal A,\mathcal B,\mathcal C$ are slots around the anchor in setting S. In that setting $S_i=c(T_i)+13/12$, $D$ is the total deficit at the chosen apex, and $U,W$ collect the two sides of the anchor charge. The counts $j,d,e,r,k$ are defined in subdivisions 7.3 and 7.7; $m,m',n_B,n_C$ and $X$ in subdivision 8.1. A prime exchanges the $u$ and $w$ sides. The functions $g$ of Lemma 3g, $g_{10}$ of Lemma S10.1, and $g_W$ of Lemma W are different functions. Every cost uses the degree of a slot, so repeated outside vertices remain distinct when they occupy different groups.
+The local inequality $c(T)\geq0$ is not an input. The proof allows deficient triples and establishes a global redistribution. The dependencies are:
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.30\linewidth}>{\raggedright\arraybackslash}p{.60\linewidth}}
+\toprule
+Stage & Required mathematical conclusion\\\midrule
+Common links and slots & Intersecting common links; $s_q=1+d(s)$; type~2 slots are precisely triangle options.\\
+Profile inequalities & $\sigma+\tau\geq23/12$, and every deficient triple satisfies the structural theorem G1.\\
+Deficient-triple structure & Exactly one triangle option, exactly one light apex-base pair, and the specified common-link size two.\\
+Anchor estimates & Both-light anchors supply at least $1/6$; both-heavy anchors supply the total deficit at their apex after division by their number of active bicones.\\
+Conservation & Proportional distribution of each bicone pot makes every final charge nonnegative without changing its total.\\\bottomrule
+\end{tabular}
+\end{center}
+The analytic profile reduction separates no large relation, one large relation, and at least two large relations. It reduces only the first two branches to finite rational certificates; it does not infer a universal statement from small-host sampling. For both-heavy anchors the exhaustive branches are $d_x=2$; $d_x=1$ with no additional type~2 slot; and $d_x=1$ with an additional type~2 slot. The final branch splits by the count $m=0,1,$ or $m\geq2$ on the deficient side. An apparent mutual-partner branch is excluded by two disjoint pairs in a common link.
+
+\paragraph{The redistribution.}
+A donor $T'$ has $c(T')>0$ and $\act(T')\geq1$. It sends $c(T')/\act(T')$ to each active bicone containing it. Write $\operatorname{pot}(q)$ for the total sent to $B_q$. Each $T\in D_q$ receives
+\[
+ \operatorname{pot}(q)\frac{\deficit(T)}{\sum_{S\in D_q}\deficit(S)}.
+\]
+The denominator is positive because the bicone is active. This is a proportional split, not an equal split. Each donor sends exactly its charge, each pot is fully distributed, and only deficient triples receive. Thus the total charge is conserved.
+
+G1 puts a deficient triple in exactly one active bicone. At either apex with $d_x>0$, parity leaves at most two deficient triples and a nondeficient anchor $A_x$. For a both-light anchor, its charge is at least $1/6$, it has exactly one triangle option, and each deficit is at most $1/12$. For a both-heavy anchor, the detailed estimates prove
+\[
+ c(A_x)-\act(A_x)\sum_{T\in D_q,\ x\in T}\deficit(T)>\frac1{k_{uw}}>0.
+\]
+If both apexes have positive deficit, their anchors are distinct because each contains its own apex but not the other. Summing the anchor contributions over apexes with positive deficit therefore gives
+\[
+ \operatorname{pot}(q)\geq\sum_{S\in D_q}\deficit(S).
+\]
+Every deficient triple receives at least its deficit; every other triple has nonnegative final charge. The conserved total is consequently nonnegative, giving \eqref{eq:main}. This last implication is conditional on the full local estimates, including the finite certificates, the six relabellings in Lemma S8(b), and the exceptional-slot inequality in Lemma S10.
+
+\section{Relation to earlier work}
+Erd\H{o}s discussed the distinct-union problem in~\cite[Section II, item 6]{erdos1977}. F\"uredi~\cite[Conjecture~1.4]{furedi} conjectured the coefficient-$1$ upper bound
+for sufficiently large $n$ and gave both the star-plus-matching lower
+bound and the $K_5$-filled Steiner-system construction.
+Pikhurko and Verstra\"ete~\cite[Theorem~2]{pv} proved
+$\operatorname{ex}_3(n)\leq(13/9)\binom n2$ for every $n\geq1$.
+The elementary common-link observation is related to their diagonal analysis: the proof of Lemma~9 excludes disjoint common-link pairs, while Lemmas~5--6 describe the triangle case. We prove the exact form used here directly.
+Frankl and F\"uredi's pair-counting argument~\cite[Section~2]{ff}
+provides a related precedent under the stronger weakly union-free hypothesis, which forbids equal unions of any four distinct triples without requiring paired edges to be disjoint. Their Theorem~1.6 gives $n(n-1)/3$ under that stronger hypothesis.
+Mubayi~\cite{mubayi} proved the coefficient-$1$ bound with the additional
+forbidden configuration $K^{(3)}(1,2,4)$ in journal Theorem~1.3 (Theorem~1.4 in the author manuscript dated 11 June 2005).
+The theorem here has no such additional hypothesis.
+Huang, Ma and Yang~\cite[Theorem~1.2]{hmy} establish the exact conjecture
+for each fixed $r\geq4$ and sufficiently large $n$, while their
+Section~7 leaves $r=3$ open. Their higher-uniformity result is separate
+from the argument in this paper.
+
+The theorem supplies the triple case of the asymptotic question in Erd\H{o}s Problem 643. Huang, Ma and Yang's versioned preprint~\cite[Theorem~1.2]{hmy} supplies the cases of every fixed uniformity at least four for sufficiently large order, with the order threshold depending on the fixed uniformity. Taken together, these results give an affirmative answer to the asymptotic question for every fixed uniformity at least three. The higher-uniformity cases rely on that external preprint and are not Lean-verified here; the Lean verification supplied here covers our triple theorem and the stated triple design consequences. This does not determine every finite extremal value or classify all triple equality cases.
+
+The same research programme previously released a Lean-checked $4/3$ bound at public commit \href{https://github.com/roberthuynh/erdos/commit/74a2dc52}{74a2dc52}. The $9/8$ and $24/23$ bounds have separately recorded Lean checks; neither is the coefficient-one theorem or presented here as external published literature. The all-$n$ coefficient-one assertion is stronger than the sufficiently-large-$n$ form of F\"uredi's conjecture for triples.
+
+Howard's thesis~\cite[printed p.~9]{howard} records the design-only classification of Dukes and Ling~\cite{dukesling}: simple disjoint-union-free designs with triple blocks and pair multiplicity three have the five-block construction. That prescribed-multiplicity result is distinct from classifying every extremal triple system. The six-page Dukes--Ling article itself was not obtained; this attribution uses the actually read thesis passage.
+
+The attribution of classical five-block design existence to Hanani follows F\"uredi's Example~1.3 and the introduction of Pikhurko and Verstra\"ete. The original Hanani papers were subsequently obtained and visually read: all 26 pages of the 1961 paper and the complete one-page 1965 note. The 1961 statement (7.10), on page 378, retains a possible 141-point exception; the 1965 note supplies that case and explicitly removes the exception. This reading did not independently revalidate every finite table or block entry, or formally audit the historical proofs. The accompanying constructive Lean proof supplies its separate mathematical evidence and does not claim new design-existence mathematics.
+
+The literature comparison is bounded by the sources and versions read. It establishes neither historical priority nor the absence of unpublished parallel work. No first-discovery claim is made here.

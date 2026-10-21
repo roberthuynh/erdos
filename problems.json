@@ -1,15 +1,6 @@
 {
-  "schema_version": 1,
   "problems": [
     {
-      "id": "60",
-      "title": "C4 supersaturation at projective-plane orders",
-      "topics": [
-        "graph theory",
-        "extremal combinatorics",
-        "incidence geometry"
-      ],
-      "path": "problems/60",
       "checks": {
         "docs": [
           [
@@ -31,23 +22,24 @@
           ]
         ]
       },
+      "id": "60",
       "lean": {
-        "registry": "scripts/headline-theorems.json",
-        "coverage": "scripts/source_modules.py",
         "axioms": "scripts/check_axioms.py",
-        "replay": "scripts/replay_modules.py",
+        "coverage": "scripts/source_modules.py",
         "oracle": "check.sh",
+        "registry": "scripts/headline-theorems.json",
+        "replay": "scripts/replay_modules.py",
         "target": "Erdos60"
-      }
-    },
-    {
-      "id": "585",
-      "title": "Cycles on the same vertex set and regular subgraphs",
+      },
+      "path": "problems/60",
+      "title": "C4 supersaturation at projective-plane orders",
       "topics": [
         "graph theory",
-        "extremal combinatorics"
-      ],
-      "path": "problems/585",
+        "extremal combinatorics",
+        "incidence geometry"
+      ]
+    },
+    {
       "checks": {
         "docs": [
           [
@@ -94,23 +86,73 @@
           ]
         ]
       },
+      "id": "585",
       "lean": {
-        "registry": "scripts/headline-theorems.json",
-        "coverage": "scripts/source_modules.py",
         "axioms": "scripts/check_axioms.py",
-        "replay": "scripts/replay_modules.py",
+        "coverage": "scripts/source_modules.py",
         "oracle": "check.sh",
+        "registry": "scripts/headline-theorems.json",
+        "replay": "scripts/replay_modules.py",
         "target": "Openmath"
-      }
+      },
+      "path": "problems/585",
+      "title": "Cycles on the same vertex set and regular subgraphs",
+      "topics": [
+        "graph theory",
+        "extremal combinatorics"
+      ]
     },
     {
+      "checks": {
+        "docs": [
+          [
+            "python3",
+            "-B",
+            "scripts/check_docs.py"
+          ]
+        ],
+        "full": [
+          [
+            "python3",
+            "-B",
+            "scripts/check_docs.py"
+          ],
+          [
+            "python3",
+            "-B",
+            "scripts/test_check_docs.py"
+          ],
+          [
+            "python3",
+            "-B",
+            "scripts/test_oracle.py"
+          ]
+        ]
+      },
       "id": "643",
+      "lean": {
+        "axioms": "scripts/check_axioms.py",
+        "coverage": "scripts/source_modules.py",
+        "oracle": "check.sh",
+        "registry": "scripts/headline-theorems.json",
+        "replay": "scripts/replay_modules.py",
+        "target": "Openmath"
+      },
+      "path": "problems/643",
+      "phased_lean": [
+        {
+          "path": "coefficient-one-design",
+          "plan": "scripts/coefficient-one-design-phases.json",
+          "profile": "erdos643-full-design-v2"
+        }
+      ],
       "title": "Generalized four-cycles in 3-uniform hypergraphs",
       "topics": [
         "graph theory",
         "extremal combinatorics"
-      ],
-      "path": "problems/643",
+      ]
+    },
+    {
       "checks": {
         "docs": [
           [
@@ -137,23 +179,23 @@
           ]
         ]
       },
-      "lean": {
-        "registry": "scripts/headline-theorems.json",
-        "coverage": "scripts/source_modules.py",
-        "axioms": "scripts/check_axioms.py",
-        "replay": "scripts/replay_modules.py",
-        "oracle": "check.sh",
-        "target": "Openmath"
-      }
-    },
-    {
       "id": "642",
+      "lean": {
+        "axioms": "scripts/check_axioms.py",
+        "coverage": "scripts/source_modules.py",
+        "oracle": "check.sh",
+        "registry": "scripts/headline-theorems.json",
+        "replay": "scripts/replay_modules.py",
+        "target": "Openmath"
+      },
+      "path": "problems/642",
       "title": "Cycles with at least as many chords as vertices",
       "topics": [
         "graph theory",
         "extremal combinatorics"
-      ],
-      "path": "problems/642",
+      ]
+    },
+    {
       "checks": {
         "docs": [
           [
@@ -172,61 +214,26 @@
             "python3",
             "-B",
             "scripts/test_check_docs.py"
-          ],
-          [
-            "python3",
-            "-B",
-            "scripts/test_oracle.py"
           ]
         ]
       },
-      "lean": {
-        "registry": "scripts/headline-theorems.json",
-        "coverage": "scripts/source_modules.py",
-        "axioms": "scripts/check_axioms.py",
-        "replay": "scripts/replay_modules.py",
-        "oracle": "check.sh",
-        "target": "Openmath"
-      }
-    },
-    {
       "id": "85",
+      "lean": {
+        "axioms": "scripts/check_axioms.py",
+        "coverage": "scripts/source_modules.py",
+        "oracle": "check.sh",
+        "registry": "scripts/headline-theorems.json",
+        "replay": "scripts/replay_modules.py",
+        "target": "Openmath"
+      },
+      "path": "problems/85",
       "title": "Rank-controlled projective-incidence repair",
       "topics": [
         "incidence geometry",
         "stability",
         "graph theory"
-      ],
-      "path": "problems/85",
-      "checks": {
-        "docs": [
-          [
-            "python3",
-            "-B",
-            "scripts/check_docs.py"
-          ]
-        ],
-        "full": [
-          [
-            "python3",
-            "-B",
-            "scripts/check_docs.py"
-          ],
-          [
-            "python3",
-            "-B",
-            "scripts/test_check_docs.py"
-          ]
-        ]
-      },
-      "lean": {
-        "registry": "scripts/headline-theorems.json",
-        "coverage": "scripts/source_modules.py",
-        "axioms": "scripts/check_axioms.py",
-        "replay": "scripts/replay_modules.py",
-        "oracle": "check.sh",
-        "target": "Openmath"
-      }
+      ]
     }
-  ]
+  ],
+  "schema_version": 1
 }

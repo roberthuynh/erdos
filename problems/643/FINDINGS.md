@@ -1,11 +1,11 @@
 # Findings: Erdős 643
 
-An exact four-thirds upper bound for the original six-vertex forbidden configuration.
+The proposed coefficient-one result concerns unrestricted disjoint-union avoidance at uniformity three. The [result index](RESULTS.md) separates the finite inequality, its written consequences, classical constructions and intermediate formal bounds.
 
-Pikhurko and Verstraëte proved the all-order bound (13/9) binom(n,2) in 2009. The package lowers that coefficient to 4/3: a saving of (1/9) binom(n,2), or 1/13 of the earlier coefficient. Their graph deletion and hypergraph cleaning lemmas are essential antecedents. Huang, Ma and Yang’s 2026 preprint supplies a related deletion framework and solves the fixed-uniformity r≥4 case for sufficiently large n; its theorem does not settle r=3. The conjectured coefficient one remains open.
+The mechanism combines reciprocal shadow/co-link weights, a feasible slot-profile relaxation, the classification of negatively charged triples, and proportional redistribution through active bicones. Shared donors contribute only their actual charge divided by their active incidence count. Only apexes with positive deficit need an anchor contribution. Expanded relabelling and exceptional-cost arguments are in [EXPANDED-STEPS.md](EXPANDED-STEPS.md).
 
-The proposed mathematical contribution is the exact statement in the [result index](RESULTS.md). File counts measure the proof’s dependency footprint, not a number of discoveries. Earlier results and motivational sources are credited in [SOURCES.md](SOURCES.md).
+[Certificates](CERTIFICATES.md) now separate required thresholds and target equality counts from omitted optional minima/minimizer claims. The corrected residual domain has 3,279 admissible points; the historical 3,401-point domain also counted 122 impossible mutual points. Fresh-directory, timeout and normalized-output rules are part of reproducibility, not mathematical proofs.
 
-[Written proof](PROOF.md) gives the argument using explicitly attributed Pikhurko–Verstraëte lemmas. The [formal proof map](PROOF-MAP.md) connects the 11 proof modules to the full theorem. These lemmas are proved in the formal dependency closure, not assumed as axioms.
+The [explicit DA2 and cone examples](examples/results.json) distinguish three boundaries: a shared anchor with activity two can attain the local W lower bound while its final margin is positive; cone3/cone4 attain shadow/co-link equality; neither assertion is cardinality-bound equality or a complete classification.
 
-The claim in this package is the coefficient bound stated above. No claim of first priority, a solution to the original conjecture, human acceptance or institutional endorsement is made.
+The full coefficient-one theorem now has complete accepted Lean verification in the separate proof package, which discharges unconditional receiver recovery. The historical 4/3 and intermediate 9/8/24/23 records retain their own narrower scopes. [Evidence ledger](EVIDENCE-LEDGER.md) distinguishes supplied sources/outputs from outstanding checks. No human mathematical acceptance, institutional endorsement, worldwide priority, new higher-uniformity theorem, stability or equality classification is claimed.

@@ -1,4 +1,34 @@
 {
+  "blocks": [
+    {
+      "end": "\n## How this was made",
+      "label": "intro",
+      "path": "README.md",
+      "sha256": "5178f472ae224353434f1033464b2f34feb096dcc7d37e1ced5578df2419892a",
+      "start": "Hi, I'm Robert Huynh"
+    },
+    {
+      "end": "\n## AI use",
+      "label": "methods",
+      "path": "README.md",
+      "sha256": "678c0f87b2f93c0ddddb8ec5b0e053b4c5d550cf7928a90ee82bbdca88b63d84",
+      "start": "## How this was made\n"
+    },
+    {
+      "end": "\n## Help needed",
+      "label": "AI use",
+      "path": "README.md",
+      "sha256": "9c358bbe03cf28a157469cf9d1e5a764ec8733f32a80c53e7f4006cf5f74341d",
+      "start": "## AI use\n"
+    },
+    {
+      "end": "\n## Collection",
+      "label": "written-proof review request",
+      "path": "README.md",
+      "sha256": "21ceafa1f0718d5cb281dee1c34f461d7c75001c3d41fdc2451e2dc2c4e98d60",
+      "start": "## Help needed\n"
+    }
+  ],
   "files": [
     {
       "path": "problems/585/findings/FINDINGS.md",
@@ -7,36 +37,6 @@
     {
       "path": "problems/585/findings/DECISIONS.md",
       "sha256": "2259fd1c7b0901e6f5b3720a5f5c38ce51aa3ad032a0e823b98aa3f2150fec88"
-    }
-  ],
-  "blocks": [
-    {
-      "label": "intro",
-      "path": "README.md",
-      "start": "Hi, I'm Robert Huynh",
-      "end": "\n## How this was made",
-      "sha256": "9e45023c1abf9c9964c30d5bbb23325654768133dd47ea72de8d2830800c3725"
-    },
-    {
-      "label": "methods",
-      "path": "README.md",
-      "start": "## How this was made\n",
-      "end": "\n## AI use",
-      "sha256": "678c0f87b2f93c0ddddb8ec5b0e053b4c5d550cf7928a90ee82bbdca88b63d84"
-    },
-    {
-      "label": "AI use",
-      "path": "README.md",
-      "start": "## AI use\n",
-      "end": "\n## Help needed",
-      "sha256": "9c358bbe03cf28a157469cf9d1e5a764ec8733f32a80c53e7f4006cf5f74341d"
-    },
-    {
-      "label": "written-proof review request",
-      "path": "README.md",
-      "start": "## Help needed\n",
-      "end": "\n## Collection",
-      "sha256": "21ceafa1f0718d5cb281dee1c34f461d7c75001c3d41fdc2451e2dc2c4e98d60"
     }
   ]
 }

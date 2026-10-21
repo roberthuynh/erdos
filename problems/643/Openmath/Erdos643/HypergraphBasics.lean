@@ -1,4 +1,7 @@
-import Mathlib
+import Mathlib.Combinatorics.SimpleGraph.Finite
+import Mathlib.Data.Finset.Powerset
+import Mathlib.Data.Sym.Sym2
+import Mathlib.Tactic
 
 /-!
 Literal finite triple systems and the exact repeated-disjoint-union target.

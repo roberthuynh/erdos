@@ -1,0 +1,12 @@
+SOURCE PINS PASS upstream=3 bridge=1 local=20
+BUILD PASS FormalConjecturesForMathlib/Combinatorics/Hypergraph/Basic source_sha256=b1719a6665154f31d14d7999cbe034ebf2942728d3b52b3f7f5b92cc20422e62
+BUILD PASS FormalConjecturesForMathlib/Combinatorics/SetFamily/PropertyB source_sha256=318833034fd920b3cef2f0e466621de34660c92ee7f593156011c21b6b342934
+BUILD PASS FormalConjecturesForMathlib/Combinatorics/Hypergraph/Finite source_sha256=0823fba654c8fd849c821338e6624aefac6935a92836523dde9eb6524874949a
+BUILD PASS ActualImportBridge source_sha256=75178899b0922a2edc7ee28e100decf5dedd676f9a54ae49641844d4eadbe3ad
+'Erdos643R3.ActualImportBridge.repeated_iff_forbidden' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643R3.ActualImportBridge.uniform_three_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643R3.ActualImportBridge.ex3_le_24_23' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos643R3.ActualImportBridge.f_le_24_23_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+AXIOMS PASS four declarations allowed=[propext,Classical.choice,Quot.sound]
+KERNEL REPLAY PASS upstream=3 bridge=1
+RESULT: PASS actual_upstream_import=ok build=ok axioms=ok replay=ok coefficient_one=unverified

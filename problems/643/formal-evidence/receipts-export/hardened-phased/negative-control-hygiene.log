@@ -1,0 +1,7 @@
+MODULES 1 ControlUserUnsafe
+KINDS constants=1 theorems=0 defs=1 inductives=0 ctors=0 recursors=0 axioms=0 opaques=0 quot=0
+FLAG ControlUserUnsafe.bad unsafe-or-partial-def (ControlUserUnsafe)
+FLAG ControlUserUnsafe.bad unsafe (ControlUserUnsafe)
+UNION_AXIOMS []
+DECL ControlUserUnsafe.bad module=ControlUserUnsafe axioms=[]
+HYGIENE fail

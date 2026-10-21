@@ -1,0 +1,263 @@
+{
+  "configured": true,
+  "declarations": {
+    "Erdos643Design.FiniteBaseOrders.base_orders": "Openmath.Erdos643Design.FiniteBaseOrders",
+    "Erdos643Design.FiniteBaseOrders.design_five": "Openmath.Erdos643Design.FiniteBaseOrders",
+    "Erdos643Design.FiniteBaseOrders.design_one": "Openmath.Erdos643Design.FiniteBaseOrders",
+    "Erdos643Design.FiniteBaseOrders.residue_designs_of_two_seeds": "Openmath.Erdos643Design.FiniteBaseOrders",
+    "Erdos643Design.HananiExistence.exists_design": "Openmath.Erdos643Design.HananiExistence",
+    "Erdos643Design.design_five": "Openmath.Erdos643R3.DesignBaseOrders",
+    "Erdos643Design.design_one": "Openmath.Erdos643R3.DesignBaseOrders",
+    "Erdos643R3.AnchorComplete.g3hPrime": "Openmath.Erdos643R3.AnchorComplete",
+    "Erdos643R3.CoefficientOneAssembly.coefficient_one_of_G3hPrimeAt": "Openmath.Erdos643R3.CoefficientOneAssembly",
+    "Erdos643R3.CoefficientOneFinal.coefficient_one": "Openmath.Erdos643R3.CoefficientOneFinal",
+    "Erdos643R3.CoefficientOneFinal.extremal_eq_of_supplied_design": "Openmath.Erdos643R3.CoefficientOneFinal",
+    "Erdos643R3.CoefficientOneFinal.extremal_ratio_tendsto_one": "Openmath.Erdos643R3.CoefficientOneFinal",
+    "Erdos643R3.CoefficientOneFinal.extremal_three_bounds": "Openmath.Erdos643R3.CoefficientOneFinal",
+    "Erdos643R3.CoefficientOneFinal.extremal_three_le_choose_two": "Openmath.Erdos643R3.CoefficientOneFinal",
+    "Erdos643R3.CoefficientOneFinal.extremal_three_lower_matching": "Openmath.Erdos643R3.CoefficientOneFinal",
+    "Erdos643R3.CoefficientOneFinal.forcing_isEquivalent": "Openmath.Erdos643R3.CoefficientOneFinal",
+    "Erdos643R3.CoefficientOneFinal.forcing_three_le_choose_two_add_one": "Openmath.Erdos643R3.CoefficientOneFinal",
+    "Erdos643R3.CoefficientOneFinal.phi_nonpos": "Openmath.Erdos643R3.CoefficientOneFinal",
+    "Erdos643R3.CoefficientOneFinal.shadow_colink_bound": "Openmath.Erdos643R3.CoefficientOneFinal",
+    "Erdos643R3.CoefficientOneFullSolution.forcing_eq": "Openmath.Erdos643R3.CoefficientOneFullSolution",
+    "Erdos643R3.CoefficientOneHanani.extremal_eq": "Openmath.Erdos643R3.CoefficientOneHanani",
+    "Erdos643R3.PublicSmallOrders.extremal_five": "Openmath.Erdos643R3.PublicSmallOrders",
+    "Erdos643R3.PublicSmallOrders.extremal_one": "Openmath.Erdos643R3.PublicSmallOrders"
+  },
+  "limitations": [
+    "Human mathematical review remains outstanding."
+  ],
+  "module_lean_flags": {
+    "Openmath.Erdos643Design.CompositeDesigns": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.CompositeRows": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.CompositeSeed401": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.CompositeSeedOrders": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.CyclicSeed141": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.CyclicSeed161": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.CyclicSeed81": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.DesignPencil": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.DesignPrime281": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.DesignPrime41": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.DesignPrime61": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.DesignSeed21": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.DesignSeed285": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.DesignTransport": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.DifferenceFamilyCertificate": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.DifferenceFamilyDesign": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.DifferenceMatrix": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.DifferenceMatrixField": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.FieldFamily121": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.FieldFamily13": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.FieldFamily17": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.FieldFamily25": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.FieldFamily29": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.FieldFamily37": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.FieldFamily41": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.FieldFamily5": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.FieldFamily61": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.FieldFamily81": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.FieldFamily9": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.FieldFamilyCertificate": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.FiniteBaseOrders": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.HananiArithmetic": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.HananiAssembly": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.HananiExistence": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.NormalizedPencil": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.Prime281": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.Prime41": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.Prime61": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.ProjectivePlaneDesign": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.RelativeDifferenceFamilyDesign": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.SharedBlockFill": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.SharedGroupCompletion": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.SharedPointFill": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.TD21": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.TD60": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.TD84": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.TDCompositeSeeds": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.TransversalCoprime": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.TransversalField": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.TransversalFoundation": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.TransversalProducts": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.TransversalSymbols": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.TruncatedTransversal": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.UniformPartitionCoordinates": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643Design.WeightedPairwiseConstruction": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643R3.CoefficientOneFullSolution": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ],
+    "Openmath.Erdos643R3.CoefficientOneHanani": [
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=40000000"
+    ]
+  },
+  "schema": 1,
+  "target": "Openmath.Erdos643R3.CoefficientOneFullSolution"
+}

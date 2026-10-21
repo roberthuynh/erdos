@@ -1,14 +1,22 @@
 #!/usr/bin/env python3
 """Frozen complete module audit. Every Lean invocation is bounded at 240 seconds."""
-import argparse,hashlib,json,re,subprocess,sys
+import argparse,hashlib,json,re,subprocess,sys,tomllib
 from pathlib import Path
 from source_scan import lean_code,DISALLOWED
 ROOT=Path(__file__).resolve().parents[1]
 PROJECT=ROOT
 ALLOWED={'propext','Classical.choice','Quot.sound'}
 def digest(path): return hashlib.sha256(path.read_bytes()).hexdigest()
-def inventory():
- return {str(p.relative_to(PROJECT)).removesuffix('.lean').replace('/','.'): {'source':str(p.relative_to(PROJECT)), 'sha256':digest(p)} for p in sorted(PROJECT.rglob('*.lean')) if '.lake' not in p.parts}
+def inventory(project=None):
+ # Lake's default Openmath library covers Openmath.lean and Openmath/**/*.lean.
+ # Separately checked projects and archived sources have independent namespaces.
+ project=PROJECT if project is None else project
+ config=tomllib.loads((project/'lakefile.toml').read_text())
+ if config.get('lean_lib')!=[{'name':'Openmath'}]:
+  raise ValueError('Legacy Lean library configuration changed; review inventory adapter')
+ files=[project/'Openmath.lean',*sorted((project/'Openmath').rglob('*.lean'))]
+ if any(p.is_symlink() for p in files):raise ValueError('Symlink in configured Lean sources')
+ return {str(p.relative_to(project)).removesuffix('.lean').replace('/','.'): {'source':str(p.relative_to(project)), 'sha256':digest(p)} for p in files}
 def identities():
  result=inventory()
  for item in result.values():

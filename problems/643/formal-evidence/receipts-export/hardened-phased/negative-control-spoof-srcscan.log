@@ -1,0 +1,1 @@
+SRCSCAN FLAG fixture/SpoofPwCheck.lean forbidden={'unsafe': 1} set_options=[] bad_options=[] bad_imports=[]

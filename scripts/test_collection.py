@@ -58,7 +58,7 @@ class CollectionTests(unittest.TestCase):
         run=Mock(return_value=subprocess.CompletedProcess([],0))
         run_problem(self.item,'full',self.root/'output',self.root,run)
         self.assertEqual(run.call_count,1)
-        self.assertEqual(run.call_args.args[0],['timeout','240','python3','-B','docs.py'])
+        self.assertEqual(run.call_args.args[0],['timeout','--signal=INT','--kill-after=5','240','python3','-B','docs.py'])
         self.assertEqual(run.call_args.kwargs['cwd'],self.package)
     def test_failure_stops_later_commands(self):
         self.item['checks']['docs']*=2
@@ -75,7 +75,8 @@ class CollectionTests(unittest.TestCase):
         (self.package/'Leaf.lean').write_text('import Mathlib\n')
         (self.package/'headlines.json').write_text(json.dumps([{'module':'Leaf','declaration':'result','oracle':True}]))
         def fake(argv, **kwargs):
-            command=argv[2:]
+            self.assertEqual(argv[:4],['timeout','--signal=INT','--kill-after=5','240'])
+            command=argv[4:]
             text=''
             if command==['python3','-B','coverage.py','--list']:text='Root\nLeaf\n'
             elif command==['python3','-B','axioms.py']:text='STATEMENTS: PASS'

@@ -1,0 +1,21 @@
+{
+  "points": 3401,
+  "minimum": "0",
+  "equality": [
+    [
+      0,
+      0,
+      1,
+      1,
+      true
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      false
+    ]
+  ],
+  "false_side_bound_at_m40_h1": "1/1806"
+}

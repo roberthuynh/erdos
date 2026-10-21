@@ -4,7 +4,7 @@ import argparse,re
 from check_full import ROOT,inventory
 from source_scan import lean_code
 def check_coverage(root=ROOT):
- modules={m:root/v['source'] for m,v in inventory().items()}
+ modules={m:root/v['source'] for m,v in inventory(root).items()}
  todo=['Openmath'];seen=set()
  while todo:
   m=todo.pop()
@@ -12,7 +12,10 @@ def check_coverage(root=ROOT):
   seen.add(m)
   for line in lean_code(modules[m].read_text()).splitlines():
    match=re.match(r'^\s*(?:public\s+)?(?:meta\s+)?import\s+(.*)$',line)
-   if match: todo.extend(c for c in match[1].split() if c in modules)
+   if match:
+    for child in match[1].split():
+     if child in modules:todo.append(child)
+     elif (root/(child.replace('.','/')+'.lean')).exists():raise ValueError('unconfigured local import: '+child)
  if seen!=set(modules): raise ValueError('modules outside aggregate closure: '+str(set(modules)-seen))
  return modules
 if __name__=='__main__':

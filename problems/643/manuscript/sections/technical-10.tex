@@ -1,0 +1,39 @@
+\subsection*{10. Exact finite statements}
+\addcontentsline{toc}{subsection}{10. Exact finite statements}
+Each statement below concerns finitely many rational numbers. The historical evidence consists of an exact primary implementation and an independent cross-check; for C1 with $t\leq1$, that cross-check uses rigorous directed rounding. An additional integer-only implementation now checks the four $t\leq1$ cases, with certified lower bound $8277463527/4294967296>23/12$. It was written after inspecting the primary implementation and shares its method, so it is not blind independent review. Six checks passed a fresh-virtual-environment replay on the same macOS arm64 machine with CPython 3.14.7 and NumPy 2.5.4. A source-level AI check matched the finite equations, domains, admissibility masks and integer pruning to the supplementary programs. Its scope does not include a new proof of the universal host-to-profile reductions. Floating-point exploration and finite-host stress tests are distinct from proof certificates.
+\paragraph{C1.} For every $(t_A,t_B,t_C)\in\mathbb N^3$ with sum at most 11, and every
+\[
+ (ab,ac,bc,ba,ca,cb)\in\{0,\ldots,92\}^6
+\]
+satisfying (F), $\Phi_{\rm prof}\geq23/12$. There are 364 triples of type-2 counts. No claim about the exact minimum or all minimisers is needed.
+\paragraph{C2.} For every $(t_A,t_B,t_C)$ of sum at most 11 and every $(ab,ba,ca,cb)\in\{0,\ldots,92\}^4$ satisfying (F) for $R_a,R_b$,
+\[
+ G+\kappa^*(ab+t_A,t_A)+\kappa^*(ba+t_B,t_B)\geq\frac{11}{12}.
+\]
+Here $\kappa^*(u,s)$ is the exact minimum of zero and $\kappa(p;u,s)$ over integers $23\leq p\leq160$, justified by the analytic tail argument. Equality occurs exactly at the two rest profiles
+\[
+ \begin{array}{c|rrrr}
+ (t_A,t_B,t_C)&ab&ba&ca&cb\\\hline
+ (1,0,0)&0&0&0&1\\
+ (0,1,0)&0&0&1&0
+ \end{array}.
+\]
+\paragraph{C1g(a).} For every type-2 triple with $2\leq t\leq11$ and every feasible six-count profile in $\{0,\ldots,92\}^6$, $\Phi_{\rm prof}\geq2$. There are 360 type-2 triples in the domain, and exactly 41 equality profiles among 20 such triples.
+\paragraph{C1g(b).} For $t=1$, each position of the type-2 slot and each of the four classes V1--V4 in subdivision 4.3, with partner constraints imposed, every feasible profile in $\{0,\ldots,92\}^6$ satisfies $\Phi_{\rm prof}\geq2$.
+\paragraph{C2g.} Write $W=G+\kappa^*(ab+t_A,t_A)+\kappa^*(ba+t_B,t_B)$. For every type-2 triple with $2\leq t\leq11$ and every rest profile $(ab,ba,ca,cb)\in\{0,\ldots,92\}^4$ satisfying (F) for $R_a,R_b$, $W\geq1$, with exactly eight equality rest profiles. For $t=1$, the same lower bound holds on every noncompliant rest profile as defined in subdivision 4.3.
+\paragraph{Final anchor box.} For every admissible $(n_B,n_C,m,m')$ satisfying (A1)--(A3) of subdivision 8.4, with
+\[
+ 0\leq n_B,n_C\leq11,\qquad 1\leq m+m'\leq6,
+\]
+one has $\Theta'(n_B,n_C,m,m')-\tau_W(m,m')\geq0$.
+There are 3,279 admissible points. Equality occurs only at $(n_B,n_C,m,m')=(1,0,1,0)$. The impossible mutual variant is excluded from this domain.
+The analytic inequalities and infinite-to-finite reductions have written proofs in the preceding subdivisions. Finite scans of those analytic inequalities and tests on hypergraph hosts corroborate those proofs but do not replace them. The exact programs, their implementation independence, commands, hashes and final replay results belong to the separate reproducibility record.
+
+\paragraph{Supplementary replay and equality records.}
+The supplementary directory \path{computations/} contains code and a README. Its six-command runner is invoked as
+\begin{quote}\ttfamily\small
+<VENV\_PATH>/bin/python -I <PACKAGE\_PATH>/replay.py <RESULT\_PATH>
+\end{quote}
+with a result directory that does not already exist and a 240-second limit per check. The records \path{results/0-check_profiles.py.json} and \path{results/1-check_profiles.py.json} list respectively all 41 target-equality box vectors and the ten tail vectors (two at $11/12$, eight at $1$), including coordinate order, types, target and class context. Inclusive pruning retains equality candidates. These are target equalities, not a claim about auxiliary minima at other thresholds.
+
+\path{results/semantic-hashes.json} records normalized content hashes. Wall-clock run times may change raw output hashes; compare normalized mathematical content instead. The actual six-command receipt and eight runner controls are in \path{results/replay.json} and \path{results/runner-controls.json}. Independently coded rational controls check 5,832 profiles, 49,152 class masks, 1,248 tail parameter pairs, 5,000 rest profiles and all 3,279 corrected anchor points, with six cycle-pruning and nine tail-pruning cases. These bounded controls share dependencies and do not constitute independent full-domain reproduction, a universal host proof, or human review. The additional C1 integer-only implementation was written after inspecting the primary implementation and shares its method.

@@ -1,0 +1,19 @@
+{
+  "scope": "Six finite computations only; not full-theorem or Lean verification",
+  "result": "COMPUTATIONAL_REPLAY_PASS",
+  "python": "3.14.7",
+  "numpy": "2.5.4",
+  "platform": "macOS arm64",
+  "environment": "Fresh virtual environment and copied package on the same machine; OS and interpreter were not rebuilt",
+  "wheel_sha256": "956555e0603a4d38019ae6925711cb9dc43195c076a928accf7ea5d50bddfe53",
+  "commands": 6,
+  "per_command_timeout_seconds": 240,
+  "historical_wbox_points": 3401,
+  "corrected_wbox_points": 3279,
+  "host_test_limit": "The bounded examples observed at most one active incidence; they do not exercise general multi-active anchors.",
+  "target_equality_vector_counts": {
+    "box": 41,
+    "tail": 10
+  },
+  "source_scope": "Same finite checks; equality output instrumentation only; no auxiliary minimum certificate"
+}

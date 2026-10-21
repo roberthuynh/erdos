@@ -9,7 +9,7 @@
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210b.CycleSupport": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210b/CycleSupport.lean",
-    "sha256": "96bb0a704d21d7bc8c4cbc12f343ced7ed4c7613cb3c1293280480d0d76b2b54"
+    "sha256": "de7a5113ce88e81fca3f16ab02427e8d22dcb5575312f8f14341ad9ccc2c1b5a"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210b.DegreeRatios": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210b/DegreeRatios.lean",
@@ -209,7 +209,7 @@
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210b.RichWalkCycle": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210b/RichWalkCycle.lean",
-    "sha256": "5f53a8375b51319982315b4714f5334f129e851e2d6bf7476bc27ef16080a413"
+    "sha256": "2ae08de8027d3140840fa257b7fd53d5c4b62c2e8ca108f99a116c306960514e"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210b.RoundedForestExtraction": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210b/RoundedForestExtraction.lean",

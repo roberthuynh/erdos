@@ -1,0 +1,161 @@
+\section{Expanded structural and accounting arguments}
+\label{app:expanded}
+The following arguments spell out the structural relabellings, exceptional-slot estimate, accounting identities and analytic reductions used in the proof. Finite tests corroborate particular substitutions but do not replace these universal arguments. The exact coefficient-one theorem has accepted complete Lean verification in the isolated proof project. This does not automatically verify every exposition below. The expanded supplementary source package passed its complete 126-module check. No human mathematical verification is claimed.
+
+\subsection*{A. Unrestricted avoidance and intersecting common links}
+This expands the common-link condition F1 in Section 2.1.
+Suppose that $A,B,C,D$ are four distinct triples with
+\[
+ A\cap B=C\cap D=\varnothing,\qquad A\cup B=C\cup D=S.
+\]
+Then $|S|=6$. The intersection $A\cap C$ has size one or two: size zero would force $C=B$, and size three would force $C=A$. Exchanging $C$ and $D$ if necessary, put $P=A\cap C$ with $|P|=2$. Write $A=P\cup\{x\}$ and $C=P\cup\{y\}$, where distinctness gives $x\ne y$. Put
+\[
+ Q=S\setminus(P\cup\{x,y\}).
+\]
+Then $|Q|=2$, $B=Q\cup\{y\}$ and $D=Q\cup\{x\}$. Thus $P$ and $Q$ are disjoint members of $\operatorname{CN}(x,y)$. Together with F1, this proves that avoidance is equivalent to every common link being intersecting. No linearity assumption or additional forbidden configuration is used.
+
+\subsection*{B. The direction of the host-to-profile reduction}
+This clarifies Lemma 3 of Section 2.3. Only a one-way reduction is required: every actual triple of an avoiding host produces a feasible profile satisfying
+\[
+ \sigma+\tau\ge\Phi_{\mathrm{prof}}.
+\]
+The numerical inequalities are proved over a possibly larger collection of feasible integer profiles. They do not assert that every profile is realizable by a host. Enlarging the domain is safe for a lower bound. A profile below a desired bound would need a separate realizability argument before it could be a hypergraph counterexample.
+
+A vertex in two groups is counted as two slots. The associated options differ because each option meets $T$ in exactly one vertex, namely the vertex opposite its group. The partner identity for a type-2 slot follows from intersectingness of the common link, not from distinctness of all outside vertices. Cauchy--Schwarz bounds each type-1 class using its actual degrees; type-2 partners contribute at most one edge per slot. Removing isolated slots changes the sum by $\Delta_X\ge0$. Thus the reduction retains every actual host without assuming that the groups are disjoint.
+
+\subsection*{C. The six relabellings in Lemma S8(b)}
+This expands the application of Corollary 6g in Section 7.6.
+Write $z=z^*$, fix $r\in R_2$, and assume $|R_2|\ge2$.
+Every $s\in R_2$ lies outside $\{x,u,z,w\}$, and
+\[
+ sxu,\quad suz,\quad sxz\in H.
+\]
+The already identified common links $\operatorname{CN}(w,s)$ are the full triangle $\{xu,uz,xz\}$. The three $w$-side triples have at least two triangle options, so G1(i) says that none is deficient. If an $r$-side triple is deficient, G1(ii) gives exactly one light pair incident with $r$. All possibilities are listed below. In each row apply Corollary 6g with
+\[
+ a=r,\qquad b=p_1,\qquad c=p_2.
+\]
+The type-2 slot in the $a$-group is $w$, with partner $p_3$.
+\begin{center}
+\begin{tabular}{cccccc}
+\toprule
+Triple $T$ & Light pair & $p_1$ & $p_2$ & $p_3$ & Extra edge\\
+\midrule
+$rxu$ & $rx$ & $x$ & $u$ & $z$ & $xzr'$\\
+$rxu$ & $ru$ & $u$ & $x$ & $z$ & $uzr'$\\
+$ruz$ & $ru$ & $u$ & $z$ & $x$ & $uxr'$\\
+$ruz$ & $rz$ & $z$ & $u$ & $x$ & $zxr'$\\
+$rxz$ & $rx$ & $x$ & $z$ & $u$ & $xur'$\\
+$rxz$ & $rz$ & $z$ & $x$ & $u$ & $zur'$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Here the extra edge exists for every $r'\in R_2\setminus\{r\}$.
+For each row, the light pair $rp_1$ has precisely the neighbours $p_2,p_3$, so the $c$-group of $T$ is the singleton $\{p_3\}$. Corollary 6g says that the $b$-relation between this singleton and $L(p_1p_2)\setminus\{r\}$ consists of just the edge $p_3w$. But
+\[
+ r'\in L(p_1p_2)\setminus\{r\},\qquad p_1p_3r'\in H
+\]
+by the three-triple property above. Also $r'\ne w,p_3$: we have $r'\in X_u\setminus\{v,w\}$, $z\notin X_u$, and a link vertex is neither $x$ nor $u$. Hence $p_3r'$ is a second edge in that relation, a contradiction. Every row is excluded, so the bicone of $\{w,r\}$ has no deficient member.
+
+This argument requires G1 at every deficient triple of $H$, not merely at the original two triples $T_1,T_2$.
+
+\subsection*{D. Exceptional-slot accounting in Lemma S10}
+This expands the last $E_u$ subcase in Section 7.8.
+Assume $r_2=1$, $z^*\in E_u$, and $j\ge r+1$. Then $e\ge1$, $r\ge k+1$, and the exceptional slot has degree at most $k+1$. The other $e-1$ slots of $E_u$ have degree at most $k$. Their contribution, together with the $k$ slots of $R_U$, is therefore at least
+\[
+ E^*(e)=\frac{e-1}{2(1+k)}+\frac1{2(2+k)}
+                      +\frac{k}{2(1+j+e)}.
+\]
+This equals the uncorrected term
+$e/(2(1+k))+k/(2(1+j+e))$ minus exactly
+\[
+ L^*=\frac1{2(1+k)}-\frac1{2(2+k)}.
+\]
+Thus $\Psi_N-L^*$ is obtained by replacing that $e$-term with $E^*(e)$; no other term changes. For real $e\ge1$,
+\[
+ \frac{dE^*}{de}=\frac1{2(1+k)}-\frac{k}{2(1+j+e)^2}>0,
+\]
+since $j\ge r+1\ge k+2$. Consequently
+\[
+ E^*(e)\ge E^*(1)=\frac1{2(2+k)}+\frac{k}{2(2+j)}
+                     \ge\frac{k}{2(1+j)}.
+\]
+The left side minus the right side of the last inequality is
+\[
+ \frac{(j+1)(j+2)-k(k+2)}{2(k+2)(j+1)(j+2)}\ge0.
+\]
+The $d$-terms, including $1/(P_d+1)$, remain minimized at $d=0$ by Lemma S5. Making that substitution gives a bound for the corrected expression itself:
+\[
+ \Psi_N-L^*\ge\chi(j+1)+(r-k)
+ \left[\frac{j}{(k+2)(r+2)}-\frac1{2(j+1)}\right]>2.
+\]
+Indeed $j\ge r+1$ and $k\le r$ give
+\[
+ \frac{j}{(k+2)(r+2)}-\frac1{2(j+1)}
+ \ge\frac{r+1}{(r+2)^2}-\frac1{2(r+2)}
+ =\frac{r}{2(r+2)^2}\ge0.
+\]
+Also $\chi(j+1)>2$ by Lemma S10.1(iii).
+Finally the local identity is $\sigma(T_1)+\tau(T_1)=11/12+S_1$. The $23/12$ bound therefore gives $S_1\ge1$, hence $\sigma_u=S_1-1\ge0$, so
+\[
+ U^-+S_1+\sigma_u>2.
+\]
+The exceptional slot is charged once, inside $E^*$; $L^*$ must not be subtracted again.
+
+\subsection*{E. Global accounting without double-spending}
+This expands the accounting before the main theorem in Section 9.3.
+Let $a(R)$ be the number of active bicones containing a positive-charge donor $R$. It spends $c(R)/a(R)$ on each of those $a(R)$ bicones, for total expenditure exactly $c(R)$. A bicone $q$ is active precisely when
+\[
+ \delta_q=\sum_{T\in D_q}\operatorname{def}(T)>0,
+\]
+so proportional division is legitimate. It gives each $T\in D_q$ the amount
+\[
+ \operatorname{pot}(q)\frac{\operatorname{def}(T)}{\delta_q}.
+\]
+Summing over $D_q$ returns exactly $\operatorname{pot}(q)$. G1 places each deficient triple in exactly one bicone, so paying one deficit does not require repeated receipts.
+
+Within one bicone, if both apexes have positive deficit, their anchors are distinct triples: one contains $x$ and two base vertices, the other $y$ and two base vertices, and neither contains the other apex. An anchor may recur across bicones. Its anchor inequality uses the original share $c(R)/a(R)$ for the relevant bicone, not all of $c(R)$. Summing those shares over the active bicones never spends more than $c(R)$. A both-light anchor has $a(R)=1$; a both-heavy anchor uses the actual denominator, bounded by Lemma S8. Summing the anchor contributions over apexes with positive deficit within $q$ gives
+\[
+ \operatorname{pot}(q)\ge\delta_q.
+\]
+Every receiver obtains at least its deficit, and all other triples finish nonnegative.
+
+\subsection*{F. Analytic tails and exhaustive partitions}
+This expands the finite-certificate reduction in Section 10. The profile certificate is not a search over hypergraphs.
+If $t\ge12$, then $t/6\ge2$ already suffices. Otherwise $t\le11$. A non-big relation, with one count at most $22$ and another at least $93$, contributes
+\[
+ S(93,22,11)=\frac{8649}{4300}>2
+\]
+by monotonicity. At least two big relations give
+\[
+ 2-\frac1{12}+t\left(\frac16-\frac1{576}\right),
+\]
+which is at least $23/12$ for $t\ge0$ and greater than $2$ for $t\ge1$. No big relation leaves all six counts in $[0,92]$. Exactly one big relation leaves four bounded counts and two unbounded ones, handled by $\kappa$.
+
+Writing $x=p+1$, the sign of $\kappa$ is the sign of
+\[
+ x^2-(u+s)x-su,
+\]
+since its denominator is $2x^2(x+u)>0$. Here $0\le u\le103$ and $0\le s\le11$. At $x=161$, its numerator is at least
+\[
+ 161^2-114\cdot161-1133=6434>0,
+\]
+and its derivative $2x-u-s$ is positive thereafter. Thus $p>160$ cannot lower $\min(0,\kappa)$; scanning $p=23,\ldots,160$ suffices. In fact $p=160$ already has positive numerator. This bounds every larger integer analytically, rather than sampling finitely many large values.
+
+For G1 at $t=1$, the partner constraints force both neighbouring group sizes to be at least one. Failure of compliance means that either both are at least two, both equal one, or exactly one equals one and its corresponding outgoing type-1 count is positive. These are cases V1--V4; their overlap is harmless. The host proof partitions deficient triples by their unique bicone, then by the anchor's two colours. In the both-heavy case it splits into $d_x=2$ and $d_x=1$, and the latter splits by the presence of a type-2 slot in $\mathcal B\cup\mathcal C$. G1 uses no later anchor conclusion.
+
+For Lemma W, let $m,m'\ge0$. The elementary inequalities
+\[
+ \frac{m}{3(m+3)}\le\frac m6\quad(m\ge2),\qquad
+ \frac{[m'=1]}{12}\le\frac{m'}6
+\]
+give $\tau_W\le(m+m')/6$; also $\tau_W<5/12$. If $m+m'\ge7$, then
+\[
+ \Theta'\ge\frac16+\frac76-\frac{11}{12}=\frac5{12}
+\]
+suffices. For positive $n_B,n_C$, the ordinary-slot terms give at least
+\[
+ 1-\frac1{n_B+1}-\frac1{n_C+1},
+\]
+which is at least $3/4$ if both counts are at least seven. If the smaller is in $\{1,\ldots,6\}$ and the larger is at least twelve, one term alone is at least $11/14>3/4$. If one count is zero, actual degree constraints force the other to be at most one. Every remaining point therefore lies in the stated $12\times12$ box with $m+m'\le6$.
+
+The admissibility conditions follow from actual neighbours. The excluded mutual variant represents no host. A separate direct checker records exactly $3{,}279$ remaining points, distinguished from the historical $3{,}401$-point calculation. Its source identity and replay evidence are supplied in the computational supplement; this appendix does not replace that evidence.

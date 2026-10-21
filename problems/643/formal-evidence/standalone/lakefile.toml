@@ -1,0 +1,16 @@
+# Standalone Lake project for the Erdős 643 (r = 3) Lean development.
+# Sources live in ../source/Openmath/Erdos643R3; this project pins the
+# toolchain (lean-toolchain) and Mathlib with its dependencies (lake-manifest.json), so the development rebuilds from
+# a clean clone. No absolute paths. See ../README.md.
+name = "erdos643r3"
+defaultTargets = ["Openmath"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "0df444a360eaa60ab8c11dca51a86af692955474"
+
+[[lean_lib]]
+name = "Openmath"
+srcDir = "../source"
+globs = ["Openmath.Erdos643R3.+"]

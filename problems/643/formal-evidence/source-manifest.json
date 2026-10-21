@@ -1,0 +1,22 @@
+{
+  "source/Openmath/Erdos643R3/FCBridge.lean": "a66ced22548577c95114f6e7e14bb8945591b6247236e55d9963314bb743290d",
+  "source/Openmath/Erdos643R3/G1Arith.lean": "95133168489bb086d6f58bdce597ca53fc0b9e7e74933a46ae008281c81194cd",
+  "source/Openmath/Erdos643R3/G3hpArith.lean": "e21a65ac966d7b787036f123a18b32503596e2ba6b340b95d1e61748762aeb11",
+  "source/Openmath/Erdos643R3/HypergraphBasics.lean": "bb5c59fb53d56a61a18fe3b844631267495e11567d6e4096586161adc3f6f78b",
+  "source/Openmath/Erdos643R3/Identity.lean": "b4e523e15dbd28fbcc7847f2c0ba154bf2f482cddf093e2d79c6573deecf9011",
+  "source/Openmath/Erdos643R3/L1Top.lean": "95bc5eec5db70c6b4ace411c6ea723e6541f8502cc78285b541c3f0bca00ef77",
+  "source/Openmath/Erdos643R3/Lemma1g.lean": "7ba62cd0ef27a78d063fb3a4fe6e999c802a36d78b9a8309265fe725148a2637",
+  "source/Openmath/Erdos643R3/Lemma3.lean": "cd31563d93870dddb342246bb146c3ab1bbeb28068fc29643f94c9ffd301461d",
+  "source/Openmath/Erdos643R3/Pw2312.lean": "333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1",
+  "source/Openmath/Erdos643R3/Pw2312Defs.lean": "cb3d1084612cc1305bac23f8a5527334ad3305e243566dfc338be4662c3cd660",
+  "source/Openmath/Erdos643R3/PwArith.lean": "75a23852edbfe565fb4d471c5d12b70b24c9da5f3aff0cff695b771d2d4b35b3",
+  "source/Openmath/Erdos643R3/PwC1.lean": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+  "source/Openmath/Erdos643R3/PwC2.lean": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+  "source/Openmath/Erdos643R3/PwCheck.lean": "d7599ffa13fd11546852caccceebfd59f7328c8fde69f511b0c9b944230a3c7d",
+  "source/Openmath/Erdos643R3/RedistArith.lean": "637c5811ef71ddaa5d8f2f1dacf9a49fa6786c4aa2d78543bb29bc3303776006",
+  "source/Openmath/Erdos643R3/SlotModel.lean": "4ee0d28ebf38d037179d895e223d08f90382c291ac2dd4bbd0c89b8c1ac3f6bc",
+  "source/Openmath/Erdos643R3/WBox.lean": "ec7cf0a83fcc5eb380d038ad0093d215748fc75fb50007ac80466112ab6ebdab",
+  "source/Openmath/Erdos643R3/Weighting.lean": "c93fcef9972a8f3fe4bc2f1fa45aa59618e429acfb6d9be24ade3421ae2e7bba",
+  "source/Openmath/Erdos643R3/WeightingAuxArith.lean": "44d136e459522ea5065928fea246f194ac41d77c88469e7b30b66953f7dcbf0c",
+  "source/Openmath/Erdos643R3/WeightingBound.lean": "e83241fcceacbc6b6338498944766515d4bcea43dee92ff6335065e2894231bb"
+}

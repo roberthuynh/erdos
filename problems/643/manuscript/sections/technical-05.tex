@@ -1,0 +1,55 @@
+\subsection*{5. Redistribution and both-light anchors}
+\addcontentsline{toc}{subsection}{5. Redistribution and both-light anchors}
+Every deficient triple lies in an active bicone by G1 (already by Theorem A), not merely by definition of the redistribution rule. This coverage is a separate mathematical input.
+
+\paragraph{Lemma D.} Under Rule $2'$, each triple of nonnegative initial charge has nonnegative final charge, every donor ends at zero, and the total charge is unchanged.
+\begin{proof}
+A donor $T'$ sends $c(T')/\act(T')$ to each of its $\act(T')$ active bicones, hence sends exactly $c(T')$. It receives nothing because only deficient triples receive. Other nonnegative triples are untouched. For each active bicone, $D_q$ is nonempty and all its deficits are positive, so
+\[
+ \sum_{T\in D_q}\frac{\deficit(T)}{\sum_{S\in D_q}\deficit(S)}=1.
+\]
+Every pot is fully distributed. Thus the total charge is conserved.
+\end{proof}
+\paragraph{Lemma P.} At either apex of a bicone, the number of exactly-one-light triples is zero or two.
+\begin{proof}
+Colour each base vertex by whether its pair with the apex is light. An apex triple is exactly-one-light if its two base vertices have different colours. Three vertices have either zero such pairs or two such pairs.
+\end{proof}
+There are at most four exactly-one-light triples in a bicone. An apex with any has an anchor, whose two base vertices have the same colour; it is both-light or both-heavy.
+
+\paragraph{Lemma Q.} Suppose $H$ is avoiding, $\CN(x,y)=\{uv,vw,uw\}$, and
+\[
+ L(xu)=\{v,w\},\qquad L(xw)=\{u,v\}.
+\]
+Let $T^\circ=x+uw$, $K=L(uw)$, $k=|K|$,
+\[
+ a=|K\cap L(uv)|,\qquad b=|K\cap L(vw)|,\qquad
+ e_z=[z\in L(uv)]+[z\in L(vw)]\quad(z\in K).
+\]
+Here brackets denote indicators. Then
+\begin{enumerate}
+\item[(i)] $s_{vw}=a$, $s_{uv}=b$, and $s_{xz}=1+e_z$ for $z\in K\setminus\{x\}$.
+\item[(ii)]
+\[
+ c(T^\circ)=\frac1k+\frac1{2a}+\frac1{2b}
+       +\sum_{z\in K\setminus\{x\}}\frac1{2(1+e_z)}-1.
+\]
+\item[(iii)] If $a=2$ or $b=2$, then $c(T^\circ)\geq1/6$, and $xy$ is the only triangle option of $T^\circ$.
+\end{enumerate}
+\begin{proof}
+For (i), $xu\in\CN(v,w)$, so every member meets $xu$ by F1. A member $xr$ requires $xrw\in H$ and hence $r\in L(xw)\setminus\{v\}=\{u\}$. A member $ur$ belongs precisely when $r\in L(uv)\cap L(uw)$. Therefore
+\[
+ \CN(v,w)=\{ur:r\in K\cap L(uv)\},\qquad s_{vw}=a.
+\]
+Exchanging $u,w$ gives $s_{uv}=b$. For $z\in K\setminus\{x\}$, the common link $\CN(x,z)$ contains $uw$, and every member meets $uw$. A member through $u$ is $uw$, or $uv$ if $z\in L(uv)$; a member through $w$ is $uw$, or $vw$ if $z\in L(vw)$. This gives $s_{xz}=1+e_z$. If $z=v$, then $e_z=0$ and the common link is just $\{uw\}$.
+
+For (ii), $\sigma(T^\circ)=1/2+1/2+1/k$. Its options are $vw$ through $xu$, $uv$ through $xw$, and $xz$ through $uw$ for $z\in K\setminus\{x\}$. Apply (i).
+
+For (iii), assume $a=2$; the other case exchanges $u,w$. The bicone edges put $x,y$ in $K\cap L(uv)\cap L(vw)$, so $K\cap L(uv)=\{x,y\}$. Thus $e_y=2$ and $e_z\leq1$ for $z\in K\setminus\{x,y\}$. Write $m_j$ for the number of those $z$ with $e_z=j$. Then $k=2+m_0+m_1$, $b=2+m_1$, and
+\[
+ c(T^\circ)-\frac16=F:=\frac1{2+m_0+m_1}
+ +\frac1{2(2+m_1)}+\frac{m_0}2+\frac{m_1}4-\frac34.
+\]
+At $(m_0,m_1)=(0,0),(1,0),(0,1),(0,2)$, the values are respectively $0,1/3,0,1/8$. In all other cases either $m_0\geq2$, or $m_1\geq3$, or both are positive, and
+$F\geq m_0/2+m_1/4-3/4\geq0$.
+Finally $\CN(v,w)$ has two members; $\CN(u,v)$ has common vertex $w$; and $\CN(x,z)\subseteq\{uw,uv,vw\}$ is triangular exactly when $e_z=2$, which here means $z=y$. Therefore $xy$ is the unique triangle option.
+\end{proof}

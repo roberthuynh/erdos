@@ -1,0 +1,46 @@
+⚠ [8706/8726] Built Openmath.Erdos643R3.HypergraphBasics (8.7s)
+warning: ../source/Openmath/Erdos643R3/HypergraphBasics.lean:43:0: automatically included section variable(s) unused in theorem `Erdos643.HypergraphBasics.uniform_nonempty`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ../source/Openmath/Erdos643R3/HypergraphBasics.lean:47:0: automatically included section variable(s) unused in theorem `Erdos643.HypergraphBasics.disjoint_ne_of_uniform`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ../source/Openmath/Erdos643R3/HypergraphBasics.lean:99:19: Variable name `hxP` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hxP
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ../source/Openmath/Erdos643R3/HypergraphBasics.lean:100:19: Variable name `hyQ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hyQ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8707/8726] Built Openmath.Erdos643R3.Identity (8.0s)
+✔ [8708/8726] Built Openmath.Erdos643R3.Pw2312Defs (9.6s)
+✔ [8709/8726] Built Openmath.Erdos643R3.G3hpArith (13s)
+✔ [8710/8726] Built Openmath.Erdos643R3.WeightingAuxArith (14s)
+✔ [8711/8726] Built Openmath.Erdos643R3.WBox (18s)
+✔ [8712/8726] Built Openmath.Erdos643R3.RedistArith (9.9s)
+✔ [8713/8726] Built Openmath.Erdos643R3.PwArith (11s)
+✔ [8714/8726] Built Openmath.Erdos643R3.Weighting (12s)
+✔ [8715/8726] Built Openmath.Erdos643R3.L1Top (8.4s)
+✔ [8716/8726] Built Openmath.Erdos643R3.PwCheck (10s)
+✔ [8717/8726] Built Openmath.Erdos643R3.WeightingBound (10s)
+✔ [8718/8726] Built Openmath.Erdos643R3.PwC2 (9.9s)
+✔ [8719/8726] Built Openmath.Erdos643R3.SlotModel (13s)
+✔ [8720/8726] Built Openmath.Erdos643R3.Lemma1g (6.1s)
+✔ [8721/8726] Built Openmath.Erdos643R3.Lemma3 (6.2s)
+✔ [8722/8726] Built Openmath.Erdos643R3.PwC1 (64s)
+✔ [8723/8726] Built Openmath.Erdos643R3.Pw2312 (4.7s)
+✔ [8724/8726] Built Openmath.Erdos643R3.FCBridge (8.4s)
+✔ [8725/8726] Built Openmath.Erdos643R3.G1Arith (9.5s)
+Build completed successfully (8726 jobs).
+LAKE_RESULT exit=0

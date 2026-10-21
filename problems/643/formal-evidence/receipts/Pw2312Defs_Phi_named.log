@@ -1,0 +1,5 @@
+== lean -o Openmath.Erdos643R3.Pw2312Defs (leanprover/lean4:v4.33.1)
+== sorry/native_decide in Openmath/Erdos643R3/Pw2312Defs.lean, comments ignored: 0
+== axioms
+'Erdos643R3.Pw2312.Phi_named' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=13db77e821077d1d3eca6ab97c9e5fed68a92c9240c37932670e879287f1db09

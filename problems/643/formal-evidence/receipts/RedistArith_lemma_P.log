@@ -1,0 +1,6 @@
+== lean -o Openmath.Erdos643R3.Identity (leanprover/lean4:v4.33.1)
+== lean -o Openmath.Erdos643R3.RedistArith (leanprover/lean4:v4.33.1)
+== sorry/native_decide in Openmath/Erdos643R3/RedistArith.lean, comments ignored: 0
+== axioms
+'Erdos643R3.RedistArith.lemma_P' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT: PASS build=ok probe=ok sorry=0 axioms=[propext,Classical.choice,Quot.sound] disallowed=[] source_sha256=2bcadace9cd57e7805658182d253badf4b2ac973cf669a7d76f0c93a35649f96

@@ -1,0 +1,15 @@
+{
+  "normalization": "Recursively remove only seconds and elapsed_seconds keys; sorted compact JSON, ensure_ascii=False, UTF-8, SHA-256",
+  "outputs": {
+    "0-check_profiles.py.json": "82bc36167e093897a74940e4928cd39fe3e907b98ee1809d424fd195016ce766",
+    "1-check_profiles.py.json": "2cffbca7db5fe38fe451c3a0f78c2d2c382e1b505e1acb97d8a51631b08061e4",
+    "2-crosscheck_profiles.py.json": "0c7bff1d9ff9c2894450fde166c9ef5156c2d60d3ce78b65f20dd9d8dfd77718",
+    "3-check_wbox.py.json": "984f6ab56302e038e69568c9ca250e365e74723f721af69d1f0b5096cc13251b",
+    "4-c1_integer.py.json": "b6a333cb9540f1a071771454826a7ab2a5028b1833b2392492665eae113b3752",
+    "5-check_additions.py.json": "295742f52cbb1a6e0152774e813db79f1ece2e8ea8babb2e4c986bf2992b42bf"
+  },
+  "bounded_controls": {
+    "independent_audit.json": "9c38ea800a8afffd380d22bb764405549e487abc674821d45e40415104226acc",
+    "pruning_controls.json": "1a601cf4c3ee6e6d95052ae2f0fa998afc11712207d1386d03567b3bbd0a28e4"
+  }
+}

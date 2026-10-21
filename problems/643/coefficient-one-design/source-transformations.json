@@ -1,0 +1,347 @@
+{
+  "FormalConjecturesForMathlib/Combinatorics/Hypergraph/Basic.lean": {
+    "export_sha256": "b1719a6665154f31d14d7999cbe034ebf2942728d3b52b3f7f5b92cc20422e62",
+    "original_sha256": "b1719a6665154f31d14d7999cbe034ebf2942728d3b52b3f7f5b92cc20422e62",
+    "transformation": "byte-identical copy"
+  },
+  "FormalConjecturesForMathlib/Combinatorics/Hypergraph/Finite.lean": {
+    "export_sha256": "0823fba654c8fd849c821338e6624aefac6935a92836523dde9eb6524874949a",
+    "original_sha256": "0823fba654c8fd849c821338e6624aefac6935a92836523dde9eb6524874949a",
+    "transformation": "byte-identical copy"
+  },
+  "FormalConjecturesForMathlib/Combinatorics/SetFamily/PropertyB.lean": {
+    "export_sha256": "318833034fd920b3cef2f0e466621de34660c92ee7f593156011c21b6b342934",
+    "original_sha256": "318833034fd920b3cef2f0e466621de34660c92ee7f593156011c21b6b342934",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/AnchorActivity.lean": {
+    "export_sha256": "2528f9df730a165c981c1dacebff63ba9170f7f5dd76ad48490c35b58dad1693",
+    "original_sha256": "2528f9df730a165c981c1dacebff63ba9170f7f5dd76ad48490c35b58dad1693",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/AnchorApexAdapter.lean": {
+    "export_sha256": "40f7065e9523c649f620061a66bc3c166fcd2f4c5859bd95d577dc6c646a0e4a",
+    "original_sha256": "40f7065e9523c649f620061a66bc3c166fcd2f4c5859bd95d577dc6c646a0e4a",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/AnchorAssemblyArith.lean": {
+    "export_sha256": "29153e8c130d27d43599becee64ba6a5c1446ce73bab1c559e24bc0173395ce3",
+    "original_sha256": "29153e8c130d27d43599becee64ba6a5c1446ce73bab1c559e24bc0173395ce3",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/AnchorCaps.lean": {
+    "export_sha256": "4ca4d77f7c6ffb0df5a2c40ba2e469668e307336911eb0397d651c0b031bbacb",
+    "original_sha256": "4ca4d77f7c6ffb0df5a2c40ba2e469668e307336911eb0397d651c0b031bbacb",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/AnchorComplete.lean": {
+    "export_sha256": "91da84fdf2394e8181f807b5dcc3d2d14466268f1989b7bd31e6efa23eff38a9",
+    "original_sha256": "91da84fdf2394e8181f807b5dcc3d2d14466268f1989b7bd31e6efa23eff38a9",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/AnchorDecomposition.lean": {
+    "export_sha256": "c02a573f06c0d3350dbbf6a58e6210aba1f954fd1e3643bd68629b4494ed1228",
+    "original_sha256": "c02a573f06c0d3350dbbf6a58e6210aba1f954fd1e3643bd68629b4494ed1228",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/AnchorHostAdapter.lean": {
+    "export_sha256": "1ea92f76a45c5648a482519ae37396d598f56a80f88c2cd7f6d4d9ec215fa50c",
+    "original_sha256": "1ea92f76a45c5648a482519ae37396d598f56a80f88c2cd7f6d4d9ec215fa50c",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/AnchorMargin.lean": {
+    "export_sha256": "60c168ea66cac1df593eac71bd539fec80cdd0fffda9cbd576103e9357053fc1",
+    "original_sha256": "60c168ea66cac1df593eac71bd539fec80cdd0fffda9cbd576103e9357053fc1",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/AnchorNoType2.lean": {
+    "export_sha256": "a0a2c5e203465743bffc478d542b0481a535ff6f43eb8a34617f7334884f1900",
+    "original_sha256": "a0a2c5e203465743bffc478d542b0481a535ff6f43eb8a34617f7334884f1900",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/AnchorS3.lean": {
+    "export_sha256": "aa0f072137fc3d2fffef5705baaeb8794d030249f44b30a1930abeebbda091ec",
+    "original_sha256": "aa0f072137fc3d2fffef5705baaeb8794d030249f44b30a1930abeebbda091ec",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/AnchorShare.lean": {
+    "export_sha256": "eb46c531a376bf6185837fa230a9a33a70e78e04ef89b30de61e7c0796cb49f3",
+    "original_sha256": "eb46c531a376bf6185837fa230a9a33a70e78e04ef89b30de61e7c0796cb49f3",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/AnchorSide.lean": {
+    "export_sha256": "30b1edd7bc74291538be8051dc0b823af63faaa3510844e0217efa8cd4ac519f",
+    "original_sha256": "30b1edd7bc74291538be8051dc0b823af63faaa3510844e0217efa8cd4ac519f",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/AnchorT1.lean": {
+    "export_sha256": "7993fbca870859151d671fa2d7675ec34c77c80bfd6dd5554758bfbcc45262ea",
+    "original_sha256": "7993fbca870859151d671fa2d7675ec34c77c80bfd6dd5554758bfbcc45262ea",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/AnchorViewSwap.lean": {
+    "export_sha256": "d2ce001f05c029a55355dcd878005b0d91b191e89ced423f13bce5862ef8176c",
+    "original_sha256": "d2ce001f05c029a55355dcd878005b0d91b191e89ced423f13bce5862ef8176c",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/AnchorW.lean": {
+    "export_sha256": "2f2d16c4edb6a7ca8922338404a2560774a37d85056b42408f9ee97e5f3e89b7",
+    "original_sha256": "2f2d16c4edb6a7ca8922338404a2560774a37d85056b42408f9ee97e5f3e89b7",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/BothLight.lean": {
+    "export_sha256": "e2332de732908e689a4d4dc157bb6815b24f7dd3da4fae270e9efa0380b37615",
+    "original_sha256": "e2332de732908e689a4d4dc157bb6815b24f7dd3da4fae270e9efa0380b37615",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/CPrime.lean": {
+    "export_sha256": "1f2b6fc8ae3b5b1af90b24f4b9b76b648755e77c404f8fc97a243d664bf2becb",
+    "original_sha256": "1f2b6fc8ae3b5b1af90b24f4b9b76b648755e77c404f8fc97a243d664bf2becb",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/CPrimeMain.lean": {
+    "export_sha256": "859ca7366ab864d82446bb31fac9a734d20a14de9668c4e5164eaeee46886d39",
+    "original_sha256": "c1fffd1c3d202ca0706692e29d432bfff1c48abbcf26f9f89bbd16c3ee9a6597",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/CoefficientOne.lean": {
+    "export_sha256": "ba3669fc73a5f11413904c33de1f55e3d5393ecd0c6d3c3dfc13e8a377921874",
+    "original_sha256": "2656a73accfc37189d796e06b414dea21c59b053710e93bdd331655d00125afe",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/CoefficientOneAssembly.lean": {
+    "export_sha256": "f71c8f94ab19dd432d49e387d1e468c4f50d1911c10aaf2aa467c09825bbb37b",
+    "original_sha256": "b5e4585f66e72afebd70e5ff336edabc8cfa7843d94a522ec237d18e31ee0d88",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/CoefficientOneFinal.lean": {
+    "export_sha256": "ed13920afae546297a8df8fd8356e072e6707b58f7c44b0952373d0463424b72",
+    "original_sha256": "ed13920afae546297a8df8fd8356e072e6707b58f7c44b0952373d0463424b72",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/CoefficientOneUpstream.lean": {
+    "export_sha256": "b899914f74899e93a94edd80d9f1d3a4ede006965f1839e02dbb605ce81beae6",
+    "original_sha256": "512c3dc2dd1d1f02d16b4f4a0a9df01a44cf32359bec201e84563cf768c55918",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/DesignBaseOrders.lean": {
+    "export_sha256": "c0921817866377c805bb35f12e7b187b19c25fb5a94213b908585c27339046a0",
+    "original_sha256": "bf54e90796322f875114ccb7b46432c6516c1f3ca8b47d8f3c6e9d3a3291ec17",
+    "transformation": "DesignConstruction -> Openmath.Erdos643R3.DesignConstruction; declaration bodies byte-preserved"
+  },
+  "Openmath/Erdos643R3/DesignConstruction.lean": {
+    "export_sha256": "bfed8d2f62853bec3af949070648294016a5e783e4ad6606035f4c373faf42a3",
+    "original_sha256": "bfed8d2f62853bec3af949070648294016a5e783e4ad6606035f4c373faf42a3",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/FCBridge.lean": {
+    "export_sha256": "932cdc85b83579c5ff3365aaec9a807dcda0a9286c19c740d64b84d6e3d9aa4a",
+    "original_sha256": "d013db1d857dd6dc3b2a39ed235cc5b08f0b37ed7d17a6f525b4aba8a5aadc2b",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/G1Arith.lean": {
+    "export_sha256": "b8f674f1942745fa6b64bc8cf640f48d1ddb197114518f553bf5eb03f676df23",
+    "original_sha256": "4201e16ce05178ce111f167fc433eb2cfc0d2c7c6f7bd3cb25f65a8f423add5d",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/G1Bicone.lean": {
+    "export_sha256": "cc3e183906dcd6d1be3d7b28d2f0ac24fbf28f065dda94a12dc55f857f7eb3a6",
+    "original_sha256": "cc3e183906dcd6d1be3d7b28d2f0ac24fbf28f065dda94a12dc55f857f7eb3a6",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/G1BiconeAdapter.lean": {
+    "export_sha256": "195284d15fae0b373ee23f361fba37dc3d9b6ef49f9131a04ef74dea2e3e13f4",
+    "original_sha256": "195284d15fae0b373ee23f361fba37dc3d9b6ef49f9131a04ef74dea2e3e13f4",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/G1C1.lean": {
+    "export_sha256": "a2cdeb5a20a7a603aefb8924d6cc8d2a727ac5ceb882f45c09040aa03b017f20",
+    "original_sha256": "a2cdeb5a20a7a603aefb8924d6cc8d2a727ac5ceb882f45c09040aa03b017f20",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/G1C2.lean": {
+    "export_sha256": "ed4c2cf8c8eb945226ceaa1584486fffb4010c54ae8330bf31ff03bed0cb8c02",
+    "original_sha256": "ed4c2cf8c8eb945226ceaa1584486fffb4010c54ae8330bf31ff03bed0cb8c02",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/G1Check.lean": {
+    "export_sha256": "cf8a6954315689544b4a2864a72f23ce54ce2dbd37769099d0338afe18627f90",
+    "original_sha256": "cf8a6954315689544b4a2864a72f23ce54ce2dbd37769099d0338afe18627f90",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/G1Check2.lean": {
+    "export_sha256": "1613938a83bc8c926da0cdedd6fd830f5ce2bea80e4f6c164961bbcae893041a",
+    "original_sha256": "1613938a83bc8c926da0cdedd6fd830f5ce2bea80e4f6c164961bbcae893041a",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/G1Combinatorics.lean": {
+    "export_sha256": "81fa3bbbf8a4f5551f438b3b06874f3d2d88a20771827da9ba55864e80705446",
+    "original_sha256": "81fa3bbbf8a4f5551f438b3b06874f3d2d88a20771827da9ba55864e80705446",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/G1Main.lean": {
+    "export_sha256": "b2bb6850aa596888d735b23d23af17da5440e48cd24af145f568f269f276c464",
+    "original_sha256": "b2bb6850aa596888d735b23d23af17da5440e48cd24af145f568f269f276c464",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/G1Threshold.lean": {
+    "export_sha256": "d1e1974ce7d75747bdcabee7fe69627df9a770ce4086b1cfff1fd507f2662420",
+    "original_sha256": "d1e1974ce7d75747bdcabee7fe69627df9a770ce4086b1cfff1fd507f2662420",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/G3Interface.lean": {
+    "export_sha256": "fa665affedc0af23158b9e3a3713939d9a8876333838dd9eefb5ba965e119385",
+    "original_sha256": "fa665affedc0af23158b9e3a3713939d9a8876333838dd9eefb5ba965e119385",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/G3hpArith.lean": {
+    "export_sha256": "0b7a34c48ef6ee1e03f431bc969f1853c401eca3af7d81a91f229f017d03e34a",
+    "original_sha256": "e348331d693804070bb4598b8914f60ffa6bd602805e584a0729879eb1c4fc8b",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/GeneralizedPsi.lean": {
+    "export_sha256": "5a499c230eff476e860f94f566bb4f718e0b3e24d61a77825b5d78fd5a5b050e",
+    "original_sha256": "5a499c230eff476e860f94f566bb4f718e0b3e24d61a77825b5d78fd5a5b050e",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/HostPsi.lean": {
+    "export_sha256": "4b834aebc6843ac0a651345819bf56f17b6029917aed1fd2db3c9a426ca959e6",
+    "original_sha256": "4b834aebc6843ac0a651345819bf56f17b6029917aed1fd2db3c9a426ca959e6",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/HypergraphBasics.lean": {
+    "export_sha256": "bb5c59fb53d56a61a18fe3b844631267495e11567d6e4096586161adc3f6f78b",
+    "original_sha256": "bb5c59fb53d56a61a18fe3b844631267495e11567d6e4096586161adc3f6f78b",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/Identity.lean": {
+    "export_sha256": "bca03cbd48661b7e6236d9f6bc1cd18dbc3cadc3411363b6d27837e8d4902040",
+    "original_sha256": "bb8e2c89c58a5603e0c938ff5f116c8210f85d1df310100a9c3c91f337b8ef8b",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/L1Top.lean": {
+    "export_sha256": "789d9218a41a98e39d6512d19d811f5f2978e611650fdbc59ad88412a5fe2429",
+    "original_sha256": "b67ae59d7d7a49d6682ee43ae92a756b56c7b23dcde4c0565a560e1fcc5ec617",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/Lemma1g.lean": {
+    "export_sha256": "37687d8a96db315a6df5c94fc06c335b8ddb904c609e7ac9b2df70dc9af5c99b",
+    "original_sha256": "897dfee78595b1c8a76bd61baf41bdfa59898bc7bd072ff61933dcbb8faf12a7",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/Lemma3.lean": {
+    "export_sha256": "e9fb9faad28b670ee373cbc045c0e65f88bb0492a0d055db8e76d1d91824fa4f",
+    "original_sha256": "da25f9bfd995303e19960a2a03e0e7da1bd66462cfa53aa1e45a266aa015b3e2",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/PsiLoss.lean": {
+    "export_sha256": "452f22a32eec64bca694accfea45a0d7b09a0fe854ba627ab0f8a78b049b8049",
+    "original_sha256": "452f22a32eec64bca694accfea45a0d7b09a0fe854ba627ab0f8a78b049b8049",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/PublicSmallOrders.lean": {
+    "export_sha256": "e38b39f178a16e840ab0a854de95fae09a575ab57788d92bdac3cf8779abe0e7",
+    "original_sha256": null,
+    "transformation": "Two direct applications of the final supplied-design equality theorem"
+  },
+  "Openmath/Erdos643R3/Pw2312.lean": {
+    "export_sha256": "3997962e0c5574264a6acd91bb04f9b776699bb3e23023d00501a097b9b65e03",
+    "original_sha256": "9f50b40348bc328e104c73f03fc372ee34424d222f19f0ce21004f7510accb6e",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/Pw2312Defs.lean": {
+    "export_sha256": "7afd000c4cfc91af4e73cffdd1c3dba1cb0cc64c4285601dfddca041b270ce6f",
+    "original_sha256": "13db77e821077d1d3eca6ab97c9e5fed68a92c9240c37932670e879287f1db09",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/PwArith.lean": {
+    "export_sha256": "de8289601d0b0756c7689f3284a38b25ad8d1d4ec7bfe14463a70d7db5a34a36",
+    "original_sha256": "775743d33a23de323700c2a45c27dd107e03f3c9f1df09fb67f2bd40a688e647",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/PwC1.lean": {
+    "export_sha256": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+    "original_sha256": "c2e7239a8562b3819a2fee8e4cf6fb8ffaa3045ff6758d10679ca042d4eefc40",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/PwC2.lean": {
+    "export_sha256": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+    "original_sha256": "5276c63d7e3d39544c2e9358e55b847c34b8677b766fdb7131242f1cceda942b",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/PwCheck.lean": {
+    "export_sha256": "9e5e6a139540f260ead06763c3d4f59a3fe524c1aaa5b5c14460e1f514c51840",
+    "original_sha256": "29eedd06ab7523615d35a018322e4c7d40ac23c5b545ccff28c0415797dd6a88",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/RedistArith.lean": {
+    "export_sha256": "6cbe833af49da8e7b4ad56c3af08d6a1ad82fe61bd25e213b7ded31dd625f821",
+    "original_sha256": "2bcadace9cd57e7805658182d253badf4b2ac973cf669a7d76f0c93a35649f96",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/Redistribution.lean": {
+    "export_sha256": "f9931fdc84f06b232e39705bd55d548d0f7595cad9a5f77c6650b433327d2d8e",
+    "original_sha256": "f9931fdc84f06b232e39705bd55d548d0f7595cad9a5f77c6650b433327d2d8e",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/SlotModel.lean": {
+    "export_sha256": "5ee80811894919ffdfb550032479565e6ce08c1ec3ddbac70cca10fff08dbd37",
+    "original_sha256": "224fd2eff3cce476bdad55c1ad3835cdeb7c0808175ecded175203ce7c0c3cee",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/StarAsymptotic.lean": {
+    "export_sha256": "7bd516e75bac24166ee090be58144df3d6165cd44bf8433dfaf8ae06995f5133",
+    "original_sha256": "7bd516e75bac24166ee090be58144df3d6165cd44bf8433dfaf8ae06995f5133",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/StarMatching.lean": {
+    "export_sha256": "50ae5362c436a41fa7d9aa2509b648dc9a9846327b688ffd0051b170d388ca6e",
+    "original_sha256": "50ae5362c436a41fa7d9aa2509b648dc9a9846327b688ffd0051b170d388ca6e",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/StarMatchingBase.lean": {
+    "export_sha256": "5b93f401a71cc3c13e21474cecb9cd2cca995c016d8a9f1fd9adb7947f7570b5",
+    "original_sha256": "5b93f401a71cc3c13e21474cecb9cd2cca995c016d8a9f1fd9adb7947f7570b5",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/USideArith.lean": {
+    "export_sha256": "bfbed79e664c7c9dda5600ea46a228c5d48d817405eff373ed3605733d1d02e5",
+    "original_sha256": "bfbed79e664c7c9dda5600ea46a228c5d48d817405eff373ed3605733d1d02e5",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/WBeta.lean": {
+    "export_sha256": "ec3ea59c3b39aa4476ff0b83a26961c7319d1be7dbf8a46ed3c6386223f6ce33",
+    "original_sha256": "ec3ea59c3b39aa4476ff0b83a26961c7319d1be7dbf8a46ed3c6386223f6ce33",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/WBox.lean": {
+    "export_sha256": "c6cebdf64e2acbd8f1133d4db9bcd312a9e62896afcadfa3163d22836f2896f5",
+    "original_sha256": "e665c5e602200df79f7fac302903878917dff68ce7b5a48db602763a958eef4e",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/WCost.lean": {
+    "export_sha256": "c76ad36d93c5a5a2d26681fcf5442eceb99cd448230fe2ce1b1bc43f8c957b9e",
+    "original_sha256": "c76ad36d93c5a5a2d26681fcf5442eceb99cd448230fe2ce1b1bc43f8c957b9e",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/WUnbounded.lean": {
+    "export_sha256": "0893fb1772cb358e7cf6aa08ed08b116871ba6bda1552a695f5d0b00b7f65ed5",
+    "original_sha256": "0893fb1772cb358e7cf6aa08ed08b116871ba6bda1552a695f5d0b00b7f65ed5",
+    "transformation": "byte-identical copy"
+  },
+  "Openmath/Erdos643R3/Weighting.lean": {
+    "export_sha256": "43325fb040fccdc9e1816c74495bdb8a9ecce7138c1d2cf7f5cd092cafa576b1",
+    "original_sha256": "2d0688fdac329d0bb446d54c8fa665856949c7360350dc451ca6d4afe005348a",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/WeightingAuxArith.lean": {
+    "export_sha256": "56758c214f93d5fffb2fb719b8999a8aa9a560aa5e189abc4b4a6360a7da5903",
+    "original_sha256": "f598c850547c73b671bdb0c3f13546d21374d7d652630e1eb489a82c59580442",
+    "transformation": "comment wording only; noncomment stream preserved"
+  },
+  "Openmath/Erdos643R3/WeightingBound.lean": {
+    "export_sha256": "bb71453ebe330db111dbfae021fa69bd14b98a6a00886c9bb0d9d8871bb7e8b7",
+    "original_sha256": "ceb807e36820a80b6eb67e4199f7968306946a35f0a7b85a92230660c08a55c6",
+    "transformation": "comment wording only; noncomment stream preserved"
+  }
+}

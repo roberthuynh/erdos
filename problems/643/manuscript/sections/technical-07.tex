@@ -1,0 +1,450 @@
+\subsection*{7. G3h' when $t_2(A)=1$ or $d_x=2$}
+\addcontentsline{toc}{subsection}{7. G3h' for single-option anchors or two deficient triples}
+
+\subsubsection*{7.1 Setting S and notation}
+\textbf{Setting S.} Let $\operatorname{CN}(x,y)=\{uv,vw,uw\}$ be the bicone $B_q$, where $q=\{x,y\}$. The apex $x$ has exactly one light pair $xv$, so $L(xv)=\{u,w\}$ and $k_{xu},k_{xw}\ge3$. Its exactly-one-light triples are $T_1=x+uv$ and $T_2=x+vw$; its both-heavy anchor is $A=x+uw$. Let $D_x$ be the deficient triples among $T_1,T_2$, with $d_x=|D_x|\ge1$, and put
+\[
+ D=\sum_{T\in D_x}\operatorname{def}(T).
+\]
+Every deficient triple of $H$ satisfies G1 by the unconditional Theorem G1 of Section 4. Setting S is exactly the both-heavy branch in step 4 of Theorem C': by Lemma P, the both-heavy anchor occurs if and only if exactly one apex-base pair at $x$ is light. By step 3 of Theorem C', G3h' in this setting reads $c(A)/\operatorname{act}(A)\ge D$.
+
+The inputs are F1, Lemmas 1 and 2, the slot types, Theorem 1 (which gives $\operatorname{def}(T)\le1/12$, and hence $S_i\ge1$ below), and (E3) from Section 2; Lemma 1g(a), identifying triangle options with type-2 slots; and Theorem G1 and Corollary 6g from Section 4.
+
+Write $P=L(uv)$, $Q=L(vw)$, $M=L(uw)$, $X_u=L(xu)$ and $X_w=L(xw)$. The bicone gives $x,y\in P\cap Q\cap M$, $v,w\in X_u$, and $u,v\in X_w$.
+
+\emph{Slot model of $A=\{x,u,w\}$.} The groups are
+\[
+ \mathcal A=M\setminus\{x\},\qquad
+ \mathcal B=X_w\setminus\{u\},\qquad
+ \mathcal C=X_u\setminus\{w\}.
+\]
+Their options are, respectively, $\{x,z\}$ through $uw$, $\{u,z\}$ through $xw$, and $\{w,z\}$ through $xu$. The relation $R_u$ joins $\mathcal C$ and $\mathcal A$, with $z'\sim z$ if and only if $uz'z\in H$; $R_w$ joins $\mathcal A$ and $\mathcal B$ via $w$; and $R_x$ joins $\mathcal B$ and $\mathcal C$ via $x$. An $R_x$ edge of $A$ means an edge of this last relation. Let $\mathcal A_u$, $\mathcal A_w$, and $\mathcal A_0$ be the slots of $\mathcal A$ that are type 1 in $R_u$, type 1 in $R_w$, and isolated, respectively. Put
+\[
+\begin{aligned}
+ U&=\frac1{|X_u|}+\sum_{\substack{s\in\mathcal C\\s\text{ not type 2}}}\operatorname{cost}(s)
+       +\sum_{s\in\mathcal A_u}\operatorname{cost}(s),\\
+ W&=\frac1{|X_w|}+\sum_{\substack{s\in\mathcal B\\s\text{ not type 2}}}\operatorname{cost}(s)
+       +\sum_{s\in\mathcal A_w}\operatorname{cost}(s),
+\end{aligned}
+\]
+where $\operatorname{cost}(s)=1/(2(1+d(s)))$ and $d(s)$ is the degree of $s$ in $A$. For $i=1,2$ put $S_i=c(T_i)+13/12$. Thus $\operatorname{def}(T_i)=13/12-S_i$ when $T_i$ is deficient, and $S_i\ge1$ by Theorem 1 of Section 2.
+
+\emph{Slot model of $T_1=\{x,u,v\}$.} Apply Corollary 6g with $a=x$, $b=v$, $c=u$. Its groups are $A_1=P\setminus\{x\}$, with options $\{x,z\}$; $B_1=X_u\setminus\{v\}$, with options $\{v,z\}$ through $xu$; and $C_1=L(xv)\setminus\{u\}=\{w\}$. The $u$-relation joins $A_1$ and $B_1$, with $z\sim s$ if and only if $uzs\in H$; the $v$-relation joins $C_1$ and $A_1$; the $x$-relation joins $B_1$ and $C_1$. The triple $T_2=\{x,v,w\}$ is the mirror under $u\leftrightarrow w$, exchanging $P\leftrightarrow Q$, $X_u\leftrightarrow X_w$, $R_u\leftrightarrow R_w$ and $\mathcal C\leftrightarrow\mathcal B$. Every statement below has this mirror.
+
+\subsubsection*{7.2 Structure of the anchor}
+\textbf{Lemma S1.} In setting S:
+\begin{enumerate}
+\item[(a)] $s_{uw}=2$. Hence $P\cap Q=\{x,y\}$ and $X_u\cap X_w=\{v\}$.
+\item[(b)] The slot $y\in\mathcal A$ is type 2. Its only $R_u$-neighbour is the slot $v$ of $\mathcal C$, and its only $R_w$-neighbour is the slot $v$ of $\mathcal B$.
+\item[(c)] The $R_u$-neighbours of $v\in\mathcal C$ are $y$ and the slots of $J_1=(P\cap M)\setminus\{x,y\}$; this slot has no $R_x$ neighbour. In the mirror, $v\in\mathcal B$ has $R_w$-neighbours $y$ and $J_2=(Q\cap M)\setminus\{x,y\}$, and no $R_x$ neighbour.
+\item[(d)] The only type-2 slot of $\mathcal A$ is $y$; every slot of $J_1$ belongs to $\mathcal A_u$, and every slot of $J_2$ to $\mathcal A_w$.
+\item[(e)] The triangle options of $A$ are precisely the options of its type-2 slots; one is $q=\{x,y\}$.
+\end{enumerate}
+\emph{Proof.} (a) Some $T_i$ is deficient. For $T_1=x+uv$, Theorem G1(iii) applied to its light pair $xv$ gives $L(xv)=\{u,w\}$ and $s_{uw}=2$. For $T_2=x+vw$, exchange $u,w$ to obtain $s_{wu}=2$. Since $xvu,xvw\in H$, we have $xv\in\operatorname{CN}(u,w)$. By F1 every member meets $xv$. A member $vz$, with $z\notin\{u,w\}$, requires $uvz,wvz\in H$, or $z\in P\cap Q$; a member $xz$ requires $z\in X_u\cap X_w$. The edge $xv$ is the only member of both kinds. Therefore
+\[
+ s_{uw}=|P\cap Q|+|X_u\cap X_w|-1.
+\]
+Together with $x,y\in P\cap Q$ and $v\in X_u\cap X_w$, this proves (a).
+
+(b) The bicone triple $y+uv$ gives $uyv\in H$, and $v\in\mathcal C$, so $y\sim v$ in $R_u$. Likewise $wyv\in H$ and $v\in\mathcal B$, so $y\sim v$ in $R_w$. Lemma 2 makes these its only neighbours.
+
+(c) An $R_u$-neighbour of $v\in\mathcal C$ is $z\in M\setminus\{x\}$ with $uvz\in H$, equivalently $z\in(P\cap M)\setminus\{x\}=\{y\}\cup J_1$. An $R_x$-neighbour would be $b\in\mathcal B$ with $xvb\in H$, so $b\in L(xv)=\{u,w\}$. But $u\notin\mathcal B$ and $w\notin X_w$.
+
+(d) A type-2 slot $z\in\mathcal A$ has neighbours that are slots of one vertex $s\in\mathcal C\cap\mathcal B\subseteq X_u\cap X_w=\{v\}$. Thus $uzv,wzv\in H$, and $z\in(P\cap Q)\setminus\{x\}=\{y\}$. A slot $z\in J_1$ is $R_u$-adjacent to $v\in\mathcal C$ by (c), and is not type 2, so it is type 1 in $R_u$.
+
+(e) For a slot $s$ of a triple $T$, $s_{q_s}=1+d(s)$, and $\operatorname{CN}(q_s)$ consists of the pair of $T$ through which $q_s$ passes and one pair per neighbour of $s$ (Lemma 1 and its proof). If $s$ is type 1, these pairs all contain one common vertex of $T$, the apex of its relation, so $\operatorname{CN}(q_s)$ is not a triangle. If $s$ is isolated, $s_{q_s}=1$. If $s$ is type 2, $\operatorname{CN}(q_s)$ is a triangle by Lemma 2. The option of $y$ is $q$. \hfill$\square$
+
+\textbf{Lemma S2 (decomposition).}
+\[
+ c(A)=\frac1{k_{uw}}+\frac{t_2(A)}6+\frac{|\mathcal A_0|}2+U+W-2,
+\]
+where $t_2(A)$ counts the type-2 slots of $A$.
+\emph{Proof.} We have $\sigma(A)=1/|M|+1/|X_u|+1/|X_w|$. By Lemma S1(d), the slots of $\mathcal A$ are $y$, of cost $1/6$; $\mathcal A_u$; $\mathcal A_w$; and $\mathcal A_0$, each of cost $1/2$. Every slot of $\mathcal B$ and $\mathcal C$ is either type 2, of cost $1/6$, or counted in $W$ and $U$, respectively. \hfill$\square$
+
+\subsubsection*{7.3 The $u$-side when $T_1$ is deficient}
+Let $r=|X_u|-2\ge1$, since $X_u\supseteq\{v,w\}$ and $k_{xu}\ge3$, and $R=X_u\setminus\{v,w\}$. Thus $\mathcal C=\{v\}\cup R$ and $B_1=\{w\}\cup R$. Set $j=|J_1|$, $D_1=P\setminus(\{x,y\}\cup J_1)$ and $d=|D_1|$, so $|P|=2+j+d$. Set $E_u=\mathcal A_u\setminus J_1$ and $e=|E_u|$.
+
+\textbf{Lemma S3 ($T_1$ side).} If $T_1$ is deficient, then
+\[
+\begin{aligned}
+ S_1\ge{}&\frac1{2+j+d}+\frac1{2+r}+\frac1{2(2+j)}
+       +\sum_{z\in J_1}\frac1{2(1+d_A(z))}\\
+       &+\frac d{2(1+r)}+\frac r{2(1+j+d)},
+\end{aligned}
+\]
+where $d_A(z)$ is the degree of $z\in J_1$ in $A$.
+\emph{Proof.} Use Corollary 6g with $a=x$, $b=v$, $c=u$, type-2 slot $(y,A_1)$, partner $w$, and $C_1=\{w\}$. The $v$-relation of $T_1$ is the single edge $(w,y)$; the $x$-relation is empty; every other slot is isolated or type 1 in the $u$-relation. Corollary 6g says type 1, but only the upper bounds below are used. Thus $\sigma(T_1)=1/|P|+1/|X_u|+1/2$. The slot $w\in C_1$ costs $1/4$, having degree 1; $y$ costs $1/6$; every other slot $s$ costs $1/(2(1+d_1(s)))$, where $d_1(s)$ is its $u$-relation degree. Since $1/2+1/4+1/6=11/12$, $S_1$ equals $1/|P|+1/|X_u|$ plus the costs over $A_1\setminus\{y\}$ and $B_1$.
+
+The neighbours of $w\in B_1$ are $z\in P\setminus\{x\}$ with $uwz\in H$, namely $(P\cap M)\setminus\{x\}=\{y\}\cup J_1$, so its degree is exactly $1+j$. A slot $z\in J_1$ has neighbours $s\in X_u\setminus\{v\}$ with $uzs\in H$: the slot $w$, because $z\in M$, and $N_u(z)\cap R$. In $A$, its $R_u$-neighbours are the slots $s\in X_u\setminus\{w\}$ with $uzs\in H$, namely $v$, because $z\in P$, and $N_u(z)\cap R$. It has no $R_w$ neighbour by Lemma S1(d). Consequently $d_1(z)=d_A(z)$. A slot $z\in D_1$ is not adjacent to $w$, because $z\notin M$, so $d_1(z)\le r$. A slot $s\in R$ is not adjacent to $y$: the latter's only neighbour in $B_1$ is $w$, by Lemma 2 in $T_1$. Hence $d_1(s)\le j+d$. Costs decrease with degree. \hfill$\square$
+
+\textbf{Lemma S4 (anchor $u$-side, no $R_x$ edge).} If $A$ has no $R_x$ edge, then
+\[
+\begin{aligned}
+ U\ge{}&\frac1{2+r}+\frac1{2(2+j)}+\sum_{z\in J_1}\frac1{2(1+d_A(z))}\\
+ &+\frac e{2(1+r)}+\frac r{2(1+j+e)}.
+\end{aligned}
+\]
+\emph{Proof.} Without $R_x$ edges every slot of $\mathcal C$ has only $R_u$ edges, so none is type 2. Thus $U$ is $1/|X_u|$ plus the costs over $\mathcal C$ and $\mathcal A_u$. The slot $v$ costs $1/(2(2+j))$ by Lemma S1(c). A slot of $R$ has its $R_u$-neighbours in $\mathcal A_u$: not $y$, by Lemma S1(b), and every $\mathcal A$-slot with an $R_u$ edge but no $R_w$ edge belongs to $\mathcal A_u$. Its degree is therefore at most $j+e$. A slot $z\in E_u$ is not in $P$, since otherwise $z\in(P\cap M)\setminus\{x\}=\{y\}\cup J_1$. It is not adjacent to $v$, so its degree is at most $r$. \hfill$\square$
+
+\textbf{Lemma S5 (joint inequality).} For integers $j,d,e\ge0$ and $r\ge1$,
+\[
+\begin{aligned}
+ \Psi(j,d,e,r):={}&\frac2{r+2}+\frac1{j+d+2}+\frac1{2+j}+\frac j{r+2}\\
+ &+\frac d{2(1+r)}+\frac e{2(1+r)}
+   +\frac r{2(1+j+d)}+\frac r{2(1+j+e)}>2.
+\end{aligned}
+\]
+\emph{Proof.} Put $P_d=1+j+d$ and $P_e=1+j+e$.
+
+If $r\ge j$, use $d=P_d-1-j$ and $r=(r+1)-1$ to obtain
+\[
+\begin{aligned}
+ \frac d{2(1+r)}+\frac r{2P_d}
+ &=\left[\frac{P_d}{2(r+1)}+\frac{r+1}{2P_d}\right]
+    -\frac{1+j}{2(1+r)}-\frac1{2P_d}\\
+ &\ge1-\frac{1+j}{2(1+r)}-\frac1{2P_d}
+\end{aligned}
+\]
+by AM--GM, and similarly for $e$. Since
+$(2+j)/(r+2)-(1+j)/(r+1)=(r-j)/((r+1)(r+2))$, it follows that
+\[
+\begin{aligned}
+ \Psi\ge2+\frac{r-j}{(r+1)(r+2)}
+ +\left[\frac1{P_d+1}-\frac1{2P_d}\right]
+ +\left[\frac1{2+j}-\frac1{2P_e}\right].
+\end{aligned}
+\]
+The second bracket is $(P_d-1)/(2P_d(P_d+1))\ge0$. Since $P_e\ge1+j$, the third is at least $j/(2(1+j)(2+j))\ge0$. If $r>j$, the first term after 2 is positive; if $r=j\ge1$, the third bracket is positive. Thus $\Psi>2$.
+
+If $j\ge r+1$, then for real $e\ge0$,
+\[
+ \frac{d}{de}\left[\frac e{2(1+r)}+\frac r{2(1+j+e)}\right]
+ =\frac1{2(1+r)}-\frac r{2P_e^2}>0,
+\]
+since $P_e\ge r+2$ and $(r+2)^2>r(r+1)$. This sum is at least $r/(2(1+j))$. For real $d\ge0$, set $\psi(d)=1/(2+j+d)+d/(2(1+r))+r/(2(1+j+d))$. Its derivative
+\[
+ -\frac1{(P_d+1)^2}+\frac1{2(1+r)}-\frac r{2P_d^2}
+\]
+is increasing in $P_d$. At $P_d=r+2$ it is
+\[
+ \frac{3r+4}{2(r+1)(r+2)^2}-\frac1{(r+3)^2}>0,
+\]
+because $(3r+4)(r+3)^2-2(r+1)(r+2)^2=r^3+12r^2+35r+28>0$. Thus $\psi(d)\ge\psi(0)=1/(2+j)+r/(2(1+j))$, and
+\[
+ \Psi\ge\chi(\ell):=\frac{\ell+1}{r+2}+\frac2{\ell+1}+\frac r\ell,
+ \qquad \ell=j+1\ge r+2.
+\]
+The derivative $\chi'(\ell)=1/(r+2)-2/(\ell+1)^2-r/\ell^2$ is increasing in $\ell$, and $\chi'(r+2)=2/(r+2)^2-2/(r+3)^2>0$. Therefore
+\[
+ \chi(\ell)\ge\chi(r+2)=\frac{2r+3}{r+2}+\frac2{r+3}
+ =2+\frac{r+1}{(r+2)(r+3)}>2.
+\]
+\hfill$\square$
+
+\textbf{Corollary ($u$-side, $T_1$ deficient, no $R_x$ edge).} $U+S_1>2$.
+\emph{Proof.} Add Lemmas S3 and S4. The $J_1$-terms appear twice with the same degrees $d_A(z)\le1+r$, and hence contribute at least $2j/(2(2+r))=j/(r+2)$. The sum is at least $\Psi(j,d,e,r)>2$ by Lemma S5. \hfill$\square$
+
+\subsubsection*{7.4 The $u$-side when $T_1$ is not deficient}
+\textbf{Lemma S6 (one-group bound).} For integers $a\ge0$ and $c\ge2$,
+\[
+ f(a,c):=\frac1{1+c}+\frac1{2(2+a)}+\frac{c-1}{2(1+a)}+\frac a{2(1+c)}\ge\frac{11}{12},
+\]
+with equality only at $(a,c)=(1,2)$.
+\emph{Proof.} AM--GM gives
+\[
+\begin{aligned}
+ f&=\left[\frac{a+2}{2(c+1)}+\frac{c+1}{2(a+1)}\right]-\frac1{a+1}+\frac1{2(a+2)}\\
+ &\ge\sqrt{\frac{a+2}{a+1}}-\frac1{a+1}+\frac1{2(a+2)}.
+\end{aligned}
+\]
+For $t=1/(a+1)\in(0,1]$, $\sqrt{1+t}\ge1+t/2-t^2/8$: squaring the right-hand side gives $1+t-t^3/8+t^4/64\le1+t$. Thus
+\[
+ f\ge1-\frac1{2(a+1)(a+2)}-\frac1{8(a+1)^2}.
+\]
+For $a\ge2$, this is at least $1-1/24-1/72=17/18>11/12$. For $a=0$, $f(0,c)=1/(1+c)+1/4+(c-1)/2\ge13/12$. For $a=1$, $f(1,c)=3/(2(1+c))+(c-1)/4+1/6$ equals $11/12$ at $c=2$, and $f(1,c+1)-f(1,c)=1/4-3/(2(1+c)(2+c))>0$ for $c\ge2$. \hfill$\square$
+
+\textbf{Corollary ($u$-side, no $R_x$ edge).} If $A$ has no $R_x$ edge, then $U\ge11/12$.
+\emph{Proof.} Let $c=|\mathcal C|=r+1\ge2$, since $xu$ is heavy in setting S and $|\mathcal C|=k_{xu}-1\ge2$. Set $a=|\mathcal A_u|$. The slot $v$ has degree $1+j\le1+a$, since $J_1\subseteq\mathcal A_u$. Each slot of $R$ has degree at most $a$ by the proof of Lemma S4, and each slot of $\mathcal A_u$ has degree at most $c$. Hence $U\ge f(a,c)\ge11/12$. \hfill$\square$
+
+The mirror statement $W\ge11/12$ uses $|\mathcal B|=k_{xw}-1\ge2$.
+
+\subsubsection*{7.5 Theorem S1 and Proposition S2}
+\textbf{Theorem S1.} In setting S, if $A$ has no $R_x$ edge, then $t_2(A)=\operatorname{act}(A)=1$ and
+\[
+ c(A)-D\ge\frac1{k_{uw}}+\frac{|\mathcal A_0|}2+\text{positive terms}>0.
+\]
+In particular G3h' holds and $A$ is not deficient.
+\emph{Proof.} Without $R_x$ edges, no slot of $\mathcal B$ or $\mathcal C$ is type 2: their two relations are $R_w,R_x$ and $R_u,R_x$, respectively. Lemma S1(d),(e) therefore makes $q$ the only triangle option, so $t_2(A)=1$. The bicone $B_q$ is active and contains $A$, so $\operatorname{act}(A)=1$. Lemma S2 gives
+\[
+ c(A)=\frac1{k_{uw}}+\frac16+\frac{|\mathcal A_0|}2+U+W-2.
+\]
+If $T_1$ is deficient, $\operatorname{def}(T_1)=13/12-S_1$, and likewise for $T_2$. If $d_x=2$, then
+\[
+\begin{aligned}
+ c(A)-\operatorname{def}(T_1)-\operatorname{def}(T_2)
+ &=\frac1{k_{uw}}+\frac{|\mathcal A_0|}2+(U+S_1-2)+(W+S_2-2)\\
+ &>\frac1{k_{uw}},
+\end{aligned}
+\]
+by the corollary of Section 7.3 and its mirror. If $d_x=1$ and $T_1$ is deficient, then
+\[
+\begin{aligned}
+ c(A)-\operatorname{def}(T_1)
+ &=\frac1{k_{uw}}+\frac{|\mathcal A_0|}2+(U+S_1-2)+(W-11/12)\\
+ &>\frac1{k_{uw}},
+\end{aligned}
+\]
+by Section 7.3 and the mirror of Section 7.4. The case with $T_2$ deficient is its mirror. \hfill$\square$
+
+\textbf{Proposition S2.} Put $t=t_2(A)$. We have $\operatorname{act}(A)\le t$, because it counts active bicones among the $t$ triangle options (Lemma S1(e)), and $D\le d_x/12\le1/6$ by Theorem 1 of Section 2. Lemma S2 gives
+\[
+\begin{aligned}
+ c(A)-\operatorname{act}(A)D&\ge c(A)-tD\\
+ &=\left[\frac1{k_{uw}}+\frac16+\frac{|\mathcal A_0|}2+U+W-2-D\right]
+    +(t-1)(1/6-D).
+\end{aligned}
+\]
+The last term is nonnegative. Thus G3h' holds as soon as
+\[
+ (\star)\qquad \frac1{k_{uw}}+\frac16+\frac{|\mathcal A_0|}2+U+W-2\ge D,
+\]
+where $U,W$ exclude the type-2 slots of $\mathcal C,\mathcal B$. In general the slack $(t-1)(1/6-D)$ is only known to be nonnegative. The stronger bound $(t-1)/12$ holds only when $d_x=1$, since then $D\le1/12$; it is not used. \hfill$\square$
+
+Theorem S1 establishes $(\star)$ when there are no $R_x$ edges.
+
+\subsubsection*{7.6 Anchors with an $R_x$ edge: two structural lemmas}
+\textbf{Lemma S8 (type-2 slots of $\mathcal C$ and their bicones).} Let $R_2$ be the type-2 slots of $\mathcal C$. Every deficient triple of $H$ satisfies G1.
+\begin{enumerate}
+\item[(a)] All slots of $R_2$ have one common partner $z^*\in(M\cap X_w)\setminus\{x,u,v\}$, and $z^*\notin X_u$.
+\item[(b)] If $|R_2|\ge2$, no bicone $B_{q_r}$, for $r\in R_2$, is active.
+\item[(c)] Consequently $\operatorname{act}(A)\le1+[|R_2|=1]+[|R'_2|=1]$, where $R'_2$ is the mirror set of type-2 slots of $\mathcal B$.
+\end{enumerate}
+\emph{Proof.} (a) A type-2 slot $r\in\mathcal C$ has $R_u$- and $R_x$-neighbours that are slots of one vertex $z$, its partner. Then $z\in\mathcal A\cap\mathcal B$, so $urz,xrz\in H$ and $rz\in\operatorname{CN}(u,x)$. Every $s\in\mathcal A\cap\mathcal B$ has $uws,xws\in H$, giving $ws\in\operatorname{CN}(u,x)$. By F1, $ws$ meets $rz$, so $\mathcal A\cap\mathcal B\subseteq\{r,z\}$. If a second type-2 slot $r'$ had partner $z'\ne z$, then $z'\in\mathcal A\cap\mathcal B\subseteq\{r,z\}$ gives $z'=r$. This would imply $r\in\mathcal A\cap\mathcal B\cap\mathcal C\subseteq X_u\cap X_w=\{v\}$, but $v\in\mathcal C$ has no $R_x$ edge by Lemma S1(c), and is not type 2. Hence there is one common partner $z^*$. Its slots in $\mathcal A$ and $\mathcal B$ give $z^*\in M\cap X_w$ and $z^*\notin\{x,u\}$. Also $z^*\ne v$, because $v\in\mathcal B$ has no $R_x$ edge. Since $X_u\cap X_w=\{v\}$, we have $z^*\notin X_u$.
+
+(b) For $r\in R_2$, $q_r=\{w,r\}$ and $\operatorname{CN}(w,r)=\{xu,uz^*,xz^*\}$ by Lemmas 1 and 2. The six bicone triples are
+\[
+ A=w+xu,\quad w+uz^*,\quad w+xz^*,\quad
+ r+xu,\quad r+uz^*,\quad r+xz^*.
+\]
+The triple $A$ has at least three triangle options, from $y$ and two slots of $R_2$. Both $w+uz^*$ and $w+xz^*$ have triangle options $\{w,r'\}$ for every $r'\in R_2$: each $r'$ lies in $L(uz^*)\cap L(xz^*)$, and $\operatorname{CN}(w,r')$ is a triangle. Thus none of these first three triples is deficient, by G1(i).
+
+Suppose $T=r+p_1p_2$ is deficient, where $\{p_1,p_2,p_3\}=\{x,u,z^*\}$. By G1 its only triangle option is $\{r,w\}$. Apply Corollary 6g with $a=r$, light pair $ab=rp_1$ (say), $c=p_2$, and partner $p_3$ of the type-2 slot $w\in L(p_1p_2)\setminus\{r\}$. The $b$-relation of $T$ joins the slot $p_3$ to slots $s\in L(p_1p_2)\setminus\{r\}$ when $p_1p_3s\in H$, and must be the single edge to $w$.
+The six relabellings are written out in Appendix~\ref{app:expanded}, part C.
+But any $r'\in R_2\setminus\{r\}$ satisfies $r'\in L(p_1p_2)$ and $p_1p_3r'\in H$, since $xur',uz^*r',xz^*r'\in H$: here $r'\in X_u$, and its $R_u$ and $R_x$ edges go to $z^*$. Also $r'\notin\{r,p_3\}$, since $r'\in X_u$ and $z^*\notin X_u$. This is a contradiction.
+
+(c) The number $\operatorname{act}(A)$ counts the bicone of $y$ and active bicones of type-2 slots in $\mathcal C$ and $\mathcal B$. Part (b) permits at most one from each group, and only when that group has exactly one type-2 slot. \hfill$\square$
+
+Writing $a_* = \operatorname{act}(A)$ for this display, the slack in Proposition S2 improves to
+\[
+ c(A)-a_*D\ge\bigl(\text{left side of }(\star)-D\bigr)
+       +\frac{t-a_*}{6}+(a_*-1)(1/6-D).
+\]
+
+\subsubsection*{7.7 Classes with $R_x$ edges, caps, and $\Psi_N$}
+Split $R=\mathcal C\setminus\{v\}$ into $R_U$ (type 1 in $R_u$), $R_X$ (type 1 in $R_x$), $R_0$ (isolated in $A$), and $R_2$ (type 2). Put
+\[
+ k=|R_U|,\quad q=|R|-k,\quad r=k+q=|X_u|-2,\quad r_2=|R_2|.
+\]
+In the mirror, $R'=\mathcal B\setminus\{v\}=R'_W\cup R'_X\cup R'_0\cup R'_2$. Define
+\[
+ U^-=U-\sum_{s\in R_X\cup R_0}\operatorname{cost}(s),
+\]
+and define $W^-$ by the mirror. The set $R_2$ is not included in $U$.
+The degree caps in $A$ are as follows.
+\begin{itemize}
+\item A slot $z\in J_1$ has $R_u$-neighbours $v$ and slots of $R_U\cup R_2$. A slot of $R_2$ has only $z^*$ as its $R_u$-neighbour by Lemma S8(a). Thus $d_A(z)\le1+k$ for $z\ne z^*$, and $d_A(z^*)\le1+k+r_2$.
+\item A slot of $E_u$ has degree at most $k$, except $z^*$, whose degree is at most $k+r_2$. A slot of $R_U$ has degree at most $j+e$, with no $R_x$ edge.
+\item The slot $v$ costs $1/(2(2+j))$, since Lemma S1(c) is independent of $R_x$.
+\end{itemize}
+If $k=0$, then $E_u\subseteq\{z^*\}$. Lemma S3, concerning only $T_1$, is unchanged. With $P_d=1+j+d$ and $P_e=1+j+e$, it gives
+\[
+ U^-+S_1\ge\Psi_N(j,d,e,k,q)-L^*,
+\]
+where
+\[
+\begin{aligned}
+ \Psi_N:={}&\frac2{2+r}+\frac1{P_d+1}+\frac1{2+j}+\frac j{2+k}\\
+ &+\frac d{2(1+r)}+\frac r{2P_d}+\frac e{2(1+k)}+\frac k{2P_e},
+\end{aligned}
+\]
+and
+\[
+ L^*=\begin{cases}
+ 0,&R_2=\varnothing,\\
+ \dfrac1{2+k}-\dfrac1{2+k+r_2},&z^*\in J_1,\\[3pt]
+ \dfrac1{2(1+k)}-\dfrac1{2(1+k+r_2)},&z^*\in E_u.
+ \end{cases}
+\]
+The $J_1$ case has two copies of the exceptional cost, in $T_1$ and in $A$.
+
+\subsubsection*{7.8 Lemmas S9, S10.1, S10, and S11}
+\textbf{Lemma S9 (size of the shared row set).} If $T_1$ is deficient, then $j\ge2$. If also $r\ge j$, then $j\ge5$ and $S_1-1\ge1/(2(2+j))$.
+\emph{Proof.} In Lemma S3 use $d_A(z)\le1+r$ for every $z\in J_1$. The pairing from Lemma S5 gives
+\[
+ \frac d{2(1+r)}+\frac r{2P_d}\ge1-\frac{1+j}{2(1+r)}-\frac1{2P_d},
+\]
+so
+\[
+ S_1\ge1+\frac1{2(2+j)}+\frac{P_d-1}{2P_d(P_d+1)}
+                   +\frac{r-j}{2(1+r)(2+r)}.
+\]
+If $r\ge j$, the inequality $S_1<13/12$ forces $1/(2(2+j))<1/12$, hence $j\ge5$. If $r<j$, then $j\ge2$ because $r\ge1$. \hfill$\square$
+
+\textbf{Lemma S10.1 (three case bounds for $\Psi_N$).} These bounds are also used by Lemma U(c). Suppose $T_1$ is deficient, so $j\ge2$, and $j\ge5$ if $r\ge j$, by Lemma S9.
+\begin{enumerate}
+\item[(i)] If $k\ge j$, then
+\[
+\begin{aligned}
+ \Psi_N-2\ge{}&\frac{r-j}{2(1+r)(2+r)}+\frac{k-j}{2(1+k)(2+k)}
+              +\frac{(j-2)q}{2(2+r)(2+k)}\\
+ &+\frac{P_d-1}{2P_d(P_d+1)}+\frac j{2(1+j)(2+j)}>0.
+\end{aligned}
+\]
+\item[(ii)] If $k<j\le r$, so $j\ge5$, then
+\[
+ \Psi_N-2\ge\frac k{(k+2)(k+3)}+\frac{P_d-1}{2P_d(P_d+1)}>0.
+\]
+For $k=0$ we also have $\Psi_N-2\ge10/7$.
+\item[(iii)] If $j\ge r+1$, then
+\[
+ \Psi_N\ge\chi(j+1)+(r-k)\left[\frac j{(2+k)(2+r)}-\frac1{2(1+j)}\right],
+\]
+where $\chi$ is from Lemma S5. The bracket is at least
+$ (r+1)/((2+k)(2+r))-1/(2(r+2))\ge0$, and
+$\chi(j+1)-2\ge(r+1)/((r+2)(r+3))>0$.
+\end{enumerate}
+The cases cover all $k,j,r$, so $\Psi_N>2$ throughout.
+
+\emph{Proof.} (i) Pair the $d$-terms with $r+1$ and the $e$-terms with $k+1$ as in Lemma S5, using
+\[
+\begin{aligned}
+ &\frac2{2+r}+\frac j{2+k}-\frac{1+j}{2(1+r)}-\frac{1+j}{2(1+k)}\\
+ &\qquad=\frac{r-j}{2(1+r)(2+r)}+\frac{k-j}{2(1+k)(2+k)}
+              +\frac{(j-2)q}{2(2+r)(2+k)}.
+\end{aligned}
+\]
+All terms in the asserted bound are nonnegative, since $r\ge k\ge j\ge2$, and its last term is positive.
+
+(ii) For real $e\ge0$, $e/(2(1+k))+k/(2P_e)$ is increasing, since $P_e\ge k+2$, and is at least $k/(2(1+j))$. The $d$-pairing gives
+\[
+ \Psi_N\ge1+f+\frac{P_d-1}{2P_d(P_d+1)}.
+\]
+Here
+\[
+ f=\frac2{2+r}+\frac1{2+j}+\frac j{2+k}+\frac k{2(1+j)}-\frac{1+j}{2(1+r)}.
+\]
+Since $j\ge3$, $df/dr\ge(-2+(1+j)/2)/(1+r)^2\ge0$. Thus $f\ge g_{10}(j)-1/2$, where
+\[
+ g_{10}(j)=\frac j{2+k}+\frac k{2(1+j)}+\frac3{2+j}.
+\]
+For $j\ge k+1$,
+\[
+ g_{10}'(j)\ge\frac{k+4}{2(k+2)^2}-\frac3{(k+3)^2}>0,
+\]
+since $(k+4)(k+3)^2-6(k+2)^2=k^3+4k^2+9k+12$. Consequently $g_{10}(j)\ge g_{10}(\max(k+1,5))$. Using
+$g_{10}(k+1)-3/2=k/((k+2)(k+3))$ gives the asserted bound; its last term is positive because $P_d\ge6$. When $k=0$, we have $\Psi_N-2\ge g_{10}(5)-3/2=10/7$.
+
+(iii) The $e$-terms are at least $k/(2(1+j))$ as in (ii). The $d$-terms, together with $1/(P_d+1)$, are minimised at $d=0$ by Lemma S5 in the case $j\ge r+1$. Thus
+\[
+ \Psi_N\ge\chi(j+1)+(r-k)\left[\frac j{(2+k)(2+r)}-\frac1{2(1+j)}\right].
+\]
+The bracket is at least $(r+1)/((2+k)(2+r))-1/(2(r+2))\ge0$, because $j\ge r+1$ and $k\le r$. Lemma S5 also gives $\chi(j+1)-2\ge(r+1)/((r+2)(r+3))>0$. \hfill$\square$
+
+\textbf{Lemma S10 (LD).} If $T_1$ is deficient, then $U^-+S_1+\sigma_u>2$, where
+\[
+ \sigma_u=\begin{cases}0,&r_2=0,\\S_1-1,&r_2=1,\\1/3,&r_2\ge2.\end{cases}
+\]
+\emph{Proof.} Section 7.7 gives $U^-+S_1\ge\Psi_N-L^*$. If $R_2=\varnothing$, then $L^*=0$, and Lemma S10.1 gives $\Psi_N>2$. Otherwise $z^*$ exists and $r_2\ge1$.
+
+If $r_2\ge2$, then $\sigma_u=1/3$. For $k\ge1$, $L^*<1/(2+k)\le1/3$. For $k=0$ we have $k<j$. In case (ii), $\Psi_N-2\ge10/7>L^*$. In case (iii), the bracket is at least $r/(2(r+2))$, so $\Psi_N-2\ge r^2/(2(r+2))\ge1/6$, and $1/6+1/3=1/2>L^*$.
+
+Now suppose $r_2=1$, so $\sigma_u=S_1-1$. We have
+\[
+ L^*\le\frac1{(2+k)(3+k)}\quad(z^*\in J_1),\qquad
+ L^*\le\frac1{2(1+k)(2+k)}\quad(z^*\in E_u).
+\]
+In case (i), $r\ge k\ge j$, and Lemma S9 gives
+\[
+ \sigma_u\ge\frac1{2(2+j)}\ge\frac1{(2+j)(3+j)}\ge L^*,
+\]
+for both forms of $L^*$, since $k\ge j$.
+
+In case (ii), for $k\ge1$, $k/((k+2)(k+3))\ge L^*$. For the $E_u$ form this follows from $2k(k+1)\ge k+3$. If equality occurs in either form at $k=1$, the positive term $(P_d-1)/(2P_d(P_d+1))$ in Lemma S10.1(ii) supplies strictness. For $k=0$, $10/7>L^*$. In both subcases $\sigma_u=S_1-1\ge0$ by Theorem 1 of Section 2.
+
+In case (iii), first let $z^*\in J_1$. Set $m=r-k\ge1$, since $q\ge r_2=1$, and note $2+k\le r+1$. Then
+\[
+ \Psi_N-\chi(j+1)\ge\frac m{2(r+2)}\ge\frac1{(2+k)(3+k)}.
+\]
+The second inequality follows from $h(m)=m(r+2-m)(r+3-m)\ge2(r+2)$ for $1\le m\le r$: the function is unimodal on $[0,r+2]$, and $h(1)=(r+1)(r+2)$, $h(r)=6r$.
+
+Finally, in case (iii) with $z^*\in E_u$, we have $e\ge1$. The $e$-terms are at least
+\[
+\begin{aligned}
+ \frac{e-1}{2(1+k)}+\frac1{2(2+k)}+\frac k{2P_e}
+ &\ge\frac1{2(2+k)}+\frac k{2(2+j)}\\
+ &\ge\frac k{2(1+j)}.
+\end{aligned}
+\]
+Here the expression increases in $e$, and $(1+j)(2+j)\ge k(2+k)$. Thus the case (iii) bound holds with $L^*$ already included.
+The reduced exceptional-cost calculation is written out in Appendix~\ref{app:expanded}, part D.
+In both subcases $\sigma_u=S_1-1\ge0$ by Theorem 1 of Section 2. \hfill$\square$
+
+\textbf{Lemma S11 (one side, $R_x$ edge, no type-2 slot in $\mathcal B\cup\mathcal C$).} If $A$ has an $R_x$ edge and $R_2=R'_2=\varnothing$, then
+\[
+ U+\sum_{s\in R'_X}\operatorname{cost}(s)\ge11/12.
+\]
+\emph{Proof.} Every $R_x$ edge joins $R_X$ to $R'_X$, since there is no type-2 slot in $\mathcal B\cup\mathcal C$ and the $v$-slots have no $R_x$ edge. Hence $r_X=|R_X|\ge1$ and $r'_X=|R'_X|\ge1$. Slots of $R_X$ have degree at most $r'_X$, and slots of $R'_X$ at most $r_X$. By (E3), their total cost is at least
+\[
+\begin{aligned}
+ \frac{r_X}{2(1+r'_X)}+\frac{r'_X}{2(1+r_X)}
+ &\ge1-\frac1{2(1+r_X)}-\frac1{2(1+r'_X)}\\
+ &\ge\frac34-\frac1{2(1+r_X)}.
+\end{aligned}
+\]
+For the rest of $U$, if $k\ge1$, the slots $v,R_U,\mathcal A_u$ have degree caps $1+a,a,1+k$, respectively, where $a=|\mathcal A_u|$. Their cost is at least $f(a,1+k)-1/(2+k)\ge11/12-1/3$, by Lemma S6. Therefore
+\[
+ U+\sum_{s\in R'_X}\operatorname{cost}(s)\ge11/12-1/3+3/4-1/4=13/12.
+\]
+If $k=0$, then $\mathcal A_u$ consists of $J_1$, each slot having degree 1, and this part costs at least $1/(2(2+j))+j/4\ge1/4$. Also $1/|X_u|\ge1/(2+r_X+r_0)$, and $R_0$ costs $r_0/2$, where $r_0=|R_0|$. Thus
+\[
+ U+\sum_{s\in R'_X}\operatorname{cost}(s)
+ \ge\frac1{2+r_X+r_0}+\frac{r_0}2+\frac14+\frac34-\frac1{2(1+r_X)}.
+\]
+For $r_0=0$, this is at least $1+r_X/(2(1+r_X)(2+r_X))$. For $r_0\ge1$, it is at least $1/4+1/2+3/4-1/4$. \hfill$\square$
+
+\subsubsection*{7.9 Theorem S1'}
+\textbf{Theorem S1' (G3h' when $t_2(A)=1$ or $d_x=2$).} In setting S, G3h' holds with
+\[
+ c(A)-\operatorname{act}(A)D>1/k_{uw}
+\]
+whenever (a) the groups $\mathcal B,\mathcal C$ of $A$ have no type-2 slot, so $t_2(A)=1$, with $R_x$ edges allowed; or (b) $d_x=2$, for any anchor.
+
+\emph{Proof.} Lemma S2 and the slack bound after Lemma S8 give
+\[
+ c(A)-\operatorname{act}(A)D\ge\frac1{k_{uw}}+\frac{|\mathcal A_0|}2
+     +\Lambda_u+\Lambda_w+s_u+s_w,
+\]
+where $\Lambda_u=U+S_1-2$ if $T_1$ is deficient, and $\Lambda_u=U-11/12$ otherwise; $\Lambda_w$ is its mirror. Let $\alpha$ indicate that the bicone of the unique type-2 slot of $\mathcal C$ is active. By Lemma S8, $\alpha\le[r_2=1]$. Then
+\[
+ s_u=\frac{r_2-\alpha}{6}+\alpha(1/6-D)
+ \ge[r_2=1](1/6-D)+\frac{[r_2\ge2]}3.
+\]
+Also $1/6-D\ge S_1-1$ when $T_1$ is deficient, since $D\le\operatorname{def}(T_1)+1/12$ and $S_1-1=1/12-\operatorname{def}(T_1)$.
+
+For (b), $d_x=2$. Lemma S10 gives
+\[
+ \Lambda_u+s_u\ge U^-+S_1+\sigma_u-2>0,
+\]
+and likewise for $w$. The quantities $s_u,s_w$ come from different type-2 slots, so nothing is counted twice.
+
+For (a), it remains to treat $t_2(A)=1$, $d_x=1$, and $T_1$ deficient; the case with $T_2$ deficient is its mirror. We have
+\[
+\begin{aligned}
+ \Lambda_u+\Lambda_w
+  &=(U^-+S_1-2)\\
+  &\quad+\left(W+\sum_{s\in R_X\cup R_0}\operatorname{cost}(s)-11/12\right).
+\end{aligned}
+\]
+The first bracket is positive by Lemma S10, with $\sigma_u=0$. The second is nonnegative by the mirror of the corollary of Section 7.4 if $A$ has no $R_x$ edge, and by the mirror of Lemma S11 otherwise. \hfill$\square$
+
+\textbf{What remains after Theorem S1'.} Setting S has $d_x\in\{1,2\}$ by Lemma P. Theorem S1'(b) covers $d_x=2$, and Theorem S1'(a) covers $d_x=1$ with no type-2 slot in $\mathcal B\cup\mathcal C$. The remaining case, $d_x=1$ with a type-2 slot in $\mathcal B\cup\mathcal C$, is Theorem S3 of Section 8.

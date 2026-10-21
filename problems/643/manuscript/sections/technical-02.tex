@@ -1,0 +1,176 @@
+\subsection*{2. The slot model and the $23/12$ bound}
+\addcontentsline{toc}{subsection}{2. The slot model and the 23/12 bound}
+\subsubsection*{2.1 Two facts about common links}
+\paragraph{F1.} If $H$ is avoiding, every $\CN(x,y)$ is intersecting.
+\begin{proof}
+If $P,Q\in\CN(x,y)$ were disjoint, the four triples
+\[
+ P\cup\{x\},\quad Q\cup\{y\},\quad Q\cup\{x\},\quad P\cup\{y\}
+\]
+would be distinct edges of $H$. The first two are disjoint, the last two are disjoint, and both unions are $P\cup Q\cup\{x,y\}$. This is the forbidden configuration.
+\end{proof}
+\paragraph{F2.} For every $3$-graph $H$, without an avoidance hypothesis,
+\[
+ \sum_{T\in H}\sigma(T)=|\partial H|,
+ \qquad \sum_{T\in H}\tau(T)=|\CL(H)|.
+\]
+\begin{proof}
+A pair $p\in\partial H$ lies in exactly $k_p$ triples and contributes $1/k_p$ to each. For $q=xy\in\CL(H)$, write $\CN(q)=\{P_1,\ldots,P_s\}$. The option $q$ occurs in each of the $2s$ distinct triples $P_i\cup\{x\}$ and $P_i\cup\{y\}$. Conversely, if $q$ is an option of $T$ through $P$, then $P\in\CN(q)$ and $T=P\cup(q\cap T)$. Since $q$ meets $T$ only in its opposite vertex, it cannot occur through two different pairs of $T$. Thus $q$ contributes $2s/(2s)=1$, and every option belongs to $\CL(H)$.
+\end{proof}
+Consequently, with $\Phi(H)=2|H|-|\partial H|-|\CL(H)|$,
+\[
+ \sum_{T\in H}c(T)=-\Phi(H).
+\]
+\subsubsection*{2.2 The slot lemmas}
+\paragraph{Lemma 1.} For every slot $v$ of $T$, its option $q_v$ satisfies $s_{q_v}=1+d(v)$.
+\begin{proof}
+Take $T=abc$ and $v=(z,A)$; the other groups follow by renaming. Then $q_v=az$ and $bc\in\CN(a,z)$. By F1 every member of $\CN(a,z)$ meets $bc$. Members through $b$, other than $bc$, are precisely $bu$ with $(u,C)$ adjacent to $(z,A)$ in $R_b$: indeed $abu,buz\in H$ is equivalent to $u\in C$, $u\ne z$ and the relation edge. Members through $c$, other than $bc$, similarly correspond to neighbours in $R_c$. Only $bc$ contains both $b$ and $c$. Therefore
+\[
+ s_{az}=1+d_{R_b}(v)+d_{R_c}(v).
+\]
+Avoidance is used here only to ensure that every common-link member meets $bc$.
+\end{proof}
+\paragraph{Lemma 2.} A slot with neighbours in both relations has exactly one neighbour in each, and those two slots represent the same vertex.
+\begin{proof}
+Again take $v=(z,A)$. If $(u,C)$ is an $R_b$-neighbour and $(u',B)$ is an $R_c$-neighbour, then $bu,cu'\in\CN(a,z)$. These pairs intersect by F1. Since $b\ne c$, $b\notin\{c,u'\}$ and $c\notin\{b,u\}$, necessarily $u=u'$. Every neighbour in either relation is therefore a slot of one fixed vertex, and a vertex has at most one slot in each group.
+\end{proof}
+Thus a type-2 slot has degree two, cost $1/6$, and common link $\{bc,bw,cw\}$, a triangle. A type-1 slot has a star common link, and an isolated slot has common-link size one and cost $1/2$. In particular,
+\[
+ \tau(T)=\sum_{v\text{ a slot of }T}\frac1{2(1+d(v))}.
+\]
+The exact equivalence between type-2 slots and triangle options is also proved in Lemma 1g(a), subdivision 4.1.
+\subsubsection*{2.3 The profile function}
+The six type-1 counts are denoted $ab,ac,bc,ba,ca,cb$: the first letter identifies the group and the second the apex of the relation. In expressions such as $ab$ in this subdivision, the symbol denotes a count, not the product of two variables or a vertex pair. Let $t_A,t_B,t_C$ count type-2 slots and put
+\[
+ n_A=ab+ac+t_A,\quad n_B=bc+ba+t_B,\quad
+ n_C=ca+cb+t_C,\quad t=t_A+t_B+t_C.
+\]
+For nonnegative integers $p,q,y$, define
+\[
+ S(p,q,y)=\begin{cases}\displaystyle\frac{p^2}{2(p+pq+y)},&p\geq1,\\[3pt]0,&p=0.\end{cases}
+\]
+Define
+\begin{align*}
+ \Phi_{\rm prof}={}&\frac1{1+n_A}+\frac1{1+n_B}+\frac1{1+n_C}+\frac t6+e_c+e_a+e_b,\\
+ e_c={}&S(ac,bc,t_B)+S(bc,ac,t_A),\\
+ e_a={}&S(ba,ca,t_C)+S(ca,ba,t_B),\\
+ e_b={}&S(cb,ab,t_A)+S(ab,cb,t_C).
+\end{align*}
+Feasibility (F) means
+\begin{align*}
+ ac+t_A\geq1&\iff bc+t_B\geq1,\\
+ ba+t_B\geq1&\iff ca+t_C\geq1,\\
+ cb+t_C\geq1&\iff ab+t_A\geq1.
+\end{align*}
+For the cyclic notation, let $(X_0,X_1,X_2)=(A,B,C)$ and $(\rho_0,\rho_1,\rho_2)=(R_c,R_a,R_b)$. The counts in $X_i$ for $\rho_i,\rho_{i-1}$ are $f_i,g_i$, respectively; all indices are modulo three. Thus
+\[
+ (f_0,g_0)=(ac,ab),\quad(f_1,g_1)=(ba,bc),\quad(f_2,g_2)=(cb,ca),\quad n_i=f_i+g_i+t_i.
+\]
+Then
+\[
+ \Phi_{\rm prof}=\sum_{i=0}^2\left[
+ \frac1{1+f_i+g_i+t_i}+\frac{t_i}{6}
+ +S(f_i,g_{i+1},t_{i+1})+S(g_{i+1},f_i,t_i)\right],
+\]
+and (F) is $f_i+t_i\geq1\iff g_{i+1}+t_{i+1}\geq1$ for each $i$. Both are invariant under cyclic shift.
+
+\paragraph{Lemma $3^+$.} Let $i_X$ count isolated slots of group $X$. The profile satisfies (F), and
+\[
+ \sigma(T)+\tau(T)\geq\Phi_{\rm prof}^+
+ :=\Phi_{\rm prof}+\sum_X\Delta_X,\qquad
+ \Delta_X=\frac1{1+n_X+i_X}+\frac{i_X}2-\frac1{1+n_X}\geq0.
+\]
+\begin{proof}
+For a relation $\rho$ joining groups $X,Y$, let $P,Q$ be their respective sets of type-1 slots in $\rho$, and let $S_Y$ be the type-2 slots of $Y$. Every neighbour of a slot in $P$ lies in $Q\cup S_Y$; each member of $S_Y$ has exactly one $\rho$-neighbour. Hence
+\[
+ \sum_{v\in P}d(v)\leq |P||Q|+|S_Y|,
+ \qquad
+ \sum_{v\in P}\frac1{2(1+d(v))}
+ \geq\frac{|P|^2}{2\sum_{v\in P}(1+d(v))}
+ \geq S(|P|,|Q|,|S_Y|),
+\]
+where the zero-size case is interpreted directly as zero. Summing the six choices of side and relation, and adding the type-2 and isolated costs, gives the stated inequality, since $k=1+n_X+i_X$ for the corresponding pair. The increment from inserting one isolated slot is nonnegative because $1/(1+m)+1/2\geq1/m$ for $m\geq1$. Finally, positive degree on either side of a relation requires positive degree on the other, proving (F).
+\end{proof}
+\paragraph{Lemma 3.} Every triple has a feasible profile and $\sigma(T)+\tau(T)\geq\Phi_{\rm prof}$. This follows from Lemma $3^+$.
+
+\subsubsection*{2.4 The profile lower bound}
+\paragraph{Theorem 2.} Every feasible nonnegative integer profile satisfies $\Phi_{\rm prof}\geq23/12$.
+
+We first record four elementary inequalities, with nonnegative integer arguments unless otherwise indicated.
+\begin{enumerate}
+\item[(E1)] For $p\geq1$,
+\[
+ S(p,q,y)\geq\frac{p}{2(1+q)}-\frac{y}{2(1+q)^2}.
+\]
+Indeed $2S=p/(1+q+y/p)$ and $1/(a+e)\geq1/a-e/a^2$ for $a>0,e\geq0$.
+\item[(E2)] $S(p,q,y)$ is nondecreasing in $p$ and nonincreasing in $q,y$. For positive $p$, the numerator determining its $p$-derivative is $p^2(1+q)+2py\geq0$; the extension at zero is consistent.
+\item[(E3)] For real $p,q\geq0$, put $r=(1+p)/(1+q)$. Then
+\[
+ \frac12\left(\frac p{1+q}+\frac q{1+p}\right)
+ =\frac12\left(r+\frac1r\right)-\frac12\left(\frac1{1+p}+\frac1{1+q}\right)
+ \geq1-\frac12\left(\frac1{1+p}+\frac1{1+q}\right).
+\]
+\item[(E4)] For a relation with type-1 counts $p,q\geq1$ and type-2 counts $x,y$ on the respective sides,
+\[
+ S(p,q,y)+S(q,p,x)\geq1-\frac12\left(\frac1{1+p}+\frac1{1+q}\right)
+ -\frac{y}{2(1+q)^2}-\frac{x}{2(1+p)^2}.
+\]
+This follows from (E1) and (E3).
+\end{enumerate}
+\begin{proof}[Proof of Theorem 2]
+Nonnegativity of the terms gives $\Phi_{\rm prof}\geq t/6$, so assume $t\leq11$. A relation is \emph{big} if both its type-1 counts are at least 23. If a non-big relation has one count $p\geq93$, its other count is $q\leq22$, and (E2) gives
+\[
+ \Phi_{\rm prof}\geq S(93,22,11)=\frac{8649}{4300}>\frac{23}{12},
+\]
+since $8649\cdot12=103788>98900=23\cdot4300$. Thus all counts in non-big relations may be bounded by 92. The smaller cutoff 92 would suffice only for the threshold $23/12$: $S(92,22,11)=4232/2127<2$, so the threshold-$2$ reduction in subdivision 4.3 retains cutoff 93.
+
+If at least two relations are big, each contributes at least $1-1/24-(x+y)/1152$ by (E4). Two relations share one group, so their four type-2 counts sum to at most $2t$. Consequently
+\[
+ \Phi_{\rm prof}\geq\frac t6+2-\frac1{12}-\frac{2t}{1152}\geq\frac{23}{12}.
+\]
+If no relation is big, all six type-1 counts are in $\{0,\ldots,92\}$ and $t\leq11$. This is precisely finite certificate C1, stated in subdivision 10.
+
+It remains to consider exactly one big relation, which by cyclic symmetry is $R_c$. Thus $ac,bc\geq23$ and $ab,ba,ca,cb\leq92$. Write
+\[
+ K=\frac1{1+n_A}+\frac1{1+n_B}+e_c,\qquad
+ G=\frac1{1+n_C}+\frac t6+e_a+e_b.
+\]
+Put $u=ab+t_A$, $v=ba+t_B$ and
+\[
+ \kappa(p;u,s)=\frac1{1+p+u}-\frac1{2(1+p)}-\frac{s}{2(1+p)^2},\qquad
+ \kappa^*(u,s)=\min\left(0,\inf_{p\in\mathbb Z,\,p\geq23}\kappa(p;u,s)\right).
+\]
+By (E4), with the $t_A$ discount belonging to the term $S(bc,ac,t_A)$,
+\[
+ K\geq1+\kappa(ac;u,t_A)+\kappa(bc;v,t_B),
+\]
+and hence
+\[
+ \Phi_{\rm prof}\geq1+G+\kappa^*(ab+t_A,t_A)+\kappa^*(ba+t_B,t_B).
+\]
+Certificate C2 proves that the last three terms sum to at least $11/12$ for every remaining profile satisfying (F) for $R_a,R_b$. The third relation is automatically feasible. These cases exhaust all profiles.
+\end{proof}
+For completeness, with $x=1+p$,
+\[
+ \kappa(p;u,s)=\frac{x^2-(u+s)x-su}{2x^2(x+u)}.
+\]
+The numerator is positive for
+\[
+ x>x_+:=\frac{u+s+\sqrt{(u+s)^2+4su}}2.
+\]
+In C2, $u\leq103,s\leq11$, so $x_+<160$. Every negative infimum is therefore attained in $23\leq p\leq160$; otherwise the minimum with zero is zero. This analytic cutoff is part of the certificate justification.
+
+\subsubsection*{2.5 The per-triple bound}
+\paragraph{Theorem 1.} Every triple of a finite avoiding $3$-graph satisfies $\sigma(T)+\tau(T)\geq23/12$. In particular every deficient triple has $\deficit(T)\leq1/12$.
+\begin{proof} Apply Lemma 3 and Theorem 2.\end{proof}
+An intermediate consequence, not used later, is
+\[
+ \frac{23}{12}|H|\leq|\partial H|+|\CL(H)|,
+\]
+and, writing $O(H)=\partial H\cup\CL(H)$,
+\[
+ |H|\leq\frac{12}{23}(|\partial H|+|\CL(H)|)
+ \leq\frac{24}{23}\max\{|\partial H|,|\CL(H)|\}
+ \leq\frac{24}{23}|O(H)|\leq\frac{24}{23}\binom n2.
+\]
+This follows by summing Theorem 1 and using F2.

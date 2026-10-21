@@ -1,0 +1,29 @@
+\subsection*{9. Exhaustive case tree and conclusion}
+\addcontentsline{toc}{subsection}{9. Exhaustive case tree and conclusion}
+\subsubsection*{9.1 The anchor condition in every case}
+In Setting S, $d_x\in\{1,2\}$ by Lemma P. Theorem S1'(b) of subdivision 7 covers $d_x=2$. If $d_x=1$ and $\mathcal B\cup\mathcal C$ has no type-2 slot, Theorem S1'(a) applies. If $d_x=1$ and it does have a type-2 slot, Theorem S3 of subdivision 8 applies. Hence in all cases
+\[
+ c(A)-\act(A)D>\frac1{k_{uw}},\qquad \frac{c(A)}{\act(A)}>D,
+\]
+since $B_q$ is active, contains $A$, and therefore $\act(A)\geq1$. In particular G3h' holds.
+\subsubsection*{9.2 Coverage and dependency audit}
+The case tree for every triple $T$ is as follows.
+\begin{enumerate}
+\item If $c(T)\geq0$, Lemma D gives nonnegative final charge. Donors finish at zero; other such triples keep their charge and receive nothing.
+\item If $T$ is deficient, G1 gives one triangle option and thus one active bicone, and makes $T$ exactly-one-light. Theorem 1 of subdivision 2 bounds its deficit by $1/12$.
+\item At its apex $x$, Lemma P gives $1\leq d_x\leq2$ and a nondeficient anchor. A both-light anchor is covered by Lemma Q and supplies at least $1/6$ with activity one. A both-heavy anchor is covered by the three exhaustive branches of subdivision 9.1. In its one-deficient-triple branch with additional type-2 slots, the internal alternatives are $m=0$, $m=1$, and $m\geq2$. Lemma N excludes the mutual-partner configuration. The anchor group $\mathcal A$ has only the type-2 slot $y$, so
+\[
+ t_2(A)=1+m+m',\qquad \act(A)=1+\alpha_u+\alpha_w,\qquad
+ \alpha_u\leq[m=1],\quad\alpha_w\leq[m'=1].
+\]
+The activity statements use Lemma S8, which uses G1 at every deficient triple of $H$, not only the two at the chosen apex.
+\item Theorem C' adds the contributions of the distinct apex anchors. The resulting pot covers all deficits, and proportional redistribution gives $T$ at least its deficit.
+\end{enumerate}
+Apexes with $d_x=0$ need no contribution. The dependencies are acyclic: subdivisions 7--8 use the slot results and G1; Theorem C' uses those conclusions and the both-light estimate, but none of them uses Theorem C'.
+\subsubsection*{9.3 Proof of the main theorem}
+Let $H$ be a finite avoiding $3$-graph. G1 holds at every deficient triple by subdivision 4, and G3h' holds for every relevant both-heavy anchor by subdivision 9.1. Theorem C' leaves every triple with nonnegative final charge. Conservation and the charge identity yield
+\[
+ 0\leq\sum_{T\in H}\operatorname{final}(T)
+ =\sum_{T\in H}c(T)=|\partial H|+|\CL(H)|-2|H|.
+\]
+This is the main inequality. Each of $\partial H,\CL(H)$ lies in $\binom V2$, so $|H|\leq\binom{|V|}{2}$. The written deduction depends on the exact finite statements in subdivision 10 and on the local anchor estimates. Its exact conclusion is now Lean-verified; see the formal verification ledger.

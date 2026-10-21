@@ -1,0 +1,2 @@
+def Erdos643R3.PwCheck.bb : Nat := 0
+unsafe def Erdos643R3.PwCheck.bb._unsafe_rec : Nat := 1

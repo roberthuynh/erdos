@@ -1,0 +1,40 @@
+\subsection*{6. The anchor condition and the global conclusion}
+\addcontentsline{toc}{subsection}{6. The anchor condition and the global conclusion}
+\subsubsection*{6.2 The condition G3h' and Theorem C'}
+The per-apex condition G3h' is the following statement: if apex $x$ of an active bicone $B_q$ has $d_x\geq1$ and its anchor $A_x$ is both-heavy, then
+\[
+ \frac{c(A_x)}{\act(A_x)}\geq
+       \sum_{T\in D_q,\ x\in T}\deficit(T).
+\]
+The denominator counts every active bicone containing the anchor; it is not assumed to equal one.
+
+\paragraph{Theorem C'.} Suppose $H$ is avoiding, G1 holds at every deficient triple, and G3h' holds. Then Rule $2'$ leaves every triple with nonnegative final charge. Consequently $\Phi(H)\leq0$.
+\begin{proof}
+By Lemma D, it suffices to consider deficient triples. G1(i) gives each such triple $T$ a unique triangle option $q$, hence a unique bicone $B_q$, which is active because it contains $T$. It receives only from this bicone. By G1(ii), it is exactly-one-light at its apex.
+
+Fix an apex $x$ of $B_q$ with $d_x\geq1$. Every deficient triple there is exactly-one-light. Lemma P then gives exactly two exactly-one-light triples, so $d_x\leq2$ and the anchor $A_x$ exists. The anchor is not deficient: otherwise G1(i) would make $q$ its unique triangle option and G1(ii) would make it exactly-one-light, contrary to its definition. Thus the deficient triples at $x$ are among the other two triples and their deficit sum is the quantity $D$ used in Setting S below.
+
+If the anchor is both-light, label it $A_x=x+uw$ with $xu,xw$ light and $xv$ heavy. The deficient triples at $x$ lie among $x+uv,x+vw$. If $x+uv$ is deficient, G1(iii) gives $s_{vw}=2$, so $a=2$ in Lemma Q. If $x+vw$ is deficient, its mirror gives $s_{uv}=2$, so $b=2$. At least one applies. Lemma Q therefore gives $c(A_x)\geq1/6$ and exactly one triangle option, whence $\act(A_x)=1$. By subdivision 2, every deficit is at most $1/12$, and hence
+\[
+ \frac{c(A_x)}{\act(A_x)}\geq\frac16\geq\frac{d_x}{12}
+ \geq\sum_{T\in D_q,\ x\in T}\deficit(T).
+\]
+If the anchor is both-heavy, the same final inequality is G3h'. In either case its right side is positive and $\act(A_x)\geq1$, so $c(A_x)>0$ and the anchor is a donor.
+
+If both apexes have positive deficit, their anchors are distinct: each contains its own apex but not the other. Only apexes with positive deficit need an anchor contribution. Other donors contribute nonnegative amounts, and each deficient bicone member contains exactly one apex. Consequently
+\begin{align*}
+ \operatorname{pot}(q)
+ &\geq\sum_{x:\,d_x\geq1}\frac{c(A_x)}{\act(A_x)}\\
+ &\geq\sum_x\sum_{T\in D_q,\ x\in T}\deficit(T)
+ =\sum_{S\in D_q}\deficit(S).
+\end{align*}
+The proportional split gives every $T\in D_q$ at least its own deficit. Its final charge is nonnegative. Finally conservation and F2 give
+\[
+ 0\leq\sum_{T\in H}\operatorname{final}(T)=\sum_{T\in H}c(T)=-\Phi(H).
+\]
+\end{proof}
+G3h' is a sufficient per-apex condition for a bicone pot to cover its total deficit. Subdivisions 7 and 8 prove, for each both-heavy anchor in Setting S, the stronger inequality
+\[
+ c(A)-\act(A)D>\frac1{k_{uw}}>0.
+\]
+Since $\act(A)\geq1$, this implies G3h'. Neither that estimate nor G1 uses Theorem C', so there is no circular dependence.

@@ -1,0 +1,7 @@
+MODULES 1 SpoofPwCheck
+KINDS constants=2 theorems=0 defs=2 inductives=0 ctors=0 recursors=0 axioms=0 opaques=0 quot=0
+FLAG Erdos643R3.PwCheck.bb._unsafe_rec unsafe-or-partial-def (SpoofPwCheck)
+FLAG Erdos643R3.PwCheck.bb._unsafe_rec unsafe (SpoofPwCheck)
+UNION_AXIOMS []
+DECL Erdos643R3.PwCheck.bb._unsafe_rec module=SpoofPwCheck axioms=[]
+HYGIENE fail

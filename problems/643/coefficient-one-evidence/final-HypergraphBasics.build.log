@@ -1,0 +1,24 @@
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/HypergraphBasics.lean:43:0: warning: automatically included section variable(s) unused in theorem `Erdos643.HypergraphBasics.uniform_nonempty`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/HypergraphBasics.lean:47:0: warning: automatically included section variable(s) unused in theorem `Erdos643.HypergraphBasics.disjoint_ne_of_uniform`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/HypergraphBasics.lean:99:19: warning: Variable name `hxP` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hxP
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+<PROOF_PACKAGE>/.verified-final/.sources/Openmath/Erdos643R3/HypergraphBasics.lean:100:19: warning: Variable name `hyQ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hyQ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

@@ -1,38 +1,52 @@
-# Verification of the stated #643 result
+# Verification boundaries
 
-[Overview](README.md) · [Result index](RESULTS.md) · [Sources](SOURCES.md)
+## Current coefficient-one verification
 
-On 16 October 2026, the portable package completed the collection’s full verification gate at its release paths: all 12 configured modules built, the exact types and axiom closures of 607 local environment declarations matched their frozen registry, the main theorem’s official checker reported `RESULT: PASS`, and all 12 modules passed kernel replay. The module count includes 11 proof sources and the aggregate `Openmath` root. Declaration counts include definitions, supporting results and compiler-generated constants; they are not a count of independent discoveries.
+The finite coefficient-one inequality, t=3 asymptotic consequences, general Hanani design existence and residue-class equality consequences have complete Lean verification. The [combined proof package](coefficient-one-design/README.md) supplies the exact sources and checker; the [unchanged complete receipt and public log displays](coefficient-one-evidence/README.md) identify the actual exported-source run. All 126 mathematical sources passed fresh builds, source and environment checks, independent kernel replay in 126 bounded chunks, and 23 named declaration/defining-module/axiom probes. The only admitted axioms are `propext`, `Classical.choice` and `Quot.sound`. Human mathematical review remains outstanding.
 
-The run completed through bounded continuations after aggregate timeouts. Successful commands were retained only when their exact command, relevant source/pin/checker identities and log hashes matched. Builds depend on the frozen mathematical source and pins; audits and replays also depend on their verifier scripts. An auxiliary timeout-reporting correction required affected checker phases to run again. The timed-out attempts were UNKNOWN, not PASS. Each Lean command was limited to 240 seconds. Pinned dependency caches were reused; this was not a cold online dependency-fetch test. The [verification summary](verification-summary.json) records final counts, identities and log digests.
+The exact new design endpoints are [`Erdos643Design.HananiExistence.exists_design`](coefficient-one-design/Openmath/Erdos643Design/HananiExistence.lean), [`Erdos643R3.CoefficientOneHanani.extremal_eq`](coefficient-one-design/Openmath/Erdos643R3/CoefficientOneHanani.lean) and [`Erdos643R3.CoefficientOneFullSolution.forcing_eq`](coefficient-one-design/Openmath/Erdos643R3/CoefficientOneFullSolution.lean). They cover every natural order n≡1 or5 (mod20), including n=1. Their full dependency closure, builds, kernel replays and axiom probes are included in the unchanged complete receipt.
 
-The proof sources contain no `sorry`, `native_decide` or custom axiom declaration. Only `propext`, `Classical.choice` and `Quot.sound` occur in the audited axiom closures. The release checker fails if the Lean build or axiom probe fails, if the requested report is missing, or if an unexpected axiom appears. Regression controls exercise these failures. The old auxiliary linter-option diagnostic has been removed; it is not ignored in this gate.
+## Historical and supporting evidence
 
-## Exact theorem and scope
+The records below describe the earlier supporting export. Its conditional endpoint alone assumes recovery; the new coefficient-one proof discharges recovery through the actual structural and anchor theorems.
 
-The main declaration is `Erdos643.FinalBound.card_le_floor_four_thirds` in [FinalBound](Openmath/Erdos643/FinalBound.lean). Its full hypotheses and interpretation appear in the [result index](RESULTS.md).
+## Separate claims and artifacts
 
-Fresh-context AI reviewers separately inspected the statement, mathematical exposition, attribution and evidence claims. Their reading scopes are limited: they did not each read every source module. These reviews are not human mathematical review or novelty clearance. Kernel replay checks formal correctness; it does not establish that the result is new or that every informal explanation is correct.
+| Claim | Available material | Limit |
+|---|---|---|
+| Historical 4/3 finite-family theorem | [Formal source](Openmath/Erdos643/FinalBound.lean), [source identity](source-identity.json), [historical summary](verification-summary.json) | These sources and the dated summary describe the earlier theorem only. The summary's PASS is not a fresh standalone rebuild or a coefficient-one receipt. |
+| Historical 9/8 | `Erdos643R3.WeightingBound.card_le_nine_eighths_choose`; [receipt](formal-evidence/receipts/WeightingBound_card_le_nine_eighths_choose.log) | Reused official PASS for original source SHA `ceb807e36820a80b6eb67e4199f7968306946a35f0a7b85a92230660c08a55c6`; no fresh export-byte verification inferred. |
+| Historical local 23/12 and global 24/23 | `Erdos643R3.Pw2312Main.per_triple` and `.card_le_choose`; [receipt ledger](formal-evidence/receipt-ledger.json) | Reused official PASS for original Pw2312 source SHA `9f50b40348bc328e104c73f03fc372ee34424d222f19f0ce21004f7510accb6e`. Not coefficient one. |
+| Full coefficient one | [SOLUTION](SOLUTION.md), [expanded steps](EXPANDED-STEPS.md), [manuscript](manuscript/main.tex) | Verified exact coefficient-one, shadow/co-link and asymptotic declarations in the separate proof package; the historical entries below retain their original scope. |
+| Finite computations | [Sources and commands](computations/README.md), [outputs](computations/results/summary.json), [semantic identities](computations/results/semantic-hashes.json) | Six finite checks replayed on the recorded platform; not a proof of host reductions or universal analytic inequalities. |
+| Bounded arithmetic controls | [Independent formulas](computations/independent_audit.py) and [output](computations/results/independent_audit.json); [pruning controls](computations/pruning_controls.py) and [output](computations/results/pruning_controls.json) | Small-domain formula/mask/pruning comparisons and complete corrected W box. Not independent full-domain profile replay or human proof review. |
 
-## Reproduce
+## Corrected export checks
 
-Replace `<COLLECTION_CHECKOUT>` with the absolute path of a clone. From a fresh terminal:
+An earlier comment-removal transformation mishandled nested Lean comments, leaving malformed FCBridge text. A balanced-comment transformation repaired that file and changed Identity in the 24/23 dependency closure. The old run was withdrawn as evidence for the repaired files. Historical source receipts retain their original scope.
 
-```bash
-cd <COLLECTION_CHECKOUT>
-python3 scripts/check.py --problem 643 --mode docs
-python3 scripts/check.py --problem 643 --mode full
-```
+After repair, the official check of `Erdos643R3.Pw2312Main.card_le_choose` completed with RESULT: PASS, zero sorry/native_decide and only propext/Classical.choice/Quot.sound. The [receipt](formal-evidence/receipts-export/Pw2312_card_le_choose.log) SHA-256 is `9d1a03ec67e7b262e1aa708adfdab14e628f8821f2e089b4f802af7616cf3eab`; the theorem file SHA-256 is `333beea4c2e9faec74dcfbe5f5716de64ccccea45278562dd356c3b5e3bf35d1`. The final ledger's `export_checks` binds all 13 compiled module hashes, including repaired Identity `b4e523e15dbd28fbcc7847f2c0ba154bf2f482cddf093e2d79c6573deecf9011`. The log text alone does not distinguish dependency versions, so the complete closure record is necessary.
 
-Docs mode checks local links and the frozen source and artifact hashes. Full mode additionally runs the failure controls, builds the complete dependency closure, compares every registered type and axiom closure, runs the main-theorem oracle and replays every configured module. Look for `643 full: PASS`; a timeout remains UNKNOWN. Keep the receipt and command logs. The collection’s CI uses these same registered checks; hosted CI results are recorded on the release pull request, separately from these local verification receipts.
+The seven remaining modules also compiled successfully in the same build directory. Their [compilation log](formal-evidence/receipts-export/all20-extra-build.log) has SHA-256 `b06749d12dcbe7d87e4f65536b6ab9399412972626a2f4b8160b84d3fcb7f8ff`; the ledger’s `export_build` binds all 20 final module hashes. This records compilation of the entire exported source set, plus the official 24/23 endpoint check. A separate [isolated standalone Lake build](formal-evidence/receipts-export/lake-all20.log) of all 20 final modules also passed: 8,726 jobs, exit 0, using exact exported configuration and the verified pinned package cache. The ledger’s `standalone_lake_build` binds the source hashes. The separate phased hardened result below adds further supporting-package checks; neither result establishes coefficient-one verification.
 
-The package pins Lean `leanprover/lean4:v4.33.1`, mathlib `0df444a360eaa60ab8c11dca51a86af692955474` and formal-conjectures `137aec5c7abd3aa61f7a73138a97279acfc79e93`. A cold machine may need dependency downloads and multiple bounded build attempts. No network install success is claimed here.
+## Exact historical receipt scope
 
-For the headline alone:
+The [ledger](formal-evidence/receipt-ledger.json) lists all 48 supporting declaration receipts, one separate 9/8 receipt and one predicate-bridge receipt, including original source hash, exported source hash, exact declaration and log hash. All 50 historical official logs contain RESULT: PASS with zero sorry and only propext/Classical.choice/Quot.sound. The predicate bridge remains limited to the definitions present in that source; its PASS does not establish fidelity to imported current upstream definitions. The [source manifest](formal-evidence/source-manifest.json) covers 20 exported modules; the ledger also identifies the 13-module 24/23 import closure. These are reused official records, not 50 new checker executions.
 
-```bash
-cd <COLLECTION_CHECKOUT>/problems/643
-timeout 240 bash check.sh Openmath/Erdos643/FinalBound.lean Erdos643.FinalBound.card_le_floor_four_thirds
-```
+[Transformations](formal-evidence/source-transformations.json) distinguish byte-identical modules from copies with an introductory documentation block removed. Historical PASS applies to its recorded original source identity, not automatically to changed export bytes. Fresh standalone source/build, strengthened-checker and dependency outcomes must be recorded separately before claiming those broader gates passed. The corrected endpoint run above is distinct from the superseded run and the historical receipts. Arithmetic helper modules are not a formalization of the complete G1/anchor argument merely because of their names.
 
-Look for `RESULT: PASS`. This single oracle is not the complete-package gate. The [module inventory](scripts/proof-modules.json), [declaration registry](scripts/headline-theorems.json) and [source identities](source-identity.json) bind the verified package. Changes to a proof, dependency pin or checker require renewed applicable checks.
+The [formal evidence guide](formal-evidence/README.md) distinguishes these historical records and the supplied standalone/check-clean tools. The standalone result is recorded separately above; tool presence alone is not a strengthened-checker result. The [sealed phased receipt](formal-evidence/receipts-export/hardened-phased/receipt.json), SHA-256 `fcf1075e550dfc295b5afa3aa810a22dbfd1a4a273f0d35b789f4d365b0bac36`, separately records the completed supporting-package checks described below.
+
+## Historical supporting-package gates
+
+| Gate | Actual disposition |
+|---|---|
+| B1: portable standalone project | The final 20-source isolated Lake build passed (8,726 jobs, exit 0), with exact exported configuration and the separately verified pinned package cache. [Receipt](formal-evidence/receipts-export/lake-all20.log) SHA-256 `ee233a8261db6635e5e53d7dc414e2074c6086eecf96fde6565cafff533be0fc`; no fresh dependency download is claimed. |
+| B2: separate hardened checker | The sealed phased check passed for the exact 20-module export: 20 fresh builds, source scan, pin checks, hygiene of 50 declarations, 50 independent axiom probes with agreement, two unsafe negative controls including an exact-name spoof, and kernel replay of all 20 modules plus the aggregate in three disjoint chunks. A separate whole-replay repeat timed out at 240 seconds and remains UNKNOWN. This is not one `check-clean.sh` invocation or 50 fresh official `check.sh` runs, and it does not replace the official oracle. |
+| B3: actual upstream bridge | The [isolated actual-import bridge](formal-evidence/upstream-bridge/README.md) uses three exact upstream source files at commit `95b199bfbc08f7b1183196bab59ed3b08f27c2c9`. Direct Lean build, four allowed-axiom probes and kernel replay passed. It proves predicate/uniformity equivalence and transfers 24/23 to the upstream extremal and forcing expressions. The separate [isolated Lake build](formal-evidence/upstream-bridge/receipts/lake-actual-bridge.log) also passed (8,724 jobs, exit 0), using exact exported configuration and the verified pinned package cache, without fresh dependency download. This historical bridge verifies only 24/23; the current coefficient-one package is checked separately. |
+| B4: dependency trust | The phased receipt records fresh checks of 14,928 toolchain files and 26,080 package data files against supplied pin manifests, plus the bounded kernel replays above. These historical checks authenticate the recorded installed artifacts against those manifests. They do not establish coefficient one; its complete verification is recorded above. Dependency provenance remains a separate trust consideration. |
+| B5: namespace separation | Supporting sources are isolated under a separate source/library tree. This avoids silently merging competing modules; no joint-tree compatibility test is claimed. |
+
+For every claimed endpoint require exact source/declaration, current source hashes, actual official results, no sorry/native_decide, only propext/Classical.choice/Quot.sound, complete affected dependency/kernel checks, and exact-statement acceptance. Statement fidelity must retain the four distinct original edges, both disjointness conditions, equal union, quantifiers and small-order conventions. The historical FCBridge record reconstructs definitions. The separate [actual-import receipt](formal-evidence/upstream-bridge/receipts/actual-bridge-check.log), SHA-256 `53d6ab19c7f2e955f24bdba41136e4d8c9b993a355ba396d9aa2993b03ccf83e`, records the newer isolated upstream bridge described above; its [manifest](formal-evidence/upstream-bridge/source-manifest.json) pins the imported sources. This establishes the stated 24/23 specialization, not the full coefficient-one target.
+
+The [evidence ledger](EVIDENCE-LEDGER.md) links inspectable artifacts and marks missing material. Timeout is UNKNOWN. Packaging checks, documentation, helper/conditional PASS, compiled TeX and layout inspection do not verify the main theorem. Formal verification does not establish novelty or constitute human mathematical review.
