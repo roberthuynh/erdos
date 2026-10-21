@@ -1,6 +1,6 @@
 # Erdős Problem 643
 
-[Collection](../../README.md) · [Results](RESULTS.md) · [Proof](SOLUTION.md) · [Evidence](EVIDENCE-LEDGER.md)
+[Collection](../../README.md) · [Results](RESULTS.md) · [Proof](SOLUTION.md) · [Evidence](VERIFICATION.md) · [Manuscript](manuscript/main.pdf)
 
 ## The problem
 

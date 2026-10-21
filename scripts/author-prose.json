@@ -1,11 +1,18 @@
 {
   "blocks": [
     {
-      "end": "\n## How this was made",
+      "end": "\n# Erd\u0151s #643: the sharp bound for triple systems",
       "label": "intro",
       "path": "README.md",
-      "sha256": "5178f472ae224353434f1033464b2f34feb096dcc7d37e1ced5578df2419892a",
+      "sha256": "c42077d20e3d5b85aa9a916824cbd3adf105fb8f4eb86e3c80cf1f2ab4a8c146",
       "start": "Hi, I'm Robert Huynh"
+    },
+    {
+      "end": "\n## How this was made",
+      "label": "643 result introduction",
+      "path": "README.md",
+      "sha256": "d8da1805685acca73d97faac75bfc58969f40567838746969e4fba2565aa44f2",
+      "start": "# Erd\u0151s #643: the sharp bound for triple systems\n"
     },
     {
       "end": "\n## AI use",
