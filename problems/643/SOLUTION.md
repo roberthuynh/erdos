@@ -7,7 +7,7 @@ Robert Huynh
 ## Abstract
 
 We present a computer-assisted proof that every finite $3$-uniform hypergraph $H$ with no four distinct edges $A,B,C,D$ satisfying $A\cap B=C\cap D=\varnothing$ and $A\cup B=C\cup D$ obeys
-$2\vert H\vert \leq \vert \partial H\vert +\vert \operatorname{CL}(H)\vert$. Here $\partial H$ is its two-shadow and $\operatorname{CL}(H)$ consists of pairs of vertices having a nonempty common link. The inequality implies $\vert H\vert \leq\binom n2$ on $n$ vertices and, together with the classical star-plus-matching construction, the coefficient-$1$ asymptotic bound that answers the $t=3$ case of the asymptotic question of Erdős problem 643. The argument uses a fractional pair count, a structural description of negatively charged triples, and proportional redistribution through six-edge bicones. Its finite rational inequalities and their analytic reductions are stated explicitly. The main inequality, its finite and asymptotic consequences, and the classical design construction giving exact values at admissible orders have complete Lean verification with independent exact-source acceptance. AI systems developed and checked the proof and formalization; no human mathematical review has been completed. No new theorem for $t\geq4$ or classification of equality cases is asserted.
+$2\vert H\vert \leq \vert \partial H\vert +\vert \mathrm{CL}(H)\vert$. Here $\partial H$ is its two-shadow and $\mathrm{CL}(H)$ consists of pairs of vertices having a nonempty common link. The inequality implies $\vert H\vert \leq\binom n2$ on $n$ vertices and, together with the classical star-plus-matching construction, the coefficient-$1$ asymptotic bound that answers the $t=3$ case of the asymptotic question of Erdős problem 643. The argument uses a fractional pair count, a structural description of negatively charged triples, and proportional redistribution through six-edge bicones. Its finite rational inequalities and their analytic reductions are stated explicitly. The main inequality, its finite and asymptotic consequences, and the classical design construction giving exact values at admissible orders have complete Lean verification with independent exact-source acceptance. AI systems developed and checked the proof and formalization; no human mathematical review has been completed. No new theorem for $t\geq4$ or classification of equality cases is asserted.
 
 **Verification and review.** The exact main theorem and its source-stated corollaries have accepted complete Lean verification in the isolated proof project. The expanded supplementary source package passed its complete 126-module check, including general classical five-block design existence and exact extremal and forcing values at every admissible order. This formalizes a known construction; it is not a claim of new design-existence mathematics.
 
@@ -33,31 +33,31 @@ All edges in this condition are edges of the original host. There is no replacem
 For every finite avoiding $3$-graph $H$,
 
 $$
-2|H|\leq |\partial H|+|\operatorname{CL}(H)|.
+2|H|\leq |\partial H|+|\mathrm{CL}(H)|.
 $$
 
 In particular, if $\vert V\vert =n$, then $\vert H\vert \leq\binom n2$.
 
 The definitions of both pair sets appear below; each is a subset of $\binom V2$, even when they overlap. Consequently the final implication in the theorem divides the sum of two bounds $\binom n2$ by two. It does not require the pair sets to be disjoint.
 
-Let $\operatorname{ex}_3(n)$ be the maximum size of an avoiding $3$-graph on a fixed $n$-vertex set. Let $f(n;3)$ be the least integer edge threshold forcing the forbidden configuration. With this convention,
+Let $\mathrm{ex}_3(n)$ be the maximum size of an avoiding $3$-graph on a fixed $n$-vertex set. Let $f(n;3)$ be the least integer edge threshold forcing the forbidden configuration. With this convention,
 
 $$
-f(n;3)=\operatorname{ex}_3(n)+1.
+f(n;3)=\mathrm{ex}_3(n)+1.
 $$
 
 A threshold exceeding the total number of triples is understood vacuously. In particular, one must not identify the extremal maximum with the forcing threshold.
 
 **Corollary: Consequences of the [main theorem](#the-problem-and-result).**
 
-For all $n\geq0$, $\operatorname{ex}_3(n)\leq\binom n2$ and $f(n;3)\leq\binom n2+1$. For $n\geq1$, the classical star-plus-matching lower bound, cited rather than reproved here, gives
+For all $n\geq0$, $\mathrm{ex}_3(n)\leq\binom n2$ and $f(n;3)\leq\binom n2+1$. For $n\geq1$, the classical star-plus-matching lower bound, cited rather than reproved here, gives
 
 $$
 \binom{n-1}{2}+\left\lfloor\frac{n-1}{3}\right\rfloor
- \leq\operatorname{ex}_3(n)\leq\binom n2.
+ \leq\mathrm{ex}_3(n)\leq\binom n2.
 $$
 
-Thus $\operatorname{ex}_3(n)=(1+o(1))\binom n2$ and $f(n;3)=(1+o(1))\binom n2$ as $n\to\infty$.
+Thus $\mathrm{ex}_3(n)=(1+o(1))\binom n2$ and $f(n;3)=(1+o(1))\binom n2$ as $n\to\infty$.
 
 For $n=0,1,2$, there are no triples and [the main inequality](#the-problem-and-result) reads $0\leq0$; no positive codegree denominator is evaluated. The extremal statement for $n=0$ is separate from the displayed lower construction, which requires a distinguished vertex. More generally all denominators in the proof occur only at nonempty links, actual options, donors, or active bicones, as specified below.
 
@@ -76,18 +76,18 @@ $$
 For distinct vertices $x,y$, define
 
 $$
-\operatorname{CN}(x,y)=\{P\in\tbinom V2:P\cap\{x,y\}=\varnothing,
+\mathrm{CN}(x,y)=\{P\in\tbinom V2:P\cap\{x,y\}=\varnothing,
        \ P\cup\{x\},P\cup\{y\}\in H\},
-\quad s_{xy}=|\operatorname{CN}(x,y)|,
+\quad s_{xy}=|\mathrm{CN}(x,y)|,
 $$
 
 $$
-\operatorname{CL}(H)=\{\{x,y\}\in\tbinom V2:s_{xy}>0\}.
+\mathrm{CL}(H)=\{\{x,y\}\in\tbinom V2:s_{xy}>0\}.
 $$
 
 Pairs such as $xy$ are unordered sets. Expressions such as $x+uv$ mean $\{x,u,v\}$, with the distinctness imposed by being an edge.
 
-For $T\in H$, a pair $P\subset T$ has a unique opposite vertex $a_P\in T\setminus P$. Its *options* through $P$ are $q=\{a_P,z\}$ for $z\in L(P)\setminus\{a_P\}$. Every such option meets $T$ exactly in $a_P$ and has $P\in\operatorname{CN}(q)$, so $s_q\geq1$. Distinct pairs of $T$ cannot yield the same option. Set
+For $T\in H$, a pair $P\subset T$ has a unique opposite vertex $a_P\in T\setminus P$. Its *options* through $P$ are $q=\{a_P,z\}$ for $z\in L(P)\setminus\{a_P\}$. Every such option meets $T$ exactly in $a_P$ and has $P\in\mathrm{CN}(q)$, so $s_q\geq1$. Distinct pairs of $T$ cannot yield the same option. Set
 
 $$
 \sigma(T)=\sum_{P\in\binom T2}\frac1{k_P},\qquad
@@ -95,27 +95,27 @@ $$
  c(T)=\sigma(T)+\tau(T)-2.
 $$
 
-Call $T$ deficient if $c(T)<0$ and then put $\operatorname{def}(T)=-c(T)>0$. The exact identities, proved in detail in the appendix, are
+Call $T$ deficient if $c(T)<0$ and then put $\mathrm{def}(T)=-c(T)>0$. The exact identities, proved in detail in the appendix, are
 
 $$
 \sum_{T\in H}\sigma(T)=|\partial H|,\quad
- \sum_{T\in H}\tau(T)=|\operatorname{CL}(H)|,\quad
- \sum_{T\in H}c(T)=|\partial H|+|\operatorname{CL}(H)|-2|H|.
+ \sum_{T\in H}\tau(T)=|\mathrm{CL}(H)|,\quad
+ \sum_{T\in H}c(T)=|\partial H|+|\mathrm{CL}(H)|-2|H|.
 $$
 
 For the second identity an option $q$ belongs to exactly $2s_q$ distinct triples, not merely at most that many. This exact multiplicity is essential.
 
 **Slots.**
-Fix $T=abc$. Its groups are $A=L(bc)\setminus\{a\}$, $B=L(ca)\setminus\{b\}$ and $C=L(ab)\setminus\{c\}$. A slot is $(z,X)$ with $z\in X$: a vertex belonging to two groups has two distinct slots. Relations $R_b$ between $C,A$, $R_c$ between $A,B$, and $R_a$ between $B,C$ are defined by the triples $bxz$, $czy$, and $ayx$, respectively, with unequal slot vertices. A slot is isolated if it has no relation neighbour, type 1 if its neighbours lie in just one relation, and type 2 if they lie in both. Write $d(s)$ for its total relation degree and $\operatorname{cost}(s)=1/(2(1+d(s)))$. Avoidance forces every common link to be intersecting and every type 2 slot to have one neighbour in each relation, represented by the same vertex.
+Fix $T=abc$. Its groups are $A=L(bc)\setminus\{a\}$, $B=L(ca)\setminus\{b\}$ and $C=L(ab)\setminus\{c\}$. A slot is $(z,X)$ with $z\in X$: a vertex belonging to two groups has two distinct slots. Relations $R_b$ between $C,A$, $R_c$ between $A,B$, and $R_a$ between $B,C$ are defined by the triples $bxz$, $czy$, and $ayx$, respectively, with unequal slot vertices. A slot is isolated if it has no relation neighbour, type 1 if its neighbours lie in just one relation, and type 2 if they lie in both. Write $d(s)$ for its total relation degree and $\mathrm{cost}(s)=1/(2(1+d(s)))$. Avoidance forces every common link to be intersecting and every type 2 slot to have one neighbour in each relation, represented by the same vertex.
 
 **Bicones.**
-A common link is triangular when $\operatorname{CN}(x,y)=\{uv,vw,uw\}$ for distinct $u,v,w$. Its bicone $B_q$, $q=xy$, consists of the six triples $x+uv,x+vw,x+uw,y+uv,y+vw,y+uw$. The vertices $x,y$ are its apexes. A triple belongs to $B_q$ precisely when $q$ is one of its triangle options. Write $t_2(T)$ for the number of these options.
-An apex-base pair is light if its codegree is two, heavy otherwise. A triple is exactly-one-light if exactly one of its two apex-base pairs is light. An apex with two such triples has a third triple, its anchor. The anchor is both-light or both-heavy. A bicone is active if it contains a deficient triple; $D_q$ is the set of those triples, $d_x$ counts them at apex $x$, and $\operatorname{act}(T)$ counts active bicones containing $T$.
+A common link is triangular when $\mathrm{CN}(x,y)=\{uv,vw,uw\}$ for distinct $u,v,w$. Its bicone $B_q$, $q=xy$, consists of the six triples $x+uv,x+vw,x+uw,y+uv,y+vw,y+uw$. The vertices $x,y$ are its apexes. A triple belongs to $B_q$ precisely when $q$ is one of its triangle options. Write $t_2(T)$ for the number of these options.
+An apex-base pair is light if its codegree is two, heavy otherwise. A triple is exactly-one-light if exactly one of its two apex-base pairs is light. An apex with two such triples has a third triple, its anchor. The anchor is both-light or both-heavy. A bicone is active if it contains a deficient triple; $D_q$ is the set of those triples, $d_x$ counts them at apex $x$, and $\mathrm{act}(T)$ counts active bicones containing $T$.
 
 ## Proof architecture and the final implication
 
 **Notation dictionary.**
-The host quantities $k_p,s_q,\sigma,\tau,c$ and $\Phi=2\vert H\vert -\vert \partial H\vert -\vert \operatorname{CL}(H)\vert$ are fixed throughout. The unadorned groups $A,B,C$ are slots around a generic triple; $\mathcal A,\mathcal B,\mathcal C$ are slots around the anchor in setting S. In that setting $S_i=c(T_i)+13/12$, $D$ is the total deficit at the chosen apex, and $U,W$ collect the two sides of the anchor charge. The counts $j,d,e,r,k$ are defined in subdivisions 7.3 and 7.7; $m,m',n_B,n_C$ and $X$ in subdivision 8.1. A prime exchanges the $u$ and $w$ sides. The functions $g$ of Lemma 3g, $g_{10}$ of Lemma S10.1, and $g_W$ of Lemma W are different functions. Every cost uses the degree of a slot, so repeated outside vertices remain distinct when they occupy different groups.
+The host quantities $k_p,s_q,\sigma,\tau,c$ and $\Phi=2\vert H\vert -\vert \partial H\vert -\vert \mathrm{CL}(H)\vert$ are fixed throughout. The unadorned groups $A,B,C$ are slots around a generic triple; $\mathcal A,\mathcal B,\mathcal C$ are slots around the anchor in setting S. In that setting $S_i=c(T_i)+13/12$, $D$ is the total deficit at the chosen apex, and $U,W$ collect the two sides of the anchor charge. The counts $j,d,e,r,k$ are defined in subdivisions 7.3 and 7.7; $m,m',n_B,n_C$ and $X$ in subdivision 8.1. A prime exchanges the $u$ and $w$ sides. The functions $g$ of Lemma 3g, $g_{10}$ of Lemma S10.1, and $g_W$ of Lemma W are different functions. Every cost uses the degree of a slot, so repeated outside vertices remain distinct when they occupy different groups.
 The local inequality $c(T)\geq0$ is not an input. The proof allows deficient triples and establishes a global redistribution. The dependencies are:
 
 | Stage | Required mathematical conclusion |
@@ -129,10 +129,10 @@ The local inequality $c(T)\geq0$ is not an input. The proof allows deficient tri
 The analytic profile reduction separates no large relation, one large relation, and at least two large relations. It reduces only the first two branches to finite rational certificates; it does not infer a universal statement from small-host sampling. For both-heavy anchors the exhaustive branches are $d_x=2$; $d_x=1$ with no additional type 2 slot; and $d_x=1$ with an additional type 2 slot. The final branch splits by the count $m=0,1,$ or $m\geq2$ on the deficient side. An apparent mutual-partner branch is excluded by two disjoint pairs in a common link.
 
 **The redistribution.**
-A donor $T'$ has $c(T')>0$ and $\operatorname{act}(T')\geq1$. It sends $c(T')/\operatorname{act}(T')$ to each active bicone containing it. Write $\operatorname{pot}(q)$ for the total sent to $B_q$. Each $T\in D_q$ receives
+A donor $T'$ has $c(T')>0$ and $\mathrm{act}(T')\geq1$. It sends $c(T')/\mathrm{act}(T')$ to each active bicone containing it. Write $\mathrm{pot}(q)$ for the total sent to $B_q$. Each $T\in D_q$ receives
 
 $$
-\operatorname{pot}(q)\frac{\operatorname{def}(T)}{\sum_{S\in D_q}\operatorname{def}(S)}.
+\mathrm{pot}(q)\frac{\mathrm{def}(T)}{\sum_{S\in D_q}\mathrm{def}(S)}.
 $$
 
 The denominator is positive because the bicone is active. This is a proportional split, not an equal split. Each donor sends exactly its charge, each pot is fully distributed, and only deficient triples receive. Thus the total charge is conserved.
@@ -140,13 +140,13 @@ The denominator is positive because the bicone is active. This is a proportional
 G1 puts a deficient triple in exactly one active bicone. At either apex with $d_x>0$, parity leaves at most two deficient triples and a nondeficient anchor $A_x$. For a both-light anchor, its charge is at least $1/6$, it has exactly one triangle option, and each deficit is at most $1/12$. For a both-heavy anchor, the detailed estimates prove
 
 $$
-c(A_x)-\operatorname{act}(A_x)\sum_{T\in D_q,\ x\in T}\operatorname{def}(T)>\frac1{k_{uw}}>0.
+c(A_x)-\mathrm{act}(A_x)\sum_{T\in D_q,\ x\in T}\mathrm{def}(T)>\frac1{k_{uw}}>0.
 $$
 
 If both apexes have positive deficit, their anchors are distinct because each contains its own apex but not the other. Summing the anchor contributions over apexes with positive deficit therefore gives
 
 $$
-\operatorname{pot}(q)\geq\sum_{S\in D_q}\operatorname{def}(S).
+\mathrm{pot}(q)\geq\sum_{S\in D_q}\mathrm{def}(S).
 $$
 
 Every deficient triple receives at least its deficit; every other triple has nonnegative final charge. The conserved total is consequently nonnegative, giving [the main inequality](#the-problem-and-result). This last implication is conditional on the full local estimates, including the finite certificates, the six relabellings in Lemma S8(b), and the exceptional-slot inequality in Lemma S10.
@@ -157,7 +157,7 @@ Erdős discussed the distinct-union problem in [9, Section II, item 6](#referenc
 for sufficiently large $n$ and gave both the star-plus-matching lower
 bound and the $K_5$-filled Steiner-system construction.
 Pikhurko and Verstraëte [3, Theorem 2](#reference-3) proved
-$\operatorname{ex}_3(n)\leq(13/9)\binom n2$ for every $n\geq1$.
+$\mathrm{ex}_3(n)\leq(13/9)\binom n2$ for every $n\geq1$.
 The elementary common-link observation is related to their diagonal analysis: the proof of Lemma 9 excludes disjoint common-link pairs, while Lemmas 5–6 describe the triangle case. We prove the exact form used here directly.
 Frankl and Füredi's pair-counting argument [2, Section 2](#reference-2)
 provides a related precedent under the stronger weakly union-free hypothesis, which forbids equal unions of any four distinct triples without requiring paired edges to be disjoint. Their Theorem 1.6 gives $n(n-1)/3$ under that stronger hypothesis.
@@ -252,7 +252,7 @@ Robert Huynh directed the research and preparation of this draft. AI systems dev
 The target recorded in `FormalConjectures/ErdosProblems/643.lean` is `Erdos643.erdos_643.parts.ii`, the asymptotic forcing statement for all $t\ge3$. Its $t=3$ specialization requires
 
 $$
-\bigl(\operatorname{extremalNumber}(n,3,\neg\operatorname{HasRepeatedDisjointUnion})+1\bigr)
+\bigl(\mathrm{extremalNumber}(n,3,\neg\mathrm{HasRepeatedDisjointUnion})+1\bigr)
  \sim\binom n2.
 $$
 
@@ -266,10 +266,10 @@ The numbered subdivisions 2–10 in this appendix form a single technical sequen
 
 #### 2.1 Two facts about common links
 
-**F1.**  If $H$ is avoiding, every $\operatorname{CN}(x,y)$ is intersecting.
+**F1.**  If $H$ is avoiding, every $\mathrm{CN}(x,y)$ is intersecting.
 
 *Proof.*
-If $P,Q\in\operatorname{CN}(x,y)$ were disjoint, the four triples
+If $P,Q\in\mathrm{CN}(x,y)$ were disjoint, the four triples
 
 $$
 P\cup\{x\},\quad Q\cup\{y\},\quad Q\cup\{x\},\quad P\cup\{y\}
@@ -282,14 +282,14 @@ would be distinct edges of $H$. The first two are disjoint, the last two are dis
 
 $$
 \sum_{T\in H}\sigma(T)=|\partial H|,
- \qquad \sum_{T\in H}\tau(T)=|\operatorname{CL}(H)|.
+ \qquad \sum_{T\in H}\tau(T)=|\mathrm{CL}(H)|.
 $$
 
 *Proof.*
-A pair $p\in\partial H$ lies in exactly $k_p$ triples and contributes $1/k_p$ to each. For $q=xy\in\operatorname{CL}(H)$, write $\operatorname{CN}(q)=\{P_1,\ldots,P_s\}$. The option $q$ occurs in each of the $2s$ distinct triples $P_i\cup\{x\}$ and $P_i\cup\{y\}$. Conversely, if $q$ is an option of $T$ through $P$, then $P\in\operatorname{CN}(q)$ and $T=P\cup(q\cap T)$. Since $q$ meets $T$ only in its opposite vertex, it cannot occur through two different pairs of $T$. Thus $q$ contributes $2s/(2s)=1$, and every option belongs to $\operatorname{CL}(H)$.
+A pair $p\in\partial H$ lies in exactly $k_p$ triples and contributes $1/k_p$ to each. For $q=xy\in\mathrm{CL}(H)$, write $\mathrm{CN}(q)=\{P_1,\ldots,P_s\}$. The option $q$ occurs in each of the $2s$ distinct triples $P_i\cup\{x\}$ and $P_i\cup\{y\}$. Conversely, if $q$ is an option of $T$ through $P$, then $P\in\mathrm{CN}(q)$ and $T=P\cup(q\cap T)$. Since $q$ meets $T$ only in its opposite vertex, it cannot occur through two different pairs of $T$. Thus $q$ contributes $2s/(2s)=1$, and every option belongs to $\mathrm{CL}(H)$.
  ∎
 
-Consequently, with $\Phi(H)=2\vert H\vert -\vert \partial H\vert -\vert \operatorname{CL}(H)\vert$,
+Consequently, with $\Phi(H)=2\vert H\vert -\vert \partial H\vert -\vert \mathrm{CL}(H)\vert$,
 
 $$
 \sum_{T\in H}c(T)=-\Phi(H).
@@ -300,7 +300,7 @@ $$
 **Lemma 1.**  For every slot $v$ of $T$, its option $q_v$ satisfies $s_{q_v}=1+d(v)$.
 
 *Proof.*
-Take $T=abc$ and $v=(z,A)$; the other groups follow by renaming. Then $q_v=az$ and $bc\in\operatorname{CN}(a,z)$. By F1 every member of $\operatorname{CN}(a,z)$ meets $bc$. Members through $b$, other than $bc$, are precisely $bu$ with $(u,C)$ adjacent to $(z,A)$ in $R_b$: indeed $abu,buz\in H$ is equivalent to $u\in C$, $u\ne z$ and the relation edge. Members through $c$, other than $bc$, similarly correspond to neighbours in $R_c$. Only $bc$ contains both $b$ and $c$. Therefore
+Take $T=abc$ and $v=(z,A)$; the other groups follow by renaming. Then $q_v=az$ and $bc\in\mathrm{CN}(a,z)$. By F1 every member of $\mathrm{CN}(a,z)$ meets $bc$. Members through $b$, other than $bc$, are precisely $bu$ with $(u,C)$ adjacent to $(z,A)$ in $R_b$: indeed $abu,buz\in H$ is equivalent to $u\in C$, $u\ne z$ and the relation edge. Members through $c$, other than $bc$, similarly correspond to neighbours in $R_c$. Only $bc$ contains both $b$ and $c$. Therefore
 
 $$
 s_{az}=1+d_{R_b}(v)+d_{R_c}(v).
@@ -312,7 +312,7 @@ Avoidance is used here only to ensure that every common-link member meets $bc$.
 **Lemma 2.**  A slot with neighbours in both relations has exactly one neighbour in each, and those two slots represent the same vertex.
 
 *Proof.*
-Again take $v=(z,A)$. If $(u,C)$ is an $R_b$-neighbour and $(u',B)$ is an $R_c$-neighbour, then $bu,cu'\in\operatorname{CN}(a,z)$. These pairs intersect by F1. Since $b\ne c$, $b\notin\{c,u'\}$ and $c\notin\{b,u\}$, necessarily $u=u'$. Every neighbour in either relation is therefore a slot of one fixed vertex, and a vertex has at most one slot in each group.
+Again take $v=(z,A)$. If $(u,C)$ is an $R_b$-neighbour and $(u',B)$ is an $R_c$-neighbour, then $bu,cu'\in\mathrm{CN}(a,z)$. These pairs intersect by F1. Since $b\ne c$, $b\notin\{c,u'\}$ and $c\notin\{b,u\}$, necessarily $u=u'$. Every neighbour in either relation is therefore a slot of one fixed vertex, and a vertex has at most one slot in each group.
  ∎
 
 Thus a type-2 slot has degree two, cost $1/6$, and common link $\{bc,bw,cw\}$, a triangle. A type-1 slot has a star common link, and an isolated slot has common-link size one and cost $1/2$. In particular,
@@ -494,21 +494,21 @@ In C2, $u\leq103,s\leq11$, so $x_+<160$. Every negative infimum is therefore att
 
 #### 2.5 The per-triple bound
 
-**Theorem 1.**  Every triple of a finite avoiding $3$-graph satisfies $\sigma(T)+\tau(T)\geq23/12$. In particular every deficient triple has $\operatorname{def}(T)\leq1/12$.
+**Theorem 1.**  Every triple of a finite avoiding $3$-graph satisfies $\sigma(T)+\tau(T)\geq23/12$. In particular every deficient triple has $\mathrm{def}(T)\leq1/12$.
 
 *Proof.*  Apply Lemma 3 and Theorem 2. ∎
 
 An intermediate consequence, not used later, is
 
 $$
-\frac{23}{12}|H|\leq|\partial H|+|\operatorname{CL}(H)|,
+\frac{23}{12}|H|\leq|\partial H|+|\mathrm{CL}(H)|,
 $$
 
-and, writing $O(H)=\partial H\cup\operatorname{CL}(H)$,
+and, writing $O(H)=\partial H\cup\mathrm{CL}(H)$,
 
 $$
-|H|\leq\frac{12}{23}(|\partial H|+|\operatorname{CL}(H)|)
- \leq\frac{24}{23}\max\{|\partial H|,|\operatorname{CL}(H)|\}
+|H|\leq\frac{12}{23}(|\partial H|+|\mathrm{CL}(H)|)
+ \leq\frac{24}{23}\max\{|\partial H|,|\mathrm{CL}(H)|\}
  \leq\frac{24}{23}|O(H)|\leq\frac{24}{23}\binom n2.
 $$
 
@@ -591,7 +591,7 @@ A type-2 slot has a triangular common link, so the hypothesis of Theorem A force
 
 **Theorem G1.**  Let $T\in H$ be deficient in an avoiding $3$-graph. Then:
 
-- **(i)**  $T$ has exactly one triangle option $q=xy$, with $x\in T$. Write $\operatorname{CN}(q)=\{uv,vw,uw\}$ and $T=x+uv$.
+- **(i)**  $T$ has exactly one triangle option $q=xy$, with $x\in T$. Write $\mathrm{CN}(q)=\{uv,vw,uw\}$ and $T=x+uv$.
 
 - **(ii)**  Exactly one of $xu,xv$ is light.
 
@@ -605,7 +605,7 @@ Moreover $T$ has no isolated slot, and its precise slot structure is given by Co
 
 - **(a)**  Triangle options are exactly the options of type-2 slots. Distinct slots give distinct options. Thus $T$ has $t$ triangle options.
 
-- **(b)**  If $(z,A)$ is type 2, with partner slots $(w,B),(w,C)$, then $\operatorname{CN}(a,z)=\{bc,bw,cw\}$. The pair $ab$ is light exactly when $\vert C\vert =1$, in which case $C=\{w\}$ and $L(ab)=\{c,w\}$. The corresponding assertion for $ac,B$ also holds.
+- **(b)**  If $(z,A)$ is type 2, with partner slots $(w,B),(w,C)$, then $\mathrm{CN}(a,z)=\{bc,bw,cw\}$. The pair $ab$ is light exactly when $\vert C\vert =1$, in which case $C=\{w\}$ and $L(ab)=\{c,w\}$. The corresponding assertion for $ac,B$ also holds.
 
 - **(c)**  If $t=1$, then $(w,B)$ is type 1 in $R_c$ and $(w,C)$ is type 1 in $R_b$. Hence $bc,cb\geq1$, where these symbols denote profile counts.
 
@@ -614,7 +614,7 @@ Moreover $T$ has no isolated slot, and its precise slot structure is given by Co
 All assertions rotate cyclically with $a,b,c$.
 
 *Proof.*
-For (a), the members of $\operatorname{CN}(a,z)$ are $bc$, the pairs $bu$ coming from $R_b$-neighbours, and the pairs $cu$ coming from $R_c$-neighbours. Lemma 2 gives the triangle $\{bc,bw,cw\}$ for a type-2 slot. An isolated slot gives just one pair. A type-1 slot gives pairs with a common vertex, hence cannot give a triangle. Options of distinct slots are distinct because an option meets $T$ only at its opposite vertex.
+For (a), the members of $\mathrm{CN}(a,z)$ are $bc$, the pairs $bu$ coming from $R_b$-neighbours, and the pairs $cu$ coming from $R_c$-neighbours. Lemma 2 gives the triangle $\{bc,bw,cw\}$ for a type-2 slot. An isolated slot gives just one pair. A type-1 slot gives pairs with a common vertex, hence cannot give a triangle. Options of distinct slots are distinct because an option meets $T$ only at its opposite vertex.
 For (b), $k_{ab}=1+\vert C\vert$ and $w\in C$; similarly for $ac$. For (c), each partner slot has its edge to $(z,A)$, and cannot be type 2 because that would give a second type-2 slot.
 For (d), the slot $(w,C)$ has as $R_b$-neighbours the type-2 slot $(z,A)$ and every slot counted by $ab$: a type-1 slot in $R_b$ needs a neighbour, and $C$ consists only of $w$. It has no $R_a$-neighbour, since it is not type 2. Its degree is $1+ab$, giving $s_{cw}=2+ab$ by Lemma 1. The mirror assertion is identical after exchanging $B,C$.
  ∎
@@ -731,10 +731,10 @@ Every deficient triple lies in an active bicone by G1 (already by Theorem A), no
 **Lemma D.**  Under Rule $2'$, each triple of nonnegative initial charge has nonnegative final charge, every donor ends at zero, and the total charge is unchanged.
 
 *Proof.*
-A donor $T'$ sends $c(T')/\operatorname{act}(T')$ to each of its $\operatorname{act}(T')$ active bicones, hence sends exactly $c(T')$. It receives nothing because only deficient triples receive. Other nonnegative triples are untouched. For each active bicone, $D_q$ is nonempty and all its deficits are positive, so
+A donor $T'$ sends $c(T')/\mathrm{act}(T')$ to each of its $\mathrm{act}(T')$ active bicones, hence sends exactly $c(T')$. It receives nothing because only deficient triples receive. Other nonnegative triples are untouched. For each active bicone, $D_q$ is nonempty and all its deficits are positive, so
 
 $$
-\sum_{T\in D_q}\frac{\operatorname{def}(T)}{\sum_{S\in D_q}\operatorname{def}(S)}=1.
+\sum_{T\in D_q}\frac{\mathrm{def}(T)}{\sum_{S\in D_q}\mathrm{def}(S)}=1.
 $$
 
 Every pot is fully distributed. Thus the total charge is conserved.
@@ -748,7 +748,7 @@ Colour each base vertex by whether its pair with the apex is light. An apex trip
 
 There are at most four exactly-one-light triples in a bicone. An apex with any has an anchor, whose two base vertices have the same colour; it is both-light or both-heavy.
 
-**Lemma Q.**  Suppose $H$ is avoiding, $\operatorname{CN}(x,y)=\{uv,vw,uw\}$, and
+**Lemma Q.**  Suppose $H$ is avoiding, $\mathrm{CN}(x,y)=\{uv,vw,uw\}$, and
 
 $$
 L(xu)=\{v,w\},\qquad L(xw)=\{u,v\}.
@@ -775,13 +775,13 @@ $$
 - **(iii)**  If $a=2$ or $b=2$, then $c(T^\circ)\geq1/6$, and $xy$ is the only triangle option of $T^\circ$.
 
 *Proof.*
-For (i), $xu\in\operatorname{CN}(v,w)$, so every member meets $xu$ by F1. A member $xr$ requires $xrw\in H$ and hence $r\in L(xw)\setminus\{v\}=\{u\}$. A member $ur$ belongs precisely when $r\in L(uv)\cap L(uw)$. Therefore
+For (i), $xu\in\mathrm{CN}(v,w)$, so every member meets $xu$ by F1. A member $xr$ requires $xrw\in H$ and hence $r\in L(xw)\setminus\{v\}=\{u\}$. A member $ur$ belongs precisely when $r\in L(uv)\cap L(uw)$. Therefore
 
 $$
-\operatorname{CN}(v,w)=\{ur:r\in K\cap L(uv)\},\qquad s_{vw}=a.
+\mathrm{CN}(v,w)=\{ur:r\in K\cap L(uv)\},\qquad s_{vw}=a.
 $$
 
-Exchanging $u,w$ gives $s_{uv}=b$. For $z\in K\setminus\{x\}$, the common link $\operatorname{CN}(x,z)$ contains $uw$, and every member meets $uw$. A member through $u$ is $uw$, or $uv$ if $z\in L(uv)$; a member through $w$ is $uw$, or $vw$ if $z\in L(vw)$. This gives $s_{xz}=1+e_z$. If $z=v$, then $e_z=0$ and the common link is just $\{uw\}$.
+Exchanging $u,w$ gives $s_{uv}=b$. For $z\in K\setminus\{x\}$, the common link $\mathrm{CN}(x,z)$ contains $uw$, and every member meets $uw$. A member through $u$ is $uw$, or $uv$ if $z\in L(uv)$; a member through $w$ is $uw$, or $vw$ if $z\in L(vw)$. This gives $s_{xz}=1+e_z$. If $z=v$, then $e_z=0$ and the common link is just $\{uw\}$.
 
 For (ii), $\sigma(T^\circ)=1/2+1/2+1/k$. Its options are $vw$ through $xu$, $uv$ through $xw$, and $xz$ through $uw$ for $z\in K\setminus\{x\}$. Apply (i).
 
@@ -794,7 +794,7 @@ $$
 
 At $(m_0,m_1)=(0,0),(1,0),(0,1),(0,2)$, the values are respectively $0,1/3,0,1/8$. In all other cases either $m_0\geq2$, or $m_1\geq3$, or both are positive, and
 $F\geq m_0/2+m_1/4-3/4\geq0$.
-Finally $\operatorname{CN}(v,w)$ has two members; $\operatorname{CN}(u,v)$ has common vertex $w$; and $\operatorname{CN}(x,z)\subseteq\{uw,uv,vw\}$ is triangular exactly when $e_z=2$, which here means $z=y$. Therefore $xy$ is the unique triangle option.
+Finally $\mathrm{CN}(v,w)$ has two members; $\mathrm{CN}(u,v)$ has common vertex $w$; and $\mathrm{CN}(x,z)\subseteq\{uw,uv,vw\}$ is triangular exactly when $e_z=2$, which here means $z=y$. Therefore $xy$ is the unique triangle option.
  ∎
 
 ### 6. The anchor condition and the global conclusion
@@ -804,8 +804,8 @@ Finally $\operatorname{CN}(v,w)$ has two members; $\operatorname{CN}(u,v)$ has c
 The per-apex condition G3h' is the following statement: if apex $x$ of an active bicone $B_q$ has $d_x\geq1$ and its anchor $A_x$ is both-heavy, then
 
 $$
-\frac{c(A_x)}{\operatorname{act}(A_x)}\geq
-       \sum_{T\in D_q,\ x\in T}\operatorname{def}(T).
+\frac{c(A_x)}{\mathrm{act}(A_x)}\geq
+       \sum_{T\in D_q,\ x\in T}\mathrm{def}(T).
 $$
 
 The denominator counts every active bicone containing the anchor; it is not assumed to equal one.
@@ -817,30 +817,30 @@ By Lemma D, it suffices to consider deficient triples. G1(i) gives each such tri
 
 Fix an apex $x$ of $B_q$ with $d_x\geq1$. Every deficient triple there is exactly-one-light. Lemma P then gives exactly two exactly-one-light triples, so $d_x\leq2$ and the anchor $A_x$ exists. The anchor is not deficient: otherwise G1(i) would make $q$ its unique triangle option and G1(ii) would make it exactly-one-light, contrary to its definition. Thus the deficient triples at $x$ are among the other two triples and their deficit sum is the quantity $D$ used in Setting S below.
 
-If the anchor is both-light, label it $A_x=x+uw$ with $xu,xw$ light and $xv$ heavy. The deficient triples at $x$ lie among $x+uv,x+vw$. If $x+uv$ is deficient, G1(iii) gives $s_{vw}=2$, so $a=2$ in Lemma Q. If $x+vw$ is deficient, its mirror gives $s_{uv}=2$, so $b=2$. At least one applies. Lemma Q therefore gives $c(A_x)\geq1/6$ and exactly one triangle option, whence $\operatorname{act}(A_x)=1$. By subdivision 2, every deficit is at most $1/12$, and hence
+If the anchor is both-light, label it $A_x=x+uw$ with $xu,xw$ light and $xv$ heavy. The deficient triples at $x$ lie among $x+uv,x+vw$. If $x+uv$ is deficient, G1(iii) gives $s_{vw}=2$, so $a=2$ in Lemma Q. If $x+vw$ is deficient, its mirror gives $s_{uv}=2$, so $b=2$. At least one applies. Lemma Q therefore gives $c(A_x)\geq1/6$ and exactly one triangle option, whence $\mathrm{act}(A_x)=1$. By subdivision 2, every deficit is at most $1/12$, and hence
 
 $$
-\frac{c(A_x)}{\operatorname{act}(A_x)}\geq\frac16\geq\frac{d_x}{12}
- \geq\sum_{T\in D_q,\ x\in T}\operatorname{def}(T).
+\frac{c(A_x)}{\mathrm{act}(A_x)}\geq\frac16\geq\frac{d_x}{12}
+ \geq\sum_{T\in D_q,\ x\in T}\mathrm{def}(T).
 $$
 
-If the anchor is both-heavy, the same final inequality is G3h'. In either case its right side is positive and $\operatorname{act}(A_x)\geq1$, so $c(A_x)>0$ and the anchor is a donor.
+If the anchor is both-heavy, the same final inequality is G3h'. In either case its right side is positive and $\mathrm{act}(A_x)\geq1$, so $c(A_x)>0$ and the anchor is a donor.
 
 If both apexes have positive deficit, their anchors are distinct: each contains its own apex but not the other. Only apexes with positive deficit need an anchor contribution. Other donors contribute nonnegative amounts, and each deficient bicone member contains exactly one apex. Consequently
 
 $$
 \begin{aligned}
- \operatorname{pot}(q)
- &\geq\sum_{x:\,d_x\geq1}\frac{c(A_x)}{\operatorname{act}(A_x)}\\
- &\geq\sum_x\sum_{T\in D_q,\ x\in T}\operatorname{def}(T)
- =\sum_{S\in D_q}\operatorname{def}(S).
+ \mathrm{pot}(q)
+ &\geq\sum_{x:\,d_x\geq1}\frac{c(A_x)}{\mathrm{act}(A_x)}\\
+ &\geq\sum_x\sum_{T\in D_q,\ x\in T}\mathrm{def}(T)
+ =\sum_{S\in D_q}\mathrm{def}(S).
 \end{aligned}
 $$
 
 The proportional split gives every $T\in D_q$ at least its own deficit. Its final charge is nonnegative. Finally conservation and F2 give
 
 $$
-0\leq\sum_{T\in H}\operatorname{final}(T)=\sum_{T\in H}c(T)=-\Phi(H).
+0\leq\sum_{T\in H}\mathrm{final}(T)=\sum_{T\in H}c(T)=-\Phi(H).
 $$
 
  ∎
@@ -848,24 +848,24 @@ $$
 G3h' is a sufficient per-apex condition for a bicone pot to cover its total deficit. Subdivisions 7 and 8 prove, for each both-heavy anchor in Setting S, the stronger inequality
 
 $$
-c(A)-\operatorname{act}(A)D>\frac1{k_{uw}}>0.
+c(A)-\mathrm{act}(A)D>\frac1{k_{uw}}>0.
 $$
 
-Since $\operatorname{act}(A)\geq1$, this implies G3h'. Neither that estimate nor G1 uses Theorem C', so there is no circular dependence.
+Since $\mathrm{act}(A)\geq1$, this implies G3h'. Neither that estimate nor G1 uses Theorem C', so there is no circular dependence.
 
 ### 7. G3h' when $t_2(A)=1$ or $d_x=2$
 
 #### 7.1 Setting S and notation
 
-**Setting S.** Let $\operatorname{CN}(x,y)=\{uv,vw,uw\}$ be the bicone $B_q$, where $q=\{x,y\}$. The apex $x$ has exactly one light pair $xv$, so $L(xv)=\{u,w\}$ and $k_{xu},k_{xw}\ge3$. Its exactly-one-light triples are $T_1=x+uv$ and $T_2=x+vw$; its both-heavy anchor is $A=x+uw$. Let $D_x$ be the deficient triples among $T_1,T_2$, with $d_x=\vert D_x\vert \ge1$, and put
+**Setting S.** Let $\mathrm{CN}(x,y)=\{uv,vw,uw\}$ be the bicone $B_q$, where $q=\{x,y\}$. The apex $x$ has exactly one light pair $xv$, so $L(xv)=\{u,w\}$ and $k_{xu},k_{xw}\ge3$. Its exactly-one-light triples are $T_1=x+uv$ and $T_2=x+vw$; its both-heavy anchor is $A=x+uw$. Let $D_x$ be the deficient triples among $T_1,T_2$, with $d_x=\vert D_x\vert \ge1$, and put
 
 $$
-D=\sum_{T\in D_x}\operatorname{def}(T).
+D=\sum_{T\in D_x}\mathrm{def}(T).
 $$
 
-Every deficient triple of $H$ satisfies G1 by the unconditional Theorem G1 of Section 4. Setting S is exactly the both-heavy branch in step 4 of Theorem C': by Lemma P, the both-heavy anchor occurs if and only if exactly one apex-base pair at $x$ is light. By step 3 of Theorem C', G3h' in this setting reads $c(A)/\operatorname{act}(A)\ge D$.
+Every deficient triple of $H$ satisfies G1 by the unconditional Theorem G1 of Section 4. Setting S is exactly the both-heavy branch in step 4 of Theorem C': by Lemma P, the both-heavy anchor occurs if and only if exactly one apex-base pair at $x$ is light. By step 3 of Theorem C', G3h' in this setting reads $c(A)/\mathrm{act}(A)\ge D$.
 
-The inputs are F1, Lemmas 1 and 2, the slot types, Theorem 1 (which gives $\operatorname{def}(T)\le1/12$, and hence $S_i\ge1$ below), and (E3) from Section 2; Lemma 1g(a), identifying triangle options with type-2 slots; and Theorem G1 and Corollary 6g from Section 4.
+The inputs are F1, Lemmas 1 and 2, the slot types, Theorem 1 (which gives $\mathrm{def}(T)\le1/12$, and hence $S_i\ge1$ below), and (E3) from Section 2; Lemma 1g(a), identifying triangle options with type-2 slots; and Theorem G1 and Corollary 6g from Section 4.
 
 Write $P=L(uv)$, $Q=L(vw)$, $M=L(uw)$, $X_u=L(xu)$ and $X_w=L(xw)$. The bicone gives $x,y\in P\cap Q\cap M$, $v,w\in X_u$, and $u,v\in X_w$.
 
@@ -881,14 +881,14 @@ Their options are, respectively, $\{x,z\}$ through $uw$, $\{u,z\}$ through $xw$,
 
 $$
 \begin{aligned}
- U&=\frac1{|X_u|}+\sum_{\substack{s\in\mathcal C\\s\text{ not type 2}}}\operatorname{cost}(s)
-       +\sum_{s\in\mathcal A_u}\operatorname{cost}(s),\\
- W&=\frac1{|X_w|}+\sum_{\substack{s\in\mathcal B\\s\text{ not type 2}}}\operatorname{cost}(s)
-       +\sum_{s\in\mathcal A_w}\operatorname{cost}(s),
+ U&=\frac1{|X_u|}+\sum_{\substack{s\in\mathcal C\\s\text{ not type 2}}}\mathrm{cost}(s)
+       +\sum_{s\in\mathcal A_u}\mathrm{cost}(s),\\
+ W&=\frac1{|X_w|}+\sum_{\substack{s\in\mathcal B\\s\text{ not type 2}}}\mathrm{cost}(s)
+       +\sum_{s\in\mathcal A_w}\mathrm{cost}(s),
 \end{aligned}
 $$
 
-where $\operatorname{cost}(s)=1/(2(1+d(s)))$ and $d(s)$ is the degree of $s$ in $A$. For $i=1,2$ put $S_i=c(T_i)+13/12$. Thus $\operatorname{def}(T_i)=13/12-S_i$ when $T_i$ is deficient, and $S_i\ge1$ by Theorem 1 of Section 2.
+where $\mathrm{cost}(s)=1/(2(1+d(s)))$ and $d(s)$ is the degree of $s$ in $A$. For $i=1,2$ put $S_i=c(T_i)+13/12$. Thus $\mathrm{def}(T_i)=13/12-S_i$ when $T_i$ is deficient, and $S_i\ge1$ by Theorem 1 of Section 2.
 
 *Slot model of $T_1=\{x,u,v\}$.* Apply Corollary 6g with $a=x$, $b=v$, $c=u$. Its groups are $A_1=P\setminus\{x\}$, with options $\{x,z\}$; $B_1=X_u\setminus\{v\}$, with options $\{v,z\}$ through $xu$; and $C_1=L(xv)\setminus\{u\}=\{w\}$. The $u$-relation joins $A_1$ and $B_1$, with $z\sim s$ if and only if $uzs\in H$; the $v$-relation joins $C_1$ and $A_1$; the $x$-relation joins $B_1$ and $C_1$. The triple $T_2=\{x,v,w\}$ is the mirror under $u\leftrightarrow w$, exchanging $P\leftrightarrow Q$, $X_u\leftrightarrow X_w$, $R_u\leftrightarrow R_w$ and $\mathcal C\leftrightarrow\mathcal B$. Every statement below has this mirror.
 
@@ -906,7 +906,7 @@ where $\operatorname{cost}(s)=1/(2(1+d(s)))$ and $d(s)$ is the degree of $s$ in 
 
 - **(e)**  The triangle options of $A$ are precisely the options of its type-2 slots; one is $q=\{x,y\}$.
 
-*Proof.* (a) Some $T_i$ is deficient. For $T_1=x+uv$, Theorem G1(iii) applied to its light pair $xv$ gives $L(xv)=\{u,w\}$ and $s_{uw}=2$. For $T_2=x+vw$, exchange $u,w$ to obtain $s_{wu}=2$. Since $xvu,xvw\in H$, we have $xv\in\operatorname{CN}(u,w)$. By F1 every member meets $xv$. A member $vz$, with $z\notin\{u,w\}$, requires $uvz,wvz\in H$, or $z\in P\cap Q$; a member $xz$ requires $z\in X_u\cap X_w$. The edge $xv$ is the only member of both kinds. Therefore
+*Proof.* (a) Some $T_i$ is deficient. For $T_1=x+uv$, Theorem G1(iii) applied to its light pair $xv$ gives $L(xv)=\{u,w\}$ and $s_{uw}=2$. For $T_2=x+vw$, exchange $u,w$ to obtain $s_{wu}=2$. Since $xvu,xvw\in H$, we have $xv\in\mathrm{CN}(u,w)$. By F1 every member meets $xv$. A member $vz$, with $z\notin\{u,w\}$, requires $uvz,wvz\in H$, or $z\in P\cap Q$; a member $xz$ requires $z\in X_u\cap X_w$. The edge $xv$ is the only member of both kinds. Therefore
 
 $$
 s_{uw}=|P\cap Q|+|X_u\cap X_w|-1.
@@ -920,7 +920,7 @@ Together with $x,y\in P\cap Q$ and $v\in X_u\cap X_w$, this proves (a).
 
 (d) A type-2 slot $z\in\mathcal A$ has neighbours that are slots of one vertex $s\in\mathcal C\cap\mathcal B\subseteq X_u\cap X_w=\{v\}$. Thus $uzv,wzv\in H$, and $z\in(P\cap Q)\setminus\{x\}=\{y\}$. A slot $z\in J_1$ is $R_u$-adjacent to $v\in\mathcal C$ by (c), and is not type 2, so it is type 1 in $R_u$.
 
-(e) For a slot $s$ of a triple $T$, $s_{q_s}=1+d(s)$, and $\operatorname{CN}(q_s)$ consists of the pair of $T$ through which $q_s$ passes and one pair per neighbour of $s$ (Lemma 1 and its proof). If $s$ is type 1, these pairs all contain one common vertex of $T$, the apex of its relation, so $\operatorname{CN}(q_s)$ is not a triangle. If $s$ is isolated, $s_{q_s}=1$. If $s$ is type 2, $\operatorname{CN}(q_s)$ is a triangle by Lemma 2. The option of $y$ is $q$. $\square$
+(e) For a slot $s$ of a triple $T$, $s_{q_s}=1+d(s)$, and $\mathrm{CN}(q_s)$ consists of the pair of $T$ through which $q_s$ passes and one pair per neighbour of $s$ (Lemma 1 and its proof). If $s$ is type 1, these pairs all contain one common vertex of $T$, the apex of its relation, so $\mathrm{CN}(q_s)$ is not a triangle. If $s$ is isolated, $s_{q_s}=1$. If $s$ is type 2, $\mathrm{CN}(q_s)$ is a triangle by Lemma 2. The option of $y$ is $q$. $\square$
 
 **Lemma S2 (decomposition).**
 
@@ -1068,24 +1068,24 @@ The mirror statement $W\ge11/12$ uses $\vert \mathcal B\vert =k_{xw}-1\ge2$.
 
 #### 7.5 Theorem S1 and Proposition S2
 
-**Theorem S1.** In setting S, if $A$ has no $R_x$ edge, then $t_2(A)=\operatorname{act}(A)=1$ and
+**Theorem S1.** In setting S, if $A$ has no $R_x$ edge, then $t_2(A)=\mathrm{act}(A)=1$ and
 
 $$
 c(A)-D\ge\frac1{k_{uw}}+\frac{|\mathcal A_0|}2+\text{positive terms}>0.
 $$
 
 In particular G3h' holds and $A$ is not deficient.
-*Proof.* Without $R_x$ edges, no slot of $\mathcal B$ or $\mathcal C$ is type 2: their two relations are $R_w,R_x$ and $R_u,R_x$, respectively. Lemma S1(d),(e) therefore makes $q$ the only triangle option, so $t_2(A)=1$. The bicone $B_q$ is active and contains $A$, so $\operatorname{act}(A)=1$. Lemma S2 gives
+*Proof.* Without $R_x$ edges, no slot of $\mathcal B$ or $\mathcal C$ is type 2: their two relations are $R_w,R_x$ and $R_u,R_x$, respectively. Lemma S1(d),(e) therefore makes $q$ the only triangle option, so $t_2(A)=1$. The bicone $B_q$ is active and contains $A$, so $\mathrm{act}(A)=1$. Lemma S2 gives
 
 $$
 c(A)=\frac1{k_{uw}}+\frac16+\frac{|\mathcal A_0|}2+U+W-2.
 $$
 
-If $T_1$ is deficient, $\operatorname{def}(T_1)=13/12-S_1$, and likewise for $T_2$. If $d_x=2$, then
+If $T_1$ is deficient, $\mathrm{def}(T_1)=13/12-S_1$, and likewise for $T_2$. If $d_x=2$, then
 
 $$
 \begin{aligned}
- c(A)-\operatorname{def}(T_1)-\operatorname{def}(T_2)
+ c(A)-\mathrm{def}(T_1)-\mathrm{def}(T_2)
  &=\frac1{k_{uw}}+\frac{|\mathcal A_0|}2+(U+S_1-2)+(W+S_2-2)\\
  &>\frac1{k_{uw}},
 \end{aligned}
@@ -1095,7 +1095,7 @@ by the corollary of Section 7.3 and its mirror. If $d_x=1$ and $T_1$ is deficien
 
 $$
 \begin{aligned}
- c(A)-\operatorname{def}(T_1)
+ c(A)-\mathrm{def}(T_1)
  &=\frac1{k_{uw}}+\frac{|\mathcal A_0|}2+(U+S_1-2)+(W-11/12)\\
  &>\frac1{k_{uw}},
 \end{aligned}
@@ -1103,11 +1103,11 @@ $$
 
 by Section 7.3 and the mirror of Section 7.4. The case with $T_2$ deficient is its mirror. $\square$
 
-**Proposition S2.** Put $t=t_2(A)$. We have $\operatorname{act}(A)\le t$, because it counts active bicones among the $t$ triangle options (Lemma S1(e)), and $D\le d_x/12\le1/6$ by Theorem 1 of Section 2. Lemma S2 gives
+**Proposition S2.** Put $t=t_2(A)$. We have $\mathrm{act}(A)\le t$, because it counts active bicones among the $t$ triangle options (Lemma S1(e)), and $D\le d_x/12\le1/6$ by Theorem 1 of Section 2. Lemma S2 gives
 
 $$
 \begin{aligned}
- c(A)-\operatorname{act}(A)D&\ge c(A)-tD\\
+ c(A)-\mathrm{act}(A)D&\ge c(A)-tD\\
  &=\left[\frac1{k_{uw}}+\frac16+\frac{|\mathcal A_0|}2+U+W-2-D\right]
     +(t-1)(1/6-D).
 \end{aligned}
@@ -1131,26 +1131,26 @@ Theorem S1 establishes $(\star)$ when there are no $R_x$ edges.
 
 - **(b)**  If $\vert R_2\vert \ge2$, no bicone $B_{q_r}$, for $r\in R_2$, is active.
 
-- **(c)**  Consequently $\operatorname{act}(A)\le1+[\vert R_2\vert =1]+[\vert R'_2\vert =1]$, where $R'_2$ is the mirror set of type-2 slots of $\mathcal B$.
+- **(c)**  Consequently $\mathrm{act}(A)\le1+[\vert R_2\vert =1]+[\vert R'_2\vert =1]$, where $R'_2$ is the mirror set of type-2 slots of $\mathcal B$.
 
-*Proof.* (a) A type-2 slot $r\in\mathcal C$ has $R_u$- and $R_x$-neighbours that are slots of one vertex $z$, its partner. Then $z\in\mathcal A\cap\mathcal B$, so $urz,xrz\in H$ and $rz\in\operatorname{CN}(u,x)$. Every $s\in\mathcal A\cap\mathcal B$ has $uws,xws\in H$, giving $ws\in\operatorname{CN}(u,x)$. By F1, $ws$ meets $rz$, so $\mathcal A\cap\mathcal B\subseteq\{r,z\}$. If a second type-2 slot $r'$ had partner $z'\ne z$, then $z'\in\mathcal A\cap\mathcal B\subseteq\{r,z\}$ gives $z'=r$. This would imply $r\in\mathcal A\cap\mathcal B\cap\mathcal C\subseteq X_u\cap X_w=\{v\}$, but $v\in\mathcal C$ has no $R_x$ edge by Lemma S1(c), and is not type 2. Hence there is one common partner $z^*$. Its slots in $\mathcal A$ and $\mathcal B$ give $z^*\in M\cap X_w$ and $z^*\notin\{x,u\}$. Also $z^*\ne v$, because $v\in\mathcal B$ has no $R_x$ edge. Since $X_u\cap X_w=\{v\}$, we have $z^*\notin X_u$.
+*Proof.* (a) A type-2 slot $r\in\mathcal C$ has $R_u$- and $R_x$-neighbours that are slots of one vertex $z$, its partner. Then $z\in\mathcal A\cap\mathcal B$, so $urz,xrz\in H$ and $rz\in\mathrm{CN}(u,x)$. Every $s\in\mathcal A\cap\mathcal B$ has $uws,xws\in H$, giving $ws\in\mathrm{CN}(u,x)$. By F1, $ws$ meets $rz$, so $\mathcal A\cap\mathcal B\subseteq\{r,z\}$. If a second type-2 slot $r'$ had partner $z'\ne z$, then $z'\in\mathcal A\cap\mathcal B\subseteq\{r,z\}$ gives $z'=r$. This would imply $r\in\mathcal A\cap\mathcal B\cap\mathcal C\subseteq X_u\cap X_w=\{v\}$, but $v\in\mathcal C$ has no $R_x$ edge by Lemma S1(c), and is not type 2. Hence there is one common partner $z^*$. Its slots in $\mathcal A$ and $\mathcal B$ give $z^*\in M\cap X_w$ and $z^*\notin\{x,u\}$. Also $z^*\ne v$, because $v\in\mathcal B$ has no $R_x$ edge. Since $X_u\cap X_w=\{v\}$, we have $z^*\notin X_u$.
 
-(b) For $r\in R_2$, $q_r=\{w,r\}$ and $\operatorname{CN}(w,r)=\{xu,uz^*,xz^*\}$ by Lemmas 1 and 2. The six bicone triples are
+(b) For $r\in R_2$, $q_r=\{w,r\}$ and $\mathrm{CN}(w,r)=\{xu,uz^*,xz^*\}$ by Lemmas 1 and 2. The six bicone triples are
 
 $$
 A=w+xu,\quad w+uz^*,\quad w+xz^*,\quad
  r+xu,\quad r+uz^*,\quad r+xz^*.
 $$
 
-The triple $A$ has at least three triangle options, from $y$ and two slots of $R_2$. Both $w+uz^*$ and $w+xz^*$ have triangle options $\{w,r'\}$ for every $r'\in R_2$: each $r'$ lies in $L(uz^*)\cap L(xz^*)$, and $\operatorname{CN}(w,r')$ is a triangle. Thus none of these first three triples is deficient, by G1(i).
+The triple $A$ has at least three triangle options, from $y$ and two slots of $R_2$. Both $w+uz^*$ and $w+xz^*$ have triangle options $\{w,r'\}$ for every $r'\in R_2$: each $r'$ lies in $L(uz^*)\cap L(xz^*)$, and $\mathrm{CN}(w,r')$ is a triangle. Thus none of these first three triples is deficient, by G1(i).
 
 Suppose $T=r+p_1p_2$ is deficient, where $\{p_1,p_2,p_3\}=\{x,u,z^*\}$. By G1 its only triangle option is $\{r,w\}$. Apply Corollary 6g with $a=r$, light pair $ab=rp_1$ (say), $c=p_2$, and partner $p_3$ of the type-2 slot $w\in L(p_1p_2)\setminus\{r\}$. The $b$-relation of $T$ joins the slot $p_3$ to slots $s\in L(p_1p_2)\setminus\{r\}$ when $p_1p_3s\in H$, and must be the single edge to $w$.
 The six relabellings are written out in Appendix [Expanded structural and accounting arguments](#expanded-structural-and-accounting-arguments), part C.
 But any $r'\in R_2\setminus\{r\}$ satisfies $r'\in L(p_1p_2)$ and $p_1p_3r'\in H$, since $xur',uz^*r',xz^*r'\in H$: here $r'\in X_u$, and its $R_u$ and $R_x$ edges go to $z^*$. Also $r'\notin\{r,p_3\}$, since $r'\in X_u$ and $z^*\notin X_u$. This is a contradiction.
 
-(c) The number $\operatorname{act}(A)$ counts the bicone of $y$ and active bicones of type-2 slots in $\mathcal C$ and $\mathcal B$. Part (b) permits at most one from each group, and only when that group has exactly one type-2 slot. $\square$
+(c) The number $\mathrm{act}(A)$ counts the bicone of $y$ and active bicones of type-2 slots in $\mathcal C$ and $\mathcal B$. Part (b) permits at most one from each group, and only when that group has exactly one type-2 slot. $\square$
 
-Writing $a_* = \operatorname{act}(A)$ for this display, the slack in Proposition S2 improves to
+Writing $a_* = \mathrm{act}(A)$ for this display, the slack in Proposition S2 improves to
 
 $$
 c(A)-a_*D\ge\bigl(\text{left side of }(\star)-D\bigr)
@@ -1168,7 +1168,7 @@ $$
 In the mirror, $R'=\mathcal B\setminus\{v\}=R'_W\cup R'_X\cup R'_0\cup R'_2$. Define
 
 $$
-U^-=U-\sum_{s\in R_X\cup R_0}\operatorname{cost}(s),
+U^-=U-\sum_{s\in R_X\cup R_0}\mathrm{cost}(s),
 $$
 
 and define $W^-$ by the mirror. The set $R_2$ is not included in $U$.
@@ -1356,7 +1356,7 @@ In both subcases $\sigma_u=S_1-1\ge0$ by Theorem 1 of Section 2. $\square$
 **Lemma S11 (one side, $R_x$ edge, no type-2 slot in $\mathcal B\cup\mathcal C$).** If $A$ has an $R_x$ edge and $R_2=R'_2=\varnothing$, then
 
 $$
-U+\sum_{s\in R'_X}\operatorname{cost}(s)\ge11/12.
+U+\sum_{s\in R'_X}\mathrm{cost}(s)\ge11/12.
 $$
 
 *Proof.* Every $R_x$ edge joins $R_X$ to $R'_X$, since there is no type-2 slot in $\mathcal B\cup\mathcal C$ and the $v$-slots have no $R_x$ edge. Hence $r_X=\vert R_X\vert \ge1$ and $r'_X=\vert R'_X\vert \ge1$. Slots of $R_X$ have degree at most $r'_X$, and slots of $R'_X$ at most $r_X$. By (E3), their total cost is at least
@@ -1372,13 +1372,13 @@ $$
 For the rest of $U$, if $k\ge1$, the slots $v,R_U,\mathcal A_u$ have degree caps $1+a,a,1+k$, respectively, where $a=\vert \mathcal A_u\vert$. Their cost is at least $f(a,1+k)-1/(2+k)\ge11/12-1/3$, by Lemma S6. Therefore
 
 $$
-U+\sum_{s\in R'_X}\operatorname{cost}(s)\ge11/12-1/3+3/4-1/4=13/12.
+U+\sum_{s\in R'_X}\mathrm{cost}(s)\ge11/12-1/3+3/4-1/4=13/12.
 $$
 
 If $k=0$, then $\mathcal A_u$ consists of $J_1$, each slot having degree 1, and this part costs at least $1/(2(2+j))+j/4\ge1/4$. Also $1/\vert X_u\vert \ge1/(2+r_X+r_0)$, and $R_0$ costs $r_0/2$, where $r_0=\vert R_0\vert$. Thus
 
 $$
-U+\sum_{s\in R'_X}\operatorname{cost}(s)
+U+\sum_{s\in R'_X}\mathrm{cost}(s)
  \ge\frac1{2+r_X+r_0}+\frac{r_0}2+\frac14+\frac34-\frac1{2(1+r_X)}.
 $$
 
@@ -1389,7 +1389,7 @@ For $r_0=0$, this is at least $1+r_X/(2(1+r_X)(2+r_X))$. For $r_0\ge1$, it is at
 **Theorem S1' (G3h' when $t_2(A)=1$ or $d_x=2$).** In setting S, G3h' holds with
 
 $$
-c(A)-\operatorname{act}(A)D>1/k_{uw}
+c(A)-\mathrm{act}(A)D>1/k_{uw}
 $$
 
 whenever (a) the groups $\mathcal B,\mathcal C$ of $A$ have no type-2 slot, so $t_2(A)=1$, with $R_x$ edges allowed; or (b) $d_x=2$, for any anchor.
@@ -1397,7 +1397,7 @@ whenever (a) the groups $\mathcal B,\mathcal C$ of $A$ have no type-2 slot, so $
 *Proof.* Lemma S2 and the slack bound after Lemma S8 give
 
 $$
-c(A)-\operatorname{act}(A)D\ge\frac1{k_{uw}}+\frac{|\mathcal A_0|}2
+c(A)-\mathrm{act}(A)D\ge\frac1{k_{uw}}+\frac{|\mathcal A_0|}2
      +\Lambda_u+\Lambda_w+s_u+s_w,
 $$
 
@@ -1408,7 +1408,7 @@ s_u=\frac{r_2-\alpha}{6}+\alpha(1/6-D)
  \ge\left[r_2=1\right]\left(1/6-D\right)+\frac{[r_2\ge2]}3.
 $$
 
-Also $1/6-D\ge S_1-1$ when $T_1$ is deficient, since $D\le\operatorname{def}(T_1)+1/12$ and $S_1-1=1/12-\operatorname{def}(T_1)$.
+Also $1/6-D\ge S_1-1$ when $T_1$ is deficient, since $D\le\mathrm{def}(T_1)+1/12$ and $S_1-1=1/12-\mathrm{def}(T_1)$.
 
 For (b), $d_x=2$. Lemma S10 gives
 
@@ -1424,7 +1424,7 @@ $$
 \begin{aligned}
  \Lambda_u+\Lambda_w
   &=(U^-+S_1-2)\\
-  &\quad+\left(W+\sum_{s\in R_X\cup R_0}\operatorname{cost}(s)-11/12\right).
+  &\quad+\left(W+\sum_{s\in R_X\cup R_0}\mathrm{cost}(s)-11/12\right).
 \end{aligned}
 $$
 
@@ -1437,11 +1437,11 @@ The first bracket is positive by Lemma S10, with $\sigma_u=0$. The second is non
 **Theorem S3.** In setting S with $d_x=1$, if $\mathcal B\cup\mathcal C$ contains a type-2 slot, then
 
 $$
-c(A)-\operatorname{act}(A)D>\frac1{k_{uw}}.
+c(A)-\mathrm{act}(A)D>\frac1{k_{uw}}.
 $$
 
 By the symmetry $u\leftrightarrow w$, assume that $T_1$ is deficient and $T_2$ is not. Thus
-$D=\operatorname{def}(T_1)=13/12-S_1$, and $0<D\le1/12$, since Theorem 1 of subdivision 2 gives $S_1\ge1$.
+$D=\mathrm{def}(T_1)=13/12-S_1$, and $0<D\le1/12$, since Theorem 1 of subdivision 2 gives $S_1\ge1$.
 The inputs are F1, Lemmas 1 and 2 and Theorem 1 of Section 2; Theorem G1; Lemmas S1, S2, S6, S8, S9, S10.1 and S10 of Section 7; and $U^-+S_1\ge\Psi_N-L^*$ from Section 7.7.
 
 #### 8.1 Notation for both sides
@@ -1485,12 +1485,12 @@ $$
 Indeed, $z^*\in\mathcal A$ is $R_u$-adjacent to $R_2$ and cannot be $y$, whose only $R_u$-neighbour is $v$ by Lemma S1(b). Since every slot of $R_2$ has a unique $R_x$-neighbour by Lemma 2 of subdivision 2, every $R_x$-neighbour of a slot of $R'_X$ lies in $R_X$, except that $z^*$ may also be adjacent to $R_2$. Set
 
 $$
-U^-=U-\sum_{R_X\cup R_0}\operatorname{cost},\qquad
- W^-=W-\sum_{R'_X\cup R'_0}\operatorname{cost}.
+U^-=U-\sum_{R_X\cup R_0}\mathrm{cost},\qquad
+ W^-=W-\sum_{R'_X\cup R'_0}\mathrm{cost}.
 $$
 
 Let $\alpha_u$ indicate that the bicone of the unique type-2 slot of $\mathcal C$ is active; set $\alpha_u=0$ if $m\ne1$. Define $\alpha_w$ by symmetry. Then
-$\operatorname{act}(A)=1+\alpha_u+\alpha_w$: the triangle options of $A$ are those of $y,R_2,R'_2$ by Lemma S1(e), distinct options give distinct bicones, $B_q$ is active, and Lemma S8(b) excludes active bicones of type-2 slots when their group has at least two slots.
+$\mathrm{act}(A)=1+\alpha_u+\alpha_w$: the triangle options of $A$ are those of $y,R_2,R'_2$ by Lemma S1(e), distinct options give distinct bicones, $B_q$ is active, and Lemma S8(b) excludes active bicones of type-2 slots when their group has at least two slots.
 
 **Identity (1).** With $t_2(A)=1+m+m'$, define
 
@@ -1498,7 +1498,7 @@ $$
 \begin{aligned}
  G_u&=U^-+\frac{r_0}2+S_1-2,\\
  H_w&=W^-+\frac{r'_0}2-\frac{11}{12}+X,\\
- X&=\sum_{R_X}\operatorname{cost}+\sum_{R'_X}\operatorname{cost}
+ X&=\sum_{R_X}\mathrm{cost}+\sum_{R'_X}\mathrm{cost}
        +\frac{m+m'}6.
 \end{aligned}
 $$
@@ -1506,7 +1506,7 @@ $$
 Then
 
 $$
-c(A)-\operatorname{act}(A)D
+c(A)-\mathrm{act}(A)D
  =\frac1{k_{uw}}+\frac{|\mathcal A_0|}2+G_u+H_w-(\alpha_u+\alpha_w)D.
  \tag{1}
 $$
@@ -1517,7 +1517,7 @@ $$
 c(A)=\frac1{k_{uw}}+\frac{1+m+m'}6+\frac{|\mathcal A_0|}2+U+W-2,
 $$
 
-where $U=U^-+\sum_{R_X}\operatorname{cost}+r_0/2$, and similarly for $W$.
+where $U=U^-+\sum_{R_X}\mathrm{cost}+r_0/2$, and similarly for $W$.
 Subtract $(1+\alpha_u+\alpha_w)(13/12-S_1)$ and use $1/6-13/12=-11/12$.
 $\square$
 
@@ -1526,9 +1526,9 @@ $\square$
 **Lemma N.** If $m\ge1$, then $z^*$, as a slot of $\mathcal B$, lies in $R'_X$.
 By symmetry, if $m'\ge1$, then $z'^*$, as a slot of $\mathcal C$, lies in $R_X$.
 
-*Proof.* The slot $z^*\in\mathcal B$ is $R_x$-adjacent to every slot of $R_2$, so is not isolated. Suppose it is type 2. Lemma 2 of subdivision 2 says its two neighbours are slots of one vertex, so $R_2=\{r\}$ and its $R_w$-neighbour is $r\in\mathcal A$, giving $wrz^*\in H$. The type-2 slot $r\in\mathcal C$ has partner $z^*$, so its $R_u$-neighbour is $z^*\in\mathcal A$, giving $urz^*\in H$. Hence $\{r,z^*\}\in\operatorname{CN}(u,w)$; the pair avoids $\{u,w\}$ because $r\in X_u\setminus\{w\}$ and $z^*\in X_w$.
-But $xv\in\operatorname{CN}(u,w)$ since $T_1,T_2\in H$, and
-$\{r,z^*\}\cap\{x,v\}=\varnothing$: neither vertex is $x$, as they belong to $L(xu),L(xw)$; $r\ne v$, since $v\in\mathcal C$ has no $R_x$ edge by Lemma S1(c); and $z^*\ne v$ by Lemma S8(a). These disjoint members of $\operatorname{CN}(u,w)$ contradict F1. Thus $z^*$ has $R_x$ edges and no $R_w$ edge, and is type 1 in $R_x$.
+*Proof.* The slot $z^*\in\mathcal B$ is $R_x$-adjacent to every slot of $R_2$, so is not isolated. Suppose it is type 2. Lemma 2 of subdivision 2 says its two neighbours are slots of one vertex, so $R_2=\{r\}$ and its $R_w$-neighbour is $r\in\mathcal A$, giving $wrz^*\in H$. The type-2 slot $r\in\mathcal C$ has partner $z^*$, so its $R_u$-neighbour is $z^*\in\mathcal A$, giving $urz^*\in H$. Hence $\{r,z^*\}\in\mathrm{CN}(u,w)$; the pair avoids $\{u,w\}$ because $r\in X_u\setminus\{w\}$ and $z^*\in X_w$.
+But $xv\in\mathrm{CN}(u,w)$ since $T_1,T_2\in H$, and
+$\{r,z^*\}\cap\{x,v\}=\varnothing$: neither vertex is $x$, as they belong to $L(xu),L(xw)$; $r\ne v$, since $v\in\mathcal C$ has no $R_x$ edge by Lemma S1(c); and $z^*\ne v$ by Lemma S8(a). These disjoint members of $\mathrm{CN}(u,w)$ contradict F1. Thus $z^*$ has $R_x$ edges and no $R_w$ edge, and is type 1 in $R_x$.
 $\square$
 
 Consequently the *mutual case*, meaning $m=m'=1$ with $z^*$ the type-2 slot of $\mathcal B$ whose partner is the type-2 slot of $\mathcal C$, cannot occur in an avoiding host. Lemma N has no exception.
@@ -1737,7 +1737,7 @@ $\square$
 By (1),
 
 $$
-c(A)-\operatorname{act}(A)D-\frac1{k_{uw}}
+c(A)-\mathrm{act}(A)D-\frac1{k_{uw}}
  \ge G_u+H_w-(\alpha_u+\alpha_w)D.
 $$
 
@@ -1756,7 +1756,7 @@ $$
 -\frac m{3(m+3)}+\tau_W-[m'=1]D=\left[m'=1\right]\left(1/12-D\right)\ge0.
 $$
 
-Lemma U supplies strictness in every case. Thus $c(A)-\operatorname{act}(A)D>1/k_{uw}$.
+Lemma U supplies strictness in every case. Thus $c(A)-\mathrm{act}(A)D>1/k_{uw}$.
 $\square$
 
 ### 9. Exhaustive case tree and conclusion
@@ -1766,10 +1766,10 @@ $\square$
 In Setting S, $d_x\in\{1,2\}$ by Lemma P. Theorem S1'(b) of subdivision 7 covers $d_x=2$. If $d_x=1$ and $\mathcal B\cup\mathcal C$ has no type-2 slot, Theorem S1'(a) applies. If $d_x=1$ and it does have a type-2 slot, Theorem S3 of subdivision 8 applies. Hence in all cases
 
 $$
-c(A)-\operatorname{act}(A)D>\frac1{k_{uw}},\qquad \frac{c(A)}{\operatorname{act}(A)}>D,
+c(A)-\mathrm{act}(A)D>\frac1{k_{uw}},\qquad \frac{c(A)}{\mathrm{act}(A)}>D,
 $$
 
-since $B_q$ is active, contains $A$, and therefore $\operatorname{act}(A)\geq1$. In particular G3h' holds.
+since $B_q$ is active, contains $A$, and therefore $\mathrm{act}(A)\geq1$. In particular G3h' holds.
 
 #### 9.2 Coverage and dependency audit
 
@@ -1782,7 +1782,7 @@ The case tree for every triple $T$ is as follows.
 -  At its apex $x$, Lemma P gives $1\leq d_x\leq2$ and a nondeficient anchor. A both-light anchor is covered by Lemma Q and supplies at least $1/6$ with activity one. A both-heavy anchor is covered by the three exhaustive branches of subdivision 9.1. In its one-deficient-triple branch with additional type-2 slots, the internal alternatives are $m=0$, $m=1$, and $m\geq2$. Lemma N excludes the mutual-partner configuration. The anchor group $\mathcal A$ has only the type-2 slot $y$, so
 
 $$
-t_2(A)=1+m+m',\qquad \operatorname{act}(A)=1+\alpha_u+\alpha_w,\qquad
+t_2(A)=1+m+m',\qquad \mathrm{act}(A)=1+\alpha_u+\alpha_w,\qquad
  \alpha_u\leq[m=1],\quad\alpha_w\leq[m'=1].
 $$
 
@@ -1797,11 +1797,11 @@ Apexes with $d_x=0$ need no contribution. The dependencies are acyclic: subdivis
 Let $H$ be a finite avoiding $3$-graph. G1 holds at every deficient triple by subdivision 4, and G3h' holds for every relevant both-heavy anchor by subdivision 9.1. Theorem C' leaves every triple with nonnegative final charge. Conservation and the charge identity yield
 
 $$
-0\leq\sum_{T\in H}\operatorname{final}(T)
- =\sum_{T\in H}c(T)=|\partial H|+|\operatorname{CL}(H)|-2|H|.
+0\leq\sum_{T\in H}\mathrm{final}(T)
+ =\sum_{T\in H}c(T)=|\partial H|+|\mathrm{CL}(H)|-2|H|.
 $$
 
-This is the main inequality. Each of $\partial H,\operatorname{CL}(H)$ lies in $\binom V2$, so $\vert H\vert \leq\binom{\vert V\vert }{2}$. The written deduction depends on the exact finite statements in subdivision 10 and on the local anchor estimates. Its exact conclusion is now Lean-verified; see the formal verification ledger.
+This is the main inequality. Each of $\partial H,\mathrm{CL}(H)$ lies in $\binom V2$, so $\vert H\vert \leq\binom{\vert V\vert }{2}$. The written deduction depends on the exact finite statements in subdivision 10 and on the local anchor estimates. Its exact conclusion is now Lean-verified; see the formal verification ledger.
 
 ### 10. Exact finite statements
 
@@ -1877,7 +1877,7 @@ $$
 Q=S\setminus(P\cup\{x,y\}).
 $$
 
-Then $\vert Q\vert =2$, $B=Q\cup\{y\}$ and $D=Q\cup\{x\}$. Thus $P$ and $Q$ are disjoint members of $\operatorname{CN}(x,y)$. Together with F1, this proves that avoidance is equivalent to every common link being intersecting. No linearity assumption or additional forbidden configuration is used.
+Then $\vert Q\vert =2$, $B=Q\cup\{y\}$ and $D=Q\cup\{x\}$. Thus $P$ and $Q$ are disjoint members of $\mathrm{CN}(x,y)$. Together with F1, this proves that avoidance is equivalent to every common link being intersecting. No linearity assumption or additional forbidden configuration is used.
 
 ### B. The direction of the host-to-profile reduction
 
@@ -1901,7 +1901,7 @@ $$
 sxu,\quad suz,\quad sxz\in H.
 $$
 
-The already identified common links $\operatorname{CN}(w,s)$ are the full triangle $\{xu,uz,xz\}$. The three $w$-side triples have at least two triangle options, so G1(i) says that none is deficient. If an $r$-side triple is deficient, G1(ii) gives exactly one light pair incident with $r$. All possibilities are listed below. In each row apply Corollary 6g with
+The already identified common links $\mathrm{CN}(w,s)$ are the full triangle $\{xu,uz,xz\}$. The three $w$-side triples have at least two triangle options, so G1(i) says that none is deficient. If an $r$-side triple is deficient, G1(ii) gives exactly one light pair incident with $r$. All possibilities are listed below. In each row apply Corollary 6g with
 
 $$
 a=r,\qquad b=p_1,\qquad c=p_2.
@@ -1995,21 +1995,21 @@ This expands the accounting before the main theorem in Section 9.3.
 Let $a(R)$ be the number of active bicones containing a positive-charge donor $R$. It spends $c(R)/a(R)$ on each of those $a(R)$ bicones, for total expenditure exactly $c(R)$. A bicone $q$ is active precisely when
 
 $$
-\delta_q=\sum_{T\in D_q}\operatorname{def}(T)>0,
+\delta_q=\sum_{T\in D_q}\mathrm{def}(T)>0,
 $$
 
 so proportional division is legitimate. It gives each $T\in D_q$ the amount
 
 $$
-\operatorname{pot}(q)\frac{\operatorname{def}(T)}{\delta_q}.
+\mathrm{pot}(q)\frac{\mathrm{def}(T)}{\delta_q}.
 $$
 
-Summing over $D_q$ returns exactly $\operatorname{pot}(q)$. G1 places each deficient triple in exactly one bicone, so paying one deficit does not require repeated receipts.
+Summing over $D_q$ returns exactly $\mathrm{pot}(q)$. G1 places each deficient triple in exactly one bicone, so paying one deficit does not require repeated receipts.
 
 Within one bicone, if both apexes have positive deficit, their anchors are distinct triples: one contains $x$ and two base vertices, the other $y$ and two base vertices, and neither contains the other apex. An anchor may recur across bicones. Its anchor inequality uses the original share $c(R)/a(R)$ for the relevant bicone, not all of $c(R)$. Summing those shares over the active bicones never spends more than $c(R)$. A both-light anchor has $a(R)=1$; a both-heavy anchor uses the actual denominator, bounded by Lemma S8. Summing the anchor contributions over apexes with positive deficit within $q$ gives
 
 $$
-\operatorname{pot}(q)\ge\delta_q.
+\mathrm{pot}(q)\ge\delta_q.
 $$
 
 Every receiver obtains at least its deficit, and all other triples finish nonnegative.
@@ -2072,10 +2072,10 @@ The admissibility conditions follow from actual neighbours. The excluded mutual 
 
 ## Exact equality examples and a tight local branch
 
-Let $B$ have three vertices and let $X$ be a disjoint set of $k\ge1$ vertices. Put $\operatorname{cone}_k=\{P\cup\{x\}:P\in\binom B2,x\in X\}$. Its common links are stars for base-base pairs, triangles for apex-apex pairs, and empty for mixed pairs, so it is avoiding. Direct counting gives
+Let $B$ have three vertices and let $X$ be a disjoint set of $k\ge1$ vertices. Put $\mathrm{cone}_k=\{P\cup\{x\}:P\in\binom B2,x\in X\}$. Its common links are stars for base-base pairs, triangles for apex-apex pairs, and empty for mixed pairs, so it is avoiding. Direct counting gives
 
 $$
-|H|=3k,\quad |\partial H|=3+3k,\quad |\operatorname{CL}(H)|=3+\binom k2,
+|H|=3k,\quad |\partial H|=3+3k,\quad |\mathrm{CL}(H)|=3+\binom k2,
  \quad\Phi(H)=-\frac{(k-3)(k-4)}2.
 $$
 
@@ -2104,7 +2104,7 @@ This gives 1,307 triples on 78 vertices. Exact checks by common links and by dis
 
 $$
 c(abc)=-\frac{409}{755160},\quad c(acw)=\frac12,\quad
-c(A)=\frac{367}{1566},\quad\operatorname{act}(A)=2.
+c(A)=\frac{367}{1566},\quad\mathrm{act}(A)=2.
 $$
 
 The active bicones containing $A$ have apex pairs $\{c,t\}$ and $\{w,r\}$. The slot groups are
@@ -2124,8 +2124,8 @@ $$
 Here $X_{\rm cost}$ is the cost sum called $X$ in subdivision 8.1, not the vertex class. The local Lemma W bound has no slack. Nevertheless, with $D=409/755160$ and $k_{uw}=29$,
 
 $$
-\frac{c(A)}{\operatorname{act}(A)}-D=\frac{792709}{6796440}>0,\qquad
-c(A)-\operatorname{act}(A)D-\frac1{k_{uw}}=\frac{675529}{3398220}>0.
+\frac{c(A)}{\mathrm{act}(A)}-D=\frac{792709}{6796440}>0,\qquad
+c(A)-\mathrm{act}(A)D-\frac1{k_{uw}}=\frac{675529}{3398220}>0.
 $$
 
 This realizes the local equality coordinate with deficiency, not global equality or a proof of the universal anchor lemma. No limiting-rate assertion is inferred from this finite host.

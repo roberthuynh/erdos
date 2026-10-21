@@ -8,7 +8,7 @@ A finite simple 3-uniform hypergraph H is avoiding if it has no four distinct or
 
 The main theorem is
 
-$$2|H|\leq |\partial H|+|\operatorname{CL}(H)|.$$
+$$2|H|\leq |\partial H|+|\mathrm{CL}(H)|.$$
 
 Here ∂H is the set of pairs contained in an edge, and CL(H) consists of pairs {x,y} having a nonempty common link: some pair P disjoint from {x,y} has both P∪{x},P∪{y} in H. Each pair set is contained in the vertex pairs; they need not be disjoint. Thus the inequality implies |H|≤binom(n,2), including n=0.
 
