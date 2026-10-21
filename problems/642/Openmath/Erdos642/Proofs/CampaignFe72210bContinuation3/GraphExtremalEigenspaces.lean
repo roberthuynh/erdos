@@ -75,7 +75,7 @@ theorem rootVector_ne_zero [Nonempty V] (hdeg : ∀ x : V, 0 < G.degree x) :
     simpa [rootVector] using he
   exact (ne_of_gt (degreeRoot_positive G hdeg x)) hx
 
-/-- Exact actual eigenspace identification, proved from connected graph energy. -/
+                                                                                  
 theorem plus_eigenspace_eq_span (hconn : G.Connected)
     (hdeg : ∀ x : V, 0 < G.degree x) :
     Module.End.eigenspace (normalizedAdjacency G).toEuclideanLin (1 : ℝ) =

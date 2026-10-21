@@ -1,5 +1,7 @@
 # Fifth-power density bound: argument and formal interfaces
 
+This guide describes the earlier fifth-power theorem. The current cubic-logarithmic theorem is explained in the [working manuscript](manuscript/main.pdf) ([TeX source](manuscript/main.tex)).
+
 ## Statement and scope
 
 There is an absolute constant C > 0 such that every finite simple graph G with n vertices and
@@ -10,7 +12,7 @@ $$
 
 has a simple cycle with at least as many distinct chords as vertices. A chord is an unordered edge of G with both endpoints on the cycle, excluding the edges used by the cycle. Logarithms are natural.
 
-This document expands the composition and parameter argument of the supplied Lean proof. It gives written proofs of the scalar payment, probability intersection and deterministic retention steps, and states the extraction and probabilistic estimates at their implemented interfaces. It does **not** provide an independent full written proof of the spectral extraction, forest occupation, smoothing and self-avoidance estimates. Those remain supplied by the formal source closure. Thus it is an expert-readable guide to that proof, not a replacement for its 134 modules or a claim of human validation. Formal verification status is recorded separately in [VERIFICATION.md](VERIFICATION.md).
+This document expands the composition and parameter argument of the supplied Lean proof. It gives written proofs of the scalar payment, probability intersection and deterministic retention steps, and states the extraction and probabilistic estimates at their implemented interfaces. It does **not** provide an independent full written proof of the spectral extraction, forest occupation, smoothing and self-avoidance estimates. Those remain supplied by the formal source closure. Thus it is an expert-readable guide to that proof, not a replacement for the 134-module source closure of that earlier theorem or a claim of human validation. Formal verification status is recorded separately in [VERIFICATION.md](VERIFICATION.md).
 
 ## 1. Contradiction and extraction
 

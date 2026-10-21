@@ -10,7 +10,7 @@ open MomentSAParameters
 variable {V : Type*} [Fintype V] [DecidableEq V] [Nonempty V]
 variable (G : SimpleGraph V) [DecidableRel G.Adj]
 
-/-- Both first-family and later history-fixed root tails are supplied internally. -/
+                                                                                    
 theorem graph_two_window_absorbed (A B : Finset V)
     (hbi : G.IsBipartiteWith (A:Set V) (B:Set V)) (d : ℕ) (γ Λ : ℝ)
     (hdeg : ∀ z : V, 0 < G.degree z)

@@ -125,9 +125,9 @@ theorem induce_isBipartite (W : Finset V) (hbip : G.IsBipartite) :
       { toFun := Subtype.val, map_rel' := fun h => h }) hbip
 
 attribute [-instance] FinsetCoe.fintype in
-/-- Actual cut extraction from a given bipartite six-almost-regular graph.
-Positive degrees, cut expansion, connectedness and the full spectral predicate
-are conclusions proved for the actual induced subtype graph. -/
+                                                                          
+                                                                              
+                                                               
 theorem exists_induced_cut_expander (n : ℕ) (hn : 2 ≤ n)
     (horder : Fintype.card V ≤ n) (hpos : 0 < graphAverage G)
     (hbip : G.IsBipartite) (hratio : G.maxDegree ≤ 6 * G.minDegree) :

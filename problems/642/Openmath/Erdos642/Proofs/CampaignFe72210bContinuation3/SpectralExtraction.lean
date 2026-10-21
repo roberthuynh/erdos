@@ -30,7 +30,7 @@ theorem exists_spectral_host (hn : 3≤Fintype.card V)
   have hDpos : 0<D := by
     have hb : 0<ExtractParameters.baseConstant := by norm_num [ExtractParameters.baseConstant]
     exact (mul_pos hb (sq_pos_of_pos (by linarith))).trans_le hD
-  -- The frozen supplier returns the reducible actual-graph predicate Regularized.
+                                                                                  
   obtain ⟨S,hSne,J,instJ,hmap,hJbip,hJpos,hJret,_hJdegree,hJratio,hJorder⟩ :=
     RegularizationAssembly.exists_regularized_subgraph G (by omega) hDpos
   let : DecidableRel J.Adj := instJ

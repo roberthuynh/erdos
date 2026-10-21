@@ -193,8 +193,8 @@ theorem literal_level_approximation (u v : V → ℝ) (η δ μ : ℝ)
     have hh := mul_le_mul_of_nonneg_left hrare hη.le
     have hhh := mul_le_mul_of_nonneg_right hJ hη.le
     nlinarith
-/-- Literal signed-center tail. This uses only proved indicator concentration;
-the mean, floor error, and discarded-level losses are discharged internally. -/
+                                                                              
+                                                                               
 theorem signed_center_tail (C : Chain V) (u : V → ℝ)
     (huPos : ∀ x, 0 < u x) (hu : (∑ x, u x ^ 2) = 1)
     (γ : ℝ) (hγ : 0 < γ) (hγ1 : γ ≤ 1)

@@ -137,8 +137,8 @@ theorem unionGraph_le_original
 
 attribute [-instance] FinsetCoe.fintype in
 omit [DecidableRel G.Adj] in
-/-- All conclusions concern the literal induced subtype graph of the matching
-edge union; its degree, edge-count and average bounds are proved internally. -/
+                                                                             
+                                                                               
 theorem typed_union_spec
     (hinjective : ∀ i, Function.Injective (partner i))
     (hseparate : ∀ b, Function.Injective (fun i => (partner i b).val))

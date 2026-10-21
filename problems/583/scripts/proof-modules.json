@@ -1,0 +1,11 @@
+{
+  "Erdos583.Verified": {
+    "source": "Erdos583/Verified.lean",
+    "sha256": "ed3b85f7218b69846866daf57a578472b906944a6d9a13cf8c784e968acf0626"
+  },
+  "$pins": {
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+    "lakefile.toml": "03a99aa0420c19f48564f7a1df0e90a64333e9bbfc5147cebb19de06df311860",
+    "lake-manifest.json": "bb92f5fde64f26829a60017859ece84a31a42f63864e6982a8fb53b910c6b202"
+  }
+}

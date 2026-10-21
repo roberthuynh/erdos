@@ -61,7 +61,7 @@ theorem shoreTransition_row_sum (t : Set V) (hbi : G.IsBipartiteWith s t)
     (fun y : s => (graphTransition G ^ 2) x.val y.val)
     (fun _ _ => rfl) hz).symm
 
-/-- The genuine finite shore chain, with normalization proved from graph edges. -/
+                                                                                  
 noncomputable def shoreChain (t : Set V) (hbi : G.IsBipartiteWith s t)
     (hdeg : ∀ x : V, 0 < G.degree x) : Erdos642.FiniteMarkov.Chain s where
   transition := shoreTransition G s

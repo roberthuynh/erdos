@@ -1,9 +1,14 @@
-Erdős 642 formal proof package
-Copyright 2026 Robert Huynh.
-Apache License, Version 2.0.
+Erdős #642: cycles with many chords
+Copyright 2026 Robert Huynh
 
-Mathematical antecedents are attributed in SOURCES.md. No third-party paper
-PDF or extracted paper text is distributed in this package. The pinned
-mathlib and formal-conjectures dependencies retain their own licenses and
-notices when fetched; they are not vendored here. Existing source comments
-and declarations are preserved byte for byte.
+AI systems developed the mathematical arguments and Lean formalizations and
+performed source reviews under Robert Huynh's direction. No human mathematical
+review is claimed. AI use is disclosed separately from the named authorship.
+
+The package is distributed under the Apache License, Version 2.0. Lean, Mathlib
+and formal-conjectures are separately pinned dependencies with their own
+licenses. Cited research papers are not included in this package.
+
+The proof sources preserve the executable Lean commands of the verified
+mathematical development. Some comments were edited for public presentation.
+The source identity and verification files describe the exported version.

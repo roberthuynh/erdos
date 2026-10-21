@@ -1,6 +1,6 @@
 # Erdős Problem 585
 
-[Collection](../../README.md) · [Result index](RESULTS.md) · [Findings](findings/FINDINGS.md)
+[Collection](../../README.md) · [Results](RESULTS.md) · [Proof](findings/V0.4-PROOF.md) · [Evidence](VERIFICATION.md) · [Manuscript](manuscript/main.pdf)
 
 
 ## The problem
@@ -49,6 +49,8 @@ The known bounds are f(n) ≥ c·n log log n (Pyber, Rödl and Szemerédi, 1995)
 The [literature comparison](literature/README.md) records the closest regular-subgraph results, source versions, attribution and remaining gaps. It includes credit for Alejandro Zarzuelo Urdiales's dated public review. Worldwide novelty and a separate new application of the regular-subgraph bounds have not been established.
 
 ## Proofs and findings
+
+The [working manuscript PDF](manuscript/main.pdf) and [TeX source](manuscript/main.tex) give a partial exposition of the regular-subgraph results. They do not expand every selection or counting argument; the Lean sources provide the formal evidence.
 
 The [full findings](findings/FINDINGS.md) give definitions, claims, evidence and open questions. The [result index](RESULTS.md) links each line of work. The [proof companion](findings/V0.4-PROOF.md) is a partial exposition of the regular-subgraph argument; some selection and counting arguments remain unexpanded. The Lean sources provide the formal evidence for those results.
 

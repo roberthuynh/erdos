@@ -17,7 +17,7 @@ noncomputable def similarTilt (u d : V → ℝ) : Matrix V V ℝ :=
   fun x y => d x * C.similarTransition u x y * d y
 
 omit [DecidableEq V] in
-/-- One-step intertwining, proved directly in each finite summand. -/
+                                                                     
 theorem similarTilt_mulVec (u d f : V → ℝ) (hu : ∀ x, u x ≠ 0) (x : V) :
     (C.similarTilt u d *ᵥ (fun y => u y * f y)) x =
       u x * (C.tilted d *ᵥ f) x := by

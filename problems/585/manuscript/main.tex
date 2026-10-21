@@ -1,0 +1,302 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,longtable,array}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor,hyperref,microtype,xurl}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black}
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\status}[1]{\par\noindent\textcolor{blue!45!black}{\textbf{Evidence.} #1}\par}
+\title{Regular subgraphs in degree-capped bipartite graphs\\and their limits for Erd\H{o}s Problem 585}
+\author{Robert Huynh}
+\date{Working draft, 27 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We collect formally verified sufficient conditions for a nonempty $q$-regular subgraph in a finite simple bipartite graph of maximum degree at most $2q-2$. Writing $D=(q-1)n-e$, the principal condition is $D\le hq-16h^2$ for integers $h\ge6$ and $q\ge4096(h+1)^2$. It implies the allowance $D\le q^{3/2}/128$ for $q\ge200704$. Avoiding graphs exist with deficit $q^2-3q+4$ for every $q\ge5$ and order $n\ge4q-5$. A separate quartic theorem forces a $4$-regular subgraph at $3n-6$ edges under the cap six, while avoiding examples occur at $3n-8$. We expand the critical-support reduction, controlled peeling, a conditional cut-union estimate and the numerical corollary. The formal proofs establish the stated results; the selector and some coverage arguments remain unexpanded in this working exposition. These results do not solve the original cycle-pair problem or improve its published asymptotic bounds.
+\end{abstract}
+\tableofcontents
+
+\section{The problem and the scope of this draft}
+Erd\H{o}s Problem 585 asks for the largest number $f(n)$ of edges in a simple graph on $n$ vertices having no two edge-disjoint cycles with the same vertex set. The cycles may use a proper subset of the host's vertices. Their union is a $4$-regular subgraph, but obtaining such a union requires two cycles, each spanning that union's support. A regular subgraph alone supplies no such decomposition.
+
+The published bounds recorded in the accompanying literature comparison are
+\[
+ c n\log\log n\le f(n)\le n(\log n)^{O(1)},
+\]
+from Pyber, R\"odl and Szemer\'edi \cite{PRS} and Chakraborti, Janzer, Methuku and Montgomery \cite{CJMMcycles}. The original problem remains open in the sources checked for this work. We claim no improvement to either asymptotic bound.
+
+This draft concerns the related extraction problem in a restricted host class. Every graph below is finite and simple. We write $n=|V(G)|$, $e=|E(G)|$ for unordered edges, and
+\[
+ D=(q-1)n-e.
+\]
+Under $\Delta(G)\le2q-2$, the degree sum gives $D\ge0$ and
+\[
+ \sum_{v\in V(G)}(2q-2-d_G(v))=2D.
+\]
+In particular, $D$ is half the total degree shortfall, rather than that total itself.
+A nonempty $q$-regular subgraph consists of selected original vertices and selected original edges, with degree exactly $q$ at each selected vertex. It need not be induced, spanning or connected. A $q$-factor of a specified graph does span that specified graph.
+
+\section{The sufficient bounds}
+\begin{theorem}[Parameterized deficit]\label{thm:param}
+Let $h,q$ be integers with $h\ge6$ and $q\ge4096(h+1)^2$. If $G$ is bipartite, $n\ge2q$, $\Delta(G)\le2q-2$, and
+\[
+ D\le hq-16h^2,
+\]
+then $G$ contains a nonempty $q$-regular subgraph.
+\end{theorem}
+\begin{corollary}[Three-halves allowance]\label{thm:power}
+For every integer $q\ge200704$, the same order, bipartiteness and degree-cap assumptions imply the same conclusion whenever
+\[
+ D\le\frac{q^{3/2}}{128}.
+\]
+The power is over the reals; because $D$ is integral, the allowance is equivalently $\lfloor q^{3/2}/128\rfloor$.
+\end{corollary}
+\status{The formal declarations are \nolinkurl{Erdos585.R898.every_h_forcing} in \nolinkurl{R898/Main.lean} and \nolinkurl{Erdos585.R898.superlinear_forcing_200704} in \nolinkurl{R898/Corollary041.lean}. They quantify over the original host. Minimum degree, equal shores, a critical core and successful omission choices are not premises. Section~\ref{sec:proof} gives a partial exposition of the formal proof, with its remaining interfaces identified.}
+
+Earlier bounds remain useful at smaller values of $q$. The following rows assume the same bipartite host, $n\ge2q$ and cap $2q-2$.
+\begin{center}
+\begin{tabular}{rrl}
+\toprule
+Degree range & Sufficient allowance & Support guarantee\\
+\midrule
+$q\ge5$ & $D\le2q-5$ & some support of order at least $4q-6$\\
+$q\ge16384$ & $D\le3q-32$ & nonempty support\\
+$q\ge25600$ & $D\le4q-44$ & nonempty support\\
+$q\ge36864$ & $D\le5q-58$ & nonempty support\\
+\bottomrule
+\end{tabular}
+\end{center}
+The stronger support conclusion in the first row does not transfer to the larger allowances. These rows are separate formal endpoints, listed in Appendix~\ref{sec:map}; their complete proofs are not reproduced here. Independently of any such stronger guarantee, a nonempty simple bipartite $q$-regular graph has balanced shores and at least $2q$ vertices: each shore has at least $q$ vertices by simplicity, and counting edges from both shores gives $q|A|=q|B|$.
+
+\section{The proof through a critical support}\label{sec:proof}
+Put $F_0=hq-16h^2$. We follow the existing proof companion and the formal assembly. The reduction derives all the additional hypotheses used later. It does not assume that the original host is balanced or has minimum degree close to the cap.
+
+\subsection{Normalization and thinning}
+\begin{lemma}[Critical-support normalization]\label{lem:critical}
+Suppose the hypotheses of Theorem~\ref{thm:param} hold but $G$ has no nonempty $q$-regular subgraph. Then some original vertex set $S$ supports a bipartite subgraph $K\subseteq G$ with
+\[
+ |S|>2q,\qquad q\le d_K(v)\le2q-2\quad(v\in S),\qquad
+ (q-1)|S|-e(K)=F_0,
+\]
+and, for every $U\subsetneq S$ with $h\le|U|<|S|$,
+\begin{equation}\label{eq:floor}
+ (q-1)|U|-e(K[U])\ge F_0+1.
+\end{equation}
+The graph $K$ has no nonempty $q$-regular subgraph.
+\end{lemma}
+\begin{proof}
+The cutoff implies $q\ge32h$. A simple bipartite graph on $t$ vertices has at most $t^2/4$ edges. Thus its deficit is at least
+\[
+ \Phi(t)=(q-1)t-t^2/4.
+\]
+This function is concave on $[h,2q]$. The endpoint calculations are
+\[
+ \Phi(h)-F_0-1=\frac{63}{4}h^2-h-1>0,
+\]
+\[
+ \Phi(2q)-F_0-1=q(q-h-2)+16h^2-1>0.
+\]
+Consequently every support with $h\le t\le2q$ has deficit at least $F_0+1$. This remains true after edges are removed.
+
+Choose $S$ of minimum order among vertex sets of order at least $2q$ whose original induced deficit is at most $F_0$. The whole host qualifies. Retain exactly $(q-1)|S|-F_0$ edges on $S$. This number is positive, since it is at least $q(2q-2-h)+16h^2$, and it does not exceed the available number of edges. The resulting $K$ has exact deficit $F_0$.
+
+For proper supports of order at least $2q$, minimality and integrality give the floor before thinning, so the floor survives thinning. The preceding quadratic estimate gives it at smaller eligible orders. That estimate also excludes $|S|=2q$. If $d_K(v)\le q-1$, then
+\[
+ (q-1)|S\setminus\{v\}|-e(K-v)=F_0+d_K(v)-(q-1)\le F_0,
+\]
+contrary to the floor on the remaining support. The cap and absence of a regular subgraph are inherited from $G$.
+\end{proof}
+This is the existing normalization argument in \nolinkurl{R882/Normalization.lean}. Thinning uses original edges and does not assert that $K$ is induced in $G$.
+
+\subsection{Controlled peeling}
+\begin{lemma}[A terminal restriction]\label{lem:peel}
+Starting from $K$ in Lemma~\ref{lem:critical}, successively delete any vertex whose current degree is at most $q+2h-5$, until none remains. The terminal set $T$ satisfies
+\begin{gather*}
+ |T|\ge2q,\qquad q+2h-4\le d_{K[T]}(v)\le2q-2,\\
+ \bigl||A\cap T|-|B\cap T|\bigr|\le h-1,\\
+ F=(q-1)|T|-e(K[T])=F_0+C,\qquad0\le C\le4h^2-10h+4.
+\end{gather*}
+At most $2h-1$ vertices are deleted. Every proper subset $U\subsetneq T$ with $|U|\ge h$ retains deficit at least $F_0+1=F+1-C$.
+\end{lemma}
+\begin{proof}
+Write $r=q-1$ and $\delta(U)=r|U|-e(K[U])$. A deletion of current degree $d$ changes the deficit by $d-r$, so after $s$ deletions the deficit is at most $F_0+s(2h-4)$.
+
+If there were $2h$ deletions, let $P$ be that first deleted set and $M=S\setminus P$. The cap gives
+\[
+ 2e(K[M])+e_K(P,M)\le2r|M|,
+ \qquad e_K(P,M)\le2\delta(M).
+\]
+Using the partition identity,
+\[
+ \delta(P)=F_0-\delta(M)+e_K(P,M)
+ \le2F_0+2h(2h-4).
+\]
+Bipartite simplicity gives the opposite bound $\delta(P)\ge2h(q-1)-h^2$. The latter lower bound exceeds the former upper bound by $27h^2+6h>0$, a contradiction.
+
+The process therefore terminates after at most $2h-1$ deletions. Since $|S|>2q$ and $q\ge32h$, it leaves a nonempty graph. Terminal minimum degree forces at least $q+2h-4$ vertices on each shore, so $|T|\ge2q$. If any deletion occurred, the proper-support floor gives $C\ge1$; otherwise $C=0$. The deletion ledger gives
+\[
+ C\le(2h-1)(2h-4)=4h^2-10h+4.
+\]
+For retained shore sizes $a,b$, the cap gives $\delta(T)\ge(q-1)|a-b|$. But
+\[
+ \delta(T)\le hq-12h^2-10h+4<h(q-1),
+\]
+so integrality gives $|a-b|\le h-1$. The inherited floor on proper subsets of $T$ is the floor on the same subsets of $S$.
+\end{proof}
+The source is \nolinkurl{R837/Budget.lean}. Individual deletion charges can be negative; the proof uses their actual current degrees and proves nonnegativity only for the total cost $C$.
+
+\subsection{Factor cuts on a specified support}
+For balanced shores $A,B$, let
+\[
+ k(P)=|A\cap P|-|B\cap P|,\qquad
+ g(P)=e(A\cap P,B\setminus P)-qk(P).
+\]
+In the integral-flow network, source-to-$A$ and $B$-to-sink edges have capacity $q$ and original $A$-to-$B$ edges have capacity one. A source-side cut $\{s\}\cup P$ has capacity $q|A|+g(P)$. Hence a $q$-factor exists precisely when $g(P)\ge0$ for every $P$. This is the classical capacity network used, for example, in the proof of Theorem 2.2 of the dated author manuscript of Bollob\'as, Kim and Verstra\"ete \cite{BKV}. Enomoto, Ota and Kano's Lemma C gives a related factor criterion \cite{EOK}.
+
+For $a\in A$ and $b\in B$, demand zero at $a,b$ and demand $q$ at all remaining vertices. The same cut criterion becomes
+\begin{equation}\label{eq:omission}
+ q\bigl({\rm1}_{b\in P}-{\rm1}_{a\in P}\bigr)\le g(P)
+ \quad\hbox{for every }P.
+\end{equation}
+It gives a factor after deleting $a,b$. The central selection task is to choose a single pair satisfying every cut inequality. Choosing a separate pair for each cut would not suffice.
+
+\subsection{A conditional union estimate}
+The following calculation expands one part of the existing selection proof. Its hypotheses are intermediate properties of the cut witnesses, rather than premises of Theorem~\ref{thm:param}.
+
+Let $h\ge6$ and $q>h^2-5$. Suppose a finite nonempty family $P_i$ satisfies
+\begin{enumerate}
+\item $0\le g(P_i)\le3h-5$ and $k(P_i)\le h-1$;
+\item each incomparable pair has symmetric difference at most $h-1$;
+\item each $x\in A\cap P_i$ has at most $q$ neighbors in $B\setminus P_i$;
+\item each $y\in B\cap P_i$ has at least $q+1$ neighbors in $A\cap P_i$.
+\end{enumerate}
+Choose $P_0$ of largest cardinality, put $U=\bigcup_iP_i$ and $Z=B\cap(U\setminus P_0)$. A vertex $y\in Z$ belongs to some incomparable $P_i$. Since the reverse difference is nonempty, $|P_i\setminus P_0|\le h-2$. Thus $y$ has at least $q-h+3$ neighbors in $A\cap P_0$. Therefore
+\[
+ (q-h+3)|Z|\le e(A\cap P_0,Z)
+ \le q(h-1)+3h-5.
+\]
+If $|Z|\ge h$, the lower bound exceeds the upper bound by $q-h^2+5>0$. Hence $|Z|\le h-1$. Write $X=A\cap(U\setminus P_0)$. Premise 3 gives $e(X,B\setminus U)\le q|X|$, and exact edge accounting gives
+\begin{align*}
+ g(U)={}&g(P_0)+e(X,B\setminus U)-q|X|\\
+       &+q|Z|-e(A\cap P_0,Z).
+\end{align*}
+It follows that
+\[
+ g(U)\le3h-5+(h-3)|Z|\le h^2-h-2.
+\]
+This bounds the cut value, not the cardinality of $U$, and supplies no lower bound $g(U)\ge0$. A separate estimate from cut submodularity, when all witnesses avoid a fixed pin and every pin-avoiding set has nonnegative $g$, is $g(U)\le\sum_i g(P_i)$. The formal proof uses both upper bounds for different charges. The source is \nolinkurl{R898/Balanced/MinimalUnion.lean}.
+
+\subsection{The unexpanded selection interfaces}
+The normalization and peeling proofs above leave a terminal host whose deficit is $F_0+C$, whose proper supports have floor $F_0+1$, and whose shore imbalance is at most $h-1$. The formal assembly uses the following two branches.
+
+For unequal shores, orient them so $|B|=|A|+j$ with $1\le j\le h-1$. The positive selector takes the exact inherited floor, the bound $0\le C\le4h^2-10h+4$, minimum degree at least $q$ everywhere and at least $q+2h-4$ on the smaller shore, and the cap. It produces a set $O\subseteq B$ of size $j$ and a nonempty original $q$-regular subgraph on exactly $A\cup(B\setminus O)$. The proof is in \nolinkurl{R882/Positive/Main.lean}, declaration \nolinkurl{Erdos585.R882.Positive.error_floor_positive_selector}. It is an imported interface in this exposition. Its module lies in the accepted build and kernel closure; it has no separate registered whole-file result-oracle row in the dated proof-companion account. The final raw-host endpoint does have such registered evidence.
+
+For balanced shores, nonnegative factor cuts give a factor on the full terminal support. Otherwise the formal proof derives a common pin from a negative anchor, bounds the hazardous families and selects a compatible pair of omissions. Coverage then proves \eqref{eq:omission} for that same pair on all cuts. The source modules are \nolinkurl{R898/Balanced/CommonPins.lean}, \nolinkurl{LowSlack.lean}, \nolinkurl{Coverage.lean} and \nolinkurl{Main.lean} in that directory. The diameter premise of the preceding union calculation applies only to the reduced incomparable witnesses. It is not a property of arbitrary cuts of the raw host.
+
+The common-pin construction, low-slack diameter proof, derivation of the marginal degree conditions, mixed-insertion coverage and both simultaneous cut-payment calculations remain unexpanded here. In particular, the isolated union estimate does not explain the full reserve $4096(h+1)^2$ or the constant $16h^2$. The formal sources supply those arguments; this draft does not claim a complete standalone prose proof of Theorem~\ref{thm:param}.
+
+Finally, \nolinkurl{R898/Terminal.lean} handles both orientations. The factor lifts through the retained induced support and the thinned graph to a subgraph of $G$. This contradicts the assumed absence and proves the formal endpoint. The transport uses original vertices and edges throughout.
+
+\section{Deriving the explicit power allowance}
+The following arithmetic reproduces the existing smaller-cutoff corollary. Let $x=\sqrt q$ and
+\[
+ h=\lfloor x/64\rfloor-1.
+\]
+If $q\ge200704=448^2$, then $h\ge6$ and $h+1\le x/64$, so $4096(h+1)^2\le q$. Also $h\ge x/64-2$ and $h\le x/64$. Hence
+\begin{align*}
+ hq-16h^2
+ &\ge(x/64-2)q-q/256\\
+ &=q\bigl(x/64-513/256\bigr)\\
+ &\ge xq/128=q^{3/2}/128.
+\end{align*}
+The last inequality needs only $x\ge513/2$, which follows from $x\ge448$. Theorem~\ref{thm:param} proves Corollary~\ref{thm:power}. The declaration \nolinkurl{quantitative_numeric_200704} records the arithmetic, including the natural floor and literal real power. The earlier endpoint at $q\ge2^{18}$ remains valid. This is a consequence of the parameterized theorem, rather than a separate application or an optimal-cutoff claim.
+
+\section{Avoiding families and the remaining deficit gap}
+\begin{theorem}[Circular avoiding family]\label{thm:avoid}
+For every integer $q\ge5$ and every $n\ge4q-5$, there is a finite simple bipartite graph on $n$ vertices such that
+\[
+ q-1\le d(v)\le2q-2,\qquad
+ e=(q-1)n-(q^2-3q+4),
+\]
+and no nonempty $q$-regular subgraph exists on any support.
+\end{theorem}
+\status{The formal endpoint is \nolinkurl{BqCircularLowerFamily.all_orders} in \nolinkurl{Openmath/Proofs/PaperSupport/BqCircularLowerDirect.lean}. The exclusion covers arbitrary edge-subgraphs on arbitrary nonempty supports.}
+
+The formal construction begins with shores of sizes $2q-3$ and $2q-2$. Its circular seed has deficit $(q-1)(q-2)+2=q^2-3q+4$. Rows with degree exactly $q$ force their entire neighborhoods into any putative regular support; the source's \nolinkurl{seed_no_balanced_support} excludes every balanced nonempty support with sufficient row degree. A bipartite $q$-regular subgraph would have balanced shores and would meet those row-degree requirements. The circular incidence calculation and its full seed exclusion are not expanded in this draft.
+
+The order-extension mechanism has a short direct explanation. Add a new vertex to the smaller shore and join it to $q-1$ distinct unsaturated vertices of the opposite shore. Its degree is $q-1$, so it cannot belong to any $q$-regular subgraph. Any purported regular subgraph would therefore already be present before the addition. The new vertex and $q-1$ new edges preserve the deficit, while selecting unsaturated neighbors preserves the cap. The formal induction derives the required available vertices through a capacity count and maintains shore balance within one; availability is proved in the source, rather than assumed by the all-orders theorem. Iterating gives all $n\ge4q-5$. For example, the general capacity lemma states that if $r\ge3$, $r\le d(v)\le2r$ on a shore $B$ and
+\[
+ \sum_{v\in B}(2r-d(v))\ge r(r-1)+2,
+\]
+then at least $r$ vertices have degree at most $2r-1$. Otherwise at most $r-1$ vertices contribute, each at most $r$, contradicting the displayed sum. The actual induction supplies this reserve for $r=q-1$.
+
+Define $F^*(q)$ as the largest integer deficit allowance forcing a nonempty $q$-regular subgraph in every bipartite host with $n\ge2q$ and cap $2q-2$. Theorems~\ref{thm:param} and \ref{thm:avoid} give, for $q\ge200704$,
+\[
+ \max_{\substack{h\ge6\\4096(h+1)^2\le q}}
+       (hq-16h^2)
+ \le F^*(q)\le q^2-3q+3.
+\]
+The upper bound uses an avoiding graph at the next integer deficit. The lower side is of order $q^{3/2}$, while the displayed upper side is of order $q^2$. The optimal exponent remains open in this work. Other registered families improve some particular parameters, so the circular upper bound is not asserted to be the best bound in the package. For $q\ge5$, avoiding a $q$-regular subgraph does not imply that a graph is pair-free for the original problem.
+
+\section{The quartic case}
+\begin{theorem}[Quartic extraction]\label{thm:quartic}
+If $G$ is bipartite, $n\ge4$, $\Delta(G)\le6$ and $e\ge3n-6$, then $G$ contains a nonempty $4$-regular subgraph.
+\end{theorem}
+\begin{theorem}[Quartic avoidance]\label{thm:quarticavoid}
+For every $n\ge11$, there is a bipartite graph of maximum degree at most six, with $e=3n-8$, having no nonempty $4$-regular subgraph.
+\end{theorem}
+\status{The declarations are \nolinkurl{Erdos585.QB6Unconditional.qb6} and \nolinkurl{Erdos585.QBSharpnessFamily.all_orders}, respectively. Their source files appear in Appendix~\ref{sec:map}.}
+The quartic existence endpoint uses a closed proof of its minimum-five repair interface in \nolinkurl{QB6C02MinFive.lean}, passed into \nolinkurl{QB6FinalAssemblyPrep.lean}. No repair-success premise remains in Theorem~\ref{thm:quartic}. Its full case analysis is not reproduced here. The avoiding family uses a seed and degree-three additions. Such a new vertex cannot lie in a $4$-regular subgraph, so the same extension argument preserves avoidance. The seed and the available-neighbor selection are formal-source dependencies.
+
+The two thresholds differ by two edges. Whether $3n-7$ always suffices under the same host assumptions remains open in this work. Since a cycle pair would supply a $4$-regular subgraph, the avoiding examples are also pair-free. The extraction theorem itself does not provide a cycle pair.
+
+\section{Classical comparison and original-problem boundaries}
+A standard matching argument gives a useful smaller allowance in the same host class. If $D\le q-2$, the cap implies $D\ge(q-1)|a-b|$ for shore sizes $a,b$, so the shores are equal. Complete the host to a $(2q-2)$-regular bipartite multigraph by adding $D$ auxiliary edges, allowing parallels. A decomposition into $2q-2$ perfect matchings has at most $D$ matchings containing added edges. At least $(2q-2)-D\ge q$ clean matchings remain, and their union is an original spanning $q$-factor. The parallel edges occur only in the auxiliary completion.
+
+For prime-power $q$, Alon, Friedland and Kalai's Remark 3.6 \cite{AFK} yields a nonempty $q$-divisible subgraph when $e>(q-1)(n-1)$. Under the cap, every positive $q$-divisible degree is $q$, giving the integer allowance $D\le q-2$. This compares the specific displayed statements, rather than excluding all other classical arguments. For instance, $K_{2q-2,2q-2}$ plus an isolated vertex has $D=q-1$ and no spanning factor, yet contains $K_{q,q}$. A theorem on selected support addresses a different conclusion from a theorem spanning the original host.
+
+The average degree in our class is $2q-2-2D/n$, very close to the cap when $n$ is large. The prescribed-degree range in Theorem 1.13 of \cite{CJMMevery} is expressed using an existential constant; the bounded literature comparison did not establish that its displayed constants directly give our target near half the host degree. This does not exclude optimized constants, other reductions or an earlier implication. Worldwide novelty, novelty of the full selection mechanism and a separately new application remain unresolved. Classical factor cuts, minimal failing cuts and local degree inequalities are prior mathematics.
+
+For additional context, the registered formal results for the original extremal function include $f(n)=\binom n2$ for $n\le4$, $f(5)=9$, $f(6)=12$ and $f(7)=16$. The package also has pair-free $5$-regular witnesses of orders 18 and 32, and a bipartite one of order 104. These are finite statements. They do not turn regularity into a sufficient cycle-pair criterion. This manuscript does not promote computational upper exclusions at larger orders to formal theorems, and makes no census-minimality claim.
+
+\section{Formal evidence, exposition and AI use}
+The accompanying package records 78 registered declarations, 77 whole-file result-oracle checks and 438 configured custom modules. The accepted evidence includes pinned-source checks, statement and axiom audits, and kernel replay of the local module closure. One registered declaration in \nolinkurl{Openmath/Target.lean} has statement/axiom and kernel evidence without a whole-file oracle because that file also contains unproved conjectures. Those conjectures remain unproved. No registered proved result depends on \nolinkurl{sorryAx}; the allowed axioms are \nolinkurl{propext}, \nolinkurl{Classical.choice} and \nolinkurl{Quot.sound}. Dependency caches were reused, so the evidence does not claim a rebuild of Mathlib from empty state.
+
+This draft reuses the accepted evidence for unchanged mathematical sources. Compiling this document is a typesetting check, not a new mathematical verification. Exact statements, whole-file oracle coverage, dependency replay and the prose translation are different matters. The written account remains incomplete at the interfaces explicitly identified above, including the quartic case analysis and circular seed exclusion.
+
+AI agents produced the mathematical statements, proofs, constructions, programs and this exposition. Recorded separate-agent reviews are AI reviews. No human mathematical review or human Lean expert review is claimed. Robert Huynh is the sole named author. The literature guide credits Alejandro Zarzuelo Urdiales's dated public comparison work; that credit does not assert human verification of the proofs. This draft uses the source versions already recorded in that guide and makes no fresh exhaustive literature claim.
+
+\appendix
+\section{Statement-to-source map}\label{sec:map}
+Paths below are relative to the accompanying Problem 585 package. The machine-readable registry supplies the literal printed types and source hashes.
+\begin{longtable}{@{}p{0.28\textwidth}p{0.66\textwidth}@{}}
+\toprule
+Statement & File and declaration\\\midrule
+\endhead
+Theorem~\ref{thm:param} & \nolinkurl{R898/Main.lean}; \nolinkurl{Erdos585.R898.every_h_forcing}\\[4pt]
+Corollary~\ref{thm:power} & \nolinkurl{R898/Corollary041.lean}; \nolinkurl{Erdos585.R898.superlinear_forcing_200704}\\[4pt]
+$D\le2q-5$, support & \nolinkurl{L34MinimumSupport/Main.lean}; \nolinkurl{Erdos585.L34MinimumSupport.l34_minimum_support}\\[4pt]
+$D\le3q-32$ & \nolinkurl{R715/Main.lean}; \nolinkurl{Erdos585.H49BalancedR715.bare_h49}\\[4pt]
+$D\le4q-44$ & \nolinkurl{R788/Endpoint.lean}; \nolinkurl{Erdos585.H4BareR788.bare_h4_original_caller}\\[4pt]
+$D\le5q-58$ & \nolinkurl{R831/Endpoint.lean}; \nolinkurl{Erdos585.H5BareR831.bare_h5_original_caller}\\[4pt]
+Theorem~\ref{thm:avoid} & \nolinkurl{Openmath/Proofs/PaperSupport/BqCircularLowerDirect.lean}; \nolinkurl{BqCircularLowerFamily.all_orders}\\[4pt]
+Theorem~\ref{thm:quartic} & \nolinkurl{Openmath/Proofs/PaperSupport/QB6Unconditional.lean}; \nolinkurl{Erdos585.QB6Unconditional.qb6}\\[4pt]
+Theorem~\ref{thm:quarticavoid} & \nolinkurl{Openmath/Proofs/PaperSupport/QBSharpnessFamily.lean}; \nolinkurl{Erdos585.QBSharpnessFamily.all_orders}\\[4pt]
+Exact $n\le7$ & \nolinkurl{Openmath/Proofs/Final.lean}; \nolinkurl{Erdos585.maxEdges_eq_choose_two_of_le_four}, \nolinkurl{maxEdges_five}, \nolinkurl{maxEdges_six}, \nolinkurl{maxEdges_seven} in namespace \nolinkurl{Erdos585}\\
+\bottomrule
+\end{longtable}
+
+\begin{thebibliography}{9}
+\bibitem{AFK} N. Alon, S. Friedland and G. Kalai, \emph{Regular subgraphs of almost regular graphs}, J. Combin. Theory Ser. B 37 (1984), 79--91. Remark 3.6, printed p.85. \url{https://web.math.princeton.edu/~nalon/PDFS/Publications/Regular%20subgraphs%20of%20almost%20regular%20graphs.pdf}
+\bibitem{PRS} L. Pyber, V. R\"odl and E. Szemer\'edi, \emph{Dense graphs without 3-regular subgraphs}, J. Combin. Theory Ser. B 63 (1995), 41--54. \url{https://doi.org/10.1006/jctb.1995.1004}
+\bibitem{CJMMcycles} D. Chakraborti, O. Janzer, A. Methuku and R. Montgomery, \emph{Edge-disjoint cycles with the same vertex set}, Advances in Mathematics 469 (2025), 110228. Recorded preprint comparison: arXiv:2404.07190v1, Theorem 2; separately inspected published Theorem 1.2. \url{https://arxiv.org/abs/2404.07190v1}; \url{https://doi.org/10.1016/j.aim.2025.110228}
+\bibitem{EOK} H. Enomoto, K. Ota and M. Kano, \emph{A sufficient condition for a bipartite graph to have a k-factor}, J. Graph Theory 12 (1988), 141--151. Lemmas C and 4. \url{https://doi.org/10.1002/jgt.3190120115}
+\bibitem{BKV} B. Bollob\'as, J. H. Kim and J. Verstra\"ete, \emph{Regular subgraphs of random graphs}, author manuscript dated 21 February 2003, proof of Theorem 2.2, pp.3--4; published Random Structures \& Algorithms 29 (2006), 1--13. \url{https://mathweb.ucsd.edu/~jverstra/regular.pdf}
+\bibitem{CJMMevery} D. Chakraborti, O. Janzer, A. Methuku and R. Montgomery, \emph{Regular subgraphs at every density}, inspected preprint arXiv:2411.11785v2, Theorem 1.13; Trans. Amer. Math. Soc. 379 (2026), 8069--8090. Theorem numbering refers to the preprint. \url{https://arxiv.org/abs/2411.11785v2}; \url{https://doi.org/10.1090/tran/9694}
+\end{thebibliography}
+\end{document}

@@ -1,4 +1,212 @@
 {
+  "Openmath.Attempt6.AbsorberSelection": {
+    "source": "Openmath/Attempt6/AbsorberSelection.lean",
+    "sha256": "e548c123b3b40c737241b41125665839ba748e7a1bbf1609cab6d754a4a91577"
+  },
+  "Openmath.Attempt6.BalancedCompletion": {
+    "source": "Openmath/Attempt6/BalancedCompletion.lean",
+    "sha256": "66e0166db130caff1f9193ac2cc21d6a734df6198684ddee80e10702bb3bd4a9"
+  },
+  "Openmath.Attempt6.BernsteinBlocks": {
+    "source": "Openmath/Attempt6/BernsteinBlocks.lean",
+    "sha256": "4cf9f392331cc742523ccfbb478704b8d56e5ca4b6db830924c5374b95388d14"
+  },
+  "Openmath.Attempt6.BoundedDifferences": {
+    "source": "Openmath/Attempt6/BoundedDifferences.lean",
+    "sha256": "8b03d8ddd08a687e337a8cbd0ae804dc386a33f1a344a8fe5982c9543c62d76c"
+  },
+  "Openmath.Attempt6.CategoricalPools": {
+    "source": "Openmath/Attempt6/CategoricalPools.lean",
+    "sha256": "7d9dd0c68a919b679f87c53063af3e9f2b47daa4194db9929478392ac1e00b76"
+  },
+  "Openmath.Attempt6.EdgePartition": {
+    "source": "Openmath/Attempt6/EdgePartition.lean",
+    "sha256": "84efce175f6a909110387216fa1d409777701936fd3b916013cfeb03146760b7"
+  },
+  "Openmath.Attempt6.ExponentBudgets": {
+    "source": "Openmath/Attempt6/ExponentBudgets.lean",
+    "sha256": "ae4995dfeaf6cff5fcf9a799ba571b46135aa4ac2242c23b21882b8585327140"
+  },
+  "Openmath.Attempt6.IndependentTransversals.AugmentingSequences": {
+    "source": "Openmath/Attempt6/IndependentTransversals/AugmentingSequences.lean",
+    "sha256": "98191af9ed9090dfe1500f9354ef0cf417f4030325983352d2c2501c25bdaf01"
+  },
+  "Openmath.Attempt6.IndependentTransversals.Basic": {
+    "source": "Openmath/Attempt6/IndependentTransversals/Basic.lean",
+    "sha256": "cf6ef051e553017813b7d10b6e63b05bec72b0b1d158b736f16994eac95d5df5"
+  },
+  "Openmath.Attempt6.IndependentTransversals.Haxell": {
+    "source": "Openmath/Attempt6/IndependentTransversals/Haxell.lean",
+    "sha256": "036c2fb538da24c4dca7e355cb103e8465ed132f676d5e3444bd67bca0d233a1"
+  },
+  "Openmath.Attempt6.IndependentTransversals.MainDefs": {
+    "source": "Openmath/Attempt6/IndependentTransversals/MainDefs.lean",
+    "sha256": "dce19dcd47c5e9f060908139d399f1760e2fe221573edb9badab55b2fb0bc3ce"
+  },
+  "Openmath.Attempt6.LocalRouting": {
+    "source": "Openmath/Attempt6/LocalRouting.lean",
+    "sha256": "f80ef54e92155d5271ce51c8092a9aad1e6ce15e02e69e0496a0c2d467aa1509"
+  },
+  "Openmath.Attempt6.LocalRoutingCharge": {
+    "source": "Openmath/Attempt6/LocalRoutingCharge.lean",
+    "sha256": "2a5a8d509cf14b13b0736c21041ee467e243ef64d60fb916f0cdb0fe99cbc166"
+  },
+  "Openmath.Attempt6.MinimumForest": {
+    "source": "Openmath/Attempt6/MinimumForest.lean",
+    "sha256": "b6a68adfe530848d60ea590548e4aaa6dab8dd261e84a050842627b302d9279e"
+  },
+  "Openmath.Attempt6.MinimumForestOptimality": {
+    "source": "Openmath/Attempt6/MinimumForestOptimality.lean",
+    "sha256": "e751aabc119e467a276dd51538cb1285b839f6e61efd10aef5929000c9160715"
+  },
+  "Openmath.Attempt6.PairedRouting": {
+    "source": "Openmath/Attempt6/PairedRouting.lean",
+    "sha256": "d2a920926089dc4f4c9302aa07ef31132fda494da8e01f7f2f6445ba1084fb75"
+  },
+  "Openmath.Attempt6.PrivateLeafPaths": {
+    "source": "Openmath/Attempt6/PrivateLeafPaths.lean",
+    "sha256": "d058d0bcfde6faa9916f908600a971481086339df5245ba7cb46520c8313c73b"
+  },
+  "Openmath.Attempt6.PrivateLeaves": {
+    "source": "Openmath/Attempt6/PrivateLeaves.lean",
+    "sha256": "b56c2df89d34fffadf1b0be5befbe2bcfc55db5e0fc8d6a8a7a90125c222ba4c"
+  },
+  "Openmath.Attempt6.PublicBernoulli": {
+    "source": "Openmath/Attempt6/PublicBernoulli.lean",
+    "sha256": "e4b970363c2ec9d1af6709c1db31eba5e45e7da70146399e025439675147377b"
+  },
+  "Openmath.Attempt6.RainbowMatching": {
+    "source": "Openmath/Attempt6/RainbowMatching.lean",
+    "sha256": "d382a6d8dc5f67e03296ec6735b5b612bb1ab5afa13bcfa53b0337644674bbeb"
+  },
+  "Openmath.Attempt6.RainbowRoutingBudgets": {
+    "source": "Openmath/Attempt6/RainbowRoutingBudgets.lean",
+    "sha256": "987af0bbe8d4a01cf4e5f52b876047f03f2589d518c23b3e6cbe4cde83017e82"
+  },
+  "Openmath.Attempt6.RandomRouting": {
+    "source": "Openmath/Attempt6/RandomRouting.lean",
+    "sha256": "a007c7dab25e4f54f0bc38c0d2ede1cf8932ecfcf1d7c1257a9f6aa740c9fbda"
+  },
+  "Openmath.Attempt6.Reachability": {
+    "source": "Openmath/Attempt6/Reachability.lean",
+    "sha256": "ea650204f8ff6f4668d3ec479bce1a44180edcac39cb3a571e707e5327d5d4a6"
+  },
+  "Openmath.Attempt6.ReachabilityAlternative": {
+    "source": "Openmath/Attempt6/ReachabilityAlternative.lean",
+    "sha256": "8290094083d3effa4173e4c6b6bfdc89b2997b29ee6ceda585c1f43824778411"
+  },
+  "Openmath.Attempt6.ReachabilityBoost": {
+    "source": "Openmath/Attempt6/ReachabilityBoost.lean",
+    "sha256": "8adc5f57601e3cf1f8ff366dd50f296e1b33884a6f254b7d26bb42dcc34adbe1"
+  },
+  "Openmath.Attempt6.ReachableEndpointPool": {
+    "source": "Openmath/Attempt6/ReachableEndpointPool.lean",
+    "sha256": "f7f9bbdfce59941088a10824c17e0f174b9b5920b48299f9ed5a23ec26583ce7"
+  },
+  "Openmath.Attempt6.RegularizationIteration": {
+    "source": "Openmath/Attempt6/RegularizationIteration.lean",
+    "sha256": "d44cf5a24ca957cddbddf149093a57c3d7cfd5475769d9e4db144015648bb655"
+  },
+  "Openmath.Attempt6.RegularizationStep": {
+    "source": "Openmath/Attempt6/RegularizationStep.lean",
+    "sha256": "b72a920b6d975c18ee1d2d257bb5aeba42bde89baaa604ad1c9782437d21c8fc"
+  },
+  "Openmath.Attempt6.RegularizationTransport": {
+    "source": "Openmath/Attempt6/RegularizationTransport.lean",
+    "sha256": "5f4eeea1f412c47eff2214b86c563861fe8d867770b7aad0ecec10aeee166eb6"
+  },
+  "Openmath.Attempt6.ReservoirDegree": {
+    "source": "Openmath/Attempt6/ReservoirDegree.lean",
+    "sha256": "1c05dfeeaf88bdb512f985429166a6750e20b532c28d7df8391cf1ca6a566b67"
+  },
+  "Openmath.Attempt6.ReservoirGrowth": {
+    "source": "Openmath/Attempt6/ReservoirGrowth.lean",
+    "sha256": "c7a7a9a660dd160f75dacfe8c748c53fca6b930beb1c8e0617c0acaaedc2f67e"
+  },
+  "Openmath.Attempt6.RobustCore": {
+    "source": "Openmath/Attempt6/RobustCore.lean",
+    "sha256": "07e52c56437e8e6464d120922740a33df1f5b8159a602c659252e999331f7526"
+  },
+  "Openmath.Attempt6.RotationFamily": {
+    "source": "Openmath/Attempt6/RotationFamily.lean",
+    "sha256": "0157e38742a2109071e71f2fd4eb1505d77baa9781d99ab8c9ef97022129f3e7"
+  },
+  "Openmath.Attempt6.RotationStep": {
+    "source": "Openmath/Attempt6/RotationStep.lean",
+    "sha256": "62b53d590f48eecd742569e53d4c021f0ed781efbee5466c7e22cfa259637b80"
+  },
+  "Openmath.Attempt6.RoutingBudgets": {
+    "source": "Openmath/Attempt6/RoutingBudgets.lean",
+    "sha256": "3feb97db83bd182bca897abf6adb9d06b5b30ee682e294c5b3fe307b9e640a43"
+  },
+  "Openmath.Attempt6.RoutingSelection": {
+    "source": "Openmath/Attempt6/RoutingSelection.lean",
+    "sha256": "beb0e0d82a6522985bbc4ac4270cc2421686880a283a060c5e6c30e4caaf6931"
+  },
+  "Openmath.Attempt6.SampledReachability": {
+    "source": "Openmath/Attempt6/SampledReachability.lean",
+    "sha256": "a7a717d73038f5b7319d13c46b7299656ecdff088d61ca8ccf3bb3e30f56244a"
+  },
+  "Openmath.Attempt6.SourcePools": {
+    "source": "Openmath/Attempt6/SourcePools.lean",
+    "sha256": "3567829c9bd5674e1379be04caaf52a8ede6046491f0f9ada91bff5369c62edf"
+  },
+  "Openmath.Attempt6.Statement": {
+    "source": "Openmath/Attempt6/Statement.lean",
+    "sha256": "c9d67791247b69eff4305bc6ba1accb3c691b9b4c5d7c999d8608ea835409875"
+  },
+  "Openmath.Attempt6.StrongConnecting": {
+    "source": "Openmath/Attempt6/StrongConnecting.lean",
+    "sha256": "24acd76e81c4ff407222673b8fb0779b77bc669a44acf52e3d6098285e0163e5"
+  },
+  "Openmath.Attempt6.UniformReachability": {
+    "source": "Openmath/Attempt6/UniformReachability.lean",
+    "sha256": "7e4b70b5f9c018f5f3c44b2f0a48966d58c17f84db553975a314e7459b5dfd7a"
+  },
+  "Openmath.Attempt6.WellExpandingSeed": {
+    "source": "Openmath/Attempt6/WellExpandingSeed.lean",
+    "sha256": "5a420247b5e0241e5f18a50faf1e50897bae3c5f70d82362c7f1801e783e4b7e"
+  },
+  "Openmath.Erdos642.Proofs.Adaptive20261018.Absorption": {
+    "source": "Openmath/Erdos642/Proofs/Adaptive20261018/Absorption.lean",
+    "sha256": "ac1cd6160eb110e32effd9f92f37a03f11561a86334392000f588d03dd8fdb70"
+  },
+  "Openmath.Erdos642.Proofs.Adaptive20261018.AllOrders": {
+    "source": "Openmath/Erdos642/Proofs/Adaptive20261018/AllOrders.lean",
+    "sha256": "358ee52ec60633360ca7f82c31840eef8467a7a411e09bc1553101ae495c1b06"
+  },
+  "Openmath.Erdos642.Proofs.Adaptive20261018.Forest": {
+    "source": "Openmath/Erdos642/Proofs/Adaptive20261018/Forest.lean",
+    "sha256": "4a2e055f7923391589ac1d411a2902f71b885ca32dcdd446e830c7ebbe847738"
+  },
+  "Openmath.Erdos642.Proofs.Adaptive20261018.Original": {
+    "source": "Openmath/Erdos642/Proofs/Adaptive20261018/Original.lean",
+    "sha256": "6a4366aca9c2b24c736c0434152186e0da307fa6e7b0efc6132249e792f49f6f"
+  },
+  "Openmath.Erdos642.Proofs.Adaptive20261018.OriginalPayment": {
+    "source": "Openmath/Erdos642/Proofs/Adaptive20261018/OriginalPayment.lean",
+    "sha256": "57439ad6a60caaba4b21aac5108d9e77fc8dc01a1783cdf0b2300ced6c564d43"
+  },
+  "Openmath.Erdos642.Proofs.Adaptive20261018.Parameters": {
+    "source": "Openmath/Erdos642/Proofs/Adaptive20261018/Parameters.lean",
+    "sha256": "5db7c13d33f39843e85ec0e02aad33d2e5d91850d6ee5fb10937d48c6b44bb12"
+  },
+  "Openmath.Erdos642.Proofs.Adaptive20261018.RichCycle": {
+    "source": "Openmath/Erdos642/Proofs/Adaptive20261018/RichCycle.lean",
+    "sha256": "672d3d0cfc9566cc3267a03b424fe0f30a0aeecf5474a848669b7c6ec544b9ff"
+  },
+  "Openmath.Erdos642.Proofs.Adaptive20261018.ShoreFamily": {
+    "source": "Openmath/Erdos642/Proofs/Adaptive20261018/ShoreFamily.lean",
+    "sha256": "5a6f00eacc071bf14b1ae8fd5aa5ac717f77cbc7df41955a79ae004a6c2b3001"
+  },
+  "Openmath.Erdos642.Proofs.Adaptive20261018.Spectrum": {
+    "source": "Openmath/Erdos642/Proofs/Adaptive20261018/Spectrum.lean",
+    "sha256": "37ab5d741ef6c615f0a2593d1cb6be143a26aad6734ec2167c6376ab11d96e51"
+  },
+  "Openmath.Erdos642.Proofs.Adaptive20261018.Windows": {
+    "source": "Openmath/Erdos642/Proofs/Adaptive20261018/Windows.lean",
+    "sha256": "5f35deafa713ed426e7aaec1976e94c4576e7fbd267fa28d858402d43ef1ab99"
+  },
   "Openmath.Erdos642.Proofs.CampaignFe72210b.BipartiteSigns": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210b/BipartiteSigns.lean",
     "sha256": "2c39f097b2e47c8bad66e9039e3af73b2cf3c1333874b840e8d24f97fd685493"
@@ -9,7 +217,7 @@
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210b.CycleSupport": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210b/CycleSupport.lean",
-    "sha256": "de7a5113ce88e81fca3f16ab02427e8d22dcb5575312f8f14341ad9ccc2c1b5a"
+    "sha256": "afad39543e893d59483e580581f37e059c6de00b4ec4e03040d88c2faeff79de"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210b.DegreeRatios": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210b/DegreeRatios.lean",
@@ -205,11 +413,11 @@
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210b.ReversibleMoment": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210b/ReversibleMoment.lean",
-    "sha256": "f1118561b1f1dee5b3b959135bdf5bff9d9948dd9135502feee35cc557452d5c"
+    "sha256": "3b56eb760b904437f01cb55c3081bf5814710388fa9b83888e7cf3ac545cf0d0"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210b.RichWalkCycle": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210b/RichWalkCycle.lean",
-    "sha256": "2ae08de8027d3140840fa257b7fd53d5c4b62c2e8ca108f99a116c306960514e"
+    "sha256": "79635bc12cea15e0398d0e65ee4f79a4f21b24cef626e626e7eda3d93cc6622d"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210b.RoundedForestExtraction": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210b/RoundedForestExtraction.lean",
@@ -229,7 +437,7 @@
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210b.ShoreChain": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210b/ShoreChain.lean",
-    "sha256": "17a895a68ccad435baa52e4b1a79dcf22f30446df9ded9046b33ab63e5d73eb0"
+    "sha256": "0e8031170d0fa83daece9f399d7c4e519df482cc531f24f62ba40bed1e554fa6"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210b.ShoreDensity": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210b/ShoreDensity.lean",
@@ -269,7 +477,7 @@
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210b.SpectralHost": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210b/SpectralHost.lean",
-    "sha256": "6544574bc17781bcc42a34793023ccec2b5ee5dd4d39b022de707a6d1aced372"
+    "sha256": "6db954eeb2e64115dd43af26913999cea0583fbc17631376d9ef2853dc3d153e"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210b.SpectralHostSelfAvoidance": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210b/SpectralHostSelfAvoidance.lean",
@@ -305,7 +513,7 @@
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210b.TwoStepPaths": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210b/TwoStepPaths.lean",
-    "sha256": "644a576f46f33de76c78c7a315fe04fee4b879d51db277a4f87ac27995a304df"
+    "sha256": "2716baf564e934345b30f6567b2ee38a2a75c66e16080ce42c38cb0229f37472"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210b.TwoWindowTransfer": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210b/TwoWindowTransfer.lean",
@@ -321,7 +529,7 @@
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.AvoidanceHeredity": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/AvoidanceHeredity.lean",
-    "sha256": "b7830f0abdeae84e7bf19d083e047e5e35db0d1cd52c51ac031934fdc7aea56b"
+    "sha256": "50231b07968229a94d262011833e5a1959e07cbd1e733e59e7e26120e6044f2a"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.CodegreeLayerCake": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/CodegreeLayerCake.lean",
@@ -329,11 +537,11 @@
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.CoordinateGrid": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/CoordinateGrid.lean",
-    "sha256": "d9cdc7628d5045e91db07d22cb989ad0b7f34a5160a115e7b47c7ede3fdb2342"
+    "sha256": "7c05e62ea0ec68bbe403119baf83b8c75c586ecd7e3a774b9472c197985ca3e4"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.CutExtractSubtype": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/CutExtractSubtype.lean",
-    "sha256": "dbfcd737714f14651e458237cb8dfae978d7bb28835f3d1e0044c49ebbdada65"
+    "sha256": "89bbb7a66e32dff6ca866e191412c9c8c2a478b6b7cf205bce1005d2738ea38f"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.CutOperations": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/CutOperations.lean",
@@ -353,7 +561,7 @@
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.FiniteCoarea": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/FiniteCoarea.lean",
-    "sha256": "f19a3879e754c9354e118a548c607ebae50d1408ebd1c330d115c6835de7e22c"
+    "sha256": "bc55baf972fa1a25980099de94311411797ce1000c95dc2ac0456f608624249f"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.FourthBlock": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/FourthBlock.lean",
@@ -377,7 +585,7 @@
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.GraphCheegerGap": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/GraphCheegerGap.lean",
-    "sha256": "10534d12d99018f013f7e609a327a55f54fe7da7fda228b879d1d91100f0d5b8"
+    "sha256": "cf46bd3a227f589fb48b0acc30a40fca1b8768b52a37928183c91f2ad52238ff"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.GraphCheegerRayleigh": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/GraphCheegerRayleigh.lean",
@@ -397,7 +605,7 @@
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.GraphExtremalEigenspaces": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/GraphExtremalEigenspaces.lean",
-    "sha256": "09546eb7b57f23cf63123d0063ffdb82700962cef4f2d0d4bd69f09693734587"
+    "sha256": "88ab1abcf2af6fe6240cc5765221688344d720ecb2502fcdb15ad8cd53c94fb5"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.GraphSmoothingOccupation": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/GraphSmoothingOccupation.lean",
@@ -405,11 +613,11 @@
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.InitialDensity": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/InitialDensity.lean",
-    "sha256": "864b42471db4096441d6a303c33178f904fb865b8a3234f51db1767937499cf5"
+    "sha256": "97c152a5466ef902c45fd8751b1e2bbe04f01a8bc75097b93920d416ebe9ee67"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.LevelSetOccupation": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/LevelSetOccupation.lean",
-    "sha256": "de88f776edd2c6554c9b3d9c15c8631ce77578737a4c6f3b867264872751b63c"
+    "sha256": "5caa8211e3bf183b6c5727fe338e3ea3ad592ca36f588deffb04f2f33c0118a6"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.LocalAvoidanceMoment": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/LocalAvoidanceMoment.lean",
@@ -433,7 +641,7 @@
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MatchingUnion": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MatchingUnion.lean",
-    "sha256": "a328b815e17223c6c9e5bc520778cfe1c524e8876a5f95d9c7e3087978ba2c14"
+    "sha256": "9dfa3aba00f716385032ac135238315a31420ec88064997f88f63b346cdffe07"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MinimalNeighborhoodHall": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MinimalNeighborhoodHall.lean",
@@ -489,11 +697,11 @@
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.MomentTwoWindow": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MomentTwoWindow.lean",
-    "sha256": "ff460ad29903ce7ccf7cbd63cdad14f06d6b1e1a914710b9c09b4f5b7711b832"
+    "sha256": "5bd210050588bb235494632e7473a7a53ac34a2afa6c0dcdcc89aa911279e058"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.NestedMatchingLayers": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/NestedMatchingLayers.lean",
-    "sha256": "c91a44c5ad19a5036daa5f7ba4783bd83bd6ed65b6c5bf0488b890886dfdbb7d"
+    "sha256": "bc33492de23e1bc2c0a52ffac4420499a3c633005a3fa794fb0f3e298687341b"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.OldGlobalApplicability": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/OldGlobalApplicability.lean",
@@ -521,7 +729,7 @@
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.SpectralExtraction": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/SpectralExtraction.lean",
-    "sha256": "a717379573ccc7de2bf5132311dd78a83af10dd4f3c84064cb94cae2b88b5fc2"
+    "sha256": "aedfd355412bab8a8a1896db2586fc391e2e1e0a24159d8fb99835310aab1360"
   },
   "Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.StrongGlobalApplicability": {
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/StrongGlobalApplicability.lean",
@@ -535,13 +743,321 @@
     "source": "Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/WeightedMedian.lean",
     "sha256": "5d76140504b2c355726a1801c115fb54502ba733f83f55a4ffb844dc7dab2c0c"
   },
+  "Openmath.Erdos642.Proofs.CloudT9_20261021.ExponentFixedPoint": {
+    "source": "Openmath/Erdos642/Proofs/CloudT9_20261021/ExponentFixedPoint.lean",
+    "sha256": "66925b69b44c84c490a9880b4ddd28747f59e68cd3a0f0a63fec7e9c8a3e9932"
+  },
+  "Openmath.Erdos642.Proofs.CloudT9_20261021.IncidenceLedger": {
+    "source": "Openmath/Erdos642/Proofs/CloudT9_20261021/IncidenceLedger.lean",
+    "sha256": "79491d4a5fb73b80dd544bc6d16b56211d0f31be552f6755535b430dcd2228a3"
+  },
+  "Openmath.Erdos642.Proofs.CloudT9_20261021.PendantCycle": {
+    "source": "Openmath/Erdos642/Proofs/CloudT9_20261021/PendantCycle.lean",
+    "sha256": "7c4b309157e84ca4989c04277a5f92d2e88e9e9296b4e53c76766cb38178aa44"
+  },
+  "Openmath.Erdos642.Proofs.CloudT9_20261021.PendantRich": {
+    "source": "Openmath/Erdos642/Proofs/CloudT9_20261021/PendantRich.lean",
+    "sha256": "69939dcc716437e3553ebadcb32f2908207dd4d30f2024e2749986cef778234b"
+  },
+  "Openmath.Erdos642.Proofs.CloudT9_20261021.ThreeLedger": {
+    "source": "Openmath/Erdos642/Proofs/CloudT9_20261021/ThreeLedger.lean",
+    "sha256": "7ab01abebc899e0e091b76a84709b12d3e3bcd9085fad679b63d7f8131ec7572"
+  },
+  "Openmath.Erdos642.Proofs.CloudT9_20261021.TreeBranch": {
+    "source": "Openmath/Erdos642/Proofs/CloudT9_20261021/TreeBranch.lean",
+    "sha256": "0eea662136fca5bbf40409a6a397d333367a24c3f490c4031aa7799f3fbe9760"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.AdaptiveObstruction": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/AdaptiveObstruction.lean",
+    "sha256": "82d67448e9e2f19f3dc7d42323486eba76f7142484d0972d0b7cc2fd7f8f7c8a"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.AvoidanceOrder": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/AvoidanceOrder.lean",
+    "sha256": "819a1eac106ec14678be0f193ccd9ddb8a011e4814c4fba43a14d8ffe82a45d9"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.ComponentEntropy": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/ComponentEntropy.lean",
+    "sha256": "6e8ebb9073b56cc2fc5f017a01ff01e23586d88c4df6f625c0da1181323e7e96"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.ComponentObstruction": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/ComponentObstruction.lean",
+    "sha256": "22d3fa442d6e3897f12d8cb65383412ce02aa1961a825091cb136088297a1a6d"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.CutEscape": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/CutEscape.lean",
+    "sha256": "99793967d2645bacb8f59b3c60dea9bee6c6fac84a5cd074b4ec487164143efa"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.DeletionComponents": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/DeletionComponents.lean",
+    "sha256": "9e61f24f21377e6d84b394f151dc49d8dfd0ad6ade1626802f188cd9401f9f6c"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.FixedObstruction": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/FixedObstruction.lean",
+    "sha256": "40944b8640c8a689a62df3a40eafa413ddb6e94a013a5234b064ab6aeba60449"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.GallaiComponents": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/GallaiComponents.lean",
+    "sha256": "0ed0dcfd559f3bc2178b2caba99755fc1376ad7ed5391f75082734bf605fe896"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.GallaiDeficiency": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/GallaiDeficiency.lean",
+    "sha256": "365433145dc0d0a483c1cd5cac2cab6a9fbac84165909e10f3baea107eb10ca1"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.GallaiHitting": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/GallaiHitting.lean",
+    "sha256": "3b3b739e64a97c0cd83307f764c9f76e6fe21e54e425aa1c3c1d6c162aad2529"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.GallaiMatching": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/GallaiMatching.lean",
+    "sha256": "849ffddeb6c5b3b99062f613d966eecdc828322826109b8a61f43bd705a1edcb"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.GallaiNormalization": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/GallaiNormalization.lean",
+    "sha256": "2103056d4cfd6be85551f9d91f609e448b5283f047c508b030bd538db08a3f2e"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.GallaiPaths": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/GallaiPaths.lean",
+    "sha256": "bd4732ac5a35f6e40e699b6f8a2168c85a80b1ed961fc489eec8fa720be011d1"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.GallaiTwins": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/GallaiTwins.lean",
+    "sha256": "73608c10e165a32753b0ac372e24e506588c0ebbd8de2f4d153bd978d230cf8a"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.GlobalObstruction": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/GlobalObstruction.lean",
+    "sha256": "b8aa006457d62f6a1eacd14cc2bf42f1f28c7513d778ecf96ec2530455f5c922"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.GraphPayment": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/GraphPayment.lean",
+    "sha256": "e1646a0485772ea13017845655dd380b82c9c036f130aef7dbf9f5db69a4d798"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.IncidenceHall": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/IncidenceHall.lean",
+    "sha256": "ddffcde9bcb5720e04427f66d9612ff1f8018e96bf208e34f826dc4e1b33261e"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.InitialConcentration": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/InitialConcentration.lean",
+    "sha256": "116e881f7be5b40a34e257f053451cc605e0cf62706401453c1fcd6d8b2ee563"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.InitialMass": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/InitialMass.lean",
+    "sha256": "3f5e886e09b5d33d6f223de4be5ec07cef800dc8efbc3ca21af40893adb8ef5a"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.MaskCore": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/MaskCore.lean",
+    "sha256": "b0f7781d40f201b5414cbae0316db70e68bf44c1f9c179941b81ed31fd7fbfa7"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.NestedSampling": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/NestedSampling.lean",
+    "sha256": "56463d0a105bc50940a0fa12a347ddaf3a5cd9ebf4c1c35ce3daba6844069c9a"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.ObstructionCollections": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/ObstructionCollections.lean",
+    "sha256": "320cdcbf12995eb51375ec321708dc05cbdfee4c350220432081fc40a1dea5d9"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.PrunedHistory": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/PrunedHistory.lean",
+    "sha256": "25b64051d0e940edec746f0290b4045b713eabf0105a061a4492ebb915bc41df"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.Sampler": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/Sampler.lean",
+    "sha256": "171d277698d0c52a75c37fd7e23102fb6b6952653cb109349be5994c41cc2658"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.Sampling": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/Sampling.lean",
+    "sha256": "06f51b5e3b25002c7d3d4a5c551e63b60316b52386117f45a229931161f2e350"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.SamplingObstruction": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/SamplingObstruction.lean",
+    "sha256": "cea395be0bfd36e40e034d7f3a46f23d2793371a356285326bd923fc8b01aad5"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.SamplingParameters": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/SamplingParameters.lean",
+    "sha256": "ee5c617fe24b111a5f2727b505a9c4ea2858f7d386c2f82fbb9a3bde26af6719"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.SprinklingProbability": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/SprinklingProbability.lean",
+    "sha256": "dc1b0b7647e2182cd92278bc555b1869a63d046f5a6e7668805cd9e8428dd7a8"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.SprinklingTransport": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/SprinklingTransport.lean",
+    "sha256": "12e9be6f9a804f190a0f709627d7808b7099376cc92fb7a366902dee75bab891"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.ThinningConcentration": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/ThinningConcentration.lean",
+    "sha256": "13e17c50fc0152abc82f3d5d6e99f20c69edbdbbe5d76e454657b24808fe7b56"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.ThinningEvent": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/ThinningEvent.lean",
+    "sha256": "7004c40b02003dc12b42299b900aa2b1af586693f47caddb8a0f14c115617a80"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.ToughLayersV2": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/ToughLayersV2.lean",
+    "sha256": "ed828c7741a1421b6757ab97919f1acaa829b188208c29e79ea7f9736500fd61"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.Toughness": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/Toughness.lean",
+    "sha256": "c32bd47e76033fb687d43cead4fbd492fec1986e462312e3e8e6634045c59016"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.UniformLayers": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/UniformLayers.lean",
+    "sha256": "fd98a5af99c798abaac1b9da4f89f53f81bea1681ebfbbb60f670edfb416c337"
+  },
+  "Openmath.Erdos642.Proofs.DenseMask20261019.UpperObstruction": {
+    "source": "Openmath/Erdos642/Proofs/DenseMask20261019/UpperObstruction.lean",
+    "sha256": "a7fe9873965ae0a9e2bbc6969f178b7aa1cb4a8668c24a4e11fc689fa3168c49"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.Absorption": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/Absorption.lean",
+    "sha256": "1748e743dae12a09ee580b91fe5c354a9de6f715300f1ed6c1dcc937da8ce84b"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.AllOrders": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/AllOrders.lean",
+    "sha256": "01e94b5b8817a01e342ef28be030ac1421e0be10f56602acc30dc078bb564fdb"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.ConvexTail": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/ConvexTail.lean",
+    "sha256": "93ca120bcd21ee39bef537df26dd644f2f1e95abd40fede1f5d3661a025313d2"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.ConvexTailEmpirical": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/ConvexTailEmpirical.lean",
+    "sha256": "af9817b4db20d0332ca6d8d55d0e0dfeb502577198de9e19a48843c44bef70ce"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.ConvexTailMatrix": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/ConvexTailMatrix.lean",
+    "sha256": "404175cb2ee9d0b06885a617b286e1effe6c41eb5fcba955307f501c1c03aeda"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.Energy": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/Energy.lean",
+    "sha256": "1e4ab713af0f4b1bf6d7e2e92c3a89cb1d5c7d11eb78844410fa93f0d24f00a2"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.EnergyLimit": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/EnergyLimit.lean",
+    "sha256": "08d5e3cdd286775e713d10b746f2ed6eb5e95e5691657be29b931412ea28bb3b"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.EnergyRates": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/EnergyRates.lean",
+    "sha256": "a26a645000498cc2b30464458db425ba6a4aadda84afbbd547a7f1bfc7068d90"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.EnergySupport": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/EnergySupport.lean",
+    "sha256": "613554579b7950e3472612adf2dc2f2d35fbf976502374db497e5970738443a9"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.Forest": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/Forest.lean",
+    "sha256": "08a60ea8c98a3fa92e3d06cf26bc351c5b619efc1a4be0f604bc1449614852cb"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.JointFamily": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/JointFamily.lean",
+    "sha256": "468b08d29a36c4036d83b947fb3d6405d14d75cb9c8acc70336817fa215c6fd8"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.JointFamilyGeometry": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/JointFamilyGeometry.lean",
+    "sha256": "a07d218a1424020c506586da6f100ab640978facf3e3f6c5f20db38c9c8a61f6"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.JointFamilySets": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/JointFamilySets.lean",
+    "sha256": "8679c18336e69b936c5899dfc76692690485cf638771649dcb7d897796b25367"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.JointFamilySpectral": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/JointFamilySpectral.lean",
+    "sha256": "8a1ef1b4455f5efe0121987b382e743ace60c7f5cbf789e76ae9870c9fb4e51e"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.Original": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/Original.lean",
+    "sha256": "6f64bb714fb1b7fa26d10bd06e8e571de76f2263b6d3418b48f41f16813a0275"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.OriginalPayment": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/OriginalPayment.lean",
+    "sha256": "30e3ca86d03e7e5bd11c20c0d81542b6f142374d39ad341d9fb5980aa69a295a"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.Parameters": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/Parameters.lean",
+    "sha256": "0fb53182ceb36afa50c343bfd50bfe226b52c6c0bf08d9ae78fae06d6f4861e6"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.Rates": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/Rates.lean",
+    "sha256": "7f188a10c46a62733bfaf7de6e190c02718debf4d2a18c3a4afa1ef752d5ca20"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.RichCycle": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/RichCycle.lean",
+    "sha256": "1a915c39b9dd0136749d6d5744d284b52b32318dd643b974e3e62aae9ad0b50b"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.ShoreFamily": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/ShoreFamily.lean",
+    "sha256": "593d62a3cbc39b964f9f54996e2232b1dcd910efb311b14b897d82d1bf46e282"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.SphereNet": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/SphereNet.lean",
+    "sha256": "7ef68b7ee65e002be2dcda484475e80c8d9756723e17d7e23644f2418ea79377"
+  },
+  "Openmath.Erdos642.Proofs.Joint20261019.Windows": {
+    "source": "Openmath/Erdos642/Proofs/Joint20261019/Windows.lean",
+    "sha256": "b37d219f62cbb1ec30888c7c742425e574fa3075a25697de0b84d1ab9799c063"
+  },
+  "Openmath.Erdos642.Proofs.Log3V1_20261024.Constants": {
+    "source": "Openmath/Erdos642/Proofs/Log3V1_20261024/Constants.lean",
+    "sha256": "e73a7b8bd893435bf6700c5aa5386a4e971b0b3bc32473f67e34dd233b21a7b2"
+  },
+  "Openmath.Erdos642.Proofs.Log3V1_20261024.Extract": {
+    "source": "Openmath/Erdos642/Proofs/Log3V1_20261024/Extract.lean",
+    "sha256": "1b852517496028344ad73701743f4c498830002e3db0fe4c512364db4a0fba6c"
+  },
+  "Openmath.Erdos642.Proofs.Log3V1_20261024.Interface": {
+    "source": "Openmath/Erdos642/Proofs/Log3V1_20261024/Interface.lean",
+    "sha256": "b9c26cd983c582bf13d004e0692bf93bc7c0e08cc9298072b2f32fcc0efca0e2"
+  },
+  "Openmath.Erdos642.Proofs.Log3V1_20261024.LayerHall": {
+    "source": "Openmath/Erdos642/Proofs/Log3V1_20261024/LayerHall.lean",
+    "sha256": "b2725e9c013f735aa609292082acedc2b2ee7aacbf906f0ac1bfbefd66cfaf15"
+  },
+  "Openmath.Erdos642.Proofs.Log3V1_20261024.Merger": {
+    "source": "Openmath/Erdos642/Proofs/Log3V1_20261024/Merger.lean",
+    "sha256": "29ac4b0e85c97a77dfbd56478cdfd6b5dcb0b2cb752198160feb9f93a14b9295"
+  },
+  "Openmath.Erdos642.Proofs.Log3V1_20261024.Theorem": {
+    "source": "Openmath/Erdos642/Proofs/Log3V1_20261024/Theorem.lean",
+    "sha256": "1311d235d2aa0696f2f683ad176063abdf932f24c5b43d50f60e132edf8c56cc"
+  },
+  "Openmath.Erdos642.Proofs.Log3V1_20261024.ToughPaths": {
+    "source": "Openmath/Erdos642/Proofs/Log3V1_20261024/ToughPaths.lean",
+    "sha256": "cf3201751d6524432db821087a267664c388a04800d95e6446b3e5ca54945917"
+  },
+  "Openmath.Proofs.CommonHostCompletion": {
+    "source": "Openmath/Proofs/CommonHostCompletion.lean",
+    "sha256": "4fffb72e93dd194b73825b121e83e363afa530c3ada257b4d894036567487fcc"
+  },
+  "Openmath.Proofs.ConditionalCompletionCount": {
+    "source": "Openmath/Proofs/ConditionalCompletionCount.lean",
+    "sha256": "2bae40530700af8cefa81cdbc359a4c11724e3108687df7ca52f599039cb3cbe"
+  },
+  "Openmath.Proofs.CyclicConstraintCount": {
+    "source": "Openmath/Proofs/CyclicConstraintCount.lean",
+    "sha256": "44bc14b1fc34562e4afe4a37bdad2525241953d8d01378310389a965de7056d1"
+  },
+  "Openmath.Proofs.FixedVertexCompletion": {
+    "source": "Openmath/Proofs/FixedVertexCompletion.lean",
+    "sha256": "87f40cc3c9c3832b47354790e4ec9080cb21f37214c09f61b70cdf9a07c7f941"
+  },
+  "Openmath.Proofs.ForestPathInput": {
+    "source": "Openmath/Proofs/ForestPathInput.lean",
+    "sha256": "8ae4fae4e543c92ac6690fa6c23d995ef216ecad377ee56cf7b97c7a3b00275a"
+  },
+  "Openmath.Proofs.PathContraction": {
+    "source": "Openmath/Proofs/PathContraction.lean",
+    "sha256": "a7cc603886b8f415fe1a37a076a7705c1b75057adf7ecec0eee6522c9a369ef6"
+  },
+  "Openmath.Proofs.PathCycleCompletion": {
+    "source": "Openmath/Proofs/PathCycleCompletion.lean",
+    "sha256": "5db329a52716ec3093a543c54561fb87b45018e4a19db23e3d1f5f195b8dfdaf"
+  },
   "Openmath": {
     "source": "Openmath.lean",
-    "sha256": "6ce494a5ae2232062f522ba2b95519d8785b884680ca9e905bbbb4248472ab40"
+    "sha256": "b5b0031ea61a01e830f8f7154d25fe8e179f17bf2b361e3d31e315936c9a5656"
   },
   "$pins": {
     "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
-    "lakefile.toml": "4704229faa8823fec1f8d24eac5aaf3d97f1ab38dd6c59bdf19472955717e7ef",
+    "lakefile.toml": "ee98408186a0180637773d572d103643a681b61a49e9725f9ca0a688487e00e0",
     "lake-manifest.json": "84f1e2a54574bd9e19d817640db956fe28f832d5b2e0c18e5625c69e9f2b5ed1"
   }
 }

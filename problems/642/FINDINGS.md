@@ -1,11 +1,7 @@
-# Findings: Erdős 642
+# Scope of the findings
 
-An all-graph fifth-power logarithmic upper bound with no remaining host assumptions.
+The main result supplies a cubic-logarithmic edge threshold for a cycle with at least its length in chords. The [results table](RESULTS.md) also retains the earlier fifth-power, adaptive and fourth-power bounds and six supporting facts. The [working manuscript](manuscript/main.pdf) ([TeX source](manuscript/main.tex)) explains the dense-mask and tough-layer construction.
 
-Draganić, Methuku, Munhá Correia and Sudakov published an O(n(log n)^8) bound in 2024. A public 2026 discussion sketch already claims the seventh power, so that exponent is not presented here as new. The exported result gives the fifth power through a formalized extraction and random-walk argument. Draganić and Girão’s 2026 preprint guarantees almost linearly many chords in the cycle length, which is a different conclusion. The original O(n) question remains open.
+These results do not settle the constant-average-degree question. The package makes no claim to a new $n\log^{11/4}n$, $n\log^2 n$, $n\log n$ or linear threshold. It does not claim that the elementary supporting identities are novel. The comparison with published and announced work appears in [SOURCES.md](SOURCES.md).
 
-The proposed mathematical contribution is the exact statement in the [result index](RESULTS.md). File counts measure the proof’s dependency footprint, not a number of discoveries. Earlier results and motivational sources are credited in [SOURCES.md](SOURCES.md).
-
-The [mathematical exposition](PROOF.md) explains the fifth-power gain and support-preserving probability argument. The [formal proof map](PROOF-MAP.md) links the complete 134-module chain. Analytic suppliers are explicitly identified; their full proofs are supplied in Lean.
-
-The claim in this package is the fifth-power threshold stated above. No claim of first priority, a solution to the original conjecture, human acceptance or institutional endorsement is made.
+The formal source reviews were performed by AI systems. The manuscript is a working exposition and has not received an independent statement-by-statement review or human mathematical review.

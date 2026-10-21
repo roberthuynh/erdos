@@ -97,7 +97,7 @@ private theorem peel_abs (a b m : ℝ) (ha : 0 ≤ a) (hb : 0 ≤ b)
     · have hbp : 0 < b := lt_of_le_of_ne hb (Ne.symm hb0)
       simp [ha0, hb0, hap, hbp, sub_sub_sub_cancel_right]
 
-/-- Exact finite coarea inequality, proved by finite least-level peeling. -/
+                                                                            
 theorem coarea (w : V → V → ℝ) (_hw : ∀ x y, 0 ≤ w x y)
     (h : ℝ) (_hh : 0 ≤ h) (f : V → ℝ) (hf : ∀ x, 0 ≤ f x)
     (hcut : ∀ S : Finset V, S ⊆ support f → h * volume w S ≤ cut w S) :

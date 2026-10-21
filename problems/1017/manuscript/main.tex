@@ -1,0 +1,150 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,longtable,array}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor,hyperref,microtype}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black}
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\cp}{\operatorname{cp}}
+\newcommand{\rhoG}{\rho(G)}
+\newcommand{\status}[1]{\par\noindent\textcolor{blue!45!black}{\textbf{Evidence.} #1}\par}
+\title{Finite bounds for fractional clique partitions and weighted clique decompositions}
+\author{Robert Huynh}
+\date{Working draft, 26 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We collect three finite results on clique decompositions: a density-dependent upper bound for exact fractional edge-clique partitions, a construction with a positive second-order lower correction at prescribed mesoscopic edge excess, and exact global fractional extrema for binomial clique costs. We also include the affine-slope obstruction, a near-complete upper bound and the supporting selector framework. The accompanying Lean sources prove the three principal results and the two named refinements. The original integral estimation problem remains open; integral asymptotic consequences using external rounding are distinct from the formalized finite statements.
+\end{abstract}
+\tableofcontents
+
+\section{The problem and conventions}
+For a finite simple graph $G$, an integral edge-clique partition partitions its original edges into complete subgraphs with at least two vertices. Its minimum size is $\cp(G)$. An exact fractional partition assigns nonnegative weights $w_K$ to original cliques, with
+\[
+ \sum_{K\supseteq e} w_K=1\quad(e\in E(G)),\qquad
+ \cp^*(G)=\min\sum_K w_K.
+\]
+Thus $\cp^*(G)\leq\cp(G)$. We write $n=|V(G)|$ and $e(G)=|E(G)|$. The question associated with Erd\H{o}s problem 1017 concerns the integral extremal cost at specified order and edge count. A fractional upper bound is not by itself an integral upper bound.
+\section{Finite results}
+\begin{theorem}[Density-dependent fractional upper bound]
+Every finite simple graph satisfies
+\[
+ \cp^*(G)+\frac{\sqrt7}{3}e(G)\leq
+ \frac{1+\sqrt7/3}{4}n^2.
+\]
+\end{theorem}
+\status{The declaration \texttt{Erdos1017.sharp\_affine} states this bound on every finite simple graph. Its partition has exact load on each original edge.}
+\begin{theorem}[Finite lower construction]
+Let $n,m$ be natural numbers satisfying $n\geq100$, $2n\leq m$ and $100m\leq n^2$. Put $q=\lfloor n^2/4\rfloor$. There is an $n$-vertex graph with exactly $q+m$ edges for which every exact fractional or integral edge-clique partition has cost at least
+\[
+q-m+\frac{2m^2}{9n^2}-\frac{8m}{9n}-\frac{29}{18}.
+\]
+\end{theorem}
+\status{The declaration \texttt{Erdos1017.Mesoscopic.finite\_lower\_bound} states the exact order, edge count, nonempty integral partition type, and both lower bounds for the same graph.}
+\begin{theorem}[Binomial-cost extrema]
+Fix integers $n\geq0$ and $t\geq2$. A clique of order $j\geq t$ has cost $\binom{j-1}{t-1}$; smaller cliques have cost zero. Cover or decompose the original $t$-cliques fractionally, using loads at least one or exactly one respectively. The maximum optimum over all $n$-vertex graphs is, for both objectives,
+\[
+ M_t(n)=\max_{1\leq a\leq n} a\binom{n-a}{t-1},\qquad M_t(0)=0.
+\]
+\end{theorem}
+\status{The declaration \texttt{Erdos1017.Binomial.exact\_fractional\_extremum} states the all-graph upper bound, an attaining split graph, and the lower bound for every cover of that graph. This is a different cost problem from unit-cost edge partitions.}
+\section{Additional verified conclusions}
+The upper-bound family also contains two verified refinements. First, for every $\lambda>\sqrt7/3$, a finite split graph defeats the corresponding anchored affine inequality. The declaration is \texttt{Erdos1017.sharp\_affine\_slope\_barrier}. Second, every finite graph has an exact fractional partition of cost at most $n^2-2e(G)$, formalized as \texttt{Erdos1017.Dense.near\_complete}. The slope conclusion concerns the stated anchored affine form. It does not determine the full extremal function at each edge density. Both conclusions concern exact fractional partitions.
+\section{How the upper bound is proved}
+The proof first constructs exact clique loads on complete multipartite graphs. A rooted random selector gives a base distribution on cliques. Correlated trades involving three through six selected coordinates preserve the required edge moments while reducing the total mass. First-order analytic bounds and rational certificate cells establish the central range. A triangle-leave construction and a root-inflation argument cover the remaining ranges. Strict induction on the number of positive part weights combines these cases.
+The passage to arbitrary graphs transfers weight between nonadjacent positive vertices. Each branch reduces positive support. Mixing the resulting partitions preserves exact demand on the original edges; the clique-supported case uses the multipartite theorem. Setting all weights to one gives the stated graph theorem. This uses the classical Zykov averaging framework. The accompanying source includes all sector inequalities and the rational cell certificates in \texttt{RectangleCells/Batch00.lean} through \texttt{Batch23.lean}. The proof map lists their dependencies. This section is a roadmap; the finite cell arguments are given in Lean rather than expanded line by line here.
+\section{The lower construction and its arithmetic}
+Let $K=\lfloor n/10\rfloor$. For $0\leq s\leq K$, choose $d$ as the largest integer at most $2s/3+2$ with the parity of $n-s$, and set
+\[
+ A=(n-2-s+d)/2,\quad B=(n-2-s-d)/2,
+\]
+\[
+ \mu(s)=n^2/4-q+(n-1)s/2-\bigl(s^2+(d-2)^2\bigr)/4.
+\]
+Take independent sets of sizes $A,B$ and a clique of size $s$, join the three parts completely, and add two nonadjacent vertices adjacent to the first independent set and to the clique. Any $t$ of their $2B$ possible edges to the second independent set may be added. The resulting edge count is $q+\mu(s)+t$.
+The signed clique dual in the construction has value $W$ satisfying
+\[
+ W+e(G)-n^2/2=s^2/18-s/3-(d-2s/3-2)^2/2.
+\]
+Each added edge has dual weight $-1$, so its contribution cancels on the left. For clarity, call the independent parts $A,B$, the complete core $C$, and the two additional vertices $D$. The edge weights are
+\[
+\begin{array}{c|rrrrrrr}
+\text{pair}&AB&AC&BC&CC&DA&DB&DC\\\hline
+\text{weight}&1&2/3&-2/3&-1/3&1&-1&-2/3.
+\end{array}
+\]
+A clique contains at most one vertex from each of $A,B,D$. If their indicators are $a,b,d\in\{0,1\}$ and its core has $r$ vertices, its total weight is
+\[
+ab+2ar/3-2br/3-r(r-1)/6+da-db-2dr/3.
+\]
+For the eight triples $(a,b,d)$, its values are respectively
+\[
+\begin{array}{c|l}
+000&-r(r-1)/6\\
+100&1-(r-2)(r-3)/6\\
+010&-r(r+3)/6\\
+001&-r(r+3)/6\\
+110&1-r(r-1)/6\\
+101&1-r(r-1)/6\\
+011&-1-r(r+7)/6\\
+111&1-r(r+3)/6.
+\end{array}
+\]
+Each value is at most one for every natural $r$. Summing the exact edge-load equalities against these signed weights gives $W\leq\sum_K w_K$. Nonnegative clique masses permit this final inequality. Exactness is necessary because some edge weights are negative; this argument does not give the same conclusion for fractional covers.
+Consecutive $\mu$ increments are positive and at most $2B$, while $\mu(0)=0$ and $\mu(K)>n^2/100$. Choose the largest $s<K$ with $\mu(s)\leq m$ and take $t=m-\mu(s)$. This gives exactly the requested number of edges. Since $m<\mu(s+1)\leq n(s+1)/2$, we have $s>2m/n-1$. Consequently
+\begin{align*}
+ W&\geq q-m+s^2/18-s/3-2\\
+  &=q-m+(s-3)^2/18-5/2\\
+  &\geq q-m+(2m/n-4)^2/18-5/2,
+\end{align*}
+which is the displayed bound. The assumption $m\geq2n$ makes the squaring step valid. An integral partition is a special fractional partition.
+\section{A selector for the weighted theorem}
+Give the original vertices nonnegative integer weights and require product demand on each original $t$-clique. Suppose first that the positive support is a clique. If every weight is zero, zero clique mass satisfies the demands because $t\geq2$. Otherwise let $a>0$ be a largest weight and let $r$ be a vertex with that weight. Choose vertices independently with inclusion probabilities $w_i/a$, and multiply the probability mass by $a^t$. Every selected set with positive mass is a clique, and $r$ is always selected. The load on each $t$-clique $B$ is
+\[
+ a^t\prod_{i\in B}(w_i/a)=\prod_{i\in B}w_i.
+\]
+Since $r$ is present, the cost of a selected clique counts its $(t-1)$-subsets away from $r$. Summing their inclusion probabilities gives total cost
+\[
+ a\,e_{t-1}((w_i)_{i\ne r}),
+\]
+where $e_{t-1}$ is the elementary symmetric sum. If the total integer weight is $n$, subset counting bounds this sum by $\binom{n-a}{t-1}$.
+
+For arbitrary positive support, choose two positive nonadjacent vertices $u,v$. Transfer their total weight to $u$ in one branch and to $v$ in the other. Mix the two partitions with coefficients $w_u/(w_u+w_v)$ and $w_v/(w_u+w_v)$. No clique contains both vertices, so every original product demand is restored exactly. Both branches preserve total integer weight and reduce positive support. Induction reaches the clique-supported case, and all unit weights give the claimed all-graph upper bound. This reduction uses the Zykov framework discussed in~\cite{bhknw}.
+
+Choose a maximizing $a$ and take the split graph whose independent side has $a$ vertices and whose complete side has $n-a$ vertices. It contains $a\binom{n-a}{t-1}$ original $t$-cliques with exactly one independent vertex. Any actual $j$-clique contains at most $\binom{j-1}{t-1}$ of these distinguished cliques. Summing their cover constraints therefore gives the matching lower bound for every fractional cover. The universal upper bound supplies an exact partition attaining it. When $n=0$, the empty graph gives value zero; when $n<t$, all required $t$-clique demands are absent and the same formula is zero.
+\section{The two further bounds}
+For a split graph with independent side $a$ and complete side $s$, the signed dual in \texttt{SplitDual.lean} gives
+\[
+ \cp^*(G)\geq 2as/3-s(s-1)/6.
+\]
+Fix $\lambda>\sqrt7/3$, put $r=\sqrt7$ and choose $a=\lfloor(r-2)s\rfloor$. The difference between this dual value plus $\lambda e(G)$ and $(1+\lambda)(a+s)^2/4$ is at least
+\[
+ \frac{3r-7}{2}(\lambda-r/3)s^2-\frac{1+3\lambda}{2}s.
+\]
+Its quadratic coefficient is positive, so a sufficiently large positive integer $s$ makes the difference positive. This proves the larger-slope obstruction with an actual finite graph.
+
+For the near-complete bound, the weighted induction again transfers mass between nonadjacent positive vertices. The all-zero vector uses zero clique mass. Otherwise, in the clique-supported case, choose vertices independently with probabilities $x_i/a$, where $a$ is a largest weight, and multiply the probability mass by $a^2$. The resulting pair demands are $x_ix_j$. Its cost is at most $a^2$, which is at most $\sum_i x_i^2$. On a clique-supported vector, the latter equals $(\sum_i x_i)^2-2\sum_{ij\in E}x_ix_j$. The transfer identity preserves this budget under averaging. All unit weights give $n^2-2e(G)$.
+
+\section{Context and limits}
+Balogh and Wigal~\cite{bw} study packing edge-disjoint cliques. Blumenthal, Lidick\'y, Pehova, Pfender, Pikhurko and Volec~\cite{bl} study decompositions into edges and triangles with a specified cost family. Balogh, He, Krueger, Nguyen and Wigal~\cite{bhknw} give a general framework for fractional clique costs and asymptotic integral results. These are related but distinct objectives. Split graphs, signed duals, subset counting and Zykov symmetrization have classical antecedents; no claim is made that those general methods originated here. Historical priority is not exhaustively established.
+
+The original integral estimation problem~\cite{ep} remains open. An external rounding theorem can connect certain fractional and integral asymptotic statements, but that theorem and its asymptotic instantiation are not among the five formal conclusions of this package. The finite lower bound does include integral partitions by the direct conversion proved above.
+
+\begin{thebibliography}{9}
+\bibitem{ep} \emph{Erd\H{o}s problem 1017}, \url{https://www.erdosproblems.com/1017}.
+\bibitem{bhknw} J\'ozsef Balogh, Jialin He, Robert A. Krueger, The Nguyen and Michael C. Wigal, \emph{Clique covers and decompositions of cliques of graphs}, Advances in Combinatorics 2026:9, \url{https://arxiv.org/abs/2412.05522v3}.
+\bibitem{bw} J\'ozsef Balogh and Michael C. Wigal, \emph{Packing edge disjoint cliques in graphs}, arXiv:2502.16683v2 (2025), \url{https://arxiv.org/abs/2502.16683v2}.
+\bibitem{bl} Adam Blumenthal, Bernard Lidick\'y, Yanitsa Pehova, Florian Pfender, Oleg Pikhurko and Jan Volec, \emph{Sharp bounds for decomposing graphs into edges and triangles}, Combinatorics, Probability and Computing 30 (2021), 271--287, \url{https://arxiv.org/abs/1909.11371v3}.
+\end{thebibliography}
+
+\section{AI use and review}
+AI systems developed the mathematical arguments, formalizations and earlier source reviews. Robert Huynh directed the research. No human mathematical review is claimed. A Lean proof checks its precise formal statement; it does not establish historical priority. This manuscript is a new exposition of existing work. An independent AI review compared the manuscript's statements and proof outline with the formal sources and their accepted source reviews; it did not rederive every supporting proof.
+\section{Status and further versions}
+This is a working manuscript. The included Lean sources give the exact formal statements and their proofs. The exposition and technical appendices are being expanded. No human mathematical review is claimed. The exact formal statements and their hypotheses determine the scope of the checked results; compiling this manuscript does not check its mathematics.
+The accompanying package includes the supporting statements used by all five main declarations. Future versions may expand their exposition and record corrections.
+\end{document}

@@ -1,0 +1,9 @@
+Erdős 1017 fractional clique partition package
+Copyright 2026 Robert Huynh.
+Apache License, Version 2.0.
+
+Mathematical antecedents are attributed in SOURCES.md. No third-party paper
+PDF or extracted paper text is distributed in this package. The pinned
+Lean, mathlib and formal-conjectures dependencies retain their own licenses
+and notices when fetched; they are not vendored here. Public source comments
+were edited for clarity without changing Lean commands.

@@ -1,0 +1,660 @@
+\documentclass[11pt]{article}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,array}
+\usepackage{unicode-math}
+\setmathfont{latinmodern-math.otf}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor,hyperref,microtype}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black}
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\F}{\mathbb F}
+\newcommand{\PG}{\operatorname{PG}}
+\newcommand{\spanv}{\operatorname{span}}
+\newcommand{\bad}{\mathbf 1_{\rm broken}}
+\title{Rank-controlled projective-incidence repair\\by weighted chart transport}
+\author{Robert Huynh}
+\date{Working draft, 27 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let two arbitrary functions map the points and hyperplanes of canonical
+$\PG(n,q)$ to those of $\PG(n,r)$, where $n\geq2$ and $q,r$ are prime
+powers. Let $T$ count broken source flags, let $d$ be the source incidence
+degree, and let $\rho$ be the fraction of ordered projective frames that
+survive under the point map. If $\rho>0$ and the flag error fraction
+$\delta$ is at most $\rho/(10^9n^2)$, both functions agree, apart from at
+most $5T/q^{n-1}\leq10T/d$ entries in total, with one coupled field-semilinear
+embedding. Neither input map is assumed injective. We give the weighted
+plane correction, its transport to higher rank, and the paired incidence
+gap used to obtain this estimate. The repair theorem and its two stated
+formal corollaries have existing Lean verification. This is a separate
+incidence-rigidity direction associated with the research on Erd\H{o}s
+Problem 85; it does not settle that problem's eventual monotonicity question.
+Public priority remains unresolved.
+\end{abstract}
+\tableofcontents
+
+\section{Statement and scope}
+Let $P$ and $\mathcal H$ be the point and hyperplane sets of canonical
+$\PG(n,q)$. Throughout, source and target have the same projective dimension
+$n\geq2$, while $q$ and $r$ are arbitrary prime powers. Put
+\begin{equation}\label{counts}
+ N=\frac{q^{n+1}-1}{q-1},\quad d=\frac{q^n-1}{q-1},\quad
+ \lambda=\frac{q^{n-1}-1}{q-1},\quad a=d-\lambda=q^{n-1},\quad m=Nd.
+\end{equation}
+Consider arbitrary fixed functions
+\[
+ \phi:P\longrightarrow P(\PG(n,r)),\qquad
+ \psi:\mathcal H\longrightarrow\mathcal H(\PG(n,r)).
+\]
+A source flag is a pair $(p,H)$ with $p\in H$. It is broken when
+$\phi(p)\notin\psi(H)$. Let $T$ count these original flags once each and
+put $\delta=T/m$. An ordered projective frame is an ordered list of $n+2$
+points, every $n+1$ of which are independent. Let $\rho$ be the fraction
+of uniform ordered source frames whose point images form target frames.
+Repeated image points fail this condition.
+
+For a field embedding $\sigma:\F_q\hookrightarrow\F_r$ and
+$A\in\operatorname{GL}_{n+1}(\F_r)$, write $G$ for the point map
+$[v]\mapsto[A\sigma(v)]$ together with its coupled hyperplane map. The
+image of a hyperplane is the $\F_r$-linear span of the images of its
+source points. Thus it need not equal their set. Define
+\[
+ D(G)=|\{p:\phi(p)\ne G(p)\}|+
+       |\{H:\psi(H)\ne G(H)\}|.
+\]
+\begin{theorem}[Coupled repair]\label{main}
+If $\rho>0$ and $\delta\leq\rho/(10^9n^2)$, a field embedding
+$\F_q\hookrightarrow\F_r$ exists, and some coupled $G$ satisfies
+\begin{equation}\label{bound}
+ D(G)\leq\frac{5T}{q^{n-1}}\leq\frac{10T}{d}.
+\end{equation}
+\end{theorem}
+\begin{corollary}[Collapse or repair]\label{dichotomy}
+Every pair $(\phi,\psi)$ satisfies at least one alternative:
+\[
+ \text{some coupled }G\text{ has }D(G)\leq10T/d,
+ \qquad\text{or}\qquad \rho\leq10^9n^2\delta.
+\]
+\end{corollary}
+\begin{corollary}[Incompatible fields]\label{fields}
+If there is no embedding $\F_q\hookrightarrow\F_r$, then
+$\rho\leq10^9n^2\delta$ for every pair of maps.
+\end{corollary}
+The classical finite-field criterion makes the last hypothesis explicit:
+the characteristics differ, or $q=p^u,r=p^v$ with $u\nmid v$.
+The first corollary follows because failure of its second alternative
+implies the hypotheses of Theorem~\ref{main}. The second then follows
+because its repair alternative would supply a field embedding.
+
+\section{A weighted protected-plane lemma}\label{plane}
+First work in $\PG(2,q)$ and $\PG(2,r)$. Suppose the point and line maps
+fix, in the corresponding source and target coordinates, the seven points
+\[
+\begin{gathered}
+ U=[1:0:0],\quad V=[0:1:0],\quad O=[0:0:1],\quad I=[1:1:1],\\
+ W=[1:1:0],\quad E=[1:0:1],\quad J=[0:1:1]
+\end{gathered}
+\]
+and the six lines $\ell_\infty$, $d_0:y=x$, $v_0:x=0$, $v_1:x=1$,
+$h_0:y=0$, $h_1:y=1$. Write $(x,y)$ for $[x:y:1]$, and set
+\[
+ v_x:\ X=x,\quad h_y:\ Y=y,\quad d_b:\ Y=X+b,\quad
+ \ell_a:\ Y=aX,\quad\ell_{a,b}:\ Y=aX+b.
+\]
+Let $b(p,\ell)$ be the broken-flag indicator. The cost $\eta$ is the sum
+of the 24 normalized sums listed in Table~\ref{families}. A family with
+$k$ varying field parameters has denominator $q^k$. Restricted nonzero
+parameters retain this denominator, rather than replacing $q$ by $q-1$.
+Each displayed flag in a row is a separate sum. Repetitions are intentional.
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}clp{9.2cm}@{}}\toprule
+Sums&Parameters&Flags\\\midrule
+2&$x$; $y$&$(V,v_x)$; $(U,h_y)$\\
+2&$x,y$&$((x,y),v_x)$; $((x,y),h_y)$\\
+2&$t$&$((t,t),v_t)$; $((t,t),h_t)$\\
+1&$t$&$((t,t),d_0)$\\
+1&$a\ne0$&$(O,\ell_a)$\\
+1&$a\ne0,t$&$((t,at),\ell_a)$\\
+2&$a\ne0$&$((1,a),v_1)$; $((1,a),h_a)$\\
+2&$a\ne0$&$((a^{-1},1),v_{a^{-1}})$; $((a^{-1},1),h_1)$\\
+2&$a\ne0$&$((1,a),\ell_a)$; $((a^{-1},1),\ell_a)$\\
+1&$b$&$(W,d_b)$\\
+1&$x,b$&$((x,x+b),d_b)$\\
+4&$b$; $i=0,1$&$((i,i+b),v_i)$; $((i,i+b),h_{i+b})$, for each fixed $i$\\
+2&$b$; $i=0,1$&$((i,i+b),d_b)$, for each fixed $i$\\
+1&$a,b,x$&$((x,ax+b),\ell_{a,b})$\\\bottomrule
+\end{tabular}
+\caption{The 24 weighted flag families.}\label{families}
+\end{table}
+
+Define $B_X=\{x:(V,v_x)\text{ is broken}\}$,
+$X=\{x\notin B_X:\psi(v_x)\ne\ell_\infty\}$, and
+$X_0=\F_q\smallsetminus(B_X\cup X)$. Define $B_Y,Y,Y_0$ analogously with
+$(U,h_y)$. For $x\in X$, the image vertical has equation $X=f(x)$;
+for $y\in Y$, the image horizontal has equation $Y=g(y)$. Extend $f,g$
+by zero on all other inputs. The protected values imply
+\begin{equation}\label{protectedvalues}
+ 0,1\in X\cap Y,\qquad f(0)=g(0)=0,\qquad f(1)=g(1)=1.
+\end{equation}
+\begin{lemma}[Weighted plane correction]\label{planelemma}
+If $\eta\leq10^{-7}$, there is a field embedding
+$\sigma:\F_q\hookrightarrow\F_r$ with
+\[
+\begin{gathered}
+ q-|X|\leq17\eta q,\qquad q-|Y|\leq17\eta q,\\
+ |\{x:f(x)\ne\sigma(x)\}|\leq288\eta q,\qquad
+ |\{y:g(y)\ne\sigma(y)\}|\leq648\eta q.
+\end{gathered}
+\]
+The affine point map equals $(x,y)\mapsto(\sigma(x),\sigma(y))$ outside
+at most $971\eta q^2$ points. The conclusion also holds when the cost
+uses any nonnegative pointwise majorant of $b$.
+\end{lemma}
+
+\subsection{Support estimates}
+Let $Q$ be the affine points with a broken vertical or horizontal
+coordinate flag. In this subsection only, write $x=|X|$, $y=|Y|$,
+$b_X=|B_X|$, and $b_Y=|B_Y|$. Outside $Q$, intersection of the two image
+coordinate lines gives image $(f(u),g(v))$ for $(u,v)\in X\times Y$,
+image $V$ on $X\times Y_0$, and image $U$ on $X_0\times Y$.
+Let $Q_{\rm diag}$ count diagonal points in $Q$, and let $e_{\rm diag}$
+count broken affine point--$d_0$ flags. Since the target diagonal contains
+neither $U$ nor $V$,
+\begin{equation}\label{symdiff}
+ |X\mathbin{\triangle} Y|\leq b_X+b_Y+Q_{\rm diag}+e_{\rm diag}\leq\eta q.
+\end{equation}
+The two diagonal coordinate families dominate the union count in this inequality.
+For $a\ne0$ put
+$r_a=|\{t\in X:at\in Y_0\}|$ and
+$s_a=|\{t\in X_0:at\in Y\}|$.
+Let $e_O$ count broken $(O,\ell_a)$ flags and $E_{\rm pen}$ broken
+$((t,at),\ell_a)$ flags. If the $O$ flag is good, the image line contains
+$O$ and cannot contain both $U,V$. Thus at least $\min(r_a,s_a)$ mixed
+points lie in $Q$ or have a broken pencil-line flag. Each such point has
+two nonzero coordinates and a unique nonzero slope. For a broken $O$
+flag use the upper bound $q$. Hence
+\begin{equation}\label{mixed}
+ \sum_{a\ne0}\min(r_a,s_a)\leq qe_O+|Q|+E_{\rm pen}\leq\eta q^2.
+\end{equation}
+Moreover $|r_a-s_a|\leq|x-y|+b_X+b_Y\leq2\eta q$. It follows that
+$\sum_{a\ne0}r_a\leq3\eta q^2$. Counting the unique slope for each pair
+in $(X\smallsetminus\{0\})\times Y_0$ gives
+\begin{equation}\label{productsupport}
+ (x-1)(q-y-b_Y)\leq3\eta q^2,\qquad (x-1)(q-y)\leq4\eta q^2.
+\end{equation}
+For $a\in Y_0\smallsetminus\{0\}$ with $a^{-1}\in X_0$, use the two points
+$(1,a)$ and $(a^{-1},1)$ on $\ell_a$. Their images are $V,U$ unless a
+coordinate flag fails. If those and both point-line flags and the $O$
+flag are good, one target line contains $O,U,V$, a contradiction.
+Let $R_Q$ count appearances in $Q$ in these two families and $R_F$ their
+broken $\ell_a$ flags. The table pays for each of these counts. All other
+nonzero $a$ lie in $Y\cup B_Y$ or have inverse in $X\cup B_X$. Therefore
+\begin{equation}\label{largesupport}
+ x+y\geq q+1-(b_X+b_Y+e_O+R_Q+R_F)\geq q+1-\eta q.
+\end{equation}
+There is no reciprocal exception at $a=1$, by \eqref{protectedvalues}.
+For $q=2$ that equation already gives $X=Y=\F_q$. For $q\geq3$,
+\eqref{symdiff} and \eqref{largesupport}, with $\eta\leq1/12$, give
+$x-1\geq(q-1-2\eta q)/2\geq q/4$. Equation~\eqref{productsupport}
+then proves $q-y\leq16\eta q$ and $q-x\leq17\eta q$.
+These are inequalities on integer counts with no rounding remainder.
+
+\subsection{Additive correction and protected values}
+The product identity $\phi(u,v)=(f(u),g(v))$ fails at at most
+\[
+ K\leq q(q-|X|)+q(q-|Y|)+|Q|\leq35\eta q^2
+\]
+affine points. Define $c(b)$ as the target intercept of $\psi(d_b)$ if
+its $W$ flag is good and its image is a proper affine line; otherwise set
+$c(b)=0$. In the proper case its slope is 1. In particular $c(0)=0$.
+Let $R$ count failures of $g(u+b)=f(u)+c(b)$. Each product exception is
+used once, a broken $W$ flag at most $q$ times, and a broken
+point--$d_b$ flag once. Thus, writing $e_W,E_{\rm diag}$ for the latter
+counts,
+\begin{equation}\label{pexidererror}
+ R\leq K+qe_W+E_{\rm diag}\leq36\eta q^2,\qquad r_0=R/q^2\leq36\eta.
+\end{equation}
+For each fixed $i=0,1$, the protected vertical line gives the sharper
+row bound
+\begin{equation}\label{fixedrow}
+ |\{b:g(i+b)\ne f(i)+c(b)\}|\leq20\eta q.
+\end{equation}
+Indeed only missing horizontal coordinates, coordinate-flag failures on
+that column, $W$ flags and its listed point--$d_b$ flags need be charged.
+The table and the support bounds give at most $17\eta q$; we retain 20.
+The diagonal families likewise give
+\begin{equation}\label{diagonalagree}
+ |\{t:g(t)\ne f(t)\}|\leq36\eta q.
+\end{equation}
+
+We supply the additive correction argument for the cross-field codomain.
+Suppose $A:\F_q\to\F_r$ fails additivity on at most a fraction
+$\theta<1/6$ of pairs. Put $z_x(y)=A(x+y)-A(y)$. For fixed $x$, the
+additive equations at $(x+y,z)$ and $(y,x+z)$ imply $z_x(y)=z_x(z)$
+except on at most a fraction $2\theta$ of independent $(y,z)$. Hence
+$z_x$ has a unique mode $H(x)$ of mass at least $1-2\theta$.
+The identity
+\[
+ z_{x+t}(y)=z_x(t+y)+z_t(y)
+\]
+and the three mode bounds prove additivity of $H$, since $6\theta<1$.
+If $A(x)\ne H(x)$, at least $1-2\theta$ of the additive equations in
+that row fail. Summing rows shows that $A$ differs from $H$ on at most
+$2\theta q$ inputs.
+
+Apply the Pexider equation to
+$(a+x,b+y)$, $(a+x+y,b)$, $(a,b+y)$, and $(a+y,b)$.
+Each pair is uniform for independent uniform $a,b,x,y$. Subtraction
+cancels the $g,c$ terms; averaging chooses $a$ for which
+$A(x)=f(a+x)-f(a)$ has additive defect at most $4r_0$.
+The preceding correction supplies an additive $H$ and a constant
+$\alpha$ such that $f=H+\alpha$ outside at most $8r_0q$ inputs.
+Substitution into the original equation gives
+\[
+ g(z)-H(z)=\alpha+c(b)-H(b)
+\]
+outside a fraction $9r_0$ of independent pairs $(z,b)$. The largest atom
+$\beta$ of $c(b)-H(b)$ has mass at least $1-9r_0$. Consequently
+\begin{equation}\label{correction}
+\begin{aligned}
+ f&=H+\alpha &&\text{outside at most }8r_0q\text{ inputs},\\
+ g&=H+\alpha+\beta &&\text{outside at most }18r_0q\text{ inputs},\\
+ c&=H+\beta &&\text{outside at most }9r_0q\text{ inputs}.
+\end{aligned}
+\end{equation}
+For the second estimate use $9r_0/(1-9r_0)\leq18r_0$.
+All required inequalities, including $4r_0<1/6$ and $9r_0<1/2$,
+follow from $\eta\leq10^{-7}$.
+For each $i=0,1$, \eqref{fixedrow} and \eqref{correction} exclude at
+most $(20\eta+27r_0)q\leq992\eta q<q$ choices of $b$. A remaining
+choice gives $f(i)=H(i)+\alpha$. Equation~\eqref{protectedvalues}
+therefore gives $\alpha=0$ and $H(1)=1$. Equation~\eqref{diagonalagree}
+and the $f,g$ exceptions exclude at most
+$(36\eta+26r_0)q\leq972\eta q<q$ choices of $t$, so $\beta=0$.
+Both corrected coordinate functions are $H$.
+
+\subsection{All slopes force one field embedding}
+The affine point map equals $(H(x),H(y))$ outside at most
+\[
+ Z_2\leq K+26r_0q^2\leq971\eta q^2
+\]
+points. Mark a triple $(a,b,x)$ if $(x,ax+b)$ is a point exception or
+its flag on $\ell_{a,b}$ is broken. Each exceptional affine point occurs
+$q$ times. The final table family gives a total
+\begin{equation}\label{marks}
+ M\leq qZ_2+\eta q^3\leq972\eta q^3<q^3/4.
+\end{equation}
+Let
+\[
+ K_0=\{a\in\F_q:\text{some }s\in\F_r\text{ satisfies }
+                   H(ax)=sH(x)\text{ for every }x\}.
+\]
+The scalar is unique because $H(1)=1$. If $a\notin K_0$, no target
+line contains more than $q/2$ entries of the list
+$(H(x),H(ax+b))$, $x\in\F_q$. A vertical line gives a fiber of the
+nonzero additive map $H$; a nonvertical line gives a fiber of the
+nonzero additive map $H(ax)-sH(x)$; the infinity line contains none.
+Every fiber of a nonzero additive map has size at most $q/2$, including
+when the displayed point list has repetitions. Every unmarked entry
+lies on the actual image of $\ell_{a,b}$. Thus each $a\notin K_0$
+and each $b$ require at least $q/2$ marks, whence
+\[
+ |\F_q\smallsetminus K_0|\leq2M/q^2<q/2.
+\]
+The set $K_0$ is a subfield. It contains 0 and 1, and scalar identities
+give closure under addition and multiplication. The scalar of a nonzero
+$a\in K_0$ is nonzero, since multiplication by $a$ is surjective and
+$H$ is nonzero; substituting $a^{-1}x$ gives inverse closure. A proper
+subfield has at most $q/2$ elements as a proper additive subgroup.
+Hence $K_0=\F_q$. Its unique scalars define an injective unital field
+homomorphism $\sigma$, and $H(x)=\sigma(x)H(1)=\sigma(x)$.
+Equation~\eqref{correction} gives the constants $288$ and $648$.
+This proves Lemma~\ref{planelemma}. All estimates charge nonnegative
+flag errors, so a pointwise majorant can replace the indicator.
+
+\section{Protection of a higher-rank frame}\label{protection}
+Normalize a source frame to
+$E_0=[e_0],\ldots,E_n=[e_n], I=[e_0+\cdots+e_n]$.
+If it survives, normalize its target images independently to that same
+coordinate frame. The first $n+1$ representatives form a basis; all
+coefficients of the last representative are nonzero. Rescaling that
+basis makes those coefficients 1, also in characteristic 2.
+Set
+\[
+ H_0:X_0=0,\qquad H_i(0):X_i=0,\qquad H_i(1):X_i=X_0\quad(1\leq i\leq n).
+\]
+Protect $H_0$ and the $n$ hyperplanes $H_i(0)$ by their $n$ basis-point
+flags each. Protect $H_i(1)$ by the flag at $I$ and its $n-1$ basis-point
+flags outside $\{0,i\}$. These $2n^2+n$ original flags force the named
+hyperplane images, because each contains $n$ independent named target
+points.
+For $j=2,\ldots,n$, let $A_j$ be the coordinate plane spanned by
+$E_0,E_1,E_j$, and let $B_j$ be the vector span of the complementary
+$e_k$. Its vector dimension is $n-2$; for $n=2$ it is zero. Add the
+following protections, with $C_j=\{0,\ldots,n\}\smallsetminus\{0,1,j\}$:
+\begin{enumerate}
+\item For $S_j=[e_0+e_1+e_j]$, protect its flags with $H_k(0)$ for
+$k\in C_j$ and with $H_1(1),H_j(1)$. These $n$ target hyperplanes
+intersect in the specified point.
+\item For $D_j:X_j=X_1$, protect its flags at $E_0,S_j$ and $E_k$ for
+$k\in C_j$. Their $n$ images are independent and force $D_j$.
+\item For $W_j=[e_1+e_j]$, protect its flags with $H_0,D_j$ and the
+$H_k(0)$ for $k\in C_j$.
+\item For $E_j^*=[e_0+e_1]$, use $H_j(0),H_1(1)$ and those $H_k(0)$.
+\item For $J_j^*=[e_0+e_j]$, use $H_1(0),H_j(1)$ and those $H_k(0)$.
+\end{enumerate}
+The last three groups again define unique intersections of $n$ target
+hyperplanes. They cost $5n$ flags per plane. Repeated flags and points
+remain counted slots. The total is
+\begin{equation}\label{certificate}
+ M_{\rm cert}=2n^2+n+5n(n-1)=7n^2-4n\leq7n^2.
+\end{equation}
+Call a surviving frame protected if all these original flags are good.
+For each $j$, this forces the seven points and six extended lines of
+Section~\ref{plane}, with $E_1,E_j,E_0$ corresponding to $U,V,O$.
+No other point-image injectivity is imposed.
+
+\section{Transport and its unconditional load}\label{transport}
+Fix a protected frame. Let $A'_j,B'_j$ be its corresponding target
+subspaces. A line $\ell$ in $A_j$ extends to the source hyperplane
+$\widehat\ell=\spanv(B_j,\ell)$. Define an induced point map by retaining
+$\phi(p)$ when it lies in $A'_j$, and replacing it by $E_0$ otherwise.
+Define the induced line image to be $\psi(\widehat\ell)\cap A'_j$ when
+$\psi(\widehat\ell)$ contains $B'_j$, and the target infinity line
+otherwise. In the first case the intersection is a line: a hyperplane
+containing both $B'_j$ and $A'_j$ would contain their direct sum, the
+whole target vector space.
+Write $b_{\rm orig}$ for original broken-flag indicators, and put
+\begin{equation}\label{majorant}
+\begin{split}
+ U_j(p,\ell)={}&b_{\rm orig}(p,\widehat\ell)
+ +\sum_{k\in C_j}b_{\rm orig}(p,H_k(0))\\
+ &+\sum_{k\in C_j}b_{\rm orig}(E_k,\widehat\ell).
+\end{split}
+\end{equation}
+These are $2n-3$ original flags, counted with multiplicity. If all are
+good, the middle group forces $\phi(p)\in A'_j$, the last group forces
+$B'_j\subseteq\psi(\widehat\ell)$, and the first forces the induced
+incidence. Thus $U_j$ pointwise majorizes induced broken flags. In
+particular it pays for both possible failures of restriction. Let
+$\eta_j$ be the 24-family cost evaluated on $U_j$.
+
+For $i=1,\ldots,n$ use the original global pencil
+$H_i(t):X_i=tX_0$. Call $t$ proper if $\psi(H_i(t))$ contains all $E_k$
+with $k\notin\{0,i\}$ and is not $H_0$. Its equation is then
+$X_i=f_i(t)X_0$; define $f_i(t)=0$ otherwise. Protection gives proper
+inputs 0 and 1 with the usual values. In the induced plane $A_j$, the
+proper vertical set and its extended function are exactly this global
+set for $i=1$ and $f_1$. The horizontal counterparts are exactly those
+for $i=j$ and $f_j$. Indeed, missing complementary containment sends
+the induced line to infinity. If complementary containment holds, the
+local infinity-anchor flag supplies precisely the remaining basis
+direction. The intersection is the local infinity line exactly when
+its span with $B'_j$ is $H_0$. The extensions by zero therefore also
+agree at every nonproper input.
+
+Now choose a uniform ordered source frame $F$, before imposing any
+condition on its image. Source projective linear transformations act
+transitively on frames and flags. Every certificate slot and every
+original flag in \eqref{majorant}, at each fixed table parameter, is
+an equivariant construction from $F$. Each such slot is consequently
+uniform on the $m$ source flags and has expected error $\delta$.
+Equivalently each fixed slot takes any one source flag exactly
+$F_{\rm count}/m$ times. This identity precedes conditioning on survival.
+The raw source formulas for $U_j$ and $\eta_j$ make sense for every
+frame, even when its target image does not survive. Each normalized
+table sum has mass at most 1. Hence
+\[
+ \mathbb E\eta_j\leq24(2n-3)\delta.
+\]
+For $p_x=[e_0+x_1e_1+\cdots+x_ne_n]$, define
+\[
+ \gamma(F)=q^{-n}\sum_{x\in\F_q^n}\sum_{i=1}^n
+ b_{\rm orig}(p_x,H_i(x_i)),\qquad
+ \mathcal E(F)=\gamma(F)+\sum_{j=2}^n\eta_j(F).
+\]
+The same equivariance gives $\mathbb E\gamma=n\delta$ and
+\begin{equation}\label{expectation}
+ \mathbb E\mathcal E\leq[n+24(n-1)(2n-3)]\delta\leq48n^2\delta.
+\end{equation}
+The certificate fails with probability at most $7n^2\delta$.
+Markov's inequality and \eqref{expectation} show that the probability
+of certificate failure or $\mathcal E>10^{-7}$ is at most
+\[
+ (7+48\cdot10^7)n^2\delta<5\cdot10^8n^2\delta\leq\rho/2.
+\]
+Since survival has probability $\rho>0$, some surviving protected frame
+has $\mathcal E\leq10^{-7}$. If $\delta=0$, every raw nonnegative
+cost is zero and the same conclusion follows directly. No conditional
+uniformity or division by zero is needed.
+
+\section{Coherence and reconstruction of the affine chart}\label{coherence}
+Fix that frame. Lemma~\ref{planelemma} supplies, for each $j$, an
+embedding $\sigma_j:\F_q\hookrightarrow\F_r$ with
+\[
+ |\{t:f_1(t)\ne\sigma_j(t)\}|\leq288\eta_jq,\qquad
+ |\{t:f_j(t)\ne\sigma_j(t)\}|\leq648\eta_jq.
+\]
+There are at most $17\eta_jq$ nonproper inputs in either pencil.
+For two charts the embeddings disagree on at most
+$288(\eta_j+\eta_k)q\leq288\cdot10^{-7}q<q/2$ inputs, since both
+approximate the same original function $f_1$. Distinct additive maps
+can agree on at most $q/2$ inputs, by the kernel bound for their
+difference. Thus all $\sigma_j$ equal one $\sigma$. For $n=2$ there
+is just one chart.
+Write $\eta_\Sigma=\sum_{j=2}^n\eta_j$. Use chart 2 once for coordinate
+1 and chart $j$ for coordinate $j$. Summing bounds, the number of
+nonproper coordinate inputs is at most
+$17(\eta_2+\eta_\Sigma)q\leq34\eta_\Sigma q$, and the number of
+scalar disagreements is at most
+$(288\eta_2+648\eta_\Sigma)q\leq936\eta_\Sigma q$.
+If all $x_i$ are proper and all $n$ coordinate flags at $p_x$ are good,
+$\phi(p_x)$ is the unique intersection of
+$X_i=f_i(x_i)X_0$, $1\leq i\leq n$. The union bound across the whole
+affine chart gives at most $(\gamma+34\eta_\Sigma)q^n$ failures of
+this product identity. After correcting the scalar values, the point
+map agrees with $(x_i)\mapsto(\sigma(x_i))$ outside at most
+\begin{equation}\label{affine}
+ Z\leq(\gamma+970\eta_\Sigma)q^n\leq971\mathcal E q^n.
+\end{equation}
+This is agreement on the entire affine chart, rather than only on the
+coordinate planes. Extend this embedding projectively to $G$. Its
+image of $H_0$ already equals $\psi(H_0)$.
+
+\section{Both maps are close, including at infinity}\label{infinity}
+Two intersection bounds apply also to proper subfield embeddings.
+A target hyperplane different from $G(H)$ contains at most $\lambda$
+images of source points of $H$. A target point different from $G(p)$
+lies on at most $\lambda$ images of source hyperplanes through $p$.
+To see the first, normalize $G$ to coordinatewise $\sigma$. The
+restriction of the wrong target equation to the $n$-dimensional
+$\F_q$ vector space defining $H$ is a nonzero $\sigma$-linear
+functional into $\F_r$. Its kernel has $\F_q$-dimension at most $n-1$.
+For the second, the $\F_q$ coefficient space of hyperplanes through
+$p$ has dimension $n$ and spans the corresponding target coefficient
+space over $\F_r$. Evaluation at a target point other than $\sigma(p)$
+is nonzero on that space and has the same kernel bound.
+For an affine source hyperplane, a wrong target hyperplane contains
+at most $q^{n-2}$ correctly embedded affine points. On its affine
+parameter space, the equation is either nonconstant, with fibers of
+size at most $q^{n-2}$, or a nonzero constant, with no zeros. A zero
+constant would force containment of the whole target-field span $G(H)$.
+
+Let $B$ count wrong affine source hyperplanes, and $I_{\rm bad}$ wrong
+points on $H_0$. A wrong affine hyperplane has $a=q^{n-1}$ affine
+points; at most $a/q$ correctly mapped ones can preserve their flags.
+Charge an affine point exception on its at most $d$ source hyperplanes:
+\begin{equation}\label{wronghyperplanes}
+ (a-a/q)B\leq T+dZ.
+\end{equation}
+A wrong infinity point lies on $d-1$ affine hyperplanes, and at most
+$\lambda$ correctly mapped ones can contain its image. Each wrong
+affine hyperplane contains $\lambda$ infinity points. Thus
+\begin{equation}\label{wronginfinity}
+ (a-1)I_{\rm bad}\leq T+\lambda B.
+\end{equation}
+These are separate estimates and need not charge disjoint errors.
+Using $d/a\leq2$, $\lambda/(a-1)=1/(q-1)$ and $a/(a-1)\leq2$ gives
+\begin{equation}\label{coarse}
+ D(G)=Z+B+I_{\rm bad}\leq9Z+6T/a.
+\end{equation}
+Since $q^n\leq N$, $T/a\leq2\delta N$, $\mathcal E\leq10^{-7}$,
+and $\delta\leq1/(10^9n^2)\leq1/(4\cdot10^9)$, this yields
+\begin{equation}\label{smallD}
+ D(G)/N\leq9\cdot971\cdot10^{-7}+12\delta<1/1000<1/20.
+\end{equation}
+Both original functions are now close to the same $G$.
+
+\section{The paired source-design gap}\label{gap}
+Let $S,\mathcal B$ be the wrong point and hyperplane sets, of sizes
+$s,t$, and put $D=s+t$. Let $J$ count source incidences between these
+sets. A wrong point has at most $\lambda$ correctly mapped incident
+hyperplanes that can contain its wrong image. There are therefore at
+least $as-J$ broken flags with wrong point and correct hyperplane.
+The dual bound gives at least $at-J$ with correct point and wrong
+hyperplane. The two types are disjoint, so
+\begin{equation}\label{paired}
+ T\geq aD-2J.
+\end{equation}
+Let $M$ now denote the source incidence matrix. It has degree $d$;
+two distinct points share $\lambda$ hyperplanes. Hence
+$MM^{\mathsf T}=a\operatorname{Id}+\lambda\mathbf1\mathbf1^{\mathsf T}$.
+For $n_H=|S\cap H|$ this gives
+\[
+ \sum_H(n_H-ds/N)^2=as(1-s/N).
+\]
+Center the indicator of $\mathcal B$ and use Cauchy--Schwarz to obtain
+\[
+ J\leq dst/N+\sqrt{as(1-s/N)t(1-t/N)}
+   \leq dD^2/(4N)+\sqrt a\,D/2.
+\]
+Substitution in \eqref{paired} gives
+\[
+ T\geq\left(a-\sqrt a-\frac{dD}{2N}\right)D.
+\]
+Since $a\geq2$, $\sqrt a\leq3a/4$; also $d\leq2a$.
+For $D\leq N/20$ the coefficient is at least
+$a-3a/4-2a/40=a/5$. Equation~\eqref{smallD} therefore proves
+$D(G)\leq5T/a\leq10T/d$. Undoing the independent source and target
+normalizations gives exactly one map $[v]\mapsto[A\sigma(v)]$ and its
+coupled hyperplane action. Counts and entry distances are preserved.
+This completes the proof of Theorem~\ref{main}.
+
+\section{Examples and limits}
+For $n=2$, the complementary sums in \eqref{majorant} are empty and
+there is one chart. The support proof explicitly includes $q=2$.
+Every exact coupled semilinear embedding, including a proper subfield
+embedding, has $T=0$, $\rho=1$, and $D=0$; invertibility over $\F_r$
+ensures survival of source frames.
+Constant incident point and hyperplane maps instead have $T=0$ and
+$\rho=0$. More generally, point values in a proper target subspace
+$W$ and hyperplane values containing $W$ can preserve every incidence
+while losing every full frame. The positive survival condition detects
+this rank collapse.
+
+For a scale check, start with an exact embedding and move one source
+point $p$ to the image of a different point $b$, retaining all other
+entries. Exactly $\lambda$ of the $d$ hyperplanes through $p$ also
+contain $b$, so exactly $a=q^{n-1}$ flags break. The distance to the
+original embedding is 1, and frames avoiding $p$ survive. This tests
+the normalization $T/d$, but proves neither sharp constants nor that
+the small-error hypothesis holds for every such parameter choice.
+The constants are not optimized and can require very large spaces
+before the hypothesis admits nonzero integer errors. The theorem
+asserts existence; it supplies no implemented decoder or complexity
+guarantee. It concerns canonical projective spaces, not arbitrary
+non-Desarguesian planes or a general building theorem.
+
+\section{Relation to earlier work and Erd\H{o}s Problem 85}
+The original question concerns eventual monotonicity of the four-cycle
+minimum-degree threshold function. That question remains open here.
+This manuscript supplies no determination of $f(49)$ or new extremal
+bound for it. The problem statement and its discussion were read on
+17 October 2026 from Bloom's problem page~\cite{problem}. The page
+attributes the question to Erd\H{o}s under its keys [Er93, p.~345],
+[Er94b], [Er95], and [Er96]. Those keys do not represent fresh reading
+of the original articles; the bibliography endpoints were unavailable
+in the saved source review.
+
+The saved comparison read Theorem 2.3.1 and Remark 2.3.2 of
+Koll\'ar--Lieblich--Olsson--Sawin~\cite{klos}, printed pages 36--38,
+from the author-hosted version whose last-modified header was
+18 September 2021. That theorem assumes injection, a common finite
+field, and $n>3$, and measures failures of whole lines with specified
+excluded subspaces. The present theorem uses supplied hyperplane data
+and original point--hyperplane flags. No reduction establishing
+blanket dominance in either direction is given.
+The saved comparison also read the introduction, Theorem 1, Lemma 1
+and Theorem 2 context, pages 1--4, of Pankov--Vetterlein~\cite{pv},
+from the author-hosted version whose header was 23 December 2021.
+Its exact one-way orthogonality statements over finite-dimensional
+complex Hilbert spaces are not noisy finite-field two-map bounds.
+The complete proofs of these external works were not re-audited.
+
+Koll\'ar et al. explicitly credit Blum--Luby--Rubinfeld~\cite{blr} for
+linearity testing. The additive correction above belongs to that
+classical tradition and is included directly to handle the required
+codomain and protected values. No claim is made to originate additive
+correction, semilinear geometry, or projective-design mixing.
+The source review also inspected only the abstract of
+Cardinali--Giuzzi--Pasini~\cite{cgp}; it establishes no subsumption
+comparison. Coverage of later citing work is incomplete. Further
+comparison may change the priority assessment.
+
+\section{Formal statements and review status}
+The accepted package records official theorem checks, full local import
+closure replay, zero holes, and only the axioms \texttt{propext},
+\texttt{Classical.choice}, and \texttt{Quot.sound}. The exact principal
+mapping is as follows, in namespace \texttt{Erdos85.IncidenceRepair}:
+\begin{itemize}
+\item Theorem~\ref{main}: \texttt{projective\_incidence\_repair}, in
+\path{Openmath/IncidenceRepair/Main.lean}, asserting
+\texttt{RepairClaim K L n}.
+\item Corollary~\ref{dichotomy}: \texttt{repair\_dichotomy}, in
+\path{Openmath/IncidenceRepair/Corollaries.lean}.
+\item Corollary~\ref{fields}:
+{\small\texttt{frameSurvival\_bound\_of\_no\_field\_embedding}}, in the same file.
+\end{itemize}
+The numerical finite-field criterion is the classical interpretation of the formal
+no-embedding hypothesis. This edition reuses existing accepted evidence
+for unchanged mathematical sources. Compiling its typesetting does not
+check the mathematics, and this exposition has not received a new
+independent statement-by-statement review.
+
+\section{AI use}
+AI systems developed the mathematical argument, formalization and earlier
+source reviews, and prepared this exposition. Robert Huynh directed the
+research and is the sole named author. No human mathematical review is
+claimed. Formal verification concerns precise formal statements; it
+does not establish novelty or public priority. This working draft
+reorganizes existing work and makes no new mathematical claim.
+
+\begin{thebibliography}{9}
+\bibitem{problem} T. Bloom, \emph{Erd\H{o}s Problem 85},
+\url{https://www.erdosproblems.com/85}, and discussion
+\url{https://www.erdosproblems.com/forum/thread/85}.
+Accessed 17 October 2026; statement page last edited 6 December 2025.
+\bibitem{klos} J. Koll\'ar, M. Lieblich, M. Olsson and W. Sawin,
+\emph{The Zariski topology, linear systems, and algebraic varieties},
+Theorem 2.3.1 and Remark 2.3.2,
+\url{https://williamsawin.com/ReconstructionBook.pdf}.
+\bibitem{pv} M. Pankov and T. Vetterlein,
+\emph{A geometric approach to Wigner-type theorems},
+\url{https://www.flll.jku.at/sites/default/files/u24/Wigner-type-theorems.pdf}.
+\bibitem{blr} M. Blum, M. Luby and R. Rubinfeld,
+Self-testing/correcting with applications to numerical problems,
+\emph{Journal of Computer and System Sciences} 47(3) (1993), 549--595,
+\url{https://doi.org/10.1016/0022-0000(93)90044-W}.
+\bibitem{cgp} I. Cardinali, L. Giuzzi and A. Pasini,
+\url{https://arxiv.org/abs/2306.17079}. Abstract-only comparison in the
+saved source review.
+\end{thebibliography}
+\end{document}

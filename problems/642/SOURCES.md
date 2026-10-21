@@ -1,18 +1,24 @@
-# Sources and comparison
+# Sources and attribution
 
-Comparison refreshed 16 October 2026. This bounded comparison distinguishes published results, public sketches and the package theorem. It does not certify worldwide priority.
+## Problem and prior bounds
 
-| Source | Exact relevance and reading limit |
-| --- | --- |
-| Draganić–Methuku–Munhá Correia–Sudakov, *Cycles with many chords*, Random Structures & Algorithms 65 (2024), 3–16, [DOI](https://doi.org/10.1002/rsa.21207), [author-hosted published PDF](https://people.math.ethz.ch/~sudakovb/cycle-with-many-chords.pdf) | Theorem 1.1 gives the eighth-power bound. Preparation rechecked the statement, final proof parameter stage and concluding discussion. The full paper was retrieved; that is not a fresh proof audit of every lemma. This is the principal random-walk antecedent. |
-| Aron Bhalla’s [discussion comment](https://www.erdosproblems.com/forum/thread/642), 12 May 2026 | Public AI-assisted parameter sketch for the seventh power. Refreshed and read. The site says comments are unverified; seventh power must nevertheless not be represented as a new project claim. |
-| [Erdős Problem a Day working report](https://www.erdosproblemaday.com/report/642) | Earlier campaign comparison records a related seventh-power claim, with its own unverified status. This preparation did not independently certify that report or rerun its checks. |
-| Draganić–Girão, *Cycles with almost linearly many chords*, [arXiv:2601.08769v1](https://arxiv.org/abs/2601.08769), 13 January 2026 | Abstract and version record refreshed. Its almost-linear chord count in the cycle length is weaker than requiring at least one chord per cycle vertex; it is not a substitute for this target. No fresh full-proof audit here. |
-| Letzter–Methuku–Sudakov, *Nearly Hamilton cycles in sublinear expanders and applications*, JLMS 113(2) (2026), e70452, [DOI](https://doi.org/10.1112/jlms.70452) | Earlier campaign comparison inspected the n(log n)^130 corollary and support-retaining tools. This preparation carries that scoped comparison forward without claiming a new journal reread. |
-| Chakraborti–Janzer–Methuku–Montgomery, *Edge-disjoint cycles with the same vertex set*, Advances in Mathematics 469 (2025), 110228, [DOI](https://doi.org/10.1016/j.aim.2025.110228) | Earlier campaign read the regularization lemma and introduction. Relevant technique, not an already stated fifth-power bound for this question. No private drafts or held material are part of this package. |
+- [Erdős problem #642](https://www.erdosproblems.com/642) asks whether sufficiently large constant average degree forces a cycle with at least as many chords as vertices. This package proves a cubic-logarithmic sufficient average degree, not the constant-degree conjecture.
+- Nemanja Draganić, Abhishek Methuku, David Munhá Correia and Benny Sudakov, *Cycles with many chords*, Random Structures & Algorithms 65 (2024), 3–16, [DOI 10.1002/rsa.21207](https://doi.org/10.1002/rsa.21207), [arXiv:2306.09157](https://arxiv.org/abs/2306.09157). Their theorem gives the same chord conclusion from an eighth-power logarithmic density threshold.
+- Nemanja Draganić, *New tools for sparse graph embeddings: Hybrid expanders and application to nested cycles*, [arXiv:2610.16572v1](https://arxiv.org/html/2610.16572v1), 12 October 2026, introduction. This preprint announces upcoming work reducing the required average degree for the same chord problem to essentially order $\log\log n$. That announced scale is stronger than the cubic-logarithmic bound here. The announcement itself is not a full proof of that result. We do not claim that our bound is currently best or that it has priority over the announced work.
 
-The fifth-power statement is compared with the published eighth-power result and the already public seventh-power sketch. Targeted title/author searches and the live [statement](https://www.erdosproblems.com/642), discussion and [proof claims](https://www.erdosproblems.com/forum/thread/642/proof-claims) were checked in preparation. The claims page displayed no submitted claims. This does not establish first priority, human acceptance or absence of other work. Citation-frontier coverage and journal/revision comparisons remain bounded.
+## Methods
 
-## Refresh scope, 16 October 2026
+- Micha Christoph, Zach Hunter and Benny Sudakov, *Thinning and sprinkling: from robust sampling to almost Hamiltonicity*, [arXiv:2609.30165v1](https://arxiv.org/html/2609.30165v1), 24 September 2026. The sampling and tough-layer methods inform this construction. Section 8 develops path merging and almost-spanning cycle arguments. The formal development proves its own required interfaces; it does not assume the paper's conclusions as axioms.
+- Debsoumya Chakraborti, Oliver Janzer, Abhishek Methuku and Richard Montgomery, *Edge-disjoint cycles with the same vertex set*, Advances in Mathematics 469 (2025), 110228, [DOI 10.1016/j.aim.2025.110228](https://doi.org/10.1016/j.aim.2025.110228). Regularization and extraction ideas from this line of work are used in the earlier host construction.
 
-The statement, discussion and proof-claim pages were retrieved again on 16 October 2026. Both claims pages displayed no submitted proof claims. The #642 seventh-power discussion sketch and #643 discussion of HMY’s r≥4 preprint remain relevant. This absence of submitted claims does not establish priority. The PV author manuscript and DMCS published PDF were retrieved again and matched the previously inspected file bytes. Fresh-context AI reviewers checked the indicated statements and proof interfaces; their agreement is not human mathematical review. The source-version and reading limits above still apply.
+## Scope of the comparison
+
+The primary-source comparison concerns the exact conclusion: one simple cycle with at least its own length in distinct chords. Results allowing a loss in the number of chords have a different conclusion. The comparison distinguishes published theorems, preprints and announcements. It does not establish that every ingredient or supporting lemma is new. No claim about inaccessible or unpublished proofs is made.
+
+The October 2026 preprints above were consulted at the linked versions. Later work can supersede the comparison. The result and formal statement remain valid independently of a priority assessment.
+
+## Attribution and licenses
+
+AI systems developed the arguments and Lean proofs and performed the source reviews. Robert Huynh directed the work. No human mathematical review is claimed. The manuscript has one named author and separately discloses AI use.
+
+Lean, Mathlib and the formal-conjectures dependency retain their own licenses. The package does not include copies of the cited papers. [NOTICE](NOTICE) records the source attribution and [CITATION.cff](CITATION.cff) describes how to cite this package.

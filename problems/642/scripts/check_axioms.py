@@ -8,8 +8,8 @@ from source_scan import lean_code
 def collect():
  modules=check_coverage()
  source=''.join(f'import {m}\n' for m in modules)+'import Lean\n'
- source += 'run_elab do\n let env ← Lean.getEnv\n let modules : Array Lean.Name := #['+','.join('`'+m for m in modules)+']\n'
- source += ' for (name, info) in env.constants.toList do\n  if let some idx := env.getModuleIdxFor? name then\n   let module := env.header.moduleNames[idx.toNat]!\n   if modules.contains module then\n    let ty ← Lean.Meta.ppExpr info.type\n    let ax ← Lean.collectAxioms name\n    Lean.logInfo (Lean.Json.compress (Lean.Json.mkObj [("module",Lean.toJson module.toString),("declaration",Lean.toJson name.toString),("type",Lean.toJson ty.pretty),("axioms",Lean.toJson (ax.map Lean.Name.toString))]))\n'
+ source += 'run_elab do\n let env ← Lean.getEnv\n let moduleNames := env.header.moduleNames\n let modules : Array Lean.Name := #['+','.join('`'+m for m in modules)+']\n'
+ source += ' for (name, info) in env.constants.toList do\n  if let some idx := env.getModuleIdxFor? name then\n   let module := moduleNames[idx.toNat]!\n   if modules.contains module then\n    let ty ← Lean.Meta.ppExpr info.type\n    let ax ← Lean.collectAxioms name\n    Lean.logInfo (Lean.Json.compress (Lean.Json.mkObj [("module",Lean.toJson module.toString),("declaration",Lean.toJson name.toString),("type",Lean.toJson ty.pretty),("axioms",Lean.toJson (ax.map Lean.Name.toString))]))\n'
  output=run(['lake','env','lean','--stdin'],source)
  records=[json.loads(l) for l in output.splitlines() if l.startswith('{')]
  if any(l and not l.startswith('{') for l in output.splitlines()): raise ValueError('unexpected audit output')
@@ -17,7 +17,7 @@ def collect():
  identity=json.loads((ROOT/'source-identity.json').read_text())
  for r in records:
   if set(r['axioms'])-ALLOWED: raise ValueError('disallowed axioms '+r['declaration'])
-  r['axioms']=sorted(r['axioms']);r['oracle']=r['declaration']==identity['declaration']
+  r['axioms']=sorted(r['axioms']);r['oracle']=r['declaration'] in identity.get('headline_declarations',[identity['declaration']])
  return sorted(records,key=lambda r:(r['module'],r['declaration']))
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--register',action='store_true');a=p.parse_args()

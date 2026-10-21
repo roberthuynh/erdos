@@ -1,12 +1,18 @@
-# Formal proof map
+# Proof map
 
-The complete proof is the 134-module closure recorded in [source-identity.json](source-identity.json). The [written argument](PROOF.md) expands the quantitative composition, common-path probability intersection and retained-chord count. This guide explains its composition; it is not a standalone written proof of every analytic and probabilistic supplier.
+The main declaration is `Erdos642.Log3V1_20261024.original_log3_rich_cycle`. Its conclusion uses the actual graph edges and an actual simple cycle. The route below introduces no extra hypothesis on the input graph.
 
-1. **Preserve the graph and cycle support.** [CycleSupport](Openmath/Erdos642/Proofs/CampaignFe72210b/CycleSupport.lean) counts genuine unordered chord edges. [SpectralHost](Openmath/Erdos642/Proofs/CampaignFe72210b/SpectralHost.lean) defines the literal cycle target. A rich cycle has at least its length in distinct actual chords.
-2. **Extract a suitable host from the original graph.** [RegularizationAssembly](Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/RegularizationAssembly.lean) supplies the regularized graph. [SpectralExtraction](Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/SpectralExtraction.lean) supplies an injectively embedded bipartite spectral host with quantitative retained degree and gap. These are conclusions, not assumptions on the original graph.
-3. **Establish the initial density bound independently.** [InitialDensity](Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/InitialDensity.lean) uses the earlier host route to establish the avoiding-graph input. It does not invoke the final fifth-power theorem.
-4. **Use avoidance to control local returns.** [LocalAvoidanceMomentNormalized](Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/LocalAvoidanceMomentNormalized.lean) derives the actual fourth-return estimate with the original walk denominators. Its supplied estimate pays the later moment conditions.
-5. **Pay all parameters simultaneously.** [StrongGlobalApplicability](Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/StrongGlobalApplicability.lean) derives the required degree, order and moment inequalities for the same extracted host. Original order and host order are distinct quantities.
-6. **Produce one genuine cycle and return it to the original graph.** [MomentCycleProof](Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/MomentCycleProof.lean) supplies the host cycle. The injective graph map preserves distinct chords and cycle length. [AllOrdersDensity](Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/AllOrdersDensity.lean) handles small orders. [OriginalBound](Openmath/Erdos642/Proofs/CampaignFe72210bContinuation3/OriginalBound.lean) concludes the all-graph fifth-power theorem.
+| Step | Mathematical role | Source |
+|---|---|---|
+| Cycle and chord definitions | Count distinct original unordered edges on the cycle support. | [CycleSupport](Openmath/Erdos642/Proofs/CampaignFe72210b/CycleSupport.lean), [SpectralHost](Openmath/Erdos642/Proofs/CampaignFe72210b/SpectralHost.lean) |
+| Host extraction | Find an injectively embedded bipartite host with controlled degrees and cuts. | [Extract](Openmath/Erdos642/Proofs/Log3V1_20261024/Extract.lean) |
+| Dense mask | Choose a set with at least twice the host order in induced edges, while controlling each vertex's neighborhood in the mask. | [MaskCore](Openmath/Erdos642/Proofs/DenseMask20261019/MaskCore.lean) |
+| Fresh layers and Hall injections | Supply disjoint tough layers and inject endpoint occurrences into each layer. | [LayerHall](Openmath/Erdos642/Proofs/Log3V1_20261024/LayerHall.lean) |
+| Paths through tough graphs | Apply the proved Gallai path theorem to the port sets. | [ToughPaths](Openmath/Erdos642/Proofs/Log3V1_20261024/ToughPaths.lean) |
+| Merging and cycle closure | Merge a fixed fraction of components per layer and close the resulting path. | [Merger](Openmath/Erdos642/Proofs/Log3V1_20261024/Merger.lean) |
+| Parameters | Choose absolute constants in an order that meets all inequalities. | [Constants](Openmath/Erdos642/Proofs/Log3V1_20261024/Constants.lean) |
+| Original graph theorem | Compose the steps and transport the cycle and chords back to the input graph. | [Theorem](Openmath/Erdos642/Proofs/Log3V1_20261024/Theorem.lean) |
 
-The exported theorem has no remaining extraction, moment, path, probability or host premise. The constant is chosen before the graph. This package does not claim a linear threshold, a practical constant, or the later log-log refinement. Historical module comments describing a target as open concern that definition module at its creation; the final declaration and its complete imports determine the package’s proof status.
+The formal interfaces appear in [Interface](Openmath/Erdos642/Proofs/Log3V1_20261024/Interface.lean). The fourth-power theorem supplies growth for avoiding subgraphs. The previous fifth-power proof guide remains in [PROOF.md](PROOF.md). The six supporting facts and their exact declarations appear in [RESULTS.md](RESULTS.md).
+
+`Openmath.lean` imports all 263 proof modules. The module inventory and declaration registry specify the scope of the portable checks, including dependencies that are not listed individually in this map.

@@ -127,7 +127,7 @@ structure Layers (G : SimpleGraph V) (A B : Finset V) (n : ℕ) where
   separated : ∀ i, i < n → ∀ j, j < n → i ≠ j → ∀ v w,
     (matching i).Adj v w → ¬ (matching j).Adj v w
 
-/-- Internal residual invariants, all derived along with the public actual family. -/
+                                                                                     
 structure State (G : SimpleGraph V) (A B : Finset V) (δ n : ℕ) where
   layers : Layers G A B n
   residual : SimpleGraph V

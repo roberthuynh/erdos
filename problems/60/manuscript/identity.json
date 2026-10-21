@@ -1,0 +1,10 @@
+{
+  "scope": "Working manuscript artifacts; typesetting and formal proof verification are separate",
+  "files": {
+    "main.tex": "90668b3d4c2e4b1eac72b9871344207401234ce254ce71330f7b13512468c1d8",
+    "main.pdf": "7ed02e0833eb3a921ea5dd0d49bf8f34db912e2825d46a886211a48a3b45db8d",
+    "BUILD.md": "1bb47352c5b0309542262ccfe3b0308af99a69cd8612da0fc031cc36d646d693"
+  },
+  "accepted_mathematical_input_record": "../verification/accepted-mathematical-inputs.json",
+  "accepted_record_sha256": "76b7d1ef4637429fccf0f25bc88a045e08addf80949b7d4848d99265d99ae145"
+}

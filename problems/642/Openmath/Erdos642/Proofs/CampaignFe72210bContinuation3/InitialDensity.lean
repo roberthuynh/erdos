@@ -5,11 +5,11 @@ import Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.AvoidanceHeredity
 import Openmath.Erdos642.Proofs.CampaignFe72210bContinuation3.LocalAvoidanceMoment
 import Openmath.Erdos642.Proofs.CampaignFe72210b.SpectralCycleProof
 
-/-! Unconditional initial all-graph P8 from the independently proved old host route.
+                                                                                    
 
-No P8, new moment-host result, or new original bound is a mathematical premise.
-The LocalAvoidanceMoment import supplies only the existing P8 predicate name.
--/
+                                                                               
+                                                                             
+  
 namespace Erdos642.CampaignFe72210bContinuation3.InitialDensity
 open Erdos642.CampaignFe72210b
 open Erdos642.CampaignFe72210bContinuation3.CutExtraction

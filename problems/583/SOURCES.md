@@ -1,0 +1,8 @@
+# Sources and scope
+
+- Nathaniel Dean and Mekkia Kouider, *Gallai’s conjecture for disconnected graphs*, Discrete Mathematics 213 (2000), 43–54. [DOI](https://doi.org/10.1016/S0012-365X(99)00167-3). The parity-sensitive classical baseline is proved in this package rather than introduced as an axiom. The publisher page was unavailable during the latest check; Chu and Wang's bibliography supplies the citation.
+- Yanan Chu and Yan Wang, *Path decompositions of Eulerian graphs*, [arXiv:2510.12806v1](https://arxiv.org/html/2510.12806v1) (4 October 2025), introduction and Lemmas 2.3–2.4. Their common-root repair supplies the antecedent for the four-cycle case proved here. Their main theorem has a triangle-distance hypothesis, which the present connected-Eulerian bound does not impose.
+- Viresh Patel and Mehmet Akif Yıldız, *Path decompositions of oriented graphs*, European Journal of Combinatorics 134 (2026), 104346. [Published paper](https://ir.cwi.nl/pub/36262/36262.pdf), pages 1–3. The introduction records the general undirected 2n/3 baseline; the paper's directed-graph theorems are not used as results about undirected graphs.
+- [Erdős problem 583](https://www.erdosproblems.com/583) states the original question. The page returned HTTP 403 during a 26 October 2026 refresh, so that request did not establish the current discussion or proof-claim state.
+
+The accessible primary references above were checked on 26 October 2026 within the stated reading limits. This bounded comparison does not certify worldwide priority. The present theorem concerns exact partitions of original edges into simple paths, not overlapping covers or a restricted graph class. The manuscript is a working exposition of the verified result.

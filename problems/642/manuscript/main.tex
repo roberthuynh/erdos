@@ -1,0 +1,134 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,longtable,array}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor,hyperref,microtype,xurl}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black}
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\cp}{\operatorname{cp}}
+\newcommand{\rhoG}{\rho(G)}
+\newcommand{\status}[1]{\par\noindent\textcolor{blue!45!black}{\textbf{Evidence.} #1}\par}
+\title{Dense masks and tough layers for cycles with many chords}
+\author{Robert Huynh}
+\date{Working draft, 26 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+There is an absolute constant $C>0$ such that every finite simple graph with more than $Cn\log^3(2n)$ edges contains a simple cycle with at least as many distinct chords as vertices. We describe the dense-mask construction, its Hall injections into fresh tough layers, the component-merging argument and the final original-edge count. The theorem has complete Lean verification. Earlier logarithmic bounds and supporting statements belong to the same development and are retained with their individual evidence. The absolute-linear target remains open. A previously announced stronger result limits a current-best claim.
+\end{abstract}
+\tableofcontents
+
+\section{The theorem}
+A chord of a simple cycle is an original edge joining two vertices of that cycle that is not a cycle edge. Chords are counted as distinct unordered edges.
+\begin{theorem}
+There exists $C>0$ such that for every finite simple graph $G$ on $n$ vertices,
+\[
+ |E(G)|>Cn\log^3(2n)
+\]
+implies that $G$ contains a simple cycle with at least its length in chords.
+\end{theorem}
+The constant is chosen before the graph and its order. Logarithms are natural. At $n=0$, we define the whole edge threshold to be zero, matching the formal convention. Orders zero, one and two are handled by the impossible edge antecedent after increasing $C$.
+\status{The declaration \nolinkurl{Erdos642.Log3V1_20261024.original_log3_rich_cycle} was checked on 24 October 2026 by the official theorem check, a full 256-module clean build and kernel replay, and an axiom audit. Independent AI reviews accepted those exact sources. The exported package has a separate verification record; earlier checks do not certify changed export bytes.}
+\section{Extraction and fixed parameters}
+Assume for contradiction that $G$ avoids the required cycle. Set $L=\log(2n)$. The original-graph extractor yields an injectively embedded bipartite host $H$, of order $N\leq n$, minimum degree $d\geq KL^2$, maximum degree at most $100d$, and smaller-side cuts at least $\phi d$ times their size, with $\phi=a/L$ for a fixed $a>0$.
+The already verified log-four bound implies that every avoiding subgraph of minimum degree $q$ has order at least
+\[
+ M(q)=\tfrac12\exp\bigl((q/(2C_4))^{1/4}\bigr).
+\]
+This growth enters the sampling and toughness argument. It does not assume that the host is exactly regular.
+Choose $D_0=534$, $\eta=1/(64D_0)$, $\gamma=\eta/4$, $q_0=-\log(1-\gamma)$ and $C_\eta=3+1/q_0$. Let $K_s$ be the absolute constant in the tough-layer sampling theorem. The constants for layer sampling are chosen next; then choose
+\[
+ C_0\geq\max(4,800/a,2048C_\eta),\quad
+ K\geq\max(16C_0^2,64C_0,128C_\eta,4C_\eta K_s/3).
+\]
+Finally choose the original $C$ large enough for extraction. This order avoids a circular choice of parameters.
+\section{A dense mask with a suitable complement}
+Sample vertices with probability $p_Q=1/(C_0L)$. Concentration and a union bound give a single set $Q$ satisfying
+\[
+ \tfrac12p_Q\deg_H(v)\leq |N_H(v)\cap Q|
+ \leq2p_Q\deg_H(v)\leq\frac{200d}{C_0L}=:M_Q
+\]
+for every original center $v$, and $p_QN/2\leq|Q|\leq2p_QN$. Thus
+\[
+ e(H[Q])\geq p_Q^2dN/8\geq2N.
+\]
+The same $Q$ leaves $R=V(H)\setminus Q$ with minimum degree at least $3d/4$ and cut expansion at least $3\phi d/4$. Since $M_Q\leq\phi d/4$, this conclusion follows by counting the lost edges into $Q$. No independent random law for the selected complement is asserted.
+\section{Hall injections for all endpoint occurrences}
+Start with the edgeless forest on $Q$, assigning two endpoint tokens to each isolated vertex. Every original center sees at most $2M_Q$ tokens. Use
+\[
+ b=\lceil\log |Q|/q_0\rceil+2\leq C_\eta L
+\]
+fresh uniformly labelled layers in $R$. There is a label outcome in which each center has at least $h=3d/(8b)\geq2M_Q$ neighbors in every layer and every layer is ordinary $\eta$-tough.
+For a set $I$ of tokens, at least $h|I|$ incidences go to a given layer, while each receiving vertex sees at most $2M_Q$ of them. Consequently $|N(I)|\geq|I|$. Hall's theorem gives an injection of all tokens into that layer. Two tokens at the same isolate receive distinct images. Different layers are disjoint.
+The toughness supplier uses avoidance, inherited expansion and the growth of $M(q)$. Its conditions hold for each marginal sample. The union bound is taken on the original label space; it does not assume independence between layer-success events or between chosen matchings.
+\section{Merging and the chord count}
+In a fresh layer, choose one available original endpoint occurrence from each current path component. Its fixed injection gives distinct ports. Toughness and the proved Gallai path theorem supply disjoint port-to-port paths that merge at least a $\gamma$ fraction of components. Remaining free ends are still original endpoint occurrences, so the initial injections suffice in later layers. After $b-1$ phases, geometric decrease and integrality leave one path through $Q$. A final fresh connected layer joins its endpoints into one simple cycle.
+Let its length be $\ell\leq N$. Every edge of $H[Q]$ has both endpoints on this cycle; at most $\ell$ of those edges are cycle edges. Therefore the number of distinct original chords is at least
+\[
+ e(H[Q])-\ell\geq2N-\ell\geq\ell.
+\]
+The embedding into $G$ preserves the simple cycle and its distinct chords. This contradicts the assumed avoidance.
+\section{Earlier bounds and supporting statements}
+The development retains four whole-graph thresholds. With $L=\log(2n)$ and $D(n)=\log\log(e^e+n)$, they are
+\[
+ CnL^5,\qquad CnL^5/D(n),\qquad CnL^4,\qquad CnL^3.
+\]
+Each row has its own absolute constant. The fifth-power theorem was published earlier. The adaptive improvement and the fourth-power theorem have accepted source reviews and full kernel replay. The fourth-power theorem is an ingredient in the growth estimate above. These refinements are one development; the present theorem is the strongest bound within it.
+
+The following supporting facts have individual official checks, clean kernel replay and independent exact-source acceptance. They have no independent novelty claim.
+
+\begin{proposition}
+Let $G$ be bipartite with disjoint parts $P,B$ covering its $n$ vertices. Then
+\[
+ e(G)-3n=\sum_{p\in P}(\deg_G(p)-3)-3|B|.
+\]
+\end{proposition}
+Every edge has one endpoint in $P$, so $e(G)=\sum_{p\in P}\deg_G(p)$; substituting $n=|P|+|B|$ proves the identity. The checked declaration is \nolinkurl{ThreeLedger.three_ledger}.
+
+\begin{proposition}
+A vertex $x$ with $\deg_G(x)\le1$ lies on no simple cycle. Deleting all edges incident to this one vertex preserves the existence of a rich cycle.
+\end{proposition}
+A vertex on a simple cycle has two distinct cycle neighbors. Hence $x$ lies on no cycle support and none of its incident edges can be a chord of such a cycle. The reverse direction follows by viewing the remaining graph as a subgraph of $G$. The declarations are \nolinkurl{PendantCycle.notMem_cycle_support_of_degree_le_one} and \nolinkurl{PendantRich.hasRichCycle_deleteIncidenceSet_iff}. The vertex set is unchanged; the formal statement concerns incident-edge deletion at one vertex.
+
+\begin{proposition}
+Let $c$ be a simple cycle of a bipartite graph with parts $P,B$, and let $S$ be its vertex set. Then $c$ is rich if and only if
+\[
+ \sum_{b\in S\cap B}\bigl(|N_G(b)\cap S|-4\bigr)\ge0.
+\]
+\end{proposition}
+The cycle alternates between the parts, so its length is $2|S\cap B|$. Each original edge with both ends in $S$ is counted once in $\sum_{b\in S\cap B}|N_G(b)\cap S|$. Subtracting the cycle edges and comparing the remaining chords with the length gives the claim. The checked declaration is \nolinkurl{IncidenceLedger.rich_iff_ledger}.
+
+\begin{proposition}
+Let $a,b,c\ne w$ lie in pairwise different connected components of the graph after deleting $w$. Any walk from $a$ to $b$ and any walk from $b$ to $c$ have $w$ as a common internal vertex.
+\end{proposition}
+A walk avoiding $w$ would connect two of those components. Since $w$ is not an endpoint of either walk, its occurrence is internal. The declaration is \nolinkurl{TreeBranch.shared_internal_vertex_of_three_branches}. It asserts this three-component case, without any ordering or general family-of-paths conclusion.
+
+\begin{proposition}
+If $L>0$, $\ell=L^{1/4}$, $b=L/\ell$ and $d=bL$, then $d=L^{7/4}$.
+\end{proposition}
+The identity follows by subtracting and adding exponents. The checked declaration is \nolinkurl{ExponentFixedPoint.d_eq_rpow}. Its equalities are hypotheses. The statement does not justify asymptotic sampling assumptions or an edge threshold with exponent $11/4$.
+
+All six declarations in this section have the namespace prefix \nolinkurl{Erdos642.CloudT9_20261021}. The package's results table links the exact source files and distinguishes their scope from the whole-graph theorem.
+
+\section{Prior work and qualification}
+Dragani\'c, Methuku, Munh\'a Correia and Sudakov~\cite{dmms} prove the same chord conclusion from an $O(n\log^8 n)$ edge threshold. The proof here uses sampling, toughness and path-merging ideas developed by Christoph, Hunter and Sudakov~\cite{chs}, together with the earlier extraction construction. No claim that all ingredients are new is made.
+
+Dragani\'c's October preprint~\cite{announcement} announces upcoming work giving essentially order $\log\log n$ average degree for this chord problem. That announced scale is stronger than the cubic-logarithmic bound here. The announcement does not itself provide its proof. We make no current-best or priority claim. These references and the exact formal statement delimit the comparison.
+
+\begin{thebibliography}{9}
+\bibitem{dmms} N. Dragani\'c, A. Methuku, D. Munh\'a Correia and B. Sudakov, \emph{Cycles with many chords}, Random Structures \& Algorithms 65 (2024), 3--16. \url{https://doi.org/10.1002/rsa.21207}.
+\bibitem{chs} M. Christoph, Z. Hunter and B. Sudakov, \emph{Thinning and sprinkling: from robust sampling to almost Hamiltonicity}, arXiv:2609.30165v1, 24 September 2026. \url{https://arxiv.org/abs/2609.30165v1}.
+\bibitem{announcement} N. Dragani\'c, \emph{New tools for sparse graph embeddings: Hybrid expanders and application to nested cycles}, arXiv:2610.16572v1, 12 October 2026, introduction. \url{https://arxiv.org/abs/2610.16572v1}.
+\end{thebibliography}
+
+\section{AI use and review}
+AI systems developed the mathematical arguments, formalizations and earlier source reviews. Robert Huynh directed the research. No human mathematical review is claimed. A Lean proof checks its precise formal statement; it does not establish historical priority. This manuscript is a new exposition of existing work. An independent AI review checked the headline statements, supporting hypotheses, comparison with prior work and source identity. That bounded review did not audit every supplier proof or every sentence of this exposition.
+\section{Status and further versions}
+This is a working manuscript. The principal mathematical statements above have existing formal verification and source-bound reviews. The exposition and technical appendices are being expanded. No human mathematical review is claimed. The exact formal statements and their hypotheses determine the scope of the checked results; compiling this manuscript does not check its mathematics.
+Later versions will expand the technical appendices and record corrections. Open questions and incomplete approaches do not constitute additional proved theorems.
+\end{document}

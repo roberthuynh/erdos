@@ -1,0 +1,5 @@
+# Attribution and license
+
+Copyright 2026 Robert Huynh. This package uses the collection's Apache-2.0 license. AI systems developed the new proof sources and explanatory text under Robert Huynh's direction.
+
+The proof uses Lean, Mathlib and the pinned Formal Conjectures package, with their own licenses and notices. The imported graph-decomposition definition comes from FormalConjecturesForMathlib. Classical path-partition results and cycle-restoration methods retain their attribution in SOURCES.md; the package does not claim those classical inputs as new mathematics.

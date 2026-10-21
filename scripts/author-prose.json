@@ -11,7 +11,7 @@
       "end": "\n## How this was made",
       "label": "643 result introduction",
       "path": "README.md",
-      "sha256": "d8da1805685acca73d97faac75bfc58969f40567838746969e4fba2565aa44f2",
+      "sha256": "ceb54bca1e3f53aa2dd757402106884d770cecee68a22472b9bd248ab3879a90",
       "start": "# Erd\u0151s #643: the sharp bound for triple systems\n"
     },
     {
@@ -32,7 +32,7 @@
       "end": "\n## Collection",
       "label": "written-proof review request",
       "path": "README.md",
-      "sha256": "21ceafa1f0718d5cb281dee1c34f461d7c75001c3d41fdc2451e2dc2c4e98d60",
+      "sha256": "01d4a88db3bf1b61202c5973a989e05cb96654ba94ceb77cea101f0ef6c47dc8",
       "start": "## Help needed\n"
     }
   ],

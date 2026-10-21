@@ -1,0 +1,419 @@
+{
+  "Erdos1017.Basic": {
+    "source": "Erdos1017/Basic.lean",
+    "sha256": "70f5cdad80bf61dbb5d94ed641d460b54fedf39ddfe1e674bef402940daba8e0"
+  },
+  "Erdos1017.BinomialCount": {
+    "source": "Erdos1017/BinomialCount.lean",
+    "sha256": "1f8285803e38cac189bdb68dc18477dd461cd192cb64995191a9a62543b7dff7"
+  },
+  "Erdos1017.BinomialDefs": {
+    "source": "Erdos1017/BinomialDefs.lean",
+    "sha256": "c4ae5a528ba576d8ef5d8ab2dca90a6c7c84fb0d306e44856df94fcb6fa98f6a"
+  },
+  "Erdos1017.BinomialLower": {
+    "source": "Erdos1017/BinomialLower.lean",
+    "sha256": "9d265f7c4bced0a8371d9a5267198928cd9c015cd02000a4109ebb35dd7bec6c"
+  },
+  "Erdos1017.BinomialReduction": {
+    "source": "Erdos1017/BinomialReduction.lean",
+    "sha256": "acbbfe159900bcc9a9cbbaa71598491a49260dd0f66cb5f2a4dbbbb85f47edee"
+  },
+  "Erdos1017.BinomialSelector": {
+    "source": "Erdos1017/BinomialSelector.lean",
+    "sha256": "2ac2241ef5680f3cc01cfc0c33ee6b3de718f057915b25b4a1423abc1419413d"
+  },
+  "Erdos1017.BinomialSharp": {
+    "source": "Erdos1017/BinomialSharp.lean",
+    "sha256": "85e8e30dcb1f70ed7eb4a0c92a5f56ed860d73e0311a26febef164f8b35a8252"
+  },
+  "Erdos1017.BinomialUpper": {
+    "source": "Erdos1017/BinomialUpper.lean",
+    "sha256": "1c5cb75a44f59d163b05fc58bd1cc74b2f5c01885619ccfd6915db86d79781c2"
+  },
+  "Erdos1017.CategoricalSelector": {
+    "source": "Erdos1017/CategoricalSelector.lean",
+    "sha256": "9bfc2142636df77ccc13e45aadb83f189f0a39ee4a08554436f468b21337da73"
+  },
+  "Erdos1017.CentralSector": {
+    "source": "Erdos1017/CentralSector.lean",
+    "sha256": "a7f8f5eb687ccc839cbf0b7faf66e192fb66fc74cecf3144e6ee8cc7855abcfa"
+  },
+  "Erdos1017.CliqueLaw": {
+    "source": "Erdos1017/CliqueLaw.lean",
+    "sha256": "751bf82d5b818ce278147fd5ad925a1b97678b31ebbc250f41ce92e9b9d7403c"
+  },
+  "Erdos1017.CollisionBound": {
+    "source": "Erdos1017/CollisionBound.lean",
+    "sha256": "931f10a32b930956f6c95e98e8abfacf0d54ce1e593f70246d69da00296c5794"
+  },
+  "Erdos1017.CombinedTrades": {
+    "source": "Erdos1017/CombinedTrades.lean",
+    "sha256": "794935ee958433a8b4caab9887a4748fa4bab3d51c0ae631f11eee1b240c859e"
+  },
+  "Erdos1017.ContinuousCertificate": {
+    "source": "Erdos1017/ContinuousCertificate.lean",
+    "sha256": "ef84802c0f9e7ce89ffc413993d2357abf412eb0547fe196010b702fbe1fac88"
+  },
+  "Erdos1017.DenseWeights": {
+    "source": "Erdos1017/DenseWeights.lean",
+    "sha256": "32a23459c3034067ea1bb352b731f3f55ba179f1a16dc688f5ffaec2d6954bc7"
+  },
+  "Erdos1017.ElementaryBounds": {
+    "source": "Erdos1017/ElementaryBounds.lean",
+    "sha256": "d46047338e8a563b10ce13892bf76912e8c2ba5cce90fc2bbc9cd9ff8cca7bf3"
+  },
+  "Erdos1017.ElementaryIncidence": {
+    "source": "Erdos1017/ElementaryIncidence.lean",
+    "sha256": "4772ea0349c539c6a3fc8912409ac9c1e6deb3c67e76441fdfc8fba85bceb7b2"
+  },
+  "Erdos1017.ElementaryLower": {
+    "source": "Erdos1017/ElementaryLower.lean",
+    "sha256": "34ae51eb16bd787cb27e3151802c71b34fdeda99d5c28443faf4853e4bd0e69a"
+  },
+  "Erdos1017.GeometricTail": {
+    "source": "Erdos1017/GeometricTail.lean",
+    "sha256": "367b9bfaadb69a49ba81a481553c3b865fb3caa1d42146c812f22b07c985170c"
+  },
+  "Erdos1017.GraphSelector": {
+    "source": "Erdos1017/GraphSelector.lean",
+    "sha256": "a64d6afabd96394db37db7cfc9c4d1d2d2872366eb0df77cfe34aa84efa109c7"
+  },
+  "Erdos1017.HigherTrades": {
+    "source": "Erdos1017/HigherTrades.lean",
+    "sha256": "acb3d508f315cf0c613d1b285cf0e4d9724e1697bcbc21f09a6735bb9a179343"
+  },
+  "Erdos1017.IndependentSubset": {
+    "source": "Erdos1017/IndependentSubset.lean",
+    "sha256": "bde1ded01f49087f2612789d4c9fd1eb35028378b91c34d689f29ef799c0cf9f"
+  },
+  "Erdos1017.LayerFactors": {
+    "source": "Erdos1017/LayerFactors.lean",
+    "sha256": "e63106c48562a0d307f9d238017752daf43b6bcc88ce5e9b093daca16058952d"
+  },
+  "Erdos1017.LocalTriangleLeave": {
+    "source": "Erdos1017/LocalTriangleLeave.lean",
+    "sha256": "68fd0b1a50233d07720ab98d7ed50954cbea13e383193d757ee010ec892c8109"
+  },
+  "Erdos1017.LogEnclosure": {
+    "source": "Erdos1017/LogEnclosure.lean",
+    "sha256": "84a31a255698b29e9c68af9b531b26939510115775762d5b36995be163606573"
+  },
+  "Erdos1017.LowPartSector": {
+    "source": "Erdos1017/LowPartSector.lean",
+    "sha256": "f1a2e0df6eb69cb67d01aa1c61e4e63c6a6335eb04e34b08bdfe3b1c8a7c5b9c"
+  },
+  "Erdos1017.MesoscopicCounts": {
+    "source": "Erdos1017/MesoscopicCounts.lean",
+    "sha256": "9bc8a0b7ad0d5d9421647fd9743a5eebf359dc79a71c1b1cb6b6666672e249f2"
+  },
+  "Erdos1017.MesoscopicDual": {
+    "source": "Erdos1017/MesoscopicDual.lean",
+    "sha256": "c2515d8170fd5e81095649e30ff83061fd87366faee4b147863db803223a64fa"
+  },
+  "Erdos1017.MesoscopicGraph": {
+    "source": "Erdos1017/MesoscopicGraph.lean",
+    "sha256": "1e0250e4fb239d7633b313180e3e726eafcbbff7068678595c2a5701558bff93"
+  },
+  "Erdos1017.MesoscopicInterpolation": {
+    "source": "Erdos1017/MesoscopicInterpolation.lean",
+    "sha256": "17906cf200f4940d1cb0c50e2264f7db2353e147cc3038bdfd11b101da6946f3"
+  },
+  "Erdos1017.MesoscopicLower": {
+    "source": "Erdos1017/MesoscopicLower.lean",
+    "sha256": "068c8a1766f59f1d8f6545a2640f8b4b81488910f0bb96e6914db241fd4c7c46"
+  },
+  "Erdos1017.MesoscopicParameters": {
+    "source": "Erdos1017/MesoscopicParameters.lean",
+    "sha256": "058b0438848f55d62159230835f69b029c8d0c19ca25ebba1b0040bbb6868cbc"
+  },
+  "Erdos1017.MultipartiteAccounting": {
+    "source": "Erdos1017/MultipartiteAccounting.lean",
+    "sha256": "ac71b03eda3387234462a405b9d7fdf0853190db7fcc79a2c607d9afb7af76a4"
+  },
+  "Erdos1017.MultipartiteWeights": {
+    "source": "Erdos1017/MultipartiteWeights.lean",
+    "sha256": "7ba7865a3b652eef196c3753ceda98a6702e52c9f248467167aa139aeb2b0062"
+  },
+  "Erdos1017.NearComplete": {
+    "source": "Erdos1017/NearComplete.lean",
+    "sha256": "448ec6cd8b5cf17767caf4b31f7cc87ff8204a89b2bdd44ce9a1fd29a75bc515"
+  },
+  "Erdos1017.OddsBounds": {
+    "source": "Erdos1017/OddsBounds.lean",
+    "sha256": "6e4e34034484381a617cf5fbee566523a09a455ad4ac2a2f23be30e9cabcd187"
+  },
+  "Erdos1017.OddsCorrection": {
+    "source": "Erdos1017/OddsCorrection.lean",
+    "sha256": "de94664ad7041342f1bffd969d613b44eb4910c6a434d5e4a5ae88c331edbc9f"
+  },
+  "Erdos1017.PartialTriangleExists": {
+    "source": "Erdos1017/PartialTriangleExists.lean",
+    "sha256": "9ea56dfacaecf4e165f73b9fd8d64c8842360291b286956e62a78e85b4d9ddb7"
+  },
+  "Erdos1017.PartialTriangleHeavy": {
+    "source": "Erdos1017/PartialTriangleHeavy.lean",
+    "sha256": "f605327d2dda0f590be2f433a0159af1a4c1792f22ee42ee7fdfb79e2820c8d8"
+  },
+  "Erdos1017.PartialTriangleSupply": {
+    "source": "Erdos1017/PartialTriangleSupply.lean",
+    "sha256": "f6fdef209894f074b5100f62a4b637590fae8d0d8cc985a4fc32e8d1b4230aec"
+  },
+  "Erdos1017.ProductEnclosure": {
+    "source": "Erdos1017/ProductEnclosure.lean",
+    "sha256": "d815dde9e5dd8012fa71a95527e226045a7dcc6a15444e55ad647bbd757fffbd"
+  },
+  "Erdos1017.ProductSelector": {
+    "source": "Erdos1017/ProductSelector.lean",
+    "sha256": "02c50b34b4e1cbd9f67c677207b016e5cb971edf6c6da80748311a1ec01e3116"
+  },
+  "Erdos1017.ProductTradeBudgets": {
+    "source": "Erdos1017/ProductTradeBudgets.lean",
+    "sha256": "5890e6eb0f60c152f5d3c711c2dda6cebe420c59bca3b291f451a569dcc02f69"
+  },
+  "Erdos1017.ProductTradeFeasibility": {
+    "source": "Erdos1017/ProductTradeFeasibility.lean",
+    "sha256": "e1028b58853e4c391a24c09995fa0641b2801c2fd358ef483e08bc5f92f09695"
+  },
+  "Erdos1017.RectangleAffine": {
+    "source": "Erdos1017/RectangleAffine.lean",
+    "sha256": "ad8b61f803102fe0bd9a8311aab4329a61d47cc9f4833bba0ef5f3fccf694338"
+  },
+  "Erdos1017.RectangleArithmetic": {
+    "source": "Erdos1017/RectangleArithmetic.lean",
+    "sha256": "fcd53286fca37740799a4a06a5a5579690883f8e9d90d03fdc6758a0ec21cdf4"
+  },
+  "Erdos1017.RectangleCells.Batch00": {
+    "source": "Erdos1017/RectangleCells/Batch00.lean",
+    "sha256": "16e7eaff963f3e5126731d1d7e35acb0fd0996151d47b98f773421ea3949a163"
+  },
+  "Erdos1017.RectangleCells.Batch01": {
+    "source": "Erdos1017/RectangleCells/Batch01.lean",
+    "sha256": "0f8c4d80e387aabc733b4230175cd04bd8d77a3f266d263b15295c67bb69f822"
+  },
+  "Erdos1017.RectangleCells.Batch02": {
+    "source": "Erdos1017/RectangleCells/Batch02.lean",
+    "sha256": "40924b46eb71d16184f47ed4674c5466f51fc4cca5ea98255611856ade9a07b1"
+  },
+  "Erdos1017.RectangleCells.Batch03": {
+    "source": "Erdos1017/RectangleCells/Batch03.lean",
+    "sha256": "d33a42e0af2b9509c246714aef913861febc63251e83fa7985a2ca66cf2c8e48"
+  },
+  "Erdos1017.RectangleCells.Batch04": {
+    "source": "Erdos1017/RectangleCells/Batch04.lean",
+    "sha256": "f2db1aa437a7ecedc2c0cc608184dba813b1c55746f287409109ec18ca376ed6"
+  },
+  "Erdos1017.RectangleCells.Batch05": {
+    "source": "Erdos1017/RectangleCells/Batch05.lean",
+    "sha256": "f7f51fe567287fe6b9ece7bf9c313e9c6e3a9c93cf6cc9294a2bc8dec4594992"
+  },
+  "Erdos1017.RectangleCells.Batch06": {
+    "source": "Erdos1017/RectangleCells/Batch06.lean",
+    "sha256": "06fd82024967295506e8fe8b26615714573b4692e842e665751087ebfa915372"
+  },
+  "Erdos1017.RectangleCells.Batch07": {
+    "source": "Erdos1017/RectangleCells/Batch07.lean",
+    "sha256": "1cc22b2ba28cdd161853d3e78fc045caf56d69379bd076d5afdceed5c7e6eb22"
+  },
+  "Erdos1017.RectangleCells.Batch08": {
+    "source": "Erdos1017/RectangleCells/Batch08.lean",
+    "sha256": "e81da586ead5b4a00d3231f75645c9d4d6b7a193d84ab13ec5f8ec37cc539073"
+  },
+  "Erdos1017.RectangleCells.Batch09": {
+    "source": "Erdos1017/RectangleCells/Batch09.lean",
+    "sha256": "dcf207f3a332c7b9f2bdc65aabf2db089165b1c960bc88dea9203ce990b8add7"
+  },
+  "Erdos1017.RectangleCells.Batch10": {
+    "source": "Erdos1017/RectangleCells/Batch10.lean",
+    "sha256": "4a3c2d6a005a8c937bc8f714f42a9a8668fcbc5e4e26064b75092d9cb8e8d09b"
+  },
+  "Erdos1017.RectangleCells.Batch11": {
+    "source": "Erdos1017/RectangleCells/Batch11.lean",
+    "sha256": "5fced4866dd06b37beca4a1d53300dcddb4b47522511388e788bf33551427225"
+  },
+  "Erdos1017.RectangleCells.Batch12": {
+    "source": "Erdos1017/RectangleCells/Batch12.lean",
+    "sha256": "aae497cff835834e909e48db109d3765060e1c80c1c70083f2f6c3cf630ae880"
+  },
+  "Erdos1017.RectangleCells.Batch13": {
+    "source": "Erdos1017/RectangleCells/Batch13.lean",
+    "sha256": "2032c27a42baa504a2027decdb16f5d301c8c7b51101dd3a86c6a6040b459794"
+  },
+  "Erdos1017.RectangleCells.Batch14": {
+    "source": "Erdos1017/RectangleCells/Batch14.lean",
+    "sha256": "deab36cf015ccc7d5d4d0b83dcf810581caa8561e95a4142bc1bafa39daf8592"
+  },
+  "Erdos1017.RectangleCells.Batch15": {
+    "source": "Erdos1017/RectangleCells/Batch15.lean",
+    "sha256": "4e95ae87a0b7eec41017278554158157f46e811a710a0b9eca9f8c3dabd0f19b"
+  },
+  "Erdos1017.RectangleCells.Batch16": {
+    "source": "Erdos1017/RectangleCells/Batch16.lean",
+    "sha256": "5da91f0c5be6fe8955a54b5ca4734084b5eb2724eb4d0604d73ab5c7528548ef"
+  },
+  "Erdos1017.RectangleCells.Batch17": {
+    "source": "Erdos1017/RectangleCells/Batch17.lean",
+    "sha256": "fd244feca5ff414a422b62e92dbb5ab3bf0941eb7e0d84efc62b65ed9d42cf2e"
+  },
+  "Erdos1017.RectangleCells.Batch18": {
+    "source": "Erdos1017/RectangleCells/Batch18.lean",
+    "sha256": "c89f058fc0e9476681a54f057ed08edfb4e3a93a824a899e912b319877425db7"
+  },
+  "Erdos1017.RectangleCells.Batch19": {
+    "source": "Erdos1017/RectangleCells/Batch19.lean",
+    "sha256": "3aa9be12717d2e26c945fb5bca68b3a6291e407b63b6610581cdb78f357eb157"
+  },
+  "Erdos1017.RectangleCells.Batch20": {
+    "source": "Erdos1017/RectangleCells/Batch20.lean",
+    "sha256": "a4a13c90171485c42ea43cab81f87eb63932b87f2475c31bb62c77c0b690d68f"
+  },
+  "Erdos1017.RectangleCells.Batch21": {
+    "source": "Erdos1017/RectangleCells/Batch21.lean",
+    "sha256": "b14a9bebadf9d598d65361be6c83bb0a2e93a26502aafbc6818f3ce69058c90e"
+  },
+  "Erdos1017.RectangleCells.Batch22": {
+    "source": "Erdos1017/RectangleCells/Batch22.lean",
+    "sha256": "9296334b6178a2d199abc513feab84d861c0f2e894742e9f7cfcb8c3709b4737"
+  },
+  "Erdos1017.RectangleCells.Batch23": {
+    "source": "Erdos1017/RectangleCells/Batch23.lean",
+    "sha256": "4334d375376c8220612bf2cac6562281c0f38327e629fd1dab730ecde4f24b74"
+  },
+  "Erdos1017.RectangleMonotonicity": {
+    "source": "Erdos1017/RectangleMonotonicity.lean",
+    "sha256": "bad4774a391c940797970056a9ff807644ec413307ed67b536a410d2cacd6fbb"
+  },
+  "Erdos1017.RectangleSelector": {
+    "source": "Erdos1017/RectangleSelector.lean",
+    "sha256": "aedf326443436c1081b1360be938c0a2a39c8eae9059144f4149b57c52aaa21c"
+  },
+  "Erdos1017.RootedMassLift": {
+    "source": "Erdos1017/RootedMassLift.lean",
+    "sha256": "bf7d1a58370fd125d0091d2d544c6f1102e165725038833f0fe83b74b1a6954c"
+  },
+  "Erdos1017.RootedSelector": {
+    "source": "Erdos1017/RootedSelector.lean",
+    "sha256": "bf7fd6e0d99845167472ddc16bf2cc2ca340d78db846b2ef235301b4dab7006d"
+  },
+  "Erdos1017.RootedTypeLift": {
+    "source": "Erdos1017/RootedTypeLift.lean",
+    "sha256": "1e7b5c4058fd32920020d21c6e70b3a35c77b2c69ed10c322223e1d52601c03a"
+  },
+  "Erdos1017.SharpAffine": {
+    "source": "Erdos1017/SharpAffine.lean",
+    "sha256": "89b5141a7464047f2002e96bba379ad98f15d9a0353e401da05f074d5fe0657a"
+  },
+  "Erdos1017.SlopeBarrier": {
+    "source": "Erdos1017/SlopeBarrier.lean",
+    "sha256": "28b223dd3aec68fdf72002d869c60722f98612c46b1fb678890c812ba06f92d1"
+  },
+  "Erdos1017.SplitDual": {
+    "source": "Erdos1017/SplitDual.lean",
+    "sha256": "2d1f476e58cd9413fbdd38e30754ddb940c0c7aacf55b936a9b375756dfef3a5"
+  },
+  "Erdos1017.SubsetMoments": {
+    "source": "Erdos1017/SubsetMoments.lean",
+    "sha256": "9d2ab6111426bb8bf1f52891a7cd86a2e5d6e2420d3ffa577deb6d5874cdac66"
+  },
+  "Erdos1017.TradeParameters": {
+    "source": "Erdos1017/TradeParameters.lean",
+    "sha256": "306ae2339aa2f7eb2755437fd75af67a10806d499456491944ebb09630679a3e"
+  },
+  "Erdos1017.TriangleConstructor": {
+    "source": "Erdos1017/TriangleConstructor.lean",
+    "sha256": "0193e57746d955d07e0791287a2893a064d07021e1863e1992b5f46ea3ba04a3"
+  },
+  "Erdos1017.TriangleHomogeneous": {
+    "source": "Erdos1017/TriangleHomogeneous.lean",
+    "sha256": "0d0f0fe5fc0b38af4d99b4aad93ecac3fc29f5bd2a7f9f3a33e147a488b5837e"
+  },
+  "Erdos1017.TrianglePacking": {
+    "source": "Erdos1017/TrianglePacking.lean",
+    "sha256": "1332b011af7364110d726c1e8a200c9ad879c074f0fd694d12b16f3f3762a117"
+  },
+  "Erdos1017.TrianglePackingBalanced": {
+    "source": "Erdos1017/TrianglePackingBalanced.lean",
+    "sha256": "ff4a9cc8e384d3ae9668e455b3f1bdd88f404624ebbb9334c5da4cb8f2161aa1"
+  },
+  "Erdos1017.TrianglePackingHeavy": {
+    "source": "Erdos1017/TrianglePackingHeavy.lean",
+    "sha256": "f46332014f0a3b10733fb19c2f2c6007ba679be187c3383c6a9e45581439f28d"
+  },
+  "Erdos1017.TrianglePackingStep": {
+    "source": "Erdos1017/TrianglePackingStep.lean",
+    "sha256": "5e6b8eff637080e9e88484c05612fd0fa44e725caaf0ba05331aa0177d63785f"
+  },
+  "Erdos1017.TrianglePackingTotals": {
+    "source": "Erdos1017/TrianglePackingTotals.lean",
+    "sha256": "6300d95c707ccf4aec309d258a6becf8f3da13f58074e4177726bdaae6d9b54f"
+  },
+  "Erdos1017.TrianglePackingTransport": {
+    "source": "Erdos1017/TrianglePackingTransport.lean",
+    "sha256": "34ff2fb8bda7788389bf679f0c0a26c5a6c8ca7be50446440c2dc431915884e8"
+  },
+  "Erdos1017.TriangleScalar": {
+    "source": "Erdos1017/TriangleScalar.lean",
+    "sha256": "5613d53f29c52f69afd84f003c75b43c3e3ca89d1af5e29e339d52129d889822"
+  },
+  "Erdos1017.TypeBudget": {
+    "source": "Erdos1017/TypeBudget.lean",
+    "sha256": "de87140d4fa3e14b8d5daeb9c8d42be606eb4732e7f92d8356ae38089c015e72"
+  },
+  "Erdos1017.TypeCentral": {
+    "source": "Erdos1017/TypeCentral.lean",
+    "sha256": "dbf7e74124f742629465192a9994b88b1d2b077305583601b886d6e27d6b1ab0"
+  },
+  "Erdos1017.TypeInflation": {
+    "source": "Erdos1017/TypeInflation.lean",
+    "sha256": "ff438e15f112545c20f9a520a212370a360fee33f0c0af038e9ea0c355a5341d"
+  },
+  "Erdos1017.TypeInflationBound": {
+    "source": "Erdos1017/TypeInflationBound.lean",
+    "sha256": "f8837004f0e2a9d2dbb65337d0c885001868cafb73e38657b34f556e7a10293e"
+  },
+  "Erdos1017.TypeInflationScalar": {
+    "source": "Erdos1017/TypeInflationScalar.lean",
+    "sha256": "a3e8826f8c1e4db72e39b7a8e8734967d6d446f84fb34c779ff12f74eefaea36"
+  },
+  "Erdos1017.TypeLift": {
+    "source": "Erdos1017/TypeLift.lean",
+    "sha256": "a3858342a5a3fbef45b3d13d0a8abdbcaf4a56aab74d307a0f94628e5b48b96a"
+  },
+  "Erdos1017.TypePartition": {
+    "source": "Erdos1017/TypePartition.lean",
+    "sha256": "42781b6188437eca511a8f16299b8a7a89447864c4f50b83a2f7910be7480baa"
+  },
+  "Erdos1017.TypeRootLaws": {
+    "source": "Erdos1017/TypeRootLaws.lean",
+    "sha256": "1778f859f2b04dcce132ea13437385b17d20fb995c821d6f3e16876ca0820813"
+  },
+  "Erdos1017.TypeTriangle": {
+    "source": "Erdos1017/TypeTriangle.lean",
+    "sha256": "f0ce3112209d29a59b24e7d1f8113b1f300f7f324141a6ca6ef5bd0c0d1456e7"
+  },
+  "Erdos1017.WeightMerge": {
+    "source": "Erdos1017/WeightMerge.lean",
+    "sha256": "58e1ddcc05e198e1cc33468cf79f95b3fb4fc557dee791033d933efa7053b8a0"
+  },
+  "Erdos1017.WeightedClique": {
+    "source": "Erdos1017/WeightedClique.lean",
+    "sha256": "9e6f7744f29e80cd582b00f1b088e9afb123caa64381b9effe772bb85faaa696"
+  },
+  "Erdos1017.WeightedGraph": {
+    "source": "Erdos1017/WeightedGraph.lean",
+    "sha256": "20fc9126de6873dcc1895aa00b0adf2fbdfab3f58c48c3e03f9cd29736016bb9"
+  },
+  "Erdos1017.WeightedLayers": {
+    "source": "Erdos1017/WeightedLayers.lean",
+    "sha256": "63ea9d8018382468a4a68fa0309c5d6c22fbee733d8c2a9fc5bdd2bc7dd0b349"
+  },
+  "Erdos1017.WeightedSymmetrization": {
+    "source": "Erdos1017/WeightedSymmetrization.lean",
+    "sha256": "281b3e71d669e1aa0736591b11d0e15e134e90ffa2baf30b3425c3f4e355b312"
+  },
+  "$pins": {
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+    "lakefile.toml": "1de48993ea177230a6b62054166ca643407fe18d0d743a925bccad18a591bf5f",
+    "lake-manifest.json": "0ed03df20542c5d1333aa7dedef9df2238920e5e37f8021d2987b05c77f77230"
+  }
+}

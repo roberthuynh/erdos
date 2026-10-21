@@ -51,7 +51,7 @@ theorem actual_chordEdges_card_le_map (f : G →g H) (hf : Function.Injective f)
   rw [Finset.card_image_of_injective _ (Sym2.map.injective hf)] at hcard
   exact hcard
 
-/-- Exact frozen rich-cycle target transported by an injective adjacency-preserving map. -/
+                                                                                           
 theorem hasRichCycle_of_injective_hom (f : G →g H) (hf : Function.Injective f)
     (hG : HasRichCycle G) : HasRichCycle H := by
   obtain ⟨v, c, hc, hrich⟩ := hG

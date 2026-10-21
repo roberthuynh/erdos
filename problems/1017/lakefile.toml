@@ -1,0 +1,15 @@
+name = "erdos1017"
+defaultTargets = ["Erdos1017"]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+
+[[require]]
+name = "formal_conjectures"
+git = "https://github.com/google-deepmind/formal-conjectures"
+rev = "137aec5c7abd3aa61f7a73138a97279acfc79e93"
+
+[[lean_lib]]
+name = "Erdos1017"
+roots = ["Erdos1017.SharpAffine", "Erdos1017.MesoscopicLower", "Erdos1017.BinomialSharp", "Erdos1017.SlopeBarrier", "Erdos1017.NearComplete"]

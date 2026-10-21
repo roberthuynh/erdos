@@ -1,0 +1,14 @@
+name = "erdos583"
+defaultTargets = ["Erdos583.Verified"]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+
+[[require]]
+name = "formal_conjectures"
+git = "https://github.com/google-deepmind/formal-conjectures"
+rev = "137aec5c7abd3aa61f7a73138a97279acfc79e93"
+
+[[lean_lib]]
+name = "Erdos583"

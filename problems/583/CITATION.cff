@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite the exact repository version and theorem declaration."
+title: "A universal saving in partitions of graphs into simple paths"
+authors:
+  - family-names: Huynh
+    given-names: Robert
+type: software
+license: Apache-2.0
+repository-code: "https://github.com/roberthuynh/erdos"

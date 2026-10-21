@@ -222,7 +222,7 @@ omit [DecidableEq V] in
 
 
 omit [DecidableEq V] in
-/-- Jensen and actual stationarity derive the weighted L2 contraction. -/
+                                                                         
  theorem weighted_transition_sqNorm_le (C : Erdos642.FiniteMarkov.Chain V)
     (u : V → ℝ) (hstat : ∀ y, ∑ x, u x ^ 2 * C.transition x y = u y ^ 2)
     (f : V → ℝ) :

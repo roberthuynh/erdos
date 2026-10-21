@@ -1,0 +1,139 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,longtable,array}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor,hyperref,microtype,xurl}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black}
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\cp}{\operatorname{cp}}
+\newcommand{\rhoG}{\rho(G)}
+\newcommand{\status}[1]{\par\noindent\textcolor{blue!45!black}{\textbf{Evidence.} #1}\par}
+\title{A universal saving in partitions of graphs into simple paths}
+\author{Robert Huynh}
+\date{Working draft, 26 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give a universal improvement of the $2n/3$ coefficient for exact partitions of the edges of a connected simple graph into nonempty vertex-simple paths. The general bound is $(2/3-1/654444)n+1/6+1/327222$. An Eulerian companion and the parity potential supporting the argument are included. The proof combines star restoration, two disjoint packing arguments, parity peeling and an Eulerian-to-general transfer. The stated results have a complete standalone Lean proof. They do not settle Gallai's bound of $\lceil n/2\rceil$.
+\end{abstract}
+\tableofcontents
+
+\section{Statements and conventions}
+Let $p(G)$ be the minimum number of nonempty vertex-simple paths whose edge sets partition $E(G)$. Paths use only original edges. Isolated vertices require no path.
+\begin{theorem}
+Every connected finite simple graph on $n$ vertices satisfies
+\[
+ p(G)\leq\left(\frac23-\frac1{654444}\right)n
+        +\frac16+\frac1{327222}.
+\]
+\end{theorem}
+\begin{theorem}[Eulerian companion]
+Every connected finite simple graph on $n$ vertices with all degrees even satisfies
+\[
+ p(G)\leq\frac{2n}{3}-\frac{n-3}{163611}.
+\]
+\end{theorem}
+\status{The declarations \nolinkurl{Erdos583.general_path_partition_improvement}, \nolinkurl{Erdos583.eulerian_path_partition_improvement} and \nolinkurl{Erdos583.hasPathBound_phi} are proved in the accompanying standalone Lean source. Its complete proof includes the mathematical bodies of 57 modules. The verification instructions identify the pinned environment, exact statement checks and kernel replay.}
+\section{Parity potential and restoration}
+Write $u(H)$ for the number of odd vertices and $e(H)$ for the number of nonisolated even vertices. Put $\Phi(H)=u(H)/2+2e(H)/3$. The classical parity-sensitive baseline is proved within the formal source. Restoration starts from an arbitrary residual path partition. When all edges from a center to its currently even neighbors are deleted, parity supplies the endpoint conditions for reversing that deletion. Repairing groups of at most four common-root cycles yields a charge at most $\lceil q/4\rceil$ for $q$ rooted cycles. The original-edge and simplicity conditions are essential.
+\section{Two packings in a bounded core}
+Suppose every vertex of $H$ has at most 47 nonisolated even neighbors. Let $t$ count triangle components. The core estimate is
+\[
+ p(H)\leq\Phi(H)-\frac{e(H)-3t-(2303/2)u(H)}{163611},
+\]
+Here is the counting argument. Call an even vertex bad if it has an odd neighbor; there are at most $47u(H)$ bad vertices. Among the remaining even vertices, let $a$ have degree at least four. Packing disjoint closed neighborhoods gives at least $a/2210$ centers. Deleting and restoring their stars saves at least $1/3$ per center, so one partition saves at least $a/6630$ against $\Phi(H)$.
+A second packing uses adjacent clean vertices of degree two outside triangle components. An incidence count, followed by packing their sets of at most four affected vertices, yields a partition saving at least
+\[
+ \frac{e(H)-3t-49(a+b)/2}{1176},
+\]
+where $b\leq47u(H)$ is the bad-vertex count. In each restored pair the outer neighbors are either distinct, giving a three-edge path, or equal, giving a pendant triangle. The latter case is excluded from an isolated triangle component so its anchor remains available. Taking a positive weighted combination of the two savings to cancel $a$ proves the core estimate. It does not require simultaneous compatibility of the two partitions.
+\section{Peeling and reconstruction}
+The connected graph of order one has an empty path partition and satisfies the claimed bound directly. For the remainder of this section, let $G$ be connected and Eulerian with $n\geq2$, so it has no isolated vertices. Write $i$ for the number of isolated vertices in a residual graph. Repeatedly delete all edges from any center having at least 48 currently even neighbors. Let $T$ be the number of deleted edges. A step with $k\geq48$ has potential drop at least $(k-1)/6$ and restoration charge at most $k/8+3/4$, leaving saving at least $k/48$.
+The final graph has $K=47$ and satisfies
+\[
+ u\leq49T/48,\quad i\leq T/48,\quad e\geq n-25T/24,
+ \quad t\leq T+1.
+\]
+The last inequality uses connectedness of the original graph. For this core, the coefficient is $1/163611$ and the odd-vertex factor is $2303/2$. Hence
+\[
+ e-3t-(2303/2)u\geq n-3-(37745/32)T.
+\]
+Applying the core estimate and reconstructing gives
+\[
+ p(G)\leq\frac{2n}{3}-\frac{n-3}{163611}
+ -\left(\frac1{48}-\frac{37745}{32\cdot163611}\right)T.
+\]
+The bracket equals $71329/5235552>0$. Discarding its nonnegative contribution proves the Eulerian bound. The singleton is handled directly.
+\section{Transfer to arbitrary connected graphs}
+The proved parity-completion bridge transfers a universal connected-Eulerian bound $p(H)\leq c|V(H)|+C$ to
+\[
+ p(G)\leq\left(\frac12+\frac c4\right)n+\frac{c+C}{4}.
+\]
+Here $c\geq0$, and the Eulerian hypothesis must apply to every finite connected graph whose degrees are all even. Let $u$ be the number of odd vertices of $G$. If $u>0$, form $G^+$ by adding one new vertex $z$ adjacent precisely to the odd vertices. Each old odd degree becomes even, each old even degree remains even, and the handshaking lemma makes $\deg(z)=u$ even. Since $G$ is connected and $u>0$, the new graph is connected. Thus it has a partition into at most $c(n+1)+C$ simple paths.
+
+Delete $z$ and all incident edges from that partition. A simple path visits $z$ at most once. If $z$ is an internal vertex of a path, deletion replaces that path by at most two nonempty paths and uses two distinct edges at $z$. If $z$ is an endpoint, the remaining part is one path or is empty, so the path count does not increase. Edge disjointness therefore limits the total increase to $u/2$. Every original edge of $G$ survives exactly once. Consequently
+\[
+ p(G)\leq cn+c+C+u/2.
+\]
+If $u=0$, apply the Eulerian bound directly to $G$; $c\geq0$ permits the same relaxed inequality.
+
+The proved parity bound supplies a second partition with
+\[
+ p(G)\leq\Phi(G)\leq 2n/3-u/6.
+\]
+These are two bounds on the same minimum $p(G)$, so their convex combination with weights $1/4$ and $3/4$ is also a bound. The $u$ terms cancel. This yields the displayed transfer formula without combining or modifying the two partitions. Substituting $c=2/3-1/163611$ and $C=3/163611$ proves the general theorem.
+
+The proof treats the connected graph of order one directly. An empty graph has no connectedness witness under the formal convention and is outside the two connected-graph theorems. The parity baseline itself allows empty graphs and isolated vertices.
+\section{Formal proof and supporting results}
+The accompanying file \nolinkurl{Erdos583/Verified.lean} contains the complete proof, including the classical baseline. It does not import a proof of Gallai's conjecture. The following map identifies the main interfaces. The full declaration inventory also includes generated declarations; its size is not a count of separate mathematical discoveries.
+\begin{longtable}{p{0.29\linewidth}p{0.65\linewidth}}
+\toprule
+Step & Formal interface in the namespace \nolinkurl{Erdos583} \\
+\midrule
+\endhead
+Parity baseline & \nolinkurl{hasPathBound_phi} gives the original-edge partition bound for every finite simple graph. \\
+Bounded core & \nolinkurl{bounded_core_four_bound} uses the cap 47 and an explicit residual parity bound. The final theorem supplies that bound through \nolinkurl{hasPathBound_phi}. \\
+Large star & \nolinkurl{restore_largeEvenNeighbor_phi_bound_four} restores a star with at least 48 even neighbors and saves its deleted-edge count divided by 48. \\
+Clean star & \nolinkurl{restore_highEvenCenter_phi_bound_four} saves $1/3$ at a clean even center of degree at least four. \\
+Eulerian assembly & \nolinkurl{eulerian_four_of_phi} combines peeling, the core estimate and reconstruction. \\
+Parity completion & \nolinkurl{eulerian_to_general_of_parity_bound} performs the hub construction, deletion and convex combination above. \\
+Final declarations & \nolinkurl{general_path_partition_improvement} and \nolinkurl{eulerian_path_partition_improvement} discharge the residual baseline hypotheses. \\
+\bottomrule
+\end{longtable}
+
+\subsection{Why four-cycle repair suffices}
+After deleting a star to even neighbors, every affected neighbor has odd residual degree. In any residual path partition, its endpoint multiplicity has that degree's parity, so it begins at least one path. The formal switching construction chooses these endpoint paths and follows an injective partial successor relation. The finite chains terminate and preserve every original edge. They produce paths together with rooted cycles, with at most half as many cycles as deleted edges.
+
+For up to four edge-disjoint simple cycles sharing a root, the formal repair constructs at most one more path than the number of cycles. Grouping larger families in batches of four adds at most $\lceil q/4\rceil$ paths for $q$ rooted cycles. The proof uses exact repairs for a simple path of at most three edges meeting a cycle; all possible intersections are resolved into original-edge path partitions. The source proves these repairs explicitly. This working manuscript describes their role; it does not replace those case proofs with a scalar inequality.
+
+For a star with $k\geq48$ even neighbors, the potential falls by at least $(k-1)/6$. If $q$ rooted cycles are created, then $2q\leq k$. The exact integer inequality
+\[
+ k+48\left\lceil q/4\right\rceil\leq8(k-1)
+\]
+shows that restoration leaves a saving of at least $k/48$. This bound holds for either parity of the center. At a clean high-degree even center, the sharper potential accounting instead leaves a saving of $1/3$.
+
+\section{Comparison and limits}
+The main affine bound can also be written as
+\[
+ p(G)\leq\frac{2n}{3}-\frac{n-109076}{654444}.
+\]
+It is strictly below the real-valued baseline $2n/3$ for $n>109076$. Rounding can delay a strict improvement over $\lfloor2n/3\rfloor$ at particular orders. The classical bound remains available at every order. The Eulerian and general inequalities are two parts of one argument, and neither settles Gallai's $\lceil n/2\rceil$ conjecture.
+
+Dean and Kouider established the classical parity-sensitive baseline~\cite{dk}. Chu and Wang give the common-root cycle repair~\cite{cw}. Patel and Y\i ld\i z summarize the general undirected bound in their introduction~\cite{py}. These comparisons do not establish exhaustive historical priority. The improvement need not improve the rounded integer bound at every small order.
+\begin{thebibliography}{9}
+\bibitem{dk} N. Dean and M. Kouider, Gallai's conjecture for disconnected graphs, \emph{Discrete Mathematics} 213 (2000), 43--54. \url{https://doi.org/10.1016/S0012-365X(99)00167-3}.
+\bibitem{cw} Y. Chu and Y. Wang, \emph{Path decompositions of Eulerian graphs}, arXiv:2510.12806v1 (2025), Lemmas 2.3--2.4. \url{https://arxiv.org/abs/2510.12806v1}.
+\bibitem{py} V. Patel and M. A. Y\i ld\i z, Path decompositions of oriented graphs, \emph{European Journal of Combinatorics} 134 (2026), 104346. \url{https://doi.org/10.1016/j.ejc.2026.104346}.
+\end{thebibliography}
+
+\section{AI use and review}
+AI systems developed the mathematical arguments, formalizations and earlier source reviews. Robert Huynh directed the research. No human mathematical review is claimed. A Lean proof checks its precise formal statement; it does not establish historical priority. This manuscript is a new exposition of existing work. An independent AI review compared the manuscript's statements and proof outline with the formal source and its accepted source reviews; it did not rederive every supporting proof.
+\section{Status and further versions}
+This is a working manuscript. The principal mathematical statements above have existing formal verification and reviews of the exact formal sources. The exposition and technical appendices are being expanded. No human mathematical review is claimed. The exact formal statements and their hypotheses determine the scope of the checked results; compiling this manuscript does not check its mathematics.
+Later versions will add supporting results with their own evidence and record corrections. Open questions and incomplete approaches do not constitute additional proved theorems.
+\end{document}

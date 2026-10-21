@@ -70,7 +70,7 @@
     {
       "file": "README.md",
       "frozen_sha256": "435d74c26c6b6baf3c7ace11f22ad249842ceb807a03e65d9f1855c2f736123b",
-      "export_sha256": "3a658516fafe5813f052b2ee57793626319b1f0648d2b19d263c6963dd541412",
+      "export_sha256": "91eabdb3660ca8e3307ca14d950e749612f7a2c6392868159e1a95c4afb150fe",
       "transformation": "2026-10-16 verification-status and source-attribution sync. Original source identity retained; written theorem hypotheses and proof steps unchanged.",
       "previous_export_sha256": "c7ef24dd7e8b787a7089f66eff0e28462026c7266b15e6f44a76b1be69bf84e0",
       "editorial_changes": [
@@ -89,6 +89,14 @@
         {
           "from": "The proof/source documents preserve the mathematical wording; presentation edits and source hashes are recorded",
           "to": "The proof arguments and hypotheses are retained; exposition, source-comparison updates and source hashes are recorded"
+        }
+      ],
+      "editorial_revisions": [
+        {
+          "date": "2026-10-27",
+          "before_export_sha256": "3a658516fafe5813f052b2ee57793626319b1f0648d2b19d263c6963dd541412",
+          "after_export_sha256": "91eabdb3660ca8e3307ca14d950e749612f7a2c6392868159e1a95c4afb150fe",
+          "scope": "Standard navigation and working manuscript links; mathematical statements unchanged"
         }
       ]
     },

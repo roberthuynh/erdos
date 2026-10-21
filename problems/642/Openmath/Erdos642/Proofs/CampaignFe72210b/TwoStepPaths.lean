@@ -1,6 +1,6 @@
 import Openmath.Erdos642.Proofs.CampaignFe72210b.FiniteMarkov
 
-/-! Actual two-step path laws, proved by summing omitted intermediate vertices. -/
+                                                                                  
 namespace Erdos642.FiniteMarkov
 
 universe u
@@ -81,7 +81,7 @@ theorem sampleEvenTwoMul_interleave (n : ℕ) (p q : Path V n) :
 namespace Chain
 variable [Fintype V] [DecidableEq V] (C : Chain V)
 
-/-- Genuine two-step kernel, with stochastic properties proved from the original chain. -/
+                                                                                          
 noncomputable def twoStep : Chain V where
   transition := C.transition ^ 2
   nonneg := by

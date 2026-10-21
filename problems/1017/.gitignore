@@ -1,0 +1,7 @@
+.lake/
+__pycache__/
+*.pyc
+manuscript/*.aux
+manuscript/*.log
+manuscript/*.out
+manuscript/*.toc

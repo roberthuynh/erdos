@@ -1,6 +1,6 @@
 # Erdős Problem 60
 
-[Collection](../../README.md) · [Result index](RESULTS.md) · [Findings](FINDINGS.md)
+[Collection](../../README.md) · [Results](RESULTS.md) · [Proof](LINEAR-RANGE-THEOREM.md) · [Evidence](VERIFICATION.md) · [Manuscript](manuscript/main.pdf)
 
 
 ## The problem
@@ -36,6 +36,8 @@ Their [Theorem 1.6(B)](https://doi.org/10.4208/csiam-am.SO-2021-0006) also gives
 The [literature comparison](LITERATURE-COMPARISON.md) identifies inspected versions and exact differences. Full journal comparison for Qiao–Zhan and journal-version differences for Gerbner–Nagy–Vizer remain unchecked; successor coverage is bounded. Worldwide priority is unresolved.
 
 ## Proofs and findings
+
+The [working manuscript PDF](manuscript/main.pdf) and [TeX source](manuscript/main.tex) present the stated linear-range theorem and its proof.
 
 Start with the [findings](FINDINGS.md) and [theorem and written proof](LINEAR-RANGE-THEOREM.md), then its linked localization, linear-support, completion and retained-path arguments. [Sources](SOURCES.md) states the external mathematical inputs and their attribution. The [result index](RESULTS.md) gives the exact claims and their limits.
 

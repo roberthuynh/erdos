@@ -95,7 +95,7 @@ theorem neg_hasEigenvalue_of_bipartite (hbip : G.IsBipartite) (μ : ℝ)
   exact Module.End.hasEigenvalue_of_hasEigenvector
     ⟨Module.End.mem_eigenspace_iff.mpr he, hne⟩
 
-/-- The literal campaign spectral-gap predicate is derived from actual cut conductance. -/
+                                                                                          
 theorem graph_hasBipartiteSpectralGap_of_conductance
     (hconn : G.Connected) (hbip : G.IsBipartite)
     (hdeg : ∀ x : V, 0 < G.degree x) (η : ℝ) (hη : 0 < η) (hη2 : η ≤ 2)

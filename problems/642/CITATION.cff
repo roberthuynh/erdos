@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "Unpublished AI-developed formal proof. Cite the exact source snapshot and retain the review and priority limits."
-title: "Erdős #642: Cycles with at least as many chords as vertices"
+message: "Please cite the repository commit and the working manuscript version."
+title: "Dense masks and tough layers for cycles with many chords"
 authors:
   - family-names: Huynh
     given-names: Robert

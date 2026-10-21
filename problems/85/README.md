@@ -1,6 +1,6 @@
-# Erdős Problem 85: projective-incidence repair
+# Erdős Problem 85
 
-[Collection](../../README.md) · [Result index](RESULTS.md) · [Written proof](PROOF.md)
+[Collection](../../README.md) · [Results](RESULTS.md) · [Proof](PROOF.md) · [Evidence](VERIFICATION.md) · [Manuscript](manuscript/main.pdf)
 
 ## The problem
 
@@ -45,6 +45,8 @@ The classical fundamental theorem of projective geometry supplies the semilinear
 Pankov and Vetterlein treat arbitrary maps preserving orthogonality in complex projective Hilbert space exactly. Arbitrary-map rigidity itself is therefore not claimed as new. The additive correction has classical BLR antecedents. The needed correction argument is proved in this package, not imported as an unexplained black box. See [sources and reading limits](SOURCES.md).
 
 ## Proofs and findings
+
+The [working manuscript PDF](manuscript/main.pdf) and [TeX source](manuscript/main.tex) present the stated projective-incidence repair theorem and its proof.
 
 [PROOF.md](PROOF.md) contains the complete written argument, including weighted plane correction, higher-rank containment, shared-pencil coherence, global reconstruction and paired repair. [RESULTS.md](RESULTS.md) identifies its statement and corollaries. [DEPENDENCIES.md](DEPENDENCIES.md) separates proof inputs from comparisons and historical predecessors. [FINDINGS.md](FINDINGS.md) gives a reader's guide and examples.
 

@@ -233,6 +233,92 @@
         "stability",
         "graph theory"
       ]
+    },
+    {
+      "checks": {
+        "docs": [
+          [
+            "python3",
+            "-B",
+            "scripts/check_docs.py"
+          ]
+        ],
+        "full": [
+          [
+            "python3",
+            "-B",
+            "scripts/check_docs.py"
+          ],
+          [
+            "python3",
+            "-B",
+            "scripts/test_check_docs.py"
+          ],
+          [
+            "python3",
+            "-B",
+            "scripts/test_oracle.py"
+          ]
+        ]
+      },
+      "id": "583",
+      "lean": {
+        "axioms": "scripts/check_axioms.py",
+        "coverage": "scripts/source_modules.py",
+        "oracle": "check.sh",
+        "registry": "scripts/headline-theorems.json",
+        "replay": "scripts/replay_modules.py",
+        "target": "Erdos583.Verified"
+      },
+      "path": "problems/583",
+      "title": "Partitions of graphs into simple paths",
+      "topics": [
+        "graph theory",
+        "extremal combinatorics"
+      ]
+    },
+    {
+      "id": "1017",
+      "path": "problems/1017",
+      "title": "Fractional clique partitions",
+      "topics": [
+        "graph theory",
+        "extremal combinatorics"
+      ],
+      "checks": {
+        "docs": [
+          [
+            "python3",
+            "-B",
+            "scripts/check_docs.py"
+          ]
+        ],
+        "full": [
+          [
+            "python3",
+            "-B",
+            "scripts/check_docs.py"
+          ],
+          [
+            "python3",
+            "-B",
+            "scripts/test_check_docs.py"
+          ],
+          [
+            "python3",
+            "-B",
+            "scripts/test_oracle.py"
+          ]
+        ]
+      },
+      "lean": {
+        "axioms": "scripts/check_axioms.py",
+        "coverage": "scripts/source_modules.py",
+        "oracle": "check.sh",
+        "registry": "scripts/headline-theorems.json",
+        "replay": "scripts/replay_modules.py",
+        "target": "Erdos1017"
+      }
     }
   ],
   "schema_version": 1

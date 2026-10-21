@@ -21,7 +21,7 @@ theorem supported_edges_subset (p : G.Walk u v) (c : G.Walk w w)
     apply (mem_supportEdges c a b).mpr
     exact ⟨hab, ha ▸ hret ka hia haj, hb ▸ hret kb hib hbj⟩
 
-/-- Sufficiently many retained host edges yield a rich cycle. -/
+                                                                                              
 theorem rich_cycle_of_supported_edges (p : G.Walk u v) (hp : p.IsPath)
     (i j : ℕ) (hsep : i+2 ≤ j) (hj : j ≤ p.length)
     (hclose : G.Adj (p.getVert i) (p.getVert j)) (F : Finset (Sym2 V))

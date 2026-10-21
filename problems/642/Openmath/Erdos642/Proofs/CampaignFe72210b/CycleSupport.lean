@@ -7,7 +7,7 @@ namespace Erdos642.CampaignFe72210b
 open SimpleGraph
 variable {V : Type*} {G : SimpleGraph V} {u v : V}
 
-/-- Close a simple path by an actual endpoint edge. -/
+                                                                    
 theorem close_path_isCycle (p : G.Walk v u) (hp : p.IsPath)
     (hl : 2 ≤ p.length) (h : G.Adj u v) : (Walk.cons h p).IsCycle := by
   apply Walk.isCycle_iff_isPath_tail_and_le_length.mpr
@@ -54,7 +54,7 @@ theorem chordEdges_eq_sdiff [Fintype V] [DecidableEq V] (p : G.Walk u v) :
     true_and, Finset.mem_sdiff, List.mem_toFinset, Walk.IsChord]
   tauto
 
-/-- Subtract cycle edges to count actual chords. -/
+                                                                 
 theorem many_chords_of_support_edges [Fintype V] (c : G.Walk u u)
     (hc : c.IsCycle) (he : 2 * c.length ≤ (supportEdges c).card) :
     c.length ≤ (chordEdges c).card := by

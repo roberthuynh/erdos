@@ -5,8 +5,8 @@ import Mathlib.Analysis.Matrix.Spectrum
 import Mathlib.Analysis.SpecialFunctions.Log.Basic
 import Mathlib.Algebra.Order.Floor.Semiring
 
-/-! Exact interfaces for the reviewed spectral-host statement.
-This file defines the claim; it does not assert or prove it. -/
+                                                              
+                                                               
 namespace Erdos642.CampaignFe72210b
 
 variable {V : Type*} [Fintype V] [DecidableEq V]

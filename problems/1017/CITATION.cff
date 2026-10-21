@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Cite the exact source snapshot and retain the stated scope and review limits."
+title: "Finite bounds for fractional clique partitions and weighted clique decompositions"
+authors:
+  - family-names: Huynh
+    given-names: Robert
+repository-code: "https://github.com/roberthuynh/erdos"
+license: Apache-2.0

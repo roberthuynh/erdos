@@ -1,0 +1,49 @@
+{
+  "problem": "583",
+  "declaration": "Erdos583.general_path_partition_improvement",
+  "headline_declarations": [
+    "Erdos583.general_path_partition_improvement",
+    "Erdos583.eulerian_path_partition_improvement",
+    "Erdos583.hasPathBound_phi"
+  ],
+  "root_module": "Erdos583.Verified",
+  "project_sources": {
+    "Erdos583.Verified": {
+      "path": "Erdos583/Verified.lean",
+      "sha256": "ed3b85f7218b69846866daf57a578472b906944a6d9a13cf8c784e968acf0626"
+    }
+  },
+  "original_source_sha256": "896203549779157ea8f205ec22f6d0c540c8635cc10abbd49effb6cef90cb528",
+  "transformations": [
+    "Replace the introductory comment with a public source description.",
+    "Replace the word Frozen with Earlier in the cutoff comparison comment.",
+    "Replace development-status comments with descriptions of the same mathematical interfaces. No Lean commands change."
+  ],
+  "artifact_hashes": {
+    ".gitignore": "a0a91446fb6dc18faaec8fef732c1b5fd4d842686e7fe8037324e53c5180c44b",
+    "CITATION.cff": "7c3d932d2666df60e4fbf9c14672644bba9a7c0f5c779a6f1d900f05cd93b51f",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "e4945a749e8384d12a5a3bcc7f9c004a9b82c8833516ad34ad037eda23461440",
+    "README.md": "27da4afdb9da8320859b701ddd5b88ee2a47efd36c90c048535565519f307244",
+    "RESULTS.md": "f4ae527e5004a3dcc6e7eb4553cc91b4a8f1febd4a3b5d644048b8e71e1aa63d",
+    "SOURCES.md": "ab6936991a60927b77742fd36ef258d872004e41c114dc0387af0250b584e4de",
+    "VERIFICATION.md": "41df6da7b2847fcfab09ae6d1f10ad3ed13c9fd1a9e324eb1e8c11c2f5b5409b",
+    "check.sh": "6888ceba18510679ec37421e411ba350406cdd2a61c49a03837770c32da7f7f6",
+    "lake-manifest.json": "bb92f5fde64f26829a60017859ece84a31a42f63864e6982a8fb53b910c6b202",
+    "lakefile.toml": "03a99aa0420c19f48564f7a1df0e90a64333e9bbfc5147cebb19de06df311860",
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+    "manuscript.tex": "62029c3ee957f4fe9d06a1246163e7c3c56251609977efcb56192cae888726f4",
+    "scripts/check_axioms.py": "aec7b16351b88a67aff237c5300e200bf7155cf5cfcccc3fe0cbf139827e7afb",
+    "scripts/check_docs.py": "a7dd798be56c135feade2fbcc00ddcf9fd847aa613a556b4ce704e4a59b3bf02",
+    "scripts/check_full.py": "d1d4ac8e19c0ac979fab1a6b9d674cd596aee07f2d1c7a528b8526595406191c",
+    "scripts/headline-theorems.json": "7111231f9174b4feae80d173c139cd6ee66ce56463b5f88a41c1c9075d8803bf",
+    "scripts/oracle.py": "f4b8e66113ece665b05806620f62dbcb5da17867f0880cef199d2ee7eea8c7ea",
+    "scripts/proof-modules.json": "9f4a1ac792fabf5969017e3f94fcba24c06cdb5a1b8b3b2a9a2ff0bd8ad4eb8d",
+    "scripts/replay_modules.py": "61aad8635df6caf253c6c1a061c41e1f68f77e9a5886bafa57129ef9e0f90a57",
+    "scripts/source_modules.py": "74d3b46b801fd41a073b5decc5a00f912cb6d77c1c6549f109349d1522ef647d",
+    "scripts/source_scan.py": "c33fb70e3dd25f748973fa4f59d927e9afb5ed89766672368185be6fa0f4c21e",
+    "scripts/test_check_docs.py": "22732bc3f2c8ad36d3797bbbad49f3ac80d9920704ba354de8138a662d66f6f4",
+    "scripts/test_oracle.py": "49a364fee3e9920c7ed0245d02e80f77b1a6a8dc3b3b1b0635f5a1b4b6536124",
+    "manuscript.pdf": "08c1c7da2ccb4fe1926d89c895adbed80c36fbac6919774d07aaa524f5464382"
+  }
+}

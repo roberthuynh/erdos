@@ -1,0 +1,372 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,array}
+\usepackage{fontspec,unicode-math}
+\setmainfont{STIX Two Text}
+\setmathfont{STIX Two Math}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor,hyperref,microtype}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black}
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem*{remark}{Remark}
+\newcommand{\Z}{Z}
+\newcommand{\NN}{\mathcal N}
+\title{Exact four-cycle supersaturation in a linear surplus range}
+\author{Robert Huynh}
+\date{Working draft, 27 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let $N=q^2+q+1$ and $M=q(q+1)^2/2$. For even $q\geq10^{16}$ and integers $1\leq t\leq10^{-8}q$, every simple graph on $N$ vertices with $M+t$ edges has at least $t(q-1)$ ordinary unlabelled four-cycles. Equality holds precisely for an orthogonal polarity graph extended by a matching of $t$ edges between absolute vertices. At powers of two this gives the exact supersaturation value above $\operatorname{ex}(N,C_4)$. We present the localization, count-based completion and retained-path arguments supporting the result, together with a separate first-excess structure theorem. The accompanying formal package verifies the exact main statements. The result does not settle unrestricted Erd\H{o}s problem 60 or the full conjectural surplus range.
+\end{abstract}
+\tableofcontents
+
+\section{Statements and conventions}
+All graphs are finite and simple. We count copies of $C_4$ as ordinary unlabelled cycles, whether or not induced, and write $Z(G)$ for their number. Thus a $K_4$ contains three copies. All deletions and extensions below refer to actual edges on the original vertex set. Set
+\[
+ c=10^{-8},\qquad N=q^2+q+1,\qquad M=\frac{q(q+1)^2}{2}.
+\]
+A polarity of a projective plane assigns a line to each point by an incidence-reversing involution. Its simple polarity graph joins distinct points $a,b$ when $a$ lies on the line assigned to $b$. An absolute point lies on its own assigned line; it has graph degree $q$, while other points have degree $q+1$. For even $q$, an orthogonal polarity has exactly $q+1$ absolute points and $M$ graph edges.
+
+\begin{theorem}\label{thm:main}
+Suppose $q\geq10^{16}$ is even, and $t$ is an integer with $1\leq t\leq cq$. If $G$ has $N$ vertices and $M+t$ edges, then
+\[
+ Z(G)\geq t(q-1).
+\]
+Equality holds if and only if, on the same vertex set, $G$ contains an orthogonal polarity graph $Q$ of a projective plane of order $q$, and $E(G)\setminus E(Q)$ is a matching of $t$ edges whose endpoints are absolute points of $Q$.
+\end{theorem}
+The statement is based on $M$ for arbitrary even orders. It does not assert the existence of a projective plane at every even order, or identify $M$ with the extremal number at every such order. The equality class can be empty.
+
+For an integer $n$ and a feasible positive integer $t$, define $h(n,t)$ as the minimum number of four-cycles among graphs with $n$ vertices and $\operatorname{ex}(n,C_4)+t$ edges.
+\begin{corollary}\label{cor:power}
+If $q\geq10^{16}$ is a power of two, then
+\[
+ \operatorname{ex}(q^2+q+1,C_4)=M,\qquad
+ h(q^2+q+1,t)=t(q-1)\quad(1\leq t\leq cq).
+\]
+\end{corollary}
+\begin{theorem}[First-excess structure]\label{thm:first}
+Let $q\geq10^{16}$ be even and $T$ be real, with $1\leq T\leq cq$. If $G$ has $N$ vertices, $M+1$ edges, and $Z=Z(G)<Tq$, there is a polarity graph $Q$ of order $q$ on these same vertices such that, writing
+\[
+ j=|E(G)\setminus E(Q)|,\quad \delta=M-e(Q),\quad
+ d=|E(Q)\setminus E(G)|,
+\]
+we have
+\[
+ j\leq\frac{Z}{q-1-896T}<2T,\qquad
+ \delta\geq0,\qquad d=j-1-\delta\geq0.
+\]
+Orthogonality is not asserted here.
+\end{theorem}
+
+\section{Geometry interfaces and provenance}\label{sec:geometry}
+We use the following published interfaces, with the numbering of He, Ma and Yang~\cite{HMY}. They are stated explicitly to separate the geometric inputs from the graph argument.
+\begin{enumerate}
+\item Theorem 2.1 (Metsch): if $q\geq3900$, a family of $(q+1)$-subsets of exactly $N$ points, any two meeting in exactly one point, embeds in a projective plane of order $q$ when its size exceeds
+\[
+ q^2-\frac{\sqrt5-1}{2}q+17\sqrt{q/5}.
+\]
+\item Lemma 2.1: a projective-plane incidence matrix symmetric in its rows and corresponding columns at at least $q^2-q+3$ indices is symmetric throughout.
+\item Section 2.3 and Proposition 2.1: a simple polarity graph is $C_4$-free, has degrees $q,q+1$, has at least $q+1$ absolute points, and has at most $M$ edges. At even order, equality in this edge bound characterizes orthogonality.
+\item Lemma 2.5: for every nonedge $ab$ of a polarity graph, there are $q-1$, $q$, or $q+1$ simple length-three paths from $a$ to $b$. For this fixed pair the paths are edge-disjoint. Their number is $q-1$ exactly when both endpoints are absolute.
+\item Lemma 2.4 and Proposition 2.2: absolute points are independent, and at even order an orthogonal polarity has a nonabsolute nucleus adjacent to every absolute point.
+\item Theorem 1.1 and Section 2.3 give the known value $\operatorname{ex}(N,C_4)=M$ and orthogonal polarity constructions at prime-power orders $q\geq14$.
+\end{enumerate}
+The written proof below uses the optimized published embedding theorem. The formal proof instead establishes the stronger-density embedding specialization needed here from finite-incidence arguments adapted from Metsch~\cite{Metsch}, together with the required symmetry and polarity consequences. It does not assume these interfaces as unproved custom axioms. In particular, the formal package does not claim the full optimized embedding threshold or the full general Baer gap formula.
+
+The exact value and matching construction in a smaller range already appear in~\cite{HMY}. The accompanying source comparison inspected selected statements of that paper and selected later work as of 15 October 2026. It did not establish worldwide priority, complete journal-version identity for every comparison, or complete successor coverage. This manuscript makes no unqualified priority claim.
+
+\section{Localization on the actual first-excess host}\label{sec:local}
+Fix the hypotheses of Theorem~\ref{thm:first}. Write $d(x)$ for degree, $c(x)$ for the number of four-cycles through $x$, $d(x,y)$ for codegree, and $d_0(x)$ for the number of vertices distinct from $x$ with no common neighbor with $x$. Put
+\[
+ f(x)=\max\{q+1-d(x),0\},\quad S=\{f>0\},\quad H=\{d\geq q+2\},
+\]
+\[
+ h=|H|,\quad P=\sum_{x\in H}(d(x)-q-1),\quad B=\sum_x f(x).
+\]
+The degree sum and two-path counts give
+\begin{align}
+ B&=q-1+P,\label{eq:deficit}\\
+ c(x)&=\sum_{y\ne x}\binom{d(x,y)}2,
+ &\sum_xc(x)&=4Z,\label{eq:cycles}\\
+ c(x)&\geq(d(x)-q-1)q-f(N(x))+d_0(x).\label{eq:path}
+\end{align}
+Here $f(U)=\sum_{u\in U}f(u)$. For~\eqref{eq:path}, count two-paths from $x$ as $\sum_{w\in N(x)}(d(w)-1)\geq d(x)q-f(N(x))$, then use $\binom r2\geq r-1$ on positive codegrees.
+
+If $d(x)\geq q+1$ and $N(x)$ avoids $S$, then $c(x)\geq1$. Otherwise~\eqref{eq:path} forces $d(x)=q+1$ and $d_0(x)=0$. Every neighbor of $x$ then has a common neighbor with $x$, so $G[N(x)]$ has no isolated vertex. If $c(x)=0$, this neighborhood has maximum degree one, since a two-edge path in it gives a four-cycle through $x$. It would be a perfect matching on the odd number $q+1$ of vertices, a contradiction.
+
+For every vertex set $A$ we also have
+\begin{equation}\label{eq:subset}
+ 2Z\geq\sum_x\binom{|N(x)\cap A|}{2}-\binom{|A|}{2}.
+\end{equation}
+Indeed, group two-paths by their unordered endpoints in $A$. For nonnegative integers $r,b$,
+\begin{equation}\label{eq:convex}
+ \binom r2\geq\binom b2+b(r-b),
+\end{equation}
+since the difference is $(r-b)(r-b-1)/2$. Finally, for distinct $x_1,\ldots,x_m$, with $K=\binom m2$,
+\begin{equation}\label{eq:overlap}
+ \sum_{i<j}d(x_i,x_j)\leq K+2\sqrt{KZ}.
+\end{equation}
+This follows from $\sum_{\{x,y\}}\binom{d(x,y)}2=2Z$, the integer inequality $a\leq1+\sqrt{2\binom a2}$, and Cauchy--Schwarz. All these counts refer to the same host.
+
+\subsection{Maximum degree and high vertices}
+Suppose $d(v)=q+k$ and set $a_i=|N(i)\cap N(v)|$ for $i\ne v$. The bound $c(v)<Tq$ implies
+\[
+ \sum_{i\ne v}a_i\leq q^2+(T+1)q.
+\]
+Apply~\eqref{eq:subset} to $A=V\setminus N(v)$, omit its zero contribution at $v$, and use~\eqref{eq:convex} with $b=q-1$ on the other $q^2+q$ values $d(i)-a_i$. Their sum is $2e(G)-d(v)-\sum a_i$. Expansion gives $2Z\geq F(k)$, where
+\[
+ F(k)=(k-T-2)q^2+(T+3-k)q+\frac{3k-k^2}{2}-2.
+\]
+For $T+3\leq k\leq q^2$, this concave quadratic is minimized at an endpoint. Its endpoint values are
+\[
+ q^2-\frac{T^2+3T}{2}-2,
+\quad
+ \frac{q^4}{2}-q^3-(T+\tfrac12)q^2+(T+3)q-2.
+\]
+Both exceed $2Tq$ when $q\geq10^{16}$ and $T/q\leq10^{-8}$. Consequently
+\begin{equation}\label{eq:max}
+ d(x)<q+T+3.
+\end{equation}
+Call two vertices opposite when their codegree is at least two. Two high vertices $u,v$ with $c(u),c(v)<q/5$ must be opposite. Here are both nonopposite cases. Write $d(u)=q+1+p_1$, $d(v)=q+1+p_2$, and $D=p_1+p_2$, so $2\leq D<2T+4$. If they have a unique common neighbor $w$, summing their two-path bounds gives
+\[
+ \sum_{i\ne u,v}|N(i)\cap(N(u)\cup N(v))|+d(w)
+ <2q^2+\frac{12q}{5}.
+\]
+Use~\eqref{eq:subset} on the complement of the union, discard $u,v,w$, and apply~\eqref{eq:convex}. With $r_1=q^2+q-2$ this yields
+\[
+ 2Z\geq r_1\binom{q-1}{2}-(q-1)(D+2+2q/5)
+       -\binom{q^2-q-D}{2}.
+\]
+The right side increases with integer $D$; its successive difference is $q^2-2q-D$. At $D=2$ it is $q^2/10-21q/10-1$.
+If the neighborhoods are disjoint, discard only $u,v$. With $r_0=q^2+q-1$ the same calculation gives
+\[
+ 2Z\geq r_0\binom{q-1}{2}+(q-1)(-q+1-D-2q/5)
+       -\binom{q^2-q-1-D}{2}.
+\]
+This increases with successive difference $q^2-2q-D-1$ and at $D=2$ equals $3q^2/5-3q/5-6$. Both lower bounds exceed $q^2/20>2Tq$, a contradiction.
+
+There are at most $20T$ high vertices with $c(x)\geq q/5$. The remaining $k$ high vertices are pairwise opposite, so $\binom k2\leq2Z$ and $k\leq1+2\sqrt{Tq}$. Hence
+\begin{equation}\label{eq:prehigh}
+ h\leq1+2\sqrt{Tq}+20T\leq3\sqrt{Tq}\leq q/10.
+\end{equation}
+The last bounds follow from $20\sqrt{T/q}\leq0.002$ and $\sqrt{Tq}\geq10^8$.
+
+\subsection{Sum all high rows}
+At most $q|S|$ full-degree vertices have a neighbor in $S$. Every other full-degree vertex lies in a cycle by the parity argument above. Thus
+\[
+ N-h-(q+1)|S|\leq4Z<4Tq,\qquad |S|\geq q-5T.
+\]
+The latter bound uses $h/(q+1)\leq T$. Set $E=B-|S|$; then $E\leq P+5T$, and $f(U)\leq|U\cap S|+E$ for every $U$. Sum~\eqref{eq:path} over all high vertices and use inclusion-exclusion and~\eqref{eq:overlap} on their actual neighborhoods. We obtain
+\[
+ qP\leq4Tq+|S|+\binom h2+2\sqrt{\binom h2Z}+hE,
+\]
+so
+\[
+ (q-h-1)P\leq4Tq+q+h^2/2+\sqrt2h\sqrt{Tq}+5hT.
+\]
+By~\eqref{eq:prehigh}, the right side is at most $14.25Tq$, while the coefficient on the left is at least $0.8q$. Therefore
+\begin{equation}\label{eq:strong}
+ P,h\leq20T,\quad B\leq q-1+20T,\quad E\leq25T,\quad f(x)\leq26T.
+\end{equation}
+There are at most $25T$ vertices with $f\geq2$.
+
+\subsection{Deficient neighborhoods and transport}
+For a vertex $v$, let $b=|N(v)\cap S|$ and list its $r=d(v)-b$ nondeficient neighbors as $v_i$. Put $N_i=N(v_i)\setminus\{v\}$. Each $N_i$ has at least $q$ vertices, and overlaps account for actual cycles through $v$. Thus
+\[
+ |\bigcup_iN_i|\geq qr-c(v)\geq qr-Tq.
+\]
+Let $C_i$ be the vertices of $N_i$ lying in no four-cycle. These sets are disjoint. Every $x\in C_i\setminus S$ has a neighbor in $S$, and that neighbor is outside $N(v)$; otherwise $x$ is in a four-cycle. For fixed $i$, different $x$ cannot share that neighbor. Hence
+\[
+ |\bigcup_iC_i|\leq r(q+20T-b)+q+20T.
+\]
+At most $4Z$ vertices lie in any four-cycle. Combining the last two inequalities gives
+\[
+ r(b-20T)\leq5Tq+q+20T\leq12Tq.
+\]
+But $r\geq q-26T-b$. For $50T\leq b\leq q-76T$, concavity bounds the product below by the smaller of $30T(q-76T)$ and $50T(q-96T)$, both greater than $12Tq$. Therefore every vertex satisfies
+\begin{equation}\label{eq:dichotomy}
+ |N(v)\cap S|<50T\quad\hbox{or}\quad |N(v)\cap S|>q-76T.
+\end{equation}
+At most one vertex $z$ has the second property: two would have at least $q-172T$ common neighbors in $S$, producing more than $Tq$ cycles.
+
+Define
+\[
+ X=\{c>4q/5\}\cup H\cup\{f\geq2\}\cup\{z\},
+\]
+where $z$ is omitted if absent. Then $|X|\leq51T$, and outside $X$ every degree is $q$ or $q+1$.
+For an ordered opposite pair $(u,v)$ outside $X$, put $a=f(u)\in\{0,1\}$ and let $V_u$ be the vertices distinct from $u$ with no common neighbor with $u$. Equations~\eqref{eq:path}, \eqref{eq:strong}, and~\eqref{eq:dichotomy} give
+\[
+ |V_u|\leq c(u)+aq+75T.
+\]
+Inside $N(v)$ put $N_1=N(v)\cap S$, $N_2=N(v)\cap N[u]$, and
+\[
+ N_3=\{x\in N(v)\setminus(N_1\cup N_2):|N(x)\cap V_u|\leq a\},
+\]
+and let $N_4$ be the remainder. Every vertex of $N_2$ is in a cycle. Every $x\in N_3$ is also in a cycle: the edges from $N(x)$ to $N(u)$ number at least $q+2-a>|N(u)|$, since $v$ has at least two neighbors in $N(u)$. Some vertex in $N(u)$ consequently has two neighbors in $N(x)$; these are four distinct cycle vertices.
+For neighbors $x$ of $v$ that lie in no cycle, the sets $N(x)\cap V_u$ are disjoint. Also $v\notin V_u$. Each such $x$ in $N_4$ contributes at least $a+1$ points. If $c'(v)$ counts the neighbors of $v$ lying in cycles, then
+\[
+ c'(v)\geq q-50T-\frac{c(u)+aq+75T}{a+1},
+ \qquad c(u)+2c'(v)\geq q-175T.
+\]
+Since $c(u)\leq4q/5$ and $q\geq1750T$, we obtain $c'(v)\geq q/20$.
+
+\subsection{An induced-edge support for every cycle}
+Let $\ell=\lceil200T\rceil\leq201T$. If $\ell$ distinct vertices $v_i$ outside $X$ each had an opposite mate outside $X$, the sets $N(v_i)\cap C_*$, where $C_*$ is the set of all cycle-containing vertices, would each have size at least $q/20$. Inclusion-exclusion and~\eqref{eq:overlap} yield
+\begin{align*}
+ |\bigcup_i(N(v_i)\cap C_*)|
+ &\geq \ell q/20-\binom\ell2-2\sqrt{\binom\ell2Z}\\
+ &\geq10Tq-20201T^2-285T\sqrt{Tq}>9Tq.
+\end{align*}
+Indeed $20201T/q+285\sqrt{T/q}\leq0.02870201<1$. This contradicts $|C_*|\leq4Z<4Tq$.
+Let $R$ be the set of vertices outside $X$ having an opposite mate outside $X$, and put $S_0=X\cup R$. We have $|S_0|\leq252T$.
+The actual edges $E(G[S_0])$ meet every cycle. If a cycle has adjacent $X$ vertices this is immediate. Otherwise it has zero, one, or two opposite $X$ vertices. With zero, all four vertices lie in $R$; with one, its two neighbors lie in $R$; with two opposite $X$ vertices, the remaining pair lies in $R$. Each case supplies an edge in the induced support. This argument includes cycles that leave $S_0$.
+
+\section{Count-based completion}\label{sec:completion}
+\begin{lemma}\label{lem:completion}
+Let $q\geq10^8$ be even. A $C_4$-free graph $F$ on $N$ vertices is a spanning subgraph of a polarity graph of order $q$ if
+\[
+ .999q\leq d(v)\leq q+1,\quad
+ |S|\leq1.001q,\quad |D|\leq.001q,
+\]
+where $S=\{d\leq q\}$ and $D=\{d\leq q-1\}$.
+\end{lemma}
+\begin{proof}
+We give the completion argument, using only the embedding and partial-symmetry interfaces in Section~\ref{sec:geometry}. Distinct vertices have at most one common neighbor. Every full vertex, meaning degree $q+1$, has a neighbor in $S$: otherwise its $(q+1)q=N-1$ two-paths reach every other vertex exactly once, and its neighborhood is a perfect matching on an odd number of vertices.
+Put
+\[
+ B_0=\{v:|N(v)\cap S|\geq q/100\},\qquad
+ A=\{d=q+1\}\setminus B_0.
+\]
+Counting pairs in $S$ gives
+\begin{equation}\label{eq:fullrows}
+ |B_0|\binom{q/100}{2}\leq\binom{|S|}{2},\quad
+ |B_0|\leq11000,\quad |A|\geq q^2-.001q+1-11000.
+\end{equation}
+The real binomial on the left is a valid lower bound at this $q$.
+
+Call $z$ regular if it is full and its neighbors consist of $q$ full vertices and one degree-$q$ vertex. Label its neighbors $z_i$ and put $C_i=N(z_i)\setminus N[z]$. These cells are disjoint. If $e_z=e(F[N(z)])$, then
+\[
+ \sum_i|C_i|=q^2+q-1-2e_z\leq q^2-1.
+\]
+Since $e_z\leq q/2$, equality holds, the cells partition $V\setminus N[z]$, and $F[N(z)]$ is a matching of size $q/2$ plus an isolated vertex.
+The isolated neighbor is the degree-$q$ neighbor. To see this, suppose the low neighbor $z_1$ is paired to $z_2$. Then $|C_1|=q-2$, each other matched cell has size $q-1$, and the isolated cell has size $q$. For each matched full index $i\ne2$, let $m=q-1$. There are no edges to its paired cell; edges inside $C_i$ form a matching and contribute at most $m-1$ to its degree sum. Edges to other cells form matchings, with one additional loss from the smaller $C_1$. Edges to $N[z]$ contribute exactly $m$. Therefore
+\[
+ \sum_{w\in C_i}d(w)\leq m+(m-1)+(q-1)m-1=(q+1)m-2.
+\]
+Each of these $q-2$ cells has total deficiency at least two. At most $|D|$ meet $D$; every other such cell contains at least two vertices of $S$. Their disjointness gives $|S|\geq2(q-2-|D|)>1.001q$, impossible.
+
+We need an exact transport fact at a regular $z$. If full $u\notin N[z]$ is adjacent to a full neighbor $z_1$ of $z$, then
+\begin{equation}\label{eq:transport}
+ |N(u)\cap N(z_i)|=1\quad\hbox{for every }i.
+\end{equation}
+Let $z_1z_2$ be the matching edge. The unique neighbor of $u$ in $N(z)$ is $z_1$. There is no neighbor in $C_2$, since it would form a four-cycle through $z_1z_2$. Each other cell contains at most one neighbor. The $q+1$ neighbors of $u$ force equality in all these $q$ cells, plus $z_1$. This proves~\eqref{eq:transport}, including index 2 via $z_1$.
+
+For $x\in A$, remove from $N(x)$ the low vertices and their neighbors within $N(x)$; fewer than $.02q$ vertices are removed. For every remaining full $z$, all its low neighbors lie in its cell $N(z)\setminus N[x]$. These cells are disjoint and each has at least one low vertex. At most $|D|$ meet $D$. Among the remaining $k\geq q+1-.021q$ cells, a neighbor is regular exactly when its cell contains one low vertex; otherwise the cell contains at least two. If $p$ are regular, $2k-p\leq|S|$, so $p\geq.957q+2>q/100+1$.
+
+We claim that $N(x)$ and $N(y)$ meet for all distinct $x,y\in A$. Suppose they do not. If $xy$ is an edge, choose a regular $z\in N(x)$ different from $y$ and apply~\eqref{eq:transport} to $u=y$ and the full neighbor $x$ of $z$, a contradiction. If $xy$ is not an edge, for each regular $z\in N(x)$ the cell partition places $y$ in a cell indexed by a neighbor $w$ of $z$. If $w$ were full,~\eqref{eq:transport} would again imply $|N(y)\cap N(x)|=1$. Thus $w$ is the unique low neighbor of $z$. Different $z$ give different $w$, since a repetition creates $x-z-w-z'-x$. This gives more than $q/100$ low neighbors of $y$, contradicting $y\in A$.
+
+The family $\mathcal R=\{N(x):x\in A\}$ therefore consists of distinct $(q+1)$-sets with exact pairwise intersection one. Bound~\eqref{eq:fullrows} exceeds the embedding threshold in Section~\ref{sec:geometry}. There is a projective plane on the same points containing $\mathcal R$. Its remaining line set $\mathcal R^c$ satisfies
+\begin{equation}\label{eq:remaining}
+ |\mathcal R^c|=N-|A|\leq1.001q+11000\leq1.002q.
+\end{equation}
+
+Every vertex $v$ has a neighbor $u$ incident with at least $q-2$ lines of $\mathcal R$. Indeed, the bundles
+\[
+ \bigl(N(v_i)\setminus N[v]\bigr)\cup\{v_i\},\qquad v_i\in N(v),
+\]
+are disjoint. Exclude the at most $.001q+11000$ bundles meeting $D$ or $B_0$. At least $.998q-11000$ remain. Some remaining bundle contains at most one low vertex, since otherwise $|S|\geq1.996q-22000>1.001q$. With $u=v_i$ in this bundle and $f(w)=q+1-d(w)$, we obtain
+\[
+ |N(u)\cap A|\geq d(u)-2-|\bigl(N(u)\setminus N[v]\bigr)\cap S|
+ \geq q-1-f(u)-f(N(u)\setminus N[v])\geq q-2.
+\]
+
+Call $v$ feasible if $N(v)$ is collinear in the plane. If not, every line through two neighbors of $v$ belongs to $\mathcal R^c$, by $C_4$-freeness. Choose $u$ as above. At most three lines of $\mathcal R^c$ pass through $u$, and they partition $N(v)\setminus\{u\}$ into two or three nonempty parts of sizes $a_1\geq a_2\geq a_3$. Since $a_1\geq(.999q-1)/3$, and the cross-pairs between two parts lie on distinct lines of $\mathcal R^c$, we have $a_1a_i\leq1.002q$, hence $a_i\leq3$ for $i\geq2$. Thus a line $L_v$ contains at least $d(v)-6$ neighbors of $v$.
+Each exceptional point $w\in N(v)\setminus L_v$ produces at least $.999q-6$ distinct lines of $\mathcal R^c$ by joining it to those collinear neighbors. Two distinct exceptional points, even from different vertices, would produce families intersecting in at most one line, so their union has size at least $1.998q-13>1.002q$. This contradicts~\eqref{eq:remaining}.
+There is consequently at most one common exceptional point $w$, and for every vertex $v$ a unique line $L_v$ contains $N(v)\setminus\{w\}$. If no exception exists, omit $w$. Uniqueness follows because the retained neighborhood has more than one point. Different vertices have different assigned lines: otherwise their retained neighborhoods, meeting in at most one point, would occupy at least $2(.999q-1)-1>q+1$ points of a line. Thus $v\mapsto L_v$ is a bijection, with $L_a=N(a)$ for $a\in A$.
+
+Let $K_{ab}=1$ when $b\in L_a$. Each row and column has $q+1$ ones. For $a\in A\setminus\{w\}$, $K_{ab}=1$ implies $b\in N(a)$, hence $a\in N(b)\setminus\{w\}\subseteq L_b$. Equal row and column sums then make the whole corresponding row and column symmetric. There are at least $|A|-1>q^2-q+3$ such indices. The partial-symmetry theorem makes $K$ symmetric, so the assignment is a polarity. Every edge $ab$ of $F$ with $b\ne w$ is retained directly. If $b=w$, the incidence $a\in L_w$ and symmetry retain it too. Thus $F$ is contained in the resulting simple polarity graph.
+\end{proof}
+
+\section{The core and retained paths}\label{sec:core}
+Return to the first-excess host of Section~\ref{sec:local}. Process the original high vertices, deleting incident edges while the current degree exceeds $q+1$. This selects at most $P\leq20T$ actual edges. Add both endpoints of these edges to $S_0$ to obtain $S_1$, of size
+\[
+ m\leq252T+2P\leq292T.
+\]
+Let $F=G-E(G[S_1])$. It is $C_4$-free because the deleted set includes the cycle support. It has maximum degree at most $q+1$ because it also includes every selected degree-cap edge. Outside $S_1$, all incident edges remain and the degree is $q$ or $q+1$. Equation~\eqref{eq:strong} gives
+\[
+ \delta(F)\geq q-318T,\quad
+ |\{d_F\leq q\}|\leq q-1+312T,\quad
+ |\{d_F\leq q-1\}|\leq292T.
+\]
+These satisfy Lemma~\ref{lem:completion}, so $F\subseteq Q$ for a single polarity graph $Q$ on the original vertices. No bound of order $q$ on the total deleted edges has been assumed.
+
+All edges in $J=E(G)\setminus E(Q)$ have both endpoints in $S_1$. An outside vertex can have an incident missing $Q$-edge only when its degree is $q$ in $G$ and $q+1$ in $Q$; then exactly one incident edge is missing. The graph $Q$ has at least $q+1$ absolute points, of which at least $q+1-m$ are outside $S_1$ and already have degree $q$ in $G$. Since $G$ has at most $q-1+20T$ deficient vertices, at most $m+20T$ outside vertices can be upgraded. Hence at most $m+20T$ missing $Q$-edges have an outside endpoint. An edge with two outside endpoints may be counted twice, which only weakens the upper bound.
+
+Fix an actual added edge $ab\in J$. The polarity path interface supplies at least $q-1$ edge-disjoint simple three-paths from $a$ to $b$ in $Q$. At most $2m$ of these have an internal vertex in $S_1$: each core vertex can appear at most once in each internal position, by edge-disjointness. Thus missing edges entirely in the core destroy at most $2m$ paths. The missing edges with an outside endpoint destroy at most $m+20T$ more. At least
+\[
+ q-1-3m-20T\geq q-1-896T
+\]
+paths remain, each giving a cycle in the actual graph $G$ with exactly one $J$-edge. Different added edges give distinct such cycles. Therefore
+\begin{equation}\label{eq:retain}
+ Z(G)\geq j(q-1-896T),\qquad j=|J|.
+\end{equation}
+The denominator exceeds $q/2$, so $j\leq Z/(q-1-896T)<2T$. Deleting $J$ makes the entire graph a subgraph of $Q$, and therefore hits every original cycle, including cycles with several added edges.
+Edge balance gives $d=j-1-\delta\geq0$, where $\delta=M-e(Q)\geq0$.
+This proves Theorem~\ref{thm:first}.
+
+\section{Transfer and equality}\label{sec:transfer}
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+It suffices to consider $Z(G)\leq t(q-1)$, covering both a strict counterexample and equality. Select any spanning subgraph $G_0$ with $M+1$ edges. Then $Z(G_0)\leq t(q-1)<tq$. Apply Theorem~\ref{thm:first} with $T=t$, obtaining $Q$ and $j_0<2t$. There are $t-1$ edges of $G$ outside $G_0$, so on the original host
+\[
+ j=|E(G)\setminus E(Q)|\leq j_0+t-1<3t<q/4.
+\]
+Put $\delta=M-e(Q)\geq0$ and $d=|E(Q)\setminus E(G)|$. Exact edge balance yields $d=j-t-\delta\geq0$, and hence $j\geq t$.
+For each of the $j$ added edges, at least $q-1$ edge-disjoint $Q$-three-paths exist, and at most $d$ are destroyed. The resulting cycles are distinct across added edges because each has exactly one edge outside $Q$. Thus
+\begin{align}
+ Z(G)&\geq j(q-1-d)=j(q-1-j+t+\delta),\label{eq:global}\\
+ Z(G)-t(q-1)&\geq(j-t)(q-1-j)+j\delta\geq0.\label{eq:slack}
+\end{align}
+This proves the bound. No assertion about the absence of multi-added-edge cycles is required.
+
+In equality, $q-1-j>0$ and $j\geq t\geq1$, so~\eqref{eq:slack} forces $j=t$ and $\delta=0$. Consequently $d=0$, $Q\subseteq G$, and $Q$ is orthogonal. Every added edge must have exactly $q-1$ $Q$-three-paths, for otherwise the one-added-edge count already exceeds equality. The path equality interface makes both endpoints absolute.
+If two added edges $ab,ac$ share a vertex, the nonabsolute nucleus $w$ gives the additional actual cycle $b-a-c-w-b$. Its four vertices are distinct, and it has two added edges, so it was not counted in~\eqref{eq:global}. This contradicts equality. The added edges form a matching.
+
+Conversely, add a matching of $t$ edges between absolute points of an even-order orthogonal polarity. Each edge gives exactly $q-1$ one-added-edge cycles. A four-cycle cannot have adjacent matching edges. If it had two opposite added edges, its four vertices would all be absolute and the other two edges would join absolute points in $Q$, contradicting independence. Every cycle therefore has exactly one added edge, giving exactly $t(q-1)$ cycles.
+\end{proof}
+\begin{proof}[Proof of Corollary~\ref{cor:power}]
+At powers of two the orthogonal polarity construction has $M$ edges and no four-cycle. Theorem~\ref{thm:main} at $t=1$ rules out a $C_4$-free graph with $M+1$ edges; any larger such graph would contain one with $M+1$ edges. Thus the extremal number is $M$. The $q+1$ absolute points support a matching of every size in the stated range, and the converse equality count proves the exact value of $h$.
+\end{proof}
+
+\section{Formal statement correspondence and limits}\label{sec:formal}
+The following declarations in namespace \texttt{Erdos60.Headline} correspond to the statements here:
+\begin{center}\small
+\begin{tabular}{p{.28\textwidth}p{.64\textwidth}}
+\toprule
+Statement & Declaration \\\midrule
+Theorem~\ref{thm:main}, lower bound & \texttt{linear\_range\_lower}\\
+Theorem~\ref{thm:main}, equality & \texttt{linear\_range\_equality\_iff}\\
+Theorem~\ref{thm:first} & \texttt{first\_excess\_structural}\\
+Corollary~\ref{cor:power}, extremal value & \texttt{power\_two\_c4Extremal}\\
+Corollary~\ref{cor:power}, surplus value & \texttt{power\_two\_c4Supersaturation}\\
+Combined conclusion & \texttt{power\_two\_extremal\_and\_supersaturation}\\
+\bottomrule
+\end{tabular}
+\end{center}
+The formal hypotheses use natural $q,t$, $\operatorname{Even}(q)$, $10^{16}\leq q$, and $10^8t\leq q$. The equality predicate records the actual graph inclusion, actual difference of $t$ edges, absolute endpoints, matching condition, edge count $M$ and $q+1$ absolute points. The structural declaration uses real $T$ and the exact same-vertex edit counts.
+
+The package's accepted verification record reports 82 module builds, exact type and axiom checks for 519 registered declarations, six main-theorem oracles with \texttt{RESULT: PASS}, and kernel replay of all 82 modules. The run completed on 16 October 2026 by resuming successful checks after an aggregate timeout against unchanged frozen identities; the timed-out attempt was not counted as a pass. It pins Lean \texttt{v4.33.1} and mathlib revision \texttt{0df444a360eaa60ab8c11dca51a86af692955474}. The audited axiom closures allow only \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}, with no \texttt{sorry}, \texttt{native\_decide} or custom axioms. These accepted records are reused here; this manuscript preparation did not rerun Lean.
+
+The full formal proof supplies the finite-incidence embedding specialization and the detailed geometry interfaces described in Section~\ref{sec:geometry}. The written proof cites their published forms. Kernel verification concerns the registered formal statements; it does not certify every sentence of this exposition, establish novelty, or extend the recorded literature search. The arbitrary-even-order theorem does not establish plane existence or an extremal value at those orders. The result covers only the displayed linear surplus interval.
+
+\paragraph{AI use and review.}
+AI agents produced the proof code, reviewed the registered statements and prepared this exposition under the direction of Robert Huynh. No human mathematical review is claimed. Robert Huynh is the sole named author. This working draft presents existing accepted results from the accompanying source package and makes no additional theorem claim.
+
+\begin{thebibliography}{9}
+\bibitem{HMY} J. He, J. Ma and T. Yang, \emph{Some Exact Results on 4-Cycles: Stability and Supersaturation}, CSIAM Transactions on Applied Mathematics \textbf{4} (2023), 74--128. \href{https://doi.org/10.4208/csiam-am.SO-2021-0006}{doi:10.4208/csiam-am.SO-2021-0006}. Public preprint: \href{https://arxiv.org/abs/1912.00986v4}{arXiv:1912.00986v4}, 28 January 2021. The theorem numbers used here refer to the published article.
+\bibitem{Metsch} K. Metsch, \emph{Linear Spaces with Few Lines}, Lecture Notes in Mathematics \textbf{1490}, Springer, 1991. \href{https://doi.org/10.1007/BFb0083245}{doi:10.1007/BFb0083245}. The formal dependency route uses selected finite-incidence arguments, especially Sections 3 and 6.2--6.7 and the construction in Section 6.10.
+\end{thebibliography}
+\end{document}
